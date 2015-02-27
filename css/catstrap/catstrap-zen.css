@@ -1,0 +1,40 @@
+/* line 2, ../../sass/catstrap/catstrap-zen.scss */
+#header_site .header__region {
+  float: right;
+}
+/* line 4, ../../sass/catstrap/catstrap-zen.scss */
+#header_site .header__region .block-menu {
+  display: block;
+  margin: 1rem 0 2rem 0;
+  background-color: transparent;
+  float: right;
+}
+/* line 10, ../../sass/catstrap/catstrap-zen.scss */
+#header_site .header__region .block-search {
+  clear: both;
+}
+/* line 12, ../../sass/catstrap/catstrap-zen.scss */
+#header_site .header__region .block-search input#edit-search-block-form--2 {
+  border-collapse: collapse;
+  width: 13.8rem;
+  font-family: MiloWeb, sans-serif;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1em;
+  border: 1px solid #d3d7de;
+  background-color: #eef1f1;
+  color: #333333;
+  padding: .5rem;
+}
+/* line 24, ../../sass/catstrap/catstrap-zen.scss */
+#header_site .header__region .block-search input#edit-submit {
+  text-indent: -9999em;
+  background: url("../images/search-icon.png");
+  width: 40px;
+  height: 40px;
+  background-size: 70%;
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: 2px 4px;
+  margin-left: 0.2em;
+}

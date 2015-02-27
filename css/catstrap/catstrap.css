@@ -1,0 +1,42 @@
+@import url("https://brand.arizona.edu/sites/default/files/ua-banner/ua-web-branding/ua-fonts/milo.css");
+/* line 3, ../../sass/catstrap/catstrap.scss */
+a {
+  color: #ab0520;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 11, ../../sass/catstrap/catstrap.scss */
+#header_site ul.menu {
+  padding: 0;
+  margin: 0;
+  border: 0 none;
+  text-align: right;
+}
+/* line 16, ../../sass/catstrap/catstrap.scss */
+#header_site ul.menu li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 .6rem;
+  text-align: left;
+}
+/* line 21, ../../sass/catstrap/catstrap.scss */
+#header_site ul.menu li a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #6b868d;
+  text-transform: none;
+  font-family: MiloWeb-Text, sans-serif;
+  font-weight: normal;
+}
+/* line 28, ../../sass/catstrap/catstrap.scss */
+#header_site ul.menu li a:hover {
+  text-decoration: underline;
+}
+
+/* line 35, ../../sass/catstrap/catstrap.scss */
+#footer_site {
+  background-color: #cfccc0;
+  padding: 2rem 0;
+}

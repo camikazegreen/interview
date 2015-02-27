@@ -1,0 +1,38 @@
+@import url("https://brand.arizona.edu/sites/default/files/ua-banner/ua-web-branding/ua-fonts/milo.css");
+
+a {
+	color: #ab0520;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#header_site {
+	ul.menu {
+		padding: 0;
+		margin: 0;
+		border: 0 none;
+		text-align: right;
+		li {
+			list-style: none;
+			display: inline-block;
+			padding: 0 .6rem;
+			text-align: left;
+			a {
+				font-size: 1rem;
+				text-decoration: none;
+				color: #6b868d;
+				text-transform: none;
+				font-family: MiloWeb-Text, sans-serif;
+				font-weight: normal;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+#footer_site {
+	background-color: #cfccc0;
+	padding: 2rem 0;
+}
