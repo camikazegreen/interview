@@ -3,7 +3,7 @@
 		float: right;
 		.block-menu {
 			display: block;
-			margin: 1rem 0 2rem 0;
+			margin: 1rem 0 1.5rem 0;
 			background-color: transparent;
 			float: right;
 		}
@@ -34,4 +34,7 @@
 			}
 		}
 	}
+}
+@media (max-width: 767px) {
+	#block-menu-menu-utility-links { display: none; }
 }
