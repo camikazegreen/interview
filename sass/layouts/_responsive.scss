@@ -50,6 +50,8 @@ $zen-auto-include-item-base: false;
   @include zen-grid-item-base();
 }
 
+#content { clear: both; }
+
 /* Containers for grid items and flow items. */
 #header,
 #main,
