@@ -63,15 +63,14 @@
       <?php print render($page['header']); ?>
 
     </div> <!-- /.container -->
-
-  </header>
-
-  <div id="main">
     <div id="main_nav">
       <div class="container">
         <?php print render($page['navigation']); ?>
       </div>
     </div>
+  </header>
+
+  <div id="main">
 
     <div class="container">
       <div id="content" class="column" role="main">
