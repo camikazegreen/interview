@@ -67,6 +67,12 @@
   </header>
 
   <div id="main">
+    <div id="main_nav">
+      <div class="container">
+        <?php print render($page['navigation']); ?>
+      </div>
+    </div>
+
     <div class="container">
       <div id="content" class="column" role="main">
         <?php print render($page['highlighted']); ?>
@@ -109,8 +115,6 @@
             )); ?>
           </nav>
         <?php endif; ?>
-
-        <?php print render($page['navigation']); ?>
 
       </div>
 

@@ -61,15 +61,15 @@ $zen-auto-include-item-base: false;
 @media all and (min-width: 480px) {
   #main {
     /* Move all the children of #main down to make room. */
-    padding-top: $nav-height;
+    // padding-top: $nav-height;
     position: relative;
     clear: both;
   }
   #main_nav {
     /* Move the navbar up inside #main's padding. */
-    position: absolute;
+    // position: absolute;
     top: 0;
-    height: $nav-height;
+    // height: $nav-height;
     width: $zen-grid-width;
   }
 }
