@@ -44,7 +44,7 @@ function ua_zen_preprocess_html(&$variables, $hook) {
 }
 // */
 
-function ua_omega_preprocess_html(&$variables) {
+function ua_zen_preprocess_html(&$variables) {
   // Add external stylesheets from UA
   //drupal_add_css('https://catstrap.css', array('type' => 'external'));
 
