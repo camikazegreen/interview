@@ -163,14 +163,15 @@ function ua_zen_preprocess_block(&$variables, $hook) {
 // */
 
 /**
- * Implements theme_form_alter
+ * Implements theme_form_search_block_form_alter
  */
-function ua_zen_form_alter(&$form, &$form_state, $form_id) {
-
-  if ($form_id == 'search_block_form') {                                         
-    if (!empty($form['actions']) && $form['actions']['submit']) {                              
-      $form['search_block_form']['#placeholder'] = t('Search Site');           
-    }
-  }    
-
+function ua_zen_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+// Add extra attributes to the text box
+  $form['search_block_form']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search Site';}";
+  $form['search_block_form']['#attributes']['onfocus'] = "if (this.value == 'Search Site') {this.value = '';}";
+  // Prevent user from searching the default text
+  $form['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Search Site'){ alert('Please enter a search'); return false; }";
+  
+  // Alternative (HTML5) placeholder attribute instead of using the javascript - keeps placeholder until user starts typing...
+  //$form['search_block_form']['#attributes']['placeholder'] = t('Search Site');
 }
