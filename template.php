@@ -161,3 +161,16 @@ function ua_zen_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+/**
+ * Implements theme_form_alter
+ */
+function ua_zen_form_alter(&$form, &$form_state, $form_id) {
+
+  if ($form_id == 'search_block_form') {                                         
+    if (!empty($form['actions']) && $form['actions']['submit']) {                              
+      $form['search_block_form']['#placeholder'] = t('Search Site');           
+    }
+  }    
+
+}
