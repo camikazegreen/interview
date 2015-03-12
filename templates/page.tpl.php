@@ -9,19 +9,10 @@
 ?>
 
 <div id="l_page">
-  <div id="header_ua">  
-    <!-- Begin RedBar Code -->
-    <div class="ua-redbar-v1">
-      <nav class="redbar navbar-static-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="redbar-brand" href="http://www.arizona.edu"><p>The University of Arizona</p></a>
-          </div>
-        </div>
-      </nav>
-    </div>
-    <!-- End RedBar Code -->
-  </div>
+  <?php //Defined in template file: region--header-ua.tpl.php ?>
+  <?php print render($page['header_ua']); ?>
+
+  <?php // dsm($page); ?>
 
   <header class="header" id="header_site" role="banner">
     <div class="container">

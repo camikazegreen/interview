@@ -64,6 +64,31 @@ function ua_zen_preprocess_page(&$variables, $hook) {
 }
 // */
 
+function ua_zen_preprocess_page(&$variables, $hook) {
+
+  //Allows there to be a template file for the UA Header and Footers without allowing blocks to be placed there - regions defined in .info, but commented out
+  if ( !isset($variables['page']['header_ua']) || empty($variables['page']['header_ua'])) {                                                                                                                                                    
+         $variables['page']['header_ua'] = array(                                 
+            '#region' => 'header_ua',                                            
+            '#weight' => '-10',                                                  
+            '#theme_wrappers' => array('region'));                               
+    }                                                                            
+    if ( !isset($variables['page']['footer_ua']) || empty($variables['page']['footer_ua'])) {
+        $variables['page']['footer_ua'] = array(                                 
+            '#region' => 'footer_ua',                                            
+            '#weight' => '-10',                                                  
+            '#theme_wrappers' => array('region'));                               
+     }                                                                     
+     if ( !isset($variables['page']['footer_ua_hidden']) || empty($variables['page']['footer_ua_hidden'])) {
+        $variables['page']['footer_ua_hidden'] = array(                          
+            '#region' => 'footer_ua_hidden',                                     
+            '#weight' => '-10',                                                  
+            '#theme_wrappers' => array('region'));                                                                                                      
+     }
+
+}
+
+
 /**
  * Override or insert variables into the node templates.
  *
