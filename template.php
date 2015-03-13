@@ -168,4 +168,6 @@ function ua_zen_preprocess_block(&$variables, $hook) {
 function ua_zen_form_search_block_form_alter(&$form, &$form_state, $form_id) {
   // HTML5 placeholder attribute instead of using the javascript
   $form['search_block_form']['#attributes']['placeholder'] = t('Search Site');
+  $form['search_block_form']['#attributes']['onfocus'] = "this.placeholder = ''";
+  $form['search_block_form']['#attributes']['onblur'] = "this.placeholder = 'Search Site'";
 }
