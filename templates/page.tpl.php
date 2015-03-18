@@ -33,30 +33,20 @@
         </div>
       <?php endif; ?>
 
-      <?php if ($secondary_menu): ?>
-        <nav class="header__secondary-menu" id="secondary-menu" role="navigation">
-          <?php print theme('links__system_secondary_menu', array(
-            'links' => $secondary_menu,
-            'attributes' => array(
-              'class' => array('links', 'inline', 'clearfix'),
-            ),
-            'heading' => array(
-              'text' => $secondary_menu_heading,
-              'level' => 'h2',
-              'class' => array('element-invisible'),
-            ),
-          )); ?>
-        </nav>
+      <?php if ($secondary_menu): ?><!-- Using Secondary Menu for Utility Links -->
+        <div class="header__secondary-menu" id="utility_links" role="navigation"> <!-- id was #secondary-menu -->
+          <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
+        </div>
       <?php endif; ?>
 
       <?php print render($page['header']); ?>
 
     </div> <!-- /.container -->
-    <div id="main_nav">
+    <nav id="main_nav">
       <div class="container">
         <?php print render($page['navigation']); ?>
       </div>
-    </div>
+    </nav>
   </header>
 
   <div id="main">
@@ -79,31 +69,6 @@
         <?php endif; ?>
         <?php print render($page['content']); ?>
         <?php print $feed_icons; ?>
-      </div>
-
-      <div id="main_nav">
-
-        <?php if ($main_menu): ?>
-          <nav id="main-menu" role="navigation" tabindex="-1">
-            <?php
-            // This code snippet is hard to modify. We recommend turning off the
-            // "Main menu" on your sub-theme's settings form, deleting this PHP
-            // code block, and, instead, using the "Menu block" module.
-            // @see https://drupal.org/project/menu_block
-            print theme('links__system_main_menu', array(
-              'links' => $main_menu,
-              'attributes' => array(
-                'class' => array('links', 'inline', 'clearfix'),
-              ),
-              'heading' => array(
-                'text' => t('Main menu'),
-                'level' => 'h2',
-                'class' => array('element-invisible'),
-              ),
-            )); ?>
-          </nav>
-        <?php endif; ?>
-
       </div>
 
       <?php
