@@ -29,13 +29,13 @@
 /* line 24, ../../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region .block-search input#edit-submit {
   text-indent: -9999em;
-  background: url("../images/search-icon.png");
+  background: url("../images/search.svg");
   width: 40px;
   height: 40px;
-  background-size: 70%;
+  background-size: 90%;
   border: 0;
   background-repeat: no-repeat;
-  background-position: 2px 4px;
+  background-position: 0 0;
   margin-left: 0.2em;
 }
 
