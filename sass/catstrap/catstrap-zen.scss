@@ -1,6 +1,7 @@
 #header_site {
 	.header__region {
 		float: right;
+		clear: right;
 		.block-menu {
 			display: none;
 			margin: 1rem 0 1.5rem 0;
@@ -15,14 +16,14 @@
 				font-family: MiloWeb, sans-serif;
 				font-weight: normal;
 				font-size: 1.125rem;
-				line-height: 1em;
+				line-height: 1rem;
 				border: 1px solid #d3d7de;
 				background-color: #eef1f1;
 				color: #333333;
 				padding: .5rem;
 			}
 			input#edit-submit {
-				text-indent: -9999em;
+				text-indent: -9999rem;
 				background: url('../images/search.svg');
 				width: 40px;
 				height: 40px;
@@ -30,11 +31,56 @@
 				border: 0;
 				background-repeat: no-repeat;
 				background-position: 0 0;
-				margin-left: 0.2em;
+				margin-left: 0.2rem;
+			}
+		}
+	}
+	#utility_links {
+		display: block;
+		clear: both;
+		ul {
+			font-family: 'MiloWeb-Medium';
+			li {
+				margin: 0;
+				padding: 0;
+				a,
+				a:link,
+				a:visited {
+					color: #49595E; //$dark-silver
+					padding: 1rem 0.5rem 0.5rem;
+					margin: 0;
+					&:hover,
+					&:focus,
+					&:active {
+						text-decoration: underline;
+						color: #49595E; //$dark-silver
+					}
+				}
+				&.last a { padding-right: 0; }
 			}
 		}
 	}
 }
-@media (min-width: 768px) {
-	#header_site .header__region .block-menu { display: block; }
+
+@media screen and (min-width: 48em) {
+	#header_site {
+		.header__region .block-menu { display: block; }
+
+		.block-search { padding-top: 3rem;	}
+
+		#utility_links {
+			display: block;
+			clear: none;
+			ul {
+				text-align: right;
+				li {
+					float: none;
+					display: inline-block;
+					margin: 0;
+					padding: 0;
+					&.last a { padding-right: 0; }
+				}
+			}
+		}
+	}
 }
