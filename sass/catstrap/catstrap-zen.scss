@@ -2,6 +2,8 @@
 	.header__region {
 		float: right;
 		clear: right;
+		// float: none;
+		text-align: center;
 		.block-menu {
 			display: none;
 			margin: 1rem 0 1.5rem 0;
@@ -66,7 +68,7 @@
 	#header_site {
 		.header__region .block-menu { display: block; }
 
-		.block-search { padding-top: 3rem;	}
+		.block-search { padding-top: 1rem;	}
 
 		#utility_links {
 			display: block;

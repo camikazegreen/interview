@@ -50,6 +50,9 @@
   </header>
 
   <div id="main">
+    <section id="content_featured">
+      <?php print render($page['content_featured']); ?>
+    </section>
 
     <div class="container">
       <div id="content" class="column" role="main">
