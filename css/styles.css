@@ -4885,3 +4885,8 @@ ul.sf-menu li ul {
 .dl-menuwrapper {
   max-width: none;
 }
+
+/* line 2, ../sass/components/_uazen-home-modules.scss */
+.block.mission-statement {
+  background: url("../images/mission-bg.jpg");
+}
