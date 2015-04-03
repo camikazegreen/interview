@@ -4562,7 +4562,7 @@ footer#footer_site #footer_copyright {
   }
 }
 /* NEWS */
-/* line 112, ../sass/catstrap/catstrap-zen.scss */
+/* line 114, ../sass/catstrap/catstrap-zen.scss */
 .view-news .views-row {
   float: left;
   width: 100%;
@@ -4570,20 +4570,20 @@ footer#footer_site #footer_copyright {
   padding: 24px 0;
   padding: 1.5rem 0;
 }
-/* line 119, ../sass/catstrap/catstrap-zen.scss */
+/* line 121, ../sass/catstrap/catstrap-zen.scss */
 .view-news .views-row .views-field-field-news-photos img {
   width: 100%;
   height: auto;
   padding-right: 24px;
   padding-right: 1.5rem;
 }
-/* line 129, ../sass/catstrap/catstrap-zen.scss */
+/* line 131, ../sass/catstrap/catstrap-zen.scss */
 .view-news .views-row .views-field-title h2 {
   margin-top: 1rem;
   margin-bottom: 4px;
   margin-bottom: 0.2rem;
 }
-/* line 136, ../sass/catstrap/catstrap-zen.scss */
+/* line 138, ../sass/catstrap/catstrap-zen.scss */
 .view-news .views-row .views-field-field-news-publish-date span {
   display: block;
   font-size: 18px;
@@ -4595,7 +4595,7 @@ footer#footer_site #footer_copyright {
 }
 
 @media (min-width: 30em) {
-  /* line 149, ../sass/catstrap/catstrap-zen.scss */
+  /* line 151, ../sass/catstrap/catstrap-zen.scss */
   .view-news .views-row .views-field-field-news-photos img {
     float: left;
     max-width: 240px;
@@ -4603,13 +4603,13 @@ footer#footer_site #footer_copyright {
     height: auto;
   }
 
-  /* line 155, ../sass/catstrap/catstrap-zen.scss */
+  /* line 157, ../sass/catstrap/catstrap-zen.scss */
   .view-news .views-row .views-field-title h2 {
     margin-top: 0;
   }
 }
 @media (max-width: 767px) {
-  /* line 162, ../sass/catstrap/catstrap-zen.scss */
+  /* line 166, ../sass/catstrap/catstrap-zen.scss */
   #header_site #search {
     width: 100%;
     float: none;
