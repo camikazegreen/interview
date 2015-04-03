@@ -4561,8 +4561,16 @@ footer#footer_site #footer_copyright {
     padding-right: 0;
   }
 }
+/* NEWS */
+/* line 112, ../sass/catstrap/catstrap-zen.scss */
+.view-news .views-row {
+  border-bottom: 2px solid #eef1f1;
+  padding-bottom: 16px;
+  padding-bottom: 1rem;
+}
+
 @media (max-width: 767px) {
-  /* line 114, ../sass/catstrap/catstrap-zen.scss */
+  /* line 121, ../sass/catstrap/catstrap-zen.scss */
   #header_site #search {
     width: 100%;
     float: none;

@@ -107,7 +107,14 @@
 		}
 	}
 }
-
+/* NEWS */
+.view-news {
+	.views-row {
+		border-bottom: 2px solid #eef1f1;
+		padding-bottom: 16px;
+		padding-bottom: 1rem;
+	}
+}
 
 
 @media (max-width: 767px) {
