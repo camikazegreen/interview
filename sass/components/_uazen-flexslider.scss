@@ -7,12 +7,12 @@
 				  background-repeat: no-repeat;
 				  background-size: cover;
 				  min-height: 500px;
-				  padding-top: 120px;
-				  padding-top: 7.5rem;
+				  padding-top: 64px;
+				  padding-top: 4rem;
 				  background-position: 50% 50%;
 				  h2 {
-				  	font-size: 60px;
-				  	font-size: 3.75rem;
+				  	font-size: 36px;
+				  	font-size: 2.25rem;
 				  	font-family: $milo-serif;
 				  	margin: 0;
 				  	line-height: 1em;
@@ -20,12 +20,16 @@
 				  		color: #fff;
 				  		font-weight: 300;
 				  		text-transform: none;
+				  		&:hover {
+				  			text-decoration: none;
+				  		}
 				  	}
 				  }
 				  p {
 				  	color: #fff;
-				  	font-size: 24px;
-				  	font-size: 1.5rem;
+				  	font-size: 16px;
+				  	font-size: 1rem;
+				  	padding-top: 1rem;
 				  }
 				}
 			}
@@ -35,37 +39,119 @@
 			padding: 1.75rem 0.62rem;
 			background: #6f868d;
 			color: #fff;
-			margin: -48px 0 0;
-			margin: -3rem 0 0;
+			margin: -96px 0 0;
+			margin: -6rem 0 0;
 			text-align: center;
+			display: block;
+			top: 100%;
 		}
 		.flex-direction-nav a:before {
-			color: #fff;
-			text-shadow: none;
-			font-weight: 100;
-			line-height: 1em;
+			// color: #fff;
+			// text-shadow: none;
+			// font-weight: 100;
+			// line-height: 1em;
+			content: ' ';
+
 		}
 		.flex-direction-nav .flex-prev {
 			left: 0;
+			background: #6f868d url(../images/flex-prev.png) no-repeat 50% 50%;
+		  width: 49%;
+		  height: 96px;
 		}
 		.flex-direction-nav .flex-next {
 			right: 0;
+			background: #6f868d url(../images/flex-next.png) no-repeat 50% 50%;
+		  width: 49%;
+		  height: 96px;
 		}
 		.flexslider .flex-direction-nav a, .flexslider .flex-direction-nav a {
 			display: block !important;
 		}
 	}
 }
-@media (min-width: 768px) {
+@media (min-width: 48em) and (max-width: 59.9em) {
 	#content_featured .flexslider ul.slides li .slide-image-container p { padding-right: 256px; padding-right: 16rem; }
+
+	#content_featured {
+		.flexslider {
+			.flex-direction-nav a {
+				padding: 28px 9px;
+				padding: 1.75rem 0.62rem;
+				background: #6f868d;
+				color: #fff;
+				margin: -48px 0 0;
+				margin: -3rem 0 0;
+				text-align: center;
+				display: block;
+				top: 50%;
+			}
+			.flex-direction-nav a:before {
+				// color: #fff;
+				// text-shadow: none;
+				// font-weight: 100;
+				// line-height: 1em;
+				content: ' ';
+
+			}
+			.flex-direction-nav .flex-prev {
+				left: 0;
+				background: url(../images/flex-prev.png) no-repeat 0 0;
+			  width: 60px;
+			  height: 96px;
+			}
+			.flex-direction-nav .flex-next {
+				right: 0;
+				background: url(../images/flex-next.png) no-repeat 0 0;
+			  width: 60px;
+			  height: 96px;
+			}
+			.flexslider .flex-direction-nav a, .flexslider .flex-direction-nav a {
+				display: block !important;
+			}
+		}
+	}
+	#content_featured .flexslider ul.slides li .slide-image-container {
+		padding-top: 96px;
+		padding-top: 6rem;
+	}
+	#content_featured .flexslider ul.slides li .slide-image-container h2 {
+		font-size: 48px;
+  	font-size: 3rem;
+  	line-height: 1em;
+	}
+	#content_featured .flexslider ul.slides li .slide-image-container p {
+		font-size: 24px;
+		font-size: 1.5rem;
+		padding-top: 1rem;
+	}
 }
-@font-face{
-	font-family:'flexslider-icon';
-	src:url(/sites/all/libraries/flexslider/fonts/flexslider-icon.eot);
-	src:url(/sites/all/libraries/flexslider/fonts/flexslider-icon.eot?#iefix) format('embedded-opentype'),
-			url(/sites/all/libraries/flexslider/fonts/flexslider-icon.woff) format('woff'),
-			url(/sites/all/libraries/flexslider/fonts/flexslider-icon.ttf) format('truetype'),
-			url(/sites/all/libraries/flexslider/fonts/flexslider-icon.svg#flexslider-icon) format('svg');
-	font-weight:normal;
-	font-style:normal;
+@media (min-width: 60em) {
+	#content_featured .flexslider ul.slides li .slide-image-container {
+		padding-top: 120px;
+		padding-top: 7.5rem;
+	}
+	#content_featured .flexslider .flex-direction-nav a {
+		margin: -48px 0 0;
+		margin: -3rem 0 0;
+		top: 50%;
+	}
+	#content_featured .flexslider .flex-direction-nav .flex-prev {
+		width: 60px;
+		height: 96px;
+	}
+	#content_featured .flexslider .flex-direction-nav .flex-next {
+		width: 60px;
+		height: 96px;
+	}
+	#content_featured .flexslider ul.slides li .slide-image-container h2 {
+		font-size: 60px;
+  	font-size: 3.75rem;
+  	line-height: 1em;
+	}
+	#content_featured .flexslider ul.slides li .slide-image-container p {
+		font-size: 24px;
+		font-size: 1.5rem;
+		padding-top: 1rem;
+	}
 }
