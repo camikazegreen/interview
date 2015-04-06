@@ -1,0 +1,23 @@
+<?php
+/**
+ * @file
+ * Code for the UA Brand Navigation feature.
+ */
+
+include_once 'ua_brand_navigation.features.inc';
+
+/**
+ * Implements hook_menu_block_blocks().
+ */
+function ua_brand_navigation_menu_block_blocks() {
+  return array(
+    // Provides a second-level navigation menu block.
+    'ua-brand-second-level' => array(
+      'menu_name' => 'MENU_TREE__CURRENT_PAGE_MENU',
+      'title_link' => FALSE,
+      'admin_title' => 'UA Brand Second-level Navigation',
+      'level' => 2,
+      'depth' => 1,
+    ),
+  );
+}
