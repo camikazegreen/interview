@@ -1,4 +1,4 @@
-# UA Brand Navigation Feature
+# UA Brand Navigation Drupal Feature Module
 
 Provides various dependencies and configuration for UA Brand Navigation components.
 
