@@ -1,5 +1,5 @@
 name = UA Brand Navigation
-description = Provides pre-configured second-level menu block and various dependencies and configuration for UA Brand Navigation.
+description = Provides various dependencies and configuration for UA Brand Navigation.
 core = 7.x
 package = UA Brand
 version = 7.x-1.x-dev
