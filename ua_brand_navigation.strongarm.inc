@@ -35,7 +35,7 @@ function ua_brand_navigation_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'superfish_name_1';
-  $strongarm->value = 'UA Brand Superfish Block';
+  $strongarm->value = 'UA Brand Superfish Menu';
   $export['superfish_name_1'] = $strongarm;
 
   $strongarm = new stdClass();
