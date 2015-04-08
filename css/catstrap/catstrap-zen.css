@@ -78,7 +78,7 @@
   margin: 0;
   padding: 0;
 }
-/* line 71, ../../sass/catstrap/catstrap-zen.scss */
+/* line 69, ../../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links ul li a,
 #header_site #utility_links ul li a:link,
 #header_site #utility_links ul li a:visited {
@@ -86,7 +86,7 @@
   padding: 1rem 0.5rem 0.5rem;
   margin: 0;
 }
-/* line 77, ../../sass/catstrap/catstrap-zen.scss */
+/* line 75, ../../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links ul li a:hover, #header_site #utility_links ul li a:focus, #header_site #utility_links ul li a:active,
 #header_site #utility_links ul li a:link:hover,
 #header_site #utility_links ul li a:link:focus,
@@ -132,8 +132,55 @@
     padding-right: 0;
   }
 }
+/* NEWS */
+/* line 114, ../../sass/catstrap/catstrap-zen.scss */
+.view-news .views-row {
+  float: left;
+  width: 100%;
+  border-bottom: 2px solid #eef1f1;
+  padding: 24px 0;
+  padding: 1.5rem 0;
+}
+/* line 121, ../../sass/catstrap/catstrap-zen.scss */
+.view-news .views-row .views-field-field-news-photos img {
+  width: 100%;
+  height: auto;
+  padding-right: 24px;
+  padding-right: 1.5rem;
+}
+/* line 131, ../../sass/catstrap/catstrap-zen.scss */
+.view-news .views-row .views-field-title h2 {
+  margin-top: 1rem;
+  margin-bottom: 4px;
+  margin-bottom: 0.2rem;
+}
+/* line 138, ../../sass/catstrap/catstrap-zen.scss */
+.view-news .views-row .views-field-field-news-publish-date span {
+  display: block;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #999;
+  padding-bottom: 4px;
+  padding-bottom: 0.2rem;
+}
+
+@media (min-width: 30em) {
+  /* line 151, ../../sass/catstrap/catstrap-zen.scss */
+  .view-news .views-row .views-field-field-news-photos img {
+    float: left;
+    max-width: 240px;
+    width: 100%;
+    height: auto;
+  }
+
+  /* line 157, ../../sass/catstrap/catstrap-zen.scss */
+  .view-news .views-row .views-field-title h2 {
+    margin-top: 0;
+  }
+}
 @media (max-width: 767px) {
-  /* line 114, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 166, ../../sass/catstrap/catstrap-zen.scss */
   #header_site #search {
     width: 100%;
     float: none;
