@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * ua_brand_demo.install
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function ua_brand_demo_enable() {
+  _ua_brand_demo_import_demo_content(array('UaBrandDemoNode', 'UaBrandDemoMenu'));
+}
+
+/**
+ * Implements hook_disable().
+ */
+function ua_brand_demo_disable() {
+  _ua_brand_demo_rollback_demo_content(array('UaBrandDemoMenu', 'UaBrandDemoNode'));
+}
