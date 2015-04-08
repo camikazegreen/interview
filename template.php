@@ -86,7 +86,7 @@ function ua_zen_preprocess_page(&$variables, $hook) {
             '#theme_wrappers' => array('region'));
      }
 
-    //Allows tpl.php access to the uploaded footer logo image in the theme-settings.php
+    //Allows tpl.php access to the uploaded footer logo image in the theme-settings.php (Code source: http://stackoverflow.com/questions/12177175/how-do-i-properly-add-file-field-in-drupal-form-via-theme-setting-php)
     $fid = theme_get_setting('footer_logo_file');
     $footer_logo_url = file_create_url(file_load($fid)->uri);
 
