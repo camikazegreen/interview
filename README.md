@@ -4,5 +4,6 @@ Provides various dependencies and configuration for UA Brand Navigation componen
 
 ## Features
 
-- Pre-configured superfish menu block
-- Pre-configured second-level menu block for display on child pages
+- Creates 'Utility links' menu
+- Pre-configures superfish menu block
+- Pre-configures second-level menu block for display on child pages
