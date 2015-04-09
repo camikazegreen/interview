@@ -1,0 +1,50 @@
+name = UA Brand Kickstart
+description = Install Drupal with the UA Brand Kickstart install profile.
+core = 7.x
+version = 7.x-1.x-dev
+
+; =====================================
+; Module dependencies
+; =====================================
+
+; Drupal core (enabled)
+; ---------------------
+dependencies[] = block
+dependencies[] = contextual
+dependencies[] = dblog
+dependencies[] = field
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = rdf
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = taxonomy
+dependencies[] = toolbar
+dependencies[] = update
+
+; Drupal core (disabled)
+; ----------------------
+;dependencies[] = color
+;dependencies[] = comment
+;dependencies[] = dashboard
+;dependencies[] = help
+;dependencies[] = locale
+;dependencies[] = overlay
+;dependencies[] = simpletest
+;dependencies[] = statistics
+;dependencies[] = syslog
+
+; UA Brand Modules
+; ----------------
+dependencies[] = ua_brand_core
+dependencies[] = ua_brand_demo
+dependencies[] = ua_brand_navigation
+dependencies[] = ua_content_types
+dependencies[] = ua_featured_content
+

@@ -1,0 +1,108 @@
+<?php
+
+/**
+ * @file
+ * Installation code for UA Brand Kickstart
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ */
+function ua_brand_kickstart_install() {
+
+  // Set the default and admin themes.
+  variable_set('theme_default', 'ua_zen');
+  variable_set('admin_theme', 'seven');
+  variable_set('node_admin_theme', '1');
+  theme_enable(array('uagc_zen'));
+
+  // TODO: figure out why/how Bartik is getting enabled.
+  theme_disable(array('bartik'));
+
+  // Enable some standard blocks.
+  ua_brand_kickstart_enable_blocks();
+
+  // Create a Home link in the main menu.
+  $item = array(
+    'link_title' => st('Home'),
+    'link_path' => '<front>',
+    'menu_name' => 'main-menu',
+  );
+  menu_link_save($item);
+
+  // Update the menu router information.
+  menu_rebuild();
+
+  // Force any permissions in features to be built before assigning roles.
+  features_rebuild();
+
+  // Grant all permissions for admin role.
+  if ($admin_role = user_role_load_by_name('administrator')) {
+    user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
+  }
+
+  // Assign user 1 the admin role.
+  db_insert('users_roles')
+    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
+    ->execute();
+}
+
+/**
+ * Enables some standard blocks.
+ */
+function ua_brand_kickstart_enable_blocks() {
+  $default_theme = variable_get('theme_default', 'ua_zen');
+  $admin_theme = 'seven';
+  $blocks = array(
+    array(
+      'module' => 'system',
+      'delta' => 'main',
+      'theme' => $default_theme,
+      'region' => 'content',
+      'cache' => DRUPAL_NO_CACHE,
+    ),
+    array(
+      'module' => 'system',
+      'delta' => 'user-menu',
+      'theme' => $default_theme,
+      'weight' => 9,
+      'region' => 'footer',
+      'title' => '<none>',
+      'cache' => DRUPAL_CACHE_PER_ROLE,
+    ),
+    array(
+      'module' => 'search',
+      'delta' => 'form',
+      'theme' => $default_theme,
+      'region' => 'header',
+      'cache' => DRUPAL_NO_CACHE,
+    ),
+    array(
+      'module' => 'system',
+      'delta' => 'help',
+      'theme' => $default_theme,
+      'region' => 'help',
+      'cache' => DRUPAL_NO_CACHE,
+    ),
+    array(
+      'module' => 'system',
+      'delta' => 'main',
+      'theme' => $admin_theme,
+      'region' => 'content',
+      'cache' => DRUPAL_NO_CACHE,
+    ),
+    array(
+      'module' => 'system',
+      'delta' => 'help',
+      'theme' => $admin_theme,
+      'region' => 'help',
+      'cache' => DRUPAL_NO_CACHE,
+    ),
+  );
+
+  ua_brand_kickstart_insert_blocks($blocks);
+}
+
+
