@@ -9,6 +9,16 @@
 
 
 /**
+ * Custom function for the secondary footer logo option
+ */
+
+function ua_zen_footer_logo() {
+  $ifid = theme_get_setting('footer_logo_file');
+  $imgpath = file_load($ifid)->uri;
+  return file_create_url($imgpath);
+}
+
+/**
  * Override or insert variables into the maintenance page template.
  *
  * @param $variables
@@ -67,28 +77,24 @@ function ua_zen_preprocess_page(&$variables, $hook) {
 function ua_zen_preprocess_page(&$variables, $hook) {
 
   //Allows there to be a template file for the UA Header and Footers without allowing blocks to be placed there - regions defined in .info, but commented out
-  if ( !isset($variables['page']['header_ua']) || empty($variables['page']['header_ua'])) {
-         $variables['page']['header_ua'] = array(
-            '#region' => 'header_ua',
-            '#weight' => '-10',
-            '#theme_wrappers' => array('region'));
-    }
-    if ( !isset($variables['page']['footer_ua']) || empty($variables['page']['footer_ua'])) {
-        $variables['page']['footer_ua'] = array(
-            '#region' => 'footer_ua',
-            '#weight' => '-10',
-            '#theme_wrappers' => array('region'));
-     }
-     if ( !isset($variables['page']['footer_ua_hidden']) || empty($variables['page']['footer_ua_hidden'])) {
-        $variables['page']['footer_ua_hidden'] = array(
-            '#region' => 'footer_ua_hidden',
-            '#weight' => '-10',
-            '#theme_wrappers' => array('region'));
-     }
-
-    //Allows tpl.php access to the uploaded footer logo image in the theme-settings.php (Code source: http://stackoverflow.com/questions/12177175/how-do-i-properly-add-file-field-in-drupal-form-via-theme-setting-php)
-    $fid = theme_get_setting('footer_logo_file');
-    $footer_logo_url = file_create_url(file_load($fid)->uri);
+  if (!isset($variables['page']['header_ua']) || empty($variables['page']['header_ua'])) {
+    $variables['page']['header_ua'] = array(
+      '#region' => 'header_ua',
+      '#weight' => '-10',
+      '#theme_wrappers' => array('region'));
+  }
+  if (!isset($variables['page']['footer_ua']) || empty($variables['page']['footer_ua'])) {
+    $variables['page']['footer_ua'] = array(
+      '#region' => 'footer_ua',
+      '#weight' => '-10',
+      '#theme_wrappers' => array('region'));
+  }
+  if (!isset($variables['page']['footer_ua_hidden']) || empty($variables['page']['footer_ua_hidden'])) {
+    $variables['page']['footer_ua_hidden'] = array(
+      '#region' => 'footer_ua_hidden',
+      '#weight' => '-10',
+      '#theme_wrappers' => array('region'));
+  }
 
 }
 
@@ -136,12 +142,10 @@ function ua_zen_preprocess_comment(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("region" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function ua_zen_preprocess_region(&$variables, $hook) {
-  // Don't use Zen's region--sidebar.tpl.php template for sidebars.
-  //if (strpos($variables['region'], 'sidebar_') === 0) {
-  //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('region__sidebar'));
-  //}
+  if ($variables['region'] == 'footer') {
+    $variables['ua_zen_footer_logo'] = ua_zen_footer_logo();
+  }
 }
 // */
 

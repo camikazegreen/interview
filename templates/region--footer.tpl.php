@@ -10,7 +10,7 @@
 <?php if ($content): ?>
   <footer id="footer_site" class="<?php print $classes; ?>">
   	<div class="container">
-  		<?php print $footer_logo_url; ?>
+  		<?php print $ua_zen_footer_logo; ?>
     	<?php print $content; ?>
   	</div>
   </footer>
