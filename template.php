@@ -11,7 +11,6 @@
 /**
  * Custom function for the secondary footer logo option
  */
-
 function ua_zen_footer_logo() {
   $ifid = theme_get_setting('footer_logo_file');
   $ifile = file_load($ifid);
