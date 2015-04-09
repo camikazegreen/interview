@@ -14,8 +14,10 @@
 
 function ua_zen_footer_logo() {
   $ifid = theme_get_setting('footer_logo_file');
-  $imgpath = file_load($ifid)->uri;
-  return file_create_url($imgpath);
+  $ifile = file_load($ifid);
+  $iuri = $ifile->uri;
+  return $iuri;
+  /*return file_create_url($iuri);*/
 }
 
 /**
