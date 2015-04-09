@@ -1,5 +1,5 @@
-name = UA Drupal Core
-description = Provides miscellaneous fields, blocks, and settings common to all UA Drupal sites.
+name = UA Brand Core
+description = Provides miscellaneous fields, blocks, and settings common to UA Brand components/features.
 core = 7.x
 package = UA
 version = 7.x-1.x-dev

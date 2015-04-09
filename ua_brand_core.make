@@ -1,5 +1,5 @@
 ; ------------------------------------------------------------------------------
-; UA Drupal Core Makefile
+; UA Brand Core Makefile
 ;
 ; This makefile should stay as bare-bones as possilbe.  In general, individual
 ; modules/features should include their own makefiles to package their own
@@ -15,7 +15,7 @@ api = 2
 defaults[projects][subdir] = contrib
 
 ; ------------------------------------------------------------------------------
-; Dependencies common to most UA Drupal features/sites
+; Dependencies common to most UA Brand features/sites
 ; ------------------------------------------------------------------------------
 
 projects[ctools][version] = 1.7
