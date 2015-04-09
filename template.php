@@ -16,7 +16,10 @@ function ua_zen_footer_logo() {
   $ifid = theme_get_setting('footer_logo_file');
   $ifile = file_load($ifid);
   $iuri = $ifile->uri;
-  return file_create_url($iuri);
+  $ipath = file_create_url($iuri);
+  $ipath = parse_url($ipath);
+  $ialias = $ipath['path'];
+  return $ialias;
 }
 
 /**
@@ -146,6 +149,7 @@ function ua_zen_preprocess_comment(&$variables, $hook) {
 function ua_zen_preprocess_region(&$variables, $hook) {
   if ($variables['region'] == 'footer') {
     $variables['ua_zen_footer_logo'] = ua_zen_footer_logo();
+    $variables['logo'] = theme_get_setting('logo'); // Make logo available in footer region for display logic
   }
 }
 // */
