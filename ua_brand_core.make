@@ -15,7 +15,7 @@ api = 2
 defaults[projects][subdir] = contrib
 
 ; ------------------------------------------------------------------------------
-; Dependencies common to most UA Brand features/sites
+; Contrib dependencies common to many UA Brand features/sites
 ; ------------------------------------------------------------------------------
 
 projects[ctools][version] = 1.7
@@ -50,24 +50,14 @@ projects[link][version] = 1.3
 
 projects[features][version] = 2.3
 
+projects[migrate][version] = 2.7
+
 projects[strongarm][version] = 2.0
 
 
 ; ------------------------------------------------------------------------------
 ; UA Zen theme dependencies
 ; ------------------------------------------------------------------------------
-
-; TODO: is this really needed for the theme?
-projects[block_class][version] = 2.1
-
-; TODO: is this really needed for the theme?
-projects[jquery_update][version] = 2.5
-
-projects[responsive_menus][version] = 1.5
-
-projects[superfish][version] = 1.9
-; Fix superfish module's makefile which packages the superfish library
-projects[superfish][patch][] = http://cgit.drupalcode.org/superfish/patch/?id=3524a21ee42ce75a56fe1814256db5ae15b5d98a
 
 projects[zen][version] = 5.5
 
