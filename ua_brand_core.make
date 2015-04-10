@@ -26,7 +26,7 @@ projects[libraries][version] = 2.2
 
 projects[pathauto][version] = 1.2
 
-projects[token][version] = 1.5
+projects[token][version] = 1.6
 
 projects[views][version] = 3.10
 
@@ -56,7 +56,7 @@ projects[link][version] = 1.3
 ; Features module and related
 ; ------------------------------------------------------------------------------
 
-projects[features][version] = 2.3
+projects[features][version] = 2.4
 
 projects[migrate][version] = 2.7
 
