@@ -12,12 +12,17 @@
  * Custom function for the secondary footer logo option
  */
 function ua_zen_footer_logo() {
+  $ialias = '/';
   $ifid = theme_get_setting('footer_logo_file');
-  $ifile = file_load($ifid);
-  $iuri = $ifile->uri;
-  $ipath = file_create_url($iuri);
-  $ipath = parse_url($ipath);
-  $ialias = $ipath['path'];
+  if ($ifid) {
+    $ifile = file_load($ifid);
+    if ($ifile) {
+      $iuri = $ifile->uri;
+      $ipath = file_create_url($iuri);
+      $ipath = parse_url($ipath);
+      $ialias = $ipath['path'];
+    }
+  }  
   return $ialias;
 }
 
