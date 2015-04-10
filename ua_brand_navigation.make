@@ -18,11 +18,15 @@ projects[jquery_update][version] = 2.5
 
 projects[menu_block][version] = 2.5
 
-projects[responsive_menus][version] = 1.5
+projects[responsive_menus][version] = 1.x-dev
+projects[responsive_menus][download][type] = git
+projects[responsive_menus][download][revision] = c3b0835
+projects[responsive_menus][download][branch] = 7.x-1.x
 
-projects[superfish][version] = 1.9
-; Fix superfish module's makefile which packages the superfish library
-projects[superfish][patch][] = http://cgit.drupalcode.org/superfish/patch/?id=3524a21ee42ce75a56fe1814256db5ae15b5d98a
+projects[superfish][version] = 1.x-dev
+projects[superfish][download][type] = git
+projects[superfish][download][revision] = fa3d7c6
+projects[superfish][download][branch] = 7.x-1.x
 
 
 ; ------------------------------------------------------------------------------
