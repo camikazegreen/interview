@@ -35,9 +35,17 @@ projects[views][version] = 3.10
 ; Commonly used field modules
 ; ------------------------------------------------------------------------------
 
+projects[auto_nodetitle][version] = 1.0
+
 projects[date][version] = 2.8
 
+projects[email][version] = 1.3
+
 projects[entityreference][version] = 1.1
+
+projects[auto_nodetitle][version] = 1.0
+
+projects[field_collection][version] = 1.0-beta8
 
 projects[field_group][version] = 1.4
 
