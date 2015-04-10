@@ -13,6 +13,13 @@ function ua_brand_navigation_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_secondary_links_source';
+  $strongarm->value = 'ua-brand-utility-links';
+  $export['menu_secondary_links_source'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'responsive_menus_codrops_responsive_multi_css_selectors';
   $strongarm->value = '#superfish-1';
   $export['responsive_menus_codrops_responsive_multi_css_selectors'] = $strongarm;

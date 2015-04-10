@@ -11,6 +11,7 @@ dependencies[] = strongarm
 dependencies[] = superfish
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
+features[variable][] = menu_secondary_links_source
 features[variable][] = responsive_menus_codrops_responsive_multi_css_selectors
 features[variable][] = responsive_menus_style
 features[variable][] = superfish_arrow_1
