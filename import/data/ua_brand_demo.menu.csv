@@ -2,3 +2,6 @@ mlid,,menu,path,title,ref_parent,weight
 1,"main-menu","primus","Primus",0,0
 2,"main-menu","secundus","Secundus",0,0
 3,"main-menu","tertius","Tertius",0,0
+4,"ua-brand-utility-links","<front>","Utility 1",0,0
+5,"ua-brand-utility-links","<front>","Utility 2",0,0
+6,"ua-brand-utility-links","<front>","Utility 3",0,0
