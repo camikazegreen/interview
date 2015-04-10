@@ -32,7 +32,7 @@ projects[superfish][patch][] = http://cgit.drupalcode.org/superfish/patch/?id=35
 ; 'ResponsiveMultiLevelMenu' required by responsive_menus contrib module.
 ; No release version(s) available.  Module documentation says to use URL below.
 libraries[ResponsiveMultiLevelMenu][download][type] = get
-libraries[ResponsiveMultiLevelMenu][download][url] = http://tympanus.net/Development/ResponsiveMultiLevelMenu/ResponsiveMultiLevelMenu.zip
+libraries[ResponsiveMultiLevelMenu][download][url] = https://github.com/codrops/ResponsiveMultiLevelMenu/archive/master.zip
 
 ; 'sidr' required by responsive_menus contrib module.
 libraries[sidr][download][type] = get
