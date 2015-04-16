@@ -40,9 +40,10 @@ function ua_brand_kickstart_insert_blocks($blocks = array()) {
     }
     $blocks = $merged_blocks;
 
-  foreach ($blocks as $record) {
-    db_insert('block')
-      ->fields($record)
-      ->execute();
+    foreach ($blocks as $record) {
+      db_insert('block')
+        ->fields($record)
+        ->execute();
+    }
   }
 }
