@@ -21,9 +21,10 @@ When this module is used as part of a Drupal distribution (such as [UA Brand Kic
 - [jQuery Update](https://www.drupal.org/project/jquery_update)
 - [Menu Block](https://www.drupal.org/project/menu_block)
 - [Reponsive Menus](https://www.drupal.org/project/responsive_menus)
-- [Superfish](https://www.drupal.org/project/superfish) (module also packages Superfish JS library itself)
+- [Superfish](https://www.drupal.org/project/superfish)
 
 ### Libraries
 
 - [ResponsiveMultiLevelMenu](http://tympanus.net/codrops/2013/04/19/responsive-multi-level-menu/)
 - [Sidr](http://www.berriart.com/sidr/)
+- [Superfish](https://github.com/mehrpadin/Superfish-for-Drupal/)
