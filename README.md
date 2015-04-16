@@ -53,4 +53,4 @@ This distribution can be built using [Drush make](http://docs.drush.org/en/stabl
 
 7. Remove the build folder (optional), e.g.:
 
-    rm -Rf build
+        rm -Rf build
