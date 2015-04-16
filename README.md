@@ -4,7 +4,7 @@ Provides core dependencies for UA Drupal Distribution and features.
 
 ## Packaged Dependencies
 
-When this module is used as part of a Drupal distribution such as [UA Brand Kickstart](https://bitbucket.org/joegraduate/ua_brand_kickstart), the following dependencies are automatically packaged with this distribution.
+When this module is used as part of a Drupal distribution (such as [UA Brand Kickstart](https://bitbucket.org/joegraduate/ua_brand_kickstart)), the following dependencies are automatically packaged with the distribution.
 
 ### Drupal Contrib Modules
 
