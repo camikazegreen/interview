@@ -19,6 +19,7 @@ The following dependencies are automatically packaged with this module when it i
 ### Drupal Contrib Modules
 
 - [jQuery Update](https://www.drupal.org/project/jquery_update)
+- [Menu Block](https://www.drupal.org/project/menu_block)
 - [Reponsive Menus](https://www.drupal.org/project/responsive_menus)
 - [Superfish](https://www.drupal.org/project/superfish) (module also packages Superfish JS library itself)
 
