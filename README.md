@@ -1,5 +1,6 @@
 UA Brand Kickstart(*) Drupal Distribution and Install Profile
 =============================================================
+(*) Name subject to change
 
 Demonstration/starter Drupal distribution and installation profile that packages various features consistent with community best practices and UA brand strategy.
 
@@ -18,5 +19,3 @@ Demonstration/starter Drupal distribution and installation profile that packages
 - [UA Featured Content (Carousel) Feature](https://bitbucket.org/uabrandingdigitalassets/ua_featured_content)
 - [UA Zen Theme](https://bitbucket.org/uabrandingdigitalassets/ua-zen)
 - More to come...
-
-(*) Name subject to change
