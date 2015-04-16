@@ -20,7 +20,7 @@ function ua_brand_kickstart_form_install_configure_form_alter(&$form, &$form_sta
 }
 
 /**
- * Prepares an executes a database query to insert blocks based on an array of
+ * Prepares an executes database queries to insert blocks based on an array of
  * nested block data arrays.
  */
 function ua_brand_kickstart_insert_blocks($blocks = array()) {
@@ -32,6 +32,7 @@ function ua_brand_kickstart_insert_blocks($blocks = array()) {
     'title' => '',
   );
 
+  // Merge default values.
   if (!empty($blocks)) {
     $merged_blocks = array();
     foreach ($blocks as $block) {
@@ -39,21 +40,9 @@ function ua_brand_kickstart_insert_blocks($blocks = array()) {
     }
     $blocks = $merged_blocks;
 
-    $query = db_insert('block')->fields(array(
-      'module',
-      'delta',
-      'theme',
-      'status',
-      'weight',
-      'region',
-      'visibility',
-      'pages',
-      'title',
-      'cache',
-    ));
-    foreach ($blocks as $block) {
-      $query->values($block);
-    }
-    $query->execute();
+  foreach ($blocks as $record) {
+    db_insert('block')
+      ->fields($record)
+      ->execute();
   }
 }
