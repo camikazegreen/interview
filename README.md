@@ -1,4 +1,4 @@
-UA Brand Kickstart(*) Drupal Distribution and Install Profile
+UA Brand Kickstart* Drupal Distribution and Install Profile
 =============================================================
 (*) Name subject to change
 
