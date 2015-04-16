@@ -9,28 +9,27 @@ The following dependencies are automatically packaged with this module when it i
 ### Drupal Contrib Modules
 
 #### Common Contrib Module Dependencies
-- [](https://www.drupal.org/project/ctools)
-- [](https://www.drupal.org/project/entity)
-- [](https://www.drupal.org/project/libraries)
-- [](https://www.drupal.org/project/pathauto)
-- [](https://www.drupal.org/project/token)
-- [](https://www.drupal.org/project/views)
+- [Chaos tools](https://www.drupal.org/project/ctools)
+- [Entity API](https://www.drupal.org/project/entity)
+- [Libraries API](https://www.drupal.org/project/libraries)
+- [Pathauto](https://www.drupal.org/project/pathauto)
+- [Token](https://www.drupal.org/project/token)
+- [Views](https://www.drupal.org/project/views)
 
 #### Common Contrib Field Modules
-- [](https://www.drupal.org/project/auto_nodetitle)
-- [](https://www.drupal.org/project/date)
-- [](https://www.drupal.org/project/email][version)
-- [](https://www.drupal.org/project/entityreference)
-- [](https://www.drupal.org/project/auto_nodetitle)
-- [](https://www.drupal.org/project/field_collection)
-- [](https://www.drupal.org/project/field_group)
-- [](https://www.drupal.org/project/link)
+- [Auto Nodetitle](https://www.drupal.org/project/auto_nodetitle)
+- [Date API](https://www.drupal.org/project/date)
+- [Email](https://www.drupal.org/project/email)
+- [Entity Reference](https://www.drupal.org/project/entityreference)
+- [Field Collection](https://www.drupal.org/project/field_collection)
+- [Field Group](https://www.drupal.org/project/field_group)
+- [Link](https://www.drupal.org/project/link)
 
 #### Features-related Contrib Modules
-- [](https://www.drupal.org/project/defaultconfig)
-- [](https://www.drupal.org/project/features)
-- [](https://www.drupal.org/project/migrate)
-- [](https://www.drupal.org/project/strongarm)
+- [Defaultconfig](https://www.drupal.org/project/defaultconfig)
+- [Features](https://www.drupal.org/project/features)
+- [Migrate](https://www.drupal.org/project/migrate)
+- [Strongarm](https://www.drupal.org/project/strongarm)
 
 ### Drupal Contrib Themes
 
