@@ -14,7 +14,7 @@ Provides various dependencies and configuration for UA Brand Navigation componen
 
 ## Packaged Dependencies
 
-The following dependencies are automatically packaged with this module when it is used as part of a Drupal distribution such as [UA Brand Kickstart](https://bitbucket.org/joegraduate/ua_brand_kickstart).
+When this module is used as part of a Drupal distribution (such as [UA Brand Kickstart](https://bitbucket.org/joegraduate/ua_brand_kickstart)), the following dependencies will be automatically packaged with the distribution.
 
 ### Drupal Contrib Modules
 
