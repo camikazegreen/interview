@@ -1,3 +1,5 @@
+/* HEADER */
+
 #header_site {
 	.header__region {
 		float: right;
@@ -108,6 +110,14 @@
 	}
 }
 
+@media (max-width: 767px) {
+  #header_site #search {
+    width: 100%;
+    float: none;
+    clear: both;
+  }
+}
+
 /* NEWS */
 
 .view-news {
@@ -159,13 +169,11 @@
 	}
 }
 
-// END NEWS
+/* FOOTER */
 
-
-@media (max-width: 767px) {
-  #header_site #search {
-    width: 100%;
-    float: none;
-    clear: both;
+@media (min-width: 992px) {
+  footer#footer_site #footer-logo { //specific to zen layout structure
+    float: left;
+    margin: 0 1rem 1rem 0;
   }
 }
