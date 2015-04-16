@@ -35,7 +35,7 @@ projects[ua_content_types][subdir] = custom
 projects[ua_content_types][directory_name] = ua_content_types
 projects[ua_content_types][download][type] = git
 projects[ua_content_types][download][branch] = 7.x-1.x
-projects[ua_content_types][download][url] = git@bitbucket.org:uabrandingdigitalassets/ua-features.git
+projects[ua_content_types][download][url] = git@bitbucket.org:uabrandingdigitalassets/cals-ua-features.git
 
 
 ; =====================================
