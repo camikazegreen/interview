@@ -19,4 +19,4 @@ Demonstration/starter Drupal distribution and installation profile that packages
 - [UA Zen Theme](https://bitbucket.org/uabrandingdigitalassets/ua-zen)
 - More to come...
 
-* Name subject to change
+(*) Name subject to change
