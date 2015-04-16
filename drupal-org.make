@@ -27,7 +27,7 @@ projects[ua_brand_navigation][download][url] = git@bitbucket.org:joegraduate/ua_
 projects[ua_featured_content][type] = module
 projects[ua_featured_content][subdir] = custom
 projects[ua_featured_content][download][type] = git
-projects[ua_featured_content][download][branch] = makefile
+projects[ua_featured_content][download][branch] = 7.x-1.x
 projects[ua_featured_content][download][url] = git@bitbucket.org:uabrandingdigitalassets/ua_featured_content.git
 
 projects[ua_content_types][type] = module
