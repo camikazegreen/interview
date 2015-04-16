@@ -33,4 +33,4 @@ The following dependencies are automatically packaged with this module when it i
 
 ### Drupal Contrib Themes
 
-- [Zen](https://www.drupal.org/project/zen]
+- [Zen](https://www.drupal.org/project/zen)
