@@ -63,7 +63,7 @@ projects[defaultconfig][patch][2008178] = http://drupal.org/files/defaultconfig-
 projects[defaultconfig][patch][1861054] = http://drupal.org/files/fix-defaultconfig_rebuild_all.patch
 projects[defaultconfig][patch][2221005] = http://drupal.org/files/issues/defaultconfig-duplicate_modules_in_overview-2221005-1.patch
 
-projects[features][version] = 2.4
+projects[features][version] = 2.5
 
 projects[migrate][version] = 2.7
 
