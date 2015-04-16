@@ -10,7 +10,7 @@ Demonstration/starter Drupal distribution and installation profile that packages
 - Creates default administrator role (copied from Drupal Standard install profile, for now).
 - Enables some default blocks.
 
-## Distribution Packaged Features
+## Distribution Packaged Features (Dependencies)
 
 - [UA Brand Core Feature](https://bitbucket.org/joegraduate/ua_brand_core)
 - [UA Brand Demonstration Content Feature](https://bitbucket.org/joegraduate/ua_brand_demo)
