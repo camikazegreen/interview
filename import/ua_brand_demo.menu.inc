@@ -43,8 +43,6 @@ class UaBrandDemoMenu extends Migration {
     $this->addFieldMapping('customized')->defaultValue('1');
     $this->addFieldMapping('has_children')->defaultValue('0');
     $this->addFieldMapping('depth')->defaultValue('1');
-
-    $this->addUnmigratedDestinations(array('module', 'hidden', 'options', 'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'updated'));
   }
 
   function prepareRow($row) {
