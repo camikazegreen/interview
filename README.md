@@ -14,13 +14,13 @@ Provides various dependencies and configuration for UA Brand Navigation componen
 
 ## Packaged Dependencies
 
-The following dependencies are automatically packaged with this module when it is used as part of a Drupal distribution.
+The following dependencies are automatically packaged with this module when it is used as part of a Drupal distribution such as [UA Brand Kickstart](https://bitbucket.org/joegraduate/ua_brand_kickstart).
 
 ### Drupal Contrib Modules
 
 - [jQuery Update](https://www.drupal.org/project/jquery_update)
 - [Reponsive Menus](https://www.drupal.org/project/responsive_menus)
-- [Superfish](https://www.drupal.org/project/superfish) - module packages Superfish JS library itself
+- [Superfish](https://www.drupal.org/project/superfish) (module also packages Superfish JS library itself)
 
 ### Libraries
 
