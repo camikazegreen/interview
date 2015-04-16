@@ -28,25 +28,29 @@ This distribution can be built using [Drush make](http://docs.drush.org/en/stabl
 
 1. Change into the directory that you want the built distribution folder to be created in, e.g.:
 
-        $ cd /var/www
+        cd /var/www
 
 2. Create a temporary build folder, e.g.:
 
-        $ mkdir build
+        mkdir build
 
 3. Clone the repository into the build folder, e.g.:
 
-        $ git clone git@bitbucket.org:joegraduate/ua_brand_kickstart.git build/ua_brand_kickstart
+        git clone git@bitbucket.org:joegraduate/ua_brand_kickstart.git build/ua_brand_kickstart
 
 4. Check out a release tag (optional), e.g.:
 
-        $ cd build/ua_brand_kickstart
-        $ git checkout 7.x-1.0-beta1
+        cd build/ua_brand_kickstart
+        git checkout 7.x-1.0-beta1
 
 5. Change back into the directory that you want the built distribution folder to be created in, e.g.:
 
-        $ cd /var/www
+        cd /var/www
 
 6. Use drush make to build the distribution, e.g.:
 
-        $ drush make build/ua_brand_kickstart/build-ua_brand_kickstart.make ua_brand_kickstart
+        drush make build/ua_brand_kickstart/build-ua_brand_kickstart.make ua_brand_kickstart
+
+7. Remove the build folder (optional), e.g.:
+
+    rm -Rf build
