@@ -8,7 +8,7 @@ core = 7.x
 
 includes[] = drupal-org-core.make
 
-; Download UA Brand Kickstart install profile
+; Download install profile and recursively build all its dependencies.
 projects[ua_brand_kickstart][type] = profile
 projects[ua_brand_kickstart][download][type] = git
 projects[ua_brand_kickstart][download][branch] = joegraduate

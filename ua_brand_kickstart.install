@@ -76,7 +76,7 @@ function ua_brand_kickstart_install() {
   // TODO: figure out why/how Bartik is getting enabled.
   theme_disable(array('bartik'));
 
-  // Enable some standard blocks.
+  // Enable some default blocks.
   ua_brand_kickstart_enable_blocks();
 
   // Create a Home link in the main menu.
@@ -109,7 +109,7 @@ function ua_brand_kickstart_install() {
 }
 
 /**
- * Enables some standard blocks.
+ * Enables some default blocks.
  */
 function ua_brand_kickstart_enable_blocks() {
   $default_theme = variable_get('theme_default', 'ua_zen');
