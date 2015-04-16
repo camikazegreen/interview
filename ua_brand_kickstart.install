@@ -126,7 +126,6 @@ function ua_brand_kickstart_enable_blocks() {
       'module' => 'system',
       'delta' => 'user-menu',
       'theme' => $default_theme,
-      'weight' => 9,
       'region' => 'footer',
       'title' => '<none>',
       'cache' => DRUPAL_CACHE_PER_ROLE,
@@ -143,6 +142,14 @@ function ua_brand_kickstart_enable_blocks() {
       'delta' => 'help',
       'theme' => $default_theme,
       'region' => 'help',
+      'cache' => DRUPAL_NO_CACHE,
+    ),
+    array(
+      'module' => 'superfish',
+      'delta' => 'superfish-1',
+      'theme' => $default_theme,
+      'region' => 'navigation',
+      'title' => '<none>',
       'cache' => DRUPAL_NO_CACHE,
     ),
     array(
