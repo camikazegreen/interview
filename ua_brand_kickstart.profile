@@ -18,32 +18,3 @@ function ua_brand_kickstart_form_install_configure_form_alter(&$form, &$form_sta
     unset($form['server_settings']['date_default_timezone']['#attributes']['class'][$key]);
   }
 }
-
-/**
- * Prepares and executes database queries to insert blocks based on an array of
- * nested block data arrays.
- */
-function ua_brand_kickstart_insert_blocks($blocks = array()) {
-  $block_defaults = array(
-    'status' => 1,
-    'weight' => 0,
-    'visibility' => 0,
-    'pages' => '',
-    'title' => '',
-  );
-
-  // Merge default values.
-  if (!empty($blocks)) {
-    $merged_blocks = array();
-    foreach ($blocks as $block) {
-      $merged_blocks[] = array_merge($block_defaults, $block);
-    }
-    $blocks = $merged_blocks;
-
-    foreach ($blocks as $record) {
-      db_insert('block')
-        ->fields($record)
-        ->execute();
-    }
-  }
-}
