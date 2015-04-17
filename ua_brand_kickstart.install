@@ -163,6 +163,15 @@ function ua_brand_kickstart_enable_blocks() {
       'cache' => DRUPAL_NO_CACHE,
     ),
     array(
+      'module' => 'views',
+      'delta' => 'featured_content-block',
+      'theme' => $default_theme,
+      'region' => 'content_featured',
+      'pages' => '<front>',
+      'title' => '<none>',
+      'cache' => DRUPAL_NO_CACHE,
+    ),
+    array(
       'module' => 'system',
       'delta' => 'main',
       'theme' => $admin_theme,
