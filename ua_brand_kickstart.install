@@ -99,6 +99,11 @@ function ua_brand_kickstart_install() {
   // Force any permissions in features to be built before assigning roles.
   features_rebuild();
 
+  // Enable default permissions for system roles.
+  $filtered_html_permission = filter_permission_name($filtered_html_format);
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', 'search content'));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', 'search content', $filtered_html_permission));
+
   // Create a default role for site administrators, with all available permissions assigned.
   $admin_role = new stdClass();
   $admin_role->name = 'administrator';
@@ -130,10 +135,9 @@ function ua_brand_kickstart_enable_blocks() {
     ),
     array(
       'module' => 'system',
-      'delta' => 'user-menu',
+      'delta' => 'powered-by',
       'theme' => $default_theme,
       'region' => 'footer',
-      'title' => '<none>',
       'cache' => DRUPAL_CACHE_PER_ROLE,
     ),
     array(
