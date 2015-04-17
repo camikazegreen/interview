@@ -43,7 +43,6 @@ projects[ua_content_types][download][url] = git@bitbucket.org:uabrandingdigitala
 ; =====================================
 
 projects[ua_zen][type] = theme
-projects[ua_zen][subdir] = custom
 projects[ua_zen][directory_name] = ua_zen
 projects[ua_zen][download][type] = git
 projects[ua_zen][download][branch] = 7.x-1.x
