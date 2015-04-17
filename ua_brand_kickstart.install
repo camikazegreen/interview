@@ -169,7 +169,7 @@ function ua_brand_kickstart_enable_blocks() {
       'region' => 'content_featured',
       'pages' => '<front>',
       'title' => '<none>',
-      'visisbility' => 1,
+      'visibility' => 1,
       'cache' => DRUPAL_NO_CACHE,
     ),
     array(
