@@ -184,15 +184,10 @@ function ua_brand_kickstart_setup_blocks($blocks = array()) {
     'title' => '',
   );
 
-  // Merge default values.
   if (!empty($blocks)) {
-    $merged_blocks = array();
-    foreach ($blocks as $block) {
-      $merged_blocks[] = array_merge($block_defaults, $block);
-    }
-    $blocks = $merged_blocks;
-
     foreach ($blocks as $record) {
+      // Merge default values.
+      $record = array_merge($block_defaults, $record);
       db_insert('block')
         ->fields($record)
         ->execute();
