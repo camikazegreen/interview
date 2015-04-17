@@ -6,30 +6,14 @@
  */
 
 /**
- * Implements hook_install_tasks().
- */
-/*function ua_brand_kickstart_install_tasks() {
-  $tasks = array();
-
-  $tasks['ua_brand_kickstart_install_additional_modules'] = array(
-    'display_name' => st('Install additional modules'),
-  );
-
-  $tasks['ua_brand_kickstart_enable_blocks'] = array(
-    'display_name' => st('Enable blocks'),
-  );
-
-  return $tasks;
-}*/
-
-/**
  * Implements hook_install().
  *
  * Perform actions to set up the site for this profile.
  */
 function ua_brand_kickstart_install() {
   // Force Drupal to look for themes in profile path.
-//  variable_set('install_profile', 'ua_brand_kickstart');
+  variable_set('install_profile', 'ua_brand_kickstart');
+  list_themes(TRUE);
 
   // Enable themes.
   $default_theme = 'ua_zen';
@@ -38,6 +22,9 @@ function ua_brand_kickstart_install() {
   variable_set('theme_default', $default_theme);
   variable_set('admin_theme', $admin_theme);
   variable_set('node_admin_theme', '1');
+
+  // Disable bartik theme.
+  theme_disable(array('bartik'));
 
   // Enable some standard blocks.
   ua_brand_kickstart_enable_blocks();
@@ -209,39 +196,4 @@ function ua_brand_kickstart_enable_blocks() {
       ->fields($record)
       ->execute();
   }
-
-//  drupal_static_reset();
-//  _block_rehash($admin_theme);
-//  _block_rehash($default_theme);
-//  foreach ($blocks as $record) {
-    // Merge default values.
-//    $record = array_merge($block_defaults, $record);
-//    $module = array_shift($record);
-//    $delta = array_shift($record);
-//    $theme = array_shift($record);
-//    db_update('block')
-//    db_insert('block')
-//      ->fields($record)
-//      ->condition('module', $module)
-//      ->condition('delta', $delta)
-//      ->condition('theme', $theme)
-//      ->execute();
-//  }
-}
-
-/**
- * Install task to install additional modules.
- *
- * Any modules providing custom blocks should be enabled here, and not before
- * (as an install profile dependency), because the themes are setup during
- * ua_brand_kickstart_install(), which means region assignment can only happen
- * after that.
- */
-function ua_brand_kickstart_install_additional_modules() {
-  $modules = array(
-    'ua_brand_navigation',
-    'ua_brand_demo',
-  );
-
-  module_enable($modules);
 }
