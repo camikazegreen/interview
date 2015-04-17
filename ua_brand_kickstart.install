@@ -1,26 +1,26 @@
 <?php
 
 /**
+ * @file
+ * Installation code for UA Brand Kickstart
+ */
+
+/**
  * Implements hook_install_tasks().
  */
-function ua_brand_kickstart_install_tasks() {
+/*function ua_brand_kickstart_install_tasks() {
   $tasks = array();
 
-//  $tasks['ua_brand_kickstart_install_additional_modules'] = array(
-//    'display_name' => st('Install additional modules'),
-//  );
+  $tasks['ua_brand_kickstart_install_additional_modules'] = array(
+    'display_name' => st('Install additional modules'),
+  );
 
   $tasks['ua_brand_kickstart_enable_blocks'] = array(
     'display_name' => st('Enable blocks'),
   );
 
   return $tasks;
-}
-
-/**
- * @file
- * Installation code for UA Brand Kickstart
- */
+}*/
 
 /**
  * Implements hook_install().
@@ -28,6 +28,20 @@ function ua_brand_kickstart_install_tasks() {
  * Perform actions to set up the site for this profile.
  */
 function ua_brand_kickstart_install() {
+  // Force Drupal to look for themes in profile path.
+//  variable_set('install_profile', 'ua_brand_kickstart');
+
+  // Enable themes.
+  $default_theme = 'ua_zen';
+  $admin_theme = 'seven';
+  theme_enable(array($default_theme, $admin_theme));
+  variable_set('theme_default', $default_theme);
+  variable_set('admin_theme', $admin_theme);
+  variable_set('node_admin_theme', '1');
+
+  // Enable some standard blocks.
+  ua_brand_kickstart_enable_blocks();
+
   // Add default text formats.
   $filtered_html_format = array(
     'format' => 'filtered_html',
@@ -83,15 +97,6 @@ function ua_brand_kickstart_install() {
   );
   $full_html_format = (object) $full_html_format;
   filter_format_save($full_html_format);
-
-  // Set the default and admin themes.
-  variable_set('theme_default', 'ua_zen');
-  variable_set('admin_theme', 'seven');
-  variable_set('node_admin_theme', '1');
-  theme_enable(array('uagc_zen'));
-
-  // TODO: figure out why/how Bartik is getting enabled.
-  theme_disable(array('bartik'));
 
   // Create a Home link in the main menu.
   $item = array(
@@ -160,7 +165,7 @@ function ua_brand_kickstart_enable_blocks() {
     ),
     array(
       'module' => 'superfish',
-      'delta' => 'superfish-1',
+      'delta' => '1',
       'theme' => $default_theme,
       'region' => 'navigation',
       'title' => '<none>',
@@ -182,14 +187,6 @@ function ua_brand_kickstart_enable_blocks() {
     ),
   );
 
-  ua_brand_kickstart_setup_blocks($blocks);
-}
-
-/**
- * Prepares and executes database queries to insert blocks based on an array of
- * nested block data arrays.
- */
-function ua_brand_kickstart_setup_blocks($blocks = array()) {
   $block_defaults = array(
     'status' => 1,
     'weight' => 0,
@@ -198,24 +195,38 @@ function ua_brand_kickstart_setup_blocks($blocks = array()) {
     'title' => '',
   );
 
+  // Merge default values.
   if (!empty($blocks)) {
-    drupal_static_reset();
-    _block_rehash($admin_theme);
-    _block_rehash($default_theme);
-    foreach ($blocks as $record) {
-      // Merge default values.
-      $record = array_merge($block_defaults, $record);
-      $module = array_shift($record);
-      $delta = array_shift($record);
-      $theme = array_shift($record);
-      db_update('block')
-        ->fields($record)
-        ->condition('module', $module)
-        ->condition('delta', $delta)
-        ->condition('theme', $theme)
-        ->execute();
+    $merged_blocks = array();
+    foreach ($blocks as $block) {
+      $merged_blocks[] = array_merge($block_defaults, $block);
     }
+    $blocks = $merged_blocks;
   }
+
+  foreach ($blocks as $record) {
+    db_insert('block')
+      ->fields($record)
+      ->execute();
+  }
+
+//  drupal_static_reset();
+//  _block_rehash($admin_theme);
+//  _block_rehash($default_theme);
+//  foreach ($blocks as $record) {
+    // Merge default values.
+//    $record = array_merge($block_defaults, $record);
+//    $module = array_shift($record);
+//    $delta = array_shift($record);
+//    $theme = array_shift($record);
+//    db_update('block')
+//    db_insert('block')
+//      ->fields($record)
+//      ->condition('module', $module)
+//      ->condition('delta', $delta)
+//      ->condition('theme', $theme)
+//      ->execute();
+//  }
 }
 
 /**
@@ -229,7 +240,8 @@ function ua_brand_kickstart_setup_blocks($blocks = array()) {
 function ua_brand_kickstart_install_additional_modules() {
   $modules = array(
     'ua_brand_navigation',
+    'ua_brand_demo',
   );
 
-  module_enable($modules, FALSE);
+  module_enable($modules);
 }
