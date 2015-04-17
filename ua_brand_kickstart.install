@@ -1,6 +1,23 @@
 <?php
 
 /**
+ * Implements hook_install_tasks().
+ */
+function ua_brand_kickstart_install_tasks() {
+  $tasks = array();
+
+//  $tasks['ua_brand_kickstart_install_additional_modules'] = array(
+//    'display_name' => st('Install additional modules'),
+//  );
+
+  $tasks['ua_brand_kickstart_enable_blocks'] = array(
+    'display_name' => st('Enable blocks'),
+  );
+
+  return $tasks;
+}
+
+/**
  * @file
  * Installation code for UA Brand Kickstart
  */
@@ -75,9 +92,6 @@ function ua_brand_kickstart_install() {
 
   // TODO: figure out why/how Bartik is getting enabled.
   theme_disable(array('bartik'));
-
-  // Enable some default blocks.
-  ua_brand_kickstart_enable_blocks();
 
   // Create a Home link in the main menu.
   $item = array(
@@ -202,4 +216,20 @@ function ua_brand_kickstart_setup_blocks($blocks = array()) {
         ->execute();
     }
   }
+}
+
+/**
+ * Install task to install additional modules.
+ *
+ * Any modules providing custom blocks should be enabled here, and not before
+ * (as an install profile dependency), because the themes are setup during
+ * ua_brand_kickstart_install(), which means region assignment can only happen
+ * after that.
+ */
+function ua_brand_kickstart_install_additional_modules() {
+  $modules = array(
+    'ua_brand_navigation',
+  );
+
+  module_enable($modules, FALSE);
 }
