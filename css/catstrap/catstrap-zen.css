@@ -189,8 +189,13 @@
   }
 }
 /* FOOTER */
+/* line 173, ../../sass/catstrap/catstrap-zen.scss */
+footer#footer_site .footer-logo {
+  margin: 0 0 1rem;
+}
+
 @media (min-width: 992px) {
-  /* line 175, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 178, ../../sass/catstrap/catstrap-zen.scss */
   footer#footer_site .footer-logo {
     float: left;
     margin: 0 1rem 1rem 0;

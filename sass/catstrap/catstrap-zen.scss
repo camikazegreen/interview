@@ -170,6 +170,9 @@
 }
 
 /* FOOTER */
+footer#footer_site .footer-logo { //specific to zen layout structure
+	margin: 0 0 1rem;
+}
 
 @media (min-width: 992px) {
   footer#footer_site .footer-logo { //specific to zen layout structure
