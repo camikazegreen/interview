@@ -103,7 +103,12 @@ function ua_zen_preprocess_page(&$variables, $hook) {
       '#weight' => '-10',
       '#theme_wrappers' => array('region'));
   }
-
+  if (!isset($variables['page']['footer_sub']) || empty($variables['page']['footer_sub'])) { //force sub footer to be rendered
+    $variables['page']['footer_sub'] = array(
+      '#region' => 'footer_sub',
+      '#weight' => '-10',
+      '#theme_wrappers' => array('region'));
+  }
 }
 
 
