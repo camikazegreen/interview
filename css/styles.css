@@ -4620,13 +4620,22 @@ footer#footer_site #footer_copyright {
   }
 }
 /* FOOTER */
-/* line 173, ../sass/catstrap/catstrap-zen.scss */
+/* line 174, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site .footer-logo {
   margin: 0 0 1rem;
 }
+/* line 177, ../sass/catstrap/catstrap-zen.scss */
+footer#footer_site #footer_sub .container {
+  border-top: 1px solid #8E8C85;
+  padding-top: 0.5rem;
+}
+/* line 180, ../sass/catstrap/catstrap-zen.scss */
+footer#footer_site #footer_sub .container > * {
+  font-size: 0.96rem;
+}
 
 @media (min-width: 992px) {
-  /* line 178, ../sass/catstrap/catstrap-zen.scss */
+  /* line 187, ../sass/catstrap/catstrap-zen.scss */
   footer#footer_site .footer-logo {
     float: left;
     margin: 0 1rem 1rem 0;

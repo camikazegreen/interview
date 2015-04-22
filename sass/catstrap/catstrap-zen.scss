@@ -170,8 +170,17 @@
 }
 
 /* FOOTER */
-footer#footer_site .footer-logo { //specific to zen layout structure
-	margin: 0 0 1rem;
+footer#footer_site {
+	.footer-logo { //specific to zen layout structure
+		margin: 0 0 1rem;
+	}
+	#footer_sub .container {
+		border-top: 1px solid #8E8C85;
+		padding-top: 0.5rem;
+		> * { //reduce font size without affecting container width
+  			font-size: 0.96rem; // 15.36/16px
+		}
+	}
 }
 
 @media (min-width: 992px) {
