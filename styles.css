@@ -1,0 +1,43 @@
+/** View Display **/
+.ua-person-row {
+    margin: 0 0 2rem;
+}
+
+.ua-person-row .ua-person-name {
+    font-size: 1.4rem;
+}
+
+.ua-person-row .ua-person-job-titles {
+    margin: 0 0 1rem;
+}
+
+.ua-person-row .ua-person-job-titles ul,
+.ua-person-row .ua-person-phone ul {
+    padding: 0;
+    margin: 0;
+}
+
+.ua-person-row .ua-person-job-titles ul li,
+.ua-person-row .ua-person-phone ul li {
+    list-style-type: none;
+}
+
+@media screen and (min-width: 50em) {
+    .ua-person-grid .ua-person-row {
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
+    }
+}
+
+@media screen and (min-width: 75em) {
+    .ua-person-row:nth-child(3n+2) {
+        margin-right: 4%;
+        margin-left: 4%;
+    }
+    .ua-person-grid .ua-person-row {
+        display: inline-block;
+        vertical-align: top;
+        width: 30%;
+    }
+}

@@ -14,6 +14,7 @@ dependencies[] = image
 dependencies[] = text
 dependencies[] = token
 dependencies[] = views
+stylesheets[all][] = styles.css
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[field_base][] = field_ua_person_addresses
