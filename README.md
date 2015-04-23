@@ -27,20 +27,20 @@ drush en auto_nodetitle email entity token views
 ## Views ##
 The view included is modeled after a wireframe mockup provided by Student Affairs Marketing (image below).
 Included fields:
-* Photo (124px x 124px)
-* Full name
-* Job title(s)
-* Email
-* Phone number(s)
+- Photo (124px x 124px)
+- Full name
+- Job title(s)
+- Email
+- Phone number(s)
 ![persons-view.png](https://bitbucket.org/repo/qyrqzr/images/288845954-persons-view.png)
 
 The view display for the persons content type has classes added to it through the Views UI to facilitate styling.
 Styling classes are as follows:
-* Main View class: ua-people-grid (I used the word "grid" because this display will show persons 3-across on large screens, 2-across on medium screens and 1-across on smallest screens)
-* Row class: ua-people-row
-* Field Classes:
-  * Photo  .ua-person-photo
-  * Full name  .ua-person-name
-  * Job title(s)  .ua-person-job-titles
-  * Email  .ua-person-email
-  * Phone number(s)  .ua-person-phone
+- Main View class: ua-people-grid (I used the word "grid" because this display will show persons 3-across on large screens, 2-across on medium screens and 1-across on smallest screens)
+- Row class: ua-people-row
+- Field Classes:
+  - Photo  .ua-person-photo
+  - Full name  .ua-person-name
+  - Job title(s)  .ua-person-job-titles
+  - Email  .ua-person-email
+  - Phone number(s)  .ua-person-phone
