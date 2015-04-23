@@ -17,15 +17,15 @@ function ua_person_views_api($module = NULL, $api = NULL) {
 function ua_person_image_default_styles() {
   $styles = array();
 
-  // Exported image style: ua_small_square.
-  $styles['ua_small_square'] = array(
-    'label' => 'Small Square (124x124)',
+  // Exported image style: ua_medium_square.
+  $styles['ua_medium_square'] = array(
+    'label' => 'Medium Square (220x220)',
     'effects' => array(
-      1 => array(
+      2 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 124,
-          'height' => 124,
+          'width' => 220,
+          'height' => 220,
         ),
         'weight' => 1,
       ),

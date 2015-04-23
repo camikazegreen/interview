@@ -42,7 +42,7 @@ function ua_person_views_default_views() {
   $handler->display->display_options['fields']['field_ua_person_photo']['element_wrapper_class'] = 'ua-person-photo';
   $handler->display->display_options['fields']['field_ua_person_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ua_person_photo']['settings'] = array(
-    'image_style' => 'ua_small_square',
+    'image_style' => 'ua_medium_square',
     'image_link' => 'content',
   );
   /* Field: Content: Title */

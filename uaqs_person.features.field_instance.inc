@@ -262,7 +262,7 @@ function ua_person_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'ua_small_square',
+          'image_style' => 'ua_medium_square',
         ),
         'type' => 'image',
         'weight' => 0,
