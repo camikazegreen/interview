@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UA Person feature.
+ */
+
+include_once 'ua_person.features.inc';
