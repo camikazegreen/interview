@@ -39,8 +39,8 @@ Styling classes are as follows:
 * Main View class: ua-people-grid (I used the word "grid" because this display will show persons 3-across on large screens, 2-across on medium screens and 1-across on smallest screens)
 * Row class: ua-people-row
 * Field Classes:
-  * Photo - .ua-person-photo
-  * Full name - .ua-person-name
-  * Job title(s) - .ua-person-job-titles
-  * Email - .ua-person-email
-  * Phone number(s) - .ua-person-phone
+  * Photo  .ua-person-photo
+  * Full name  .ua-person-name
+  * Job title(s)  .ua-person-job-titles
+  * Email  .ua-person-email
+  * Phone number(s)  .ua-person-phone
