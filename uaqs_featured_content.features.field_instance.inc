@@ -10,9 +10,9 @@
 function ua_featured_content_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ua_carousel_item-body'
-  $field_instances['node-ua_carousel_item-body'] = array(
-    'bundle' => 'ua_carousel_item',
+  // Exported field_instance: 'node-featured_content-body'
+  $field_instances['node-featured_content-body'] = array(
+    'bundle' => 'featured_content',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -54,9 +54,9 @@ function ua_featured_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_carousel_item-field_call_to_action'
-  $field_instances['node-ua_carousel_item-field_call_to_action'] = array(
-    'bundle' => 'ua_carousel_item',
+  // Exported field_instance: 'node-featured_content-field_link_title_and_addresss'
+  $field_instances['node-featured_content-field_link_title_and_addresss'] = array(
+    'bundle' => 'featured_content',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -76,8 +76,8 @@ function ua_featured_content_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_call_to_action',
-    'label' => 'Call to Action',
+    'field_name' => 'field_link_title_and_addresss',
+    'label' => 'Link Title and Addresss',
     'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
@@ -111,9 +111,9 @@ function ua_featured_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_carousel_item-field_slide_image'
-  $field_instances['node-ua_carousel_item-field_slide_image'] = array(
-    'bundle' => 'ua_carousel_item',
+  // Exported field_instance: 'node-featured_content-field_slide_image'
+  $field_instances['node-featured_content-field_slide_image'] = array(
+    'bundle' => 'featured_content',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -164,7 +164,7 @@ function ua_featured_content_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Call to Action');
+  t('Link Title and Addresss');
   t('Slide Image');
 
   return $field_instances;
