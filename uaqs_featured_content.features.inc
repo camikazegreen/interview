@@ -25,12 +25,12 @@ function ua_featured_content_views_api($module = NULL, $api = NULL) {
  */
 function ua_featured_content_node_info() {
   $items = array(
-    'featured_content' => array(
-      'name' => t('Featured Content'),
+    'ua_carousel_item' => array(
+      'name' => t('Carousel Item'),
       'base' => 'node_content',
-      'description' => t('Place items into the Featured Content slideshow on the front page.'),
+      'description' => t('Use <em>carousel items</em> to prominently feature links to content on the front page.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Headline'),
       'help' => '',
     ),
   );
