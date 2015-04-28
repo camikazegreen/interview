@@ -1,20 +1,20 @@
 <?php
 /**
  * @file
- * ua_brand_demo.install
+ * ua_demo.install
  */
 
 /**
  * Implements hook_enable().
  */
-function ua_brand_demo_enable() {
-  _ua_brand_demo_import_demo_content(array('UaBrandDemoPage', 'UaBrandDemoMenu', 'UaBrandDemoFeature'));
+function ua_demo_enable() {
+  _ua_demo_import_demo_content(array('UaDemoPage', 'UaDemoMenu', 'UaDemoFeature'));
   variable_set('site_frontpage', 'primus');
 }
 
 /**
  * Implements hook_disable().
  */
-function ua_brand_demo_disable() {
-  _ua_brand_demo_rollback_demo_content(array('UaBrandDemoMenu', 'UaBrandDemoPage', 'UaBrandDemoFeature'));
+function ua_demo_disable() {
+  _ua_demo_rollback_demo_content(array('UaDemoMenu', 'UaDemoPage', 'UaDemoFeature'));
 }

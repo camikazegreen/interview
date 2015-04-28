@@ -1,10 +1,10 @@
-name = UA Brand Demo Content
-description = Demo content to demonstrate UA Web Branding standards.
+name = UA Demo Content
+description = Provides sample content to demonstrate various features of the UA Drupal distribution.
 core = 7.x
-package = UA Brand
+package = The University of Arizona
 dependencies[] = migrate
-dependencies[] = ua_brand_navigation
 dependencies[] = ua_content_types
 dependencies[] = ua_featured_content
-files[] = import/ua_brand_demo.node.inc
-files[] = import/ua_brand_demo.menu.inc
+dependencies[] = ua_navigation
+files[] = import/ua_demo.node.inc
+files[] = import/ua_demo.menu.inc

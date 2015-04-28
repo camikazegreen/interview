@@ -1,32 +1,32 @@
 <?php
 /**
  * @file
- * ua_brand_demo.module
+ * ua_demo.module
  */
 
 /**
  * Implements hook_migrate_api().
  */
-function ua_brand_demo_migrate_api() {
+function ua_demo_migrate_api() {
   $api = array(
     'api' => 2,
     'groups' => array(
-      'ua_brand_demo' => array(
-        'title' => t('UA Brand Demo Content'),
+      'ua_demo' => array(
+        'title' => t('UA Demo Content'),
       ),
     ),
     'migrations' => array(
-      'UaBrandDemoPage' => array(
-        'class_name' => 'UaBrandDemoPage',
-        'group_name' => 'ua_brand_demo',
+      'UaDemoPage' => array(
+        'class_name' => 'UaDemoPage',
+        'group_name' => 'ua_demo',
       ),
-      'UaBrandDemoFeature' => array(
-        'class_name' => 'UaBrandDemoFeature',
-        'group_name' => 'ua_brand_demo',
+      'UaDemoFeature' => array(
+        'class_name' => 'UaDemoFeature',
+        'group_name' => 'ua_demo',
       ),
-      'UaBrandDemoMenu' => array(
-        'class_name' => 'UaBrandDemoMenu',
-        'group_name' => 'ua_brand_demo',
+      'UaDemoMenu' => array(
+        'class_name' => 'UaDemoMenu',
+        'group_name' => 'ua_demo',
       ),
     ),
   );
@@ -36,7 +36,7 @@ function ua_brand_demo_migrate_api() {
 /**
  * Helpfer function to import demo content for apps using Migrate.
  */
-function _ua_brand_demo_import_demo_content($classes = array()) {
+function _ua_demo_import_demo_content($classes = array()) {
   // Ensure that migration classes are registered.
   migrate_get_module_apis(TRUE);
 
@@ -51,7 +51,7 @@ function _ua_brand_demo_import_demo_content($classes = array()) {
 
     // Disable message output from migrate ince this import is used within
     // the context of the Apps module where these messages make no sense.
-    Migration::setDisplayFunction('_ua_brand_demo_null_message');
+    Migration::setDisplayFunction('_ua_demo_null_message');
 
     // Process the migration.
     $migration->processImport();
@@ -61,7 +61,7 @@ function _ua_brand_demo_import_demo_content($classes = array()) {
 /**
  * Helpfer function to import demo content for apps using Migrate.
  */
-function _ua_brand_demo_rollback_demo_content($classes = array()) {
+function _ua_demo_rollback_demo_content($classes = array()) {
   // Roll back the migrations to delete the demo content.
   foreach ($classes as $class) {
     // Get a handle on our migration class.
@@ -69,7 +69,7 @@ function _ua_brand_demo_rollback_demo_content($classes = array()) {
 
     // Disable message output from migrate ince this import is used within
     // the context of the Apps module where these messages make no sense.
-    Migration::setDisplayFunction('_ua_brand_demo_null_message');
+    Migration::setDisplayFunction('_ua_demo_null_message');
 
     // Roll back the migration.
     $migration->processRollback();
@@ -83,6 +83,6 @@ function _ua_brand_demo_rollback_demo_content($classes = array()) {
 /**
  * Helpfer function to import demo content for apps using Migrate.
  */
-function _ua_brand_demo_null_message($message, $level) {
+function _ua_demo_null_message($message, $level) {
   return;
 }
