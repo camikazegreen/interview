@@ -54,7 +54,8 @@ function ua_featured_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-featured_content-field_link_title_and_addresss'
+  // Exported field_instance:
+  // 'node-featured_content-field_link_title_and_addresss'
   $field_instances['node-featured_content-field_link_title_and_addresss'] = array(
     'bundle' => 'featured_content',
     'default_value' => NULL,
