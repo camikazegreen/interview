@@ -1,4 +1,4 @@
-# UA Core Feature Module
+# UA Core Module
 
 Provides core dependencies and features for the [UA Kickstart](https://bitbucket.org/ua_drupal/ua_kickstart) Drupal Distribution (or any other distributions wishing to make use of it).
 
