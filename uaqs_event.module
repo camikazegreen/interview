@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UA Event feature.
+ */
+
+include_once 'ua_event.features.inc';
