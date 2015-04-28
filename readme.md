@@ -26,3 +26,5 @@ Handy Drush dl/en command:
 
 drush en date date_all_day date_api date_repeat date_repeat_field email field_collection link 
 ```
+## Views ##
+Coming soon. Hope to have a block and calendar display.
