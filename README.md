@@ -7,6 +7,7 @@ Provides some sample content and menu links to demonstrate various features of t
 ## Features
 
 - Provides sample Basic Page nodes.
+- Provides sample Featured Content nodes.
 - Provides sample menu links.
 - Sample content/links automatically created when module is enabled.
 - Sample content/links automatically removed when the module is disabled.
