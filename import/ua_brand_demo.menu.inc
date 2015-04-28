@@ -10,7 +10,7 @@ class UaBrandDemoMenu extends Migration {
   public function __construct(array $arguments) {
     parent::__construct($arguments);
     $this->description = t('Import menu items.');
-    $this->dependencies = array('UaBrandDemoNode');
+    $this->dependencies = array('UaBrandDemoPage');
 
     // Create a map object for tracking the relationships between source rows.
     $this->map = new MigrateSQLMap($this->machineName,
