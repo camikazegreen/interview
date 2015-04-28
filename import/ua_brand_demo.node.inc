@@ -79,7 +79,13 @@ class UaBrandDemoFeature extends Migration {
     $this->addFieldMapping('status')->defaultValue(1);
     $this->addFieldMapping('language')->defaultValue(LANGUAGE_NONE);
     $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('path', 'path');
+    $this->addFieldMapping('field_slide_image', 'image');
+    $this->addFieldMapping('field_slide_image:file_replace')
+      ->defaultValue(FILE_EXISTS_REPLACE);
+    $this->addFieldMapping('field_slide_image:source_dir')
+      ->defaultValue(drupal_get_path('module', 'ua_brand_demo') . '/import/images');
+    $this->addFieldMapping('field_link', 'url');
+    $this->addFieldMapping('field_link:title', 'action');
     $this->addFieldMapping('body', 'body');
     $this->addFieldMapping('body:format')->defaultValue('filtered_html');
     $this->addFieldMapping('created', 'created');
@@ -87,9 +93,11 @@ class UaBrandDemoFeature extends Migration {
 
   protected function csvcolumns() {
     $columns[0] = array('title', 'Title');
-    $columns[1] = array('path', 'Path');
-    $columns[2] = array('body', 'Body');
-    $columns[3] = array('created', 'Created');
+    $columns[1] = array('image', 'Image');
+    $columns[2] = array('action', 'Call to action');
+    $columns[3] = array('url', 'Link');
+    $columns[4] = array('body', 'Body');
+    $columns[5] = array('created', 'Created');
     return $columns;
   }
 
