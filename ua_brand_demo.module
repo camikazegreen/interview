@@ -16,8 +16,12 @@ function ua_brand_demo_migrate_api() {
       ),
     ),
     'migrations' => array(
-      'UaBrandDemoNode' => array(
-        'class_name' => 'UaBrandDemoNode',
+      'UaBrandDemoPage' => array(
+        'class_name' => 'UaBrandDemoPage',
+        'group_name' => 'ua_brand_demo',
+      ),
+      'UaBrandDemoFeature' => array(
+        'class_name' => 'UaBrandDemoFeature',
         'group_name' => 'ua_brand_demo',
       ),
       'UaBrandDemoMenu' => array(

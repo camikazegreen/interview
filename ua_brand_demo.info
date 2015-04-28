@@ -5,5 +5,6 @@ package = UA Brand
 dependencies[] = migrate
 dependencies[] = ua_brand_navigation
 dependencies[] = ua_content_types
+dependencies[] = ua_featured_content
 files[] = import/ua_brand_demo.node.inc
 files[] = import/ua_brand_demo.menu.inc
