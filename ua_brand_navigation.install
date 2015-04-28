@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ua_brand_navigation.install
+ * ua_navigation.install
  */
 
 /**
  * Implements hook_install().
  */
-function ua_brand_navigation_install() {
+function ua_navigation_install() {
   $t = get_t();
 
   // Create 'utility links' menu if it doesn't already exist.
