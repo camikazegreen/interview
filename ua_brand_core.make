@@ -1,5 +1,5 @@
 ; ------------------------------------------------------------------------------
-; UA Brand Core Makefile
+; UA Core Makefile
 ;
 ; This makefile should stay as bare-bones as possilbe.  In general, individual
 ; modules/features should include their own makefiles to package their own
@@ -15,7 +15,7 @@ api = 2
 defaults[projects][subdir] = contrib
 
 ; ------------------------------------------------------------------------------
-; Contrib dependencies common to many UA Brand features/sites
+; Contrib dependencies common to many UA features/sites
 ; ------------------------------------------------------------------------------
 
 projects[ctools][version] = 1.7

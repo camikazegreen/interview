@@ -1,7 +1,7 @@
-name = UA Brand Core
-description = Provides miscellaneous fields, blocks, and settings common to UA Brand components/features.
+name = UA Core
+description = Provides miscellaneous fields, blocks, and settings common to UA components/features.
 core = 7.x
-package = UA
+package = The University of Arizona
 version = 7.x-1.x-dev
 dependencies[] = ctools
 dependencies[] = features
