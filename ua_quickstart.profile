@@ -3,7 +3,7 @@
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function ua_brand_kickstart_form_install_configure_form_alter(&$form, &$form_state) {
+function ua_quickstart_form_install_configure_form_alter(&$form, &$form_state) {
   // Hide some messages from various modules that are just too chatty!
   drupal_get_messages('status');
   drupal_get_messages('warning');

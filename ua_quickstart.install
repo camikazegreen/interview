@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Installation code for UA Brand Kickstart
+ * Installation code for UA Quickstart
  */
 
 /**
@@ -10,9 +10,9 @@
  *
  * Perform actions to set up the site for this profile.
  */
-function ua_brand_kickstart_install() {
+function ua_quickstart_install() {
   // Force Drupal to look for themes in profile path.
-  variable_set('install_profile', 'ua_brand_kickstart');
+  variable_set('install_profile', 'ua_quickstart');
   list_themes(TRUE);
 
   // Enable themes.
@@ -27,7 +27,7 @@ function ua_brand_kickstart_install() {
   theme_disable(array('bartik'));
 
   // Enable some standard blocks.
-  ua_brand_kickstart_enable_blocks();
+  ua_quickstart_enable_blocks();
 
   // Add default text formats.
   $filtered_html_format = array(
@@ -122,7 +122,7 @@ function ua_brand_kickstart_install() {
 /**
  * Enables some default blocks.
  */
-function ua_brand_kickstart_enable_blocks() {
+function ua_quickstart_enable_blocks() {
   $default_theme = variable_get('theme_default', 'ua_zen');
   $admin_theme = 'seven';
   $blocks = array(
