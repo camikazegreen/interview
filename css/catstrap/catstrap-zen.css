@@ -204,21 +204,45 @@ footer#footer_site .footer-logo {
 footer#footer_site .footer-logo img {
   max-height: 100px;
 }
-/* line 189, ../../sass/catstrap/catstrap-zen.scss */
+/* line 187, ../../sass/catstrap/catstrap-zen.scss */
 footer#footer_site > .container {
   border-bottom: 1px solid #8E8C85;
 }
-/* line 192, ../../sass/catstrap/catstrap-zen.scss */
+/* line 188, ../../sass/catstrap/catstrap-zen.scss */
+footer#footer_site ul {
+  display: inherit;
+}
+/* line 189, ../../sass/catstrap/catstrap-zen.scss */
+footer#footer_site ul.menu {
+  display: block;
+  margin: 0;
+  padding: 16px 0 0;
+  padding: 1rem 0 0;
+  text-align: center;
+}
+/* line 195, ../../sass/catstrap/catstrap-zen.scss */
+footer#footer_site ul.menu > li {
+  display: inline-block;
+  list-style: none;
+  padding: 0 12px;
+  padding: 0 .75rem;
+  border-right: 1px solid #a8a69d;
+}
+/* line 202, ../../sass/catstrap/catstrap-zen.scss */
+footer#footer_site ul.menu > li.last {
+  border-right: 0;
+}
+/* line 207, ../../sass/catstrap/catstrap-zen.scss */
 footer#footer_site #footer_sub .container {
   padding-top: 0.5rem;
 }
-/* line 194, ../../sass/catstrap/catstrap-zen.scss */
+/* line 209, ../../sass/catstrap/catstrap-zen.scss */
 footer#footer_site #footer_sub .container > * {
   font-size: 0.96rem;
 }
 
 @media (min-width: 992px) {
-  /* line 201, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 216, ../../sass/catstrap/catstrap-zen.scss */
   footer#footer_site .footer-logo {
     float: left;
     margin: 0 1rem 1rem 0;

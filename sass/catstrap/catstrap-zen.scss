@@ -182,13 +182,28 @@ footer#footer_site {
 	.footer-logo { //specific to zen layout structure
 		margin: 0 0 1rem;
 		max-width: 400px;
-		img {
-			max-height:100px;
+		img { max-height:100px;	}
+	}
+	> .container { border-bottom: 1px solid #8E8C85; }
+	ul { display: inherit; }
+	ul.menu {
+	  display: block;
+	  margin: 0;
+	  padding: 16px 0 0;
+	  padding: 1rem 0 0;
+	  text-align: center;
+		> li {
+		  display: inline-block;
+		  list-style: none;
+		  padding: 0 12px;
+		  padding: 0 .75rem;
+		  border-right: 1px solid #a8a69d;
+		}
+		> li.last {
+		  border-right: 0;
 		}
 	}
-	> .container {
-		border-bottom: 1px solid #8E8C85;
-	}
+
 	#footer_sub .container {
 		padding-top: 0.5rem;
 		> * { //reduce font size without affecting container width
