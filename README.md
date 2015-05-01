@@ -1,12 +1,10 @@
-# UA Brand Core* Drupal Feature Module
+# UA Core Module
 
-(*) Name subject to change.
-
-Provides core dependencies and features for the [UA Brand Kickstart](https://bitbucket.org/joegraduate/ua_brand_kickstart) Drupal Distribution (or any other distributions wishing to make use of it).
+Provides core dependencies and features for the [UA Quickstart](https://bitbucket.org/ua_drupal/ua_quickstart) Drupal Distribution (or any other distributions wishing to make use of it).
 
 ## Packaged Dependencies
 
-When this module is used as part of a Drupal distribution (such as [UA Brand Kickstart](https://bitbucket.org/joegraduate/ua_brand_kickstart)), the following dependencies will be automatically packaged with the distribution.
+When this module is used as part of a Drupal distribution (such as [UA Quickstart](https://bitbucket.org/ua_drupal/ua_quickstart)), the following dependencies will be automatically packaged with the distribution.
 
 ### Drupal Contrib Modules
 
