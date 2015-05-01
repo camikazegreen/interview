@@ -91,15 +91,9 @@ function ua_zen_preprocess_page(&$variables, $hook) {
       '#weight' => '-10',
       '#theme_wrappers' => array('region'));
   }
-  if (!isset($variables['page']['footer_ua']) || empty($variables['page']['footer_ua'])) {
-    $variables['page']['footer_ua'] = array(
-      '#region' => 'footer_ua',
-      '#weight' => '-10',
-      '#theme_wrappers' => array('region'));
-  }
-  if (!isset($variables['page']['footer_ua_hidden']) || empty($variables['page']['footer_ua_hidden'])) {
-    $variables['page']['footer_ua_hidden'] = array(
-      '#region' => 'footer_ua_hidden',
+  if (!isset($variables['page']['footer']) || empty($variables['page']['footer'])) {
+    $variables['page']['footer'] = array(
+      '#region' => 'footer',
       '#weight' => '-10',
       '#theme_wrappers' => array('region'));
   }

@@ -1,5 +1,7 @@
 /* MAIN ELEMENTS */
+
 html { background-color: #e6e3d9; }
+
 
 /* HEADER */
 
@@ -121,6 +123,7 @@ html { background-color: #e6e3d9; }
   }
 }
 
+
 /* NEWS */
 
 .view-news {
@@ -172,10 +175,16 @@ html { background-color: #e6e3d9; }
 	}
 }
 
+
 /* FOOTER */
+
 footer#footer_site {
 	.footer-logo { //specific to zen layout structure
 		margin: 0 0 1rem;
+		max-width: 400px;
+		img {
+			max-height:100px;
+		}
 	}
 	> .container {
 		border-bottom: 1px solid #8E8C85;
