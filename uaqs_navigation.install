@@ -11,7 +11,7 @@ function ua_navigation_install() {
   $t = get_t();
 
   // Create 'utility links' menu if it doesn't already exist.
-  $menu_name = 'ua-brand-utility-links';
+  $menu_name = 'ua-utility-links';
   if (!menu_load($menu_name)) {
     $menu = array(
       'menu_name' => $menu_name,
