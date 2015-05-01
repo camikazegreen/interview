@@ -1,4 +1,4 @@
-UA Brand Kickstart* Drupal Distribution and Install Profile
+UA Quickstart* Drupal Distribution and Install Profile
 =============================================================
 (*) Name subject to change
 
@@ -12,9 +12,9 @@ Demonstration/starter Drupal distribution and installation profile that packages
 
 ## Distribution Packaged Features (Dependencies)
 
-- [UA Brand Core Feature](https://bitbucket.org/joegraduate/ua_brand_core)
-- [UA Brand Demonstration Content Feature](https://bitbucket.org/joegraduate/ua_brand_demo)
-- [UA Brand Navigation Feature](https://bitbucket.org/joegraduate/ua_brand_navigation)
+- [UA Core Feature](https://bitbucket.org/ua_drupal/ua_core)
+- [UA Demo Content Feature](https://bitbucket.org/ua_drupal/ua_demo)
+- [UA Navigation Feature](https://bitbucket.org/ua_drupal/ua_navigation)
 - [UA (CALS) Content Types Feature](https://bitbucket.org/uabrandingdigitalassets/cals-ua-features)
 - [UA Featured Content (Carousel) Feature](https://bitbucket.org/uabrandingdigitalassets/ua_featured_content)
 - [UA Zen Theme](https://bitbucket.org/uabrandingdigitalassets/ua-zen)
@@ -36,11 +36,11 @@ This distribution can be built using [Drush make](http://docs.drush.org/en/stabl
 
 3. Clone the repository into the build folder, e.g.:
 
-        git clone git@bitbucket.org:joegraduate/ua_brand_kickstart.git build/ua_brand_kickstart
+        git clone git@bitbucket.org:ua_drupal/ua_quickstart.git build/ua_quickstart
 
 4. Check out a release tag (optional), e.g.:
 
-        cd build/ua_brand_kickstart
+        cd build/ua_quickstart
         git checkout 7.x-1.0-beta1
 
 5. Change back into the directory that you want the built distribution folder to be created in, e.g.:
@@ -49,7 +49,7 @@ This distribution can be built using [Drush make](http://docs.drush.org/en/stabl
 
 6. Use drush make to build the distribution, e.g.:
 
-        drush make build/ua_brand_kickstart/build-ua_brand_kickstart.make ua_brand_kickstart
+        drush make build/ua_quickstart/build-ua_quickstart.make ua_quickstart
 
 7. Remove the build folder (optional), e.g.:
 
