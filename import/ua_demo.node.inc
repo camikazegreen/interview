@@ -5,7 +5,7 @@
  * Migrations for Basic Nodes.
  */
 
-class UaBrandDemoPage extends Migration {
+class UaDemoPage extends Migration {
 
   public function __construct(array $arguments) {
     parent::__construct($arguments);
@@ -23,10 +23,10 @@ class UaBrandDemoPage extends Migration {
       MigrateDestinationNode::getKeySchema()
     );
 
-    $import_path = drupal_get_path('module', 'ua_brand_demo') . '/import/data/';
+    $import_path = drupal_get_path('module', 'ua_demo') . '/import/data/';
 
     // Create a MigrateSource object.
-    $this->source = new MigrateSourceCSV($import_path . 'ua_brand_demo.page.csv', $this->csvcolumns(), array('header_rows' => 1));
+    $this->source = new MigrateSourceCSV($import_path . 'ua_demo.page.csv', $this->csvcolumns(), array('header_rows' => 1));
 
     $this->destination = new MigrateDestinationNode('page');
 
@@ -50,7 +50,7 @@ class UaBrandDemoPage extends Migration {
 
 }
 
-class UaBrandDemoFeature extends Migration {
+class UaDemoFeature extends Migration {
 
   public function __construct(array $arguments) {
     parent::__construct($arguments);
@@ -68,10 +68,10 @@ class UaBrandDemoFeature extends Migration {
       MigrateDestinationNode::getKeySchema()
     );
 
-    $import_path = drupal_get_path('module', 'ua_brand_demo') . '/import/data/';
+    $import_path = drupal_get_path('module', 'ua_demo') . '/import/data/';
 
     // Create a MigrateSource object.
-    $this->source = new MigrateSourceCSV($import_path . 'ua_brand_demo.feature.csv', $this->csvcolumns(), array('header_rows' => 1));
+    $this->source = new MigrateSourceCSV($import_path . 'ua_demo.feature.csv', $this->csvcolumns(), array('header_rows' => 1));
 
     $this->destination = new MigrateDestinationNode('featured_content');
 
@@ -83,7 +83,7 @@ class UaBrandDemoFeature extends Migration {
     $this->addFieldMapping('field_slide_image:file_replace')
       ->defaultValue(FILE_EXISTS_REPLACE);
     $this->addFieldMapping('field_slide_image:source_dir')
-      ->defaultValue(drupal_get_path('module', 'ua_brand_demo') . '/import/images');
+      ->defaultValue(drupal_get_path('module', 'ua_demo') . '/import/images');
     $this->addFieldMapping('field_link', 'url');
     $this->addFieldMapping('field_link:title', 'action');
     $this->addFieldMapping('body', 'body');

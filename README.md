@@ -1,6 +1,4 @@
-# UA Brand Demonstration Content* Drupal Feature Module
-
-(*) Name subject to change.
+# UA Demo Content Module
 
 Provides some sample content and menu links to demonstrate various features of the [UA Zen theme](https://bitbucket.org/uabrandingdigitalassets/ua_zen) and other UA Drupal components/features.
 

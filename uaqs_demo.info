@@ -1,0 +1,10 @@
+name = UA Demo Content
+description = Provides sample content to demonstrate various features of the UA Drupal distribution.
+core = 7.x
+package = The University of Arizona
+dependencies[] = migrate
+dependencies[] = ua_content_types
+dependencies[] = ua_featured_content
+dependencies[] = ua_navigation
+files[] = import/ua_demo.node.inc
+files[] = import/ua_demo.menu.inc

@@ -5,12 +5,12 @@
  * Migrations for Menu items.
  */
 
-class UaBrandDemoMenu extends Migration {
+class UaDemoMenu extends Migration {
 
   public function __construct(array $arguments) {
     parent::__construct($arguments);
     $this->description = t('Import menu items.');
-    $this->dependencies = array('UaBrandDemoPage');
+    $this->dependencies = array('UaDemoPage');
 
     // Create a map object for tracking the relationships between source rows.
     $this->map = new MigrateSQLMap($this->machineName,
@@ -25,10 +25,10 @@ class UaBrandDemoMenu extends Migration {
       MigrateDestinationMenuLinks::getKeySchema()
     );
 
-    $import_path = drupal_get_path('module', 'ua_brand_demo') . '/import/data/';
+    $import_path = drupal_get_path('module', 'ua_demo') . '/import/data/';
 
     // Create a MigrateSource object.
-    $this->source = new MigrateSourceCSV($import_path . 'ua_brand_demo.menu.csv', $this->csvcolumns(), array('header_rows' => 1));
+    $this->source = new MigrateSourceCSV($import_path . 'ua_demo.menu.csv', $this->csvcolumns(), array('header_rows' => 1));
 
     $this->destination = new MigrateDestinationMenuLinks();
 
