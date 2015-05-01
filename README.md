@@ -1,8 +1,6 @@
-# UA Brand Navigation* Drupal Feature Module
+# UA Navigation Feature Module
 
-(*) Name subject to change.
-
-Provides various dependencies and configuration for UA Brand Navigation components.
+Provides various dependencies and configuration for navigation components consistent with UA web branding standards.
 
 ## Features
 
@@ -14,7 +12,7 @@ Provides various dependencies and configuration for UA Brand Navigation componen
 
 ## Packaged Dependencies
 
-When this module is used as part of a Drupal distribution (such as [UA Brand Kickstart](https://bitbucket.org/joegraduate/ua_brand_kickstart)), the following dependencies will be automatically packaged with the distribution.
+When this module is used as part of a Drupal distribution (such as [UA Quickstart](https://bitbucket.org/ua_drupal/ua_quickstart)), the following dependencies will be automatically packaged with the distribution.
 
 ### Drupal Contrib Modules
 

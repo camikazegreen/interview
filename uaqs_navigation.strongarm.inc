@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ua_brand_navigation.strongarm.inc
+ * ua_navigation.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function ua_brand_navigation_strongarm() {
+function ua_navigation_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

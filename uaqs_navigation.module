@@ -4,12 +4,12 @@
  * Code for the UA Brand Navigation feature.
  */
 
-include_once 'ua_brand_navigation.features.inc';
+include_once 'ua_navigation.features.inc';
 
 /**
  * Implements hook_menu_block_blocks().
  */
-function ua_brand_navigation_menu_block_blocks() {
+function ua_navigation_menu_block_blocks() {
   return array(
     // Provides a second-level navigation menu block.
     'ua-brand-second-level' => array(

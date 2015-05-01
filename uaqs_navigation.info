@@ -1,7 +1,7 @@
-name = UA Brand Navigation
-description = Provides various dependencies and configuration for UA Brand Navigation.
+name = UA Navigation
+description = Provides various dependencies and configuration for navigation components consistent with UA web branding standards.
 core = 7.x
-package = UA Brand
+package = The University of Arizona
 version = 7.x-1.x-dev
 dependencies[] = ctools
 dependencies[] = jquery_update

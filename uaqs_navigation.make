@@ -1,7 +1,7 @@
 ; ------------------------------------------------------------------------------
-; UA Brand Navigation Makefile
+; UA Navigation Makefile
 ;
-; Downloads module and library dependencies for UA Brand Navigation components.
+; Downloads module and library dependencies for UA Navigation components.
 ; ------------------------------------------------------------------------------
 
 core = 7.x
