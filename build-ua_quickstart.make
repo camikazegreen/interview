@@ -12,4 +12,4 @@ includes[] = drupal-org-core.make
 projects[ua_quickstart][type] = profile
 projects[ua_quickstart][download][type] = git
 projects[ua_quickstart][download][branch] = 7.x-1.x
-projects[ua_quickstart][download][url] = git@bitbucket.org:ua_drupal/ua_quickstart.git
+projects[ua_quickstart][download][url] = https://bitbucket.org/ua_drupal/ua_quickstart.git

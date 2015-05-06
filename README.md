@@ -36,7 +36,7 @@ This distribution can be built using [Drush make](http://docs.drush.org/en/stabl
 
 3. Clone the repository into the build folder, e.g.:
 
-        git clone git@bitbucket.org:ua_drupal/ua_quickstart.git build/ua_quickstart
+        git clone https://bitbucket.org/ua_drupal/ua_quickstart.git build/ua_quickstart
 
 4. Check out a release tag (optional), e.g.:
 
