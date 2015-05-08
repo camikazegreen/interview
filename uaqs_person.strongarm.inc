@@ -20,6 +20,13 @@ function ua_person_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ant_php_ua_person';
+  $strongarm->value = 0;
+  $export['ant_php_ua_person'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'ant_ua_person';
   $strongarm->value = '1';
   $export['ant_ua_person'] = $strongarm;
