@@ -1,7 +1,7 @@
 # UA Person #
 
 ## Overview ##
-This repository contains a module made with [Features](https://www.drupal.org/project/features) that provides a UA Person content type and a simple view display for a profile directory.
+This repository contains a module made with [Features](https://www.drupal.org/project/features) that provides a UA Person content type and a simple view display for a profile directory. If wanted, a default profile image is provided in this feature's directory.
 
 ## Requirements ##
 - In order to use this feature, you must first download and enable the [Features](https://www.drupal.org/project/features) module. 
@@ -28,7 +28,7 @@ drush en email field_group views views_ui
 - [Automatic Node Titles](https://www.drupal.org/project/auto_nodetitle)
 - [Token](https://www.drupal.org/project/token)
 - [Entity API](https://www.drupal.org/project/entity)
-  - Entity Token (part of Entity API)
+    - Entity Token (part of Entity API)
 
 ### Process: ###
 Once the modules are enabled, in the content type's settings there will be a new set of options for Automatic Title Generation. It's advisable to check "Automatically generate 
@@ -42,7 +42,7 @@ the title and hide the title field" and then fill in the pattern for the title w
 ```
 *Note:* Once you enable Entity Tokens, you are given two different types of tokens for each field. To make sure apostrophes or any other type of special character get 
 
-translated, use the token with the dashes, not the underscores (e.g. Taters O'Brian will become <Taters O&#039;Brian> if the underscore tokens are used).
+translated, use the token with the dashes, not the underscores (e.g. Taters O'Brian will become Taters O&#039;Brian if the underscore tokens are used).
 
 ## Views ##
 
