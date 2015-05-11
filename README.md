@@ -11,10 +11,8 @@ This repository contains a module made with [Features](https://www.drupal.org/pr
     - Image
     - Text
   - Contributed modules
-    - [Automatic Nodetitles](https://www.drupal.org/project/auto_nodetitle) used to hide the node title field and automatically populate it with the person's first and last name
     - [Email](https://www.drupal.org/project/email) used for the email field
-    - [Entity API](https://www.drupal.org/project/entity) assists in the translation of special characters in names
-    - [Token](https://www.drupal.org/project/token) provides tokens to generate the node title
+    - [Field Group](https://www.drupal.org/project/field_group) used to group profile information for layout reasons
     - [Views](https://www.drupal.org/project/views)
 
 Handy Drush dl/en command:
@@ -22,8 +20,30 @@ Handy Drush dl/en command:
 ```
 #!
 
-drush en auto_nodetitle email entity token views
+drush en email field_group views views_ui
 ```
+## Notes on automatically generating the Full Name field with the first and last name fields ##
+
+### Modules needed: ###
+- [Automatic Node Titles](https://www.drupal.org/project/auto_nodetitle)
+- [Token](https://www.drupal.org/project/token)
+- [Entity API](https://www.drupal.org/project/entity)
+  - Entity Token (part of Entity API)
+
+### Process: ###
+Once the modules are enabled, in the content type's settings there will be a new set of options for Automatic Title Generation. It's advisable to check "Automatically generate 
+
+the title and hide the title field" and then fill in the pattern for the title with the tokens for the first name and last name fields.
+
+#### Tokens: ####
+```
+#!
+[node:field-ua-person-fname] [node:field-ua-person-lname]
+```
+*Note:* Once you enable Entity Tokens, you are given two different types of tokens for each field. To make sure apostrophes or any other type of special character get 
+
+translated, use the token with the dashes, not the underscores (e.g. Taters O'Brian will become <Taters O&#039;Brian> if the underscore tokens are used).
+
 ## Views ##
 
 ### Structure ###
