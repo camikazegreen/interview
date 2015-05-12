@@ -27,4 +27,36 @@ Handy Drush dl/en command:
 drush en date date_all_day date_api date_repeat date_repeat_field email field_collection link 
 ```
 ## Views ##
-Coming soon. It would be nice for the event content type to come with a responsive calendar ([example](http://greek.arizona.edu/events?date=2015-04)) display and a side block and styles for the appearance.
+
+There are two views: a block with a list of 6 events and a full calendar view (responsive and not table-based).
+
+### Structure ###
+
+Included fields:
+- Event title (block and page)
+- Event date (block and page)
+- Event summary (page only)
+
+### Styling ###
+To facilitate styling, the view displays have classes added to them via the Views UI.
+
+#### Styling classes are as follows: ####
+
+- **Full Calendar class:** *ua-event-calendar*
+- **Block class:** *ua-event-block-list*
+- **Row class:** *ua-event-row*
+- **Field Classes (block):**
+    - Date  *ua-event-date*
+    - Title  *ua-event-title*
+- **Field Classes (page):**
+    - Date  *ua-event-date*
+    - Title  *ua-event-title*
+    - Left Global Text group (contains month and day)  *ua-event-left-group*
+    - Right Global Text group (contains title, time and summary) *ua-event-right-group*
+
+
+### Screenshots ###
+
+![calendar_block_view.png](https://bitbucket.org/repo/B5gRzX/images/2893604340-calendar_block_view.png)
+
+![calendar_view.PNG](https://bitbucket.org/repo/B5gRzX/images/2530656555-calendar_view.PNG)
