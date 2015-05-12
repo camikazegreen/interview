@@ -27,4 +27,4 @@ Handy Drush dl/en command:
 drush en date date_all_day date_api date_repeat date_repeat_field email field_collection link 
 ```
 ## Views ##
-Coming soon. It would be nice for the event content type to come with a [responsive calendar](https://www.drupal.org/node/1675894) display and a side block and styles for the appearance.
+Coming soon. It would be nice for the event content type to come with a responsive calendar ([example](http://greek.arizona.edu/events?date=2015-04)) display and a side block and styles for the appearance.
