@@ -30,6 +30,8 @@ drush en date date_all_day date_api date_repeat date_repeat_field email field_co
 
 There are two views: a block with a list of 6 events and a full calendar view (responsive and not table-based).
 
+*Note about full calendar view:* By default, the full calendar view is paginating by month. If you do not have **at least** the 7.x-2.9-alpha version of the date module, the calendar will show the wrong date format at the top of the page (see https://www.drupal.org/node/2294973 for full details).
+
 ### Structure ###
 
 Included fields:
