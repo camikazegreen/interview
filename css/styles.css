@@ -4429,30 +4429,37 @@ footer#footer_site #footer_copyright {
   background: #dbe8ea url("../images/sidebar-menu-chevron.png") no-repeat 100% 50%;
 }
 
-/* line 2, ../sass/catstrap/catstrap-zen.scss */
+/* MAIN ELEMENTS */
+/* line 3, ../sass/catstrap/catstrap-zen.scss */
+html {
+  background-color: #e6e3d9;
+}
+
+/* HEADER */
+/* line 9, ../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region {
   float: right;
   clear: right;
   text-align: center;
 }
-/* line 7, ../sass/catstrap/catstrap-zen.scss */
+/* line 14, ../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region .block-menu {
   display: none;
   margin: 1rem 0 1.5rem 0;
   background-color: transparent;
   float: right;
 }
-/* line 13, ../sass/catstrap/catstrap-zen.scss */
+/* line 20, ../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region #block-search-form {
   float: right;
   clear: right;
   margin: 0;
 }
-/* line 17, ../sass/catstrap/catstrap-zen.scss */
+/* line 24, ../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region #block-search-form .form-item {
   display: inline;
 }
-/* line 19, ../sass/catstrap/catstrap-zen.scss */
+/* line 26, ../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region #block-search-form .form-item input {
   border-collapse: collapse;
   width: 13.8rem;
@@ -4466,11 +4473,11 @@ footer#footer_site #footer_copyright {
   padding: .5rem;
   outline: 0;
 }
-/* line 33, ../sass/catstrap/catstrap-zen.scss */
+/* line 40, ../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region #block-search-form .form-actions {
   display: inline;
 }
-/* line 35, ../sass/catstrap/catstrap-zen.scss */
+/* line 42, ../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region #block-search-form .form-actions input[type="submit"] {
   text-indent: -9999em;
   background: url("../images/search-icon.png");
@@ -4485,7 +4492,7 @@ footer#footer_site #footer_copyright {
   background-position: 9px 7px;
   outline: 0;
 }
-/* line 50, ../sass/catstrap/catstrap-zen.scss */
+/* line 57, ../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region #block-search-form form {
   border: 1px solid #d3d7de;
   background-color: #eef1f1;
@@ -4495,21 +4502,21 @@ footer#footer_site #footer_copyright {
   margin: 0 auto 24px;
   margin: 0 auto 1.5rem;
 }
-/* line 61, ../sass/catstrap/catstrap-zen.scss */
+/* line 68, ../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links {
   display: block;
   clear: both;
 }
-/* line 64, ../sass/catstrap/catstrap-zen.scss */
+/* line 71, ../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links ul {
   font-family: 'MiloWeb-Medium';
 }
-/* line 66, ../sass/catstrap/catstrap-zen.scss */
+/* line 73, ../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links ul li {
   margin: 0;
   padding: 0;
 }
-/* line 71, ../sass/catstrap/catstrap-zen.scss */
+/* line 78, ../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links ul li a,
 #header_site #utility_links ul li a:link,
 #header_site #utility_links ul li a:visited {
@@ -4517,7 +4524,7 @@ footer#footer_site #footer_copyright {
   padding: 1rem 0.5rem 0.5rem;
   margin: 0;
 }
-/* line 77, ../sass/catstrap/catstrap-zen.scss */
+/* line 84, ../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links ul li a:hover, #header_site #utility_links ul li a:focus, #header_site #utility_links ul li a:active,
 #header_site #utility_links ul li a:link:hover,
 #header_site #utility_links ul li a:link:focus,
@@ -4528,43 +4535,51 @@ footer#footer_site #footer_copyright {
   text-decoration: underline;
   color: #49595E;
 }
-/* line 82, ../sass/catstrap/catstrap-zen.scss */
+/* line 89, ../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links ul li.last a {
   padding-right: 0;
 }
 
 @media screen and (min-width: 48em) {
-  /* line 90, ../sass/catstrap/catstrap-zen.scss */
+  /* line 97, ../sass/catstrap/catstrap-zen.scss */
   #header_site .header__region .block-menu {
     display: block;
   }
-  /* line 92, ../sass/catstrap/catstrap-zen.scss */
+  /* line 99, ../sass/catstrap/catstrap-zen.scss */
   #header_site .block-search {
     padding-top: 1rem;
   }
-  /* line 94, ../sass/catstrap/catstrap-zen.scss */
+  /* line 101, ../sass/catstrap/catstrap-zen.scss */
   #header_site #utility_links {
     display: block;
     clear: none;
   }
-  /* line 97, ../sass/catstrap/catstrap-zen.scss */
+  /* line 104, ../sass/catstrap/catstrap-zen.scss */
   #header_site #utility_links ul {
     text-align: right;
   }
-  /* line 99, ../sass/catstrap/catstrap-zen.scss */
+  /* line 106, ../sass/catstrap/catstrap-zen.scss */
   #header_site #utility_links ul li {
     float: none;
     display: inline-block;
     margin: 0;
     padding: 0;
   }
-  /* line 104, ../sass/catstrap/catstrap-zen.scss */
+  /* line 111, ../sass/catstrap/catstrap-zen.scss */
   #header_site #utility_links ul li.last a {
     padding-right: 0;
   }
 }
+@media (max-width: 767px) {
+  /* line 119, ../sass/catstrap/catstrap-zen.scss */
+  #header_site #search {
+    width: 100%;
+    float: none;
+    clear: both;
+  }
+}
 /* NEWS */
-/* line 114, ../sass/catstrap/catstrap-zen.scss */
+/* line 130, ../sass/catstrap/catstrap-zen.scss */
 .view-news .views-row {
   float: left;
   width: 100%;
@@ -4572,20 +4587,20 @@ footer#footer_site #footer_copyright {
   padding: 24px 0;
   padding: 1.5rem 0;
 }
-/* line 121, ../sass/catstrap/catstrap-zen.scss */
+/* line 137, ../sass/catstrap/catstrap-zen.scss */
 .view-news .views-row .views-field-field-news-photos img {
   width: 100%;
   height: auto;
   padding-right: 24px;
   padding-right: 1.5rem;
 }
-/* line 131, ../sass/catstrap/catstrap-zen.scss */
+/* line 147, ../sass/catstrap/catstrap-zen.scss */
 .view-news .views-row .views-field-title h2 {
   margin-top: 1rem;
   margin-bottom: 4px;
   margin-bottom: 0.2rem;
 }
-/* line 138, ../sass/catstrap/catstrap-zen.scss */
+/* line 154, ../sass/catstrap/catstrap-zen.scss */
 .view-news .views-row .views-field-field-news-publish-date span {
   display: block;
   font-size: 18px;
@@ -4597,7 +4612,7 @@ footer#footer_site #footer_copyright {
 }
 
 @media (min-width: 30em) {
-  /* line 151, ../sass/catstrap/catstrap-zen.scss */
+  /* line 167, ../sass/catstrap/catstrap-zen.scss */
   .view-news .views-row .views-field-field-news-photos img {
     float: left;
     max-width: 240px;
@@ -4605,17 +4620,63 @@ footer#footer_site #footer_copyright {
     height: auto;
   }
 
-  /* line 157, ../sass/catstrap/catstrap-zen.scss */
+  /* line 173, ../sass/catstrap/catstrap-zen.scss */
   .view-news .views-row .views-field-title h2 {
     margin-top: 0;
   }
 }
-@media (max-width: 767px) {
-  /* line 166, ../sass/catstrap/catstrap-zen.scss */
-  #header_site #search {
-    width: 100%;
-    float: none;
-    clear: both;
+/* FOOTER */
+/* line 182, ../sass/catstrap/catstrap-zen.scss */
+footer#footer_site .footer-logo {
+  margin: 0 0 1rem;
+  max-width: 400px;
+}
+/* line 185, ../sass/catstrap/catstrap-zen.scss */
+footer#footer_site .footer-logo img {
+  max-height: 100px;
+}
+/* line 187, ../sass/catstrap/catstrap-zen.scss */
+footer#footer_site > .container {
+  border-bottom: 1px solid #8E8C85;
+}
+/* line 188, ../sass/catstrap/catstrap-zen.scss */
+footer#footer_site ul {
+  display: inherit;
+}
+/* line 189, ../sass/catstrap/catstrap-zen.scss */
+footer#footer_site ul.menu {
+  display: block;
+  margin: 0;
+  padding: 16px 0 0;
+  padding: 1rem 0 0;
+  text-align: center;
+}
+/* line 195, ../sass/catstrap/catstrap-zen.scss */
+footer#footer_site ul.menu > li {
+  display: inline-block;
+  list-style: none;
+  padding: 0 12px;
+  padding: 0 .75rem;
+  border-right: 1px solid #a8a69d;
+}
+/* line 202, ../sass/catstrap/catstrap-zen.scss */
+footer#footer_site ul.menu > li.last {
+  border-right: 0;
+}
+/* line 207, ../sass/catstrap/catstrap-zen.scss */
+footer#footer_site #footer_sub .container {
+  padding-top: 0.5rem;
+}
+/* line 209, ../sass/catstrap/catstrap-zen.scss */
+footer#footer_site #footer_sub .container > * {
+  font-size: 0.96rem;
+}
+
+@media (min-width: 992px) {
+  /* line 216, ../sass/catstrap/catstrap-zen.scss */
+  footer#footer_site .footer-logo {
+    float: left;
+    margin: 0 1rem 1rem 0;
   }
 }
 /* OPTIONAL UA ZEN COMPONENTS - COMMENT OUT WHAT YOU DON'T NEED */

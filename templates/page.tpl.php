@@ -77,9 +77,10 @@
 
     </div> <!-- /.container -->
   </div> <!-- /.main -->
-
-  <?php print render($page['footer']); ?>
-
+  <footer id="footer_site" class="<?php print $classes; ?>">
+    <?php print render($page['footer']); ?>
+    <?php print render($page['footer_sub']); ?>
+  </footer>
 </div>
 
 <?php print render($page['bottom']); ?>
