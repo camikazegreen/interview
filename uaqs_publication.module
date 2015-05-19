@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UA Publication feature.
+ */
+
+include_once 'ua_publication.features.inc';
