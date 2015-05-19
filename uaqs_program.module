@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UA Program feature.
+ */
+
+include_once 'ua_program.features.inc';
