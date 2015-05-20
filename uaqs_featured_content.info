@@ -1,6 +1,8 @@
 name = UA Featured Content
 core = 7.x
 package = The University of Arizona
+version = 7.x-1.0-dev
+project = ua_featured_content
 dependencies[] = flexslider
 dependencies[] = flexslider_views
 dependencies[] = image
@@ -19,6 +21,7 @@ features[field_instance][] = node-featured_content-body
 features[field_instance][] = node-featured_content-field_link_title_and_addresss
 features[field_instance][] = node-featured_content-field_slide_image
 features[flexslider_optionset][] = ua_hero_carousel
+features[flexslider_optionset][] = ua_hero_carousel_nav
 features[node][] = featured_content
 features[variable][] = field_bundle_settings_node__featured_content
 features[variable][] = flexslider_version
