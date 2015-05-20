@@ -1,8 +1,6 @@
 name = UA Featured Content
 core = 7.x
 package = The University of Arizona
-version = 7.x-1.0-dev
-project = ua_featured_content
 dependencies[] = flexslider
 dependencies[] = flexslider_views
 dependencies[] = image
