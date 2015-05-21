@@ -5041,3 +5041,51 @@ ul.sf-menu li ul {
   margin-top: 16px;
   margin-top: 1rem;
 }
+
+/*** Views Pager ***/
+/* line 3, ../sass/components/_uazen-views.scss */
+.item-list ul.pager {
+  border-top: 2px solid #eef1f1;
+  background: none 0 0 scroll no-repeat transparent;
+  text-transform: uppercase;
+  border: 0 none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  list-style: none;
+  text-align: inherit;
+}
+/* line 13, ../sass/components/_uazen-views.scss */
+.item-list ul.pager:after {
+  display: block;
+  content: "\0020";
+  clear: both;
+}
+/* line 18, ../sass/components/_uazen-views.scss */
+.item-list ul.pager li {
+  background: none 0 0 scroll no-repeat transparent;
+  text-transform: uppercase;
+  border: 0 none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  color: #555;
+  white-space: nowrap;
+  margin: 0 0.8em;
+  list-style: none;
+}
+/* line 31, ../sass/components/_uazen-views.scss */
+.item-list ul.pager li a,
+.item-list ul.pager li a:link,
+.item-list ul.pager li a:visited {
+  font-size: 0.9rem;
+  font-weight: bold;
+  background: none 0 0 scroll no-repeat transparent;
+  color: #ab0520;
+}
+/* line 39, ../sass/components/_uazen-views.scss */
+.item-list ul.pager li a:focus,
+.item-list ul.pager li a:hover,
+.item-list ul.pager li a:active {
+  background: none 0 0 scroll no-repeat transparent;
+}
