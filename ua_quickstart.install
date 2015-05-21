@@ -164,7 +164,7 @@ function ua_quickstart_enable_blocks() {
     ),
     array(
       'module' => 'views',
-      'delta' => 'featured_content-featured_content',
+      'delta' => 'featured_content-block',
       'theme' => $default_theme,
       'region' => 'content_featured',
       'pages' => '<front>',
