@@ -30,6 +30,13 @@ function ua_featured_content_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'flexslider_version';
+  $strongarm->value = '2.4';
+  $export['flexslider_version'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_ua_carousel_item';
   $strongarm->value = array();
   $export['menu_options_ua_carousel_item'] = $strongarm;
