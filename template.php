@@ -149,17 +149,32 @@ function ua_zen_preprocess_comment(&$variables, $hook) {
 function ua_zen_preprocess_region(&$variables, $hook) {
   $str_footer_logo_html = "";
   $str_logo_path = "";
+  $str_copyright_notice = "";
 
-  if ($variables['region'] == 'footer') {
-    $str_footer_logo_html = ua_zen_footer_logo();
+  switch($variables['region']) {
+    case "footer":
+      $str_footer_logo_html = ua_zen_footer_logo();
 
-    if (strlen($str_footer_logo_html) == 0) {
-      $str_logo_path = theme_get_setting('logo');
-      if (strlen($str_logo_path) > 0) {
-        $str_footer_logo_html = "<img src=\"" . file_create_url($str_logo_path) . "\" alt=\"\" />";
+      if (strlen($str_footer_logo_html) == 0) {
+        $str_logo_path = theme_get_setting('logo');
+        if (strlen($str_logo_path) > 0) {
+          $str_footer_logo_html = "<img src=\"" . file_create_url($str_logo_path) . "\" alt=\"\" />";
+        }
       }
-    }
+    break;
+
+    case "footer_sub":
+      $str_copyright_notice = theme_get_setting('ua_copyright_notice');
+      if (strlen($str_copyright_notice) > 0) {
+        $str_copyright_notice = "<p class=\"copyright\">Copyright © " . date('Y') . " ". $str_copyright_notice . "</p>";
+      }
+      else {
+        $str_copyright_notice = "<p class=\"copyright\">Copyright © " . date('Y') . " Arizona Board of Regents. <a href=\"http://www.arizona.edu\" target=\"_blank\">The University of Arizona</a>, Tucson, Arizona</p>";
+      }
+    break;
   }
+
+  $variables['copyright_notice'] = $str_copyright_notice;
   $variables['footer_logo'] = $str_footer_logo_html;
 }
 

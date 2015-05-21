@@ -18,14 +18,22 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
   $form['logo']['settings']['footer_logo_path'] = array(
     '#type' => 'textfield',
     '#title' => t('Path to custom footer logo'),
-    '#description' => t('The path to the file you would like to use as your logo file instead of the default logo.'),
+    '#description' => t('The path to the file you would like to use as your footer logo file instead of the logo in the header.'),
     '#default_value' => theme_get_setting('footer_logo_path'),
   );
+
   $form['logo']['settings']['footer_logo_upload'] = array(
     '#type' => 'file',
     '#title' => t('Upload footer logo image'),
     '#maxlength' => 40,
-    '#description' => t("If you don't have direct file access to the server, use this field to upload your logo.")
+    '#description' => t("If you don't have direct file access to the server, use this field to upload your fotter logo.")
+  );
+
+  $form['ua_settings']['settings']['ua_copyright_notice'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Copyright notice'),
+    '#description' => t('A copyright notice for this site. The value here will appear after a "Copyright YYYY" notice (where YYYY is the current year).'),
+    '#default_value' => theme_get_setting('ua_copyright_notice'),
   );
 
   $form['#validate'][] = 'ua_zen_settings_form_validate';
@@ -75,7 +83,6 @@ function ua_zen_settings_form_validate($form, &$form_state) {
   }
 }
 
-
 /**
 * Implements hook_settings_form_submit().
 */
@@ -83,8 +90,7 @@ function ua_zen_settings_form_submit($form, &$form_state) {
   $ary_values = $form_state['values'];
   $str_filename = "";
 
-  // If the user uploaded a new logo or favicon, save it to a permanent location
-  // and use it in place of the default theme-provided file.
+  // If the user uploaded a new logo, save it to a permanent location.
   if (!empty($ary_values['footer_logo_upload'])) {
     $obj_file = $ary_values['footer_logo_upload'];
     unset($form_state['values']['footer_logo_upload']);
