@@ -4841,6 +4841,56 @@ ul.sf-menu li ul {
     font-size: 1.2rem;
   }
 }
+/* RESPONSIVE MENU */
+/* line 119, ../sass/components/_uazen-superfish.scss */
+#main_nav a#superfish-1-toggle {
+  display: block;
+  padding: 0.8em;
+  color: #fff;
+  background: #0c234b;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+/* line 128, ../sass/components/_uazen-superfish.scss */
+#main_nav a#superfish-1-toggle:hover, #main_nav a#superfish-1-toggle:focus {
+  text-decoration: none;
+}
+/* line 132, ../sass/components/_uazen-superfish.scss */
+#main_nav ul#superfish-1-accordion {
+  background: #0c234b;
+  padding: 0.6em 0;
+  border-top: 1px solid #fff;
+}
+/* line 136, ../sass/components/_uazen-superfish.scss */
+#main_nav ul#superfish-1-accordion li {
+  padding: 0 .6rem;
+}
+/* line 138, ../sass/components/_uazen-superfish.scss */
+#main_nav ul#superfish-1-accordion li a {
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-size: 1rem;
+  padding: 0.8em 0;
+}
+/* line 144, ../sass/components/_uazen-superfish.scss */
+#main_nav ul#superfish-1-accordion li a:hover {
+  background: #395180;
+}
+/* line 148, ../sass/components/_uazen-superfish.scss */
+#main_nav ul#superfish-1-accordion li ul {
+  background-image: none;
+  padding: 0;
+  background: #000136;
+}
+/* line 153, ../sass/components/_uazen-superfish.scss */
+#main_nav ul#superfish-1-accordion li ul li a {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 /* line 2, ../sass/components/_uazen-flexslider.scss */
 #content_featured .flexslider {
   border: 0;
