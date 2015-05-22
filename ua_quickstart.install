@@ -164,7 +164,7 @@ function ua_quickstart_enable_blocks() {
     ),
     array(
       'module' => 'views',
-      'delta' => 'featured_content-block',
+      'delta' => 'ua_hero_carousel-hero_block',
       'theme' => $default_theme,
       'region' => 'content_featured',
       'pages' => '<front>',
