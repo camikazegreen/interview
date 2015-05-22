@@ -4889,6 +4889,7 @@ ul.sf-menu li ul {
 #main_nav ul#superfish-1-accordion li ul li a {
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 0.8em;
 }
 
 /* line 2, ../sass/components/_uazen-flexslider.scss */
