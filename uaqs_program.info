@@ -3,7 +3,6 @@ description = Use to create and display UA academic programs
 core = 7.x
 package = UA Features
 version = 7.x-1.x-dev
-project = ua_program
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = strongarm
