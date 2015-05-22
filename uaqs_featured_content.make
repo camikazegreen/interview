@@ -24,8 +24,6 @@ projects[image_url_formatter][version] = 1.4
 ; Libraries
 ; ------------------------------------------------------------------------------
 
-; Copied from flexslider.make.example (7.x-2.x version).
-; TODO: investigate whether we can download a specific release/tagged version.
 libraries[flexslider][download][type] = get
-libraries[flexslider][download][url] = https://github.com/woothemes/FlexSlider/zipball/master
+libraries[flexslider][download][url] = https://github.com/woothemes/FlexSlider/archive/version/2.4.0.zip
 libraries[flexslider][directory_name] = flexslider
