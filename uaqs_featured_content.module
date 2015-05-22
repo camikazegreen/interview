@@ -13,7 +13,7 @@ include_once 'ua_featured_content.features.inc';
  * template path.
  */
 function ua_featured_content_views_api_alter(&$apis) {
-  if (!empty($apis['ua_featured_content']) && $apis['ua_featured_content']['version'] == '3.0') {
+  if (!empty($apis['ua_featured_content']) && $apis['ua_featured_content']['api'] == '3.0') {
     $apis['ua_featured_content']['template path'] = drupal_get_path('module', 'ua_featured_content') . '/theme';
   }
 }
