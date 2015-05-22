@@ -27,4 +27,39 @@ Handy Drush dl/en command:
 drush en date date_all_day date_api date_repeat date_repeat_field email field_collection link 
 ```
 ## Views ##
-Coming soon. It would be nice for the event content type to come with a [responsive calendar](https://www.drupal.org/node/1675894) display and a side block and styles for the appearance.
+
+There are two views: a block with a list of 6 events and a full calendar view (responsive and not table-based).
+
+**Note about full calendar view:** By default, the full calendar view is paginating by month. If you do not have *at least* the 7.x-2.9-alpha version of the date module, the calendar will show the wrong date format at the top of the page (see https://www.drupal.org/node/2294973 for full details).
+
+### Structure ###
+
+Included fields:
+
+- Event title (block and page)
+- Event date (block and page - several different formats used)
+- Event summary (page only)
+
+### Styling ###
+To facilitate styling, the view displays have classes added to them via the Views UI.
+
+#### Styling classes are as follows: ####
+
+- **Full Calendar class:** *ua-event-calendar*
+- **Block class:** *ua-event-block-list*
+- **Row class:** *ua-event-row*
+- **Field Classes (block):**
+    - Date  *ua-event-date*
+    - Title  *ua-event-title*
+- **Field Classes (page):**
+    - Date  *ua-event-date*
+    - Title  *ua-event-title*
+    - Left Global Text group (contains month and day)  *ua-event-left-group*
+    - Right Global Text group (contains title, time and summary) *ua-event-right-group*
+
+
+### Screenshots ###
+
+![calendar_block_view.png](https://bitbucket.org/repo/B5gRzX/images/2893604340-calendar_block_view.png)
+
+![calendar_view.PNG](https://bitbucket.org/repo/B5gRzX/images/2530656555-calendar_view.PNG)
