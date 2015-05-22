@@ -68,3 +68,47 @@ ul.sf-menu li ul {
 .sf-menu li:hover > ul, .sf-menu li.sfHover > ul {
 	top: 100%;
 }
+@media (min-width: 48em) and (max-width: 59.9em) {
+	#main_nav {
+		.block-superfish {
+			ul.menu {
+				li {
+					padding-right: 2em;
+					a {
+						font-size: 16px;
+						font-size: 1.0rem;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 60em) and (max-width: 74.9em) {
+	#main_nav {
+		.block-superfish {
+			ul.menu {
+				li {
+					padding-right: 2.5em;
+					a {
+						font-size: 17px;
+						font-size: 1.1rem;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 75em) {
+	#main_nav {
+		.block-superfish {
+			ul.menu {
+				li {
+					a {
+						font-size: 19px;
+						font-size: 1.2rem;
+					}
+				}
+			}
+		}
+	}
+}
