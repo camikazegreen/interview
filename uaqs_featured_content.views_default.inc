@@ -99,16 +99,19 @@ function ua_featured_content_views_default_views() {
     'ua_carousel_item' => 'ua_carousel_item',
   );
 
-  /* Display: Featured Content */
-  $handler = $view->new_display('block', 'Featured Content', 'block');
-
-  /* Display: Featured Content Navigation */
-  $handler = $view->new_display('attachment', 'Featured Content Navigation', 'featured_content_nav');
+  /* Display: Hero Block */
+  $handler = $view->new_display('block', 'Hero Block', 'hero_block');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Featured Content Navigation';
+  $handler->display->display_options['title'] = 'Hero Block';
+  $handler->display->display_options['display_description'] = 'Main Hero Carousel Block';
+
+  /* Display: Hero Navigation */
+  $handler = $view->new_display('attachment', 'Hero Navigation', 'hero_nav');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Hero Navigation';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'featured-content-nav container';
-  $handler->display->display_options['display_description'] = 'Featured Content Navigation Attachment';
+  $handler->display->display_options['css_class'] = 'hero-nav container';
+  $handler->display->display_options['display_description'] = 'Hero Carousel Navigation Attachment';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -134,7 +137,7 @@ function ua_featured_content_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
   $handler->display->display_options['displays'] = array(
-    'block' => 'block',
+    'hero_block' => 'hero_block',
     'default' => 0,
   );
   $handler->display->display_options['attachment_position'] = 'after';
