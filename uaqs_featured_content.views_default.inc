@@ -11,18 +11,18 @@ function ua_featured_content_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'featured_content';
+  $view->name = 'ua_hero_carousel';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Featured Content';
+  $view->human_name = 'Hero Carousel';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Featured Content';
+  $handler->display->display_options['title'] = 'Hero Carousel';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -71,14 +71,14 @@ function ua_featured_content_views_default_views() {
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_plain';
-  /* Field: Content: Link Title and Addresss */
-  $handler->display->display_options['fields']['field_link_title_and_addresss']['id'] = 'field_link_title_and_addresss';
-  $handler->display->display_options['fields']['field_link_title_and_addresss']['table'] = 'field_data_field_link_title_and_addresss';
-  $handler->display->display_options['fields']['field_link_title_and_addresss']['field'] = 'field_link_title_and_addresss';
-  $handler->display->display_options['fields']['field_link_title_and_addresss']['label'] = '';
-  $handler->display->display_options['fields']['field_link_title_and_addresss']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_link_title_and_addresss']['element_wrapper_class'] = 'more-link';
-  $handler->display->display_options['fields']['field_link_title_and_addresss']['click_sort_column'] = 'url';
+  /* Field: Content: Call to Action */
+  $handler->display->display_options['fields']['field_call_to_action']['id'] = 'field_call_to_action';
+  $handler->display->display_options['fields']['field_call_to_action']['table'] = 'field_data_field_call_to_action';
+  $handler->display->display_options['fields']['field_call_to_action']['field'] = 'field_call_to_action';
+  $handler->display->display_options['fields']['field_call_to_action']['label'] = '';
+  $handler->display->display_options['fields']['field_call_to_action']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_call_to_action']['element_wrapper_class'] = 'more-link';
+  $handler->display->display_options['fields']['field_call_to_action']['click_sort_column'] = 'url';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -96,19 +96,22 @@ function ua_featured_content_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'featured_content' => 'featured_content',
+    'ua_carousel_item' => 'ua_carousel_item',
   );
 
-  /* Display: Featured Content */
-  $handler = $view->new_display('block', 'Featured Content', 'block');
-
-  /* Display: Featured Content Navigation */
-  $handler = $view->new_display('attachment', 'Featured Content Navigation', 'featured_content_nav');
+  /* Display: Hero Block */
+  $handler = $view->new_display('block', 'Hero Block', 'hero_block');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Featured Content Navigation';
+  $handler->display->display_options['title'] = 'Hero Block';
+  $handler->display->display_options['display_description'] = 'Main Hero Carousel Block';
+
+  /* Display: Hero Navigation */
+  $handler = $view->new_display('attachment', 'Hero Navigation', 'hero_nav');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Hero Navigation';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'featured-content-nav container';
-  $handler->display->display_options['display_description'] = 'Featured Content Navigation Attachment';
+  $handler->display->display_options['css_class'] = 'hero-nav container';
+  $handler->display->display_options['display_description'] = 'Hero Carousel Navigation Attachment';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -134,11 +137,11 @@ function ua_featured_content_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_type'] = '0';
   $handler->display->display_options['displays'] = array(
-    'block' => 'block',
+    'hero_block' => 'hero_block',
     'default' => 0,
   );
   $handler->display->display_options['attachment_position'] = 'after';
-  $export['featured_content'] = $view;
+  $export['ua_hero_carousel'] = $view;
 
   return $export;
 }
