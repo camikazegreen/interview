@@ -248,3 +248,52 @@ footer#footer_site #footer_sub .container > * {
     margin: 0 1rem 1rem 0;
   }
 }
+/* SIDE MENUS */
+@media screen and (min-width: 60em) {
+  /* line 225, ../../sass/catstrap/catstrap-zen.scss */
+  .sidebar ul.menu {
+    list-style: none outside none;
+    padding: 0;
+    margin: 0;
+  }
+  /* line 229, ../../sass/catstrap/catstrap-zen.scss */
+  .sidebar ul.menu li {
+    list-style: none outside none;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+  /* line 237, ../../sass/catstrap/catstrap-zen.scss */
+  .sidebar ul.menu li > a,
+  .sidebar ul.menu li > a:link,
+  .sidebar ul.menu li > a:visited {
+    position: relative;
+    padding: 0.625rem 1rem;
+    text-decoration: none;
+    font-weight: normal;
+    display: block;
+    color: #333;
+  }
+
+  /* line 250, ../../sass/catstrap/catstrap-zen.scss */
+  .region-sidebar-first .menu > li > a:hover,
+  .region-sidebar-first .menu > li > a:focus,
+  .region-sidebar-first .menu > li.active a,
+  .region-sidebar-first .menu > li a.active {
+    background: url("../images/sidebar-menu-chevron-left.png") no-repeat scroll 100% center/30px 100% #dee8e7;
+    border-bottom: 0 solid rgba(0, 0, 0, 0);
+    color: #076873;
+    text-decoration: none;
+  }
+
+  /* line 261, ../../sass/catstrap/catstrap-zen.scss */
+  .region-sidebar-second .menu > li > a:hover,
+  .region-sidebar-second .menu > li > a:focus,
+  .region-sidebar-second .menu > li.active a,
+  .region-sidebar-second .menu > li a.active {
+    background: url("../images/sidebar-menu-chevron-right.png") no-repeat scroll 0 center/30px 100% #dee8e7;
+    border-bottom: 0 solid rgba(0, 0, 0, 0);
+    color: #076873;
+    text-decoration: none;
+  }
+}
