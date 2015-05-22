@@ -20,8 +20,8 @@ function ua_demo_migrate_api() {
         'class_name' => 'UaDemoPage',
         'group_name' => 'ua_demo',
       ),
-      'UaDemoFeature' => array(
-        'class_name' => 'UaDemoFeature',
+      'UaDemoCarouselItem' => array(
+        'class_name' => 'UaDemoCarouselItem',
         'group_name' => 'ua_demo',
       ),
       'UaDemoMenu' => array(
