@@ -1721,7 +1721,7 @@ tr.selected td {
 /* line 802, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1426188048');
+  background-image: url('../images/progress.gif?1432252548');
 }
 
 /**
@@ -4729,24 +4729,28 @@ footer#footer_site #footer_sub .container > * {
   color: #076873;
 }
 /* line 43, ../sass/components/_uazen-superfish.scss */
+#main_nav .block-superfish ul.menu li.last {
+  padding-right: 0;
+}
+/* line 46, ../sass/components/_uazen-superfish.scss */
 #main_nav .block-superfish ul.menu li > a {
   padding: 1em 0;
 }
-/* line 47, ../sass/components/_uazen-superfish.scss */
+/* line 50, ../sass/components/_uazen-superfish.scss */
 #main_nav .block-superfish select {
   width: 14rem;
   margin: 1.2rem 0;
 }
-/* line 52, ../sass/components/_uazen-superfish.scss */
+/* line 55, ../sass/components/_uazen-superfish.scss */
 #main_nav .tinynav-wrapper {
   padding: 1em 0;
 }
-/* line 54, ../sass/components/_uazen-superfish.scss */
+/* line 57, ../sass/components/_uazen-superfish.scss */
 #main_nav .tinynav-wrapper select.tinynav.tinynav1 {
   margin: 0 auto;
 }
 
-/* line 59, ../sass/components/_uazen-superfish.scss */
+/* line 62, ../sass/components/_uazen-superfish.scss */
 ul.sf-menu li ul {
   background-color: rgba(12, 35, 75, 0.8);
   background-image: url("../images/menu-triangle.png");
@@ -4754,11 +4758,40 @@ ul.sf-menu li ul {
   background-repeat: no-repeat;
 }
 
-/* line 65, ../sass/components/_uazen-superfish.scss */
+/* line 68, ../sass/components/_uazen-superfish.scss */
 .sf-menu li:hover > ul, .sf-menu li.sfHover > ul {
   top: 100%;
 }
 
+@media (min-width: 48em) and (max-width: 59.9em) {
+  /* line 75, ../sass/components/_uazen-superfish.scss */
+  #main_nav .block-superfish ul.menu li {
+    padding-right: 2em;
+  }
+  /* line 77, ../sass/components/_uazen-superfish.scss */
+  #main_nav .block-superfish ul.menu li a {
+    font-size: 16px;
+    font-size: 1.0rem;
+  }
+}
+@media (min-width: 60em) and (max-width: 74.9em) {
+  /* line 90, ../sass/components/_uazen-superfish.scss */
+  #main_nav .block-superfish ul.menu li {
+    padding-right: 2.5em;
+  }
+  /* line 92, ../sass/components/_uazen-superfish.scss */
+  #main_nav .block-superfish ul.menu li a {
+    font-size: 17px;
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 75em) {
+  /* line 106, ../sass/components/_uazen-superfish.scss */
+  #main_nav .block-superfish ul.menu li a {
+    font-size: 19px;
+    font-size: 1.2rem;
+  }
+}
 /* line 2, ../sass/components/_uazen-flexslider.scss */
 #content_featured .flexslider {
   border: 0;
