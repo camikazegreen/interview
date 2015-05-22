@@ -9,7 +9,7 @@ class UaDemoPage extends Migration {
 
   public function __construct(array $arguments) {
     parent::__construct($arguments);
-    $this->description = t('Import nodes.');
+    $this->description = t('Import sample pages.');
 
     // Create a map object for tracking the relationships between source rows.
     $this->map = new MigrateSQLMap($this->machineName,
@@ -50,11 +50,11 @@ class UaDemoPage extends Migration {
 
 }
 
-class UaDemoFeature extends Migration {
+class UaDemoCarouselItem extends Migration {
 
   public function __construct(array $arguments) {
     parent::__construct($arguments);
-    $this->description = t('Import nodes.');
+    $this->description = t('Import sample carousel items.');
 
     // Create a map object for tracking the relationships between source rows.
     $this->map = new MigrateSQLMap($this->machineName,
@@ -71,9 +71,9 @@ class UaDemoFeature extends Migration {
     $import_path = drupal_get_path('module', 'ua_demo') . '/import/data/';
 
     // Create a MigrateSource object.
-    $this->source = new MigrateSourceCSV($import_path . 'ua_demo.feature.csv', $this->csvcolumns(), array('header_rows' => 1));
+    $this->source = new MigrateSourceCSV($import_path . 'ua_demo.carousel_item.csv', $this->csvcolumns(), array('header_rows' => 1));
 
-    $this->destination = new MigrateDestinationNode('featured_content');
+    $this->destination = new MigrateDestinationNode('ua_carousel_item');
 
     $this->addFieldMapping('uid')->defaultValue(1);
     $this->addFieldMapping('status')->defaultValue(1);
@@ -84,8 +84,8 @@ class UaDemoFeature extends Migration {
       ->defaultValue(FILE_EXISTS_REPLACE);
     $this->addFieldMapping('field_slide_image:source_dir')
       ->defaultValue(drupal_get_path('module', 'ua_demo') . '/import/images');
-    $this->addFieldMapping('field_link', 'url');
-    $this->addFieldMapping('field_link:title', 'action');
+    $this->addFieldMapping('field_call_to_action', 'url');
+    $this->addFieldMapping('field_call_to_action:title', 'action');
     $this->addFieldMapping('body', 'body');
     $this->addFieldMapping('body:format')->defaultValue('filtered_html');
     $this->addFieldMapping('created', 'created');
