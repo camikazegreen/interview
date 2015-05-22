@@ -3,7 +3,6 @@ description = Use to create UA branded news articles
 core = 7.x
 package = UA Features
 version = 7.x-1.x-dev
-project = ua_news
 dependencies[] = date
 dependencies[] = email
 dependencies[] = features
