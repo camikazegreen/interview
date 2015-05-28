@@ -34,20 +34,6 @@ function ua_navigation_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'responsive_menus_codrops_responsive_multi_css_selectors';
-  $strongarm->value = '#superfish-1';
-  $export['responsive_menus_codrops_responsive_multi_css_selectors'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'responsive_menus_style';
-  $strongarm->value = 'codrops_responsive_multi';
-  $export['responsive_menus_style'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'superfish_amw_1';
   $strongarm->value = 0;
   $export['superfish_amw_1'] = $strongarm;
