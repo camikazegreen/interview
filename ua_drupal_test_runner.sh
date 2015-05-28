@@ -39,7 +39,7 @@ testroot='../suites'
 
 wget -q "$urlstem$tarball"
 err="$?"
-if [ $err -ne 0 ]; then
+if [ "$err" -ne 0 ]; then
   echo "** could not download the unchecked build: error code $err." >&2
   exit 1
 else
@@ -51,13 +51,15 @@ else
   echo "** could not find a non-empty distribution tarball $tarball." >&2
   exit 1
 fi
-if tar xzf "$tarball"; then
-  echo "** could not expand the distribution tarball $tarball." >&2
+tar xzf "$tarball"
+err="$?"
+if [ "$err" -ne 0 ]; then
+  echo "** could not expand the distribution tarball $tarball: error code $err." >&2
   exit 1
 else
   echo "Expanded the distribution tarball..." >&2
 fi
-if [ -d $drupalroot ]; then
+if [ -d "$drupalroot" ]; then
   echo "Found the expected Drupal root directory." >&2
 else
   echo "** could not find the expected Drupal root directory $drupalroot." >&2
@@ -75,7 +77,7 @@ else
 fi
 cd "$sitesdefault"
 defaultsettings='default.settings.php'
-if [ -r $defaultsettings ]; then
+if [ -r "$defaultsettings" ]; then
   echo "Found the $defaultsettings file in the distribution..." >&2
 else
   echo "** the distribution is incomplete: $defaultsettings file missing." >&2
