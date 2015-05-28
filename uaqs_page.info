@@ -1,6 +1,8 @@
-name = ua_page
+name = UA Page
+description = Provides basic page content type.
 core = 7.x
 package = The University of Arizona
+version = 7.x-1.x-dev
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = node
