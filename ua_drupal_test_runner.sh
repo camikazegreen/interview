@@ -155,4 +155,29 @@ else
   echo "** some of the CasperJS tests failed." >&2
   exit 1
 fi
+
+# Set up a staging directory for database dumps
+
+dumpdir='../dumps'
+mkdir "$dumpdir"
+err="$?"
+if [ "$err" -ne 0 ]; then
+  echo "** could not make the database dump staging directory $dumpdir: error code $err." >&2
+  exit 1
+else
+  echo "Made the database dump staging directory..." >&2
+fi
+if [ -d "$dumpdir" ]; then
+  echo "Found the database dump staging directory..." >&2
+else
+  echo "** could not find the database dump staging directory $dumpdir." >&2
+  exit 1
+fi
+if chmod 1777 "$dumpdir"; then
+  echo "Gave the dump directory the same permissions as /tmp..." >&2
+else
+  echo "** failed to set permissions on the database dump staging directory $dumpdir." >&2
+  exit 1
+fi
+
 exit 0
