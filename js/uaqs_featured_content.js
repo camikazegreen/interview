@@ -1,6 +1,6 @@
 /**
  * @file
- * A JavaScript file for the theme.
+ * Funcion #1 remove orphans from any element with the class noWidows.
  *
  * In order for this JavaScript to be loaded on pages, see the instructions in
  * the README.txt next to this file.
