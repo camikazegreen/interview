@@ -1,0 +1,15 @@
+name = ua_page
+core = 7.x
+package = The University of Arizona
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = node
+dependencies[] = strongarm
+dependencies[] = text
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_instance][] = node-ua_page-body
+features[node][] = ua_page
+features[variable][] = node_options_ua_page
+features[variable][] = node_submitted_ua_page
