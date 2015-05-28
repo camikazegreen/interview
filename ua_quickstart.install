@@ -134,13 +134,6 @@ function ua_quickstart_enable_blocks() {
       'cache' => DRUPAL_NO_CACHE,
     ),
     array(
-      'module' => 'system',
-      'delta' => 'powered-by',
-      'theme' => $default_theme,
-      'region' => 'footer',
-      'cache' => DRUPAL_CACHE_PER_ROLE,
-    ),
-    array(
       'module' => 'search',
       'delta' => 'form',
       'theme' => $default_theme,
