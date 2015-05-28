@@ -1,10 +1,14 @@
 name = UA Featured Content
 core = 7.x
 package = The University of Arizona
+dependencies[] = flexslider
 dependencies[] = flag
 dependencies[] = flexslider_views
+dependencies[] = image
 dependencies[] = image_url_formatter
+dependencies[] = link
 dependencies[] = strongarm
+dependencies[] = text
 dependencies[] = ua_page
 dependencies[] = views
 stylesheets[all][] = css/ua_featured_content.css

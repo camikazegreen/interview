@@ -16,15 +16,9 @@
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
 Drupal.behaviors.ua_featured_content_behavior = {
   attach: function(context, settings) {
-
-    //$('h2').widowFix({
-        //letterLimit: 10,
-        //prevLimit: 5,
-        //linkFix: true
-    //});
-$('.noWidows').each(function(i,d){
-   $(d).html( $(d).text().replace(/\s(?=[^\s]*$)/g, "&nbsp;") )
-});
+    $('.noWidows').each(function(i,d){
+       $(d).html( $(d).text().replace(/\s(?=[^\s]*$)/g, "&nbsp;") )
+    });
 
   }
 };
