@@ -14,9 +14,9 @@ Demonstration/starter Drupal distribution and installation profile that packages
 
 - [UA Core Feature](https://bitbucket.org/ua_drupal/ua_core)
 - [UA Demo Content Feature](https://bitbucket.org/ua_drupal/ua_demo)
-- [UA Navigation Feature](https://bitbucket.org/ua_drupal/ua_navigation)
-- [UA (CALS) Content Types Feature](https://bitbucket.org/uabrandingdigitalassets/cals-ua-features)
 - [UA Featured Content (Carousel) Feature](https://bitbucket.org/ua_drupal/ua_featured_content)
+- [UA Navigation Feature](https://bitbucket.org/ua_drupal/ua_navigation)
+- [UA Page Feature](https://bitbucket.org/ua_drupal/ua_page)
 - [UA Zen Theme](https://bitbucket.org/ua_drupal/ua_zen)
 - More to come...
 
