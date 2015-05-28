@@ -26,10 +26,21 @@
  * @ingroup views_templates
  */
 ?>
-<div class="slide-image-container" style="background-image: url('<?php print $fields["field_slide_image"]->content; ?>')">
-  <div class="container">
-    <?php print $fields["title"]->content; ?>
-    <?php print $fields["body"]->content; ?>
-    <?php print $fields["field_call_to_action"]->content; ?>
+
+<?php if (isset($fields["field_call_to_action_1"]->content)): ?>
+<a href="<?php print $fields["field_call_to_action_1"]->content; ?>">
+<?php else : ?>
+<a href="<?php print $fields["path"]->content; ?>">
+<?php endif; ?>
+  <div class="slide-image-container container" style="background-image: url('<?php print $fields["field_slide_image"]->content; ?>')">
+    <div class="container">
+      <div class="mask white">
+        <?php print $fields["title"]->content; ?>
+        <?php print $fields["body"]->content; ?>
+        <?php if (isset($fields["field_call_to_action"]->content)): ?>
+        <?php print $fields["field_call_to_action"]->content; ?>
+        <?php endif; ?>
+      </div>
+    </div>
   </div>
-</div>
+</a>
