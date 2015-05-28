@@ -9,7 +9,7 @@ casper.test.begin("UA Quickstart homepage", 7, function suite(test) {
 
   casper.start();
 
-  casper.thenOpen(rootpath function() {
+  casper.thenOpen(rootpath, function() {
     test.assertHttpStatus(200, 'opens with an HTTP Success status code');
     // Major page region structure
     test.assertExists('#l_page', 'has the outermost page container (#l_page)');
