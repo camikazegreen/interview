@@ -37,17 +37,13 @@ function ua_featured_content_views_default_views() {
   $handler->display->display_options['style_options']['optionset'] = 'ua_hero_carousel';
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'ua_featured_content';
-  /* Relationship: Broken/missing handler */
-  $handler->display->display_options['relationships']['field_media_sid']['id'] = 'field_media_sid';
-  $handler->display->display_options['relationships']['field_media_sid']['table'] = 'field_data_field_media';
-  $handler->display->display_options['relationships']['field_media_sid']['field'] = 'field_media_sid';
-  /* Relationship: Flags: ua_feature_content */
+  /* Relationship: Flags: ua_hero_carousel */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['ui_name'] = 'ua_feature_content_flag';
-  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'ua_feature_content_flag';
-  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'ua_feature_content';
+  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'ua_hero_carousel_flag';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'ua_hero_carousel';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   /* Field: Content: Slide Image */
   $handler->display->display_options['fields']['field_slide_image']['id'] = 'field_slide_image';
@@ -131,13 +127,13 @@ function ua_featured_content_views_default_views() {
   $handler->display->display_options['row_options']['view_mode'] = 'ua_featured_content';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Flags: ua_feature_content */
+  /* Relationship: Flags: ua_hero_carousel */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['ui_name'] = 'ua_feature_content_flag';
-  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'ua_feature_content_flag';
-  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'ua_feature_content';
+  $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'ua_hero_carousel_flag';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'ua_hero_carousel';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Nid */
