@@ -24,24 +24,10 @@ function ua_featured_content_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
-      'slide' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'plain_text',
-          ),
-        ),
-        'type' => 'text_default',
-        'weight' => 2,
-      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
           'trim_length' => 600,
         ),
         'type' => 'text_summary_or_trimmed',
@@ -60,11 +46,7 @@ function ua_featured_content_field_default_field_instances() {
     'label' => 'Body',
     'required' => 0,
     'settings' => array(
-      'context' => 'debug',
-      'context_default' => 'sdl_editor_representation',
       'display_summary' => 1,
-      'dnd_enabled' => 1,
-      'mee_enabled' => 1,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -91,17 +73,6 @@ function ua_featured_content_field_default_field_instances() {
         'label' => 'above',
         'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 1,
-      ),
-      'slide' => array(
-        'label' => 'above',
-        'module' => 'link',
-        'settings' => array(
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
-        ),
         'type' => 'link_default',
         'weight' => 1,
       ),
@@ -167,19 +138,6 @@ function ua_featured_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 3,
       ),
-      'slide' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-          'quickedit' => array(
-            'editor' => 'form',
-          ),
-        ),
-        'type' => 'image',
-        'weight' => 0,
-      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -212,20 +170,6 @@ function ua_featured_content_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'manualcrop_crop_info' => 1,
-        'manualcrop_default_crop_area' => 1,
-        'manualcrop_enable' => 1,
-        'manualcrop_inline_crop' => 1,
-        'manualcrop_instant_crop' => 1,
-        'manualcrop_instant_preview' => 1,
-        'manualcrop_keyboard' => 1,
-        'manualcrop_maximize_default_crop_area' => 1,
-        'manualcrop_require_cropping' => array(),
-        'manualcrop_styles_list' => array(
-          'flexslider_full' => 'flexslider_full',
-        ),
-        'manualcrop_styles_mode' => 'include',
-        'manualcrop_thumblist' => 1,
         'preview_image_style' => 'medium',
         'progress_indicator' => 'throbber',
       ),
