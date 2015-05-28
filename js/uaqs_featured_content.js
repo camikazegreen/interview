@@ -19,7 +19,6 @@ Drupal.behaviors.ua_featured_content_behavior = {
     $('.noWidows').each(function(i,d){
        $(d).html( $(d).text().replace(/\s(?=[^\s]*$)/g, "&nbsp;") )
     });
-
   }
 };
 
