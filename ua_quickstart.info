@@ -44,6 +44,6 @@ dependencies[] = update
 ; ----------------
 dependencies[] = ua_core
 dependencies[] = ua_demo
-dependencies[] = ua_navigation
-dependencies[] = ua_content_types
 dependencies[] = ua_featured_content
+dependencies[] = ua_navigation
+dependencies[] = ua_page
