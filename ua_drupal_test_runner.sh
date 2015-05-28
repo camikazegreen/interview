@@ -38,6 +38,7 @@ user1pass=${9-'OGinIWereWhereGadieRins'}
 localurl='http://uaquickstarttest.arizona.edu:9081/'
 # Relative path from the Drupal root directory to the testing root directory...
 testroot='../suites'
+testincludes='../includes'
 
 # Download and expand the built & packaged distribution fron a previous step
 
@@ -127,9 +128,28 @@ else
   exit 1
 fi
 
+# Generate some CasperJS configuration files on the fly from templates and variables
+
+cjstemplate="$testincludes/users.js.template"
+cjsuserconfig="$testincludes/users.js"
+sed -e "s/USER1NAME/$adminuser/" -e "s/USER1PASS/$user1pass/" "$cjstemplate" > "$cjsuserconfig"
+err="$?"
+if [ "$err" -ne 0 ]; then
+  echo "** could not substitute the Drupal User1 details in $cjstemplate: error code $err." >&2
+  exit 1
+else
+  echo "Set the Drupal User1 username and password in the CasperJS configuration..." >&2
+fi
+if [ -r "$cjsuserconfig" ]; then
+  echo "Found the expected CasperJS Drupal user configuration file..." >&2
+else
+  echo "** could not find the CasperJS Drupal user configuration file $cjsuserconfig." >&2
+  exit 1
+fi
+
 # Run the test suites
 
-if drush casperjs --test-root="$testroot" --url="$localurl"; then
+if drush casperjs --test-root="$testroot" --url="$localurl" --includes="$cjsuserconfig"; then
   echo "Test suites completed OK." >&2
 else
   echo "** some of the CasperJS tests failed." >&2
