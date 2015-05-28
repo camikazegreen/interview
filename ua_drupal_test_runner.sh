@@ -28,6 +28,10 @@ adminuser=${6-'c13'}
 dbname=${7-'uaquickstartdb'}
 dbuser=${8-'uaqsdbadmin'}
 dbpass=${9-'MitherTap'}
+if [ $# -gt 9 ]; then
+  shift 1
+fi
+user1pass=${9-'OGinIWereWhereGadieRins'}
 
 # Local URL for the testing web server (the domain name will generally be something in
 # /etc/hosts pointing at 127.0.0.1 rather than in the DNS)...
@@ -114,6 +118,12 @@ if drush site-install "$profile" --account-mail="$adminemail" --account-name="$a
   echo "Successfully installed the site with demonstration content..." >&2
 else
   echo "** the Drupal site install failed (before any actual testing)." >&2
+  exit 1
+fi
+if drush user-password "$adminuser" --password="$user1pass"; then
+  echo "Re-set the Drupal User1 ($adminuser) password..." >&2
+else
+  echo "** failed to set the pre-defined Drupal User1 ($adminuser) administrator password." >&2
   exit 1
 fi
 
