@@ -129,7 +129,7 @@ function ua_featured_content_views_default_views() {
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
-  $handler->display->display_options['relationships']['flag_content_rel']['ui_name'] = 'ua_feature_content_flag';
+  $handler->display->display_options['relationships']['flag_content_rel']['ui_name'] = 'ua_hero_carousel_flag';
   $handler->display->display_options['relationships']['flag_content_rel']['label'] = 'ua_hero_carousel_flag';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'ua_hero_carousel';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
