@@ -1733,7 +1733,7 @@ tr.selected td {
 /* line 814, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1432252548');
+  background-image: url('../images/progress.gif?1426188048');
 }
 
 /**
@@ -5144,55 +5144,6 @@ ul.sf-menu li ul {
     font-size: 2.25rem;
   }
 }
-/* line 37, ../sass/components/_uazen-home-modules.scss */
-#block-views-news-home-3-col-news-block {
-  padding: 64px 0;
-  padding: 4rem 0;
-}
-/* line 40, ../sass/components/_uazen-home-modules.scss */
-#block-views-news-home-3-col-news-block h2.block-title {
-  text-align: center;
-  font-family: MiloWeb, Verdana, Geneva, sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 24px;
-  font-size: 1.5rem;
-  margin-bottom: 32px;
-  margin-bottom: 2rem;
-}
-/* line 49, ../sass/components/_uazen-home-modules.scss */
-#block-views-news-home-3-col-news-block h2.block-title:before {
-  content: "—";
-  margin-right: 0.3em;
-  color: #c8d9d8;
-}
-/* line 54, ../sass/components/_uazen-home-modules.scss */
-#block-views-news-home-3-col-news-block h2.block-title:after {
-  content: "—";
-  margin-left: 0.3em;
-  color: #c8d9d8;
-}
-/* line 61, ../sass/components/_uazen-home-modules.scss */
-#block-views-news-home-3-col-news-block .view-news .views-row {
-  width: 33%;
-  padding: 0 15px;
-  border: 0;
-}
-/* line 66, ../sass/components/_uazen-home-modules.scss */
-#block-views-news-home-3-col-news-block .view-news .views-row .views-field-field-news-photos img {
-  max-width: 100%;
-  padding-right: 0;
-}
-/* line 72, ../sass/components/_uazen-home-modules.scss */
-#block-views-news-home-3-col-news-block .view-news .views-row .views-field-title h2 {
-  display: block;
-  font-size: 22px;
-  font-size: 1.4rem;
-  float: left;
-  margin-top: 16px;
-  margin-top: 1rem;
-}
-
 /*** Views Pager ***/
 /* line 3, ../sass/components/_uazen-views.scss */
 .item-list ul.pager {
