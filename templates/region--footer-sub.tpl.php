@@ -7,9 +7,11 @@
  * @see https://drupal.org/node/1728140
  */
 ?>
+<?php if ($copyright_notice || $content): ?>
 <div id="footer_sub" class="<?php print $classes; ?>">
   	<div class="container">
     	<?php print $content; ?>
-	    <p class="copyright">Copyright © <?php print date('Y'); ?> Arizona Board of Regents. <a href="http://www.arizona.edu" target="_blank">The University of Arizona</a>, Tucson, Arizona</p>
+	    <?php print $copyright_notice ?>
   	</div>
 </div>
+<?php endif ?>

@@ -7,15 +7,11 @@
  * @see https://drupal.org/node/1728140
  */
 ?>
-<?php if ($logo || $content): ?>
+<?php if ($footer_logo || $content): ?>
 <div class="container">
-	<?php if ($logo): ?>
+	<?php if ($footer_logo): ?>
 		<div class="footer-logo">
-			<?php if ($ua_zen_footer_logo != "/"): ?>
-					<img src="<?php print $ua_zen_footer_logo; ?>" alt="" />
-			<?php else: ?>
-					<img src="<?php print $logo; ?>" alt="" />
-			<?php endif; ?>
+			<?php print $footer_logo; ?>
 		</div>
 	<?php endif; ?>
 	<?php if ($content): ?>

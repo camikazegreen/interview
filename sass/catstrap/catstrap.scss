@@ -6,7 +6,7 @@
 // 	font-weight: bold;
 // 	text-transform: uppercase;
 // }
-
+/*
 #header_site {
 	ul.menu {
 		padding: 0;
@@ -31,7 +31,7 @@
 			}
 		}
 	}
-}
+}*/
 
 /*!
  * Bootstrap v3.3.2 (http://getbootstrap.com)
@@ -43,6 +43,7 @@
 @import url("https://brand.arizona.edu/sites/default/files/ua-banner/ua-web-branding/ua-fonts/milo.css");
 
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+
 @media print {
   *,
   *:before,
@@ -131,7 +132,6 @@
 }
 html {
   font-size: 16px;
-
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {

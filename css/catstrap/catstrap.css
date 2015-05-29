@@ -1,42 +1,40 @@
 @charset "UTF-8";
-@import url("https://brand.arizona.edu/sites/default/files/ua-banner/ua-web-branding/ua-fonts/milo.css");
-/* line 11, ../../sass/catstrap/catstrap.scss */
-#header_site ul.menu {
-  padding: 0;
-  margin: 0;
-  border: 0 none;
-  text-align: right;
-}
-/* line 16, ../../sass/catstrap/catstrap.scss */
-#header_site ul.menu li {
-  list-style: none;
-  display: inline-block;
-  padding: 0 .6rem;
-  text-align: left;
-}
-/* line 21, ../../sass/catstrap/catstrap.scss */
-#header_site ul.menu li a {
-  font-size: 1rem;
-  text-decoration: none;
-  color: #6b868d;
-  text-transform: none;
-  font-family: MiloWeb-Text, sans-serif;
-  font-weight: normal;
-}
-/* line 28, ../../sass/catstrap/catstrap.scss */
-#header_site ul.menu li a:hover {
-  text-decoration: underline;
-}
-
+/*
+#header_site {
+	ul.menu {
+		padding: 0;
+		margin: 0;
+		border: 0 none;
+		text-align: right;
+		li {
+			list-style: none;
+			display: inline-block;
+			padding: 0 .6rem;
+			text-align: left;
+			a {
+				font-size: 1rem;
+				text-decoration: none;
+				color: #6b868d;
+				text-transform: none;
+				font-family: MiloWeb-Text, sans-serif;
+				font-weight: normal;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}*/
 /*!
  * Bootstrap v3.3.2 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /* Import Milo Fonts */
+@import url("https://brand.arizona.edu/sites/default/files/ua-banner/ua-web-branding/ua-fonts/milo.css");
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
-  /* line 49, ../../sass/catstrap/catstrap.scss */
+  /* line 50, ../../sass/catstrap/catstrap.scss */
   *,
   *:before,
   *:after {
@@ -47,52 +45,52 @@
     box-shadow: none !important;
   }
 
-  /* line 57, ../../sass/catstrap/catstrap.scss */
+  /* line 58, ../../sass/catstrap/catstrap.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 60, ../../sass/catstrap/catstrap.scss */
+  /* line 61, ../../sass/catstrap/catstrap.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 63, ../../sass/catstrap/catstrap.scss */
+  /* line 64, ../../sass/catstrap/catstrap.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 67, ../../sass/catstrap/catstrap.scss */
+  /* line 68, ../../sass/catstrap/catstrap.scss */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
   }
 
-  /* line 71, ../../sass/catstrap/catstrap.scss */
+  /* line 72, ../../sass/catstrap/catstrap.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 76, ../../sass/catstrap/catstrap.scss */
+  /* line 77, ../../sass/catstrap/catstrap.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 80, ../../sass/catstrap/catstrap.scss */
+  /* line 81, ../../sass/catstrap/catstrap.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 83, ../../sass/catstrap/catstrap.scss */
+  /* line 84, ../../sass/catstrap/catstrap.scss */
   img {
     max-width: 100% !important;
   }
 
-  /* line 88, ../../sass/catstrap/catstrap.scss */
+  /* line 89, ../../sass/catstrap/catstrap.scss */
   p,
   h2,
   h3 {
@@ -100,58 +98,58 @@
     widows: 3;
   }
 
-  /* line 93, ../../sass/catstrap/catstrap.scss */
+  /* line 94, ../../sass/catstrap/catstrap.scss */
   h2,
   h3 {
     page-break-after: avoid;
   }
 
-  /* line 96, ../../sass/catstrap/catstrap.scss */
+  /* line 97, ../../sass/catstrap/catstrap.scss */
   select {
     background: #fff !important;
   }
 
-  /* line 99, ../../sass/catstrap/catstrap.scss */
+  /* line 100, ../../sass/catstrap/catstrap.scss */
   .navbar {
     display: none;
   }
 
-  /* line 103, ../../sass/catstrap/catstrap.scss */
+  /* line 104, ../../sass/catstrap/catstrap.scss */
   .btn > .caret,
   .dropup > .btn > .caret {
     border-top-color: #000 !important;
   }
 
-  /* line 106, ../../sass/catstrap/catstrap.scss */
+  /* line 107, ../../sass/catstrap/catstrap.scss */
   .label {
     border: 1px solid #000;
   }
 
-  /* line 109, ../../sass/catstrap/catstrap.scss */
+  /* line 110, ../../sass/catstrap/catstrap.scss */
   .table {
     border-collapse: collapse !important;
   }
 
-  /* line 113, ../../sass/catstrap/catstrap.scss */
+  /* line 114, ../../sass/catstrap/catstrap.scss */
   .table td,
   .table th {
     background-color: #fff !important;
   }
 
-  /* line 117, ../../sass/catstrap/catstrap.scss */
+  /* line 118, ../../sass/catstrap/catstrap.scss */
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #ddd !important;
   }
 }
-/* line 121, ../../sass/catstrap/catstrap.scss */
+/* line 122, ../../sass/catstrap/catstrap.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 127, ../../sass/catstrap/catstrap.scss */
+/* line 128, ../../sass/catstrap/catstrap.scss */
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
@@ -159,7 +157,7 @@
   box-sizing: border-box;
 }
 
-/* line 132, ../../sass/catstrap/catstrap.scss */
+/* line 133, ../../sass/catstrap/catstrap.scss */
 html {
   font-size: 16px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
