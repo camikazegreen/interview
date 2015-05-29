@@ -24,52 +24,6 @@ function ua_featured_content_views_api($module = NULL, $api = NULL) {
 }
 
 /**
- * Implements hook_flag_default_flags().
- */
-function ua_featured_content_flag_default_flags() {
-  $flags = array();
-  // Exported flag: "ua_hero_carousel".
-  $flags['ua_hero_carousel'] = array(
-    'entity_type' => 'node',
-    'title' => 'ua_hero_carousel',
-    'global' => 1,
-    'types' => array(
-      0 => 'ua_carousel_item',
-    ),
-    'flag_short' => 'Add to UA Hero Carousel',
-    'flag_long' => '',
-    'flag_message' => '',
-    'unflag_short' => 'Remove from UA Hero Carousel',
-    'unflag_long' => '',
-    'unflag_message' => '',
-    'unflag_denied_text' => '',
-    'link_type' => 'toggle',
-    'weight' => 0,
-    'show_in_links' => array(
-      'full' => 'full',
-      'teaser' => 'teaser',
-      'rss' => 0,
-      'search_index' => 0,
-      'search_result' => 0,
-      'token' => 0,
-      'ua_featured_content' => 0,
-    ),
-    'show_as_field' => 0,
-    'show_on_form' => 1,
-    'access_author' => '',
-    'show_contextual_link' => 1,
-    'i18n' => 0,
-    'api_version' => 3,
-    'module' => 'ua_featured_content',
-    'locked' => array(
-      0 => 'name',
-    ),
-  );
-  return $flags;
-
-}
-
-/**
  * Implements hook_node_info().
  */
 function ua_featured_content_node_info() {
