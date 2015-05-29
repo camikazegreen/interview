@@ -12,6 +12,7 @@ Demonstration/starter Drupal distribution and installation profile that packages
 
 ## Distribution Packaged Features (Dependencies)
 
+- [UA CAS Feature](https://bitbucket.org/ua_drupal/ua_cas)
 - [UA Core Feature](https://bitbucket.org/ua_drupal/ua_core)
 - [UA Demo Content Feature](https://bitbucket.org/ua_drupal/ua_demo)
 - [UA Featured Content (Carousel) Feature](https://bitbucket.org/ua_drupal/ua_featured_content)

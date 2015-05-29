@@ -42,6 +42,7 @@ dependencies[] = update
 
 ; UA Modules
 ; ----------------
+dependencies[] = ua_cas
 dependencies[] = ua_core
 dependencies[] = ua_demo
 dependencies[] = ua_featured_content
