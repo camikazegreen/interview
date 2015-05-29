@@ -3,10 +3,7 @@ description = Use to create UA branded news articles
 core = 7.x
 package = UA Features
 version = 7.x-1.x-dev
-<<<<<<< HEAD
 project = ua_news
-=======
->>>>>>> remotes/ua_drupal/ua_news/7.x-1.x
 dependencies[] = date
 dependencies[] = email
 dependencies[] = features
@@ -49,6 +46,7 @@ features[field_instance][] = node-ua_news-field_ua_news_photo
 features[field_instance][] = node-ua_news-field_ua_news_published
 features[field_instance][] = node-ua_news-field_ua_news_short_title
 features[field_instance][] = node-ua_news-field_ua_news_summary
+features[image][] = spotlight
 features[node][] = ua_news
 features[variable][] = field_bundle_settings_node__ua_news
 features[variable][] = menu_options_ua_news
