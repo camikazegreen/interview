@@ -3,7 +3,6 @@ description = Use to create and display UA branded events
 core = 7.x
 package = The University of Arizona
 version = 7.x-1.0-dev
-project = ua_event
 dependencies[] = ctools
 dependencies[] = date
 dependencies[] = date_all_day
