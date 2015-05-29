@@ -1,9 +1,6 @@
 name = UA Person
 description = Use this feature module to create person profiles
 core = 7.x
-package = UA Features
-version = 7.x-1.0-dev
-project = ua_person
 dependencies[] = auto_nodetitle
 dependencies[] = email
 dependencies[] = entity
