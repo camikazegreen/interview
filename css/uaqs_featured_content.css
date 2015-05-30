@@ -25,7 +25,18 @@
 /*}*/
 
 
-
+.mask .field {
+      display: inline;
+      font-size: 1.2em;
+  }
+.mask .field-name-field-short-summary{
+font-weight: normal;
+font-style: normal;
+font-family: MiloWeb, sans-serif;
+}
+.mask .field-name-field-call-to-action {
+font-weight: bold;
+}
 
 
 #content_featured #flexslider-1 ul.slides {
