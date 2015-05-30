@@ -3,10 +3,10 @@
   overflow: hidden;
   position:relative;
 }
-.slides li div.contextual-links-wrapper {
-  right: 60px;
-  position:relative;
-}
+/*.slides li div.contextual-links-wrapper {*/
+  /*right: 60px;*/
+  /*position:absolute;*/
+/*}*/
 .view-ua-hero-carousel .attachment{
 display:none;
 }
