@@ -553,7 +553,6 @@ span.field-label {
     position: relative;
   }
 }
-
 /**
  * Comments.
  */
@@ -816,3 +815,21 @@ tr.selected td {
     background-image: image-url("progress.gif");
   }
 }
+
+/*Misc. Helper classes*/
+/*.pull-left Floats an element to the leftFloatsTry it*/
+.pull-left {
+      float: left!important;
+ }
+/*.pull-right Floats an element to the rightFloatsTry it*/
+ .pull-right {
+      float: right!important;
+ }
+/*.relative Adds position relative*/
+ .relative {
+      position: relative!important;
+ }
+/*.absolute Adds position absolute*/
+ .absolute {
+      position: absolute!important;
+ }
