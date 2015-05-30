@@ -18,7 +18,7 @@ function ua_featured_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
@@ -74,6 +74,53 @@ function ua_featured_content_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-ua_carousel_item-field_short_summary'
+  $field_instances['node-ua_carousel_item-field_short_summary'] = array(
+    'bundle' => 'ua_carousel_item',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ua_featured_content' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_short_summary',
+    'label' => 'Short Summary',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-ua_carousel_item-field_slide_image'
   $field_instances['node-ua_carousel_item-field_slide_image'] = array(
     'bundle' => 'ua_carousel_item',
@@ -96,7 +143,7 @@ function ua_featured_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -129,6 +176,7 @@ function ua_featured_content_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Call to Action');
+  t('Short Summary');
   t('Slide Image');
 
   return $field_instances;
