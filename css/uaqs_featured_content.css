@@ -3,6 +3,9 @@
   overflow: hidden;
   position:relative;
 }
+.view-ua-hero-carousel .attachment{
+display:none;
+}
 #content_featured .flex-nav-viewport {
       background-color: hsl(220, 10%, 94%);
   }
@@ -230,6 +233,9 @@ color:white;
     #content_featured .flexslider {
       position:initial;
     }
+.view-ua-hero-carousel .attachment{
+display:block;
+}
   /*#content_featured .flexslider ul.slides li .slide-image-container p {*/
     /*padding-right: 256px;*/
     /*padding-right: 16rem;*/
