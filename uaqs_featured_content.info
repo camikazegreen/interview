@@ -34,3 +34,4 @@ features[variable][] = node_submitted_ua_carousel_item
 features[views_view][] = ua_hero_carousel
 features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][features] = features
+stylesheets[all][] = css/ua_featured_content.css
