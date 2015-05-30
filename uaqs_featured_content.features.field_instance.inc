@@ -10,50 +10,6 @@
 function ua_featured_content_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ua_carousel_item-body'
-  $field_instances['node-ua_carousel_item-body'] = array(
-    'bundle' => 'ua_carousel_item',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 1,
-    ),
-  );
-
   // Exported field_instance: 'node-ua_carousel_item-field_call_to_action'
   $field_instances['node-ua_carousel_item-field_call_to_action'] = array(
     'bundle' => 'ua_carousel_item',
@@ -62,7 +18,7 @@ function ua_featured_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
@@ -73,6 +29,13 @@ function ua_featured_content_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'ua_featured_content' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_title_plain',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -111,21 +74,19 @@ function ua_featured_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_carousel_item-field_slide_image'
-  $field_instances['node-ua_carousel_item-field_slide_image'] = array(
+  // Exported field_instance: 'node-ua_carousel_item-field_short_summary'
+  $field_instances['node-ua_carousel_item-field_short_summary'] = array(
     'bundle' => 'ua_carousel_item',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 2,
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -133,20 +94,71 @@ function ua_featured_content_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'ua_featured_content' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_short_summary',
+    'label' => 'Short Summary',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-ua_carousel_item-field_slide_image'
+  $field_instances['node-ua_carousel_item-field_slide_image'] = array(
+    'bundle' => 'ua_carousel_item',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ua_featured_content' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_slide_image',
     'label' => 'Slide Image',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
-      'title_field' => 0,
+      'title_field' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -163,8 +175,8 @@ function ua_featured_content_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Body');
   t('Call to Action');
+  t('Short Summary');
   t('Slide Image');
 
   return $field_instances;
