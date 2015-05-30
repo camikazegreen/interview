@@ -9,12 +9,16 @@
  */
 casper.drupalSignIn = function(user) {
   casper.thenOpen('user', function () {
-    if (!this.exists('form#user-login')) {
-      this.click('input#edit-submit');
+    if (this.exists('.uncas-link a')) {
+      this.log('Switching to the non-CAS login form', 'info');
+      this.click('.uncas-link a');
+    } else {
+      this.log('Assuming the normal login form is already available.', 'info');
     }
   });
 
   casper.then(function () {
+    this.log('Submitting the login form for user name' + user.name, 'info');
     this.fill('form#user-login', {
       "name": user.name,
       "pass": user.pass
@@ -27,4 +31,3 @@ casper.drupalSignIn = function(user) {
     this.test.fail('Unable to log in as ' + user.label);
   });
 };
-
