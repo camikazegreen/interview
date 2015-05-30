@@ -40,9 +40,6 @@ function ua_featured_content_strongarm() {
         'title' => array(
           'weight' => '0',
         ),
-        'flag' => array(
-          'weight' => '4',
-        ),
       ),
       'display' => array(),
     ),
