@@ -132,6 +132,8 @@ fi
 
 cjstemplate="$testincludes/users.js.template"
 cjsuserconfig="$testincludes/users.js"
+cjssignin="$testincludes/signin.js"
+
 sed -e "s/USER1NAME/$adminuser/" -e "s/USER1PASS/$user1pass/" "$cjstemplate" > "$cjsuserconfig"
 err="$?"
 if [ "$err" -ne 0 ]; then
@@ -149,7 +151,7 @@ fi
 
 # Run the test suites
 
-if drush casperjs --test-root="$testroot" --url="$localurl" --includes="$cjsuserconfig"; then
+if drush casperjs --test-root="$testroot" --url="$localurl" --includes="$cjsuserconfig","$cjssignin"; then
   echo "Test suites completed OK." >&2
 else
   echo "** some of the CasperJS tests failed." >&2
