@@ -10,8 +10,8 @@
 function ua_page_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-page-body'
-  $field_instances['node-ua_page-body'] = array(
+  // Exported field_instance: 'node-ua_page-ua_page_body'
+  $field_instances['node-ua_page-ua_page_body'] = array(
     'bundle' => 'ua_page',
     'default_value' => NULL,
     'deleted' => 0,
@@ -35,7 +35,7 @@ function ua_page_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'body',
+    'field_name' => 'ua_page_body',
     'label' => 'Body',
     'required' => FALSE,
     'settings' => array(
