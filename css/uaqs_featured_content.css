@@ -6,6 +6,9 @@
 #content_featured .flex-nav-viewport {
       background-color: hsl(220, 10%, 94%);
   }
+  #content_featured_nav .viewport {
+        background-color: hsl(220, 10%, 94%);
+    }
 
 /*.flex-viewport:after,*/
 /*.flex-viewport:before {*/
