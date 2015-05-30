@@ -25,10 +25,14 @@
 /*}*/
 
 
-.mask .field {
-      display: inline;
-      font-size: 1.2em;
-  }
+.mask .field{
+  padding-right:1rem;
+}
+.mask div{
+  display: inline;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
 .mask .field-name-field-short-summary{
 font-weight: normal;
 font-style: normal;
@@ -36,6 +40,14 @@ font-family: MiloWeb, sans-serif;
 }
 .mask .field-name-field-call-to-action {
 font-weight: bold;
+font-size: 1.4rem;
+text-transform:uppercase;
+}
+.mask .field-name-field-call-to-action:after {
+  content: " »";
+  font-family: MiloWeb,sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
 }
 
 
@@ -86,6 +98,7 @@ background-color:black;
   margin: 0 60px;
   overflow: hidden;
   display: inline-block;
+  transition: all 0.3s ease;
 }
 a:hover h3 {
 }
@@ -135,6 +148,7 @@ color:white;
   font-family: MiloSerifWeb, TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   margin: 0;
   line-height: 1em;
+  text-transform: uppercase;
 }
 #content_featured .flexslider ul.slides li .slide-image-container h2 a {
   color: #fff;
