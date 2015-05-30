@@ -3,6 +3,9 @@
   overflow: hidden;
   position:relative;
 }
+.slides li div.contextual-links-wrapper {
+  right: 30px;
+}
 .view-ua-hero-carousel .attachment{
 display:none;
 }
@@ -23,7 +26,6 @@ display:none;
 .mask .field-name-field-short-summary{
 font-weight: normal;
 font-style: normal;
-font-family: MiloWeb, sans-serif;
 }
 .mask .field-name-field-call-to-action {
 font-weight: bold;
@@ -32,7 +34,6 @@ text-transform:uppercase;
 }
 .mask .field-name-field-call-to-action:after {
   content: " »";
-  font-family: MiloWeb,sans-serif;
   font-weight: bold;
   font-size: 1.6rem;
 }
@@ -68,27 +69,21 @@ background-color:black;
   opacity: .1;
   bottom: 0;
   position: absolute;
-  padding-bottom: 7rem;
+  padding-bottom: 8rem;
   max-width: 100%;
   width: 100%;
   margin: 0 0;
+  top: 40%;
+  top: calc(50% - 3.6rem);
+  padding: 0 15px 15px;
+  overflow: hidden;
+  display: inline-block;
 }
 #content_featured .flex-active-slide .mask {
     opacity: 1;
 }
-.mask {
-  background-color: hsla(0, 0%, 0%, 0);
-  padding: 0 15px 15px;
-  transition: background-color 0.3s ease;
-  margin: 0 60px;
-  overflow: hidden;
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-a:hover h3 {
-}
-a:hover p {
-text-deocoration:none;
+#content_featured a:hover {
+text-decoration:none;
 }
 .flex-active-slide .mask {
   background-color: rgba(0,0,0,.2);
@@ -104,36 +99,23 @@ text-deocoration:none;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05000000', endColorstr='#000000',GradientType=0 ); /* IE6-8 */
   transition: background-color 0.3s ease;
 }
-
-
-.mask h3 {
-  font-family: MiloSerifWeb,serif;
-  font-weight: normal;
-  font-size: 2em;
-  line-height: 1;
-  text-decoration: none;
-  margin: 0.6em 0 -0.3em 0;
-}
-
-
 .white a, a .white *, a.white {
 color:white;
 }
-#content_featured .flexslider ul.slides li .slide-image-container {
+#content_featured .slide-image-container {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 500px;
-  padding-top: 64px;
-  padding-top: 4rem;
   background-position: 50% 50%;
 }
 #content_featured .flexslider ul.slides li .slide-image-container h2 {
   font-size: 36px;
-  font-size: 11vw;
+  font-size: 10.5vw;
   font-family: MiloSerifWeb, TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   margin: 0;
-  line-height: 1;
+  line-height: .9;
   text-transform: uppercase;
+  letter-spacing: -1.1px;
 }
 #content_featured .flexslider ul.slides li .slide-image-container h2 a {
   color: #fff;
@@ -211,7 +193,6 @@ color:white;
 @media (min-width: 48em) {
     #content_featured .mask {
       bottom: auto;
-      position: relative;
       padding-bottom: 0;
       width: auto;
       margin: 0 4.8rem;
@@ -246,24 +227,16 @@ color:white;
     #content_featured .flexslider .flexslider .flex-direction-nav a, #content_featured .flexslider .flexslider .flex-direction-nav a {
       display: block !important;
     }
-
-    #content_featured .flexslider ul.slides li .slide-image-container {
-          padding-top: 217.600006103516px;
-          padding-top: 13.6rem;
-        }
-
     #content_featured .flexslider ul.slides li .slide-image-container h2 {
       font-size: 48px;
       font-size: 3rem;
       line-height: 1;
     }
-
     #content_featured .flexslider ul.slides li .slide-image-container p {
       font-size: 24px;
       font-size: 1.5rem;
       padding-top: 1rem;
     }
-
     #content_featured_nav ul.slides li h3 {
       color: #6f868d;
       border-top: 4px solid #6f868d;
@@ -281,11 +254,11 @@ color:white;
       opacity: 1;
       background-color: #EEF1F1;
     }
-
     #content_featured_nav ul.slides li {
       width: 33.33333% !important;
       opacity: 0.5;
-      padding: 0 1.8em 1.8em 1.8em;
+      padding: 0 1.8em 11.8em 1.8em;
+      margin-bottom: -11.8em;
     }
     #content_featured_nav ul.slides li.active-slide {
       opacity: 1;
@@ -306,10 +279,6 @@ color:white;
     }
 }
 @media (min-width: 60em) {
-  #content_featured .flexslider ul.slides li .slide-image-container {
-    padding-top: 201.600006103516px;
-    padding-top: 12.6rem;
-  }
   #content_featured .flexslider ul.slides li .slide-image-container h2 {
     font-size: 60px;
     font-size: 3.75rem;
