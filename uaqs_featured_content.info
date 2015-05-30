@@ -8,6 +8,7 @@ dependencies[] = image
 dependencies[] = image_url_formatter
 dependencies[] = link
 dependencies[] = strongarm
+dependencies[] = text
 dependencies[] = views
 stylesheets[all][] = css/ua_featured_content.css
 features[ctools][] = flexslider:flexslider_default_preset:1
