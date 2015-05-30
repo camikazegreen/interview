@@ -182,4 +182,9 @@ else
   exit 1
 fi
 
+# Try synchronizing with a remote copy that everyone can see
+
+drush sql-sync @uaquickstarttest @kitten
+drush rsync @uaquickstarttest @kitten
+
 exit 0
