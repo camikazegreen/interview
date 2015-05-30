@@ -4,7 +4,8 @@
   position:relative;
 }
 .slides li div.contextual-links-wrapper {
-  right: 30px;
+  right: 60px;
+  position:relative;
 }
 .view-ua-hero-carousel .attachment{
 display:none;
