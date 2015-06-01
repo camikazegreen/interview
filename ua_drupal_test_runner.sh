@@ -88,20 +88,20 @@ else
   echo "** the distribution is incomplete: $defaultsettings file missing." >&2
   exit 1
 fi
-# cp "$defaultsettings" settings.php
-# if chmod 666 settings.php; then
-#   echo "Made a world-writable copy of the settings file..." >&2
-# else
-#   echo "** could not make a world-writable settings.php file." >&2
-#   exit 1
-# fi
-# mkdir files
-# if chmod 777 files; then
-#   echo "Made a world-writable files directory..." >&2
-# else
-#   echo "** could not make a world-writable files directory." >&2
-#   exit 1
-# fi
+mkdir files
+if chmod 777 files; then
+  echo "Made a world-writable files directory..." >&2
+else
+  echo "** could not make a world-writable files directory." >&2
+  exit 1
+fi
+mkdir files/styles
+if chmod 777 files/styles; then
+  echo "Made a world-writable styles directory..." >&2
+else
+  echo "** could not make a world-writable styles directory." >&2
+  exit 1
+fi
 
 # Test that the specified database user can connect (without checking the particular database)
 
