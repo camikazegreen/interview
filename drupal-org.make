@@ -42,6 +42,12 @@ projects[ua_navigation][download][type] = git
 projects[ua_navigation][download][branch] = 7.x-1.x
 projects[ua_navigation][download][url] = https://bitbucket.org/ua_drupal/ua_navigation.git
 
+projects[ua_news][type] = module
+projects[ua_news][subdir] = custom
+projects[ua_news][download][type] = git
+projects[ua_news][download][branch] = 7.x-1.x
+projects[ua_news][download][url] = https://bitbucket.org/ua_drupal/ua_news.git
+
 projects[ua_page][type] = module
 projects[ua_page][subdir] = custom
 projects[ua_page][download][type] = git
@@ -65,6 +71,12 @@ projects[ua_publication][subdir] = custom
 projects[ua_publication][download][type] = git
 projects[ua_publication][download][branch] = 7.x-1.x
 projects[ua_publication][download][url] = https://bitbucket.org/ua_drupal/ua_publication.git
+
+projects[ua_unit][type] = module
+projects[ua_unit][subdir] = custom
+projects[ua_unit][download][type] = git
+projects[ua_unit][download][branch] = 7.x-1.x
+projects[ua_unit][download][url] = https://bitbucket.org/ua_drupal/ua_unit.git
 
 
 ; =====================================
