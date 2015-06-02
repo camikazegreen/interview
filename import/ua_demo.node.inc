@@ -86,8 +86,7 @@ class UaDemoCarouselItem extends Migration {
       ->defaultValue(drupal_get_path('module', 'ua_demo') . '/import/images');
     $this->addFieldMapping('field_call_to_action', 'url');
     $this->addFieldMapping('field_call_to_action:title', 'action');
-    $this->addFieldMapping('body', 'body');
-    $this->addFieldMapping('body:format')->defaultValue('filtered_html');
+    $this->addFieldMapping('field_short_summary', 'summary');
     $this->addFieldMapping('created', 'created');
   }
 
@@ -96,7 +95,7 @@ class UaDemoCarouselItem extends Migration {
     $columns[1] = array('image', 'Image');
     $columns[2] = array('action', 'Call to action');
     $columns[3] = array('url', 'Link');
-    $columns[4] = array('body', 'Body');
+    $columns[4] = array('summary', 'Summary');
     $columns[5] = array('created', 'Created');
     return $columns;
   }
