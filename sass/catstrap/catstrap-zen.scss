@@ -1,6 +1,8 @@
 /* MAIN ELEMENTS */
 
-html { background-color: #e6e3d9; }
+html {
+    background-color: #e6e3d9;
+}
 
 
 /* HEADER */
@@ -97,7 +99,7 @@ html { background-color: #e6e3d9; }
 
 @media screen and (min-width: 48em) {
 	#header_site {
-		
+
 		.header__region {
 			float: right;
 		}
@@ -137,7 +139,7 @@ html { background-color: #e6e3d9; }
 .view-news {
 	.views-row {
 		float: left;
-		width: 100%; 
+		width: 100%;
 		border-bottom: 2px solid #eef1f1;
 		padding: 24px 0;
 		padding: 1.5rem 0;
