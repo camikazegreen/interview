@@ -248,6 +248,9 @@ color:white;
       max-width: 100% !important;
       overflow: hidden;
       padding: 0;
+-webkit-transform: none!important;
+  -ms-transform: none!important;
+ -moz-transform: none!important;
       transform: none !important;
     }
 
