@@ -43,38 +43,37 @@
     </section>
 
     <div class="container">
-      <div id="content" class="column" role="main">
-        <?php print render($page['highlighted']); ?>
-        <?php print $breadcrumb; ?>
-        <a id="main-content"></a>
-        <?php print render($title_prefix); ?>
-        <?php if ($title): ?>
-          <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+      <div class="row">
+        <section id="content" <?php print $content_column_class; ?> role="main">
+          <?php print render($page['highlighted']); ?>
+          <?php print $breadcrumb; ?>
+          <a id="main-content"></a>
+          <?php print render($title_prefix); ?>
+          <?php if ($title): ?>
+            <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+          <?php endif; ?>
+          <?php print render($title_suffix); ?>
+          <?php print $messages; ?>
+          <?php print render($tabs); ?>
+          <?php print render($page['help']); ?>
+          <?php if ($action_links): ?>
+            <ul class="action-links"><?php print render($action_links); ?></ul>
+          <?php endif; ?>
+          <?php print render($page['content']); ?>
+          <?php print $feed_icons; ?>
+        </section>
+
+        <?php
+          // Render the sidebars to see if there's anything in them.
+          $sidebar_first  = render($page['sidebar_first']);
+          $sidebar_second = render($page['sidebar_second']);
+        ?>
+
+        <?php if ($sidebar_first || $sidebar_second): ?>
+            <?php print $sidebar_first; ?>
+            <?php print $sidebar_second; ?>
         <?php endif; ?>
-        <?php print render($title_suffix); ?>
-        <?php print $messages; ?>
-        <?php print render($tabs); ?>
-        <?php print render($page['help']); ?>
-        <?php if ($action_links): ?>
-          <ul class="action-links"><?php print render($action_links); ?></ul>
-        <?php endif; ?>
-        <?php print render($page['content']); ?>
-        <?php print $feed_icons; ?>
       </div>
-
-      <?php
-        // Render the sidebars to see if there's anything in them.
-        $sidebar_first  = render($page['sidebar_first']);
-        $sidebar_second = render($page['sidebar_second']);
-      ?>
-
-      <?php if ($sidebar_first || $sidebar_second): ?>
-        <aside class="sidebars">
-          <?php print $sidebar_first; ?>
-          <?php print $sidebar_second; ?>
-        </aside>
-      <?php endif; ?>
-
     </div> <!-- /.container -->
   </div> <!-- /.main -->
   <footer id="footer_site" class="<?php print $classes; ?>">

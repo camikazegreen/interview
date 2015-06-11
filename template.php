@@ -80,7 +80,19 @@ function ua_zen_preprocess_page(&$variables, $hook) {
 // */
 
 function ua_zen_preprocess_page(&$variables, $hook) {
-
+  // Add information about the number of sidebars.
+  if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+    $variables['content_column_class'] = ' class="column col-sm-6 col-sm-push-3"';
+  }
+  elseif (!empty($variables['page']['sidebar_first']) && empty($variables['page']['sidebar_second'])) {
+    $variables['content_column_class'] = ' class="column col-sm-9 col-sm-push-3"';
+  }
+  elseif (empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+    $variables['content_column_class'] = ' class="column col-sm-9 col-sm-3"';
+  }
+  else {
+    $variables['content_column_class'] = ' class="column col-sm-12"';
+  }
   //Allows there to be a template file for the UA Header and Footers without allowing blocks to be placed there - regions defined in .info, but commented out
   if (!isset($variables['page']['header_ua']) || empty($variables['page']['header_ua'])) {
     $variables['page']['header_ua'] = array(
@@ -150,7 +162,13 @@ function ua_zen_preprocess_region(&$variables, $hook) {
   $str_footer_logo_html = "";
   $str_logo_path = "";
   $str_copyright_notice = "";
-
+  // Sidebar regions get some extra classes and a common template suggestion.
+  if (strpos($variables['region'], 'sidebar_second') === 0) {
+    $variables['classes_array'][] = 'col-sm-3';
+  }
+  if (strpos($variables['region'], 'sidebar_first') === 0) {
+    $variables['classes_array'][] = 'col-md-3 col-md-pull-3';
+  }
   switch($variables['region']) {
     case "footer":
       $str_footer_logo_html = ua_zen_footer_logo();
