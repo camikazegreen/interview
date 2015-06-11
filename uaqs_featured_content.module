@@ -34,7 +34,7 @@ function ua_featured_content_preprocess_node(&$vars) {
   if (field_info_instance('node', 'field_call_to_action', $wrapper->getBundle())) {
     $has_cta = $wrapper->field_call_to_action->value();
     if (isset($has_cta)){
-      $vars['ua_featured_content']['path'] = $wrapper->field_call_to_action->value()['url'];
+      $vars['ua_featured_content']['path'] = $wrapper->field_call_to_action->url->value();
     }
     else
     {
