@@ -13,7 +13,7 @@
 		text-transform: none;
 	  line-height: 1.4;
 	}
-	a {
+	a:not(.contextual-links-trigger) {
 		display: block;
 		padding: 16px;
 		padding: 1rem;
