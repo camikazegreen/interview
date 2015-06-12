@@ -13,7 +13,8 @@
 @import "normalize";
 
 /* Layout rules */
-@import "layouts/responsive";
+/*@import "layouts/responsive";*/
+@import "layouts/bootstrap-12-col";
 
 /* Component (SMACSS module) rules */
 @import "components/misc";
