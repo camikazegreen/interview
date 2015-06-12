@@ -525,7 +525,6 @@ footer#footer_site .column-menu {
 	}
 }
 
-
 @media screen and (min-width: 48em) {
 	footer#footer_site .column-menu {
 		display: inline-block;
@@ -538,15 +537,14 @@ footer#footer_site .column-menu {
 }
 
 @media screen and (min-width: 60em) {
-	footer#footer_site .container { overflow: hidden; }
 	footer#footer_site .column-menu {
-		padding: 0 0 13em 1em;
-		margin: 0 0 -13em 1em;
+		padding: 0 0 0 1em;
+		margin: 0 0 0 1em;
 		border-left: 1px solid #a8a69d;
 		display: inline-block;
 		vertical-align: top;
 		width: inherit;
-	}
+  }
 }
 
 

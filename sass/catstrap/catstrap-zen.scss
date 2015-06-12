@@ -194,7 +194,10 @@ footer#footer_site {
 		max-width: 400px;
 		img { max-height:100px;	}
 	}
-	> .container { border-bottom: 1px solid #8E8C85; }
+	> .container { 
+		border-bottom: 1px solid #8E8C85;
+		position: relative;
+	}
 	ul.menu {
 	  display: block;
 	  margin: 0;
