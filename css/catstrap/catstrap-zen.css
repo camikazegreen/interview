@@ -89,7 +89,7 @@ html {
   margin: 0;
   padding: 0;
 }
-/* line 81, ../../sass/catstrap/catstrap-zen.scss */
+/* line 83, ../../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links ul li a,
 #header_site #utility_links ul li a:link,
 #header_site #utility_links ul li a:visited {
@@ -97,7 +97,7 @@ html {
   padding: 1rem 0.5rem 0.5rem;
   margin: 0;
 }
-/* line 87, ../../sass/catstrap/catstrap-zen.scss */
+/* line 89, ../../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links ul li a:hover, #header_site #utility_links ul li a:focus, #header_site #utility_links ul li a:active,
 #header_site #utility_links ul li a:link:hover,
 #header_site #utility_links ul li a:link:focus,
@@ -219,8 +219,9 @@ footer#footer_site > .container {
   border-bottom: 1px solid #8E8C85;
 }
 /* line 198, ../../sass/catstrap/catstrap-zen.scss */
-footer#footer_site ul {
-  display: inherit;
+footer#footer_site ul.contextual-links {
+  display: none;
+  /*resets ul display for contextual links js behavior*/
 }
 /* line 199, ../../sass/catstrap/catstrap-zen.scss */
 footer#footer_site ul.menu {
@@ -273,7 +274,7 @@ footer#footer_site #footer_sub .container > * {
     margin: 0;
     display: block;
   }
-  /* line 245, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 247, ../../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu li > a,
   .sidebar ul.menu li > a:link,
   .sidebar ul.menu li > a:visited {
@@ -285,24 +286,24 @@ footer#footer_site #footer_sub .container > * {
     color: #333;
   }
 
-  /* line 257, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 260, ../../sass/catstrap/catstrap-zen.scss */
   .region-sidebar-first .menu > li > a:hover,
   .region-sidebar-first .menu > li > a:focus,
   .region-sidebar-first .menu > li.active a,
   .region-sidebar-first .menu > li a.active {
     background: url("../images/sidebar-menu-chevron-left.png") no-repeat scroll 100% center/30px 100% #dee8e7;
-    border-bottom: 0 solid transparent;
+    border-bottom: 0 solid rgba(0, 0, 0, 0);
     color: #076873;
     text-decoration: none;
   }
 
-  /* line 268, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 271, ../../sass/catstrap/catstrap-zen.scss */
   .region-sidebar-second .menu > li > a:hover,
   .region-sidebar-second .menu > li > a:focus,
   .region-sidebar-second .menu > li.active a,
   .region-sidebar-second .menu > li a.active {
     background: url("../images/sidebar-menu-chevron-right.png") no-repeat scroll 0 center/30px 100% #dee8e7;
-    border-bottom: 0 solid transparent;
+    border-bottom: 0 solid rgba(0, 0, 0, 0);
     color: #076873;
     text-decoration: none;
   }

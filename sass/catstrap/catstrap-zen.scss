@@ -195,7 +195,7 @@ footer#footer_site {
 		img { max-height:100px;	}
 	}
 	> .container { border-bottom: 1px solid #8E8C85; }
-	ul { display: inherit; }
+	ul.contextual-links { display: none; /*resets ul display for contextual links js behavior*/ }
 	ul.menu {
 	  display: block;
 	  margin: 0;

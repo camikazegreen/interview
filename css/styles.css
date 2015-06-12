@@ -1733,7 +1733,7 @@ tr.selected td {
 /* line 813, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1433352604');
+  background-image: url('../images/progress.gif?1426188048');
 }
 
 /*Misc. Helper classes*/
@@ -4688,8 +4688,9 @@ footer#footer_site > .container {
   border-bottom: 1px solid #8E8C85;
 }
 /* line 198, ../sass/catstrap/catstrap-zen.scss */
-footer#footer_site ul {
-  display: inherit;
+footer#footer_site ul.contextual-links {
+  display: none;
+  /*resets ul display for contextual links js behavior*/
 }
 /* line 199, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site ul.menu {
