@@ -2084,36 +2084,31 @@ table {
   margin-left: 0;
 }
 
-/* line 1072, ../sass/layouts/_bootstrap-12-col.scss */
-.clearfix {
-  content: " ";
-  display: table;
-}
-/* line 1075, ../sass/layouts/_bootstrap-12-col.scss */
+/* line 1073, ../sass/layouts/_bootstrap-12-col.scss */
 .clearfix:before {
   content: " ";
   display: table;
 }
-/* line 1079, ../sass/layouts/_bootstrap-12-col.scss */
+/* line 1077, ../sass/layouts/_bootstrap-12-col.scss */
 .clearfix:after {
   content: " ";
   display: table;
   clear: both;
 }
 
-/* line 1085, ../sass/layouts/_bootstrap-12-col.scss */
+/* line 1083, ../sass/layouts/_bootstrap-12-col.scss */
 .center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 1090, ../sass/layouts/_bootstrap-12-col.scss */
+/* line 1088, ../sass/layouts/_bootstrap-12-col.scss */
 .pull-right {
   float: right !important;
 }
 
-/* line 1093, ../sass/layouts/_bootstrap-12-col.scss */
+/* line 1091, ../sass/layouts/_bootstrap-12-col.scss */
 .pull-left {
   float: left !important;
 }
