@@ -16,7 +16,7 @@ defaults[projects][subdir] = contrib
 
 projects[jquery_update][version] = 2.5
 
-projects[menu_block][version] = 2.5
+projects[menu_block][version] = 2.6
 
 ; TODO: figure out if we really need to be using the dev version of this.
 projects[superfish][version] = 1.x-dev
