@@ -29,7 +29,7 @@
  */
 /* Correct `block` display not defined in IE 8/9. */
 @import url("https://brand.arizona.edu/sites/default/files/ua-banner/ua-web-branding/ua-fonts/milo.css");
-/* line 23, ../sass/_normalize.scss */
+/* line 33, ../sass/_normalize.scss */
 article,
 aside,
 details,
@@ -45,7 +45,7 @@ summary {
 }
 
 /* Correct `inline-block` display not defined in IE 8/9. */
-/* line 38, ../sass/_normalize.scss */
+/* line 40, ../sass/_normalize.scss */
 audio,
 canvas,
 video {
@@ -144,7 +144,7 @@ a:focus {
 }
 
 /* Improve readability when focused and also mouse hovered in all browsers. */
-/* line 153, ../sass/_normalize.scss */
+/* line 154, ../sass/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -160,7 +160,7 @@ a:hover {
  * For more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
  */
 /* Set 1 unit of vertical rhythm on the top and bottom margin. */
-/* line 169, ../sass/_normalize.scss */
+/* line 170, ../sass/_normalize.scss */
 p,
 pre {
   margin: 1.5em 0;
@@ -233,7 +233,7 @@ abbr[title] {
 }
 
 /* Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
-/* line 222, ../sass/_normalize.scss */
+/* line 223, ../sass/_normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -248,8 +248,8 @@ dfn {
 /* Address differences between Firefox and other browsers. */
 /* line 233, ../sass/_normalize.scss */
 hr {
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
   border: 1px solid #666;
@@ -265,7 +265,7 @@ mark {
 }
 
 /* Correct font family set oddly in Safari 5 and Chrome. */
-/* line 248, ../sass/_normalize.scss */
+/* line 253, ../sass/_normalize.scss */
 code,
 kbd,
 pre,
@@ -296,7 +296,7 @@ small {
 }
 
 /* Prevent `sub` and `sup` affecting `line-height` in all browsers. */
-/* line 284, ../sass/_normalize.scss */
+/* line 285, ../sass/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -318,7 +318,7 @@ sub {
 /**
  * Lists
  */
-/* line 301, ../sass/_normalize.scss */
+/* line 304, ../sass/_normalize.scss */
 dl,
 menu,
 ol,
@@ -327,7 +327,7 @@ ul {
   margin: 1.5em 0;
 }
 
-/* line 310, ../sass/_normalize.scss */
+/* line 311, ../sass/_normalize.scss */
 ol ol,
 ol ul,
 ul ol,
@@ -343,7 +343,7 @@ dd {
 }
 
 /* Address paddings set differently in IE 6/7. */
-/* line 321, ../sass/_normalize.scss */
+/* line 323, ../sass/_normalize.scss */
 menu,
 ol,
 ul {
@@ -390,17 +390,17 @@ fieldset {
   margin: 0 2px;
   /* Apply borders and padding that keep the vertical rhythm. */
   border-color: #c0c0c0;
-  border-top-width: 0.0625em;
   border-top-style: solid;
+  border-top-width: 0.0625em;
   padding-top: 0.4625em;
-  border-bottom-width: 0.0625em;
   border-bottom-style: solid;
+  border-bottom-width: 0.0625em;
   padding-bottom: 0.9125em;
-  border-left-width: 0.0625em;
   border-left-style: solid;
+  border-left-width: 0.0625em;
   padding-left: 0.9125em;
-  border-right-width: 0.0625em;
   border-right-style: solid;
+  border-right-width: 0.0625em;
   padding-right: 0.9125em;
 }
 
@@ -424,7 +424,7 @@ legend {
  * 4. Improve appearance and consistency with IE 6/7.
  * 5. Keep form elements constrained in their containers.
  */
-/* line 413, ../sass/_normalize.scss */
+/* line 416, ../sass/_normalize.scss */
 button,
 input,
 select,
@@ -437,8 +437,8 @@ textarea {
   /* 3 */
   max-width: 100%;
   /* 5 */
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 5 */
 }
@@ -447,7 +447,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 432, ../sass/_normalize.scss */
+/* line 433, ../sass/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -459,7 +459,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 443, ../sass/_normalize.scss */
+/* line 444, ../sass/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -474,7 +474,7 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-/* line 457, ../sass/_normalize.scss */
+/* line 460, ../sass/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -488,7 +488,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 471, ../sass/_normalize.scss */
+/* line 472, ../sass/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -500,11 +500,11 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 482, ../sass/_normalize.scss */
+/* line 483, ../sass/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -520,8 +520,8 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   /* 2 */
 }
@@ -530,14 +530,14 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 506, ../sass/_normalize.scss */
+/* line 507, ../sass/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 /* Remove inner padding and border in Firefox 4+. */
-/* line 512, ../sass/_normalize.scss */
+/* line 513, ../sass/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -591,6 +591,7 @@ table {
 @-ms-viewport {
   width: device-width;
 }
+
 /* line 15, ../sass/layouts/_bootstrap-12-col.scss */
 .visible-xs {
   display: none !important;
@@ -2126,7 +2127,7 @@ table {
 /**
  * Wireframes.
  */
-/* line 15, ../sass/components/_misc.scss */
+/* line 22, ../sass/components/_misc.scss */
 .with-wireframes #header,
 .with-wireframes #main,
 .with-wireframes #content,
@@ -2142,7 +2143,7 @@ table {
  * Accessibility features.
  */
 /* element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
-/* line 39, ../sass/components/_misc.scss */
+/* line 40, ../sass/components/_misc.scss */
 .element-invisible,
 .element-focusable,
 #navigation .block-menu .block__title,
@@ -2171,7 +2172,7 @@ table {
 #skip-link {
   margin: 0;
 }
-/* line 65, ../sass/components/_misc.scss */
+/* line 66, ../sass/components/_misc.scss */
 #skip-link a,
 #skip-link a:visited {
   display: block;
@@ -2230,12 +2231,12 @@ table {
 }
 
 /* The link around the name of the website. */
-/* line 120, ../sass/components/_misc.scss */
+/* line 121, ../sass/components/_misc.scss */
 .header__site-link:link, .header__site-link:visited {
   color: #000;
   text-decoration: none;
 }
-/* line 126, ../sass/components/_misc.scss */
+/* line 127, ../sass/components/_misc.scss */
 .header__site-link:hover, .header__site-link:focus {
   text-decoration: underline;
 }
@@ -2267,7 +2268,7 @@ table {
 #navigation .block {
   margin-bottom: 0;
 }
-/* line 161, ../sass/components/_misc.scss */
+/* line 162, ../sass/components/_misc.scss */
 #navigation .links,
 #navigation .menu {
   margin: 0;
@@ -2306,7 +2307,7 @@ table {
 /**
  * Titles.
  */
-/* line 196, ../sass/components/_misc.scss */
+/* line 201, ../sass/components/_misc.scss */
 .page__title,
 .node__title,
 .block__title,
@@ -2361,21 +2362,21 @@ table {
 }
 
 /* System status report. */
-/* line 255, ../sass/components/_misc.scss */
+/* line 256, ../sass/components/_misc.scss */
 .ok,
 .messages--status {
   background-color: #f8fff0;
   color: #234600;
 }
 
-/* line 260, ../sass/components/_misc.scss */
+/* line 261, ../sass/components/_misc.scss */
 .warning,
 .messages--warning {
   background-color: #fffce5;
   color: #840;
 }
 
-/* line 265, ../sass/components/_misc.scss */
+/* line 266, ../sass/components/_misc.scss */
 .error,
 .messages--error {
   background-color: #fef5f1;
@@ -2389,16 +2390,14 @@ table {
 /* line 276, ../sass/components/_misc.scss */
 .tabs-primary, .tabs-secondary {
   overflow: hidden;
-  *zoom: 1;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYmJiYmJiIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, #bbbbbb), color-stop(100%, rgba(0, 0, 0, 0)));
-  background-image: -moz-linear-gradient(bottom, #bbbbbb 1px, rgba(0, 0, 0, 0) 1px);
-  background-image: -webkit-linear-gradient(bottom, #bbbbbb 1px, rgba(0, 0, 0, 0) 1px);
-  background-image: linear-gradient(to top, #bbbbbb 1px, rgba(0, 0, 0, 0) 1px);
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(100%, #bbbbbb), color-stop(100%, transparent));
+  background-image: -webkit-linear-gradient(bottom, #bbbbbb 1px, transparent 1px);
+  background-image: -moz-linear-gradient(bottom, #bbbbbb 1px, transparent 1px);
+  background-image: -o-linear-gradient(bottom, #bbbbbb 1px, transparent 1px);
+  background-image: linear-gradient(bottom, #bbbbbb 1px, transparent 1px);
   /* IE 9 and earlier don't understand gradients. */
   list-style: none;
-  border-bottom: 1px solid #bbb \0/ie;
+  border-bottom: 1px solid #bbbbbb \0/ie;
   margin: 1.5em 0;
   padding: 0 2px;
   white-space: nowrap;
@@ -2431,16 +2430,16 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active, a.tabs-secondary__
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
-  text-shadow: 1px 1px 0 #fff;
-  border: 1px solid #bbb;
+  text-shadow: 1px 1px 0 white;
+  border: 1px solid #bbbbbb;
   border-bottom-color: transparent;
   /* IE 9 and earlier don't understand gradients. */
   border-bottom: 0 \0/ie;
 }
 
 /* line 312, ../sass/components/_misc.scss */
-.tabs-primary__tab.is-active {
-  border-bottom-color: #fff;
+.is-active.tabs-primary__tab {
+  border-bottom-color: white;
 }
 
 /* line 318, ../sass/components/_misc.scss */
@@ -2451,9 +2450,9 @@ a.tabs-primary__tab-link, a.tabs-primary__tab-link.is-active {
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
+  -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
-  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
   color: #333;
   background-color: #dedede;
@@ -2471,13 +2470,11 @@ a.tabs-primary__tab-link:hover, a.tabs-primary__tab-link:focus {
 /* line 332, ../sass/components/_misc.scss */
 a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
   background-color: transparent;
-  *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE9E9E9', endColorstr='#00E9E9E9');
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
-  background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e9e9e9), color-stop(100%, rgba(233, 233, 233, 0)));
-  background-image: -moz-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
   background-image: -webkit-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
+  background-image: -moz-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
+  background-image: -o-linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
   background-image: linear-gradient(#e9e9e9, rgba(233, 233, 233, 0));
   border-color: #fff;
 }
@@ -2490,7 +2487,7 @@ a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
   margin-top: -1.5em;
 }
 
-/* line 362, ../sass/components/_misc.scss */
+/* line 363, ../sass/components/_misc.scss */
 .tabs-secondary__tab,
 .tabs-secondary__tab.is-active {
   margin: 0.75em 3px;
@@ -2498,14 +2495,16 @@ a.tabs-primary__tab-link:active, a.tabs-primary__tab-link.is-active {
 
 /* line 369, ../sass/components/_misc.scss */
 a.tabs-secondary__tab-link, a.tabs-secondary__tab-link.is-active {
-  -moz-border-radius: 0.75em;
   -webkit-border-radius: 0.75em;
+  -moz-border-radius: 0.75em;
+  -ms-border-radius: 0.75em;
+  -o-border-radius: 0.75em;
   border-radius: 0.75em;
+  -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
-  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
-  text-shadow: 1px 1px 0 #fff;
+  text-shadow: 1px 1px 0 white;
   background-color: #f2f2f2;
   color: #666;
   padding: 0 .5em;
@@ -2520,7 +2519,7 @@ a.tabs-secondary__tab-link:hover, a.tabs-secondary__tab-link:focus {
 
 /* line 383, ../sass/components/_misc.scss */
 a.tabs-secondary__tab-link:active, a.tabs-secondary__tab-link.is-active {
-  text-shadow: 1px 1px 0 #333;
+  text-shadow: 1px 1px 0 #333333;
   background-color: #666;
   border-color: #000;
   color: #fff;
@@ -2599,7 +2598,7 @@ span.field-label {
   background-image: none;
 }
 
-/* line 463, ../sass/components/_misc.scss */
+/* line 468, ../sass/components/_misc.scss */
 .pager-item,
 .pager-first,
 .pager-previous,
@@ -2652,11 +2651,52 @@ span.field-label {
   color: #000;
 }
 
+/* footer column menus */
+/* line 518, ../sass/components/_misc.scss */
+footer#footer_site .column-menu {
+  display: block;
+}
+/* line 520, ../sass/components/_misc.scss */
+footer#footer_site .column-menu ul.menu li {
+  display: block;
+  float: none;
+  border: 0 none;
+  margin-bottom: 0.5em;
+}
+
+@media screen and (min-width: 48em) {
+  /* line 530, ../sass/components/_misc.scss */
+  footer#footer_site .column-menu {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+  }
+  /* line 534, ../sass/components/_misc.scss */
+  footer#footer_site .column-menu ul.menu {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 60em) {
+  /* line 541, ../sass/components/_misc.scss */
+  footer#footer_site .container {
+    overflow: hidden;
+  }
+
+  /* line 542, ../sass/components/_misc.scss */
+  footer#footer_site .column-menu {
+    padding: 0 0 13em 1em;
+    margin: 0 0 -13em 1em;
+    border-left: 1px solid #a8a69d;
+    display: inline-block;
+    vertical-align: top;
+    width: inherit;
+  }
+}
 /**
  * Marker.
  */
 /* The "new" or "updated" marker. */
-/* line 522, ../sass/components/_misc.scss */
+/* line 559, ../sass/components/_misc.scss */
 .new,
 .update {
   color: #c00;
@@ -2668,7 +2708,7 @@ span.field-label {
  * Unpublished note.
  */
 /* The word "Unpublished" displayed underneath the content. */
-/* line 534, ../sass/components/_misc.scss */
+/* line 570, ../sass/components/_misc.scss */
 .unpublished {
   height: 0;
   overflow: visible;
@@ -2689,31 +2729,31 @@ span.field-label {
  * Comments.
  */
 /* Wrapper for the list of comments and its title. */
-/* line 561, ../sass/components/_misc.scss */
+/* line 597, ../sass/components/_misc.scss */
 .comments {
   margin: 1.5em 0;
 }
 
 /* Preview of the comment before submitting new or updated comment. */
-/* line 566, ../sass/components/_misc.scss */
+/* line 602, ../sass/components/_misc.scss */
 .comment-preview {
   /* Drupal core will use a #ffffea background. See #1110842. */
   background-color: #ffffea;
 }
 
 /* Wrapper for a single comment. */
-/* line 572, ../sass/components/_misc.scss */
+/* line 608, ../sass/components/_misc.scss */
 .comment {
   /* Comment's permalink wrapper. */
 }
-/* line 575, ../sass/components/_misc.scss */
+/* line 611, ../sass/components/_misc.scss */
 .comment .permalink {
   text-transform: uppercase;
   font-size: 75%;
 }
 
 /* Nested comments are indented. */
-/* line 582, ../sass/components/_misc.scss */
+/* line 618, ../sass/components/_misc.scss */
 .indented {
   /* Drupal core uses a 25px left margin. */
   margin-left: 30px;
@@ -2724,7 +2764,7 @@ span.field-label {
  * Forms.
  */
 /* Wrapper for a form element (or group of form elements) and its label. */
-/* line 592, ../sass/components/_misc.scss */
+/* line 628, ../sass/components/_misc.scss */
 .form-item {
   margin: 1.5em 0;
   /* Pack groups of checkboxes and radio buttons closer together. */
@@ -2732,61 +2772,62 @@ span.field-label {
   /* Highlight the form elements that caused a form submission error. */
   /* The descriptive help text (separate from the label). */
 }
-/* line 596, ../sass/components/_misc.scss */
+/* line 633, ../sass/components/_misc.scss */
 .form-checkboxes .form-item, .form-radios .form-item {
   /* Drupal core uses "0.4em 0". */
   margin: 0;
 }
-/* line 603, ../sass/components/_misc.scss */
+/* line 640, ../sass/components/_misc.scss */
 tr.odd .form-item, tr.even .form-item {
   margin: 0;
 }
-/* line 609, ../sass/components/_misc.scss */
+/* line 647, ../sass/components/_misc.scss */
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
   border: 1px solid #c00;
 }
-/* line 616, ../sass/components/_misc.scss */
+/* line 652, ../sass/components/_misc.scss */
 .form-item .description {
   font-size: 0.85em;
 }
 
-/* line 623, ../sass/components/_misc.scss */
+/* line 659, ../sass/components/_misc.scss */
 .form-type-radio .description,
 .form-type-checkbox .description {
   margin-left: 2.4em;
 }
 
 /* The part of the label that indicates a required field. */
-/* line 629, ../sass/components/_misc.scss */
+/* line 665, ../sass/components/_misc.scss */
 .form-required {
   color: #c00;
 }
 
 /* Labels for radios and checkboxes. */
-/* line 634, ../sass/components/_misc.scss */
+/* line 670, ../sass/components/_misc.scss */
 label.option {
   display: inline;
   font-weight: normal;
 }
 
 /* Buttons used by contrib modules like Media. */
-/* line 640, ../sass/components/_misc.scss */
+/* line 676, ../sass/components/_misc.scss */
 a.button {
-  -moz-appearance: button;
   -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
 }
 
 /* Password confirmation. */
-/* line 645, ../sass/components/_misc.scss */
+/* line 682, ../sass/components/_misc.scss */
 .password-parent,
 .confirm-parent {
   margin: 0;
 }
 
 /* Drupal's default login form block. */
-/* line 651, ../sass/components/_misc.scss */
+/* line 687, ../sass/components/_misc.scss */
 #user-login-form {
   text-align: left;
   /* LTR */
@@ -2799,20 +2840,20 @@ a.button {
  * styling of list items.
  */
 /* OpenID creates a new ul above the login form's links. */
-/* line 663, ../sass/components/_misc.scss */
+/* line 699, ../sass/components/_misc.scss */
 .openid-links {
   /* Position OpenID's ul next to the rest of the links. */
   margin-bottom: 0;
 }
 
 /* The "Log in using OpenID" and "Cancel OpenID login" links. */
-/* line 669, ../sass/components/_misc.scss */
+/* line 706, ../sass/components/_misc.scss */
 .openid-link,
 .user-link {
   margin-top: 1.5em;
 }
 
-/* line 673, ../sass/components/_misc.scss */
+/* line 710, ../sass/components/_misc.scss */
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   /* Un-do some of the padding on the ul list. */
@@ -2820,7 +2861,7 @@ html.js #user-login-form li.openid-link,
   /* LTR */
 }
 
-/* line 678, ../sass/components/_misc.scss */
+/* line 714, ../sass/components/_misc.scss */
 #user-login ul {
   margin: 1.5em 0;
 }
@@ -2828,7 +2869,7 @@ html.js #user-login-form li.openid-link,
 /**
  * Drupal admin tables.
  */
-/* line 686, ../sass/components/_misc.scss */
+/* line 722, ../sass/components/_misc.scss */
 form th {
   text-align: left;
   /* LTR */
@@ -2836,16 +2877,16 @@ form th {
   /* LTR */
   border-bottom: 3px solid #ccc;
 }
-/* line 691, ../sass/components/_misc.scss */
+/* line 727, ../sass/components/_misc.scss */
 form tbody {
   border-top: 1px solid #ccc;
 }
-/* line 694, ../sass/components/_misc.scss */
+/* line 730, ../sass/components/_misc.scss */
 form table ul {
   margin: 0;
 }
 
-/* line 698, ../sass/components/_misc.scss */
+/* line 735, ../sass/components/_misc.scss */
 tr.even,
 tr.odd {
   background-color: #eee;
@@ -2853,26 +2894,26 @@ tr.odd {
   padding: 0.1em 0.6em;
 }
 
-/* line 704, ../sass/components/_misc.scss */
+/* line 740, ../sass/components/_misc.scss */
 tr.even {
   background-color: #fff;
 }
 
 /* Markup generated by theme_tablesort_indicator(). */
-/* line 719, ../sass/components/_misc.scss */
+/* line 755, ../sass/components/_misc.scss */
 td.active {
   background-color: #ddd;
 }
 
 /* Center checkboxes inside table cell. */
-/* line 724, ../sass/components/_misc.scss */
+/* line 761, ../sass/components/_misc.scss */
 td.checkbox,
 th.checkbox {
   text-align: center;
 }
 
 /* Drupal core wrongly puts this in system.menus.css. Since we override that, add it back. */
-/* line 730, ../sass/components/_misc.scss */
+/* line 766, ../sass/components/_misc.scss */
 td.menu-disabled {
   background: #ccc;
 }
@@ -2883,7 +2924,7 @@ td.menu-disabled {
  * @see autocomplete.js
  */
 /* Suggestion list. */
-/* line 741, ../sass/components/_misc.scss */
+/* line 777, ../sass/components/_misc.scss */
 #autocomplete .selected {
   background: #0072b9;
   color: #fff;
@@ -2894,7 +2935,7 @@ td.menu-disabled {
  *
  * @see collapse.js
  */
-/* line 752, ../sass/components/_misc.scss */
+/* line 788, ../sass/components/_misc.scss */
 html.js .collapsible .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
   background-position: 5px 65%;
@@ -2903,14 +2944,14 @@ html.js .collapsible .fieldset-legend {
   padding-left: 15px;
   /* LTR */
 }
-/* line 761, ../sass/components/_misc.scss */
+/* line 797, ../sass/components/_misc.scss */
 html.js .collapsed .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABFJREFUCB1jVmCGQClmEWYOAAZ8AMy3HPLXAAAAAElFTkSuQmCC');
   /* LTR */
   background-position: 5px 50%;
   /* LTR */
 }
-/* line 768, ../sass/components/_misc.scss */
+/* line 804, ../sass/components/_misc.scss */
 .fieldset-legend .summary {
   color: #999;
   font-size: 0.9em;
@@ -2922,17 +2963,17 @@ html.js .collapsed .fieldset-legend {
  *
  * @see tabledrag.js
  */
-/* line 780, ../sass/components/_misc.scss */
+/* line 816, ../sass/components/_misc.scss */
 tr.drag {
   background-color: #fffff0;
 }
 
-/* line 783, ../sass/components/_misc.scss */
+/* line 819, ../sass/components/_misc.scss */
 tr.drag-previous {
   background-color: #ffd;
 }
 
-/* line 786, ../sass/components/_misc.scss */
+/* line 822, ../sass/components/_misc.scss */
 .tabledrag-toggle-weight {
   font-size: 0.9em;
 }
@@ -2942,7 +2983,7 @@ tr.drag-previous {
  *
  * @see tableselect.js
  */
-/* line 795, ../sass/components/_misc.scss */
+/* line 831, ../sass/components/_misc.scss */
 tr.selected td {
   background: #ffc;
 }
@@ -2952,46 +2993,48 @@ tr.selected td {
  *
  * @see progress.js
  */
-/* line 804, ../sass/components/_misc.scss */
+/* line 840, ../sass/components/_misc.scss */
 .progress {
   font-weight: bold;
 }
-/* line 807, ../sass/components/_misc.scss */
+/* line 843, ../sass/components/_misc.scss */
 .progress .bar {
   background: #ccc;
   border-color: #666;
   margin: 0 0.2em;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 813, ../sass/components/_misc.scss */
+/* line 849, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1434133046');
+  background-image: url('../images/progress.gif?1426188048');
 }
 
 /*Misc. Helper classes*/
 /*.pull-left Floats an element to the leftFloatsTry it*/
-/* line 821, ../sass/components/_misc.scss */
+/* line 857, ../sass/components/_misc.scss */
 .pull-left {
   float: left !important;
 }
 
 /*.pull-right Floats an element to the rightFloatsTry it*/
-/* line 825, ../sass/components/_misc.scss */
+/* line 861, ../sass/components/_misc.scss */
 .pull-right {
   float: right !important;
 }
 
 /*.relative Adds position relative*/
-/* line 829, ../sass/components/_misc.scss */
+/* line 865, ../sass/components/_misc.scss */
 .relative {
   position: relative !important;
 }
 
 /*.absolute Adds position absolute*/
-/* line 833, ../sass/components/_misc.scss */
+/* line 869, ../sass/components/_misc.scss */
 .absolute {
   position: absolute !important;
 }
@@ -3008,7 +3051,7 @@ tr.selected td {
  */
 @media print {
   /* Underline all links. */
-  /* line 15, ../sass/_print.scss */
+  /* line 16, ../sass/_print.scss */
   a:link,
   a:visited {
     text-decoration: underline !important;
@@ -3032,7 +3075,7 @@ tr.selected td {
     font-weight: normal;
     font-size: 16px;
   }
-  /* line 34, ../sass/_print.scss */
+  /* line 35, ../sass/_print.scss */
   #content a[href^="javascript:"]:after,
   #content a[href^="#"]:after {
     content: "";
@@ -3052,7 +3095,7 @@ tr.selected td {
   }
 
   /* Turn off any background colors or images. */
-  /* line 54, ../sass/_print.scss */
+  /* line 57, ../sass/_print.scss */
   body,
   #page,
   #main,
@@ -3063,7 +3106,7 @@ tr.selected td {
   }
 
   /* Hide sidebars and nav elements. */
-  /* line 64, ../sass/_print.scss */
+  /* line 77, ../sass/_print.scss */
   #skip-link,
   #toolbar,
   #navigation,
@@ -3117,7 +3160,7 @@ tr.selected td {
 /* Import Milo Fonts */
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
-  /* line 48, ../sass/catstrap/catstrap.scss */
+  /* line 50, ../sass/catstrap/catstrap.scss */
   *,
   *:before,
   *:after {
@@ -3128,7 +3171,7 @@ tr.selected td {
     box-shadow: none !important;
   }
 
-  /* line 57, ../sass/catstrap/catstrap.scss */
+  /* line 58, ../sass/catstrap/catstrap.scss */
   a,
   a:visited {
     text-decoration: underline;
@@ -3144,13 +3187,13 @@ tr.selected td {
     content: " (" attr(title) ")";
   }
 
-  /* line 67, ../sass/catstrap/catstrap.scss */
+  /* line 68, ../sass/catstrap/catstrap.scss */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
   }
 
-  /* line 71, ../sass/catstrap/catstrap.scss */
+  /* line 72, ../sass/catstrap/catstrap.scss */
   pre,
   blockquote {
     border: 1px solid #999;
@@ -3162,7 +3205,7 @@ tr.selected td {
     display: table-header-group;
   }
 
-  /* line 80, ../sass/catstrap/catstrap.scss */
+  /* line 81, ../sass/catstrap/catstrap.scss */
   tr,
   img {
     page-break-inside: avoid;
@@ -3173,7 +3216,7 @@ tr.selected td {
     max-width: 100% !important;
   }
 
-  /* line 87, ../sass/catstrap/catstrap.scss */
+  /* line 89, ../sass/catstrap/catstrap.scss */
   p,
   h2,
   h3 {
@@ -3181,7 +3224,7 @@ tr.selected td {
     widows: 3;
   }
 
-  /* line 93, ../sass/catstrap/catstrap.scss */
+  /* line 94, ../sass/catstrap/catstrap.scss */
   h2,
   h3 {
     page-break-after: avoid;
@@ -3197,7 +3240,7 @@ tr.selected td {
     display: none;
   }
 
-  /* line 103, ../sass/catstrap/catstrap.scss */
+  /* line 104, ../sass/catstrap/catstrap.scss */
   .btn > .caret,
   .dropup > .btn > .caret {
     border-top-color: #000 !important;
@@ -3213,13 +3256,13 @@ tr.selected td {
     border-collapse: collapse !important;
   }
 
-  /* line 113, ../sass/catstrap/catstrap.scss */
+  /* line 114, ../sass/catstrap/catstrap.scss */
   .table td,
   .table th {
     background-color: #fff !important;
   }
 
-  /* line 117, ../sass/catstrap/catstrap.scss */
+  /* line 118, ../sass/catstrap/catstrap.scss */
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #ddd !important;
@@ -3232,7 +3275,7 @@ tr.selected td {
   box-sizing: border-box;
 }
 
-/* line 127, ../sass/catstrap/catstrap.scss */
+/* line 128, ../sass/catstrap/catstrap.scss */
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
@@ -3243,7 +3286,7 @@ tr.selected td {
 /* line 133, ../sass/catstrap/catstrap.scss */
 html {
   font-size: 16px;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
@@ -3259,7 +3302,7 @@ body {
   background-color: #fff;
 }
 
-/* line 148, ../sass/catstrap/catstrap.scss */
+/* line 151, ../sass/catstrap/catstrap.scss */
 input,
 button,
 select,
@@ -3276,7 +3319,7 @@ a {
   font-weight: bold;
 }
 
-/* line 161, ../sass/catstrap/catstrap.scss */
+/* line 162, ../sass/catstrap/catstrap.scss */
 a:hover,
 a:focus {
   /*color: #63000B;*/
@@ -3308,7 +3351,7 @@ img {
   vertical-align: middle;
 }
 
-/* line 183, ../sass/catstrap/catstrap.scss */
+/* line 187, ../sass/catstrap/catstrap.scss */
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
@@ -3327,7 +3370,7 @@ hr {
   border-top: 1px solid #eee;
 }
 
-/* line 198, ../sass/catstrap/catstrap.scss */
+/* line 209, ../sass/catstrap/catstrap.scss */
 h1,
 h2,
 h3,
@@ -3346,14 +3389,14 @@ h6,
   color: inherit;
 }
 
-/* line 215, ../sass/catstrap/catstrap.scss */
+/* line 216, ../sass/catstrap/catstrap.scss */
 h1,
 .h1 {
   margin-top: 0;
   margin-bottom: 0.5em;
 }
 
-/* line 221, ../sass/catstrap/catstrap.scss */
+/* line 224, ../sass/catstrap/catstrap.scss */
 h2,
 .h2,
 h3,
@@ -3362,7 +3405,7 @@ h3,
   margin-bottom: 0.5em;
 }
 
-/* line 228, ../sass/catstrap/catstrap.scss */
+/* line 233, ../sass/catstrap/catstrap.scss */
 h4,
 .h4,
 h5,
@@ -3373,7 +3416,7 @@ h6,
   margin-bottom: 10px;
 }
 
-/* line 237, ../sass/catstrap/catstrap.scss */
+/* line 238, ../sass/catstrap/catstrap.scss */
 h1,
 .h1 {
   font-size: 50px;
@@ -3383,7 +3426,7 @@ h1,
   color: #49595E;
 }
 
-/* line 246, ../sass/catstrap/catstrap.scss */
+/* line 247, ../sass/catstrap/catstrap.scss */
 h2,
 .h2 {
   font-size: 36px;
@@ -3393,7 +3436,7 @@ h2,
   color: #49595E;
 }
 
-/* line 254, ../sass/catstrap/catstrap.scss */
+/* line 255, ../sass/catstrap/catstrap.scss */
 h3,
 .h3 {
   font-size: 24px;
@@ -3403,7 +3446,7 @@ h3,
   text-transform: uppercase;
 }
 
-/* line 262, ../sass/catstrap/catstrap.scss */
+/* line 263, ../sass/catstrap/catstrap.scss */
 h4,
 .h4 {
   font-size: 20px;
@@ -3411,7 +3454,7 @@ h4,
   font-weight: 700;
 }
 
-/* line 268, ../sass/catstrap/catstrap.scss */
+/* line 269, ../sass/catstrap/catstrap.scss */
 h5,
 .h5 {
   font-size: 16px;
@@ -3419,7 +3462,7 @@ h5,
   font-weight: 700;
 }
 
-/* line 274, ../sass/catstrap/catstrap.scss */
+/* line 275, ../sass/catstrap/catstrap.scss */
 h6,
 .h6 {
   font-size: 12px;
@@ -3451,13 +3494,13 @@ p {
     font-size: 1.4rem;
   }
 }
-/* line 299, ../sass/catstrap/catstrap.scss */
+/* line 300, ../sass/catstrap/catstrap.scss */
 small,
 .small {
   font-size: 85%;
 }
 
-/* line 303, ../sass/catstrap/catstrap.scss */
+/* line 304, ../sass/catstrap/catstrap.scss */
 mark,
 .mark {
   padding: .2em;
@@ -3512,7 +3555,7 @@ code {
   background-color: #f9f2f4;
 }
 
-/* line 338, ../sass/catstrap/catstrap.scss */
+/* line 339, ../sass/catstrap/catstrap.scss */
 ul,
 ol {
   margin-top: 0;
@@ -3521,7 +3564,7 @@ ol {
   padding-left: 1rem;
 }
 
-/* line 345, ../sass/catstrap/catstrap.scss */
+/* line 348, ../sass/catstrap/catstrap.scss */
 ul ul,
 ol ul,
 ul ol,
@@ -3545,7 +3588,7 @@ ul.triangle li:before {
   width: 0px;
   height: 0px;
   border-top: 8px solid #395180;
-  border-left: 8px solid transparent;
+  border-left: 8px solid rgba(0, 0, 0, 0);
   content: '';
 }
 
@@ -3560,7 +3603,7 @@ dl {
   margin-bottom: 1em;
 }
 
-/* line 374, ../sass/catstrap/catstrap.scss */
+/* line 375, ../sass/catstrap/catstrap.scss */
 dt,
 dd {
   line-height: 1.42857143;
@@ -3593,7 +3636,7 @@ dd {
     margin-left: 180px;
   }
 }
-/* line 398, ../sass/catstrap/catstrap.scss */
+/* line 399, ../sass/catstrap/catstrap.scss */
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
@@ -3629,7 +3672,7 @@ table {
   font-size: 1.125rem;
 }
 
-/* line 425, ../sass/catstrap/catstrap.scss */
+/* line 430, ../sass/catstrap/catstrap.scss */
 table > thead > tr > th,
 table > tbody > tr > th,
 table > tfoot > tr > th,
@@ -3654,7 +3697,7 @@ table > thead > tr > th {
   line-height: 1;
 }
 
-/* line 446, ../sass/catstrap/catstrap.scss */
+/* line 447, ../sass/catstrap/catstrap.scss */
 table > thead > tr > th,
 table > thead > tr > td {
   border-bottom-width: 1px;
@@ -3666,7 +3709,7 @@ table > tbody > tr > td {
   color: #49595e;
 }
 
-/* line 454, ../sass/catstrap/catstrap.scss */
+/* line 459, ../sass/catstrap/catstrap.scss */
 table > caption + thead > tr:first-child > th,
 table > colgroup + thead > tr:first-child > th,
 table > thead:first-child > tr:first-child > th,
@@ -3698,7 +3741,7 @@ table col[class*="col-"] {
   float: none;
 }
 
-/* line 476, ../sass/catstrap/catstrap.scss */
+/* line 477, ../sass/catstrap/catstrap.scss */
 table td[class*="col-"],
 table th[class*="col-"] {
   position: static;
@@ -3706,7 +3749,7 @@ table th[class*="col-"] {
   float: none;
 }
 
-/* line 482, ../sass/catstrap/catstrap.scss */
+/* line 483, ../sass/catstrap/catstrap.scss */
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
   background-color: #546581;
@@ -3734,7 +3777,7 @@ table th[class*="col-"] {
     margin-bottom: 0;
   }
 
-  /* line 502, ../sass/catstrap/catstrap.scss */
+  /* line 507, ../sass/catstrap/catstrap.scss */
   .table-responsive > table > thead > tr > th,
   .table-responsive > table > tbody > tr > th,
   .table-responsive > table > tfoot > tr > th,
@@ -3749,7 +3792,7 @@ table th[class*="col-"] {
     border: 0;
   }
 
-  /* line 513, ../sass/catstrap/catstrap.scss */
+  /* line 518, ../sass/catstrap/catstrap.scss */
   .table-responsive > table > thead > tr > th:first-child,
   .table-responsive > table > tbody > tr > th:first-child,
   .table-responsive > table > tfoot > tr > th:first-child,
@@ -3759,7 +3802,7 @@ table th[class*="col-"] {
     border-left: 0;
   }
 
-  /* line 521, ../sass/catstrap/catstrap.scss */
+  /* line 526, ../sass/catstrap/catstrap.scss */
   .table-responsive > table > thead > tr > th:last-child,
   .table-responsive > table > tbody > tr > th:last-child,
   .table-responsive > table > tfoot > tr > th:last-child,
@@ -3769,7 +3812,7 @@ table th[class*="col-"] {
     border-right: 0;
   }
 
-  /* line 529, ../sass/catstrap/catstrap.scss */
+  /* line 532, ../sass/catstrap/catstrap.scss */
   .table-responsive > table > tbody > tr:last-child > th,
   .table-responsive > table > tfoot > tr:last-child > th,
   .table-responsive > table > tbody > tr:last-child > td,
@@ -3815,7 +3858,7 @@ input[type="search"] {
   box-sizing: border-box;
 }
 
-/* line 566, ../sass/catstrap/catstrap.scss */
+/* line 567, ../sass/catstrap/catstrap.scss */
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 0 0;
@@ -3834,13 +3877,13 @@ input[type="range"] {
   width: 100%;
 }
 
-/* line 579, ../sass/catstrap/catstrap.scss */
+/* line 580, ../sass/catstrap/catstrap.scss */
 select[multiple],
 select[size] {
   height: auto;
 }
 
-/* line 583, ../sass/catstrap/catstrap.scss */
+/* line 585, ../sass/catstrap/catstrap.scss */
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
@@ -3909,7 +3952,7 @@ output {
   color: #999;
 }
 
-/* line 637, ../sass/catstrap/catstrap.scss */
+/* line 639, ../sass/catstrap/catstrap.scss */
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {
@@ -3929,7 +3972,7 @@ input[type="search"] {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  /* line 651, ../sass/catstrap/catstrap.scss */
+  /* line 654, ../sass/catstrap/catstrap.scss */
   input[type="date"],
   input[type="time"],
   input[type="datetime-local"],
@@ -3937,7 +3980,7 @@ input[type="search"] {
     line-height: 34px;
   }
 
-  /* line 657, ../sass/catstrap/catstrap.scss */
+  /* line 664, ../sass/catstrap/catstrap.scss */
   input[type="date"].input-sm,
   input[type="time"].input-sm,
   input[type="datetime-local"].input-sm,
@@ -3949,7 +3992,7 @@ input[type="search"] {
     line-height: 30px;
   }
 
-  /* line 667, ../sass/catstrap/catstrap.scss */
+  /* line 674, ../sass/catstrap/catstrap.scss */
   input[type="date"].input-lg,
   input[type="time"].input-lg,
   input[type="datetime-local"].input-lg,
@@ -3966,7 +4009,7 @@ input[type="search"] {
   margin-bottom: 15px;
 }
 
-/* line 681, ../sass/catstrap/catstrap.scss */
+/* line 682, ../sass/catstrap/catstrap.scss */
 .radio,
 .checkbox {
   position: relative;
@@ -3975,7 +4018,7 @@ input[type="search"] {
   margin-bottom: 10px;
 }
 
-/* line 688, ../sass/catstrap/catstrap.scss */
+/* line 689, ../sass/catstrap/catstrap.scss */
 .radio label,
 .checkbox label {
   min-height: 20px;
@@ -3987,7 +4030,7 @@ input[type="search"] {
   font-size: 1rem;
 }
 
-/* line 698, ../sass/catstrap/catstrap.scss */
+/* line 701, ../sass/catstrap/catstrap.scss */
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
 .checkbox input[type="checkbox"],
@@ -3998,13 +4041,13 @@ input[type="search"] {
   /*display: none;*/
 }
 
-/* line 707, ../sass/catstrap/catstrap.scss */
+/* line 708, ../sass/catstrap/catstrap.scss */
 .radio + .radio,
 .checkbox + .checkbox {
   margin-top: -5px;
 }
 
-/* line 711, ../sass/catstrap/catstrap.scss */
+/* line 712, ../sass/catstrap/catstrap.scss */
 .radio-inline,
 .checkbox-inline {
   display: inline-block;
@@ -4015,14 +4058,14 @@ input[type="search"] {
   cursor: pointer;
 }
 
-/* line 720, ../sass/catstrap/catstrap.scss */
+/* line 721, ../sass/catstrap/catstrap.scss */
 .radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {
   margin-top: 0;
   margin-left: 10px;
 }
 
-/* line 725, ../sass/catstrap/catstrap.scss */
+/* line 730, ../sass/catstrap/catstrap.scss */
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],
 input[type="radio"].disabled,
@@ -4032,7 +4075,7 @@ fieldset[disabled] input[type="checkbox"] {
   cursor: not-allowed;
 }
 
-/* line 733, ../sass/catstrap/catstrap.scss */
+/* line 736, ../sass/catstrap/catstrap.scss */
 .radio-inline.disabled,
 .checkbox-inline.disabled,
 fieldset[disabled] .radio-inline,
@@ -4040,7 +4083,7 @@ fieldset[disabled] .checkbox-inline {
   cursor: not-allowed;
 }
 
-/* line 739, ../sass/catstrap/catstrap.scss */
+/* line 742, ../sass/catstrap/catstrap.scss */
 .radio.disabled label,
 .checkbox.disabled label,
 fieldset[disabled] .radio label,
@@ -4055,7 +4098,7 @@ fieldset[disabled] .checkbox label {
   margin-bottom: 0;
 }
 
-/* line 750, ../sass/catstrap/catstrap.scss */
+/* line 751, ../sass/catstrap/catstrap.scss */
 .form-control-static.input-lg,
 .form-control-static.input-sm {
   padding-right: 0;
@@ -4100,7 +4143,7 @@ fieldset[disabled] .checkbox label {
   line-height: 30px;
 }
 
-/* line 783, ../sass/catstrap/catstrap.scss */
+/* line 792, ../sass/catstrap/catstrap.scss */
 .has-success .help-block,
 .has-success .control-label,
 .has-success .radio,
@@ -4140,7 +4183,7 @@ fieldset[disabled] .checkbox label {
   color: #3c763d;
 }
 
-/* line 813, ../sass/catstrap/catstrap.scss */
+/* line 822, ../sass/catstrap/catstrap.scss */
 .has-warning .help-block,
 .has-warning .control-label,
 .has-warning .radio,
@@ -4180,7 +4223,7 @@ fieldset[disabled] .checkbox label {
   color: #8a6d3b;
 }
 
-/* line 843, ../sass/catstrap/catstrap.scss */
+/* line 852, ../sass/catstrap/catstrap.scss */
 .has-error .help-block,
 .has-error .control-label,
 .has-error .radio,
@@ -4264,7 +4307,7 @@ fieldset[disabled] .checkbox label {
     vertical-align: middle;
   }
 
-  /* line 903, ../sass/catstrap/catstrap.scss */
+  /* line 905, ../sass/catstrap/catstrap.scss */
   .form-inline .input-group .input-group-addon,
   .form-inline .input-group .input-group-btn,
   .form-inline .input-group .form-control {
@@ -4282,7 +4325,7 @@ fieldset[disabled] .checkbox label {
     vertical-align: middle;
   }
 
-  /* line 915, ../sass/catstrap/catstrap.scss */
+  /* line 916, ../sass/catstrap/catstrap.scss */
   .form-inline .radio,
   .form-inline .checkbox {
     display: inline-block;
@@ -4291,13 +4334,13 @@ fieldset[disabled] .checkbox label {
     vertical-align: middle;
   }
 
-  /* line 922, ../sass/catstrap/catstrap.scss */
+  /* line 923, ../sass/catstrap/catstrap.scss */
   .form-inline .radio label,
   .form-inline .checkbox label {
     padding-left: 0;
   }
 
-  /* line 926, ../sass/catstrap/catstrap.scss */
+  /* line 927, ../sass/catstrap/catstrap.scss */
   .form-inline .radio input[type="radio"],
   .form-inline .checkbox input[type="checkbox"] {
     position: relative;
@@ -4335,7 +4378,7 @@ fieldset[disabled] .checkbox label {
   letter-spacing: 0.05em;
 }
 
-/* line 960, ../sass/catstrap/catstrap.scss */
+/* line 965, ../sass/catstrap/catstrap.scss */
 .btn:focus,
 .btn:active:focus,
 .btn.active:focus,
@@ -4347,14 +4390,14 @@ fieldset[disabled] .checkbox label {
   outline-offset: -2px;
 }
 
-/* line 970, ../sass/catstrap/catstrap.scss */
+/* line 972, ../sass/catstrap/catstrap.scss */
 .btn:hover,
 .btn:focus,
 .btn.focus {
   text-decoration: none;
 }
 
-/* line 975, ../sass/catstrap/catstrap.scss */
+/* line 976, ../sass/catstrap/catstrap.scss */
 .btn:active,
 .btn.active {
   background-image: none;
@@ -4363,7 +4406,7 @@ fieldset[disabled] .checkbox label {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
-/* line 982, ../sass/catstrap/catstrap.scss */
+/* line 984, ../sass/catstrap/catstrap.scss */
 .btn.disabled,
 .btn[disabled],
 fieldset[disabled] .btn {
@@ -4382,7 +4425,7 @@ fieldset[disabled] .btn {
   border-color: #ccc;
 }
 
-/* line 997, ../sass/catstrap/catstrap.scss */
+/* line 1002, ../sass/catstrap/catstrap.scss */
 .btn-default:hover,
 .btn-default:focus,
 .btn-default.focus,
@@ -4394,14 +4437,14 @@ fieldset[disabled] .btn {
   border-color: #adadad;
 }
 
-/* line 1007, ../sass/catstrap/catstrap.scss */
+/* line 1009, ../sass/catstrap/catstrap.scss */
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
   background-image: none;
 }
 
-/* line 1012, ../sass/catstrap/catstrap.scss */
+/* line 1029, ../sass/catstrap/catstrap.scss */
 .btn-default.disabled,
 .btn-default[disabled],
 fieldset[disabled] .btn-default,
@@ -4430,7 +4473,7 @@ fieldset[disabled] .btn-default.active {
   background-color: #ab0520;
 }
 
-/* line 1037, ../sass/catstrap/catstrap.scss */
+/* line 1042, ../sass/catstrap/catstrap.scss */
 .btn-red:hover,
 .btn-red:focus,
 .btn-red.focus,
@@ -4441,14 +4484,14 @@ fieldset[disabled] .btn-default.active {
   background-color: #CC665E;
 }
 
-/* line 1046, ../sass/catstrap/catstrap.scss */
+/* line 1048, ../sass/catstrap/catstrap.scss */
 .btn-red:active,
 .btn-red.active,
 .open > .dropdown-toggle.btn-red {
   background-image: none;
 }
 
-/* line 1051, ../sass/catstrap/catstrap.scss */
+/* line 1068, ../sass/catstrap/catstrap.scss */
 .btn-red.disabled,
 .btn-red[disabled],
 fieldset[disabled] .btn-red,
@@ -4476,7 +4519,7 @@ fieldset[disabled] .btn-red.active {
   background-color: #0C234B;
 }
 
-/* line 1075, ../sass/catstrap/catstrap.scss */
+/* line 1080, ../sass/catstrap/catstrap.scss */
 .btn-blue:hover,
 .btn-blue:focus,
 .btn-blue.focus,
@@ -4487,14 +4530,14 @@ fieldset[disabled] .btn-red.active {
   background-color: #395180;
 }
 
-/* line 1084, ../sass/catstrap/catstrap.scss */
+/* line 1086, ../sass/catstrap/catstrap.scss */
 .btn-blue:active,
 .btn-blue.active,
 .open > .dropdown-toggle.btn-blue {
   background-image: none;
 }
 
-/* line 1089, ../sass/catstrap/catstrap.scss */
+/* line 1106, ../sass/catstrap/catstrap.scss */
 .btn-blue.disabled,
 .btn-blue[disabled],
 fieldset[disabled] .btn-blue,
@@ -4516,7 +4559,7 @@ fieldset[disabled] .btn-blue.active {
   background-color: #0C234B;
 }
 
-/* line 1110, ../sass/catstrap/catstrap.scss */
+/* line 1111, ../sass/catstrap/catstrap.scss */
 .btn-lg,
 .btn-group-lg > .btn {
   padding: 10px 26px;
@@ -4526,7 +4569,7 @@ fieldset[disabled] .btn-blue.active {
   line-height: 1.3333333;
 }
 
-/* line 1118, ../sass/catstrap/catstrap.scss */
+/* line 1119, ../sass/catstrap/catstrap.scss */
 .btn-sm,
 .btn-group-sm > .btn {
   padding: 5px 10px;
@@ -4545,7 +4588,7 @@ fieldset[disabled] .btn-blue.active {
   margin-top: 5px;
 }
 
-/* line 1131, ../sass/catstrap/catstrap.scss */
+/* line 1133, ../sass/catstrap/catstrap.scss */
 input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
@@ -4606,7 +4649,7 @@ tbody.collapse.in {
   transition-property: height, visibility;
 }
 
-/* line 1177, ../sass/catstrap/catstrap.scss */
+/* line 1180, ../sass/catstrap/catstrap.scss */
 [data-toggle="buttons"] > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
@@ -4639,7 +4682,7 @@ tbody.collapse.in {
   margin-bottom: 0;
 }
 
-/* line 1202, ../sass/catstrap/catstrap.scss */
+/* line 1204, ../sass/catstrap/catstrap.scss */
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
@@ -4650,7 +4693,7 @@ tbody.collapse.in {
   border-radius: 6px;
 }
 
-/* line 1211, ../sass/catstrap/catstrap.scss */
+/* line 1213, ../sass/catstrap/catstrap.scss */
 select.input-group-lg > .form-control,
 select.input-group-lg > .input-group-addon,
 select.input-group-lg > .input-group-btn > .btn {
@@ -4658,7 +4701,7 @@ select.input-group-lg > .input-group-btn > .btn {
   line-height: 46px;
 }
 
-/* line 1217, ../sass/catstrap/catstrap.scss */
+/* line 1222, ../sass/catstrap/catstrap.scss */
 textarea.input-group-lg > .form-control,
 textarea.input-group-lg > .input-group-addon,
 textarea.input-group-lg > .input-group-btn > .btn,
@@ -4668,7 +4711,7 @@ select[multiple].input-group-lg > .input-group-btn > .btn {
   height: auto;
 }
 
-/* line 1225, ../sass/catstrap/catstrap.scss */
+/* line 1227, ../sass/catstrap/catstrap.scss */
 .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
@@ -4679,7 +4722,7 @@ select[multiple].input-group-lg > .input-group-btn > .btn {
   border-radius: 3px;
 }
 
-/* line 1234, ../sass/catstrap/catstrap.scss */
+/* line 1236, ../sass/catstrap/catstrap.scss */
 select.input-group-sm > .form-control,
 select.input-group-sm > .input-group-addon,
 select.input-group-sm > .input-group-btn > .btn {
@@ -4687,7 +4730,7 @@ select.input-group-sm > .input-group-btn > .btn {
   line-height: 30px;
 }
 
-/* line 1240, ../sass/catstrap/catstrap.scss */
+/* line 1245, ../sass/catstrap/catstrap.scss */
 textarea.input-group-sm > .form-control,
 textarea.input-group-sm > .input-group-addon,
 textarea.input-group-sm > .input-group-btn > .btn,
@@ -4697,21 +4740,21 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   height: auto;
 }
 
-/* line 1248, ../sass/catstrap/catstrap.scss */
+/* line 1250, ../sass/catstrap/catstrap.scss */
 .input-group-addon,
 .input-group-btn,
 .input-group .form-control {
   display: table-cell;
 }
 
-/* line 1253, ../sass/catstrap/catstrap.scss */
+/* line 1255, ../sass/catstrap/catstrap.scss */
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
 .input-group .form-control:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
-/* line 1258, ../sass/catstrap/catstrap.scss */
+/* line 1259, ../sass/catstrap/catstrap.scss */
 .input-group-addon,
 .input-group-btn {
   width: 1%;
@@ -4746,13 +4789,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: 6px;
 }
 
-/* line 1285, ../sass/catstrap/catstrap.scss */
+/* line 1286, ../sass/catstrap/catstrap.scss */
 .input-group-addon input[type="radio"],
 .input-group-addon input[type="checkbox"] {
   margin-top: 0;
 }
 
-/* line 1289, ../sass/catstrap/catstrap.scss */
+/* line 1295, ../sass/catstrap/catstrap.scss */
 .input-group .form-control:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
@@ -4769,7 +4812,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-right: 0;
 }
 
-/* line 1302, ../sass/catstrap/catstrap.scss */
+/* line 1308, ../sass/catstrap/catstrap.scss */
 .input-group .form-control:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
@@ -4803,20 +4846,20 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-left: -1px;
 }
 
-/* line 1326, ../sass/catstrap/catstrap.scss */
+/* line 1328, ../sass/catstrap/catstrap.scss */
 .input-group-btn > .btn:hover,
 .input-group-btn > .btn:focus,
 .input-group-btn > .btn:active {
   z-index: 2;
 }
 
-/* line 1331, ../sass/catstrap/catstrap.scss */
+/* line 1332, ../sass/catstrap/catstrap.scss */
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group {
   margin-right: -1px;
 }
 
-/* line 1335, ../sass/catstrap/catstrap.scss */
+/* line 1336, ../sass/catstrap/catstrap.scss */
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
@@ -4866,7 +4909,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: .25em;
 }
 
-/* line 1371, ../sass/catstrap/catstrap.scss */
+/* line 1372, ../sass/catstrap/catstrap.scss */
 a.label:hover,
 a.label:focus {
   color: #fff;
@@ -4890,7 +4933,7 @@ a.label:focus {
   background-color: #777;
 }
 
-/* line 1387, ../sass/catstrap/catstrap.scss */
+/* line 1388, ../sass/catstrap/catstrap.scss */
 .label-default[href]:hover,
 .label-default[href]:focus {
   background-color: #5e5e5e;
@@ -4901,7 +4944,7 @@ a.label:focus {
   background-color: #337ab7;
 }
 
-/* line 1394, ../sass/catstrap/catstrap.scss */
+/* line 1395, ../sass/catstrap/catstrap.scss */
 .label-primary[href]:hover,
 .label-primary[href]:focus {
   background-color: #286090;
@@ -4912,7 +4955,7 @@ a.label:focus {
   background-color: #5cb85c;
 }
 
-/* line 1401, ../sass/catstrap/catstrap.scss */
+/* line 1402, ../sass/catstrap/catstrap.scss */
 .label-success[href]:hover,
 .label-success[href]:focus {
   background-color: #449d44;
@@ -4923,7 +4966,7 @@ a.label:focus {
   background-color: #5bc0de;
 }
 
-/* line 1408, ../sass/catstrap/catstrap.scss */
+/* line 1409, ../sass/catstrap/catstrap.scss */
 .label-info[href]:hover,
 .label-info[href]:focus {
   background-color: #31b0d5;
@@ -4934,7 +4977,7 @@ a.label:focus {
   background-color: #f0ad4e;
 }
 
-/* line 1415, ../sass/catstrap/catstrap.scss */
+/* line 1416, ../sass/catstrap/catstrap.scss */
 .label-warning[href]:hover,
 .label-warning[href]:focus {
   background-color: #ec971f;
@@ -4945,13 +4988,13 @@ a.label:focus {
   background-color: #d9534f;
 }
 
-/* line 1422, ../sass/catstrap/catstrap.scss */
+/* line 1423, ../sass/catstrap/catstrap.scss */
 .label-danger[href]:hover,
 .label-danger[href]:focus {
   background-color: #c9302c;
 }
 
-/* line 1426, ../sass/catstrap/catstrap.scss */
+/* line 1455, ../sass/catstrap/catstrap.scss */
 .clearfix:before,
 .clearfix:after,
 .dl-horizontal dd:before,
@@ -4986,7 +5029,7 @@ a.label:focus {
   content: " ";
 }
 
-/* line 1459, ../sass/catstrap/catstrap.scss */
+/* line 1473, ../sass/catstrap/catstrap.scss */
 .clearfix:after,
 .dl-horizontal dd:after,
 .container:after,
@@ -5060,7 +5103,8 @@ a.label:focus {
 @-ms-viewport {
   width: device-width;
 }
-/* line 1513, ../sass/catstrap/catstrap.scss */
+
+/* line 1516, ../sass/catstrap/catstrap.scss */
 .visible-xs,
 .visible-sm,
 .visible-md,
@@ -5068,7 +5112,7 @@ a.label:focus {
   display: none !important;
 }
 
-/* line 1519, ../sass/catstrap/catstrap.scss */
+/* line 1530, ../sass/catstrap/catstrap.scss */
 .visible-xs-block,
 .visible-xs-inline,
 .visible-xs-inline-block,
@@ -5100,7 +5144,7 @@ a.label:focus {
     display: table-row !important;
   }
 
-  /* line 1543, ../sass/catstrap/catstrap.scss */
+  /* line 1544, ../sass/catstrap/catstrap.scss */
   th.visible-xs,
   td.visible-xs {
     display: table-cell !important;
@@ -5140,7 +5184,7 @@ a.label:focus {
     display: table-row !important;
   }
 
-  /* line 1573, ../sass/catstrap/catstrap.scss */
+  /* line 1574, ../sass/catstrap/catstrap.scss */
   th.visible-sm,
   td.visible-sm {
     display: table-cell !important;
@@ -5180,7 +5224,7 @@ a.label:focus {
     display: table-row !important;
   }
 
-  /* line 1603, ../sass/catstrap/catstrap.scss */
+  /* line 1604, ../sass/catstrap/catstrap.scss */
   th.visible-md,
   td.visible-md {
     display: table-cell !important;
@@ -5220,7 +5264,7 @@ a.label:focus {
     display: table-row !important;
   }
 
-  /* line 1633, ../sass/catstrap/catstrap.scss */
+  /* line 1634, ../sass/catstrap/catstrap.scss */
   th.visible-lg,
   td.visible-lg {
     display: table-cell !important;
@@ -5297,7 +5341,7 @@ a.label:focus {
     display: table-row !important;
   }
 
-  /* line 1693, ../sass/catstrap/catstrap.scss */
+  /* line 1694, ../sass/catstrap/catstrap.scss */
   th.visible-print,
   td.visible-print {
     display: table-cell !important;
@@ -5525,7 +5569,7 @@ a.label:focus {
   float: left;
 }
 
-/* line 1869, ../sass/catstrap/catstrap.scss */
+/* line 1870, ../sass/catstrap/catstrap.scss */
 #main_nav > ul > li > a:hover,
 #main_nav > ul > li > a:focus {
   text-decoration: none;
@@ -5792,7 +5836,7 @@ html {
   margin: 0;
   padding: 0;
 }
-/* line 81, ../sass/catstrap/catstrap-zen.scss */
+/* line 83, ../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links ul li a,
 #header_site #utility_links ul li a:link,
 #header_site #utility_links ul li a:visited {
@@ -5800,7 +5844,7 @@ html {
   padding: 1rem 0.5rem 0.5rem;
   margin: 0;
 }
-/* line 87, ../sass/catstrap/catstrap-zen.scss */
+/* line 89, ../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links ul li a:hover, #header_site #utility_links ul li a:focus, #header_site #utility_links ul li a:active,
 #header_site #utility_links ul li a:link:hover,
 #header_site #utility_links ul li a:link:focus,
@@ -5972,7 +6016,7 @@ footer#footer_site #footer_sub .container > * {
     margin: 0;
     display: block;
   }
-  /* line 244, ../sass/catstrap/catstrap-zen.scss */
+  /* line 246, ../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu li > a,
   .sidebar ul.menu li > a:link,
   .sidebar ul.menu li > a:visited {
@@ -5984,24 +6028,24 @@ footer#footer_site #footer_sub .container > * {
     color: #333;
   }
 
-  /* line 256, ../sass/catstrap/catstrap-zen.scss */
+  /* line 259, ../sass/catstrap/catstrap-zen.scss */
   .region-sidebar-first .menu > li > a:hover,
   .region-sidebar-first .menu > li > a:focus,
   .region-sidebar-first .menu > li.active a,
   .region-sidebar-first .menu > li a.active {
     background: url("../images/sidebar-menu-chevron-left.png") no-repeat scroll 100% center/30px 100% #dee8e7;
-    border-bottom: 0 solid transparent;
+    border-bottom: 0 solid rgba(0, 0, 0, 0);
     color: #076873;
     text-decoration: none;
   }
 
-  /* line 267, ../sass/catstrap/catstrap-zen.scss */
+  /* line 270, ../sass/catstrap/catstrap-zen.scss */
   .region-sidebar-second .menu > li > a:hover,
   .region-sidebar-second .menu > li > a:focus,
   .region-sidebar-second .menu > li.active a,
   .region-sidebar-second .menu > li a.active {
     background: url("../images/sidebar-menu-chevron-right.png") no-repeat scroll 0 center/30px 100% #dee8e7;
-    border-bottom: 0 solid transparent;
+    border-bottom: 0 solid rgba(0, 0, 0, 0);
     color: #076873;
     text-decoration: none;
   }
@@ -6015,7 +6059,7 @@ footer#footer_site div.contextual-links-wrapper ul.contextual-links {
   /*resets display for contextual links js behavior*/
   float: none;
 }
-/* line 288, ../sass/catstrap/catstrap-zen.scss */
+/* line 289, ../sass/catstrap/catstrap-zen.scss */
 div.contextual-links-wrapper li,
 div.contextual-links-wrapper a:not(.contextual-links-trigger),
 #main div.contextual-links-wrapper li,
@@ -6054,7 +6098,7 @@ footer#footer_site div.contextual-links-wrapper a:not(.contextual-links-trigger)
   padding: 0;
   margin: 0;
 }
-/* line 23, ../sass/components/_uazen-superfish.scss */
+/* line 24, ../sass/components/_uazen-superfish.scss */
 #main_nav ul.sf-menu li:hover > ul,
 #main_nav ul.sf-menu li.sfHover > ul {
   top: 100%;
@@ -6306,7 +6350,7 @@ footer#footer_site div.contextual-links-wrapper a:not(.contextual-links-trigger)
   margin: 0 0.8em;
   list-style: none;
 }
-/* line 29, ../sass/components/_uazen-views.scss */
+/* line 31, ../sass/components/_uazen-views.scss */
 .item-list ul.pager li a,
 .item-list ul.pager li a:link,
 .item-list ul.pager li a:visited {
@@ -6315,7 +6359,7 @@ footer#footer_site div.contextual-links-wrapper a:not(.contextual-links-trigger)
   background: none 0 0 scroll no-repeat transparent;
   color: #ab0520;
 }
-/* line 37, ../sass/components/_uazen-views.scss */
+/* line 39, ../sass/components/_uazen-views.scss */
 .item-list ul.pager li a:focus,
 .item-list ul.pager li a:hover,
 .item-list ul.pager li a:active {
