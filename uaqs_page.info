@@ -1,4 +1,4 @@
-name = UA Page
+name = UA Basic Page
 description = Provides basic page content type.
 core = 7.x
 package = The University of Arizona
@@ -10,8 +10,8 @@ dependencies[] = strongarm
 dependencies[] = text
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
-features[field_base][] = body
-features[field_instance][] = node-ua_page-body
+features[field_base][] = ua_page_body
+features[field_instance][] = node-ua_page-ua_page_body
 features[node][] = ua_page
 features[variable][] = node_options_ua_page
 features[variable][] = node_submitted_ua_page
