@@ -1733,7 +1733,7 @@ tr.selected td {
 /* line 813, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1433352604');
+  background-image: url('../images/progress.gif?1426188048');
 }
 
 /*Misc. Helper classes*/
@@ -4688,10 +4688,6 @@ footer#footer_site > .container {
   border-bottom: 1px solid #8E8C85;
 }
 /* line 198, ../sass/catstrap/catstrap-zen.scss */
-footer#footer_site ul {
-  display: inherit;
-}
-/* line 199, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site ul.menu {
   display: block;
   margin: 0;
@@ -4699,7 +4695,7 @@ footer#footer_site ul.menu {
   padding: 1rem 0 0;
   text-align: center;
 }
-/* line 205, ../sass/catstrap/catstrap-zen.scss */
+/* line 204, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site ul.menu > li {
   display: inline-block;
   list-style: none;
@@ -4707,21 +4703,21 @@ footer#footer_site ul.menu > li {
   padding: 0 .75rem;
   border-right: 1px solid #a8a69d;
 }
-/* line 212, ../sass/catstrap/catstrap-zen.scss */
+/* line 211, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site ul.menu > li.last {
   border-right: 0;
 }
-/* line 217, ../sass/catstrap/catstrap-zen.scss */
+/* line 216, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site #footer_sub .container {
   padding-top: 0.5rem;
 }
-/* line 219, ../sass/catstrap/catstrap-zen.scss */
+/* line 218, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site #footer_sub .container > * {
   font-size: 0.96rem;
 }
 
 @media (min-width: 992px) {
-  /* line 226, ../sass/catstrap/catstrap-zen.scss */
+  /* line 225, ../sass/catstrap/catstrap-zen.scss */
   footer#footer_site .footer-logo {
     float: left;
     margin: 0 1rem 1rem 0;
@@ -4729,20 +4725,20 @@ footer#footer_site #footer_sub .container > * {
 }
 /* SIDE MENUS */
 @media screen and (min-width: 60em) {
-  /* line 235, ../sass/catstrap/catstrap-zen.scss */
+  /* line 234, ../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu {
     list-style: none outside none;
     padding: 0;
     margin: 0;
   }
-  /* line 239, ../sass/catstrap/catstrap-zen.scss */
+  /* line 238, ../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu li {
     list-style: none outside none;
     padding: 0;
     margin: 0;
     display: block;
   }
-  /* line 247, ../sass/catstrap/catstrap-zen.scss */
+  /* line 246, ../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu li > a,
   .sidebar ul.menu li > a:link,
   .sidebar ul.menu li > a:visited {
@@ -4754,7 +4750,7 @@ footer#footer_site #footer_sub .container > * {
     color: #333;
   }
 
-  /* line 260, ../sass/catstrap/catstrap-zen.scss */
+  /* line 259, ../sass/catstrap/catstrap-zen.scss */
   .region-sidebar-first .menu > li > a:hover,
   .region-sidebar-first .menu > li > a:focus,
   .region-sidebar-first .menu > li.active a,
@@ -4765,7 +4761,7 @@ footer#footer_site #footer_sub .container > * {
     text-decoration: none;
   }
 
-  /* line 271, ../sass/catstrap/catstrap-zen.scss */
+  /* line 270, ../sass/catstrap/catstrap-zen.scss */
   .region-sidebar-second .menu > li > a:hover,
   .region-sidebar-second .menu > li > a:focus,
   .region-sidebar-second .menu > li.active a,
@@ -4776,6 +4772,28 @@ footer#footer_site #footer_sub .container > * {
     text-decoration: none;
   }
 }
+/* DRUPAL UI COMPONENTS */
+/* line 284, ../sass/catstrap/catstrap-zen.scss */
+div.contextual-links-wrapper ul.contextual-links,
+#main div.contextual-links-wrapper ul.contextual-links,
+footer#footer_site div.contextual-links-wrapper ul.contextual-links {
+  display: none;
+  /*resets display for contextual links js behavior*/
+  float: none;
+}
+/* line 289, ../sass/catstrap/catstrap-zen.scss */
+div.contextual-links-wrapper li,
+div.contextual-links-wrapper a:not(.contextual-links-trigger),
+#main div.contextual-links-wrapper li,
+#main div.contextual-links-wrapper a:not(.contextual-links-trigger),
+footer#footer_site div.contextual-links-wrapper li,
+footer#footer_site div.contextual-links-wrapper a:not(.contextual-links-trigger) {
+  border: 0 none;
+  float: none;
+  display: inherit;
+  text-align: left;
+}
+
 /* OPTIONAL UA ZEN COMPONENTS - COMMENT OUT WHAT YOU DON'T NEED */
 /* line 3, ../sass/components/_uazen-superfish.scss */
 #main_nav ul.sf-menu select {
@@ -5001,7 +5019,7 @@ footer#footer_site #footer_sub .container > * {
   line-height: 1.4;
 }
 /* line 16, ../sass/components/_uazen-home-modules.scss */
-.block.mission-statement a {
+.block.mission-statement a:not(.contextual-links-trigger) {
   display: block;
   padding: 16px;
   padding: 1rem;
