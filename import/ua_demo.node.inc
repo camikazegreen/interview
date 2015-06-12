@@ -35,8 +35,8 @@ class UaDemoPage extends Migration {
     $this->addFieldMapping('language')->defaultValue(LANGUAGE_NONE);
     $this->addFieldMapping('title', 'title');
     $this->addFieldMapping('path', 'path');
-    $this->addFieldMapping('body', 'body');
-    $this->addFieldMapping('body:format')->defaultValue('filtered_html');
+    $this->addFieldMapping('ua_page_body', 'body');
+    $this->addFieldMapping('ua_page_body:format')->defaultValue('filtered_html');
     $this->addFieldMapping('created', 'created');
   }
 
