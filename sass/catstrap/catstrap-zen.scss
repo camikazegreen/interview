@@ -195,7 +195,6 @@ footer#footer_site {
 		img { max-height:100px;	}
 	}
 	> .container { border-bottom: 1px solid #8E8C85; }
-	ul.contextual-links { display: none; /*resets ul display for contextual links js behavior*/ }
 	ul.menu {
 	  display: block;
 	  margin: 0;
@@ -274,5 +273,23 @@ footer#footer_site {
 		    color: #076873;
 		    text-decoration: none;
 		}
+	}
+}
+
+
+/* DRUPAL UI COMPONENTS */
+div.contextual-links-wrapper,
+#main div.contextual-links-wrapper,
+footer#footer_site div.contextual-links-wrapper {
+	ul.contextual-links {
+	display: none; /*resets display for contextual links js behavior*/
+	float: none;
+	}
+	li,
+	a:not(.contextual-links-trigger) { 
+		border: 0 none;
+		float: none;
+		display: inherit;
+		text-align: left;
 	}
 }
