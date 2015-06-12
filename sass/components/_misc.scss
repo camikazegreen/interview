@@ -514,6 +514,42 @@ span.field-label {
   color: #000;
 }
 
+/* footer column menus */
+footer#footer_site .column-menu {
+	display: block;
+	ul.menu li {
+			display: block;
+			float: none;
+			border: 0 none;
+			margin-bottom: 0.5em;
+	}
+}
+
+
+@media screen and (min-width: 48em) {
+	footer#footer_site .column-menu {
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+		ul.menu {
+			text-align: left;
+		}
+	}
+}
+
+@media screen and (min-width: 60em) {
+	footer#footer_site .container { overflow: hidden; }
+	footer#footer_site .column-menu {
+		padding: 0 0 13em 1em;
+		margin: 0 0 -13em 1em;
+		border-left: 1px solid #a8a69d;
+		display: inline-block;
+		vertical-align: top;
+		width: inherit;
+	}
+}
+
+
 /**
  * Marker.
  */
