@@ -48,3 +48,8 @@ dependencies[] = ua_demo
 dependencies[] = ua_featured_content
 dependencies[] = ua_navigation
 dependencies[] = ua_page
+
+; 'Soft' contrib module dependencies
+; These will be enabled by the install profile but can still be disabled.
+; -----------------------------------------------------------------------
+dependencies[] = views_ui
