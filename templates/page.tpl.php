@@ -62,16 +62,20 @@
           <?php print render($page['content']); ?>
           <?php print $feed_icons; ?>
         </section>
-
-        <?php
-          // Render the sidebars to see if there's anything in them.
-          $sidebar_first  = render($page['sidebar_first']);
-          $sidebar_second = render($page['sidebar_second']);
-        ?>
-
-        <?php if ($sidebar_first || $sidebar_second): ?>
-            <?php print $sidebar_first; ?>
-            <?php print $sidebar_second; ?>
+        <?php if (!empty($page['sidebar_first']) && empty($page['sidebar_second'])): ?>
+          <aside class="col-sm-3 col-sm-pull-9" role="complementary">
+            <?php print render($page['sidebar_first']); ?>
+          </aside>  <!-- /#sidebar-first -->
+        <?php endif; ?>
+        <?php if (!empty($page['sidebar_first']) && !empty($page['sidebar_second'])): ?>
+          <aside class="col-sm-3 col-md-pull-6" role="complementary">
+            <?php print render($page['sidebar_first']); ?>
+          </aside>  <!-- /#sidebar-first -->
+        <?php endif; ?>
+        <?php if (!empty($page['sidebar_second'])): ?>
+          <aside class="col-sm-3" role="complementary">
+            <?php print render($page['sidebar_second']); ?>
+          </aside>  <!-- /#sidebar-second -->
         <?php endif; ?>
       </div>
     </div> <!-- /.container -->
