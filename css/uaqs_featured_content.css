@@ -56,7 +56,7 @@ background-color:black;
 }
 .backgroundblendmode #content_featured .flexslider ul.slides li .slide-image-container {
   opacity:1;
-  background-blend-mode: color;
+  background-blend-mode: soft-light;
   background-color: hsla(0, 0%, 0%, 0.8);
   transition: all 0.3s ease;
 }
