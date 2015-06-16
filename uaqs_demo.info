@@ -6,5 +6,7 @@ dependencies[] = migrate
 dependencies[] = ua_featured_content
 dependencies[] = ua_navigation
 dependencies[] = ua_page
+dependencies[] = ua_person
 files[] = import/ua_demo.node.inc
 files[] = import/ua_demo.menu.inc
+files[] = import/ua_demo_person.inc
