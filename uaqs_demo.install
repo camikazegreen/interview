@@ -8,13 +8,13 @@
  * Implements hook_enable().
  */
 function ua_demo_enable() {
-  _ua_demo_import_demo_content(array('UaDemoPage', 'UaDemoMenu', 'UaDemoCarouselItem', 'UaDemoPerson'));
-  variable_set('site_frontpage', 'primus');
+  migrate_static_registration();
+  variable_set('site_frontpage', 'node/1');
 }
 
 /**
  * Implements hook_disable().
  */
 function ua_demo_disable() {
-  _ua_demo_rollback_demo_content(array('UaDemoMenu', 'UaDemoPerson', 'UaDemoPage', 'UaDemoCarouselItem'));
+  MigrateGroup::deregister('ua_demo');;
 }
