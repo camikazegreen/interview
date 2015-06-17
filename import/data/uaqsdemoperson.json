@@ -4,8 +4,8 @@
     "ua_person_fname"  : "Anders",
     "ua_person_email"  : "donald@email.arizona.edu",
     "ua_person_bio"    : "Enjoyed a lengthy Hollywood career before his current employment at the University of Arizona (joint with the University of Oregon).",
-    "ua_person_phones" : "031-667-1071",
-    "ua_person_titles" : "Chair of Iconic Studies",
+    "ua_person_phones" : "031-667-1071|053-246-1514",
+    "ua_person_titles" : "Professor|Chair of Iconic Studies",
     "ua_person_addresses" : "Communications W32",
     "ua_person_photo" : "placeduck10.jpg"
   },
@@ -45,7 +45,7 @@
     "ua_person_email"  : "alcofribasnasier@email.arizona.edu",
     "ua_person_bio"    : "A central figure in the study of late fifteenth to early sixteenth century French literature.",
     "ua_person_phones" : "091-374-2832",
-    "ua_person_titles" : "Abstractor of the Quintessence",
+    "ua_person_titles" : "Abstractor of the Quintessence|Associate Professor",
     "ua_person_addresses" : "Early Modern Languages 101",
     "ua_person_photo" : "placeduck05.jpg"
   },
@@ -74,7 +74,7 @@
     "ua_person_fname"  : "Antonio",
     "ua_person_email"  : "typefoundry@email.arizona.edu",
     "ua_person_bio"    : "A leading proponent of high-quality book production in the New World.",
-    "ua_person_phones" : "023-475-2795",
+    "ua_person_phones" : "023-475-2795|021-471-2611",
     "ua_person_titles" : "Research Associate",
     "ua_person_addresses" : "Book Art & Letterpress Punchcutting Shed",
     "ua_person_photo" : "placeduck08.jpg"

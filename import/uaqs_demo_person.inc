@@ -36,15 +36,18 @@ class UaDemoPersonMigration extends Migration {
     // Documented lists of source data fields: all names here MUST match
     // those in the corresponding content type.
     // @see ua_person ua_person.features.field_instance.inc
-    // First, the text fielda...
-    $data_fields = array(
+    // First, the single-value text fielda...
+    $single_value_fields = array(
       'ua_person_lname'  => t('Last Name (string)'),
       'ua_person_fname'  => t('First Name (string)'),
       'ua_person_email'  => t('E-mail (string)'),
+      'ua_person_addresses' => t('Office location(s) (string)'),
       'ua_person_bio'    => t('Biography (string)'),
+    );
+    // Then the multi-value text fields...
+    $multi_value_fields = array(
       'ua_person_phones' => t('Phone Number(s) (string[])'),
       'ua_person_titles' => t('Job Title(s) (string[])'),
-      'ua_person_addresses' => t('Office location(s) (string[])'),
     );
     // Image fields need special treatment, isolate them...
     $image_src_field = 'ua_person_photo';
@@ -55,7 +58,7 @@ class UaDemoPersonMigration extends Migration {
     $source_key = array($id_field => t('Unique key (int)'));
 
     // All the fields to migrate.
-    $fields = $source_key + $data_fields + $image_fields;
+    $fields = $source_key + $single_value_fields + $multi_value_fields + $image_fields;
 
     // Source definition.
     $json_filename = drupal_strtolower($this->machineName) . '.json';
@@ -79,8 +82,14 @@ class UaDemoPersonMigration extends Migration {
     );
 
     // One-to-one correspondence: JSON names and simple content type fields.
-    foreach (array_keys($data_fields) as $src_field) {
+    foreach (array_keys($single_value_fields) as $src_field) {
       $this->addFieldMapping('field_' . $src_field, $src_field);
+    }
+
+    // Multi-value fields need an explicit sparator (nesting { } doesn't work).
+    foreach (array_keys($multi_value_fields) as $src_field) {
+      $this->addFieldMapping('field_' . $src_field, $src_field)
+           ->separator('|');
     }
 
     //Image fields are more complicated.
