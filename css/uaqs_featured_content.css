@@ -306,4 +306,8 @@ color:white;
 }
 
 @media (min-width: 75em) {
+  #content_featured .flex-viewport {
+    max-width: 1200px;
+    max-width: 75em;
+  }
 }
