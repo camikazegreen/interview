@@ -9,6 +9,11 @@
  */
 function ua_demo_enable() {
   migrate_static_registration();
+  $info = ua_demo_migrate_api();
+  foreach ($info['migrations'] as $machine_name => $arguments) {
+    $migration = Migration::getInstance($machine_name);
+    $migration->processImport();
+  }
   variable_set('site_frontpage', 'node/1');
 }
 
@@ -16,5 +21,10 @@ function ua_demo_enable() {
  * Implements hook_disable().
  */
 function ua_demo_disable() {
+  $info = ua_demo_migrate_api();
+  foreach ($info['migrations'] as $machine_name => $arguments) {
+    $migration = Migration::getInstance($machine_name);
+    $migration->processRollback();
+  }
   MigrateGroup::deregister('ua_demo');;
 }
