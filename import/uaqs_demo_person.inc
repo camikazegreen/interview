@@ -47,8 +47,8 @@ class UaDemoPersonMigration extends Migration {
       'ua_person_addresses' => t('Office location(s) (string[])'),
     );
     // Image fields need special treatment, isolate them...
-    $image_field = 'ua_person_photo';
-    $image_fields = array($image_field => t('Photo filename (string)'));
+    $image_src_field = 'ua_person_photo';
+    $image_fields = array($image_src_field => t('Photo filename (string)'));
 
     // Source key field (must have int values).
     $id_field = 'id';
@@ -79,16 +79,19 @@ class UaDemoPersonMigration extends Migration {
     );
 
     // One-to-one correspondence: JSON names and simple content type fields.
-    $this->addSimpleMappings(array_keys($data_fields));
+    foreach (array_keys($data_fields) as $src_field) {
+      $this->addFieldMapping('field_' . $src_field, $src_field);
+    }
 
     //Image fields are more complicated.
-    $this->addFieldMapping($image_field, $image_field);
-    $this->addFieldMapping($image_field . ':file_replace')
+    $image_dst_field = 'field_' . $image_src_field;
+    $this->addFieldMapping($image_dst_field, $image_src_field);
+    $this->addFieldMapping($image_dst_field . ':file_replace')
          ->defaultValue(FILE_EXISTS_REPLACE);
     //  MigrateFileUri works for a local filespec as well as remote URIs.
-    $this->addFieldMapping($image_field . ':file_class')
+    $this->addFieldMapping($image_dst_field . ':file_class')
          ->defaultValue('MigrateFileUri');
-    $this->addFieldMapping($image_field . ':source_dir')
+    $this->addFieldMapping($image_dst_field . ':source_dir')
          ->defaultValue($our_path . '/import/images');
   }
 
