@@ -7,7 +7,7 @@
     "ua_person_phones" : "031-667-1071",
     "ua_person_titles" : "Chair of Iconic Studies",
     "ua_person_addresses" : "Communications W32",
-    "ua_person_photo" : "placeduck10.jpg",
+    "ua_person_photo" : "placeduck10.jpg"
   },
   {"id":2,
     "ua_person_lname"  : "Ælling",
@@ -17,7 +17,7 @@
     "ua_person_phones" : "071-388-2333",
     "ua_person_titles" : "Assistant Research Professor",
     "ua_person_addresses" : "Modern Languages Extra Glyphs Annex",
-    "ua_person_photo" : "placeduck01.jpg",
+    "ua_person_photo" : "placeduck01.jpg"
   },
   {"id":3,
     "ua_person_lname"  : "An'ersen",
@@ -27,7 +27,7 @@
     "ua_person_phones" : "071-831-6181",
     "ua_person_titles" : "Associate Professor",
     "ua_person_addresses" : "SBS sub-sub basement 004",
-    "ua_person_photo" : "placeduck04.jpg",
+    "ua_person_photo" : "placeduck04.jpg"
   },
   {"id":4,
     "ua_person_lname"  : "Quack",
@@ -37,7 +37,7 @@
     "ua_person_phones" : "086-572-2311",
     "ua_person_titles" : "Professor",
     "ua_person_addresses" : "Haury 8001",
-    "ua_person_photo" : "placeduck11.jpg",
+    "ua_person_photo" : "placeduck11.jpg"
   },
   {"id":5,
     "ua_person_lname"  : "Nasier",
@@ -47,7 +47,7 @@
     "ua_person_phones" : "091-374-2832",
     "ua_person_titles" : "Abstractor of the Quintessence",
     "ua_person_addresses" : "Early Modern Languages 101",
-    "ua_person_photo" : "placeduck05.jpg",
+    "ua_person_photo" : "placeduck05.jpg"
   },
   {"id":6,
     "ua_person_lname"  : "Urquhart",
@@ -57,7 +57,7 @@
     "ua_person_phones" : "041-334-8100",
     "ua_person_titles" : "Research Associate",
     "ua_person_addresses" : "Math East 1645",
-    "ua_person_photo" : "placeduck07.jpg",
+    "ua_person_photo" : "placeduck07.jpg"
   },
   {"id":7,
     "ua_person_lname"  : "Horne",
@@ -67,7 +67,7 @@
     "ua_person_phones" : "041-552-8467",
     "ua_person_titles" : "Assistant Research Professor",
     "ua_person_addresses" : "Integrative Medicine 904",
-    "ua_person_photo" : "placeduck06.jpg",
+    "ua_person_photo" : "placeduck06.jpg"
   },
   {"id":8,
     "ua_person_lname"  : "de Espinosa",
@@ -77,7 +77,7 @@
     "ua_person_phones" : "023-475-2795",
     "ua_person_titles" : "Research Associate",
     "ua_person_addresses" : "Book Art & Letterpress Punchcutting Shed",
-    "ua_person_photo" : "placeduck08.jpg",
+    "ua_person_photo" : "placeduck08.jpg"
   },
   {"id":9,
     "ua_person_lname"  : "Strozzi",
@@ -87,7 +87,7 @@
     "ua_person_phones" : "081-981-7331",
     "ua_person_titles" : "Associate Professor",
     "ua_person_addresses" : "Music 1619",
-    "ua_person_photo" : "placeduck02.jpg",
+    "ua_person_photo" : "placeduck02.jpg"
   },
   {"id":10,
     "ua_person_lname"  : "Urania",
@@ -97,7 +97,7 @@
     "ua_person_phones" : "022-333-8848",
     "ua_person_titles" : "Professor",
     "ua_person_addresses" : "Drake Building 1572",
-    "ua_person_photo" : "placeduck03.jpg",
+    "ua_person_photo" : "placeduck03.jpg"
   },
   {"id":11,
     "ua_person_lname"  : "Giovanni",
@@ -107,6 +107,6 @@
     "ua_person_phones" : "086-572-2311",
     "ua_person_titles" : "Dean of Intra-Faculty Affairs",
     "ua_person_addresses" : "Administration 1787",
-    "ua_person_photo" : "placeduck09.jpg",
-  },
+    "ua_person_photo" : "placeduck09.jpg"
+  }
 ]
