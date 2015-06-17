@@ -2651,47 +2651,94 @@ span.field-label {
   color: #000;
 }
 
-/* footer column menus */
-/* line 518, ../sass/components/_misc.scss */
+/* footer menus */
+/* line 519, ../sass/components/_misc.scss */
+footer#footer_site h2 {
+  font: normal normal bold 0.88em MiloWeb, Verdana, Geneva, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333;
+}
+/* line 525, ../sass/components/_misc.scss */
 footer#footer_site .column-menu {
   display: block;
+  padding-top: 1.5rem;
+  border-top: 1px solid #a8a69d;
 }
-/* line 520, ../sass/components/_misc.scss */
+/* line 529, ../sass/components/_misc.scss */
+footer#footer_site .column-menu:first-child {
+  border-top: 0 none;
+}
+/* line 530, ../sass/components/_misc.scss */
 footer#footer_site .column-menu ul.menu li {
   display: block;
   float: none;
   border: 0 none;
-  margin-bottom: 0.5em;
+  padding: 0;
+  margin-bottom: 0.7em;
+  line-height: 1.2;
+}
+/* line 537, ../sass/components/_misc.scss */
+footer#footer_site .column-menu ul.menu li a, footer#footer_site .column-menu ul.menu li a:link, footer#footer_site .column-menu ul.menu li a:visited {
+  text-decoration: none;
+  font-weight: normal;
+}
+/* line 541, ../sass/components/_misc.scss */
+footer#footer_site .column-menu ul.menu li a:focus, footer#footer_site .column-menu ul.menu li a:hover, footer#footer_site .column-menu ul.menu li a:active {
+  color: #2A6496;
 }
 
 @media screen and (min-width: 48em) {
-  /* line 529, ../sass/components/_misc.scss */
+  /* line 549, ../sass/components/_misc.scss */
   footer#footer_site .column-menu {
     display: inline-block;
     vertical-align: top;
-    width: 50%;
+    border: 0 none;
+    width: 49%;
   }
-  /* line 533, ../sass/components/_misc.scss */
+  /* line 554, ../sass/components/_misc.scss */
+  footer#footer_site .column-menu h2 {
+    text-align: left;
+    padding: 0 2rem;
+  }
+  /* line 557, ../sass/components/_misc.scss */
   footer#footer_site .column-menu ul.menu {
+    padding: 1rem 2rem 0;
     text-align: left;
   }
 }
 @media screen and (min-width: 60em) {
-  /* line 540, ../sass/components/_misc.scss */
+  /* line 565, ../sass/components/_misc.scss */
   footer#footer_site .column-menu {
-    padding: 0 0 0 1em;
-    margin: 0 0 0 1em;
+    position: relative;
+    padding: 0 0 0 1rem;
+    margin: 0 0 0 1rem;
+    border-top: 0 none;
     border-left: 1px solid #a8a69d;
     display: inline-block;
     vertical-align: top;
-    width: inherit;
+    min-height: 16em;
+    width: 16%;
+  }
+  /* line 575, ../sass/components/_misc.scss */
+  footer#footer_site .column-menu h2 {
+    padding: 0;
+  }
+  /* line 576, ../sass/components/_misc.scss */
+  footer#footer_site .column-menu ul.menu {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  /* line 579, ../sass/components/_misc.scss */
+  footer#footer_site .column-menu ul.menu a {
+    font-size: 0.875em;
   }
 }
 /**
  * Marker.
  */
 /* The "new" or "updated" marker. */
-/* line 557, ../sass/components/_misc.scss */
+/* line 591, ../sass/components/_misc.scss */
 .new,
 .update {
   color: #c00;
@@ -2703,7 +2750,7 @@ footer#footer_site .column-menu ul.menu li {
  * Unpublished note.
  */
 /* The word "Unpublished" displayed underneath the content. */
-/* line 568, ../sass/components/_misc.scss */
+/* line 602, ../sass/components/_misc.scss */
 .unpublished {
   height: 0;
   overflow: visible;
@@ -2724,31 +2771,31 @@ footer#footer_site .column-menu ul.menu li {
  * Comments.
  */
 /* Wrapper for the list of comments and its title. */
-/* line 595, ../sass/components/_misc.scss */
+/* line 629, ../sass/components/_misc.scss */
 .comments {
   margin: 1.5em 0;
 }
 
 /* Preview of the comment before submitting new or updated comment. */
-/* line 600, ../sass/components/_misc.scss */
+/* line 634, ../sass/components/_misc.scss */
 .comment-preview {
   /* Drupal core will use a #ffffea background. See #1110842. */
   background-color: #ffffea;
 }
 
 /* Wrapper for a single comment. */
-/* line 606, ../sass/components/_misc.scss */
+/* line 640, ../sass/components/_misc.scss */
 .comment {
   /* Comment's permalink wrapper. */
 }
-/* line 609, ../sass/components/_misc.scss */
+/* line 643, ../sass/components/_misc.scss */
 .comment .permalink {
   text-transform: uppercase;
   font-size: 75%;
 }
 
 /* Nested comments are indented. */
-/* line 616, ../sass/components/_misc.scss */
+/* line 650, ../sass/components/_misc.scss */
 .indented {
   /* Drupal core uses a 25px left margin. */
   margin-left: 30px;
@@ -2759,7 +2806,7 @@ footer#footer_site .column-menu ul.menu li {
  * Forms.
  */
 /* Wrapper for a form element (or group of form elements) and its label. */
-/* line 626, ../sass/components/_misc.scss */
+/* line 660, ../sass/components/_misc.scss */
 .form-item {
   margin: 1.5em 0;
   /* Pack groups of checkboxes and radio buttons closer together. */
@@ -2767,47 +2814,47 @@ footer#footer_site .column-menu ul.menu li {
   /* Highlight the form elements that caused a form submission error. */
   /* The descriptive help text (separate from the label). */
 }
-/* line 631, ../sass/components/_misc.scss */
+/* line 665, ../sass/components/_misc.scss */
 .form-checkboxes .form-item, .form-radios .form-item {
   /* Drupal core uses "0.4em 0". */
   margin: 0;
 }
-/* line 638, ../sass/components/_misc.scss */
+/* line 672, ../sass/components/_misc.scss */
 tr.odd .form-item, tr.even .form-item {
   margin: 0;
 }
-/* line 645, ../sass/components/_misc.scss */
+/* line 679, ../sass/components/_misc.scss */
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
   border: 1px solid #c00;
 }
-/* line 650, ../sass/components/_misc.scss */
+/* line 684, ../sass/components/_misc.scss */
 .form-item .description {
   font-size: 0.85em;
 }
 
-/* line 657, ../sass/components/_misc.scss */
+/* line 691, ../sass/components/_misc.scss */
 .form-type-radio .description,
 .form-type-checkbox .description {
   margin-left: 2.4em;
 }
 
 /* The part of the label that indicates a required field. */
-/* line 663, ../sass/components/_misc.scss */
+/* line 697, ../sass/components/_misc.scss */
 .form-required {
   color: #c00;
 }
 
 /* Labels for radios and checkboxes. */
-/* line 668, ../sass/components/_misc.scss */
+/* line 702, ../sass/components/_misc.scss */
 label.option {
   display: inline;
   font-weight: normal;
 }
 
 /* Buttons used by contrib modules like Media. */
-/* line 674, ../sass/components/_misc.scss */
+/* line 708, ../sass/components/_misc.scss */
 a.button {
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -2815,14 +2862,14 @@ a.button {
 }
 
 /* Password confirmation. */
-/* line 680, ../sass/components/_misc.scss */
+/* line 714, ../sass/components/_misc.scss */
 .password-parent,
 .confirm-parent {
   margin: 0;
 }
 
 /* Drupal's default login form block. */
-/* line 685, ../sass/components/_misc.scss */
+/* line 719, ../sass/components/_misc.scss */
 #user-login-form {
   text-align: left;
   /* LTR */
@@ -2835,20 +2882,20 @@ a.button {
  * styling of list items.
  */
 /* OpenID creates a new ul above the login form's links. */
-/* line 697, ../sass/components/_misc.scss */
+/* line 731, ../sass/components/_misc.scss */
 .openid-links {
   /* Position OpenID's ul next to the rest of the links. */
   margin-bottom: 0;
 }
 
 /* The "Log in using OpenID" and "Cancel OpenID login" links. */
-/* line 704, ../sass/components/_misc.scss */
+/* line 738, ../sass/components/_misc.scss */
 .openid-link,
 .user-link {
   margin-top: 1.5em;
 }
 
-/* line 708, ../sass/components/_misc.scss */
+/* line 742, ../sass/components/_misc.scss */
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   /* Un-do some of the padding on the ul list. */
@@ -2856,7 +2903,7 @@ html.js #user-login-form li.openid-link,
   /* LTR */
 }
 
-/* line 712, ../sass/components/_misc.scss */
+/* line 746, ../sass/components/_misc.scss */
 #user-login ul {
   margin: 1.5em 0;
 }
@@ -2864,7 +2911,7 @@ html.js #user-login-form li.openid-link,
 /**
  * Drupal admin tables.
  */
-/* line 720, ../sass/components/_misc.scss */
+/* line 754, ../sass/components/_misc.scss */
 form th {
   text-align: left;
   /* LTR */
@@ -2872,16 +2919,16 @@ form th {
   /* LTR */
   border-bottom: 3px solid #ccc;
 }
-/* line 725, ../sass/components/_misc.scss */
+/* line 759, ../sass/components/_misc.scss */
 form tbody {
   border-top: 1px solid #ccc;
 }
-/* line 728, ../sass/components/_misc.scss */
+/* line 762, ../sass/components/_misc.scss */
 form table ul {
   margin: 0;
 }
 
-/* line 733, ../sass/components/_misc.scss */
+/* line 767, ../sass/components/_misc.scss */
 tr.even,
 tr.odd {
   background-color: #eee;
@@ -2889,26 +2936,26 @@ tr.odd {
   padding: 0.1em 0.6em;
 }
 
-/* line 738, ../sass/components/_misc.scss */
+/* line 772, ../sass/components/_misc.scss */
 tr.even {
   background-color: #fff;
 }
 
 /* Markup generated by theme_tablesort_indicator(). */
-/* line 753, ../sass/components/_misc.scss */
+/* line 787, ../sass/components/_misc.scss */
 td.active {
   background-color: #ddd;
 }
 
 /* Center checkboxes inside table cell. */
-/* line 759, ../sass/components/_misc.scss */
+/* line 793, ../sass/components/_misc.scss */
 td.checkbox,
 th.checkbox {
   text-align: center;
 }
 
 /* Drupal core wrongly puts this in system.menus.css. Since we override that, add it back. */
-/* line 764, ../sass/components/_misc.scss */
+/* line 798, ../sass/components/_misc.scss */
 td.menu-disabled {
   background: #ccc;
 }
@@ -2919,7 +2966,7 @@ td.menu-disabled {
  * @see autocomplete.js
  */
 /* Suggestion list. */
-/* line 775, ../sass/components/_misc.scss */
+/* line 809, ../sass/components/_misc.scss */
 #autocomplete .selected {
   background: #0072b9;
   color: #fff;
@@ -2930,7 +2977,7 @@ td.menu-disabled {
  *
  * @see collapse.js
  */
-/* line 786, ../sass/components/_misc.scss */
+/* line 820, ../sass/components/_misc.scss */
 html.js .collapsible .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
   background-position: 5px 65%;
@@ -2939,14 +2986,14 @@ html.js .collapsible .fieldset-legend {
   padding-left: 15px;
   /* LTR */
 }
-/* line 795, ../sass/components/_misc.scss */
+/* line 829, ../sass/components/_misc.scss */
 html.js .collapsed .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABFJREFUCB1jVmCGQClmEWYOAAZ8AMy3HPLXAAAAAElFTkSuQmCC');
   /* LTR */
   background-position: 5px 50%;
   /* LTR */
 }
-/* line 802, ../sass/components/_misc.scss */
+/* line 836, ../sass/components/_misc.scss */
 .fieldset-legend .summary {
   color: #999;
   font-size: 0.9em;
@@ -2958,17 +3005,17 @@ html.js .collapsed .fieldset-legend {
  *
  * @see tabledrag.js
  */
-/* line 814, ../sass/components/_misc.scss */
+/* line 848, ../sass/components/_misc.scss */
 tr.drag {
   background-color: #fffff0;
 }
 
-/* line 817, ../sass/components/_misc.scss */
+/* line 851, ../sass/components/_misc.scss */
 tr.drag-previous {
   background-color: #ffd;
 }
 
-/* line 820, ../sass/components/_misc.scss */
+/* line 854, ../sass/components/_misc.scss */
 .tabledrag-toggle-weight {
   font-size: 0.9em;
 }
@@ -2978,7 +3025,7 @@ tr.drag-previous {
  *
  * @see tableselect.js
  */
-/* line 829, ../sass/components/_misc.scss */
+/* line 863, ../sass/components/_misc.scss */
 tr.selected td {
   background: #ffc;
 }
@@ -2988,11 +3035,11 @@ tr.selected td {
  *
  * @see progress.js
  */
-/* line 838, ../sass/components/_misc.scss */
+/* line 872, ../sass/components/_misc.scss */
 .progress {
   font-weight: bold;
 }
-/* line 841, ../sass/components/_misc.scss */
+/* line 875, ../sass/components/_misc.scss */
 .progress .bar {
   background: #ccc;
   border-color: #666;
@@ -3003,7 +3050,7 @@ tr.selected td {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 847, ../sass/components/_misc.scss */
+/* line 881, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
   background-image: url('../images/progress.gif?1426188048');
@@ -3011,25 +3058,25 @@ tr.selected td {
 
 /*Misc. Helper classes*/
 /*.pull-left Floats an element to the leftFloatsTry it*/
-/* line 855, ../sass/components/_misc.scss */
+/* line 889, ../sass/components/_misc.scss */
 .pull-left {
   float: left !important;
 }
 
 /*.pull-right Floats an element to the rightFloatsTry it*/
-/* line 859, ../sass/components/_misc.scss */
+/* line 893, ../sass/components/_misc.scss */
 .pull-right {
   float: right !important;
 }
 
 /*.relative Adds position relative*/
-/* line 863, ../sass/components/_misc.scss */
+/* line 897, ../sass/components/_misc.scss */
 .relative {
   position: relative !important;
 }
 
 /*.absolute Adds position absolute*/
-/* line 867, ../sass/components/_misc.scss */
+/* line 901, ../sass/components/_misc.scss */
 .absolute {
   position: absolute !important;
 }
@@ -5949,7 +5996,7 @@ html {
 /* FOOTER */
 /* line 192, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site .footer-logo {
-  margin: 0 0 1rem;
+  margin: 0 auto 2.5rem;
   max-width: 400px;
 }
 /* line 195, ../sass/catstrap/catstrap-zen.scss */
@@ -5960,16 +6007,24 @@ footer#footer_site .footer-logo img {
 footer#footer_site > .container {
   border-bottom: 1px solid #8E8C85;
   position: relative;
+  padding-bottom: 1rem;
 }
-/* line 201, ../sass/catstrap/catstrap-zen.scss */
+/* line 202, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site ul.menu {
   display: block;
   margin: 0;
   padding: 16px 0 0;
   padding: 1rem 0 0;
   text-align: center;
+  float: none;
 }
-/* line 207, ../sass/catstrap/catstrap-zen.scss */
+/* line 209, ../sass/catstrap/catstrap-zen.scss */
+footer#footer_site ul.menu:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+}
+/* line 214, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site ul.menu > li {
   display: inline-block;
   list-style: none;
@@ -5977,42 +6032,55 @@ footer#footer_site ul.menu > li {
   padding: 0 .75rem;
   border-right: 1px solid #a8a69d;
 }
-/* line 214, ../sass/catstrap/catstrap-zen.scss */
+/* line 221, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site ul.menu > li.last {
   border-right: 0;
 }
-/* line 219, ../sass/catstrap/catstrap-zen.scss */
+/* line 226, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site #footer_sub .container {
   padding-top: 0.5rem;
 }
-/* line 221, ../sass/catstrap/catstrap-zen.scss */
+/* line 228, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site #footer_sub .container > * {
   font-size: 0.96rem;
 }
+/* line 231, ../sass/catstrap/catstrap-zen.scss */
+footer#footer_site #footer_sub .container p {
+  text-align: center;
+}
 
-@media (min-width: 992px) {
-  /* line 228, ../sass/catstrap/catstrap-zen.scss */
+@media (min-width: 60em) {
+  /* line 237, ../sass/catstrap/catstrap-zen.scss */
+  footer#footer_site ul.menu {
+    float: right;
+  }
+  /* line 238, ../sass/catstrap/catstrap-zen.scss */
   footer#footer_site .footer-logo {
     float: left;
     margin: 0 1rem 1rem 0;
   }
+
+  /* line 243, ../sass/catstrap/catstrap-zen.scss */
+  #footer_sub .container p {
+    text-align: left;
+  }
 }
 /* SIDE MENUS */
 @media screen and (min-width: 60em) {
-  /* line 237, ../sass/catstrap/catstrap-zen.scss */
+  /* line 249, ../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu {
     list-style: none outside none;
     padding: 0;
     margin: 0;
   }
-  /* line 241, ../sass/catstrap/catstrap-zen.scss */
+  /* line 253, ../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu li {
     list-style: none outside none;
     padding: 0;
     margin: 0;
     display: block;
   }
-  /* line 249, ../sass/catstrap/catstrap-zen.scss */
+  /* line 261, ../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu li > a,
   .sidebar ul.menu li > a:link,
   .sidebar ul.menu li > a:visited {
@@ -6024,7 +6092,7 @@ footer#footer_site #footer_sub .container > * {
     color: #333;
   }
 
-  /* line 262, ../sass/catstrap/catstrap-zen.scss */
+  /* line 274, ../sass/catstrap/catstrap-zen.scss */
   .region-sidebar-first .menu > li > a:hover,
   .region-sidebar-first .menu > li > a:focus,
   .region-sidebar-first .menu > li.active a,
@@ -6035,7 +6103,7 @@ footer#footer_site #footer_sub .container > * {
     text-decoration: none;
   }
 
-  /* line 273, ../sass/catstrap/catstrap-zen.scss */
+  /* line 285, ../sass/catstrap/catstrap-zen.scss */
   .region-sidebar-second .menu > li > a:hover,
   .region-sidebar-second .menu > li > a:focus,
   .region-sidebar-second .menu > li.active a,
@@ -6047,7 +6115,7 @@ footer#footer_site #footer_sub .container > * {
   }
 }
 /* DRUPAL UI COMPONENTS */
-/* line 287, ../sass/catstrap/catstrap-zen.scss */
+/* line 299, ../sass/catstrap/catstrap-zen.scss */
 div.contextual-links-wrapper ul.contextual-links,
 #main div.contextual-links-wrapper ul.contextual-links,
 footer#footer_site div.contextual-links-wrapper ul.contextual-links {
@@ -6055,7 +6123,7 @@ footer#footer_site div.contextual-links-wrapper ul.contextual-links {
   /*resets display for contextual links js behavior*/
   float: none;
 }
-/* line 292, ../sass/catstrap/catstrap-zen.scss */
+/* line 304, ../sass/catstrap/catstrap-zen.scss */
 div.contextual-links-wrapper li,
 div.contextual-links-wrapper a:not(.contextual-links-trigger),
 #main div.contextual-links-wrapper li,

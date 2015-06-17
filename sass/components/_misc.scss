@@ -514,23 +514,48 @@ span.field-label {
   color: #000;
 }
 
-/* footer column menus */
-footer#footer_site .column-menu {
-	display: block;
-	ul.menu li {
-			display: block;
-			float: none;
-			border: 0 none;
-			margin-bottom: 0.5em;
-	}
+/* footer menus */
+footer#footer_site {
+  h2 {
+    font: normal normal bold 0.88em MiloWeb, Verdana, Geneva, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: #333;
+  }
+  .column-menu {
+  	display: block;
+    padding-top: 1.5rem;
+    border-top: 1px solid #a8a69d;
+    &:first-child { border-top: 0 none; }
+  	ul.menu li {
+  			display: block;
+  			float: none;
+  			border: 0 none;
+        padding: 0;
+  			margin-bottom: 0.7em;
+        line-height: 1.2;
+        a, a:link, a:visited {
+          text-decoration: none;
+          font-weight: normal;
+        }
+        a:focus, a:hover, a:active {
+          color: #2A6496;
+        }
+  	}
+  }
 }
 
 @media screen and (min-width: 48em) {
 	footer#footer_site .column-menu {
 		display: inline-block;
 		vertical-align: top;
-		width: 50%;
+    border: 0 none;
+		width: 49%;
+    h2 {
+      text-align: left; 
+      padding: 0 2rem; }
 		ul.menu {
+      padding: 1rem 2rem 0;
 			text-align: left;
 		}
 	}
@@ -538,12 +563,21 @@ footer#footer_site .column-menu {
 
 @media screen and (min-width: 60em) {
 	footer#footer_site .column-menu {
-		padding: 0 0 0 1em;
-		margin: 0 0 0 1em;
+    position: relative;
+		padding: 0 0 0 1rem;
+		margin: 0 0 0 1rem;
+    border-top: 0 none;
 		border-left: 1px solid #a8a69d;
 		display: inline-block;
 		vertical-align: top;
-		width: inherit;
+    min-height: 16em;
+		width: 16%; //third of half
+    h2 { padding: 0; }
+    ul.menu {
+      width: 100%;
+      padding: 1rem 0;
+      a { font-size: 0.875em; }
+    }
   }
 }
 

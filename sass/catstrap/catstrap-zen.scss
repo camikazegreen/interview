@@ -190,13 +190,14 @@ html {
 
 footer#footer_site {
 	.footer-logo { //specific to zen layout structure
-		margin: 0 0 1rem;
+		margin: 0 auto 2.5rem;
 		max-width: 400px;
 		img { max-height:100px;	}
 	}
 	> .container { 
 		border-bottom: 1px solid #8E8C85;
 		position: relative;
+		padding-bottom: 1rem;
 	}
 	ul.menu {
 	  display: block;
@@ -204,6 +205,12 @@ footer#footer_site {
 	  padding: 16px 0 0;
 	  padding: 1rem 0 0;
 	  text-align: center;
+	  float: none;
+	  	&:after {
+	  		content: "\0020";
+	  		display: block;
+	  		clear: both;
+	  	}
 		> li {
 		  display: inline-block;
 		  list-style: none;
@@ -221,14 +228,19 @@ footer#footer_site {
 		> * { //reduce font size without affecting container width
   			font-size: 0.96rem; // 15.36/16px
 		}
+		p { text-align: center; }
 	}
 }
 
-@media (min-width: 992px) {
-  footer#footer_site .footer-logo { //specific to zen layout structure
-    float: left;
-    margin: 0 1rem 1rem 0;
+@media (min-width: 60em) {
+  footer#footer_site {
+  	ul.menu { float: right; }
+  	.footer-logo { //specific to zen layout structure
+	    float: left;
+	    margin: 0 1rem 1rem 0;
+  	}
   }
+  #footer_sub .container p { text-align: left; }
 }
 
 /* SIDE MENUS */
