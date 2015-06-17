@@ -58,7 +58,7 @@ class UaDemoPersonMigration extends Migration {
     $fields = $source_key + $data_fields + $image_fields;
 
     // Source definition.
-    $json_filename = drupal_strtolower($this->machineName) . 'json';
+    $json_filename = drupal_strtolower($this->machineName) . '.json';
     $import_path = $our_path . '/import/data/';
     $this->source = new MigrateSourceJSON($import_path . $json_filename, $id_field, $fields);
 
