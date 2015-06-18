@@ -18,39 +18,42 @@ html {
 /* line 19, ../../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region .block-menu {
   display: none;
+  margin: 16px 0 24px 0;
   margin: 1rem 0 1.5rem 0;
   background-color: transparent;
   float: right;
 }
-/* line 25, ../../sass/catstrap/catstrap-zen.scss */
+/* line 26, ../../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region #block-search-form {
   float: none;
   clear: both;
   margin: 0;
 }
-/* line 29, ../../sass/catstrap/catstrap-zen.scss */
+/* line 30, ../../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region #block-search-form .form-item {
   display: inline;
 }
-/* line 31, ../../sass/catstrap/catstrap-zen.scss */
+/* line 32, ../../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region #block-search-form .form-item input {
   border-collapse: collapse;
   width: 13.8rem;
   font-family: MiloWeb, sans-serif;
   font-weight: normal;
+  font-size: 18px;
   font-size: 1.125rem;
   line-height: 1em;
   border: 0;
   background-color: #eef1f1;
   color: #333333;
+  padding: 8px;
   padding: .5rem;
   outline: 0;
 }
-/* line 45, ../../sass/catstrap/catstrap-zen.scss */
+/* line 48, ../../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region #block-search-form .form-actions {
   display: inline;
 }
-/* line 47, ../../sass/catstrap/catstrap-zen.scss */
+/* line 50, ../../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region #block-search-form .form-actions input[type="submit"] {
   text-indent: -9999em;
   background: url("../images/search-icon.png");
@@ -65,7 +68,7 @@ html {
   background-position: 9px 7px;
   outline: 0;
 }
-/* line 62, ../../sass/catstrap/catstrap-zen.scss */
+/* line 65, ../../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region #block-search-form form {
   border: 1px solid #d3d7de;
   background-color: #eef1f1;
@@ -75,29 +78,30 @@ html {
   margin: 0 auto 24px;
   margin: 0 auto 1.5rem;
 }
-/* line 73, ../../sass/catstrap/catstrap-zen.scss */
+/* line 76, ../../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links {
   display: none;
   clear: both;
 }
-/* line 76, ../../sass/catstrap/catstrap-zen.scss */
+/* line 79, ../../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links ul {
   font-family: 'MiloWeb-Medium';
 }
-/* line 78, ../../sass/catstrap/catstrap-zen.scss */
+/* line 81, ../../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links ul li {
   margin: 0;
   padding: 0;
 }
-/* line 83, ../../sass/catstrap/catstrap-zen.scss */
+/* line 86, ../../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links ul li a,
 #header_site #utility_links ul li a:link,
 #header_site #utility_links ul li a:visited {
   color: #49595E;
+  padding: 16px 8px 8px;
   padding: 1rem 0.5rem 0.5rem;
   margin: 0;
 }
-/* line 89, ../../sass/catstrap/catstrap-zen.scss */
+/* line 93, ../../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links ul li a:hover, #header_site #utility_links ul li a:focus, #header_site #utility_links ul li a:active,
 #header_site #utility_links ul li a:link:hover,
 #header_site #utility_links ul li a:link:focus,
@@ -108,49 +112,50 @@ html {
   text-decoration: underline;
   color: #49595E;
 }
-/* line 94, ../../sass/catstrap/catstrap-zen.scss */
+/* line 98, ../../sass/catstrap/catstrap-zen.scss */
 #header_site #utility_links ul li.last a {
   padding-right: 0;
 }
 
 @media screen and (min-width: 48em) {
-  /* line 103, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 107, ../../sass/catstrap/catstrap-zen.scss */
   #header_site .header__region {
     float: right;
   }
-  /* line 107, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 111, ../../sass/catstrap/catstrap-zen.scss */
   #header_site .header__region .block-menu {
     display: block;
   }
-  /* line 109, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 113, ../../sass/catstrap/catstrap-zen.scss */
   #header_site #block-search-form {
+    padding-top: 16px;
     padding-top: 1rem;
     float: right;
     clear: right;
   }
-  /* line 111, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 120, ../../sass/catstrap/catstrap-zen.scss */
   #header_site #utility_links {
     display: block;
     clear: none;
   }
-  /* line 114, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 123, ../../sass/catstrap/catstrap-zen.scss */
   #header_site #utility_links ul {
     text-align: right;
   }
-  /* line 116, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 125, ../../sass/catstrap/catstrap-zen.scss */
   #header_site #utility_links ul li {
     float: none;
     display: inline-block;
     margin: 0;
     padding: 0;
   }
-  /* line 121, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 130, ../../sass/catstrap/catstrap-zen.scss */
   #header_site #utility_links ul li.last a {
     padding-right: 0;
   }
 }
 @media (max-width: 767px) {
-  /* line 129, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 138, ../../sass/catstrap/catstrap-zen.scss */
   #header_site #search {
     width: 100%;
     float: none;
@@ -158,7 +163,7 @@ html {
   }
 }
 /* NEWS */
-/* line 140, ../../sass/catstrap/catstrap-zen.scss */
+/* line 149, ../../sass/catstrap/catstrap-zen.scss */
 .view-news .views-row {
   float: left;
   width: 100%;
@@ -166,20 +171,21 @@ html {
   padding: 24px 0;
   padding: 1.5rem 0;
 }
-/* line 147, ../../sass/catstrap/catstrap-zen.scss */
+/* line 156, ../../sass/catstrap/catstrap-zen.scss */
 .view-news .views-row .views-field-field-news-photos img {
   width: 100%;
   height: auto;
   padding-right: 24px;
   padding-right: 1.5rem;
 }
-/* line 157, ../../sass/catstrap/catstrap-zen.scss */
+/* line 166, ../../sass/catstrap/catstrap-zen.scss */
 .view-news .views-row .views-field-title h2 {
+  margin-top: 16px;
   margin-top: 1rem;
   margin-bottom: 4px;
   margin-bottom: 0.2rem;
 }
-/* line 164, ../../sass/catstrap/catstrap-zen.scss */
+/* line 174, ../../sass/catstrap/catstrap-zen.scss */
 .view-news .views-row .views-field-field-news-publish-date span {
   display: block;
   font-size: 18px;
@@ -191,7 +197,7 @@ html {
 }
 
 @media (min-width: 30em) {
-  /* line 177, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 187, ../../sass/catstrap/catstrap-zen.scss */
   .view-news .views-row .views-field-field-news-photos img {
     float: left;
     max-width: 240px;
@@ -199,28 +205,30 @@ html {
     height: auto;
   }
 
-  /* line 183, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 193, ../../sass/catstrap/catstrap-zen.scss */
   .view-news .views-row .views-field-title h2 {
     margin-top: 0;
   }
 }
 /* FOOTER */
-/* line 192, ../../sass/catstrap/catstrap-zen.scss */
+/* line 202, ../../sass/catstrap/catstrap-zen.scss */
 footer#footer_site .footer-logo {
+  margin: 0 auto 40px;
   margin: 0 auto 2.5rem;
   max-width: 400px;
 }
-/* line 195, ../../sass/catstrap/catstrap-zen.scss */
+/* line 206, ../../sass/catstrap/catstrap-zen.scss */
 footer#footer_site .footer-logo img {
   max-height: 100px;
 }
-/* line 197, ../../sass/catstrap/catstrap-zen.scss */
+/* line 208, ../../sass/catstrap/catstrap-zen.scss */
 footer#footer_site > .container {
   border-bottom: 1px solid #8E8C85;
   position: relative;
-  padding-bottom: 1rem;
+  padding: 0 0 16px;
+  padding: 0 0 1rem;
 }
-/* line 202, ../../sass/catstrap/catstrap-zen.scss */
+/* line 214, ../../sass/catstrap/catstrap-zen.scss */
 footer#footer_site ul.menu {
   display: block;
   margin: 0;
@@ -229,13 +237,13 @@ footer#footer_site ul.menu {
   text-align: center;
   float: none;
 }
-/* line 209, ../../sass/catstrap/catstrap-zen.scss */
+/* line 221, ../../sass/catstrap/catstrap-zen.scss */
 footer#footer_site ul.menu:after {
   content: "\0020";
   display: block;
   clear: both;
 }
-/* line 214, ../../sass/catstrap/catstrap-zen.scss */
+/* line 226, ../../sass/catstrap/catstrap-zen.scss */
 footer#footer_site ul.menu > li {
   display: inline-block;
   list-style: none;
@@ -243,59 +251,63 @@ footer#footer_site ul.menu > li {
   padding: 0 .75rem;
   border-right: 1px solid #a8a69d;
 }
-/* line 221, ../../sass/catstrap/catstrap-zen.scss */
+/* line 233, ../../sass/catstrap/catstrap-zen.scss */
 footer#footer_site ul.menu > li.last {
   border-right: 0;
 }
-/* line 226, ../../sass/catstrap/catstrap-zen.scss */
+/* line 238, ../../sass/catstrap/catstrap-zen.scss */
 footer#footer_site #footer_sub .container {
+  padding-top: 8px;
   padding-top: 0.5rem;
 }
-/* line 228, ../../sass/catstrap/catstrap-zen.scss */
+/* line 241, ../../sass/catstrap/catstrap-zen.scss */
 footer#footer_site #footer_sub .container > * {
+  font-size: 15px;
   font-size: 0.96rem;
 }
-/* line 231, ../../sass/catstrap/catstrap-zen.scss */
+/* line 245, ../../sass/catstrap/catstrap-zen.scss */
 footer#footer_site #footer_sub .container p {
   text-align: center;
 }
 
 @media (min-width: 60em) {
-  /* line 237, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 251, ../../sass/catstrap/catstrap-zen.scss */
   footer#footer_site ul.menu {
     float: right;
   }
-  /* line 238, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 252, ../../sass/catstrap/catstrap-zen.scss */
   footer#footer_site .footer-logo {
     float: left;
+    margin: 0 16px 16px 0;
     margin: 0 1rem 1rem 0;
   }
 
-  /* line 243, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 258, ../../sass/catstrap/catstrap-zen.scss */
   #footer_sub .container p {
     text-align: left;
   }
 }
 /* SIDE MENUS */
 @media screen and (min-width: 60em) {
-  /* line 249, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 264, ../../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu {
     list-style: none outside none;
     padding: 0;
     margin: 0;
   }
-  /* line 253, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 268, ../../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu li {
     list-style: none outside none;
     padding: 0;
     margin: 0;
     display: block;
   }
-  /* line 261, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 276, ../../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu li > a,
   .sidebar ul.menu li > a:link,
   .sidebar ul.menu li > a:visited {
     position: relative;
+    padding: 10px 16px;
     padding: 0.625rem 1rem;
     text-decoration: none;
     font-weight: normal;
@@ -303,7 +315,7 @@ footer#footer_site #footer_sub .container p {
     color: #333;
   }
 
-  /* line 274, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 290, ../../sass/catstrap/catstrap-zen.scss */
   .region-sidebar-first .menu > li > a:hover,
   .region-sidebar-first .menu > li > a:focus,
   .region-sidebar-first .menu > li.active a,
@@ -314,7 +326,7 @@ footer#footer_site #footer_sub .container p {
     text-decoration: none;
   }
 
-  /* line 285, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 301, ../../sass/catstrap/catstrap-zen.scss */
   .region-sidebar-second .menu > li > a:hover,
   .region-sidebar-second .menu > li > a:focus,
   .region-sidebar-second .menu > li.active a,
@@ -326,7 +338,7 @@ footer#footer_site #footer_sub .container p {
   }
 }
 /* DRUPAL UI COMPONENTS */
-/* line 299, ../../sass/catstrap/catstrap-zen.scss */
+/* line 315, ../../sass/catstrap/catstrap-zen.scss */
 div.contextual-links-wrapper ul.contextual-links,
 #main div.contextual-links-wrapper ul.contextual-links,
 footer#footer_site div.contextual-links-wrapper ul.contextual-links {
@@ -334,7 +346,7 @@ footer#footer_site div.contextual-links-wrapper ul.contextual-links {
   /*resets display for contextual links js behavior*/
   float: none;
 }
-/* line 304, ../../sass/catstrap/catstrap-zen.scss */
+/* line 320, ../../sass/catstrap/catstrap-zen.scss */
 div.contextual-links-wrapper li,
 div.contextual-links-wrapper a:not(.contextual-links-trigger),
 #main div.contextual-links-wrapper li,
