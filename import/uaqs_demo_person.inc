@@ -106,6 +106,10 @@ class UaDemoPersonMigration extends Migration {
          ->defaultValue('MigrateFileUri');
     $this->addFieldMapping($image_dst_field . ':source_dir')
          ->defaultValue($our_path . '/import/images');
+
+    // Allow limited HTML markup in the bio field
+    $this->addFieldMapping('field_ua_person_bio:format')
+         ->defaultValue('filtered_html');
   }
 
   /**
