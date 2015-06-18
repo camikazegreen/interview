@@ -270,39 +270,56 @@ footer#footer_site #footer_sub .container p {
   text-align: center;
 }
 
-@media (min-width: 60em) {
+@media (min-width: 48em) {
   /* line 251, ../../sass/catstrap/catstrap-zen.scss */
+  footer#footer_site .footer-content {
+    clear: both;
+  }
+}
+@media (min-width: 60em) {
+  /* line 259, ../../sass/catstrap/catstrap-zen.scss */
   footer#footer_site ul.menu {
     float: right;
   }
-  /* line 252, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 260, ../../sass/catstrap/catstrap-zen.scss */
   footer#footer_site .footer-logo {
     float: left;
     margin: 0 16px 16px 0;
     margin: 0 1rem 1rem 0;
   }
+  /* line 265, ../../sass/catstrap/catstrap-zen.scss */
+  footer#footer_site .footer-content {
+    clear: none;
+    text-align: right;
+  }
 
-  /* line 258, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 270, ../../sass/catstrap/catstrap-zen.scss */
   #footer_sub .container p {
     text-align: left;
   }
 }
+@media (min-width: 60em) and (max-width: 75em) {
+  /* line 274, ../../sass/catstrap/catstrap-zen.scss */
+  footer#footer_site .footer-logo {
+    max-width: 300px;
+  }
+}
 /* SIDE MENUS */
 @media screen and (min-width: 60em) {
-  /* line 264, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 282, ../../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu {
     list-style: none outside none;
     padding: 0;
     margin: 0;
   }
-  /* line 268, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 286, ../../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu li {
     list-style: none outside none;
     padding: 0;
     margin: 0;
     display: block;
   }
-  /* line 276, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 294, ../../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu li > a,
   .sidebar ul.menu li > a:link,
   .sidebar ul.menu li > a:visited {
@@ -315,7 +332,7 @@ footer#footer_site #footer_sub .container p {
     color: #333;
   }
 
-  /* line 290, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 308, ../../sass/catstrap/catstrap-zen.scss */
   .region-sidebar-first .menu > li > a:hover,
   .region-sidebar-first .menu > li > a:focus,
   .region-sidebar-first .menu > li.active a,
@@ -326,7 +343,7 @@ footer#footer_site #footer_sub .container p {
     text-decoration: none;
   }
 
-  /* line 301, ../../sass/catstrap/catstrap-zen.scss */
+  /* line 319, ../../sass/catstrap/catstrap-zen.scss */
   .region-sidebar-second .menu > li > a:hover,
   .region-sidebar-second .menu > li > a:focus,
   .region-sidebar-second .menu > li.active a,
@@ -338,7 +355,7 @@ footer#footer_site #footer_sub .container p {
   }
 }
 /* DRUPAL UI COMPONENTS */
-/* line 315, ../../sass/catstrap/catstrap-zen.scss */
+/* line 333, ../../sass/catstrap/catstrap-zen.scss */
 div.contextual-links-wrapper ul.contextual-links,
 #main div.contextual-links-wrapper ul.contextual-links,
 footer#footer_site div.contextual-links-wrapper ul.contextual-links {
@@ -346,7 +363,7 @@ footer#footer_site div.contextual-links-wrapper ul.contextual-links {
   /*resets display for contextual links js behavior*/
   float: none;
 }
-/* line 320, ../../sass/catstrap/catstrap-zen.scss */
+/* line 338, ../../sass/catstrap/catstrap-zen.scss */
 div.contextual-links-wrapper li,
 div.contextual-links-wrapper a:not(.contextual-links-trigger),
 #main div.contextual-links-wrapper li,

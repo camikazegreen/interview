@@ -246,6 +246,14 @@ footer#footer_site {
 	}
 }
 
+@media (min-width: 48em) {
+	footer#footer_site {
+		.footer-content {
+			clear: both;
+		}
+	}
+}
+
 @media (min-width: 60em) {
   footer#footer_site {
   	ul.menu { float: right; }
@@ -254,8 +262,18 @@ footer#footer_site {
 	    margin: 0 16px 16px 0;
 	    margin: 0 1rem 1rem 0;
   	}
+  	.footer-content { 
+  		clear: none;
+  		text-align: right; //makes column menus go to the right
+  	} 
   }
   #footer_sub .container p { text-align: left; }
+}
+
+@media (min-width:60em) and (max-width: 75em) {
+	footer#footer_site .footer-logo {
+		max-width: 300px;
+	}
 }
 
 /* SIDE MENUS */

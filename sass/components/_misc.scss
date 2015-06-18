@@ -576,7 +576,7 @@ footer#footer_site {
 		display: inline-block;
 		vertical-align: top;
     min-height: 16em;
-		width: 16%; //third of half
+		max-width: 14.5%; //approx. 1/4 of left-over space (730px/4)
     h2 { padding: 0; }
     ul.menu {
       width: 100%;
