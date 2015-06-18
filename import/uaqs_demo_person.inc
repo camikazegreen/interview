@@ -51,7 +51,10 @@ class UaDemoPersonMigration extends Migration {
     );
     // Image fields need special treatment, isolate them...
     $image_src_field = 'ua_person_photo';
-    $image_fields = array($image_src_field => t('Photo filename (string)'));
+    $image_fields = array(
+      $image_src_field => t('Photo filename (string)'),
+      'image_alt_text' => t('Photo alt text (derived from other fields)'),
+    );
 
     // Source key field (must have int values).
     $id_field = 'id';
@@ -97,11 +100,36 @@ class UaDemoPersonMigration extends Migration {
     $this->addFieldMapping($image_dst_field, $image_src_field);
     $this->addFieldMapping($image_dst_field . ':file_replace')
          ->defaultValue(FILE_EXISTS_REPLACE);
+    $this->addFieldMapping($image_dst_field . ':alt', 'image_alt_text');
     //  MigrateFileUri works for a local filespec as well as remote URIs.
     $this->addFieldMapping($image_dst_field . ':file_class')
          ->defaultValue('MigrateFileUri');
     $this->addFieldMapping($image_dst_field . ':source_dir')
          ->defaultValue($our_path . '/import/images');
   }
+
+  /**
+   * Implementation of prepareRow(), to concatenate some raw field values.
+   *
+   * @param $row
+   *  Object containing raw source data (from the JSON file).
+   * @return bool
+   *  TRUE to process this row, FALSE to have the source skip it.
+   *
+   * @see the Migration migrate_example code, in particular wine.inc.
+   */
+  public function prepareRow($row) {
+    // Recommended boilerplate section: invoke the parent classes on the
+    // current row first, and pass on their status (whether to process
+    // or skip the row).
+    if (parent::prepareRow($row) === FALSE) {
+      return FALSE;
+    }
+
+    // Concatenate names and suffix into one derived field.
+    $row->image_alt_text = implode(' ', array($row->ua_person_fname, $row->ua_person_lname, 'portrait'));
+    return TRUE;
+  }
+
 
 }
