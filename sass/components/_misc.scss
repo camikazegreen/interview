@@ -524,6 +524,7 @@ footer#footer_site {
   }
   .column-menu {
   	display: block;
+    padding-top: 24px;
     padding-top: 1.5rem;
     border-top: 1px solid #a8a69d;
     &:first-child { border-top: 0 none; }
@@ -552,9 +553,11 @@ footer#footer_site {
     border: 0 none;
 		width: 49%;
     h2 {
-      text-align: left; 
+      text-align: left;
+      padding: 0 32px; 
       padding: 0 2rem; }
 		ul.menu {
+      padding: 16px 32px 0;
       padding: 1rem 2rem 0;
 			text-align: left;
 		}
@@ -564,7 +567,9 @@ footer#footer_site {
 @media screen and (min-width: 60em) {
 	footer#footer_site .column-menu {
     position: relative;
-		padding: 0 0 0 1rem;
+    padding: 0 0 0 16px;
+    padding: 0 0 0 1rem;
+		margin: 0 0 0 16px;
 		margin: 0 0 0 1rem;
     border-top: 0 none;
 		border-left: 1px solid #a8a69d;
@@ -575,8 +580,12 @@ footer#footer_site {
     h2 { padding: 0; }
     ul.menu {
       width: 100%;
+      padding: 16px 0;
       padding: 1rem 0;
-      a { font-size: 0.875em; }
+      a { 
+        font-size: 14px;
+        font-size: 0.875rem; 
+      }
     }
   }
 }
