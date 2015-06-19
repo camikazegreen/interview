@@ -5875,33 +5875,33 @@ html {
 /* line 32, ../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region #block-search-form .form-item input {
   border-collapse: collapse;
+  width: 221px;
   width: 13.8rem;
   font-family: MiloWeb, sans-serif;
   font-weight: normal;
   font-size: 18px;
   font-size: 1.125rem;
-  line-height: 1em;
+  line-height: 1;
   border: 0;
   background-color: #eef1f1;
   color: #333333;
   padding: 8px;
-  padding: .5rem;
+  padding: 0.5rem;
   outline: 0;
 }
-/* line 48, ../sass/catstrap/catstrap-zen.scss */
+/* line 49, ../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region #block-search-form .form-actions {
   display: inline;
 }
-/* line 50, ../sass/catstrap/catstrap-zen.scss */
+/* line 51, ../sass/catstrap/catstrap-zen.scss */
 #header_site .header__region #block-search-form .form-actions input[type="submit"] {
   text-indent: -9999em;
   background: url("../images/search-icon.png");
   width: 40px;
-  height: 40px;
   width: 2.5rem;
+  height: 40px;
   height: 2.5rem;
   background-size: 24px 24px;
-  background-size: 1.5rem 1.5rem;
   border: 0;
   background-repeat: no-repeat;
   background-position: 9px 7px;
@@ -6040,34 +6040,35 @@ html {
   .view-news .views-row .views-field-field-news-photos img {
     float: left;
     max-width: 240px;
+    max-width: 15rem;
     width: 100%;
     height: auto;
   }
 
-  /* line 193, ../sass/catstrap/catstrap-zen.scss */
+  /* line 194, ../sass/catstrap/catstrap-zen.scss */
   .view-news .views-row .views-field-title h2 {
     margin-top: 0;
   }
 }
 /* FOOTER */
-/* line 202, ../sass/catstrap/catstrap-zen.scss */
+/* line 203, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site .footer-logo {
   margin: 0 auto 40px;
   margin: 0 auto 2.5rem;
   max-width: 400px;
 }
-/* line 206, ../sass/catstrap/catstrap-zen.scss */
+/* line 207, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site .footer-logo img {
   max-height: 100px;
 }
-/* line 208, ../sass/catstrap/catstrap-zen.scss */
+/* line 209, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site > .container {
   border-bottom: 1px solid #8E8C85;
   position: relative;
   padding: 0 0 16px;
   padding: 0 0 1rem;
 }
-/* line 214, ../sass/catstrap/catstrap-zen.scss */
+/* line 215, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site ul.menu {
   display: block;
   margin: 0;
@@ -6076,89 +6077,89 @@ footer#footer_site ul.menu {
   text-align: center;
   float: none;
 }
-/* line 221, ../sass/catstrap/catstrap-zen.scss */
+/* line 222, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site ul.menu:after {
   content: "\0020";
   display: block;
   clear: both;
 }
-/* line 226, ../sass/catstrap/catstrap-zen.scss */
+/* line 227, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site ul.menu > li {
   display: inline-block;
   list-style: none;
   padding: 0 12px;
-  padding: 0 .75rem;
+  padding: 0 0.75rem;
   border-right: 1px solid #a8a69d;
 }
-/* line 233, ../sass/catstrap/catstrap-zen.scss */
+/* line 234, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site ul.menu > li.last {
   border-right: 0;
 }
-/* line 238, ../sass/catstrap/catstrap-zen.scss */
+/* line 239, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site #footer_sub .container {
   padding-top: 8px;
   padding-top: 0.5rem;
 }
-/* line 241, ../sass/catstrap/catstrap-zen.scss */
+/* line 242, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site #footer_sub .container > * {
   font-size: 15px;
   font-size: 0.96rem;
 }
-/* line 245, ../sass/catstrap/catstrap-zen.scss */
+/* line 246, ../sass/catstrap/catstrap-zen.scss */
 footer#footer_site #footer_sub .container p {
   text-align: center;
 }
 
 @media (min-width: 48em) {
-  /* line 251, ../sass/catstrap/catstrap-zen.scss */
+  /* line 252, ../sass/catstrap/catstrap-zen.scss */
   footer#footer_site .footer-content {
     clear: both;
   }
 }
 @media (min-width: 60em) {
-  /* line 259, ../sass/catstrap/catstrap-zen.scss */
+  /* line 260, ../sass/catstrap/catstrap-zen.scss */
   footer#footer_site ul.menu {
     float: right;
   }
-  /* line 260, ../sass/catstrap/catstrap-zen.scss */
+  /* line 261, ../sass/catstrap/catstrap-zen.scss */
   footer#footer_site .footer-logo {
     float: left;
     margin: 0 16px 16px 0;
     margin: 0 1rem 1rem 0;
   }
-  /* line 265, ../sass/catstrap/catstrap-zen.scss */
+  /* line 266, ../sass/catstrap/catstrap-zen.scss */
   footer#footer_site .footer-content {
     clear: none;
     text-align: right;
   }
 
-  /* line 270, ../sass/catstrap/catstrap-zen.scss */
+  /* line 271, ../sass/catstrap/catstrap-zen.scss */
   #footer_sub .container p {
     text-align: left;
   }
 }
 @media (min-width: 60em) and (max-width: 75em) {
-  /* line 274, ../sass/catstrap/catstrap-zen.scss */
+  /* line 275, ../sass/catstrap/catstrap-zen.scss */
   footer#footer_site .footer-logo {
     max-width: 300px;
   }
 }
 /* SIDE MENUS */
 @media screen and (min-width: 60em) {
-  /* line 282, ../sass/catstrap/catstrap-zen.scss */
+  /* line 283, ../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu {
     list-style: none outside none;
     padding: 0;
     margin: 0;
   }
-  /* line 286, ../sass/catstrap/catstrap-zen.scss */
+  /* line 287, ../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu li {
     list-style: none outside none;
     padding: 0;
     margin: 0;
     display: block;
   }
-  /* line 294, ../sass/catstrap/catstrap-zen.scss */
+  /* line 295, ../sass/catstrap/catstrap-zen.scss */
   .sidebar ul.menu li > a,
   .sidebar ul.menu li > a:link,
   .sidebar ul.menu li > a:visited {
@@ -6171,7 +6172,7 @@ footer#footer_site #footer_sub .container p {
     color: #333;
   }
 
-  /* line 308, ../sass/catstrap/catstrap-zen.scss */
+  /* line 309, ../sass/catstrap/catstrap-zen.scss */
   .region-sidebar-first .menu > li > a:hover,
   .region-sidebar-first .menu > li > a:focus,
   .region-sidebar-first .menu > li.active a,
@@ -6182,7 +6183,7 @@ footer#footer_site #footer_sub .container p {
     text-decoration: none;
   }
 
-  /* line 319, ../sass/catstrap/catstrap-zen.scss */
+  /* line 320, ../sass/catstrap/catstrap-zen.scss */
   .region-sidebar-second .menu > li > a:hover,
   .region-sidebar-second .menu > li > a:focus,
   .region-sidebar-second .menu > li.active a,
@@ -6194,7 +6195,7 @@ footer#footer_site #footer_sub .container p {
   }
 }
 /* DRUPAL UI COMPONENTS */
-/* line 333, ../sass/catstrap/catstrap-zen.scss */
+/* line 334, ../sass/catstrap/catstrap-zen.scss */
 div.contextual-links-wrapper ul.contextual-links,
 #main div.contextual-links-wrapper ul.contextual-links,
 footer#footer_site div.contextual-links-wrapper ul.contextual-links {
@@ -6202,7 +6203,7 @@ footer#footer_site div.contextual-links-wrapper ul.contextual-links {
   /*resets display for contextual links js behavior*/
   float: none;
 }
-/* line 338, ../sass/catstrap/catstrap-zen.scss */
+/* line 339, ../sass/catstrap/catstrap-zen.scss */
 div.contextual-links-wrapper li,
 div.contextual-links-wrapper a:not(.contextual-links-trigger),
 #main div.contextual-links-wrapper li,
