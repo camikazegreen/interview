@@ -7,6 +7,7 @@
 			width: 100%;
 			list-style: none;
 			li {
+				padding-right: 48px;
 				padding-right: 3rem;
 				line-height: 1;
 				float: left;
@@ -18,15 +19,20 @@
 					color: #395180;
 					text-transform: uppercase;
 					font-weight: bold;
-					font-size: 1.2rem;
+					font-size: 20px;
+					font-size: 1.25rem;
 					letter-spacing: 0.03rem;
 					&:hover {
 						color: #7B89AE;
 						text-decoration: none;
 					}
 				}
-				& > a { padding: 1em 0; }
+				& > a {
+					padding: 20px 0; 
+					padding: 1.25rem 0; 
+				}
 				ul {
+					padding: 24px 16px 16px;
 					padding: 1.5rem 1rem 1rem;
 					li {
 						display: block;
@@ -38,7 +44,8 @@
 							display: block;
 							color: #fff;
 							font-weight: normal;
-							font-size: 1.1rem;
+							font-size: 18px;
+							font-size: 1.125rem;
 							padding: 0.3em;
 							text-transform: none;
 							&:hover {
@@ -51,8 +58,10 @@
 			}
 		}
 		select {
+			width: 224px;
 			width: 14rem;
-			margin: 1.2rem 0;
+			margin: 18px 0;
+			margin: 1.25rem 0;
 		}
 	}
 }
@@ -61,10 +70,11 @@
 	#main_nav {
 		ul.menu {
 			li {
-				padding-right: 2em;
+				padding-right: 32px;
+				padding-right: 2rem;
 				a {
 					font-size: 16px;
-					font-size: 1.0rem;
+					font-size: 1rem;
 				}
 			}
 		}
@@ -74,6 +84,7 @@
 	#main_nav {
 		ul.menu {
 			li {
+				padding-right: 40px;
 				padding-right: 2.5em;
 				a {
 					font-size: 17px;
