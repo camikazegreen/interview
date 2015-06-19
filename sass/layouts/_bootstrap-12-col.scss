@@ -1071,6 +1071,7 @@
     margin-left: 0;
 }
 .clearfix {
+    *zoom: 1;
     &:before {
         content: " ";
         display: table;
