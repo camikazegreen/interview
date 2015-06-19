@@ -766,7 +766,7 @@ html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   /* Un-do some of the padding on the ul list. */
   margin-left: -20px; /* LTR */
-  margin-left: 1.25rem;
+  margin-left: -1.25rem;
 }
 #user-login ul {
   margin: rhythm(1) 0;

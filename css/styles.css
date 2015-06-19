@@ -2923,7 +2923,7 @@ html.js #user-login-form li.openid-link,
   /* Un-do some of the padding on the ul list. */
   margin-left: -20px;
   /* LTR */
-  margin-left: 1.25rem;
+  margin-left: -1.25rem;
 }
 
 /* line 771, ../sass/components/_misc.scss */
