@@ -12,20 +12,15 @@
 /* HTML element (SMACSS base) rules */
 @import "normalize";
 
-/* Layout rules */
-/*@import "layouts/responsive";*/
-/*@import "layouts/bootstrap-12-col";*/
+/*Import ua-bootstrap from repo*/
 @import "https://bitbucket.org/uabrandingdigitalassets/ua-bootstrap/downloads/ua-bootstrap.min.css";
 
 /* Component (SMACSS module) rules */
 @import "components/misc";
+
 // Optionally, add your own components here.
 @import "print";
 
-/* SMACSS theme rules */
-//@import "catstrap/catstrap";
-//@import "catstrap/catstrap-zen";
-/*@import "//bitbucket.org/uabrandingdigitalassets/ua-bootstrap/raw/42aa8f12ee70893484eed2827ea8160453ae5ab1/downloads/UA%20Bootstrap/ua-bootstrap.min.css"*/
 
 /* OPTIONAL UA ZEN COMPONENTS - COMMENT OUT WHAT YOU DON'T NEED */
 
