@@ -187,14 +187,7 @@ color:white;
   background: hsla(0, 0%, 0%, 0);
   margin: 0 auto;
   max-width: 960px;
-  max-width: 58em;
-}
-#content_featured .flexslider {
-  border: 0;
-  background: hsla(0, 0%, 0%, 0);
-  margin: 0 auto;
-  max-width: 960px;
-  max-width: 58em;
+  max-width: 60em;
 }
 @media (min-width: 48em) {
     #content_featured .mask {
@@ -306,4 +299,12 @@ color:white;
 }
 
 @media (min-width: 75em) {
+  #content_featured .flex-viewport {
+    max-width: 1200px;
+    max-width: 75em;
+  }
+  #content_featured .flexslider {
+    max-width: 1200px;
+    max-width: 75em;
+  }
 }
