@@ -28,6 +28,14 @@ function ua_demo_migrate_api() {
         'class_name' => 'UaDemoPersonMigration',
         'group_name' => 'ua_demo',
       ),
+      'UaDemoUnitTerm' => array(
+        'class_name' => 'UaDemoUnitTermMigration',
+        'group_name' => 'ua_demo',
+      ),
+      'UaDemoUnit' => array(
+        'class_name' => 'UaDemoUnitMigration',
+        'group_name' => 'ua_demo',
+      ),
       'UaDemoMenu' => array(
         'class_name' => 'UaDemoMenu',
         'group_name' => 'ua_demo',
