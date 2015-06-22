@@ -118,6 +118,11 @@ class UaDemoNewsMigration extends Migration {
            ->defaultValue($our_path . '/import/images');
     }
 
+    // Image alt and title fields
+    foreach (array('alt', 'title') as $label) {
+      $this->addFieldMapping('field_' . $image_src_field . ':' . $label, $image_src_field . '_' . $label)
+           ->separator('|');
+    }
     // Allow limited HTML markup in the body field
     $this->addFieldMapping('field_ua_news_body:format')
          ->defaultValue('filtered_html');
