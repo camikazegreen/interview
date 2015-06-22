@@ -11,6 +11,7 @@
     "ua_news_more_info" : "https://en.wikipedia.org/wiki/Flat_Earth#Modern_period",
     "ua_news_more_info_title" : "Background to skeptical astronomy",
     "ua_news_attachments" : "long_publication_history.pdf|hostile_account_of_experiments.pdf",
+    "ua_news_attachments_description" : "Covers from some of the extensive literature.|Early experiments reported in the journal Nature (from a hostile perspective).",
     "ua_news_photo" : "path_of_the_sun.png|sun_december_21.jpg|sun_june_21.jpg",
     "ua_news_photo_title" : "Expansion and contraction of the Sun's path.|Path of the Sun on December 21.|Path of the Sun on June 21.",
     "ua_news_photo_alt" : "diagram showing concentric circles|illustration of the Sun above the Earth|illustration of the Sun above the Earth"
@@ -28,6 +29,7 @@
     "ua_news_more_info" : "",
     "ua_news_more_info_title" : "",
     "ua_news_attachments" : "",
+    "ua_news_attachments_description" : "",
     "ua_news_photo" : "borderlands.png|delivery_platform.jpg",
     "ua_news_photo_title" : "Arizona-Sonora Borderlands|The delivery platform",
     "ua_news_photo_alt" : "map showing main roads and topography|drone in flight"
@@ -44,6 +46,7 @@
     "ua_news_more_info" : "https://brand.arizona.edu/",
     "ua_news_more_info_title" : "The University of Arizona Brand",
     "ua_news_attachments" : "",
+    "ua_news_attachments_description" : "",
     "ua_news_photo" : "branding_iron.jpg",
     "ua_news_photo_title" : "Branding iron",
     "ua_news_photo" : "example letter A (differing from the UofA design)"

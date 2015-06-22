@@ -123,6 +123,12 @@ class UaDemoNewsMigration extends Migration {
       $this->addFieldMapping('field_' . $image_src_field . ':' . $label, $image_src_field . '_' . $label)
            ->separator('|');
     }
+
+    // Attachment description field
+    $label = 'description';
+    $this->addFieldMapping('field_' . $file_src_field . ':' . $label, $file_src_field . '_' . $label)
+         ->separator('|');
+
     // Allow limited HTML markup in the body field
     $this->addFieldMapping('field_ua_news_body:format')
          ->defaultValue('filtered_html');
