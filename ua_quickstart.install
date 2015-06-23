@@ -1,8 +1,7 @@
 <?php
-
 /**
  * @file
- * Installation code for UA Quickstart
+ * Installation code for UA Quickstart.
  */
 
 /**
@@ -11,6 +10,8 @@
  * Perform actions to set up the site for this profile.
  */
 function ua_quickstart_install() {
+  $t = get_t();
+
   // Force Drupal to look for themes in profile path.
   variable_set('install_profile', 'ua_quickstart');
   list_themes(TRUE);
@@ -87,7 +88,7 @@ function ua_quickstart_install() {
 
   // Create a Home link in the main menu.
   $item = array(
-    'link_title' => st('Home'),
+    'link_title' => $t('Home'),
     'link_path' => '<front>',
     'menu_name' => 'main-menu',
   );
@@ -102,14 +103,19 @@ function ua_quickstart_install() {
   // Enable default permissions for system roles.
   $filtered_html_permission = filter_permission_name($filtered_html_format);
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', 'search content'));
-  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', 'search content', $filtered_html_permission));
+  user_role_grant_permissions(
+    DRUPAL_AUTHENTICATED_RID,
+    array('access content', 'search content', $filtered_html_permission)
+  );
 
-  // Create a default role for site administrators, with all available permissions assigned.
+  // Create a default role for site administrators, with all available
+  // permissions assigned.
   $admin_role = new stdClass();
   $admin_role->name = 'administrator';
   $admin_role->weight = 2;
   user_role_save($admin_role);
   user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
+
   // Set this as the administrator role.
   variable_set('user_admin_role', $admin_role->rid);
 
