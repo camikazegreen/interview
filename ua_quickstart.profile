@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Enables modules and site configuration for a UA Quickstart site installation.
+ */
 
 /**
  * Implements hook_form_FORM_ID_alter().
