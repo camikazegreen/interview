@@ -2,11 +2,11 @@
 
 /**
  * @file
- * Add content to demonstrate the UA News feature.
+ * Add content to demonstrate the UA Event feature.
  */
 
 /**
- * Makes demonstration UA News content from pre-defined data.
+ * Makes demonstration UA Event content from pre-defined data.
  *
  * Currently local files hold the sample data this uses to build the content,
  * in a single JSON-formatted text file and collection of images. The overall
@@ -16,7 +16,7 @@
  *
  * @see https://www.drupal.org/node/1152160
  */
-class UaDemoNewsMigration extends Migration {
+class UaDemoEventMigration extends Migration {
 
   /**
    * Constructor.
@@ -28,53 +28,58 @@ class UaDemoNewsMigration extends Migration {
     parent::__construct($arguments);
 
     $this->description =
-      t('Make demonstration UA News content from pre-defined data.');
+      t('Make demonstration UA Event content from pre-defined data.');
 
     // The demonstration data will be within this module's own directory.
     $our_path = drupal_get_path('module', 'ua_demo');
 
     // Documented lists of source data fields: all names here MUST match
     // those in the corresponding content type.
-    // @see ua_news ua_news.features.field_instance.inc
+    // @see ua_event ua_event.features.field_instance.inc
     // First, the node title field
     $title_field = array(
       'title' => t('Title'),
     );
     // The single-value text fielda...
     $single_value_fields = array(
-      'ua_news_short_title' => t('Short title'),
-      'ua_news_front' => t('Show on front page'),
-      'ua_news_byline' => t('Byline'),
-      'ua_news_published' => t('Published'),
-      'expiration_date' => t('Expiration date'),
-      'ua_news_summary' => t('Summary'),
-      'ua_news_body' => t('Article body'),
-      'ua_news_more_info' => t('Link to more information'),
+      'ua_event_short_title' => t('Short title'),
+      'ua_event_front' => t('Show on front page'),
+      'ua_event_date' => t('Event date'),
+      'ua_event_summary' => t('Summary'),
+      'ua_event_description' => t('Description'),
+      'ua_event_location' => t('Event location'),
+      'ua_event_more_info' => t('More information'),
+    );
+    // Date ending and repeat fields...
+    $date_extra_fields = array(
+      'ua_event_date_to' => t('Event end date'),
+      'ua_event_date_rrule' => t('Event date repeat rule'),
     );
     // Titles for links...
     $link_title_fields = array(
-      'ua_news_more_info_title' => t('Information link title'),
+      'ua_event_location_title' => t('Location link title'),
+      'ua_event_more_info_title' => t('Information link title'),
     );
     // File fields...
-    $file_src_field = 'ua_news_attachments';
+    $file_src_field = 'ua_event_attachments';
     $file_fields = array(
       $file_src_field => t('Attachment filename'),
       $file_src_field . '_description' => t('Attachment description'),
     );
     // Image fields...
-    $image_src_field = 'ua_news_photo';
+    $image_src_field = 'ua_event_photo';
     $image_fields = array(
-      $image_src_field => t('Photo filename'),
-      $image_src_field . '_title' => t('Photo title'),
-      $image_src_field . '_alt' => t('Photo alt text'),
-   );
+      $image_src_field => t('Event Photo'),
+      $image_src_field . '_title' => t('Event photo title'),
+      $image_src_field . '_alt' => t('Event photo alt text'),
+    );
 
     // Source key field (must have int values).
     $id_field = 'id';
     $source_key = array($id_field => t('Unique key (int)'));
 
     // All the fields to migrate.
-    $fields = $source_key + $title_field + $single_value_fields + $link_title_fields + $file_fields + $image_fields;
+    $fields = $source_key + $title_field + $single_value_fields + $date_extra_fields + $link_title_fields + $file_fields + $image_fields;
 
     // Source definition.
     $json_filename = drupal_strtolower($this->machineName) . '.json';
@@ -82,7 +87,7 @@ class UaDemoNewsMigration extends Migration {
     $this->source = new MigrateSourceJSON($import_path . $json_filename, $id_field, $fields);
 
     // Destination.
-    $this->destination = new MigrateDestinationNode('ua_news');
+    $this->destination = new MigrateDestinationNode('ua_event');
 
     // The usual migration map, keyed off the arbitrary source IDs.
     $this->map = new MigrateSQLMap($this->machineName,
@@ -105,41 +110,51 @@ class UaDemoNewsMigration extends Migration {
       $this->addFieldMapping('field_' . $src_field, $src_field);
     }
 
-    // Link title is a special case.
-    $this->addFieldMapping('field_ua_news_more_info:title', 'ua_news_more_info_title');
+    // Date extras.
+    $this->addFieldMapping('field_ua_event_date:to', 'ua_event_date_to');
+    $this->addFieldMapping('field_ua_event_date:rrule', 'ua_event_date_rrule');
+
+    // Link titles.
+    $this->addFieldMapping('field_ua_event_location:title', 'ua_event_location_title');
+    $this->addFieldMapping('field_ua_event_more_info:title', 'ua_event_more_info_title');
 
     // Images and attachments.
-    foreach (array($image_src_field, $file_src_field) as $src_field) {
-      $dst_field = 'field_' . $src_field;
-      $this->addFieldMapping($dst_field, $src_field)
-           ->separator('|');
-      $this->addFieldMapping($dst_field . ':file_replace')
-           ->defaultValue(FILE_EXISTS_REPLACE);
-      $this->addFieldMapping($dst_field . ':file_class')
-           ->defaultValue('MigrateFileUri');
-      $this->addFieldMapping($dst_field . ':source_dir')
-           ->defaultValue($our_path . '/import/images');
-    }
+    $image_dst_field = 'field_' . $image_src_field;
+    $this->addFieldMapping($image_dst_field, $image_src_field);
+    $this->addFieldMapping($image_dst_field . ':file_replace')
+         ->defaultValue(FILE_EXISTS_REPLACE);
+    $this->addFieldMapping($image_dst_field . ':file_class')
+         ->defaultValue('MigrateFileUri');
+    $this->addFieldMapping($image_dst_field . ':source_dir')
+         ->defaultValue($our_path . '/import/images');
+    $file_dst_field = 'field_' . $file_src_field;
+    $this->addFieldMapping($file_dst_field, $file_src_field)
+         ->separator('|');
+    $this->addFieldMapping($file_dst_field . ':file_replace')
+         ->defaultValue(FILE_EXISTS_REPLACE);
+    $this->addFieldMapping($file_dst_field . ':file_class')
+         ->defaultValue('MigrateFileUri');
+    $this->addFieldMapping($file_dst_field . ':source_dir')
+         ->defaultValue($our_path . '/import/images');
 
     // Image alt and title fields
-    foreach (array('alt', 'title') as $label) {
-      $this->addFieldMapping('field_' . $image_src_field . ':' . $label, $image_src_field . '_' . $label)
-           ->separator('|');
+    foreach (array('alt', 'title') as $subfield) {
+      $this->addFieldMapping('field_' . $image_src_field . ':' . $subfield, $image_src_field . '_' . $subfield);
     }
 
     // Attachment description field
-    $label = 'description';
-    $this->addFieldMapping('field_' . $file_src_field . ':' . $label, $file_src_field . '_' . $label)
+    $subfield = 'description';
+    $this->addFieldMapping('field_' . $file_src_field . ':' . $subfield, $file_src_field . '_' . $label)
          ->separator('|');
 
-    // Allow limited HTML markup in the body field
-    $this->addFieldMapping('field_ua_news_body:format')
+    // Allow limited HTML markup in the description field
+    $this->addFieldMapping('field_ua_event_description:format')
          ->defaultValue('filtered_html');
   }
 }
 
 /**
- * Populate the Contacts field collection within UA News content.
+ * Populate the Contacts field collection within UA Event content.
  *
  * A field collection is an independent entity, so the main migration that
  * creates nodes cannot treat it as just another field, so a distinct
@@ -147,7 +162,7 @@ class UaDemoNewsMigration extends Migration {
  *
  * @see https://www.drupal.org/node/1900640
  */
-class UaDemoNewsContactMigration extends Migration {
+class UaDemoEventContactMigration extends Migration {
 
   /**
    * Constructor.
@@ -159,28 +174,28 @@ class UaDemoNewsContactMigration extends Migration {
     parent::__construct($arguments);
 
     $this->description =
-      t('Populate demonstration UA News contact field collections.');
+      t('Populate demonstration UA Event contact field collections.');
 
     // The demonstration data will be within this module's own directory.
     $our_path = drupal_get_path('module', 'ua_demo');
 
-    $this->dependencies = array('UaDemoNews');
+    $this->dependencies = array('UaDemoEvent');
 
     // Source key field (must have int values).
     $id_field = 'id';
     $source_key = array($id_field => t('Unique key (int)'));
 
     // Foreign key.
-    $host_entity_id = 'ua_news_id';
+    $host_entity_id = 'ua_event_id';
     $foreign_key = array(
-      $host_entity_id => t('ID of parent UA News item'),
+      $host_entity_id => t('ID of parent UA Event item'),
     );
 
     // Data fields.
     $data_fields = array(
-      'ua_news_contact_name' => t('Contact Name'),
-      'ua_news_contact_email' => t('Contact Email'),
-      'ua_news_contact_phone' => t('Contact Phone'),
+      'ua_event_contact_name' => t('Contact Name'),
+      'ua_event_contact_email' => t('Contact Email'),
+      'ua_email_contact_phone' => t('Contact Phone'),
     );
 
     $fields = $source_key + $foreign_key + $data_fields;
@@ -191,7 +206,7 @@ class UaDemoNewsContactMigration extends Migration {
     $this->source = new MigrateSourceJSON($import_path . $json_filename, $id_field, $fields);
 
     $this->destination = new MigrateDestinationFieldCollection(
-      'field_ua_news_contacts',
+      'field_ua_event_contacts',
       array('host_entity_type' => 'node')
     );
 
@@ -208,9 +223,9 @@ class UaDemoNewsContactMigration extends Migration {
       MigrateDestinationFieldCollection::getKeySchema()
     );
 
-    // Linking back to UA News items on the foregn key
+    // Linking back to UA Event items on the foregn key
     $this->addFieldMapping('host_entity_id', $host_entity_id)
-         ->sourceMigration('UaDemoNews');
+         ->sourceMigration('UaDemoEvent');
 
     foreach (array_keys($data_fields) as $src_field) {
       $this->addFieldMapping('field_' . $src_field, $src_field);
