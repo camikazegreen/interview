@@ -7,9 +7,8 @@
  * @see https://drupal.org/node/1728096
  */
 
-
 /**
- * Custom function for the secondary footer logo option
+ * Custom function for the secondary footer logo option.
  */
 function ua_zen_footer_logo() {
   $str_return = "";
@@ -62,23 +61,16 @@ function ua_zen_preprocess_html(&$variables, $hook) {
 function ua_zen_preprocess_html(&$variables) {
   // Add external stylesheets from UA
   // drupal_add_css('https://catstrap.css', array('type' => 'external'));
-
 }
 
 /**
  * Override or insert variables into the page templates.
  *
- * @param $variables
+ * @param array $variables
  *   An array of variables to pass to the theme template.
- * @param $hook
+ * @param string $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function ua_zen_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
-}
-// */
-
 function ua_zen_preprocess_page(&$variables, $hook) {
   // Add information about the number of sidebars.
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
@@ -93,7 +85,9 @@ function ua_zen_preprocess_page(&$variables, $hook) {
   else {
     $variables['content_column_class'] = ' class="column col-sm-12"';
   }
-  //Allows there to be a template file for the UA Header and Footers without allowing blocks to be placed there - regions defined in .info, but commented out
+  // Allows there to be a template file for the UA Header and Footers without
+  // allowing blocks to be placed there - regions defined in .info, but
+  // commented out.
   if (!isset($variables['page']['header_ua']) || empty($variables['page']['header_ua'])) {
     $variables['page']['header_ua'] = array(
       '#region' => 'header_ua',
@@ -106,7 +100,8 @@ function ua_zen_preprocess_page(&$variables, $hook) {
       '#weight' => '-10',
       '#theme_wrappers' => array('region'));
   }
-  if (!isset($variables['page']['footer_sub']) || empty($variables['page']['footer_sub'])) { //force sub footer to be rendered
+  // Force sub footer to be rendered.
+  if (!isset($variables['page']['footer_sub']) || empty($variables['page']['footer_sub'])) {
     $variables['page']['footer_sub'] = array(
       '#region' => 'footer_sub',
       '#weight' => '-10',
@@ -118,9 +113,9 @@ function ua_zen_preprocess_page(&$variables, $hook) {
 /**
  * Override or insert variables into the node templates.
  *
- * @param $variables
+ * @param array $variables
  *   An array of variables to pass to the theme template.
- * @param $hook
+ * @param string $hook
  *   The name of the template being rendered ("node" in this case.)
  */
 /* -- Delete this line if you want to use this function
@@ -139,9 +134,9 @@ function ua_zen_preprocess_node(&$variables, $hook) {
 /**
  * Override or insert variables into the comment templates.
  *
- * @param $variables
+ * @param array $variables
  *   An array of variables to pass to the theme template.
- * @param $hook
+ * @param string $hook
  *   The name of the template being rendered ("comment" in this case.)
  */
 /* -- Delete this line if you want to use this function
@@ -153,16 +148,16 @@ function ua_zen_preprocess_comment(&$variables, $hook) {
 /**
  * Override or insert variables into the region templates.
  *
- * @param $variables
+ * @param array $variables
  *   An array of variables to pass to the theme template.
- * @param $hook
+ * @param string $hook
  *   The name of the template being rendered ("region" in this case.)
  */
 function ua_zen_preprocess_region(&$variables, $hook) {
   $str_footer_logo_html = "";
   $str_logo_path = "";
   $str_copyright_notice = "";
-  switch($variables['region']) {
+  switch ($variables['region']) {
     case "footer":
       $str_footer_logo_html = ua_zen_footer_logo();
 
@@ -172,17 +167,17 @@ function ua_zen_preprocess_region(&$variables, $hook) {
           $str_footer_logo_html = "<img src=\"" . file_create_url($str_logo_path) . "\" alt=\"\" />";
         }
       }
-    break;
+      break;
 
     case "footer_sub":
       $str_copyright_notice = theme_get_setting('ua_copyright_notice');
       if (strlen($str_copyright_notice) > 0) {
-        $str_copyright_notice = "<p class=\"copyright\">Copyright © " . date('Y') . " ". $str_copyright_notice . "</p>";
+        $str_copyright_notice = "<p class=\"copyright\">Copyright © " . date('Y') . " " . $str_copyright_notice . "</p>";
       }
       else {
         $str_copyright_notice = "<p class=\"copyright\">Copyright © " . date('Y') . " Arizona Board of Regents. <a href=\"http://www.arizona.edu\" target=\"_blank\">The University of Arizona</a>, Tucson, Arizona</p>";
       }
-    break;
+      break;
   }
 
   $variables['copyright_notice'] = $str_copyright_notice;
@@ -192,9 +187,9 @@ function ua_zen_preprocess_region(&$variables, $hook) {
 /**
  * Override or insert variables into the block templates.
  *
- * @param $variables
+ * @param array $variables
  *   An array of variables to pass to the theme template.
- * @param $hook
+ * @param string $hook
  *   The name of the template being rendered ("block" in this case.)
  */
 /* -- Delete this line if you want to use this function
@@ -211,7 +206,7 @@ function ua_zen_preprocess_block(&$variables, $hook) {
 // */
 
 /**
- * Implements theme_form_search_block_form_alter
+ * Implements theme_form_search_block_form_alter.
  */
 function ua_zen_form_search_block_form_alter(&$form, &$form_state, $form_id) {
   $form['search_block_form']['#attributes']['placeholder'] = t('Search Site');
