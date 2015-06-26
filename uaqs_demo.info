@@ -10,9 +10,12 @@ dependencies[] = ua_person
 dependencies[] = ua_unit
 dependencies[] = ua_news
 dependencies[] = ua_event
+dependencies[] = ua_publication
 files[] = import/ua_demo.node.inc
 files[] = import/ua_demo.menu.inc
 files[] = import/ua_demo_person.inc
 files[] = import/ua_demo_unit.inc
 files[] = import/ua_demo_news.inc
 files[] = import/ua_demo_event.inc
+files[] = import/ua_demo_publication.inc
+

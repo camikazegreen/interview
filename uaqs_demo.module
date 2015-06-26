@@ -52,6 +52,14 @@ function ua_demo_migrate_api() {
         'class_name' => 'UaDemoEventContactMigration',
         'group_name' => 'ua_demo',
       ),
+      'UaDemoPublicationTerm' => array(
+        'class_name' => 'UaDemoPublicationTermMigration',
+        'group_name' => 'ua_demo',
+      ),
+      'UaDemoPublication' => array(
+        'class_name' => 'UaDemoPublicationMigration',
+        'group_name' => 'ua_demo',
+      ),
       'UaDemoMenu' => array(
         'class_name' => 'UaDemoMenu',
         'group_name' => 'ua_demo',
