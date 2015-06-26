@@ -1,0 +1,26 @@
+[
+  {"id":1,
+    "ua_event_id" : 1,
+    "ua_event_contact_name" : "Elizabeth Blount",
+    "ua_event_contact_email" : "blout@email.arizona.edu",
+    "ua_email_contact_phone" : "022-333-8888"
+  },
+  {"id":2,
+    "ua_event_id" : 1,
+    "ua_event_contact_name" : "Samuel Rowbotham",
+    "ua_event_contact_email" : "srowbotham@email.arizona.edu",
+    "ua_email_contact_phone" : "022-333-8888"
+  },
+  {"id":3,
+    "ua_event_id" : 3,
+    "ua_event_contact_name" : "Alcofribas Nasier",
+    "ua_event_contact_email" : "alcofribasnasier@email.arizona.edu",
+    "ua_email_contact_phone" : "091-374-2832"
+  },
+  {"id":4,
+    "ua_event_id" : 3,
+    "ua_event_contact_name" : "Janet Horne",
+    "ua_event_contact_email" : "jhorne@email.arizona.edu",
+    "ua_email_contact_phone" : "041-552-8467"
+  }
+]

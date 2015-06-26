@@ -5,16 +5,40 @@
  */
 
 /**
+ * Null stub to disable message logging.
+ *
+ * @param string $message
+ *   the message to display
+ * @param string $level
+ *   message type
+ */
+function _ua_demo_null_message($message, $level) {
+  return;
+}
+
+/**
  * Implements hook_enable().
  */
 function ua_demo_enable() {
-  _ua_demo_import_demo_content(array('UaDemoPage', 'UaDemoMenu', 'UaDemoCarouselItem'));
-  variable_set('site_frontpage', 'primus');
+  migrate_static_registration();
+  $info = ua_demo_migrate_api();
+  Migration::setDisplayFunction('_ua_demo_null_message');
+  foreach ($info['migrations'] as $machine_name => $arguments) {
+    $migration = Migration::getInstance($machine_name);
+    $migration->processImport();
+  }
+  variable_set('site_frontpage', 'node/1');
 }
 
 /**
  * Implements hook_disable().
  */
 function ua_demo_disable() {
-  _ua_demo_rollback_demo_content(array('UaDemoMenu', 'UaDemoPage', 'UaDemoCarouselItem'));
+  $info = ua_demo_migrate_api();
+  Migration::setDisplayFunction('_ua_demo_null_message');
+  foreach ($info['migrations'] as $machine_name => $arguments) {
+    $migration = Migration::getInstance($machine_name);
+    $migration->processRollback();
+  }
+  MigrateGroup::deregister('ua_demo');;
 }

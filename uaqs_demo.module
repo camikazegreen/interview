@@ -24,6 +24,50 @@ function ua_demo_migrate_api() {
         'class_name' => 'UaDemoCarouselItem',
         'group_name' => 'ua_demo',
       ),
+      'UaDemoPerson' => array(
+        'class_name' => 'UaDemoPersonMigration',
+        'group_name' => 'ua_demo',
+      ),
+      'UaDemoUnitTerm' => array(
+        'class_name' => 'UaDemoUnitTermMigration',
+        'group_name' => 'ua_demo',
+      ),
+      'UaDemoUnit' => array(
+        'class_name' => 'UaDemoUnitMigration',
+        'group_name' => 'ua_demo',
+      ),
+      'UaDemoNews' => array(
+        'class_name' => 'UaDemoNewsMigration',
+        'group_name' => 'ua_demo',
+      ),
+      'UaDemoNewsContact' => array(
+        'class_name' => 'UaDemoNewsContactMigration',
+        'group_name' => 'ua_demo',
+      ),
+      'UaDemoEvent' => array(
+        'class_name' => 'UaDemoEventMigration',
+        'group_name' => 'ua_demo',
+      ),
+      'UaDemoEventContact' => array(
+        'class_name' => 'UaDemoEventContactMigration',
+        'group_name' => 'ua_demo',
+      ),
+      'UaDemoPublicationTerm' => array(
+        'class_name' => 'UaDemoPublicationTermMigration',
+        'group_name' => 'ua_demo',
+      ),
+      'UaDemoPublication' => array(
+        'class_name' => 'UaDemoPublicationMigration',
+        'group_name' => 'ua_demo',
+      ),
+      'UaDemoProgramTerm' => array(
+        'class_name' => 'UaDemoProgramTermMigration',
+        'group_name' => 'ua_demo',
+      ),
+      'UaDemoProgram' => array(
+        'class_name' => 'UaDemoProgramMigration',
+        'group_name' => 'ua_demo',
+      ),
       'UaDemoMenu' => array(
         'class_name' => 'UaDemoMenu',
         'group_name' => 'ua_demo',
@@ -33,56 +77,3 @@ function ua_demo_migrate_api() {
   return $api;
 }
 
-/**
- * Helpfer function to import demo content for apps using Migrate.
- */
-function _ua_demo_import_demo_content($classes = array()) {
-  // Ensure that migration classes are registered.
-  migrate_get_module_apis(TRUE);
-
-  // Process the migrations to import demo content.
-  foreach ($classes as $class) {
-    // Register the Migration class since auto-registration is not supported
-    // since Migrate module version 2.6
-    Migration::registerMigration($class);
-
-    // Get a handle on our migration class.
-    $migration = Migration::getInstance($class);
-
-    // Disable message output from migrate ince this import is used within
-    // the context of the Apps module where these messages make no sense.
-    Migration::setDisplayFunction('_ua_demo_null_message');
-
-    // Process the migration.
-    $migration->processImport();
-  }
-}
-
-/**
- * Helpfer function to import demo content for apps using Migrate.
- */
-function _ua_demo_rollback_demo_content($classes = array()) {
-  // Roll back the migrations to delete the demo content.
-  foreach ($classes as $class) {
-    // Get a handle on our migration class.
-    $migration = Migration::getInstance($class);
-
-    // Disable message output from migrate ince this import is used within
-    // the context of the Apps module where these messages make no sense.
-    Migration::setDisplayFunction('_ua_demo_null_message');
-
-    // Roll back the migration.
-    $migration->processRollback();
-
-    // deregister the Migration classes since it will not exist after the
-    // module is disabled.
-    Migration::deregisterMigration($class);
-  }
-}
-
-/**
- * Helpfer function to import demo content for apps using Migrate.
- */
-function _ua_demo_null_message($message, $level) {
-  return;
-}
