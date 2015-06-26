@@ -1,0 +1,22 @@
+[
+  { "name" : "Geodesy",
+    "description" : "Measurement and representation of the Earth.",
+    "parent_name" : ""
+  },
+  { "name" : "Astronomy",
+    "description" : "Astronomy and planetary science.",
+    "parent_name" : ""
+  },
+  { "name" : "Global Change",
+    "description" : "Current environmental changes.",
+    "parent_name" : ""
+  },
+  { "name" : "Engineering",
+    "description" : "Engineering and structural design.",
+    "parent_name" : ""
+  },
+  { "name" : "Philosophy",
+    "description" : "Philosophy and meta-knowledge.",
+    "parent_name" : ""
+  }
+]

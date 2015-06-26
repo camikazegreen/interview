@@ -60,6 +60,14 @@ function ua_demo_migrate_api() {
         'class_name' => 'UaDemoPublicationMigration',
         'group_name' => 'ua_demo',
       ),
+      'UaDemoProgramTerm' => array(
+        'class_name' => 'UaDemoProgramTermMigration',
+        'group_name' => 'ua_demo',
+      ),
+      'UaDemoProgram' => array(
+        'class_name' => 'UaDemoProgramMigration',
+        'group_name' => 'ua_demo',
+      ),
       'UaDemoMenu' => array(
         'class_name' => 'UaDemoMenu',
         'group_name' => 'ua_demo',
