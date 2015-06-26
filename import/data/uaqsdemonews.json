@@ -49,6 +49,6 @@
     "ua_news_attachments_description" : "",
     "ua_news_photo" : "branding_iron.jpg",
     "ua_news_photo_title" : "Branding iron",
-    "ua_news_photo" : "example letter A (differing from the UofA design)"
+    "ua_news_photo_alt" : "example letter A (differing from the UofA design)"
   }
 ]
