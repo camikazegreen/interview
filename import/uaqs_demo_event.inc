@@ -144,7 +144,7 @@ class UaDemoEventMigration extends Migration {
 
     // Attachment description field
     $subfield = 'description';
-    $this->addFieldMapping('field_' . $file_src_field . ':' . $subfield, $file_src_field . '_' . $label)
+    $this->addFieldMapping('field_' . $file_src_field . ':' . $subfield, $file_src_field . '_' . $subfield)
          ->separator('|');
 
     // Allow limited HTML markup in the description field
