@@ -185,7 +185,7 @@ function ua_quickstart_enable_blocks() {
       'module' => 'views',
       'delta' => 'ua_events-block',
       'theme' => $default_theme,
-      'region' => 'content_featured',
+      'region' => 'content',
       'pages' => '<front>',
       'title' => '<none>',
       'visibility' => 1,
