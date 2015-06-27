@@ -16,7 +16,7 @@
  *
  * @see https://www.drupal.org/node/1152160
  */
-class UaDemoPersonMigration extends Migration {
+class UaDemoPersonMigration extends UaDemoLocalfileMigration {
 
   /**
    * Constructor.
@@ -29,9 +29,6 @@ class UaDemoPersonMigration extends Migration {
 
     $this->description =
       t('Make demonstration UA Person content from pre-defined data.');
-
-    // The demonstration data will be within this module's own directory.
-    $our_path = drupal_get_path('module', 'ua_demo');
 
     // Documented lists of source data fields: all names here MUST match
     // those in the corresponding content type.
@@ -64,9 +61,7 @@ class UaDemoPersonMigration extends Migration {
     $fields = $source_key + $single_value_fields + $multi_value_fields + $image_fields;
 
     // Source definition.
-    $json_filename = drupal_strtolower($this->machineName) . '.json';
-    $import_path = $our_path . '/import/data/';
-    $this->source = new MigrateSourceJSON($import_path . $json_filename, $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
 
     // Destination.
     $this->destination = new MigrateDestinationNode('ua_person');
@@ -105,7 +100,7 @@ class UaDemoPersonMigration extends Migration {
     $this->addFieldMapping($image_dst_field . ':file_class')
          ->defaultValue('MigrateFileUri');
     $this->addFieldMapping($image_dst_field . ':source_dir')
-         ->defaultValue($our_path . '/import/images');
+         ->defaultValue($this->imagePath());
 
     // Allow limited HTML markup in the bio field
     $this->addFieldMapping('field_ua_person_bio:format')

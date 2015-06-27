@@ -16,7 +16,7 @@
  *
  * @see https://www.drupal.org/node/1152160
  */
-class UaDemoEventMigration extends Migration {
+class UaDemoEventMigration extends UaDemoLocalfileMigration {
 
   /**
    * Constructor.
@@ -29,9 +29,6 @@ class UaDemoEventMigration extends Migration {
 
     $this->description =
       t('Make demonstration UA Event content from pre-defined data.');
-
-    // The demonstration data will be within this module's own directory.
-    $our_path = drupal_get_path('module', 'ua_demo');
 
     // Documented lists of source data fields: all names here MUST match
     // those in the corresponding content type.
@@ -82,9 +79,7 @@ class UaDemoEventMigration extends Migration {
     $fields = $source_key + $title_field + $single_value_fields + $date_extra_fields + $link_title_fields + $file_fields + $image_fields;
 
     // Source definition.
-    $json_filename = drupal_strtolower($this->machineName) . '.json';
-    $import_path = $our_path . '/import/data/';
-    $this->source = new MigrateSourceJSON($import_path . $json_filename, $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
 
     // Destination.
     $this->destination = new MigrateDestinationNode('ua_event');
@@ -126,7 +121,7 @@ class UaDemoEventMigration extends Migration {
     $this->addFieldMapping($image_dst_field . ':file_class')
          ->defaultValue('MigrateFileUri');
     $this->addFieldMapping($image_dst_field . ':source_dir')
-         ->defaultValue($our_path . '/import/images');
+         ->defaultValue($this->imagePath());
     $file_dst_field = 'field_' . $file_src_field;
     $this->addFieldMapping($file_dst_field, $file_src_field)
          ->separator('|');
@@ -135,7 +130,7 @@ class UaDemoEventMigration extends Migration {
     $this->addFieldMapping($file_dst_field . ':file_class')
          ->defaultValue('MigrateFileUri');
     $this->addFieldMapping($file_dst_field . ':source_dir')
-         ->defaultValue($our_path . '/import/images');
+         ->defaultValue($this->imagePath());
 
     // Image alt and title fields
     foreach (array('alt', 'title') as $subfield) {
@@ -162,7 +157,7 @@ class UaDemoEventMigration extends Migration {
  *
  * @see https://www.drupal.org/node/1900640
  */
-class UaDemoEventContactMigration extends Migration {
+class UaDemoEventContactMigration extends UaDemoLocalfileMigration {
 
   /**
    * Constructor.
@@ -175,9 +170,6 @@ class UaDemoEventContactMigration extends Migration {
 
     $this->description =
       t('Populate demonstration UA Event contact field collections.');
-
-    // The demonstration data will be within this module's own directory.
-    $our_path = drupal_get_path('module', 'ua_demo');
 
     $this->dependencies = array('UaDemoEvent');
 
@@ -201,9 +193,7 @@ class UaDemoEventContactMigration extends Migration {
     $fields = $source_key + $foreign_key + $data_fields;
 
     // Source definition.
-    $json_filename = drupal_strtolower($this->machineName) . '.json';
-    $import_path = $our_path . '/import/data/';
-    $this->source = new MigrateSourceJSON($import_path . $json_filename, $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
 
     $this->destination = new MigrateDestinationFieldCollection(
       'field_ua_event_contacts',

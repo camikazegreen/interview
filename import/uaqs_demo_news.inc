@@ -16,7 +16,7 @@
  *
  * @see https://www.drupal.org/node/1152160
  */
-class UaDemoNewsMigration extends Migration {
+class UaDemoNewsMigration extends UaDemoLocalfileMigration {
 
   /**
    * Constructor.
@@ -29,9 +29,6 @@ class UaDemoNewsMigration extends Migration {
 
     $this->description =
       t('Make demonstration UA News content from pre-defined data.');
-
-    // The demonstration data will be within this module's own directory.
-    $our_path = drupal_get_path('module', 'ua_demo');
 
     // Documented lists of source data fields: all names here MUST match
     // those in the corresponding content type.
@@ -77,9 +74,7 @@ class UaDemoNewsMigration extends Migration {
     $fields = $source_key + $title_field + $single_value_fields + $link_title_fields + $file_fields + $image_fields;
 
     // Source definition.
-    $json_filename = drupal_strtolower($this->machineName) . '.json';
-    $import_path = $our_path . '/import/data/';
-    $this->source = new MigrateSourceJSON($import_path . $json_filename, $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
 
     // Destination.
     $this->destination = new MigrateDestinationNode('ua_news');
@@ -118,7 +113,7 @@ class UaDemoNewsMigration extends Migration {
       $this->addFieldMapping($dst_field . ':file_class')
            ->defaultValue('MigrateFileUri');
       $this->addFieldMapping($dst_field . ':source_dir')
-           ->defaultValue($our_path . '/import/images');
+           ->defaultValue($this->imagePath());
     }
 
     // Image alt and title fields
@@ -147,7 +142,7 @@ class UaDemoNewsMigration extends Migration {
  *
  * @see https://www.drupal.org/node/1900640
  */
-class UaDemoNewsContactMigration extends Migration {
+class UaDemoNewsContactMigration extends UaDemoLocalfileMigration {
 
   /**
    * Constructor.
@@ -160,9 +155,6 @@ class UaDemoNewsContactMigration extends Migration {
 
     $this->description =
       t('Populate demonstration UA News contact field collections.');
-
-    // The demonstration data will be within this module's own directory.
-    $our_path = drupal_get_path('module', 'ua_demo');
 
     $this->dependencies = array('UaDemoNews');
 
@@ -186,9 +178,7 @@ class UaDemoNewsContactMigration extends Migration {
     $fields = $source_key + $foreign_key + $data_fields;
 
     // Source definition.
-    $json_filename = drupal_strtolower($this->machineName) . '.json';
-    $import_path = $our_path . '/import/data/';
-    $this->source = new MigrateSourceJSON($import_path . $json_filename, $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
 
     $this->destination = new MigrateDestinationFieldCollection(
       'field_ua_news_contacts',

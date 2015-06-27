@@ -12,7 +12,7 @@
  *
  * @see UaDemoPublicationMigration for more details.
  */
-class UaDemoPublicationTermMigration extends Migration {
+class UaDemoPublicationTermMigration extends UaDemoLocalfileMigration {
 
   /**
    * Constructor.
@@ -25,9 +25,6 @@ class UaDemoPublicationTermMigration extends Migration {
 
     $this->description =
       t('Add demonstration UA Publication taxonomy terms to a vocabulary.');
-
-    // The demonstration data will be within this module's own directory.
-    $our_path = drupal_get_path('module', 'ua_demo');
 
     // Taxonomy term fields.
     $data_fields = array(
@@ -43,9 +40,7 @@ class UaDemoPublicationTermMigration extends Migration {
     $fields = $source_key + $data_fields;
 
     // Source definition.
-    $json_filename = drupal_strtolower($this->machineName) . '.json';
-    $import_path = $our_path . '/import/data/';
-    $this->source = new MigrateSourceJSON($import_path . $json_filename, $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
 
     // Destination, giving the machine name of the vocabulary.
     $this->destination = new MigrateDestinationTerm('research_categories');
@@ -79,7 +74,7 @@ class UaDemoPublicationTermMigration extends Migration {
  *
  * @see https://www.drupal.org/node/1152160
  */
-class UaDemoPublicationMigration extends Migration {
+class UaDemoPublicationMigration extends UaDemoLocalfileMigration {
 
   /**
    * Constructor.
@@ -92,9 +87,6 @@ class UaDemoPublicationMigration extends Migration {
 
     $this->description =
       t('Make demonstration UA Publication content from pre-defined data.');
-
-    // The demonstration data will be within this module's own directory.
-    $our_path = drupal_get_path('module', 'ua_demo');
 
     // Documented lists of source data fields: all names here MUST match
     // those in the corresponding content type.
@@ -133,9 +125,7 @@ class UaDemoPublicationMigration extends Migration {
     $fields = $source_key + $title_field + $single_value_fields + $multi_value_fields + $link_title_fields + $image_fields;
 
     // Source definition.
-    $json_filename = drupal_strtolower($this->machineName) . '.json';
-    $import_path = $our_path . '/import/data/';
-    $this->source = new MigrateSourceJSON($import_path . $json_filename, $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
 
     // Destination.
     $this->destination = new MigrateDestinationNode('ua_pub');
@@ -179,7 +169,7 @@ class UaDemoPublicationMigration extends Migration {
     $this->addFieldMapping($image_dst_field . ':file_class')
          ->defaultValue('MigrateFileUri');
     $this->addFieldMapping($image_dst_field . ':source_dir')
-         ->defaultValue($our_path . '/import/images');
+         ->defaultValue($this->imagePath());
     // Image alt field.
     $this->addFieldMapping($image_dst_field . ':alt', $image_src_field . '_alt');
 

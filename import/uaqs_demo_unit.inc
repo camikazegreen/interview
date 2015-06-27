@@ -12,7 +12,7 @@
  *
  * @see UaDemoUnitMigration for more details.
  */
-class UaDemoUnitTermMigration extends Migration {
+class UaDemoUnitTermMigration extends UaDemoLocalfileMigration {
 
   /**
    * Constructor.
@@ -25,9 +25,6 @@ class UaDemoUnitTermMigration extends Migration {
 
     $this->description =
       t('Add demonstration UA Unit taxonomy terms to a vocabulary.');
-
-    // The demonstration data will be within this module's own directory.
-    $our_path = drupal_get_path('module', 'ua_demo');
 
     // Taxonomy term fields.
     $data_fields = array(
@@ -43,9 +40,7 @@ class UaDemoUnitTermMigration extends Migration {
     $fields = $source_key + $data_fields;
 
     // Source definition.
-    $json_filename = drupal_strtolower($this->machineName) . '.json';
-    $import_path = $our_path . '/import/data/';
-    $this->source = new MigrateSourceJSON($import_path . $json_filename, $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
 
     // Destination, giving the machine name of the vocabulary.
     $this->destination = new MigrateDestinationTerm('tags');
@@ -78,7 +73,7 @@ class UaDemoUnitTermMigration extends Migration {
  *
  * @see https://www.drupal.org/node/1152160
  */
-class UaDemoUnitMigration extends Migration {
+class UaDemoUnitMigration extends UaDemoLocalfileMigration {
 
   /**
    * Constructor.
@@ -91,9 +86,6 @@ class UaDemoUnitMigration extends Migration {
 
     $this->description =
       t('Make demonstration UA Unit node content from pre-defined data.');
-
-    // The demonstration data will be within this module's own directory.
-    $our_path = drupal_get_path('module', 'ua_demo');
 
     // Documented lists of source data fields.
     // @see ua_unit ua_unit.features.field_instance.inc
@@ -115,9 +107,7 @@ class UaDemoUnitMigration extends Migration {
     $fields = $source_key + $data_fields;
 
     // Source definition.
-    $json_filename = drupal_strtolower($this->machineName) . '.json';
-    $import_path = $our_path . '/import/data/';
-    $this->source = new MigrateSourceJSON($import_path . $json_filename, $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
 
     // Destination.
     $this->destination = new MigrateDestinationNode('ua_unit');

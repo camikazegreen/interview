@@ -12,6 +12,7 @@ dependencies[] = ua_news
 dependencies[] = ua_event
 dependencies[] = ua_publication
 dependencies[] = ua_program
+files[] = import/ua_demo_base.inc
 files[] = import/ua_demo.node.inc
 files[] = import/ua_demo.menu.inc
 files[] = import/ua_demo_person.inc
