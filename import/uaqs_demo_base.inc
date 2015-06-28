@@ -68,3 +68,74 @@ abstract class UaDemoLocalfileMigration extends Migration {
   }
 
 }
+
+/**
+ * Imports demonstration taxonomy terms from pre-defined data.
+ *
+ * Terms come from a local JSON-formatted text file, and the overall approach
+ * here is similar to the abstract taxonomy migration class in the wine.inc
+ * sample code included with the Migrate module, and the documentation for
+ * migration sources based on MigrateSourceJSON.
+ *
+ * @see https://www.drupal.org/node/1152160
+ */
+abstract class UaDemoTermMigration extends UaDemoLocalfileMigration {
+
+  /**
+   * Constructor.
+   *
+   * @param array $arguments
+   *   Arguments for the parent constructor (Migration standard behavior).
+   * @param string $vocabulary
+   *   The machine name of the taxonomy vocabulary into which to import terms.
+   * @param string $description
+   *   Detailed information describing the migration.
+   */
+  public function __construct($arguments, $vocabulary, $description) {
+    parent::__construct($arguments);
+
+    $this->description = $description;
+
+    // Taxonomy term fields.
+    $data_fields = array(
+      'description' => t('Taxonomy term description'),
+      'parent_name' => t('Nest under the term with this name'),
+    );
+
+    // Source key field: in our case we use the term names, not numeric IDs.
+    $id_field = 'name';
+    $source_key = array($id_field => t('Taxonomy term'));
+
+    // All the fields to migrate.
+    $fields = $source_key + $data_fields;
+
+    // Source definition.
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
+
+    // Destination, giving the machine name of the vocabulary.
+    $this->destination = new MigrateDestinationTerm($vocabulary);
+
+    // The usual migration map, keyed off the source term names.
+    $this->map = new MigrateSQLMap($this->machineName,
+      array(
+        $id_field => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'description' => $source_key[$id_field],
+        )
+      ),
+      MigrateDestinationTerm::getKeySchema()
+    );
+
+    // One-to-one correspondence: JSON names and taxonomy fields.
+    $this->addSimpleMappings(array_keys($fields));
+
+    // Unmapped fields
+    foreach (array('parent', 'weight', 'format') as $unmapped) {
+      $this->addFieldMapping($unmapped)
+           ->issueGroup(t('DNM'));
+    }
+  }
+
+}

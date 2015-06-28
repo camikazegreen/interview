@@ -10,9 +10,9 @@
  *
  * Terms come from a local JSON-formatted text file.
  *
- * @see UaDemoUnitMigration for more details.
+ * @see UaDemoTermMigration
  */
-class UaDemoUnitTermMigration extends UaDemoLocalfileMigration {
+class UaDemoUnitTermMigration extends UaDemoTermMigration {
 
   /**
    * Constructor.
@@ -21,46 +21,10 @@ class UaDemoUnitTermMigration extends UaDemoLocalfileMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct($arguments) {
-    parent::__construct($arguments);
-
-    $this->description =
-      t('Add demonstration UA Unit taxonomy terms to a vocabulary.');
-
-    // Taxonomy term fields.
-    $data_fields = array(
-      'description' => t('Taxonomy term description'),
-      'parent_name' => t('Nest under the term with this name'),
-    );
-
-    // Source key field.
-    $id_field = 'name';
-    $source_key = array($id_field => t('Unique key'));
-
-    // All the fields to migrate.
-    $fields = $source_key + $data_fields;
-
-    // Source definition.
-    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
-
-    // Destination, giving the machine name of the vocabulary.
-    $this->destination = new MigrateDestinationTerm('tags');
-
-    // The usual migration map, keyed off the source term names.
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        $id_field => array(
-          'type' => 'varchar',
-          'length' => 255,
-          'not null' => TRUE,
-          'description' => $source_key[$id_field],
-        )
-      ),
-      MigrateDestinationTerm::getKeySchema()
-    );
-
-    // One-to-one correspondence: JSON names and taxonomy fields.
-    $this->addSimpleMappings(array_keys($fields));
+    parent::__construct($arguments, 'tags',
+      t('Add demonstration UA Unit taxonomy terms to a vocabulary.'));
   }
+
 }
 
 /**
