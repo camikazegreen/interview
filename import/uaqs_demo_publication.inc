@@ -38,7 +38,7 @@ class UaDemoPublicationTermMigration extends UaDemoTermMigration {
  *
  * @see https://www.drupal.org/node/1152160
  */
-class UaDemoPublicationMigration extends UaDemoLocalfileMigration {
+class UaDemoPublicationMigration extends UaDemoIntKeyedMigration {
 
   /**
    * Constructor.
@@ -47,7 +47,7 @@ class UaDemoPublicationMigration extends UaDemoLocalfileMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct($arguments) {
-    parent::__construct($arguments);
+    parent::__construct($arguments, 'id', MigrateDestinationNode::getKeySchema());
 
     $this->description =
       t('Make demonstration UA Publication content from pre-defined data.');
@@ -81,31 +81,14 @@ class UaDemoPublicationMigration extends UaDemoLocalfileMigration {
       $image_src_field . '_alt' => t('Alternate text'),
     );
 
-    // Source key field (must have int values).
-    $id_field = 'id';
-    $source_key = array($id_field => t('Unique key (int)'));
-
     // All the fields to migrate.
-    $fields = $source_key + $title_field + $single_value_fields + $multi_value_fields + $link_title_fields + $image_fields;
+    $fields = $this->getSourceKeyField() + $title_field + $single_value_fields + $multi_value_fields + $link_title_fields + $image_fields;
 
     // Source definition.
-    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
     // Destination.
     $this->destination = new MigrateDestinationNode('ua_pub');
-
-    // The usual migration map, keyed off the arbitrary source IDs.
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        $id_field => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
-          'not null' => TRUE,
-          'description' => $source_key[$id_field],
-        )
-      ),
-      MigrateDestinationNode::getKeySchema()
-    );
 
     // The title has no prefix
     $this->addSimpleMappings(array('title'));
@@ -141,4 +124,5 @@ class UaDemoPublicationMigration extends UaDemoLocalfileMigration {
     $this->addFieldMapping('field_ua_pub_description:format')
          ->defaultValue('filtered_html');
   }
+
 }

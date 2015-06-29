@@ -37,7 +37,7 @@ class UaDemoUnitTermMigration extends UaDemoTermMigration {
  *
  * @see https://www.drupal.org/node/1152160
  */
-class UaDemoUnitMigration extends UaDemoLocalfileMigration {
+class UaDemoUnitMigration extends UaDemoIntKeyedMigration {
 
   /**
    * Constructor.
@@ -46,7 +46,7 @@ class UaDemoUnitMigration extends UaDemoLocalfileMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct($arguments) {
-    parent::__construct($arguments);
+    parent::__construct($arguments, 'id', MigrateDestinationNode::getKeySchema());
 
     $this->description =
       t('Make demonstration UA Unit node content from pre-defined data.');
@@ -63,31 +63,14 @@ class UaDemoUnitMigration extends UaDemoLocalfileMigration {
       'ua_unit_focus_areas' => t('Focus Areas (term references)'),
     );
 
-    // Source key field (must have int values).
-    $id_field = 'id';
-    $source_key = array($id_field => t('Unique key'));
-
     // All the fields to migrate.
-    $fields = $source_key + $data_fields;
+    $fields = $this->getSourceKeyField() + $data_fields;
 
     // Source definition.
-    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
     // Destination.
     $this->destination = new MigrateDestinationNode('ua_unit');
-
-    // The usual migration map, keyed off the arbitrary source IDs.
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        $id_field => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
-          'not null' => TRUE,
-          'description' => $source_key[$id_field],
-        )
-      ),
-      MigrateDestinationNode::getKeySchema()
-    );
 
     // JSON names to simple content type fields and subfields.
     $this->addFieldMapping('title', 'title');
@@ -100,4 +83,5 @@ class UaDemoUnitMigration extends UaDemoLocalfileMigration {
     $this->addFieldMapping('field_ua_unit_focus_areas', 'ua_unit_focus_areas')
          ->separator('|');
   }
+
 }

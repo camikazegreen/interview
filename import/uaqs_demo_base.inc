@@ -139,3 +139,68 @@ abstract class UaDemoTermMigration extends UaDemoLocalfileMigration {
   }
 
 }
+
+/**
+ * Defines a migration that uses arbitrary int source keys.
+ *
+ * Most of the migration sources have int keys for the source records, so the
+ * map definitions are all similar.
+ *
+ * @see https://www.drupal.org/node/1007004
+ */
+abstract class UaDemoIntKeyedMigration extends UaDemoLocalfileMigration {
+
+  /**
+   * Name and label for the source key.
+   */
+  protected $sourceKeyField;
+
+  /**
+   * Gets the source key field name and description.
+   *
+   * @return array
+   *   An associative array giving the source key field name and description.
+   */
+  public function getSourceKeyField() {
+    return $this->sourceKeyField;
+  }
+
+  /**
+   * Gets the source key field name.
+   *
+   * @return string
+   *   The name of the key field in the migration source.
+   */
+  public function getSourceKeyFieldName() {
+    return (array_keys($this->sourceKeyField)[0]);
+  }
+
+  /**
+   * Constructor.
+   *
+   * @param array $arguments
+   *   Arguments for the parent constructor (Migration standard behavior).
+   * @param string $id_field
+   *   Name of the key field in the source records.
+   * @param array $dest_key_schema
+   *   A Drupal schema definition for the destination key.
+   */
+  public function __construct($arguments, $id_field, $dest_key_schema) {
+    parent::__construct($arguments);
+
+    $this->sourceKeyField = array($id_field => t('Unique key'));
+    // The usual migration map, keyed off the arbitrary source IDs.
+    $this->map = new MigrateSQLMap($this->machineName,
+      array(
+        $id_field => array(
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+          'description' => $this->sourceKeyField[$id_field],
+        )
+      ),
+      $dest_key_schema
+    );
+  }
+
+}

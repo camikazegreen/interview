@@ -16,7 +16,7 @@
  *
  * @see https://www.drupal.org/node/1152160
  */
-class UaDemoNewsMigration extends UaDemoLocalfileMigration {
+class UaDemoNewsMigration extends UaDemoIntKeyedMigration {
 
   /**
    * Constructor.
@@ -25,7 +25,7 @@ class UaDemoNewsMigration extends UaDemoLocalfileMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct($arguments) {
-    parent::__construct($arguments);
+    parent::__construct($arguments, 'id', MigrateDestinationNode::getKeySchema());
 
     $this->description =
       t('Make demonstration UA News content from pre-defined data.');
@@ -66,31 +66,14 @@ class UaDemoNewsMigration extends UaDemoLocalfileMigration {
       $image_src_field . '_alt' => t('Photo alt text'),
    );
 
-    // Source key field (must have int values).
-    $id_field = 'id';
-    $source_key = array($id_field => t('Unique key (int)'));
-
     // All the fields to migrate.
-    $fields = $source_key + $title_field + $single_value_fields + $link_title_fields + $file_fields + $image_fields;
+    $fields = $this->getSourceKeyField() + $title_field + $single_value_fields + $link_title_fields + $file_fields + $image_fields;
 
     // Source definition.
-    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
     // Destination.
     $this->destination = new MigrateDestinationNode('ua_news');
-
-    // The usual migration map, keyed off the arbitrary source IDs.
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        $id_field => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
-          'not null' => TRUE,
-          'description' => $source_key[$id_field],
-        )
-      ),
-      MigrateDestinationNode::getKeySchema()
-    );
 
     // The title has no prefix
     $this->addSimpleMappings(array('title'));
@@ -131,6 +114,7 @@ class UaDemoNewsMigration extends UaDemoLocalfileMigration {
     $this->addFieldMapping('field_ua_news_body:format')
          ->defaultValue('filtered_html');
   }
+
 }
 
 /**
@@ -142,7 +126,7 @@ class UaDemoNewsMigration extends UaDemoLocalfileMigration {
  *
  * @see https://www.drupal.org/node/1900640
  */
-class UaDemoNewsContactMigration extends UaDemoLocalfileMigration {
+class UaDemoNewsContactMigration extends UaDemoIntKeyedMigration {
 
   /**
    * Constructor.
@@ -151,16 +135,12 @@ class UaDemoNewsContactMigration extends UaDemoLocalfileMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct($arguments) {
-    parent::__construct($arguments);
+    parent::__construct($arguments, 'id', MigrateDestinationFieldCollection::getKeySchema());
 
     $this->description =
       t('Populate demonstration UA News contact field collections.');
 
     $this->dependencies = array('UaDemoNews');
-
-    // Source key field (must have int values).
-    $id_field = 'id';
-    $source_key = array($id_field => t('Unique key (int)'));
 
     // Foreign key.
     $host_entity_id = 'ua_news_id';
@@ -175,27 +155,14 @@ class UaDemoNewsContactMigration extends UaDemoLocalfileMigration {
       'ua_news_contact_phone' => t('Contact Phone'),
     );
 
-    $fields = $source_key + $foreign_key + $data_fields;
+    $fields = $this->getSourceKeyField() + $foreign_key + $data_fields;
 
     // Source definition.
-    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
     $this->destination = new MigrateDestinationFieldCollection(
       'field_ua_news_contacts',
       array('host_entity_type' => 'node')
-    );
-
-    // The usual migration map, keyed off the arbitrary source IDs.
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        $id_field => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
-          'not null' => TRUE,
-          'description' => $source_key[$id_field],
-        )
-      ),
-      MigrateDestinationFieldCollection::getKeySchema()
     );
 
     // Linking back to UA News items on the foregn key
@@ -205,6 +172,6 @@ class UaDemoNewsContactMigration extends UaDemoLocalfileMigration {
     foreach (array_keys($data_fields) as $src_field) {
       $this->addFieldMapping('field_' . $src_field, $src_field);
     }
-
   }
+
 }

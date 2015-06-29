@@ -16,7 +16,7 @@
  *
  * @see https://www.drupal.org/node/1152160
  */
-class UaDemoPersonMigration extends UaDemoLocalfileMigration {
+class UaDemoPersonMigration extends UaDemoIntKeyedMigration {
 
   /**
    * Constructor.
@@ -25,7 +25,7 @@ class UaDemoPersonMigration extends UaDemoLocalfileMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct($arguments) {
-    parent::__construct($arguments);
+    parent::__construct($arguments, 'id', MigrateDestinationNode::getKeySchema());
 
     $this->description =
       t('Make demonstration UA Person content from pre-defined data.');
@@ -53,31 +53,14 @@ class UaDemoPersonMigration extends UaDemoLocalfileMigration {
       'image_alt_text' => t('Photo alt text (derived from other fields)'),
     );
 
-    // Source key field (must have int values).
-    $id_field = 'id';
-    $source_key = array($id_field => t('Unique key (int)'));
-
     // All the fields to migrate.
-    $fields = $source_key + $single_value_fields + $multi_value_fields + $image_fields;
+    $fields = $this->getSourceKeyField() + $single_value_fields + $multi_value_fields + $image_fields;
 
     // Source definition.
-    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
     // Destination.
     $this->destination = new MigrateDestinationNode('ua_person');
-
-    // The usual migration map, keyed off the arbitrary source IDs.
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        $id_field => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
-          'not null' => TRUE,
-          'description' => $source_key[$id_field],
-        )
-      ),
-      MigrateDestinationNode::getKeySchema()
-    );
 
     // One-to-one correspondence: JSON names and simple content type fields.
     foreach (array_keys($single_value_fields) as $src_field) {
@@ -129,6 +112,5 @@ class UaDemoPersonMigration extends UaDemoLocalfileMigration {
     $row->image_alt_text = implode(' ', array($row->ua_person_fname, $row->ua_person_lname, 'portrait'));
     return TRUE;
   }
-
 
 }

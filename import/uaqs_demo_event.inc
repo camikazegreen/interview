@@ -16,7 +16,7 @@
  *
  * @see https://www.drupal.org/node/1152160
  */
-class UaDemoEventMigration extends UaDemoLocalfileMigration {
+class UaDemoEventMigration extends UaDemoIntKeyedMigration {
 
   /**
    * Constructor.
@@ -25,7 +25,7 @@ class UaDemoEventMigration extends UaDemoLocalfileMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct($arguments) {
-    parent::__construct($arguments);
+    parent::__construct($arguments, 'id', MigrateDestinationNode::getKeySchema());
 
     $this->description =
       t('Make demonstration UA Event content from pre-defined data.');
@@ -71,31 +71,14 @@ class UaDemoEventMigration extends UaDemoLocalfileMigration {
       $image_src_field . '_alt' => t('Event photo alt text'),
     );
 
-    // Source key field (must have int values).
-    $id_field = 'id';
-    $source_key = array($id_field => t('Unique key (int)'));
-
     // All the fields to migrate.
-    $fields = $source_key + $title_field + $single_value_fields + $date_extra_fields + $link_title_fields + $file_fields + $image_fields;
+    $fields = $this->getSourceKeyField() + $title_field + $single_value_fields + $date_extra_fields + $link_title_fields + $file_fields + $image_fields;
 
     // Source definition.
-    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
     // Destination.
     $this->destination = new MigrateDestinationNode('ua_event');
-
-    // The usual migration map, keyed off the arbitrary source IDs.
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        $id_field => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
-          'not null' => TRUE,
-          'description' => $source_key[$id_field],
-        )
-      ),
-      MigrateDestinationNode::getKeySchema()
-    );
 
     // The title has no prefix
     $this->addSimpleMappings(array('title'));
@@ -146,6 +129,7 @@ class UaDemoEventMigration extends UaDemoLocalfileMigration {
     $this->addFieldMapping('field_ua_event_description:format')
          ->defaultValue('filtered_html');
   }
+
 }
 
 /**
@@ -157,7 +141,7 @@ class UaDemoEventMigration extends UaDemoLocalfileMigration {
  *
  * @see https://www.drupal.org/node/1900640
  */
-class UaDemoEventContactMigration extends UaDemoLocalfileMigration {
+class UaDemoEventContactMigration extends UaDemoIntKeyedMigration  {
 
   /**
    * Constructor.
@@ -166,16 +150,12 @@ class UaDemoEventContactMigration extends UaDemoLocalfileMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct($arguments) {
-    parent::__construct($arguments);
+    parent::__construct($arguments, 'id', MigrateDestinationFieldCollection::getKeySchema());
 
     $this->description =
       t('Populate demonstration UA Event contact field collections.');
 
     $this->dependencies = array('UaDemoEvent');
-
-    // Source key field (must have int values).
-    $id_field = 'id';
-    $source_key = array($id_field => t('Unique key (int)'));
 
     // Foreign key.
     $host_entity_id = 'ua_event_id';
@@ -190,27 +170,14 @@ class UaDemoEventContactMigration extends UaDemoLocalfileMigration {
       'ua_email_contact_phone' => t('Contact Phone'),
     );
 
-    $fields = $source_key + $foreign_key + $data_fields;
+    $fields = $this->getSourceKeyField() + $foreign_key + $data_fields;
 
     // Source definition.
-    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
     $this->destination = new MigrateDestinationFieldCollection(
       'field_ua_event_contacts',
       array('host_entity_type' => 'node')
-    );
-
-    // The usual migration map, keyed off the arbitrary source IDs.
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        $id_field => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
-          'not null' => TRUE,
-          'description' => $source_key[$id_field],
-        )
-      ),
-      MigrateDestinationFieldCollection::getKeySchema()
     );
 
     // Linking back to UA Event items on the foregn key
@@ -220,6 +187,6 @@ class UaDemoEventContactMigration extends UaDemoLocalfileMigration {
     foreach (array_keys($data_fields) as $src_field) {
       $this->addFieldMapping('field_' . $src_field, $src_field);
     }
-
   }
+
 }
