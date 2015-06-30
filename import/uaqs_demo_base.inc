@@ -204,3 +204,49 @@ abstract class UaDemoIntKeyedMigration extends UaDemoLocalfileMigration {
   }
 
 }
+
+/**
+ * Defines a customized migration into Drupal nodes.
+ *
+ * The Migration module's standard MigrateDestinationNode is the basis of this
+ * which makes some assumptions to match the rest of the UA Demo migrations.
+ *
+ * @see https://www.drupal.org/node/1349696
+ */
+abstract class UaDemoNodeMigration extends UaDemoIntKeyedMigration {
+
+  /**
+   * Constructor.
+   *
+   * @param array $arguments
+   *   Arguments for the parent constructor (Migration standard behavior).
+   * @param string $bundle
+   *   Node type name.
+   * @param string $description
+   *   Detailed information describing the migration.
+   */
+  public function __construct($arguments, $bundle, $description) {
+    parent::__construct($arguments, 'id', MigrateDestinationNode::getKeySchema());
+
+    $this->description = $description;
+
+    // Destination.
+    $this->destination = new MigrateDestinationNode($bundle);
+
+    // Defaults and ignored destination fields...
+    $this->addUnmigratedDestinations(array(
+      'status', 'promote', 'sticky', 'revision', 'log', 'language', 'tnid',
+      'translate', 'revision_uid', 'is_new'
+    ));
+    // The only user we can count on is User 1.
+    $this->addFieldMapping('uid')
+         ->defaultValue(1);
+    $arbitrary_timestamp = "2015-07-21 09:38:00";
+    $this->addFieldMapping('created')
+         ->defaultValue($arbitrary_timestamp);
+    $this->addFieldMapping('changed')
+         ->defaultValue($arbitrary_timestamp);
+
+  }
+
+}

@@ -30,15 +30,11 @@ class UaDemoPublicationTermMigration extends UaDemoTermMigration {
 /**
  * Makes demonstration UA Publication content from pre-defined data.
  *
- * Currently local files hold the sample data this uses to build the content,
- * in a single JSON-formatted text file and collection of images. The overall
- * approach is similar to the one illustrated for handling JSON imports in the
- * documentation for the Migrate module in the “Using MigrateSourceJSON”
- * subsection.
- *
- * @see https://www.drupal.org/node/1152160
+ * The content from most of the UA Publication fields comes from a JSON file,
+ * but note that the entity reference field (related publications) might
+ * not be populated.
  */
-class UaDemoPublicationMigration extends UaDemoIntKeyedMigration {
+class UaDemoPublicationMigration extends UaDemoNodeMigration {
 
   /**
    * Constructor.
@@ -47,10 +43,8 @@ class UaDemoPublicationMigration extends UaDemoIntKeyedMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct($arguments) {
-    parent::__construct($arguments, 'id', MigrateDestinationNode::getKeySchema());
-
-    $this->description =
-      t('Make demonstration UA Publication content from pre-defined data.');
+    parent::__construct($arguments, 'ua_pub',
+      t('Make demonstration UA Publication content from pre-defined data.'));
 
     // Documented lists of source data fields: all names here MUST match
     // those in the corresponding content type.
@@ -86,9 +80,6 @@ class UaDemoPublicationMigration extends UaDemoIntKeyedMigration {
 
     // Source definition.
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
-
-    // Destination.
-    $this->destination = new MigrateDestinationNode('ua_pub');
 
     // The title has no prefix
     $this->addSimpleMappings(array('title'));

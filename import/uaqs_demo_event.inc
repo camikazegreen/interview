@@ -8,15 +8,11 @@
 /**
  * Makes demonstration UA Event content from pre-defined data.
  *
- * Currently local files hold the sample data this uses to build the content,
- * in a single JSON-formatted text file and collection of images. The overall
- * approach is similar to the one illustrated for handling JSON imports in the
- * documentation for the Migrate module in the “Using MigrateSourceJSON”
- * subsection.
- *
- * @see https://www.drupal.org/node/1152160
+ * This migration imports most of the UA Event content from a JSON file, but
+ * the contacts list for the event is a distinct entity and needs its own
+ * migration (see below).
  */
-class UaDemoEventMigration extends UaDemoIntKeyedMigration {
+class UaDemoEventMigration extends UaDemoNodeMigration {
 
   /**
    * Constructor.
@@ -25,13 +21,10 @@ class UaDemoEventMigration extends UaDemoIntKeyedMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct($arguments) {
-    parent::__construct($arguments, 'id', MigrateDestinationNode::getKeySchema());
+    parent::__construct($arguments, 'ua_event',
+      t('Make demonstration UA Event content from pre-defined data.'));
 
-    $this->description =
-      t('Make demonstration UA Event content from pre-defined data.');
-
-    // Documented lists of source data fields: all names here MUST match
-    // those in the corresponding content type.
+    // Documented lists of source data fields.
     // @see ua_event ua_event.features.field_instance.inc
     // First, the node title field
     $title_field = array(
@@ -76,9 +69,6 @@ class UaDemoEventMigration extends UaDemoIntKeyedMigration {
 
     // Source definition.
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
-
-    // Destination.
-    $this->destination = new MigrateDestinationNode('ua_event');
 
     // The title has no prefix
     $this->addSimpleMappings(array('title'));
@@ -136,12 +126,12 @@ class UaDemoEventMigration extends UaDemoIntKeyedMigration {
  * Populate the Contacts field collection within UA Event content.
  *
  * A field collection is an independent entity, so the main migration that
- * creates nodes cannot treat it as just another field, so a distinct
+ * creates nodes cannot treat it as just another field, thus a distinct
  * but associated migration is needed.
  *
  * @see https://www.drupal.org/node/1900640
  */
-class UaDemoEventContactMigration extends UaDemoIntKeyedMigration  {
+class UaDemoEventContactMigration extends UaDemoIntKeyedMigration {
 
   /**
    * Constructor.

@@ -8,15 +8,13 @@
 /**
  * Makes demonstration UA Person content from pre-defined data.
  *
- * Currently local files hold the sample data this uses to build the content,
- * in a single JSON-formatted text file and collection of images. The overall
- * approach is similar to the one illustrated for handling JSON imports in the
- * documentation for the Migrate module in the “Using MigrateSourceJSON”
- * subsection.
+ * Most of the content in the UA Person Drupal nodes comes directly from a
+ * JSON file, but the alt text for the images gets created on the fly by
+ * concatenating the contents of the name fields.
  *
  * @see https://www.drupal.org/node/1152160
  */
-class UaDemoPersonMigration extends UaDemoIntKeyedMigration {
+class UaDemoPersonMigration extends UaDemoNodeMigration {
 
   /**
    * Constructor.
@@ -25,31 +23,28 @@ class UaDemoPersonMigration extends UaDemoIntKeyedMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct($arguments) {
-    parent::__construct($arguments, 'id', MigrateDestinationNode::getKeySchema());
+    parent::__construct($arguments, 'ua_person',
+      t('Make demonstration UA Person content from pre-defined data.'));
 
-    $this->description =
-      t('Make demonstration UA Person content from pre-defined data.');
-
-    // Documented lists of source data fields: all names here MUST match
-    // those in the corresponding content type.
+    // Documented lists of source data fields:.
     // @see ua_person ua_person.features.field_instance.inc
     // First, the single-value text fielda...
     $single_value_fields = array(
-      'ua_person_lname'  => t('Last Name (string)'),
-      'ua_person_fname'  => t('First Name (string)'),
-      'ua_person_email'  => t('E-mail (string)'),
-      'ua_person_addresses' => t('Office location(s) (string)'),
-      'ua_person_bio'    => t('Biography (string)'),
+      'ua_person_lname'  => t('Last Name'),
+      'ua_person_fname'  => t('First Name'),
+      'ua_person_email'  => t('E-mail'),
+      'ua_person_addresses' => t('Office location(s))'),
+      'ua_person_bio'    => t('Biography'),
     );
     // Then the multi-value text fields...
     $multi_value_fields = array(
-      'ua_person_phones' => t('Phone Number(s) (string[])'),
-      'ua_person_titles' => t('Job Title(s) (string[])'),
+      'ua_person_phones' => t('Phone Number(s)'),
+      'ua_person_titles' => t('Job Title(s)'),
     );
     // Image fields need special treatment, isolate them...
     $image_src_field = 'ua_person_photo';
     $image_fields = array(
-      $image_src_field => t('Photo filename (string)'),
+      $image_src_field => t('Photo filename'),
       'image_alt_text' => t('Photo alt text (derived from other fields)'),
     );
 
@@ -59,15 +54,12 @@ class UaDemoPersonMigration extends UaDemoIntKeyedMigration {
     // Source definition.
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
-    // Destination.
-    $this->destination = new MigrateDestinationNode('ua_person');
-
     // One-to-one correspondence: JSON names and simple content type fields.
     foreach (array_keys($single_value_fields) as $src_field) {
       $this->addFieldMapping('field_' . $src_field, $src_field);
     }
 
-    // Multi-value fields need an explicit sparator (nesting { } doesn't work).
+    // Multi-value fields need an explicit sparator.
     foreach (array_keys($multi_value_fields) as $src_field) {
       $this->addFieldMapping('field_' . $src_field, $src_field)
            ->separator('|');

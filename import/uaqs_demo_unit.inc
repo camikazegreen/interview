@@ -30,14 +30,9 @@ class UaDemoUnitTermMigration extends UaDemoTermMigration {
 /**
  * Makes demonstration UA Unit node content from pre-defined data.
  *
- * A local JSON-formatted text file holds the sample data this uses to build
- * the node contents. The overall approach is similar to the one illustrated
- * for handling JSON imports in the documentation for the Migrate module in the
- * “Using MigrateSourceJSON” subsection.
- *
- * @see https://www.drupal.org/node/1152160
+ * A local JSON-formatted text file holds the sample data.
  */
-class UaDemoUnitMigration extends UaDemoIntKeyedMigration {
+class UaDemoUnitMigration extends UaDemoNodeMigration {
 
   /**
    * Constructor.
@@ -46,10 +41,8 @@ class UaDemoUnitMigration extends UaDemoIntKeyedMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct($arguments) {
-    parent::__construct($arguments, 'id', MigrateDestinationNode::getKeySchema());
-
-    $this->description =
-      t('Make demonstration UA Unit node content from pre-defined data.');
+    parent::__construct($arguments, 'ua_unit',
+      t('Make demonstration UA Unit node content from pre-defined data.'));
 
     // Documented lists of source data fields.
     // @see ua_unit ua_unit.features.field_instance.inc
@@ -68,9 +61,6 @@ class UaDemoUnitMigration extends UaDemoIntKeyedMigration {
 
     // Source definition.
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
-
-    // Destination.
-    $this->destination = new MigrateDestinationNode('ua_unit');
 
     // JSON names to simple content type fields and subfields.
     $this->addFieldMapping('title', 'title');
