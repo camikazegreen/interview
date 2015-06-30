@@ -190,17 +190,6 @@
   }
 }
 
-/**
- * Titles.
- */
-.page__title,          /* The title of the page. */
-.node__title,          /* Title of a piece of content when it is given in a list of content. */
-.block__title,         /* Block title. */
-.comments__title,      /* Comment section heading. */
-.comments__form-title, /* Comment form heading. */
-.comment__title {      /* Comment title. */
-  margin: 0;
-}
 
 /**
  * Messages.
@@ -479,10 +468,6 @@ span.field-label {
  * Blocks.
  */
 
-/* Block wrapper. */
-.block {
-  margin-bottom: rhythm(1);
-}
 
 /**
  * Menus.
@@ -554,7 +539,7 @@ footer#footer_site {
 		width: 49%;
     h2 {
       text-align: left;
-      padding: 0 32px; 
+      padding: 0 32px;
       padding: 0 2rem; }
 		ul.menu {
       padding: 16px 32px 0;
@@ -582,9 +567,9 @@ footer#footer_site {
       width: 100%;
       padding: 16px 0;
       padding: 1rem 0;
-      a { 
+      a {
         font-size: 14px;
-        font-size: 0.875rem; 
+        font-size: 0.875rem;
       }
     }
   }

@@ -11,9 +11,8 @@
 
 /* HTML element (SMACSS base) rules */
 @import "normalize";
-
 /*Import ua-bootstrap from repo*/
-@import "https://bitbucket.org/uabrandingdigitalassets/ua-bootstrap/downloads/ua-bootstrap.min.css";
+@import "https://bitbucket.org/ua-digital/ua-bootstrap/downloads/ua-bootstrap.min.css";
 
 /* Component (SMACSS module) rules */
 @import "components/misc";
@@ -26,6 +25,7 @@
 
 @import "components/uazen-superfish";
 @import "components/uazen-main-nav";
+@import "components/uazen-search";
 @import "components/uazen-multilevelmenu";
 @import "components/uazen-home-modules";
 @import "components/uazen-views";
