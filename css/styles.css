@@ -6539,12 +6539,13 @@ footer#footer_site div.contextual-links-wrapper a:not(.contextual-links-trigger)
 .item-list ul.pager li a,
 .item-list ul.pager li a:link,
 .item-list ul.pager li a:visited {
+  font-size: 14px;
   font-size: 0.9rem;
   font-weight: bold;
   background: none 0 0 scroll no-repeat transparent;
   color: #ab0520;
 }
-/* line 39, ../sass/components/_uazen-views.scss */
+/* line 40, ../sass/components/_uazen-views.scss */
 .item-list ul.pager li a:focus,
 .item-list ul.pager li a:hover,
 .item-list ul.pager li a:active {
