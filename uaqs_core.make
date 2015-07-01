@@ -65,7 +65,7 @@ projects[defaultconfig][patch][2221005] = http://drupal.org/files/issues/default
 
 projects[features][version] = 2.5
 
-projects[migrate][version] = 2.7
+projects[migrate][version] = 2.8
 
 projects[strongarm][version] = 2.0
 
