@@ -113,22 +113,14 @@
 #content_featured .flexslider ul.slides li .slide-image-container h2 {
   font-size: 36px;
   font-size: 10.5vw;
-  font-family: MiloSerifWeb, TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   margin: 0;
   line-height: .9;
-  text-transform: uppercase;
   letter-spacing: -1.1px;
 }
-#content_featured .flexslider ul.slides li .slide-image-container h2 a {
-  color: #fff;
-  font-weight: 300;
-  text-transform: none;
-}
-#content_featured .flexslider ul.slides li .slide-image-container h2 a:hover {
+#content_featured h2 a:hover {
   text-decoration: none;
 }
-#content_featured .flexslider ul.slides li .slide-image-container p {
-  color: #fff;
+#content_featured p {
   font-size: 16px;
   font-size: 5vw;
   padding-top: 1rem;
@@ -232,9 +224,16 @@
     font-size: 1.5rem;
     padding-top: 1rem;
   }
-  #content_featured_nav ul.slides li h3 {
+  #content_featured_nav h3 {
     color: #6f868d;
     border-top: 4px solid #6f868d;
+  }
+  #content_featured_nav a,
+  #content_featured_nav a:active,
+  #content_featured_nav a:hover,
+  #content_featured_nav a:hover h3,
+  #content_featured_nav a:active h3{
+  text-decoration:none;
   }
   #content_featured_nav ul.slides {
     width: 100% !important;
