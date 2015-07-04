@@ -246,7 +246,71 @@ abstract class UaDemoNodeMigration extends UaDemoIntKeyedMigration {
          ->defaultValue($arbitrary_timestamp);
     $this->addFieldMapping('changed')
          ->defaultValue($arbitrary_timestamp);
+  }
 
+}
+
+/**
+ * Defines a migration into a Field Collection.
+ *
+ * The Migration module has no direct support for Field Collections
+ * (which are use freestanding entities, distinct from nodes), but the
+ * Field Collection module itself defines a Migration api. Here we adopt some
+ * additional constraints: the host entity is always a node, and there is
+ * only one migration dependency, which is also the source migration.
+ *
+ * @see https://www.drupal.org/node/1900640
+ */
+abstract class UaDemoFieldCollectionMigration extends UaDemoIntKeyedMigration {
+
+  /**
+   * Name and label for the foreign key.
+   */
+  protected $foreignKeyField;
+
+  /**
+   * Gets the foreign key field name and description.
+   *
+   * @return array
+   *   An associative array giving the foreign key field name and description.
+   */
+  public function getforeignKeyField() {
+    return $this->foreignKeyField;
+  }
+
+  /**
+   * Constructor.
+   *
+   * @param array $arguments
+   *   Arguments for the parent constructor (Migration standard behavior).
+   * @param string $bundle
+   *   Name of the field where the collection attaches to the node.
+   * @param string $host_entity_id
+   *   Name of the field holding the foreign key (the associated node id).
+   * @param string $host_entity_migration
+   *   Name of the migration for the associated nodes.
+   * @param string $description
+   *   Detailed information describing the migration.
+   */
+  public function __construct($arguments, $bundle, $host_entity_id, $host_entity_migration, $description) {
+    parent::__construct($arguments, 'id', MigrateDestinationFieldCollection::getKeySchema());
+
+    $this->description = $description;
+
+    $this->dependencies = array($host_entity_migration);
+
+    // Foreign key.
+    $this->foreignKeyField = array(
+      $host_entity_id => t('ID of the parent item'),
+    );
+    $this->destination = new MigrateDestinationFieldCollection(
+      $bundle,
+      array('host_entity_type' => 'node')
+    );
+
+    // Linking back to parent items on the foreign key
+    $this->addFieldMapping('host_entity_id', $host_entity_id)
+         ->sourceMigration($host_entity_migration);
   }
 
 }

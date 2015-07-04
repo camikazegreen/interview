@@ -124,14 +124,8 @@ class UaDemoEventMigration extends UaDemoNodeMigration {
 
 /**
  * Populate the Contacts field collection within UA Event content.
- *
- * A field collection is an independent entity, so the main migration that
- * creates nodes cannot treat it as just another field, thus a distinct
- * but associated migration is needed.
- *
- * @see https://www.drupal.org/node/1900640
  */
-class UaDemoEventContactMigration extends UaDemoIntKeyedMigration {
+class UaDemoEventContactMigration extends UaDemoFieldCollectionMigration {
 
   /**
    * Constructor.
@@ -140,18 +134,8 @@ class UaDemoEventContactMigration extends UaDemoIntKeyedMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct($arguments) {
-    parent::__construct($arguments, 'id', MigrateDestinationFieldCollection::getKeySchema());
-
-    $this->description =
-      t('Populate demonstration UA Event contact field collections.');
-
-    $this->dependencies = array('UaDemoEvent');
-
-    // Foreign key.
-    $host_entity_id = 'ua_event_id';
-    $foreign_key = array(
-      $host_entity_id => t('ID of parent UA Event item'),
-    );
+    parent::__construct($arguments, 'field_ua_event_contacts', 'ua_event_id', 'UaDemoEvent',
+      t('Populate demonstration UA Event contact field collections.'));
 
     // Data fields.
     $data_fields = array(
@@ -160,23 +144,20 @@ class UaDemoEventContactMigration extends UaDemoIntKeyedMigration {
       'ua_email_contact_phone' => t('Contact Phone'),
     );
 
-    $fields = $this->getSourceKeyField() + $foreign_key + $data_fields;
+    $fields = $this->getSourceKeyField() + $this->getForeignKeyField() + $data_fields;
 
     // Source definition.
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
-    $this->destination = new MigrateDestinationFieldCollection(
-      'field_ua_event_contacts',
-      array('host_entity_type' => 'node')
-    );
-
-    // Linking back to UA Event items on the foregn key
-    $this->addFieldMapping('host_entity_id', $host_entity_id)
-         ->sourceMigration('UaDemoEvent');
-
     foreach (array_keys($data_fields) as $src_field) {
       $this->addFieldMapping('field_' . $src_field, $src_field);
     }
+
+    // Unmigrated fields.
+    $this->addUnmigratedDestinations(array(
+      'field_ua_email_contact_phone:language',
+      'field_ua_event_contact_name:language',
+    ));
   }
 
 }
