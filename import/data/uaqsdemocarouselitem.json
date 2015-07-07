@@ -2,8 +2,8 @@
   {"id":1,
     "title" : "Here is the first headline.",
     "short_summary" : "Iamque super triginta milia armatorum aspiciebantur",
-    "call_to_action" : "",
-    "call_to_action_title" : "",
+    "call_to_action" : "http://www.arizona.edu/",
+    "call_to_action_title" : "Call to action",
     "slide_image" : "demo-carousel-item-1.jpg"
   },
   {"id":2,
