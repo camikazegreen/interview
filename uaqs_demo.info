@@ -16,6 +16,7 @@ files[] = import/ua_demo_base.inc
 files[] = import/ua_demo.node.inc
 files[] = import/ua_demo.menu.inc
 files[] = import/ua_demo_person.inc
+files[] = import/ua_demo_page.inc
 files[] = import/ua_demo_unit.inc
 files[] = import/ua_demo_news.inc
 files[] = import/ua_demo_event.inc

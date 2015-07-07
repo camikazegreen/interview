@@ -17,7 +17,7 @@ function ua_demo_migrate_api() {
     ),
     'migrations' => array(
       'UaDemoPage' => array(
-        'class_name' => 'UaDemoPage',
+        'class_name' => 'UaDemoPageMigration',
         'group_name' => 'ua_demo',
       ),
       'UaDemoCarouselItem' => array(
