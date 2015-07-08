@@ -1,0 +1,34 @@
+[
+  {"mlid":1,
+    "parent_id" : 0,
+    "menu_name" : "main-menu",
+    "link_path" : "primus",
+    "link_title" : "Primus",
+    "external" : 0,
+    "weight" : 0
+  },
+  {"mlid":2,
+    "parent_id" : 1,
+    "menu_name" : "main-menu",
+    "link_path" : "secundus",
+    "link_title" : "Secundus",
+    "external" : 0,
+    "weight" : 0
+  },
+  {"mlid":3,
+    "parent_id" : 0,
+    "menu_name" : "ua-utility-links",
+    "link_path" : "primus",
+    "link_title" : "Utility 1",
+    "external" : 0,
+    "weight" : 0
+  },
+  {"mlid":4,
+    "parent_id" : 0,
+    "menu_name" : "ua-utility-links",
+    "link_path" : "secundus",
+    "link_title" : "Utility 2",
+    "external" : 0,
+    "weight" : 0
+  }
+]

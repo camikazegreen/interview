@@ -14,7 +14,6 @@ dependencies[] = ua_publication
 dependencies[] = ua_program
 files[] = import/ua_demo_base.inc
 files[] = import/ua_demo_carousel_item.inc
-files[] = import/ua_demo.menu.inc
 files[] = import/ua_demo_person.inc
 files[] = import/ua_demo_page.inc
 files[] = import/ua_demo_unit.inc
@@ -22,4 +21,5 @@ files[] = import/ua_demo_news.inc
 files[] = import/ua_demo_event.inc
 files[] = import/ua_demo_publication.inc
 files[] = import/ua_demo_program.inc
+files[] = import/ua_demo_navigation.inc
 

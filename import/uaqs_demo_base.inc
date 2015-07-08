@@ -274,7 +274,7 @@ abstract class UaDemoFieldCollectionMigration extends UaDemoIntKeyedMigration {
    * @return array
    *   An associative array giving the foreign key field name and description.
    */
-  public function getforeignKeyField() {
+  public function getForeignKeyField() {
     return $this->foreignKeyField;
   }
 
@@ -311,6 +311,77 @@ abstract class UaDemoFieldCollectionMigration extends UaDemoIntKeyedMigration {
     // Linking back to parent items on the foreign key
     $this->addFieldMapping('host_entity_id', $host_entity_id)
          ->sourceMigration($host_entity_migration);
+  }
+
+}
+
+/**
+ * Defines a customized migration into Drupal menu items.
+ *
+ * The Migration module's standard MigrateDestinationMenuLinks is the basis of
+ * this, which makes some assumptions to match the rest of the UA Demo
+ * migrations.
+ *
+ */
+abstract class UaDemoMenuLinksMigration extends UaDemoIntKeyedMigration {
+
+  /**
+   * Name and label for the foreign key.
+   */
+  protected $parentLinkField;
+
+  /**
+   * Gets the parent link field name and description.
+   *
+   * @return array
+   *   An associative array giving the parent link field name and description.
+   */
+  public function getParentLinkField() {
+    return $this->parentLinkField;
+  }
+
+  /**
+   * Constructor.
+   *
+   * @param array $arguments
+   *   Arguments for the parent constructor (Migration standard behavior).
+   * @param string $plid
+   *   Name of the field holding the menu item's parent link ID.
+   * @param string $description
+   *   Detailed information describing the migration.
+   */
+  public function __construct($arguments, $plid, $description) {
+    parent::__construct($arguments, 'mlid', MigrateDestinationMenuLinks::getKeySchema());
+
+    $this->description = $description;
+
+    // Parent of this menu item.
+    $this->parentLinkField = array(
+      $plid => t('ID of the parent item'),
+    );
+
+    // Destination.
+    $this->destination = new MigrateDestinationMenuLinks();
+
+    // Look up the parent ID using our own map.
+    $this->addFieldMapping('plid', $plid)
+         ->sourceMigration($this->getMachineName());
+
+    // Defaults and ignored destination fields...
+    $this->addUnmigratedDestinations(array(
+      'options', 'module', 'hidden',
+      'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'updated'
+    ));
+    $this->addFieldMapping('router_path')
+         ->defaultValue('node/%');
+    $this->addFieldMapping('has_children')
+         ->defaultValue('0');
+    $this->addFieldMapping('expanded')
+         ->defaultValue('0');
+    $this->addFieldMapping('depth')
+         ->defaultValue('1');
+    $this->addFieldMapping('customized')
+         ->defaultValue('1');
   }
 
 }

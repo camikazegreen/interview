@@ -68,8 +68,8 @@ function ua_demo_migrate_api() {
         'class_name' => 'UaDemoProgramMigration',
         'group_name' => 'ua_demo',
       ),
-      'UaDemoMenu' => array(
-        'class_name' => 'UaDemoMenu',
+      'UaDemoNavigation' => array(
+        'class_name' => 'UaDemoNavigationMigration',
         'group_name' => 'ua_demo',
       ),
     ),
