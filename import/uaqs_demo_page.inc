@@ -13,6 +13,26 @@
 class UaDemoPageMigration extends UaDemoNodeMigration {
 
   /**
+   * Numeric ID of the JSON file entry for the front page.
+   */
+  const FRONT_PAGE_SOURCE_ID = 4;
+
+  /**
+   * The UA Basic Page (as a Drupal node) to use as the site front page.
+   * @return string
+   *   The non-aliased Drupal node path, or 'node' if there is none.
+   */
+  public function getFrontPageNode() {
+    $dest_keys = $this->getMap()->lookupDestinationID(array(self::FRONT_PAGE_SOURCE_ID));
+    if (is_array($dest_keys)) {
+      $front_nid = reset($dest_keys);
+      return "node/{$front_nid}";
+    } else {
+      return 'node';
+    }
+  }
+
+  /**
    * Constructor.
    *
    * @param array $arguments
