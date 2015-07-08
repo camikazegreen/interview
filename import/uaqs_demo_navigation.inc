@@ -57,10 +57,9 @@ class UaDemoNavigationMigration extends UaDemoMenuLinksMigration {
       return FALSE;
     }
     $node_path = drupal_lookup_path('source', $row->link_path);
-    if ($node_path == FALSE) {
-      return FALSE;
+    if ($node_path) {
+      $row->link_path = $node_path;
     }
-    $row->link_path = $node_path;
     return TRUE;
   }
 
