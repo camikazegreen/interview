@@ -18,7 +18,7 @@ class UaDemoNavigationMigration extends UaDemoMenuLinksMigration {
    * @param array $arguments
    *   Arguments for the parent constructor (Migration standard behavior).
    */
-  public function __construct($arguments) {
+  public function __construct(array $arguments) {
     parent::__construct($arguments, 'parent_id',
       t('Make demonstration UA Navigation menu from pre-defined data.'));
 
@@ -42,14 +42,15 @@ class UaDemoNavigationMigration extends UaDemoMenuLinksMigration {
   /**
    * Implementation of prepareRow(), to convert aliases to node paths.
    *
-   * @param $row
-   *  Object containing raw source data (from the JSON file).
-   * @return bool
-   *  TRUE to process this row, FALSE to have the source skip it.
+   * See the Migration migrate_example code, in particular wine.inc.
    *
-   * @see the Migration migrate_example code, in particular wine.inc.
+   * @param object $row
+   *   Object containing raw source data (from the JSON file).
+   *
+   * @return bool
+   *   TRUE to process this row, FALSE to have the source skip it.
    */
-  public function prepareRow($row) {
+  public function prepareRow(stdClass $row) {
     // Recommended boilerplate section: invoke the parent classes on the
     // current row first, and pass on their status (whether to process
     // or skip the row).

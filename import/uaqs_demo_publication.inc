@@ -20,7 +20,7 @@ class UaDemoPublicationTermMigration extends UaDemoTermMigration {
    * @param array $arguments
    *   Arguments for the parent constructor (Migration standard behavior).
    */
-  public function __construct($arguments) {
+  public function __construct(array $arguments) {
     parent::__construct($arguments, 'research_categories',
       t('Add demonstration UA Publication taxonomy terms to a vocabulary.'));
   }
@@ -42,14 +42,14 @@ class UaDemoPublicationMigration extends UaDemoNodeMigration {
    * @param array $arguments
    *   Arguments for the parent constructor (Migration standard behavior).
    */
-  public function __construct($arguments) {
+  public function __construct(array $arguments) {
     parent::__construct($arguments, 'ua_pub',
       t('Make demonstration UA Publication content from pre-defined data.'));
 
     // Documented lists of source data fields: all names here MUST match
     // those in the corresponding content type.
     // @see ua_publication ua_publication.features.field_instance.inc
-    // First, the node title field
+    // First, the node title field...
     $title_field = array(
       'title' => t('Title'),
     );
@@ -81,7 +81,7 @@ class UaDemoPublicationMigration extends UaDemoNodeMigration {
     // Source definition.
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
-    // The title has no prefix
+    // The title has no prefix.
     $this->addSimpleMappings(array('title'));
 
     // One-to-one correspondence: JSON names and simple content type fields.
@@ -111,7 +111,7 @@ class UaDemoPublicationMigration extends UaDemoNodeMigration {
     // Image alt field.
     $this->addFieldMapping($image_dst_field . ':alt', $image_src_field . '_alt');
 
-    // Allow limited HTML markup in the description field
+    // Allow limited HTML markup in the description field.
     $this->addFieldMapping('field_ua_pub_description:format')
          ->defaultValue('filtered_html');
   }

@@ -18,20 +18,20 @@ class UaDemoCarouselItemMigration extends UaDemoNodeMigration {
    * @param array $arguments
    *   Arguments for the parent constructor (Migration standard behavior).
    */
-  public function __construct($arguments) {
+  public function __construct(array $arguments) {
     parent::__construct($arguments, 'ua_carousel_item',
       t('Make demonstration UA Carousel Item node content from pre-defined data.'));
 
     // Documented lists of source data fields.
-    // @see ua_featured_content ua_featured_content.features.field_instance.inc
-    // First, the node title field
+    // see ua_featured_content ua_featured_content.features.field_instance.inc
+    // First, the node title field...
     $title_field = array(
       'title' => t('Headline'),
     );
     // The single-value text fields...
     $single_value_fields = array(
       'short_summary' => t('Short summary'),
-      'call_to_action' => t('Call to action link')
+      'call_to_action' => t('Call to action link'),
     );
     // Titles for links...
     $link_title_fields = array(
@@ -49,7 +49,7 @@ class UaDemoCarouselItemMigration extends UaDemoNodeMigration {
     // Source definition.
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
-    // The title has no prefix
+    // The title has no prefix.
     $this->addSimpleMappings(array('title'));
 
     // One-to-one correspondence: JSON names and simple content type fields.

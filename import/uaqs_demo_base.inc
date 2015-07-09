@@ -23,7 +23,7 @@ abstract class UaDemoLocalfileMigration extends Migration {
    * @param array $arguments
    *   Arguments for the parent constructor (Migration standard behavior).
    */
-  public function __construct($arguments) {
+  public function __construct(array $arguments) {
     parent::__construct($arguments);
   }
 
@@ -91,7 +91,7 @@ abstract class UaDemoTermMigration extends UaDemoLocalfileMigration {
    * @param string $description
    *   Detailed information describing the migration.
    */
-  public function __construct($arguments, $vocabulary, $description) {
+  public function __construct(array $arguments, $vocabulary, $description) {
     parent::__construct($arguments);
 
     $this->description = $description;
@@ -123,7 +123,7 @@ abstract class UaDemoTermMigration extends UaDemoLocalfileMigration {
           'length' => 255,
           'not null' => TRUE,
           'description' => $source_key[$id_field],
-        )
+        ),
       ),
       MigrateDestinationTerm::getKeySchema()
     );
@@ -131,7 +131,7 @@ abstract class UaDemoTermMigration extends UaDemoLocalfileMigration {
     // One-to-one correspondence: JSON names and taxonomy fields.
     $this->addSimpleMappings(array_keys($fields));
 
-    // Unmapped fields
+    // Unmapped fields.
     foreach (array('parent', 'weight', 'format') as $unmapped) {
       $this->addFieldMapping($unmapped)
            ->issueGroup(t('DNM'));
@@ -185,7 +185,7 @@ abstract class UaDemoIntKeyedMigration extends UaDemoLocalfileMigration {
    * @param array $dest_key_schema
    *   A Drupal schema definition for the destination key.
    */
-  public function __construct($arguments, $id_field, $dest_key_schema) {
+  public function __construct(array $arguments, $id_field, array $dest_key_schema) {
     parent::__construct($arguments);
 
     $this->sourceKeyField = array($id_field => t('Unique key'));
@@ -197,7 +197,7 @@ abstract class UaDemoIntKeyedMigration extends UaDemoLocalfileMigration {
           'unsigned' => TRUE,
           'not null' => TRUE,
           'description' => $this->sourceKeyField[$id_field],
-        )
+        ),
       ),
       $dest_key_schema
     );
@@ -225,7 +225,7 @@ abstract class UaDemoNodeMigration extends UaDemoIntKeyedMigration {
    * @param string $description
    *   Detailed information describing the migration.
    */
-  public function __construct($arguments, $bundle, $description) {
+  public function __construct(array $arguments, $bundle, $description) {
     parent::__construct($arguments, 'id', MigrateDestinationNode::getKeySchema());
 
     $this->description = $description;
@@ -236,7 +236,7 @@ abstract class UaDemoNodeMigration extends UaDemoIntKeyedMigration {
     // Defaults and ignored destination fields...
     $this->addUnmigratedDestinations(array(
       'status', 'promote', 'sticky', 'revision', 'log', 'language', 'tnid',
-      'translate', 'revision_uid', 'is_new'
+      'translate', 'revision_uid', 'is_new',
     ));
     // The only user we can count on is User 1.
     $this->addFieldMapping('uid')
@@ -292,7 +292,7 @@ abstract class UaDemoFieldCollectionMigration extends UaDemoIntKeyedMigration {
    * @param string $description
    *   Detailed information describing the migration.
    */
-  public function __construct($arguments, $bundle, $host_entity_id, $host_entity_migration, $description) {
+  public function __construct(array $arguments, $bundle, $host_entity_id, $host_entity_migration, $description) {
     parent::__construct($arguments, 'id', MigrateDestinationFieldCollection::getKeySchema());
 
     $this->description = $description;
@@ -308,7 +308,7 @@ abstract class UaDemoFieldCollectionMigration extends UaDemoIntKeyedMigration {
       array('host_entity_type' => 'node')
     );
 
-    // Linking back to parent items on the foreign key
+    // Linking back to parent items on the foreign key.
     $this->addFieldMapping('host_entity_id', $host_entity_id)
          ->sourceMigration($host_entity_migration);
   }
@@ -321,7 +321,6 @@ abstract class UaDemoFieldCollectionMigration extends UaDemoIntKeyedMigration {
  * The Migration module's standard MigrateDestinationMenuLinks is the basis of
  * this, which makes some assumptions to match the rest of the UA Demo
  * migrations.
- *
  */
 abstract class UaDemoMenuLinksMigration extends UaDemoIntKeyedMigration {
 
@@ -350,7 +349,7 @@ abstract class UaDemoMenuLinksMigration extends UaDemoIntKeyedMigration {
    * @param string $description
    *   Detailed information describing the migration.
    */
-  public function __construct($arguments, $plid, $description) {
+  public function __construct(array $arguments, $plid, $description) {
     parent::__construct($arguments, 'mlid', MigrateDestinationMenuLinks::getKeySchema());
 
     $this->description = $description;
@@ -370,7 +369,7 @@ abstract class UaDemoMenuLinksMigration extends UaDemoIntKeyedMigration {
     // Defaults and ignored destination fields...
     $this->addUnmigratedDestinations(array(
       'options', 'module', 'hidden',
-      'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'updated'
+      'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'updated',
     ));
     $this->addFieldMapping('router_path')
          ->defaultValue('node/%');

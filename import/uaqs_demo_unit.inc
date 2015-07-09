@@ -20,7 +20,7 @@ class UaDemoUnitTermMigration extends UaDemoTermMigration {
    * @param array $arguments
    *   Arguments for the parent constructor (Migration standard behavior).
    */
-  public function __construct($arguments) {
+  public function __construct(array $arguments) {
     parent::__construct($arguments, 'tags',
       t('Add demonstration UA Unit taxonomy terms to a vocabulary.'));
   }
@@ -40,7 +40,7 @@ class UaDemoUnitMigration extends UaDemoNodeMigration {
    * @param array $arguments
    *   Arguments for the parent constructor (Migration standard behavior).
    */
-  public function __construct($arguments) {
+  public function __construct(array $arguments) {
     parent::__construct($arguments, 'ua_unit',
       t('Make demonstration UA Unit node content from pre-defined data.'));
 

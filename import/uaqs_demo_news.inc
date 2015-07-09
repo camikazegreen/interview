@@ -22,13 +22,13 @@ class UaDemoNewsMigration extends UaDemoNodeMigration {
    * @param array $arguments
    *   Arguments for the parent constructor (Migration standard behavior).
    */
-  public function __construct($arguments) {
+  public function __construct(array $arguments) {
     parent::__construct($arguments, 'ua_news',
       t('Make demonstration UA News content from pre-defined data.'));
 
     // Documented lists of source data fields.
     // @see ua_news ua_news.features.field_instance.inc
-    // First, the node title field
+    // First, the node title field...
     $title_field = array(
       'title' => t('Title'),
     );
@@ -59,7 +59,7 @@ class UaDemoNewsMigration extends UaDemoNodeMigration {
       $image_src_field => t('Photo filename'),
       $image_src_field . '_title' => t('Photo title'),
       $image_src_field . '_alt' => t('Photo alt text'),
-   );
+    );
 
     // All the fields to migrate.
     $fields = $this->getSourceKeyField() + $title_field + $single_value_fields + $link_title_fields + $file_fields + $image_fields;
@@ -67,7 +67,7 @@ class UaDemoNewsMigration extends UaDemoNodeMigration {
     // Source definition.
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
-    // The title has no prefix
+    // The title has no prefix.
     $this->addSimpleMappings(array('title'));
 
     // One-to-one correspondence: JSON names and simple content type fields.
@@ -91,18 +91,18 @@ class UaDemoNewsMigration extends UaDemoNodeMigration {
            ->defaultValue($this->imagePath());
     }
 
-    // Image alt and title fields
+    // Image alt and title fields.
     foreach (array('alt', 'title') as $label) {
       $this->addFieldMapping('field_' . $image_src_field . ':' . $label, $image_src_field . '_' . $label)
            ->separator('|');
     }
 
-    // Attachment description field
+    // Attachment description field.
     $label = 'description';
     $this->addFieldMapping('field_' . $file_src_field . ':' . $label, $file_src_field . '_' . $label)
          ->separator('|');
 
-    // Allow limited HTML markup in the body field
+    // Allow limited HTML markup in the body field.
     $this->addFieldMapping('field_ua_news_body:format')
          ->defaultValue('filtered_html');
   }
@@ -120,7 +120,7 @@ class UaDemoNewsContactMigration extends UaDemoFieldCollectionMigration {
    * @param array $arguments
    *   Arguments for the parent constructor (Migration standard behavior).
    */
-  public function __construct($arguments) {
+  public function __construct(array $arguments) {
     parent::__construct($arguments, 'field_ua_news_contacts', 'ua_news_id', 'UaDemoNews',
       t('Populate demonstration UA News contact field collections.'));
 

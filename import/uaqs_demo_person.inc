@@ -22,7 +22,7 @@ class UaDemoPersonMigration extends UaDemoNodeMigration {
    * @param array $arguments
    *   Arguments for the parent constructor (Migration standard behavior).
    */
-  public function __construct($arguments) {
+  public function __construct(array $arguments) {
     parent::__construct($arguments, 'ua_person',
       t('Make demonstration UA Person content from pre-defined data.'));
 
@@ -65,19 +65,19 @@ class UaDemoPersonMigration extends UaDemoNodeMigration {
            ->separator('|');
     }
 
-    //Image fields are more complicated.
+    // Image fields are more complicated.
     $image_dst_field = 'field_' . $image_src_field;
     $this->addFieldMapping($image_dst_field, $image_src_field);
     $this->addFieldMapping($image_dst_field . ':file_replace')
          ->defaultValue(FILE_EXISTS_REPLACE);
     $this->addFieldMapping($image_dst_field . ':alt', 'image_alt_text');
-    //  MigrateFileUri works for a local filespec as well as remote URIs.
+    // MigrateFileUri works for a local filespec as well as remote URIs.
     $this->addFieldMapping($image_dst_field . ':file_class')
          ->defaultValue('MigrateFileUri');
     $this->addFieldMapping($image_dst_field . ':source_dir')
          ->defaultValue($this->imagePath());
 
-    // Allow limited HTML markup in the bio field
+    // Allow limited HTML markup in the bio field.
     $this->addFieldMapping('field_ua_person_bio:format')
          ->defaultValue('filtered_html');
   }
@@ -85,14 +85,15 @@ class UaDemoPersonMigration extends UaDemoNodeMigration {
   /**
    * Implementation of prepareRow(), to concatenate some raw field values.
    *
-   * @param $row
-   *  Object containing raw source data (from the JSON file).
-   * @return bool
-   *  TRUE to process this row, FALSE to have the source skip it.
+   * See the Migration migrate_example code, in particular wine.inc.
    *
-   * @see the Migration migrate_example code, in particular wine.inc.
+   * @param object $row
+   *   Object containing raw source data (from the JSON file).
+   *
+   * @return bool
+   *   TRUE to process this row, FALSE to have the source skip it.
    */
-  public function prepareRow($row) {
+  public function prepareRow(stdClass $row) {
     // Recommended boilerplate section: invoke the parent classes on the
     // current row first, and pass on their status (whether to process
     // or skip the row).
@@ -101,7 +102,11 @@ class UaDemoPersonMigration extends UaDemoNodeMigration {
     }
 
     // Concatenate names and suffix into one derived field.
-    $row->image_alt_text = implode(' ', array($row->ua_person_fname, $row->ua_person_lname, 'portrait'));
+    $row->image_alt_text = implode(' ', array(
+      $row->ua_person_fname,
+      $row->ua_person_lname,
+      'portrait',
+    ));
     return TRUE;
   }
 

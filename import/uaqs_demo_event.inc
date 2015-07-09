@@ -20,13 +20,13 @@ class UaDemoEventMigration extends UaDemoNodeMigration {
    * @param array $arguments
    *   Arguments for the parent constructor (Migration standard behavior).
    */
-  public function __construct($arguments) {
+  public function __construct(array $arguments) {
     parent::__construct($arguments, 'ua_event',
       t('Make demonstration UA Event content from pre-defined data.'));
 
     // Documented lists of source data fields.
     // @see ua_event ua_event.features.field_instance.inc
-    // First, the node title field
+    // First, the node title field...
     $title_field = array(
       'title' => t('Title'),
     );
@@ -70,7 +70,7 @@ class UaDemoEventMigration extends UaDemoNodeMigration {
     // Source definition.
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
-    // The title has no prefix
+    // The title has no prefix.
     $this->addSimpleMappings(array('title'));
 
     // One-to-one correspondence: JSON names and simple content type fields.
@@ -105,17 +105,17 @@ class UaDemoEventMigration extends UaDemoNodeMigration {
     $this->addFieldMapping($file_dst_field . ':source_dir')
          ->defaultValue($this->imagePath());
 
-    // Image alt and title fields
+    // Image alt and title fields.
     foreach (array('alt', 'title') as $subfield) {
       $this->addFieldMapping('field_' . $image_src_field . ':' . $subfield, $image_src_field . '_' . $subfield);
     }
 
-    // Attachment description field
+    // Attachment description field.
     $subfield = 'description';
     $this->addFieldMapping('field_' . $file_src_field . ':' . $subfield, $file_src_field . '_' . $subfield)
          ->separator('|');
 
-    // Allow limited HTML markup in the description field
+    // Allow limited HTML markup in the description field.
     $this->addFieldMapping('field_ua_event_description:format')
          ->defaultValue('filtered_html');
   }
@@ -133,7 +133,7 @@ class UaDemoEventContactMigration extends UaDemoFieldCollectionMigration {
    * @param array $arguments
    *   Arguments for the parent constructor (Migration standard behavior).
    */
-  public function __construct($arguments) {
+  public function __construct(array $arguments) {
     parent::__construct($arguments, 'field_ua_event_contacts', 'ua_event_id', 'UaDemoEvent',
       t('Populate demonstration UA Event contact field collections.'));
 

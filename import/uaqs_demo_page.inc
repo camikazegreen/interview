@@ -19,6 +19,7 @@ class UaDemoPageMigration extends UaDemoNodeMigration {
 
   /**
    * The UA Basic Page (as a Drupal node) to use as the site front page.
+   *
    * @return string
    *   The non-aliased Drupal node path, or 'node' if there is none.
    */
@@ -27,7 +28,8 @@ class UaDemoPageMigration extends UaDemoNodeMigration {
     if (is_array($dest_keys)) {
       $front_nid = reset($dest_keys);
       return "node/{$front_nid}";
-    } else {
+    }
+    else {
       return 'node';
     }
   }
@@ -38,7 +40,7 @@ class UaDemoPageMigration extends UaDemoNodeMigration {
    * @param array $arguments
    *   Arguments for the parent constructor (Migration standard behavior).
    */
-  public function __construct($arguments) {
+  public function __construct(array $arguments) {
     parent::__construct($arguments, 'ua_page',
       t('Make demonstration UA Basic Page node content from pre-defined data.'));
 
@@ -60,9 +62,10 @@ class UaDemoPageMigration extends UaDemoNodeMigration {
     $this->addSimpleMappings(array('title'));
     $this->addSimpleMappings(array('path'));
     $this->addSimpleMappings(array('ua_page_body'));
-    // Allow limited HTML markup in the page body field
+    // Allow limited HTML markup in the page body field.
     $this->addFieldMapping('ua_page_body:format')
          ->defaultValue('filtered_html');
 
   }
+
 }
