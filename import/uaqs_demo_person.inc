@@ -87,13 +87,13 @@ class UaDemoPersonMigration extends UaDemoNodeMigration {
    *
    * See the Migration migrate_example code, in particular wine.inc.
    *
-   * @param object $row
+   * @param $row
    *   Object containing raw source data (from the JSON file).
    *
    * @return bool
    *   TRUE to process this row, FALSE to have the source skip it.
    */
-  public function prepareRow(stdClass $row) {
+  public function prepareRow($row) {
     // Recommended boilerplate section: invoke the parent classes on the
     // current row first, and pass on their status (whether to process
     // or skip the row).
