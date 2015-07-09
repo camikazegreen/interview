@@ -44,7 +44,7 @@ class UaDemoNavigationMigration extends UaDemoMenuLinksMigration {
    *
    * See the Migration migrate_example code, in particular wine.inc.
    *
-   * @param $row
+   * @param object $row
    *   Object containing raw source data (from the JSON file).
    *
    * @return bool
