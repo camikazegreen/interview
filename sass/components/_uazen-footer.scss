@@ -1,6 +1,12 @@
 /* FOOTER */
 
 footer#footer_site {
+	h2 {
+	    font: normal normal bold 0.88em MiloWeb, Verdana, Geneva, sans-serif;
+	    text-transform: uppercase;
+	    text-align: center;
+	    color: #333;
+  	}
 	.footer-logo { //specific to zen layout structure
 		margin: 0 auto 40px;
 		margin: 0 auto 2.5rem;
@@ -36,6 +42,29 @@ footer#footer_site {
 		  border-right: 0;
 		}
 	}
+	.column-menu {
+	  	display: block;
+	    padding-top: 24px;
+	    padding-top: 1.5rem;
+	    border-top: 1px solid #a8a69d;
+	    &:first-child { border-top: 0 none; }
+	  	ul.menu li {
+	  			display: block;
+	  			float: none;
+	  			border: 0 none;
+	        padding: 0;
+	        margin-bottom: 11px;
+	  			margin-bottom: 0.7rem;
+	        line-height: 1.2;
+	        a, a:link, a:visited {
+	          text-decoration: none;
+	          font-weight: normal;
+	        }
+	        a:focus, a:hover, a:active {
+	          color: #2A6496;
+	        }
+	  	}
+	}
 
 	#footer_sub .container {
 		padding-top: 8px;
@@ -54,7 +83,24 @@ footer#footer_site {
 			clear: both;
 		}
 	}
+	.column-menu {
+		display: inline-block;
+		vertical-align: top;
+    	border: 0 none;
+		width: 49%;
+    h2 {
+      	text-align: left;
+     	padding: 0 32px;
+      	padding: 0 2rem; }
+		ul.menu {
+      		padding: 16px 32px 0;
+      		padding: 1rem 2rem 0;
+			text-align: left;
+		}
+	}
 }
+
+
 
 @media (min-width: 60em) {
   footer#footer_site {
@@ -67,7 +113,30 @@ footer#footer_site {
   	.footer-content { 
   		clear: none;
   		text-align: right; //makes column menus go to the right
-  	} 
+  	}
+	.column-menu {
+	    position: relative;
+	    padding: 0 0 0 16px;
+	    padding: 0 0 0 1rem;
+		margin: 0 0 0 16px;
+		margin: 0 0 0 1rem;
+    	border-top: 0 none;
+		border-left: 1px solid #a8a69d;
+		display: inline-block;
+		vertical-align: top;
+    	min-height: 16em;
+		max-width: 14.5%; //approx. 1/4 of left-over space (730px/4)
+	    h2 { padding: 0; }
+	    ul.menu {
+	      width: 100%;
+	      padding: 16px 0;
+	      padding: 1rem 0;
+	      a {
+	        font-size: 14px;
+	        font-size: 0.875rem;
+      		}
+   		}
+  	}
   }
   #footer_sub .container p { text-align: left; }
 }

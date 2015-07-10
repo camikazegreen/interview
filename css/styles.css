@@ -659,102 +659,11 @@ span.field-label {
   color: #000;
 }
 
-/* footer menus */
-/* line 515, ../sass/components/_misc.scss */
-footer#footer_site h2 {
-  font: normal normal bold 0.88em MiloWeb, Verdana, Geneva, sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  color: #333;
-}
-/* line 521, ../sass/components/_misc.scss */
-footer#footer_site .column-menu {
-  display: block;
-  padding-top: 24px;
-  padding-top: 1.5rem;
-  border-top: 1px solid #a8a69d;
-}
-/* line 526, ../sass/components/_misc.scss */
-footer#footer_site .column-menu:first-child {
-  border-top: 0 none;
-}
-/* line 527, ../sass/components/_misc.scss */
-footer#footer_site .column-menu ul.menu li {
-  display: block;
-  float: none;
-  border: 0 none;
-  padding: 0;
-  margin-bottom: 11px;
-  margin-bottom: 0.7rem;
-  line-height: 1.2;
-}
-/* line 535, ../sass/components/_misc.scss */
-footer#footer_site .column-menu ul.menu li a, footer#footer_site .column-menu ul.menu li a:link, footer#footer_site .column-menu ul.menu li a:visited {
-  text-decoration: none;
-  font-weight: normal;
-}
-/* line 539, ../sass/components/_misc.scss */
-footer#footer_site .column-menu ul.menu li a:focus, footer#footer_site .column-menu ul.menu li a:hover, footer#footer_site .column-menu ul.menu li a:active {
-  color: #2A6496;
-}
-
-@media screen and (min-width: 48em) {
-  /* line 547, ../sass/components/_misc.scss */
-  footer#footer_site .column-menu {
-    display: inline-block;
-    vertical-align: top;
-    border: 0 none;
-    width: 49%;
-  }
-  /* line 552, ../sass/components/_misc.scss */
-  footer#footer_site .column-menu h2 {
-    text-align: left;
-    padding: 0 32px;
-    padding: 0 2rem;
-  }
-  /* line 556, ../sass/components/_misc.scss */
-  footer#footer_site .column-menu ul.menu {
-    padding: 16px 32px 0;
-    padding: 1rem 2rem 0;
-    text-align: left;
-  }
-}
-@media screen and (min-width: 60em) {
-  /* line 565, ../sass/components/_misc.scss */
-  footer#footer_site .column-menu {
-    position: relative;
-    padding: 0 0 0 16px;
-    padding: 0 0 0 1rem;
-    margin: 0 0 0 16px;
-    margin: 0 0 0 1rem;
-    border-top: 0 none;
-    border-left: 1px solid #a8a69d;
-    display: inline-block;
-    vertical-align: top;
-    min-height: 16em;
-    max-width: 14.5%;
-  }
-  /* line 577, ../sass/components/_misc.scss */
-  footer#footer_site .column-menu h2 {
-    padding: 0;
-  }
-  /* line 578, ../sass/components/_misc.scss */
-  footer#footer_site .column-menu ul.menu {
-    width: 100%;
-    padding: 16px 0;
-    padding: 1rem 0;
-  }
-  /* line 582, ../sass/components/_misc.scss */
-  footer#footer_site .column-menu ul.menu a {
-    font-size: 14px;
-    font-size: 0.875rem;
-  }
-}
 /**
  * Marker.
  */
 /* The "new" or "updated" marker. */
-/* line 597, ../sass/components/_misc.scss */
+/* line 519, ../sass/components/_misc.scss */
 .new,
 .update {
   color: #c00;
@@ -766,7 +675,7 @@ footer#footer_site .column-menu ul.menu li a:focus, footer#footer_site .column-m
  * Unpublished note.
  */
 /* The word "Unpublished" displayed underneath the content. */
-/* line 608, ../sass/components/_misc.scss */
+/* line 530, ../sass/components/_misc.scss */
 .unpublished {
   height: 0;
   overflow: visible;
@@ -788,31 +697,31 @@ footer#footer_site .column-menu ul.menu li a:focus, footer#footer_site .column-m
  * Comments.
  */
 /* Wrapper for the list of comments and its title. */
-/* line 636, ../sass/components/_misc.scss */
+/* line 558, ../sass/components/_misc.scss */
 .comments {
   margin: 1.5em 0;
 }
 
 /* Preview of the comment before submitting new or updated comment. */
-/* line 641, ../sass/components/_misc.scss */
+/* line 563, ../sass/components/_misc.scss */
 .comment-preview {
   /* Drupal core will use a #ffffea background. See #1110842. */
   background-color: #ffffea;
 }
 
 /* Wrapper for a single comment. */
-/* line 647, ../sass/components/_misc.scss */
+/* line 569, ../sass/components/_misc.scss */
 .comment {
   /* Comment's permalink wrapper. */
 }
-/* line 650, ../sass/components/_misc.scss */
+/* line 572, ../sass/components/_misc.scss */
 .comment .permalink {
   text-transform: uppercase;
   font-size: 75%;
 }
 
 /* Nested comments are indented. */
-/* line 657, ../sass/components/_misc.scss */
+/* line 579, ../sass/components/_misc.scss */
 .indented {
   /* Drupal core uses a 25px left margin. */
   margin-left: 30px;
@@ -823,7 +732,7 @@ footer#footer_site .column-menu ul.menu li a:focus, footer#footer_site .column-m
  * Forms.
  */
 /* Wrapper for a form element (or group of form elements) and its label. */
-/* line 667, ../sass/components/_misc.scss */
+/* line 589, ../sass/components/_misc.scss */
 .form-item {
   margin: 1.5em 0;
   /* Pack groups of checkboxes and radio buttons closer together. */
@@ -831,28 +740,28 @@ footer#footer_site .column-menu ul.menu li a:focus, footer#footer_site .column-m
   /* Highlight the form elements that caused a form submission error. */
   /* The descriptive help text (separate from the label). */
 }
-/* line 672, ../sass/components/_misc.scss */
+/* line 594, ../sass/components/_misc.scss */
 .form-checkboxes .form-item, .form-radios .form-item {
   /* Drupal core uses "0.4em 0". */
   margin: 0;
 }
-/* line 679, ../sass/components/_misc.scss */
+/* line 601, ../sass/components/_misc.scss */
 tr.odd .form-item, tr.even .form-item {
   margin: 0;
 }
-/* line 686, ../sass/components/_misc.scss */
+/* line 608, ../sass/components/_misc.scss */
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
   border: 1px solid #c00;
 }
-/* line 691, ../sass/components/_misc.scss */
+/* line 613, ../sass/components/_misc.scss */
 .form-item .description {
   font-size: 14px;
   font-size: 0.875rem;
 }
 
-/* line 699, ../sass/components/_misc.scss */
+/* line 621, ../sass/components/_misc.scss */
 .form-type-radio .description,
 .form-type-checkbox .description {
   margin-left: 38px;
@@ -860,20 +769,20 @@ tr.odd .form-item, tr.even .form-item {
 }
 
 /* The part of the label that indicates a required field. */
-/* line 706, ../sass/components/_misc.scss */
+/* line 628, ../sass/components/_misc.scss */
 .form-required {
   color: #c00;
 }
 
 /* Labels for radios and checkboxes. */
-/* line 711, ../sass/components/_misc.scss */
+/* line 633, ../sass/components/_misc.scss */
 label.option {
   display: inline;
   font-weight: normal;
 }
 
 /* Buttons used by contrib modules like Media. */
-/* line 717, ../sass/components/_misc.scss */
+/* line 639, ../sass/components/_misc.scss */
 a.button {
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -881,14 +790,14 @@ a.button {
 }
 
 /* Password confirmation. */
-/* line 723, ../sass/components/_misc.scss */
+/* line 645, ../sass/components/_misc.scss */
 .password-parent,
 .confirm-parent {
   margin: 0;
 }
 
 /* Drupal's default login form block. */
-/* line 728, ../sass/components/_misc.scss */
+/* line 650, ../sass/components/_misc.scss */
 #user-login-form {
   text-align: left;
   /* LTR */
@@ -901,20 +810,20 @@ a.button {
  * styling of list items.
  */
 /* OpenID creates a new ul above the login form's links. */
-/* line 740, ../sass/components/_misc.scss */
+/* line 662, ../sass/components/_misc.scss */
 .openid-links {
   /* Position OpenID's ul next to the rest of the links. */
   margin-bottom: 0;
 }
 
 /* The "Log in using OpenID" and "Cancel OpenID login" links. */
-/* line 747, ../sass/components/_misc.scss */
+/* line 669, ../sass/components/_misc.scss */
 .openid-link,
 .user-link {
   margin-top: 1.5em;
 }
 
-/* line 751, ../sass/components/_misc.scss */
+/* line 673, ../sass/components/_misc.scss */
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   /* Un-do some of the padding on the ul list. */
@@ -923,7 +832,7 @@ html.js #user-login-form li.openid-link,
   margin-left: -1.25rem;
 }
 
-/* line 756, ../sass/components/_misc.scss */
+/* line 678, ../sass/components/_misc.scss */
 #user-login ul {
   margin: 1.5em 0;
 }
@@ -931,7 +840,7 @@ html.js #user-login-form li.openid-link,
 /**
  * Drupal admin tables.
  */
-/* line 764, ../sass/components/_misc.scss */
+/* line 686, ../sass/components/_misc.scss */
 form th {
   text-align: left;
   /* LTR */
@@ -940,16 +849,16 @@ form th {
   /* LTR */
   border-bottom: 3px solid #ccc;
 }
-/* line 770, ../sass/components/_misc.scss */
+/* line 692, ../sass/components/_misc.scss */
 form tbody {
   border-top: 1px solid #ccc;
 }
-/* line 773, ../sass/components/_misc.scss */
+/* line 695, ../sass/components/_misc.scss */
 form table ul {
   margin: 0;
 }
 
-/* line 778, ../sass/components/_misc.scss */
+/* line 700, ../sass/components/_misc.scss */
 tr.even,
 tr.odd {
   background-color: #eee;
@@ -957,26 +866,26 @@ tr.odd {
   padding: 0.1em 0.6em;
 }
 
-/* line 783, ../sass/components/_misc.scss */
+/* line 705, ../sass/components/_misc.scss */
 tr.even {
   background-color: #fff;
 }
 
 /* Markup generated by theme_tablesort_indicator(). */
-/* line 798, ../sass/components/_misc.scss */
+/* line 720, ../sass/components/_misc.scss */
 td.active {
   background-color: #ddd;
 }
 
 /* Center checkboxes inside table cell. */
-/* line 804, ../sass/components/_misc.scss */
+/* line 726, ../sass/components/_misc.scss */
 td.checkbox,
 th.checkbox {
   text-align: center;
 }
 
 /* Drupal core wrongly puts this in system.menus.css. Since we override that, add it back. */
-/* line 809, ../sass/components/_misc.scss */
+/* line 731, ../sass/components/_misc.scss */
 td.menu-disabled {
   background: #ccc;
 }
@@ -987,7 +896,7 @@ td.menu-disabled {
  * @see autocomplete.js
  */
 /* Suggestion list. */
-/* line 820, ../sass/components/_misc.scss */
+/* line 742, ../sass/components/_misc.scss */
 #autocomplete .selected {
   background: #0072b9;
   color: #fff;
@@ -998,7 +907,7 @@ td.menu-disabled {
  *
  * @see collapse.js
  */
-/* line 831, ../sass/components/_misc.scss */
+/* line 753, ../sass/components/_misc.scss */
 html.js .collapsible .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
   background-position: 5px 65%;
@@ -1008,14 +917,14 @@ html.js .collapsible .fieldset-legend {
   /* LTR */
   padding-left: 1rem;
 }
-/* line 841, ../sass/components/_misc.scss */
+/* line 763, ../sass/components/_misc.scss */
 html.js .collapsed .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABFJREFUCB1jVmCGQClmEWYOAAZ8AMy3HPLXAAAAAElFTkSuQmCC');
   /* LTR */
   background-position: 5px 50%;
   /* LTR */
 }
-/* line 848, ../sass/components/_misc.scss */
+/* line 770, ../sass/components/_misc.scss */
 .fieldset-legend .summary {
   color: #999;
   font-size: 14px;
@@ -1029,17 +938,17 @@ html.js .collapsed .fieldset-legend {
  *
  * @see tabledrag.js
  */
-/* line 862, ../sass/components/_misc.scss */
+/* line 784, ../sass/components/_misc.scss */
 tr.drag {
   background-color: #fffff0;
 }
 
-/* line 865, ../sass/components/_misc.scss */
+/* line 787, ../sass/components/_misc.scss */
 tr.drag-previous {
   background-color: #ffd;
 }
 
-/* line 868, ../sass/components/_misc.scss */
+/* line 790, ../sass/components/_misc.scss */
 .tabledrag-toggle-weight {
   font-size: 14px;
   font-size: 0.875em;
@@ -1050,7 +959,7 @@ tr.drag-previous {
  *
  * @see tableselect.js
  */
-/* line 878, ../sass/components/_misc.scss */
+/* line 800, ../sass/components/_misc.scss */
 tr.selected td {
   background: #ffc;
 }
@@ -1060,11 +969,11 @@ tr.selected td {
  *
  * @see progress.js
  */
-/* line 887, ../sass/components/_misc.scss */
+/* line 809, ../sass/components/_misc.scss */
 .progress {
   font-weight: bold;
 }
-/* line 890, ../sass/components/_misc.scss */
+/* line 812, ../sass/components/_misc.scss */
 .progress .bar {
   background: #ccc;
   border-color: #666;
@@ -1075,7 +984,7 @@ tr.selected td {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 896, ../sass/components/_misc.scss */
+/* line 818, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
   background-image: url('../images/progress.gif?1426188048');
@@ -1083,25 +992,25 @@ tr.selected td {
 
 /*Misc. Helper classes*/
 /*.pull-left Floats an element to the leftFloatsTry it*/
-/* line 904, ../sass/components/_misc.scss */
+/* line 826, ../sass/components/_misc.scss */
 .pull-left {
   float: left !important;
 }
 
 /*.pull-right Floats an element to the rightFloatsTry it*/
-/* line 908, ../sass/components/_misc.scss */
+/* line 830, ../sass/components/_misc.scss */
 .pull-right {
   float: right !important;
 }
 
 /*.relative Adds position relative*/
-/* line 912, ../sass/components/_misc.scss */
+/* line 834, ../sass/components/_misc.scss */
 .relative {
   position: relative !important;
 }
 
 /*.absolute Adds position absolute*/
-/* line 916, ../sass/components/_misc.scss */
+/* line 838, ../sass/components/_misc.scss */
 .absolute {
   position: absolute !important;
 }
@@ -1578,23 +1487,30 @@ tr.selected td {
 
 /* FOOTER */
 /* line 4, ../sass/components/_uazen-footer.scss */
+footer#footer_site h2 {
+  font: normal normal bold 0.88em MiloWeb, Verdana, Geneva, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333;
+}
+/* line 10, ../sass/components/_uazen-footer.scss */
 footer#footer_site .footer-logo {
   margin: 0 auto 40px;
   margin: 0 auto 2.5rem;
   max-width: 400px;
 }
-/* line 8, ../sass/components/_uazen-footer.scss */
+/* line 14, ../sass/components/_uazen-footer.scss */
 footer#footer_site .footer-logo img {
   max-height: 100px;
 }
-/* line 10, ../sass/components/_uazen-footer.scss */
+/* line 16, ../sass/components/_uazen-footer.scss */
 footer#footer_site > .container {
   border-bottom: 1px solid #8E8C85;
   position: relative;
   padding: 0 0 16px;
   padding: 0 0 1rem;
 }
-/* line 16, ../sass/components/_uazen-footer.scss */
+/* line 22, ../sass/components/_uazen-footer.scss */
 footer#footer_site ul.menu {
   display: block;
   margin: 0;
@@ -1603,13 +1519,13 @@ footer#footer_site ul.menu {
   text-align: center;
   float: none;
 }
-/* line 23, ../sass/components/_uazen-footer.scss */
+/* line 29, ../sass/components/_uazen-footer.scss */
 footer#footer_site ul.menu:after {
   content: "\0020";
   display: block;
   clear: both;
 }
-/* line 28, ../sass/components/_uazen-footer.scss */
+/* line 34, ../sass/components/_uazen-footer.scss */
 footer#footer_site ul.menu > li {
   display: inline-block;
   list-style: none;
@@ -1617,55 +1533,134 @@ footer#footer_site ul.menu > li {
   padding: 0 .75rem;
   border-right: 1px solid #a8a69d;
 }
-/* line 35, ../sass/components/_uazen-footer.scss */
+/* line 41, ../sass/components/_uazen-footer.scss */
 footer#footer_site ul.menu > li.last {
   border-right: 0;
 }
-/* line 40, ../sass/components/_uazen-footer.scss */
+/* line 45, ../sass/components/_uazen-footer.scss */
+footer#footer_site .column-menu {
+  display: block;
+  padding-top: 24px;
+  padding-top: 1.5rem;
+  border-top: 1px solid #a8a69d;
+}
+/* line 50, ../sass/components/_uazen-footer.scss */
+footer#footer_site .column-menu:first-child {
+  border-top: 0 none;
+}
+/* line 51, ../sass/components/_uazen-footer.scss */
+footer#footer_site .column-menu ul.menu li {
+  display: block;
+  float: none;
+  border: 0 none;
+  padding: 0;
+  margin-bottom: 11px;
+  margin-bottom: 0.7rem;
+  line-height: 1.2;
+}
+/* line 59, ../sass/components/_uazen-footer.scss */
+footer#footer_site .column-menu ul.menu li a, footer#footer_site .column-menu ul.menu li a:link, footer#footer_site .column-menu ul.menu li a:visited {
+  text-decoration: none;
+  font-weight: normal;
+}
+/* line 63, ../sass/components/_uazen-footer.scss */
+footer#footer_site .column-menu ul.menu li a:focus, footer#footer_site .column-menu ul.menu li a:hover, footer#footer_site .column-menu ul.menu li a:active {
+  color: #2A6496;
+}
+/* line 69, ../sass/components/_uazen-footer.scss */
 footer#footer_site #footer_sub .container {
   padding-top: 8px;
   padding-top: 0.5rem;
 }
-/* line 43, ../sass/components/_uazen-footer.scss */
+/* line 72, ../sass/components/_uazen-footer.scss */
 footer#footer_site #footer_sub .container > * {
   font-size: 15px;
   font-size: 0.96rem;
 }
-/* line 47, ../sass/components/_uazen-footer.scss */
+/* line 76, ../sass/components/_uazen-footer.scss */
 footer#footer_site #footer_sub .container p {
   text-align: center;
 }
 
 @media (min-width: 48em) {
-  /* line 53, ../sass/components/_uazen-footer.scss */
+  /* line 82, ../sass/components/_uazen-footer.scss */
   footer#footer_site .footer-content {
     clear: both;
   }
+
+  /* line 86, ../sass/components/_uazen-footer.scss */
+  .column-menu {
+    display: inline-block;
+    vertical-align: top;
+    border: 0 none;
+    width: 49%;
+  }
+  /* line 91, ../sass/components/_uazen-footer.scss */
+  .column-menu h2 {
+    text-align: left;
+    padding: 0 32px;
+    padding: 0 2rem;
+  }
+  /* line 95, ../sass/components/_uazen-footer.scss */
+  .column-menu ul.menu {
+    padding: 16px 32px 0;
+    padding: 1rem 2rem 0;
+    text-align: left;
+  }
 }
 @media (min-width: 60em) {
-  /* line 61, ../sass/components/_uazen-footer.scss */
+  /* line 107, ../sass/components/_uazen-footer.scss */
   footer#footer_site ul.menu {
     float: right;
   }
-  /* line 62, ../sass/components/_uazen-footer.scss */
+  /* line 108, ../sass/components/_uazen-footer.scss */
   footer#footer_site .footer-logo {
     float: left;
     margin: 0 16px 16px 0;
     margin: 0 1rem 1rem 0;
   }
-  /* line 67, ../sass/components/_uazen-footer.scss */
+  /* line 113, ../sass/components/_uazen-footer.scss */
   footer#footer_site .footer-content {
     clear: none;
     text-align: right;
   }
+  /* line 117, ../sass/components/_uazen-footer.scss */
+  footer#footer_site .column-menu {
+    position: relative;
+    padding: 0 0 0 16px;
+    padding: 0 0 0 1rem;
+    margin: 0 0 0 16px;
+    margin: 0 0 0 1rem;
+    border-top: 0 none;
+    border-left: 1px solid #a8a69d;
+    display: inline-block;
+    vertical-align: top;
+    min-height: 16em;
+    max-width: 14.5%;
+  }
+  /* line 129, ../sass/components/_uazen-footer.scss */
+  footer#footer_site .column-menu h2 {
+    padding: 0;
+  }
+  /* line 130, ../sass/components/_uazen-footer.scss */
+  footer#footer_site .column-menu ul.menu {
+    width: 100%;
+    padding: 16px 0;
+    padding: 1rem 0;
+  }
+  /* line 134, ../sass/components/_uazen-footer.scss */
+  footer#footer_site .column-menu ul.menu a {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
 
-  /* line 72, ../sass/components/_uazen-footer.scss */
+  /* line 141, ../sass/components/_uazen-footer.scss */
   #footer_sub .container p {
     text-align: left;
   }
 }
 @media (min-width: 60em) and (max-width: 75em) {
-  /* line 76, ../sass/components/_uazen-footer.scss */
+  /* line 145, ../sass/components/_uazen-footer.scss */
   footer#footer_site .footer-logo {
     max-width: 300px;
   }
