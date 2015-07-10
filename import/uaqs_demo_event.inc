@@ -25,7 +25,7 @@ class UaDemoEventMigration extends UaDemoNodeMigration {
       t('Make demonstration UA Event content from pre-defined data.'));
 
     // Documented lists of source data fields.
-    // @see ua_event ua_event.features.field_instance.inc
+    // Seesee ua_event ua_event.features.field_instance.inc
     // First, the node title field...
     $title_field = array(
       'title' => t('Title'),

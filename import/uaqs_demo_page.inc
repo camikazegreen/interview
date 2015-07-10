@@ -45,7 +45,7 @@ class UaDemoPageMigration extends UaDemoNodeMigration {
       t('Make demonstration UA Basic Page node content from pre-defined data.'));
 
     // Documented lists of source data fields.
-    // @see ua_page ua_page.features.field_instance.inc
+    // Seesee ua_page ua_page.features.field_instance.inc
     $data_fields = array(
       'title' => t('Title'),
       'path' => t('URL path settings'),

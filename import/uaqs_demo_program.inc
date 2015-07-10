@@ -45,7 +45,7 @@ class UaDemoProgramMigration extends UaDemoNodeMigration {
       t('Make demonstration UA Program node content from pre-defined data.'));
 
     // Documented lists of source data fields.
-    // @see ua_program ua_program.features.field_instance.inc
+    // Seesee ua_program ua_program.features.field_instance.inc
     // First, the single-value text fielda...
     $data_fields = array(
       'title' => t('Program Name'),
@@ -60,8 +60,7 @@ class UaDemoProgramMigration extends UaDemoNodeMigration {
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
     // JSON names to simple content type fields and subfields.
-    $this->addSimpleMappings(array('title'));
-    $this->addSimpleMappings(array('path'));
+    $this->addSimpleMappings(array('title', 'path'));
     $this->addFieldMapping('field_ua_program_focus_areas', 'ua_program_focus_areas')
          ->separator('|');
   }

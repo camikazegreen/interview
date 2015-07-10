@@ -27,7 +27,7 @@ class UaDemoNewsMigration extends UaDemoNodeMigration {
       t('Make demonstration UA News content from pre-defined data.'));
 
     // Documented lists of source data fields.
-    // @see ua_news ua_news.features.field_instance.inc
+    // Seesee ua_news ua_news.features.field_instance.inc
     // First, the node title field...
     $title_field = array(
       'title' => t('Title'),

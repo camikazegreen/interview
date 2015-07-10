@@ -45,7 +45,7 @@ class UaDemoUnitMigration extends UaDemoNodeMigration {
       t('Make demonstration UA Unit node content from pre-defined data.'));
 
     // Documented lists of source data fields.
-    // @see ua_unit ua_unit.features.field_instance.inc
+    // Seesee ua_unit ua_unit.features.field_instance.inc
     // First, the single-value text fielda...
     $data_fields = array(
       'title' => t('Unit Name'),
@@ -64,8 +64,7 @@ class UaDemoUnitMigration extends UaDemoNodeMigration {
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
     // JSON names to simple content type fields and subfields.
-    $this->addSimpleMappings(array('title'));
-    $this->addSimpleMappings(array('path'));
+    $this->addSimpleMappings(array('title', 'path'));
     $this->addFieldMapping('field_ua_unit_contact', 'ua_unit_contact');
     $this->addFieldMapping('field_ua_unit_leadership_info', 'ua_unit_leadership_info');
     $this->addFieldMapping('field_ua_unit_leadership_info:format')
