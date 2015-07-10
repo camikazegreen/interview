@@ -1,6 +1,7 @@
 [
   {"id":1,
     "title" : "Institute of Skeptical Astronomy",
+    "path" : "inst_skeptical_astro",
     "ua_unit_contact" : "Samuel Rowbotham",
     "ua_unit_leadership_info" : "The Institute promotes common-sense views on the form of the Earth and its place in the cosmos that many generations of academic dogma have suppressed.",
     "ua_unit_location" : "http://www.openstreetmap.org/#map=19/32.23572/-110.94996&layers=N",
@@ -9,6 +10,7 @@
   },
   {"id":2,
     "title" : "Innovative Import Initiative",
+    "path" : "iii",
     "ua_unit_contact" : "William Kidd",
     "ua_unit_leadership_info" : "Taking advantage of the University of Arizona's proximity to an international border, the initiative seeks to enhance its revenue stream by novel approaches to the importation of small consignments of high-value materials.",
     "ua_unit_location" : "http://map.arizona.edu/",

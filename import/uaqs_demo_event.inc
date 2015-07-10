@@ -8,15 +8,11 @@
 /**
  * Makes demonstration UA Event content from pre-defined data.
  *
- * Currently local files hold the sample data this uses to build the content,
- * in a single JSON-formatted text file and collection of images. The overall
- * approach is similar to the one illustrated for handling JSON imports in the
- * documentation for the Migrate module in the “Using MigrateSourceJSON”
- * subsection.
- *
- * @see https://www.drupal.org/node/1152160
+ * This migration imports most of the UA Event content from a JSON file, but
+ * the contacts list for the event is a distinct entity and needs its own
+ * migration (see below).
  */
-class UaDemoEventMigration extends Migration {
+class UaDemoEventMigration extends UaDemoNodeMigration {
 
   /**
    * Constructor.
@@ -24,19 +20,13 @@ class UaDemoEventMigration extends Migration {
    * @param array $arguments
    *   Arguments for the parent constructor (Migration standard behavior).
    */
-  public function __construct($arguments) {
-    parent::__construct($arguments);
+  public function __construct(array $arguments) {
+    parent::__construct($arguments, 'ua_event',
+      t('Make demonstration UA Event content from pre-defined data.'));
 
-    $this->description =
-      t('Make demonstration UA Event content from pre-defined data.');
-
-    // The demonstration data will be within this module's own directory.
-    $our_path = drupal_get_path('module', 'ua_demo');
-
-    // Documented lists of source data fields: all names here MUST match
-    // those in the corresponding content type.
-    // @see ua_event ua_event.features.field_instance.inc
-    // First, the node title field
+    // Documented lists of source data fields.
+    // Seesee ua_event ua_event.features.field_instance.inc
+    // First, the node title field...
     $title_field = array(
       'title' => t('Title'),
     );
@@ -74,35 +64,13 @@ class UaDemoEventMigration extends Migration {
       $image_src_field . '_alt' => t('Event photo alt text'),
     );
 
-    // Source key field (must have int values).
-    $id_field = 'id';
-    $source_key = array($id_field => t('Unique key (int)'));
-
     // All the fields to migrate.
-    $fields = $source_key + $title_field + $single_value_fields + $date_extra_fields + $link_title_fields + $file_fields + $image_fields;
+    $fields = $this->getSourceKeyField() + $title_field + $single_value_fields + $date_extra_fields + $link_title_fields + $file_fields + $image_fields;
 
     // Source definition.
-    $json_filename = drupal_strtolower($this->machineName) . '.json';
-    $import_path = $our_path . '/import/data/';
-    $this->source = new MigrateSourceJSON($import_path . $json_filename, $id_field, $fields);
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
-    // Destination.
-    $this->destination = new MigrateDestinationNode('ua_event');
-
-    // The usual migration map, keyed off the arbitrary source IDs.
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        $id_field => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
-          'not null' => TRUE,
-          'description' => $source_key[$id_field],
-        )
-      ),
-      MigrateDestinationNode::getKeySchema()
-    );
-
-    // The title has no prefix
+    // The title has no prefix.
     $this->addSimpleMappings(array('title'));
 
     // One-to-one correspondence: JSON names and simple content type fields.
@@ -126,7 +94,7 @@ class UaDemoEventMigration extends Migration {
     $this->addFieldMapping($image_dst_field . ':file_class')
          ->defaultValue('MigrateFileUri');
     $this->addFieldMapping($image_dst_field . ':source_dir')
-         ->defaultValue($our_path . '/import/images');
+         ->defaultValue($this->imagePath());
     $file_dst_field = 'field_' . $file_src_field;
     $this->addFieldMapping($file_dst_field, $file_src_field)
          ->separator('|');
@@ -135,34 +103,29 @@ class UaDemoEventMigration extends Migration {
     $this->addFieldMapping($file_dst_field . ':file_class')
          ->defaultValue('MigrateFileUri');
     $this->addFieldMapping($file_dst_field . ':source_dir')
-         ->defaultValue($our_path . '/import/images');
+         ->defaultValue($this->imagePath());
 
-    // Image alt and title fields
+    // Image alt and title fields.
     foreach (array('alt', 'title') as $subfield) {
       $this->addFieldMapping('field_' . $image_src_field . ':' . $subfield, $image_src_field . '_' . $subfield);
     }
 
-    // Attachment description field
+    // Attachment description field.
     $subfield = 'description';
     $this->addFieldMapping('field_' . $file_src_field . ':' . $subfield, $file_src_field . '_' . $subfield)
          ->separator('|');
 
-    // Allow limited HTML markup in the description field
+    // Allow limited HTML markup in the description field.
     $this->addFieldMapping('field_ua_event_description:format')
          ->defaultValue('filtered_html');
   }
+
 }
 
 /**
  * Populate the Contacts field collection within UA Event content.
- *
- * A field collection is an independent entity, so the main migration that
- * creates nodes cannot treat it as just another field, so a distinct
- * but associated migration is needed.
- *
- * @see https://www.drupal.org/node/1900640
  */
-class UaDemoEventContactMigration extends Migration {
+class UaDemoEventContactMigration extends UaDemoFieldCollectionMigration {
 
   /**
    * Constructor.
@@ -170,26 +133,9 @@ class UaDemoEventContactMigration extends Migration {
    * @param array $arguments
    *   Arguments for the parent constructor (Migration standard behavior).
    */
-  public function __construct($arguments) {
-    parent::__construct($arguments);
-
-    $this->description =
-      t('Populate demonstration UA Event contact field collections.');
-
-    // The demonstration data will be within this module's own directory.
-    $our_path = drupal_get_path('module', 'ua_demo');
-
-    $this->dependencies = array('UaDemoEvent');
-
-    // Source key field (must have int values).
-    $id_field = 'id';
-    $source_key = array($id_field => t('Unique key (int)'));
-
-    // Foreign key.
-    $host_entity_id = 'ua_event_id';
-    $foreign_key = array(
-      $host_entity_id => t('ID of parent UA Event item'),
-    );
+  public function __construct(array $arguments) {
+    parent::__construct($arguments, 'field_ua_event_contacts', 'ua_event_id', 'UaDemoEvent',
+      t('Populate demonstration UA Event contact field collections.'));
 
     // Data fields.
     $data_fields = array(
@@ -198,38 +144,20 @@ class UaDemoEventContactMigration extends Migration {
       'ua_email_contact_phone' => t('Contact Phone'),
     );
 
-    $fields = $source_key + $foreign_key + $data_fields;
+    $fields = $this->getSourceKeyField() + $this->getForeignKeyField() + $data_fields;
 
     // Source definition.
-    $json_filename = drupal_strtolower($this->machineName) . '.json';
-    $import_path = $our_path . '/import/data/';
-    $this->source = new MigrateSourceJSON($import_path . $json_filename, $id_field, $fields);
-
-    $this->destination = new MigrateDestinationFieldCollection(
-      'field_ua_event_contacts',
-      array('host_entity_type' => 'node')
-    );
-
-    // The usual migration map, keyed off the arbitrary source IDs.
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        $id_field => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
-          'not null' => TRUE,
-          'description' => $source_key[$id_field],
-        )
-      ),
-      MigrateDestinationFieldCollection::getKeySchema()
-    );
-
-    // Linking back to UA Event items on the foregn key
-    $this->addFieldMapping('host_entity_id', $host_entity_id)
-         ->sourceMigration('UaDemoEvent');
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
     foreach (array_keys($data_fields) as $src_field) {
       $this->addFieldMapping('field_' . $src_field, $src_field);
     }
 
+    // Unmigrated fields.
+    $this->addUnmigratedDestinations(array(
+      'field_ua_email_contact_phone:language',
+      'field_ua_event_contact_name:language',
+    ));
   }
+
 }

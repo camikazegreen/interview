@@ -1,5 +1,0 @@
-mlid,menu,path,title,ref_parent,weight
-1,"main-menu","primus","Primus",0,0
-2,"main-menu","secundus","Secundus",1,0
-3,"ua-utility-links","primus","Utility 1",0,0
-4,"ua-utility-links","secundus","Utility 2",0,0

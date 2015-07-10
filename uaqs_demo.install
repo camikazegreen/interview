@@ -27,7 +27,10 @@ function ua_demo_enable() {
     $migration = Migration::getInstance($machine_name);
     $migration->processImport();
   }
-  variable_set('site_frontpage', 'node/1');
+  variable_set(
+    'site_frontpage',
+    Migration::getInstance('UaDemoPage')->getFrontPageNode()
+  );
 }
 
 /**
@@ -36,9 +39,11 @@ function ua_demo_enable() {
 function ua_demo_disable() {
   $info = ua_demo_migrate_api();
   Migration::setDisplayFunction('_ua_demo_null_message');
-  foreach ($info['migrations'] as $machine_name => $arguments) {
+  $hitlist = array_reverse($info['migrations']);
+  foreach ($hitlist as $machine_name => $arguments) {
     $migration = Migration::getInstance($machine_name);
     $migration->processRollback();
   }
-  MigrateGroup::deregister('ua_demo');;
+  MigrateGroup::deregister('ua_demo');
+  variable_set('site_frontpage', 'node');
 }
