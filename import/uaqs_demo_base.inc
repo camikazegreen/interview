@@ -297,8 +297,6 @@ abstract class UaDemoFieldCollectionMigration extends UaDemoIntKeyedMigration {
 
     $this->description = $description;
 
-    $this->dependencies = array($host_entity_migration);
-
     // Foreign key.
     $this->foreignKeyField = array(
       $host_entity_id => t('ID of the parent item'),

@@ -39,7 +39,8 @@ function ua_demo_enable() {
 function ua_demo_disable() {
   $info = ua_demo_migrate_api();
   Migration::setDisplayFunction('_ua_demo_null_message');
-  foreach ($info['migrations'] as $machine_name => $arguments) {
+  $hitlist = array_reverse($info['migrations']);
+  foreach ($hitlist as $machine_name => $arguments) {
     $migration = Migration::getInstance($machine_name);
     $migration->processRollback();
   }
