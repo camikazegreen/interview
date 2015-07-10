@@ -18,5 +18,25 @@
     "title" : "UA Drupal",
     "path" : "ua_drupal",
     "ua_page_body" : "Welcome to the University of Arizona's preconfigured version of Drupal. People who use the University's web sites should find it easy to move from one site to another without being distracted by changes in appearance and behavior, but people who build web sites for the University should not be forced into conformity with rigidly mandated rules. UA Drupal helps anyone building a Drupal-based site for the University of Arizona by assembling components that already conform to the recommended web standards, but as a start for web designers to customize, not as a template into which they should force their content.\n\nIt is important to add completely new content to a site based on UA Drupal rather than changing the demonstration content you can see here. A single module provides all of this, so make sure it is disabled before you start customizing the site or adding any content of your own: find the module called “UA Demo” in the list of enabled modules and disable it. When you remove the demonstration content you will still have the recommended University of Arizona Drupal theme (a Zen subtheme that also includes some elements from the Bootstrap framework), plus various content types and views from features that will be common to many University sites."
+  },
+  {"id":5,
+    "title" : "UA Basic Page",
+    "path" : "ua_page",
+    "ua_page_body" : "Use a <em>UA Basic Page</em> in the same way you would the generic Drupal Basic Page."
+  },
+  {"id":6,
+    "title" : "UA Publication",
+    "path" : "ua_publication",
+    "ua_page_body" : "Use a <em>UA Publication</em> to add published works to the website."
+  },
+  {"id":7,
+    "title" : "UA Unit",
+    "path" : "ua_unit",
+    "ua_page_body" : "Use a <em>UA Unit</em> to create information about an academic unit."
+  },
+  {"id":8,
+    "title" : "UA Program",
+    "path" : "ua_program",
+    "ua_page_body" : "Use a <em>UA Program</em> to add academic UA programs to the website."
   }
 ]
