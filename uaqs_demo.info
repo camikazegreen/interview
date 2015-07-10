@@ -2,6 +2,7 @@ name = UA Demo Content
 description = Provides sample content to demonstrate various features of the UA Drupal distribution.
 core = 7.x
 package = The University of Arizona
+version = 7.x-1.0-alpha1
 dependencies[] = migrate
 dependencies[] = ua_featured_content
 dependencies[] = ua_navigation
@@ -22,4 +23,3 @@ files[] = import/ua_demo_event.inc
 files[] = import/ua_demo_publication.inc
 files[] = import/ua_demo_program.inc
 files[] = import/ua_demo_navigation.inc
-
