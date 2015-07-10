@@ -79,28 +79,23 @@ footer#footer_site {
 
 @media (min-width: 48em) {
 	footer#footer_site {
-		.footer-content {
-			clear: both;
-		}
-	}
-	.column-menu {
-		display: inline-block;
-		vertical-align: top;
-    	border: 0 none;
-		width: 49%;
-    h2 {
-      	text-align: left;
-     	padding: 0 32px;
-      	padding: 0 2rem; }
-		ul.menu {
-      		padding: 16px 32px 0;
-      		padding: 1rem 2rem 0;
-			text-align: left;
+		.footer-content { clear: both; }
+		.column-menu {
+			display: inline-block;
+			vertical-align: top;
+	    	border: 0 none;
+			width: 49%;
+		    h2 {
+		      	text-align: left;
+		     	padding: 0 32px;
+		      	padding: 0 2rem; }
+				ul.menu {
+		      		padding: 16px 32px 0;
+		      		padding: 1rem 2rem 0;
+					text-align: left; }
 		}
 	}
 }
-
-
 
 @media (min-width: 60em) {
   footer#footer_site {
