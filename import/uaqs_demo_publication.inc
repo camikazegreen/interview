@@ -49,9 +49,10 @@ class UaDemoPublicationMigration extends UaDemoNodeMigration {
     // Documented lists of source data fields: all names here MUST match
     // those in the corresponding content type.
     // @see ua_publication ua_publication.features.field_instance.inc
-    // First, the node title field...
-    $title_field = array(
+    // First, the node title and path alias fields...
+    $title_fields = array(
       'title' => t('Title'),
+      'path' => t('URL path settings'),
     );
     // The single-value text fielda...
     $single_value_fields = array(
@@ -76,13 +77,14 @@ class UaDemoPublicationMigration extends UaDemoNodeMigration {
     );
 
     // All the fields to migrate.
-    $fields = $this->getSourceKeyField() + $title_field + $single_value_fields + $multi_value_fields + $link_title_fields + $image_fields;
+    $fields = $this->getSourceKeyField() + $title_fields + $single_value_fields + $multi_value_fields + $link_title_fields + $image_fields;
 
     // Source definition.
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
-    // The title has no prefix.
+    // The title and path have no prefix.
     $this->addSimpleMappings(array('title'));
+    $this->addSimpleMappings(array('path'));
 
     // One-to-one correspondence: JSON names and simple content type fields.
     foreach (array_keys($single_value_fields) as $src_field) {

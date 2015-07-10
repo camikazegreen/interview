@@ -49,6 +49,7 @@ class UaDemoUnitMigration extends UaDemoNodeMigration {
     // First, the single-value text fielda...
     $data_fields = array(
       'title' => t('Unit Name'),
+      'path' => t('URL path settings'),
       'ua_unit_contact' => t('Person to contact about this unit'),
       'ua_unit_leadership_info' => t('Leadership Information'),
       'ua_unit_location' => t('Location map URL'),
@@ -63,7 +64,8 @@ class UaDemoUnitMigration extends UaDemoNodeMigration {
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
     // JSON names to simple content type fields and subfields.
-    $this->addFieldMapping('title', 'title');
+    $this->addSimpleMappings(array('title'));
+    $this->addSimpleMappings(array('path'));
     $this->addFieldMapping('field_ua_unit_contact', 'ua_unit_contact');
     $this->addFieldMapping('field_ua_unit_leadership_info', 'ua_unit_leadership_info');
     $this->addFieldMapping('field_ua_unit_leadership_info:format')

@@ -49,6 +49,7 @@ class UaDemoProgramMigration extends UaDemoNodeMigration {
     // First, the single-value text fielda...
     $data_fields = array(
       'title' => t('Program Name'),
+      'path' => t('URL path settings'),
       'ua_program_focus_areas' => t('Focus Areas (term references)'),
     );
 
@@ -59,7 +60,8 @@ class UaDemoProgramMigration extends UaDemoNodeMigration {
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
     // JSON names to simple content type fields and subfields.
-    $this->addFieldMapping('title', 'title');
+    $this->addSimpleMappings(array('title'));
+    $this->addSimpleMappings(array('path'));
     $this->addFieldMapping('field_ua_program_focus_areas', 'ua_program_focus_areas')
          ->separator('|');
   }
