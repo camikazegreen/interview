@@ -34,7 +34,6 @@
 @import url("https://brand.arizona.edu/sites/default/files/ua-banner/ua-web-branding/ua-fonts/milo.css");
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
-  /* line 50, ../../sass/catstrap/catstrap.scss */
   *,
   *:before,
   *:after {
@@ -45,52 +44,43 @@
     box-shadow: none !important;
   }
 
-  /* line 58, ../../sass/catstrap/catstrap.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 61, ../../sass/catstrap/catstrap.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 64, ../../sass/catstrap/catstrap.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 68, ../../sass/catstrap/catstrap.scss */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
   }
 
-  /* line 72, ../../sass/catstrap/catstrap.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 77, ../../sass/catstrap/catstrap.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 81, ../../sass/catstrap/catstrap.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 84, ../../sass/catstrap/catstrap.scss */
   img {
     max-width: 100% !important;
   }
 
-  /* line 89, ../../sass/catstrap/catstrap.scss */
   p,
   h2,
   h3 {
@@ -98,58 +88,48 @@
     widows: 3;
   }
 
-  /* line 94, ../../sass/catstrap/catstrap.scss */
   h2,
   h3 {
     page-break-after: avoid;
   }
 
-  /* line 97, ../../sass/catstrap/catstrap.scss */
   select {
     background: #fff !important;
   }
 
-  /* line 100, ../../sass/catstrap/catstrap.scss */
   .navbar {
     display: none;
   }
 
-  /* line 104, ../../sass/catstrap/catstrap.scss */
   .btn > .caret,
   .dropup > .btn > .caret {
     border-top-color: #000 !important;
   }
 
-  /* line 107, ../../sass/catstrap/catstrap.scss */
   .label {
     border: 1px solid #000;
   }
 
-  /* line 110, ../../sass/catstrap/catstrap.scss */
   .table {
     border-collapse: collapse !important;
   }
 
-  /* line 114, ../../sass/catstrap/catstrap.scss */
   .table td,
   .table th {
     background-color: #fff !important;
   }
 
-  /* line 118, ../../sass/catstrap/catstrap.scss */
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #ddd !important;
   }
 }
-/* line 122, ../../sass/catstrap/catstrap.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 128, ../../sass/catstrap/catstrap.scss */
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
@@ -157,16 +137,14 @@
   box-sizing: border-box;
 }
 
-/* line 133, ../../sass/catstrap/catstrap.scss */
 html {
   font-size: 16px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
 
-/* line 140, ../../sass/catstrap/catstrap.scss */
 body {
   font-family: MiloWeb, Verdana, Geneva, sans-serif;
   font-size: 16px;
@@ -176,7 +154,6 @@ body {
   background-color: #fff;
 }
 
-/* line 151, ../../sass/catstrap/catstrap.scss */
 input,
 button,
 select,
@@ -186,28 +163,24 @@ textarea {
   line-height: inherit;
 }
 
-/* line 156, ../../sass/catstrap/catstrap.scss */
 a {
   color: #395180;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* line 162, ../../sass/catstrap/catstrap.scss */
 a:hover,
 a:focus {
   /*color: #63000B;*/
   text-decoration: underline;
 }
 
-/* line 166, ../../sass/catstrap/catstrap.scss */
 a:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
-/* line 171, ../../sass/catstrap/catstrap.scss */
 a, button {
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
@@ -215,17 +188,14 @@ a, button {
   transition: all 0.1s ease-in-out;
 }
 
-/* line 177, ../../sass/catstrap/catstrap.scss */
 figure {
   margin: 0;
 }
 
-/* line 180, ../../sass/catstrap/catstrap.scss */
 img {
   vertical-align: middle;
 }
 
-/* line 187, ../../sass/catstrap/catstrap.scss */
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
@@ -236,7 +206,6 @@ img {
   height: auto;
 }
 
-/* line 192, ../../sass/catstrap/catstrap.scss */
 hr {
   margin-top: 20px;
   margin-top: 1.25rem;
@@ -246,7 +215,6 @@ hr {
   border-top: 1px solid #eee;
 }
 
-/* line 211, ../../sass/catstrap/catstrap.scss */
 h1,
 h2,
 h3,
@@ -265,7 +233,6 @@ h6,
   color: inherit;
 }
 
-/* line 218, ../../sass/catstrap/catstrap.scss */
 h1,
 .h1 {
   margin-top: 0;
@@ -273,7 +240,6 @@ h1,
   margin-bottom: 0.5rem;
 }
 
-/* line 227, ../../sass/catstrap/catstrap.scss */
 h2,
 .h2,
 h3,
@@ -282,7 +248,6 @@ h3,
   margin-bottom: 0.5em;
 }
 
-/* line 236, ../../sass/catstrap/catstrap.scss */
 h4,
 .h4,
 h5,
@@ -293,7 +258,6 @@ h6,
   margin-bottom: 10px;
 }
 
-/* line 241, ../../sass/catstrap/catstrap.scss */
 h1,
 .h1 {
   font-size: 50px;
@@ -303,7 +267,6 @@ h1,
   color: #49595E;
 }
 
-/* line 250, ../../sass/catstrap/catstrap.scss */
 h2,
 .h2 {
   font-size: 36px;
@@ -313,7 +276,6 @@ h2,
   color: #49595E;
 }
 
-/* line 258, ../../sass/catstrap/catstrap.scss */
 h3,
 .h3 {
   font-size: 24px;
@@ -323,7 +285,6 @@ h3,
   text-transform: uppercase;
 }
 
-/* line 266, ../../sass/catstrap/catstrap.scss */
 h4,
 .h4 {
   font-size: 20px;
@@ -331,7 +292,6 @@ h4,
   font-weight: 700;
 }
 
-/* line 272, ../../sass/catstrap/catstrap.scss */
 h5,
 .h5 {
   font-size: 16px;
@@ -339,7 +299,6 @@ h5,
   font-weight: 700;
 }
 
-/* line 278, ../../sass/catstrap/catstrap.scss */
 h6,
 .h6 {
   font-size: 12px;
@@ -347,13 +306,11 @@ h6,
   font-weight: 700;
 }
 
-/* line 283, ../../sass/catstrap/catstrap.scss */
 p {
   margin: 0 0 16px;
   margin: 0 0 1rem;
 }
 
-/* line 287, ../../sass/catstrap/catstrap.scss */
 .lead {
   margin-bottom: 20px;
   margin-bottom: 1.2rem;
@@ -365,19 +322,16 @@ p {
 }
 
 @media (min-width: 768px) {
-  /* line 297, ../../sass/catstrap/catstrap.scss */
   .lead {
     font-size: 24px;
     font-size: 1.4rem;
   }
 }
-/* line 303, ../../sass/catstrap/catstrap.scss */
 small,
 .small {
   font-size: 85%;
 }
 
-/* line 307, ../../sass/catstrap/catstrap.scss */
 mark,
 .mark {
   padding: 3px;
@@ -385,47 +339,38 @@ mark,
   background-color: #fcf8e3;
 }
 
-/* line 312, ../../sass/catstrap/catstrap.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 315, ../../sass/catstrap/catstrap.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 318, ../../sass/catstrap/catstrap.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 321, ../../sass/catstrap/catstrap.scss */
 .text-justify {
   text-align: justify;
 }
 
-/* line 324, ../../sass/catstrap/catstrap.scss */
 .text-nowrap {
   white-space: nowrap;
 }
 
-/* line 327, ../../sass/catstrap/catstrap.scss */
 .text-lowercase {
   text-transform: lowercase;
 }
 
-/* line 330, ../../sass/catstrap/catstrap.scss */
 .text-uppercase {
   text-transform: uppercase;
 }
 
-/* line 333, ../../sass/catstrap/catstrap.scss */
 .text-capitalize {
   text-transform: capitalize;
 }
 
-/* line 336, ../../sass/catstrap/catstrap.scss */
 code {
   padding: 2px 4px;
   padding: 0.125rem 0.25rem;
@@ -434,7 +379,6 @@ code {
   background-color: #f9f2f4;
 }
 
-/* line 344, ../../sass/catstrap/catstrap.scss */
 ul,
 ol {
   margin-top: 0;
@@ -444,7 +388,6 @@ ol {
   padding-left: 1rem;
 }
 
-/* line 354, ../../sass/catstrap/catstrap.scss */
 ul ul,
 ol ul,
 ul ol,
@@ -452,7 +395,6 @@ ol ol {
   margin-bottom: 0;
 }
 
-/* line 357, ../../sass/catstrap/catstrap.scss */
 ul.triangle li {
   padding-left: 5px;
   padding-left: 0.3rem;
@@ -460,7 +402,6 @@ ul.triangle li {
   list-style: none;
 }
 
-/* line 363, ../../sass/catstrap/catstrap.scss */
 ul.triangle li:before {
   position: absolute;
   top: 8px;
@@ -470,40 +411,34 @@ ul.triangle li:before {
   width: 0;
   height: 0;
   border-top: 8px solid #395180;
-  border-left: 8px solid rgba(0, 0, 0, 0);
+  border-left: 8px solid transparent;
   content: '';
 }
 
-/* line 375, ../../sass/catstrap/catstrap.scss */
 ul.triangle a {
   color: #395180;
 }
 
-/* line 378, ../../sass/catstrap/catstrap.scss */
 dl {
   margin-top: 0;
   margin-bottom: 16px;
   margin-bottom: 1rem;
 }
 
-/* line 384, ../../sass/catstrap/catstrap.scss */
 dt,
 dd {
   line-height: 1.42857143;
 }
 
-/* line 387, ../../sass/catstrap/catstrap.scss */
 dt {
   font-weight: bold;
 }
 
-/* line 390, ../../sass/catstrap/catstrap.scss */
 dd {
   margin-left: 0;
 }
 
 @media (min-width: 48em) {
-  /* line 394, ../../sass/catstrap/catstrap.scss */
   .dl-horizontal dt {
     float: left;
     width: 160px;
@@ -514,25 +449,21 @@ dd {
     white-space: nowrap;
   }
 
-  /* line 403, ../../sass/catstrap/catstrap.scss */
   .dl-horizontal dd {
     margin-left: 180px;
     margin-left: 11.25rem;
   }
 }
-/* line 409, ../../sass/catstrap/catstrap.scss */
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
   border-bottom: 1px dotted #777;
 }
 
-/* line 414, ../../sass/catstrap/catstrap.scss */
 table {
   background-color: transparent;
 }
 
-/* line 417, ../../sass/catstrap/catstrap.scss */
 caption {
   padding: 8px 0;
   padding: 0.5rem 0rem;
@@ -540,13 +471,11 @@ caption {
   text-align: left;
 }
 
-/* line 423, ../../sass/catstrap/catstrap.scss */
 th {
   text-align: left;
 }
 
 /* Catstrap Table */
-/* line 427, ../../sass/catstrap/catstrap.scss */
 table {
   width: 100%;
   max-width: 100%;
@@ -557,7 +486,6 @@ table {
   font-size: 1.125rem;
 }
 
-/* line 441, ../../sass/catstrap/catstrap.scss */
 table > thead > tr > th,
 table > tbody > tr > th,
 table > tfoot > tr > th,
@@ -571,7 +499,6 @@ table > tfoot > tr > td {
   border: 1px solid #fff;
 }
 
-/* line 448, ../../sass/catstrap/catstrap.scss */
 table > thead > tr > th {
   vertical-align: bottom;
   background: #49595e;
@@ -584,19 +511,16 @@ table > thead > tr > th {
   line-height: 1;
 }
 
-/* line 460, ../../sass/catstrap/catstrap.scss */
 table > thead > tr > th,
 table > thead > tr > td {
   border-bottom-width: 1px;
 }
 
-/* line 463, ../../sass/catstrap/catstrap.scss */
 table > tbody > tr > td {
   background: #fff;
   color: #49595e;
 }
 
-/* line 472, ../../sass/catstrap/catstrap.scss */
 table > caption + thead > tr:first-child > th,
 table > colgroup + thead > tr:first-child > th,
 table > thead:first-child > tr:first-child > th,
@@ -606,29 +530,24 @@ table > thead:first-child > tr:first-child > td {
   border-top: 0 none;
 }
 
-/* line 475, ../../sass/catstrap/catstrap.scss */
 table > tbody + tbody {
   border-top: 2px solid #ddd;
 }
 
-/* line 478, ../../sass/catstrap/catstrap.scss */
 table table {
   background-color: #fff;
 }
 
-/* line 481, ../../sass/catstrap/catstrap.scss */
 table > tbody > tr:nth-of-type(odd) > td, table > tbody > tr:nth-of-type(odd) > th {
   background-color: #EEF1F1;
 }
 
-/* line 484, ../../sass/catstrap/catstrap.scss */
 table col[class*="col-"] {
   position: static;
   display: table-column;
   float: none;
 }
 
-/* line 490, ../../sass/catstrap/catstrap.scss */
 table td[class*="col-"],
 table th[class*="col-"] {
   position: static;
@@ -636,21 +555,18 @@ table th[class*="col-"] {
   float: none;
 }
 
-/* line 496, ../../sass/catstrap/catstrap.scss */
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
   background-color: #546581;
   color: #fff;
 }
 
-/* line 500, ../../sass/catstrap/catstrap.scss */
 .table-responsive {
   min-height: .01%;
   overflow-x: auto;
 }
 
 @media screen and (max-width: 47.9em) {
-  /* line 505, ../../sass/catstrap/catstrap.scss */
   .table-responsive {
     width: 100%;
     margin-bottom: 15px;
@@ -660,12 +576,10 @@ table th[class*="col-"] {
     border: 1px solid #ddd;
   }
 
-  /* line 513, ../../sass/catstrap/catstrap.scss */
   .table-responsive > table {
     margin-bottom: 0;
   }
 
-  /* line 521, ../../sass/catstrap/catstrap.scss */
   .table-responsive > table > thead > tr > th,
   .table-responsive > table > tbody > tr > th,
   .table-responsive > table > tfoot > tr > th,
@@ -675,12 +589,10 @@ table th[class*="col-"] {
     white-space: nowrap;
   }
 
-  /* line 524, ../../sass/catstrap/catstrap.scss */
   .table-responsive > table {
     border: 0;
   }
 
-  /* line 532, ../../sass/catstrap/catstrap.scss */
   .table-responsive > table > thead > tr > th:first-child,
   .table-responsive > table > tbody > tr > th:first-child,
   .table-responsive > table > tfoot > tr > th:first-child,
@@ -690,7 +602,6 @@ table th[class*="col-"] {
     border-left: 0;
   }
 
-  /* line 540, ../../sass/catstrap/catstrap.scss */
   .table-responsive > table > thead > tr > th:last-child,
   .table-responsive > table > tbody > tr > th:last-child,
   .table-responsive > table > tfoot > tr > th:last-child,
@@ -700,7 +611,6 @@ table th[class*="col-"] {
     border-right: 0;
   }
 
-  /* line 546, ../../sass/catstrap/catstrap.scss */
   .table-responsive > table > tbody > tr:last-child > th,
   .table-responsive > table > tfoot > tr:last-child > th,
   .table-responsive > table > tbody > tr:last-child > td,
@@ -708,7 +618,6 @@ table th[class*="col-"] {
     border-bottom: 0;
   }
 }
-/* line 550, ../../sass/catstrap/catstrap.scss */
 fieldset {
   min-width: 0;
   padding: 0;
@@ -716,7 +625,6 @@ fieldset {
   border: 0;
 }
 
-/* line 556, ../../sass/catstrap/catstrap.scss */
 legend {
   display: block;
   width: 100%;
@@ -729,7 +637,6 @@ legend {
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* line 567, ../../sass/catstrap/catstrap.scss */
 label {
   display: inline-block;
   max-width: 100%;
@@ -739,14 +646,12 @@ label {
   font-size: 1.5rem;
 }
 
-/* line 575, ../../sass/catstrap/catstrap.scss */
 input[type="search"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 581, ../../sass/catstrap/catstrap.scss */
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 0 0;
@@ -755,24 +660,20 @@ input[type="checkbox"] {
   line-height: normal;
 }
 
-/* line 587, ../../sass/catstrap/catstrap.scss */
 input[type="file"] {
   display: block;
 }
 
-/* line 590, ../../sass/catstrap/catstrap.scss */
 input[type="range"] {
   display: block;
   width: 100%;
 }
 
-/* line 595, ../../sass/catstrap/catstrap.scss */
 select[multiple],
 select[size] {
   height: auto;
 }
 
-/* line 600, ../../sass/catstrap/catstrap.scss */
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
@@ -781,7 +682,6 @@ input[type="checkbox"]:focus {
   outline-offset: -2px;
 }
 
-/* line 605, ../../sass/catstrap/catstrap.scss */
 output {
   display: block;
   padding-top: 7px;
@@ -792,7 +692,6 @@ output {
   color: #555;
 }
 
-/* line 614, ../../sass/catstrap/catstrap.scss */
 .form-control {
   display: block;
   width: 50%;
@@ -815,12 +714,10 @@ output {
 }
 
 @media (max-width: 48em) {
-  /* line 635, ../../sass/catstrap/catstrap.scss */
   .form-control {
     width: 100%;
   }
 }
-/* line 639, ../../sass/catstrap/catstrap.scss */
 .form-control:focus {
   border-color: #66afe9;
   outline: 0;
@@ -828,23 +725,19 @@ output {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
-/* line 645, ../../sass/catstrap/catstrap.scss */
 .form-control::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
 
-/* line 649, ../../sass/catstrap/catstrap.scss */
 .form-control:-ms-input-placeholder {
   color: #999;
 }
 
-/* line 652, ../../sass/catstrap/catstrap.scss */
 .form-control::-webkit-input-placeholder {
   color: #999;
 }
 
-/* line 657, ../../sass/catstrap/catstrap.scss */
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {
@@ -853,18 +746,15 @@ fieldset[disabled] .form-control {
   opacity: 1;
 }
 
-/* line 662, ../../sass/catstrap/catstrap.scss */
 textarea.form-control {
   height: auto;
 }
 
-/* line 665, ../../sass/catstrap/catstrap.scss */
 input[type="search"] {
   -webkit-appearance: none;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  /* line 672, ../../sass/catstrap/catstrap.scss */
   input[type="date"],
   input[type="time"],
   input[type="datetime-local"],
@@ -872,7 +762,6 @@ input[type="search"] {
     line-height: 2.125;
   }
 
-  /* line 682, ../../sass/catstrap/catstrap.scss */
   input[type="date"].input-sm,
   input[type="time"].input-sm,
   input[type="datetime-local"].input-sm,
@@ -884,7 +773,6 @@ input[type="search"] {
     line-height: 1.875;
   }
 
-  /* line 692, ../../sass/catstrap/catstrap.scss */
   input[type="date"].input-lg,
   input[type="time"].input-lg,
   input[type="datetime-local"].input-lg,
@@ -896,13 +784,11 @@ input[type="search"] {
     line-height: 2.875;
   }
 }
-/* line 696, ../../sass/catstrap/catstrap.scss */
 .form-group {
   margin-bottom: 15px;
   margin-bottom: 0.9375rem;
 }
 
-/* line 701, ../../sass/catstrap/catstrap.scss */
 .radio,
 .checkbox {
   position: relative;
@@ -911,7 +797,6 @@ input[type="search"] {
   margin: 0.625rem 0rem;
 }
 
-/* line 708, ../../sass/catstrap/catstrap.scss */
 .radio label,
 .checkbox label {
   min-height: 20px;
@@ -925,7 +810,6 @@ input[type="search"] {
   font-size: 1rem;
 }
 
-/* line 722, ../../sass/catstrap/catstrap.scss */
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
 .checkbox input[type="checkbox"],
@@ -937,13 +821,11 @@ input[type="search"] {
   /*display: none;*/
 }
 
-/* line 730, ../../sass/catstrap/catstrap.scss */
 .radio + .radio,
 .checkbox + .checkbox {
   margin-top: -5px;
 }
 
-/* line 734, ../../sass/catstrap/catstrap.scss */
 .radio-inline,
 .checkbox-inline {
   display: inline-block;
@@ -955,7 +837,6 @@ input[type="search"] {
   cursor: pointer;
 }
 
-/* line 744, ../../sass/catstrap/catstrap.scss */
 .radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {
   margin-top: 0;
@@ -963,7 +844,6 @@ input[type="search"] {
   margin-left: 0.625rem;
 }
 
-/* line 754, ../../sass/catstrap/catstrap.scss */
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],
 input[type="radio"].disabled,
@@ -973,7 +853,6 @@ fieldset[disabled] input[type="checkbox"] {
   cursor: not-allowed;
 }
 
-/* line 760, ../../sass/catstrap/catstrap.scss */
 .radio-inline.disabled,
 .checkbox-inline.disabled,
 fieldset[disabled] .radio-inline,
@@ -981,7 +860,6 @@ fieldset[disabled] .checkbox-inline {
   cursor: not-allowed;
 }
 
-/* line 766, ../../sass/catstrap/catstrap.scss */
 .radio.disabled label,
 .checkbox.disabled label,
 fieldset[disabled] .radio label,
@@ -989,31 +867,26 @@ fieldset[disabled] .checkbox label {
   cursor: not-allowed;
 }
 
-/* line 769, ../../sass/catstrap/catstrap.scss */
 .form-control-static {
   padding-top: 7px;
   padding-bottom: 7px;
   margin-bottom: 0;
 }
 
-/* line 775, ../../sass/catstrap/catstrap.scss */
 .form-control-static.input-lg,
 .form-control-static.input-sm {
   padding-right: 0;
   padding-left: 0;
 }
 
-/* line 779, ../../sass/catstrap/catstrap.scss */
 .has-feedback {
   position: relative;
 }
 
-/* line 782, ../../sass/catstrap/catstrap.scss */
 .has-feedback .form-control {
   padding-right: 42.5px;
 }
 
-/* line 785, ../../sass/catstrap/catstrap.scss */
 .form-control-feedback {
   position: absolute;
   top: 0;
@@ -1027,21 +900,18 @@ fieldset[disabled] .checkbox label {
   pointer-events: none;
 }
 
-/* line 797, ../../sass/catstrap/catstrap.scss */
 .input-lg + .form-control-feedback {
   width: 46px;
   height: 46px;
   line-height: 46px;
 }
 
-/* line 802, ../../sass/catstrap/catstrap.scss */
 .input-sm + .form-control-feedback {
   width: 30px;
   height: 30px;
   line-height: 30px;
 }
 
-/* line 816, ../../sass/catstrap/catstrap.scss */
 .has-success .help-block,
 .has-success .control-label,
 .has-success .radio,
@@ -1055,33 +925,28 @@ fieldset[disabled] .checkbox label {
   color: #3c763d;
 }
 
-/* line 819, ../../sass/catstrap/catstrap.scss */
 .has-success .form-control {
   border-color: #3c763d;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-/* line 824, ../../sass/catstrap/catstrap.scss */
 .has-success .form-control:focus {
   border-color: #2b542c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
 }
 
-/* line 829, ../../sass/catstrap/catstrap.scss */
 .has-success .input-group-addon {
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #3c763d;
 }
 
-/* line 834, ../../sass/catstrap/catstrap.scss */
 .has-success .form-control-feedback {
   color: #3c763d;
 }
 
-/* line 846, ../../sass/catstrap/catstrap.scss */
 .has-warning .help-block,
 .has-warning .control-label,
 .has-warning .radio,
@@ -1095,33 +960,28 @@ fieldset[disabled] .checkbox label {
   color: #8a6d3b;
 }
 
-/* line 849, ../../sass/catstrap/catstrap.scss */
 .has-warning .form-control {
   border-color: #8a6d3b;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-/* line 854, ../../sass/catstrap/catstrap.scss */
 .has-warning .form-control:focus {
   border-color: #66512c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
 }
 
-/* line 859, ../../sass/catstrap/catstrap.scss */
 .has-warning .input-group-addon {
   color: #8a6d3b;
   background-color: #fcf8e3;
   border-color: #8a6d3b;
 }
 
-/* line 864, ../../sass/catstrap/catstrap.scss */
 .has-warning .form-control-feedback {
   color: #8a6d3b;
 }
 
-/* line 876, ../../sass/catstrap/catstrap.scss */
 .has-error .help-block,
 .has-error .control-label,
 .has-error .radio,
@@ -1135,43 +995,36 @@ fieldset[disabled] .checkbox label {
   color: #a94442;
 }
 
-/* line 879, ../../sass/catstrap/catstrap.scss */
 .has-error .form-control {
   border-color: #a94442;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-/* line 884, ../../sass/catstrap/catstrap.scss */
 .has-error .form-control:focus {
   border-color: #843534;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
 }
 
-/* line 889, ../../sass/catstrap/catstrap.scss */
 .has-error .input-group-addon {
   color: #a94442;
   background-color: #f2dede;
   border-color: #a94442;
 }
 
-/* line 894, ../../sass/catstrap/catstrap.scss */
 .has-error .form-control-feedback {
   color: #a94442;
 }
 
-/* line 897, ../../sass/catstrap/catstrap.scss */
 .has-feedback label ~ .form-control-feedback {
   top: 25px;
 }
 
-/* line 900, ../../sass/catstrap/catstrap.scss */
 .has-feedback label.sr-only ~ .form-control-feedback {
   top: 0;
 }
 
-/* line 903, ../../sass/catstrap/catstrap.scss */
 .help-block {
   display: block;
   margin-top: 5px;
@@ -1180,50 +1033,42 @@ fieldset[disabled] .checkbox label {
 }
 
 @media (min-width: 48em) {
-  /* line 910, ../../sass/catstrap/catstrap.scss */
   .form-inline .form-group {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
   }
 
-  /* line 915, ../../sass/catstrap/catstrap.scss */
   .form-inline .form-control {
     display: inline-block;
     width: auto;
     vertical-align: middle;
   }
 
-  /* line 920, ../../sass/catstrap/catstrap.scss */
   .form-inline .form-control-static {
     display: inline-block;
   }
 
-  /* line 923, ../../sass/catstrap/catstrap.scss */
   .form-inline .input-group {
     display: inline-table;
     vertical-align: middle;
   }
 
-  /* line 929, ../../sass/catstrap/catstrap.scss */
   .form-inline .input-group .input-group-addon,
   .form-inline .input-group .input-group-btn,
   .form-inline .input-group .form-control {
     width: auto;
   }
 
-  /* line 932, ../../sass/catstrap/catstrap.scss */
   .form-inline .input-group > .form-control {
     width: 100%;
   }
 
-  /* line 935, ../../sass/catstrap/catstrap.scss */
   .form-inline .control-label {
     margin-bottom: 0;
     vertical-align: middle;
   }
 
-  /* line 940, ../../sass/catstrap/catstrap.scss */
   .form-inline .radio,
   .form-inline .checkbox {
     display: inline-block;
@@ -1232,25 +1077,21 @@ fieldset[disabled] .checkbox label {
     vertical-align: middle;
   }
 
-  /* line 947, ../../sass/catstrap/catstrap.scss */
   .form-inline .radio label,
   .form-inline .checkbox label {
     padding-left: 0;
   }
 
-  /* line 951, ../../sass/catstrap/catstrap.scss */
   .form-inline .radio input[type="radio"],
   .form-inline .checkbox input[type="checkbox"] {
     position: relative;
     margin-left: 0;
   }
 
-  /* line 955, ../../sass/catstrap/catstrap.scss */
   .form-inline .has-feedback .form-control-feedback {
     top: 0;
   }
 }
-/* line 960, ../../sass/catstrap/catstrap.scss */
 .btn {
   display: inline-block;
   padding: 6px 12px;
@@ -1276,7 +1117,6 @@ fieldset[disabled] .checkbox label {
   letter-spacing: 0.05em;
 }
 
-/* line 989, ../../sass/catstrap/catstrap.scss */
 .btn:focus,
 .btn:active:focus,
 .btn.active:focus,
@@ -1288,14 +1128,12 @@ fieldset[disabled] .checkbox label {
   outline-offset: -2px;
 }
 
-/* line 996, ../../sass/catstrap/catstrap.scss */
 .btn:hover,
 .btn:focus,
 .btn.focus {
   text-decoration: none;
 }
 
-/* line 1000, ../../sass/catstrap/catstrap.scss */
 .btn:active,
 .btn.active {
   background-image: none;
@@ -1304,7 +1142,6 @@ fieldset[disabled] .checkbox label {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
-/* line 1008, ../../sass/catstrap/catstrap.scss */
 .btn.disabled,
 .btn[disabled],
 fieldset[disabled] .btn {
@@ -1316,14 +1153,12 @@ fieldset[disabled] .btn {
   opacity: .65;
 }
 
-/* line 1016, ../../sass/catstrap/catstrap.scss */
 .btn-default {
   color: #333;
   background-color: #fff;
   border-color: #ccc;
 }
 
-/* line 1026, ../../sass/catstrap/catstrap.scss */
 .btn-default:hover,
 .btn-default:focus,
 .btn-default.focus,
@@ -1335,14 +1170,12 @@ fieldset[disabled] .btn {
   border-color: #adadad;
 }
 
-/* line 1033, ../../sass/catstrap/catstrap.scss */
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
   background-image: none;
 }
 
-/* line 1053, ../../sass/catstrap/catstrap.scss */
 .btn-default.disabled,
 .btn-default[disabled],
 fieldset[disabled] .btn-default,
@@ -1365,13 +1198,11 @@ fieldset[disabled] .btn-default.active {
   border-color: #ccc;
 }
 
-/* line 1057, ../../sass/catstrap/catstrap.scss */
 .btn-red {
   color: #fff;
   background-color: #ab0520;
 }
 
-/* line 1066, ../../sass/catstrap/catstrap.scss */
 .btn-red:hover,
 .btn-red:focus,
 .btn-red.focus,
@@ -1382,14 +1213,12 @@ fieldset[disabled] .btn-default.active {
   background-color: #CC665E;
 }
 
-/* line 1072, ../../sass/catstrap/catstrap.scss */
 .btn-red:active,
 .btn-red.active,
 .open > .dropdown-toggle.btn-red {
   background-image: none;
 }
 
-/* line 1092, ../../sass/catstrap/catstrap.scss */
 .btn-red.disabled,
 .btn-red[disabled],
 fieldset[disabled] .btn-red,
@@ -1411,13 +1240,11 @@ fieldset[disabled] .btn-red.active {
   background-color: #ab0520;
 }
 
-/* line 1095, ../../sass/catstrap/catstrap.scss */
 .btn-blue {
   color: #fff;
   background-color: #0C234B;
 }
 
-/* line 1104, ../../sass/catstrap/catstrap.scss */
 .btn-blue:hover,
 .btn-blue:focus,
 .btn-blue.focus,
@@ -1428,14 +1255,12 @@ fieldset[disabled] .btn-red.active {
   background-color: #395180;
 }
 
-/* line 1110, ../../sass/catstrap/catstrap.scss */
 .btn-blue:active,
 .btn-blue.active,
 .open > .dropdown-toggle.btn-blue {
   background-image: none;
 }
 
-/* line 1130, ../../sass/catstrap/catstrap.scss */
 .btn-blue.disabled,
 .btn-blue[disabled],
 fieldset[disabled] .btn-blue,
@@ -1457,7 +1282,6 @@ fieldset[disabled] .btn-blue.active {
   background-color: #0C234B;
 }
 
-/* line 1135, ../../sass/catstrap/catstrap.scss */
 .btn-lg,
 .btn-group-lg > .btn {
   padding: 10px 26px;
@@ -1467,7 +1291,6 @@ fieldset[disabled] .btn-blue.active {
   line-height: 1.3333333;
 }
 
-/* line 1143, ../../sass/catstrap/catstrap.scss */
 .btn-sm,
 .btn-group-sm > .btn {
   padding: 5px 10px;
@@ -1477,31 +1300,26 @@ fieldset[disabled] .btn-blue.active {
   line-height: 1.5;
 }
 
-/* line 1150, ../../sass/catstrap/catstrap.scss */
 .btn-block {
   display: block;
   width: 100%;
 }
 
-/* line 1154, ../../sass/catstrap/catstrap.scss */
 .btn-block + .btn-block {
   margin-top: 5px;
   margin-top: 0.3125rem;
 }
 
-/* line 1160, ../../sass/catstrap/catstrap.scss */
 input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
 }
 
-/* line 1163, ../../sass/catstrap/catstrap.scss */
 .btn-arrow:after {
   content: " »";
 }
 
-/* line 1166, ../../sass/catstrap/catstrap.scss */
 .fade {
   opacity: 0;
   -webkit-transition: opacity .15s linear;
@@ -1509,7 +1327,6 @@ input[type="button"].btn-block {
   transition: opacity .15s linear;
 }
 
-/* line 1172, ../../sass/catstrap/catstrap.scss */
 .fade.in {
   opacity: 1;
 }
@@ -1518,23 +1335,19 @@ input[type="button"].btn-block {
   display: none;
   visibility: hidden;
 }*/
-/* line 1179, ../../sass/catstrap/catstrap.scss */
 .collapse.in {
   display: block;
   visibility: visible;
 }
 
-/* line 1183, ../../sass/catstrap/catstrap.scss */
 tr.collapse.in {
   display: table-row;
 }
 
-/* line 1186, ../../sass/catstrap/catstrap.scss */
 tbody.collapse.in {
   display: table-row-group;
 }
 
-/* line 1189, ../../sass/catstrap/catstrap.scss */
 .collapsing {
   position: relative;
   height: 0;
@@ -1550,7 +1363,6 @@ tbody.collapse.in {
   transition-property: height, visibility;
 }
 
-/* line 1207, ../../sass/catstrap/catstrap.scss */
 [data-toggle="buttons"] > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
@@ -1560,21 +1372,18 @@ tbody.collapse.in {
   pointer-events: none;
 }
 
-/* line 1212, ../../sass/catstrap/catstrap.scss */
 .input-group {
   position: relative;
   display: table;
   border-collapse: separate;
 }
 
-/* line 1217, ../../sass/catstrap/catstrap.scss */
 .input-group[class*="col-"] {
   float: none;
   padding-right: 0;
   padding-left: 0;
 }
 
-/* line 1222, ../../sass/catstrap/catstrap.scss */
 .input-group .form-control {
   position: relative;
   z-index: 2;
@@ -1583,7 +1392,6 @@ tbody.collapse.in {
   margin-bottom: 0;
 }
 
-/* line 1231, ../../sass/catstrap/catstrap.scss */
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
@@ -1597,7 +1405,6 @@ tbody.collapse.in {
   border-radius: 6px;
 }
 
-/* line 1243, ../../sass/catstrap/catstrap.scss */
 select.input-group-lg > .form-control,
 select.input-group-lg > .input-group-addon,
 select.input-group-lg > .input-group-btn > .btn {
@@ -1606,7 +1413,6 @@ select.input-group-lg > .input-group-btn > .btn {
   line-height: 2.875;
 }
 
-/* line 1253, ../../sass/catstrap/catstrap.scss */
 textarea.input-group-lg > .form-control,
 textarea.input-group-lg > .input-group-addon,
 textarea.input-group-lg > .input-group-btn > .btn,
@@ -1616,7 +1422,6 @@ select[multiple].input-group-lg > .input-group-btn > .btn {
   height: auto;
 }
 
-/* line 1258, ../../sass/catstrap/catstrap.scss */
 .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
@@ -1630,7 +1435,6 @@ select[multiple].input-group-lg > .input-group-btn > .btn {
   border-radius: 3px;
 }
 
-/* line 1270, ../../sass/catstrap/catstrap.scss */
 select.input-group-sm > .form-control,
 select.input-group-sm > .input-group-addon,
 select.input-group-sm > .input-group-btn > .btn {
@@ -1639,7 +1443,6 @@ select.input-group-sm > .input-group-btn > .btn {
   line-height: 1.875;
 }
 
-/* line 1280, ../../sass/catstrap/catstrap.scss */
 textarea.input-group-sm > .form-control,
 textarea.input-group-sm > .input-group-addon,
 textarea.input-group-sm > .input-group-btn > .btn,
@@ -1649,21 +1452,18 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   height: auto;
 }
 
-/* line 1285, ../../sass/catstrap/catstrap.scss */
 .input-group-addon,
 .input-group-btn,
 .input-group .form-control {
   display: table-cell;
 }
 
-/* line 1290, ../../sass/catstrap/catstrap.scss */
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
 .input-group .form-control:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
-/* line 1294, ../../sass/catstrap/catstrap.scss */
 .input-group-addon,
 .input-group-btn {
   width: 1%;
@@ -1671,7 +1471,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   vertical-align: middle;
 }
 
-/* line 1299, ../../sass/catstrap/catstrap.scss */
 .input-group-addon {
   padding: 6px 12px;
   padding: 0.375rem 0.75rem;
@@ -1686,7 +1485,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: 4px;
 }
 
-/* line 1312, ../../sass/catstrap/catstrap.scss */
 .input-group-addon.input-sm {
   padding: 5px 10px;
   padding: 0.3rem 0.625rem;
@@ -1695,7 +1493,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: 3px;
 }
 
-/* line 1319, ../../sass/catstrap/catstrap.scss */
 .input-group-addon.input-lg {
   padding: 10px 16px;
   padding: 0.625rem 1rem;
@@ -1704,13 +1501,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: 6px;
 }
 
-/* line 1327, ../../sass/catstrap/catstrap.scss */
 .input-group-addon input[type="radio"],
 .input-group-addon input[type="checkbox"] {
   margin-top: 0;
 }
 
-/* line 1336, ../../sass/catstrap/catstrap.scss */
 .input-group .form-control:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
@@ -1722,12 +1517,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-right-radius: 0;
 }
 
-/* line 1340, ../../sass/catstrap/catstrap.scss */
 .input-group-addon:first-child {
   border-right: 0;
 }
 
-/* line 1349, ../../sass/catstrap/catstrap.scss */
 .input-group .form-control:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
@@ -1739,48 +1532,40 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 
-/* line 1353, ../../sass/catstrap/catstrap.scss */
 .input-group-addon:last-child {
   border-left: 0;
 }
 
-/* line 1356, ../../sass/catstrap/catstrap.scss */
 .input-group-btn {
   position: relative;
   font-size: 0;
   white-space: nowrap;
 }
 
-/* line 1361, ../../sass/catstrap/catstrap.scss */
 .input-group-btn > .btn {
   position: relative;
 }
 
-/* line 1364, ../../sass/catstrap/catstrap.scss */
 .input-group-btn > .btn + .btn {
   margin-left: -1px;
 }
 
-/* line 1369, ../../sass/catstrap/catstrap.scss */
 .input-group-btn > .btn:hover,
 .input-group-btn > .btn:focus,
 .input-group-btn > .btn:active {
   z-index: 2;
 }
 
-/* line 1373, ../../sass/catstrap/catstrap.scss */
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group {
   margin-right: -1px;
 }
 
-/* line 1377, ../../sass/catstrap/catstrap.scss */
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
 
-/* line 1380, ../../sass/catstrap/catstrap.scss */
 .breadcrumb {
   padding: 8px 16px 8px 0;
   padding: 0.5rem 1rem 0.5rem 0;
@@ -1788,18 +1573,15 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   list-style: none;
 }
 
-/* line 1386, ../../sass/catstrap/catstrap.scss */
 .breadcrumb a {
   color: #666;
   font-weight: normal;
 }
 
-/* line 1390, ../../sass/catstrap/catstrap.scss */
 .breadcrumb > li {
   display: inline-block;
 }
 
-/* line 1393, ../../sass/catstrap/catstrap.scss */
 .breadcrumb > li + li:before {
   padding: 0 5px;
   padding: 0 0.3rem;
@@ -1807,12 +1589,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   content: "/\00a0";
 }
 
-/* line 1399, ../../sass/catstrap/catstrap.scss */
 .breadcrumb > .active {
   color: #333;
 }
 
-/* line 1402, ../../sass/catstrap/catstrap.scss */
 .label {
   display: inline;
   padding: 3px 10px 5px;
@@ -1827,7 +1607,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: .25em;
 }
 
-/* line 1416, ../../sass/catstrap/catstrap.scss */
 a.label:hover,
 a.label:focus {
   color: #fff;
@@ -1835,84 +1614,69 @@ a.label:focus {
   cursor: pointer;
 }
 
-/* line 1421, ../../sass/catstrap/catstrap.scss */
 .label:empty {
   display: none;
 }
 
-/* line 1424, ../../sass/catstrap/catstrap.scss */
 .btn .label {
   position: relative;
   top: -1px;
 }
 
-/* line 1428, ../../sass/catstrap/catstrap.scss */
 .label-default {
   background-color: #777;
 }
 
-/* line 1432, ../../sass/catstrap/catstrap.scss */
 .label-default[href]:hover,
 .label-default[href]:focus {
   background-color: #5e5e5e;
 }
 
-/* line 1435, ../../sass/catstrap/catstrap.scss */
 .label-primary {
   background-color: #337ab7;
 }
 
-/* line 1439, ../../sass/catstrap/catstrap.scss */
 .label-primary[href]:hover,
 .label-primary[href]:focus {
   background-color: #286090;
 }
 
-/* line 1442, ../../sass/catstrap/catstrap.scss */
 .label-success {
   background-color: #5cb85c;
 }
 
-/* line 1446, ../../sass/catstrap/catstrap.scss */
 .label-success[href]:hover,
 .label-success[href]:focus {
   background-color: #449d44;
 }
 
-/* line 1449, ../../sass/catstrap/catstrap.scss */
 .label-info {
   background-color: #5bc0de;
 }
 
-/* line 1453, ../../sass/catstrap/catstrap.scss */
 .label-info[href]:hover,
 .label-info[href]:focus {
   background-color: #31b0d5;
 }
 
-/* line 1456, ../../sass/catstrap/catstrap.scss */
 .label-warning {
   background-color: #f0ad4e;
 }
 
-/* line 1460, ../../sass/catstrap/catstrap.scss */
 .label-warning[href]:hover,
 .label-warning[href]:focus {
   background-color: #ec971f;
 }
 
-/* line 1463, ../../sass/catstrap/catstrap.scss */
 .label-danger {
   background-color: #d9534f;
 }
 
-/* line 1467, ../../sass/catstrap/catstrap.scss */
 .label-danger[href]:hover,
 .label-danger[href]:focus {
   background-color: #c9302c;
 }
 
-/* line 1499, ../../sass/catstrap/catstrap.scss */
 .clearfix:before,
 .clearfix:after,
 .dl-horizontal dd:before,
@@ -1947,7 +1711,6 @@ a.label:focus {
   content: " ";
 }
 
-/* line 1517, ../../sass/catstrap/catstrap.scss */
 .clearfix:after,
 .dl-horizontal dd:after,
 .container:after,
@@ -1966,39 +1729,32 @@ a.label:focus {
   clear: both;
 }
 
-/* line 1520, ../../sass/catstrap/catstrap.scss */
 .center-block {
   display: block;
   margin-right: auto;
   margin-left: auto;
 }
 
-/* line 1525, ../../sass/catstrap/catstrap.scss */
 .pull-right {
   float: right !important;
 }
 
-/* line 1528, ../../sass/catstrap/catstrap.scss */
 .pull-left {
   float: left !important;
 }
 
-/* line 1531, ../../sass/catstrap/catstrap.scss */
 .hide {
   display: none !important;
 }
 
-/* line 1534, ../../sass/catstrap/catstrap.scss */
 .show {
   display: block !important;
 }
 
-/* line 1537, ../../sass/catstrap/catstrap.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 1540, ../../sass/catstrap/catstrap.scss */
 .text-hide {
   font: 0/0 a;
   color: transparent;
@@ -2007,13 +1763,11 @@ a.label:focus {
   border: 0;
 }
 
-/* line 1547, ../../sass/catstrap/catstrap.scss */
 .hidden {
   display: none !important;
   visibility: hidden !important;
 }
 
-/* line 1551, ../../sass/catstrap/catstrap.scss */
 .affix {
   position: fixed;
 }
@@ -2021,8 +1775,6 @@ a.label:focus {
 @-ms-viewport {
   width: device-width;
 }
-
-/* line 1560, ../../sass/catstrap/catstrap.scss */
 .visible-xs,
 .visible-sm,
 .visible-md,
@@ -2030,7 +1782,6 @@ a.label:focus {
   display: none !important;
 }
 
-/* line 1574, ../../sass/catstrap/catstrap.scss */
 .visible-xs-block,
 .visible-xs-inline,
 .visible-xs-inline-block,
@@ -2047,252 +1798,206 @@ a.label:focus {
 }
 
 @media (max-width: 47.9em) {
-  /* line 1578, ../../sass/catstrap/catstrap.scss */
   .visible-xs {
     display: block !important;
   }
 
-  /* line 1581, ../../sass/catstrap/catstrap.scss */
   table.visible-xs {
     display: table;
   }
 
-  /* line 1584, ../../sass/catstrap/catstrap.scss */
   tr.visible-xs {
     display: table-row !important;
   }
 
-  /* line 1588, ../../sass/catstrap/catstrap.scss */
   th.visible-xs,
   td.visible-xs {
     display: table-cell !important;
   }
 
-  /* line 1591, ../../sass/catstrap/catstrap.scss */
   .visible-xs-block {
     display: block !important;
   }
 
-  /* line 1594, ../../sass/catstrap/catstrap.scss */
   .visible-xs-inline {
     display: inline !important;
   }
 
-  /* line 1597, ../../sass/catstrap/catstrap.scss */
   .visible-xs-inline-block {
     display: inline-block !important;
   }
 }
 @media (min-width: 48em) and (max-width: 61.9em) {
-  /* line 1602, ../../sass/catstrap/catstrap.scss */
   .visible-sm {
     display: block !important;
   }
 
-  /* line 1605, ../../sass/catstrap/catstrap.scss */
   table.visible-sm {
     display: table;
   }
 
-  /* line 1608, ../../sass/catstrap/catstrap.scss */
   tr.visible-sm {
     display: table-row !important;
   }
 
-  /* line 1612, ../../sass/catstrap/catstrap.scss */
   th.visible-sm,
   td.visible-sm {
     display: table-cell !important;
   }
 
-  /* line 1615, ../../sass/catstrap/catstrap.scss */
   .visible-sm-block {
     display: block !important;
   }
 
-  /* line 1618, ../../sass/catstrap/catstrap.scss */
   .visible-sm-inline {
     display: inline !important;
   }
 
-  /* line 1621, ../../sass/catstrap/catstrap.scss */
   .visible-sm-inline-block {
     display: inline-block !important;
   }
 }
 @media (min-width: 62em) and (max-width: 74.9em) {
-  /* line 1626, ../../sass/catstrap/catstrap.scss */
   .visible-md {
     display: block !important;
   }
 
-  /* line 1629, ../../sass/catstrap/catstrap.scss */
   table.visible-md {
     display: table;
   }
 
-  /* line 1632, ../../sass/catstrap/catstrap.scss */
   tr.visible-md {
     display: table-row !important;
   }
 
-  /* line 1636, ../../sass/catstrap/catstrap.scss */
   th.visible-md,
   td.visible-md {
     display: table-cell !important;
   }
 
-  /* line 1639, ../../sass/catstrap/catstrap.scss */
   .visible-md-block {
     display: block !important;
   }
 
-  /* line 1642, ../../sass/catstrap/catstrap.scss */
   .visible-md-inline {
     display: inline !important;
   }
 
-  /* line 1645, ../../sass/catstrap/catstrap.scss */
   .visible-md-inline-block {
     display: inline-block !important;
   }
 }
 @media (min-width: 75em) {
-  /* line 1650, ../../sass/catstrap/catstrap.scss */
   .visible-lg {
     display: block !important;
   }
 
-  /* line 1653, ../../sass/catstrap/catstrap.scss */
   table.visible-lg {
     display: table;
   }
 
-  /* line 1656, ../../sass/catstrap/catstrap.scss */
   tr.visible-lg {
     display: table-row !important;
   }
 
-  /* line 1660, ../../sass/catstrap/catstrap.scss */
   th.visible-lg,
   td.visible-lg {
     display: table-cell !important;
   }
 
-  /* line 1663, ../../sass/catstrap/catstrap.scss */
   .visible-lg-block {
     display: block !important;
   }
 
-  /* line 1666, ../../sass/catstrap/catstrap.scss */
   .visible-lg-inline {
     display: inline !important;
   }
 
-  /* line 1669, ../../sass/catstrap/catstrap.scss */
   .visible-lg-inline-block {
     display: inline-block !important;
   }
 }
 @media (max-width: 47.9em) {
-  /* line 1674, ../../sass/catstrap/catstrap.scss */
   .hidden-xs {
     display: none !important;
   }
 }
 @media (min-width: 48em) and (max-width: 61.9em) {
-  /* line 1679, ../../sass/catstrap/catstrap.scss */
   .hidden-sm {
     display: none !important;
   }
 }
 @media (min-width: 62em) and (max-width: 74.9em) {
-  /* line 1684, ../../sass/catstrap/catstrap.scss */
   .hidden-md {
     display: none !important;
   }
 }
 @media (min-width: 75em) {
-  /* line 1689, ../../sass/catstrap/catstrap.scss */
   .hidden-lg {
     display: none !important;
   }
 }
 @media (max-width: 29.9em) {
-  /* line 1694, ../../sass/catstrap/catstrap.scss */
   img {
     width: 100%;
     height: auto;
     display: block;
   }
 }
-/* line 1700, ../../sass/catstrap/catstrap.scss */
 .visible-print {
   display: none !important;
 }
 
 @media print {
-  /* line 1704, ../../sass/catstrap/catstrap.scss */
   .visible-print {
     display: block !important;
   }
 
-  /* line 1707, ../../sass/catstrap/catstrap.scss */
   table.visible-print {
     display: table;
   }
 
-  /* line 1710, ../../sass/catstrap/catstrap.scss */
   tr.visible-print {
     display: table-row !important;
   }
 
-  /* line 1714, ../../sass/catstrap/catstrap.scss */
   th.visible-print,
   td.visible-print {
     display: table-cell !important;
   }
 }
-/* line 1718, ../../sass/catstrap/catstrap.scss */
 .visible-print-block {
   display: none !important;
 }
 
 @media print {
-  /* line 1722, ../../sass/catstrap/catstrap.scss */
   .visible-print-block {
     display: block !important;
   }
 }
-/* line 1726, ../../sass/catstrap/catstrap.scss */
 .visible-print-inline {
   display: none !important;
 }
 
 @media print {
-  /* line 1730, ../../sass/catstrap/catstrap.scss */
   .visible-print-inline {
     display: inline !important;
   }
 }
-/* line 1734, ../../sass/catstrap/catstrap.scss */
 .visible-print-inline-block {
   display: none !important;
 }
 
 @media print {
-  /* line 1738, ../../sass/catstrap/catstrap.scss */
   .visible-print-inline-block {
     display: inline-block !important;
   }
 
-  /* line 1741, ../../sass/catstrap/catstrap.scss */
   .hidden-print {
     display: none !important;
   }
 }
 /* Layout - UA Header */
-/* line 1746, ../../sass/catstrap/catstrap.scss */
 #header_site #site_identifier a {
   float: left;
   margin: 24px 0;
@@ -2302,7 +2007,6 @@ a.label:focus {
   text-align: center;
 }
 
-/* line 1754, ../../sass/catstrap/catstrap.scss */
 #header_site #site_identifier a img {
   width: 80%;
   max-width: 400px;
@@ -2311,7 +2015,6 @@ a.label:focus {
 }
 
 @media (min-width: 48em) {
-  /* line 1761, ../../sass/catstrap/catstrap.scss */
   #header_site #site_identifier a {
     float: left;
     margin: 40px;
@@ -2320,12 +2023,10 @@ a.label:focus {
     width: auto;
   }
 
-  /* line 1768, ../../sass/catstrap/catstrap.scss */
   #header_site #site_identifier a img {
     width: 100%;
   }
 }
-/* line 1772, ../../sass/catstrap/catstrap.scss */
 #header_site #utility_links {
   display: none;
   margin: 16px 0 24px 0;
@@ -2334,12 +2035,10 @@ a.label:focus {
 }
 
 @media (min-width: 48em) {
-  /* line 1779, ../../sass/catstrap/catstrap.scss */
   #header_site #utility_links {
     display: block;
   }
 }
-/* line 1783, ../../sass/catstrap/catstrap.scss */
 #header_site #utility_links ul {
   padding: 0;
   margin: 0;
@@ -2347,7 +2046,6 @@ a.label:focus {
   text-align: right;
 }
 
-/* line 1789, ../../sass/catstrap/catstrap.scss */
 #header_site #utility_links ul li {
   list-style: none;
   display: inline-block;
@@ -2356,7 +2054,6 @@ a.label:focus {
   text-align: left;
 }
 
-/* line 1796, ../../sass/catstrap/catstrap.scss */
 #header_site #utility_links ul li a {
   font-size: 16px;
   font-size: 1rem;
@@ -2367,22 +2064,18 @@ a.label:focus {
   font-weight: normal;
 }
 
-/* line 1805, ../../sass/catstrap/catstrap.scss */
 #header_site #utility_links ul li a:hover {
   text-decoration: underline;
 }
 
-/* line 1808, ../../sass/catstrap/catstrap.scss */
 #header_site #search {
   float: right;
 }
 
-/* line 1811, ../../sass/catstrap/catstrap.scss */
 #header_site #search .form-item {
   display: inline;
 }
 
-/* line 1814, ../../sass/catstrap/catstrap.scss */
 #header_site #search .form-item input {
   border-collapse: collapse;
   width: 220px;
@@ -2400,12 +2093,10 @@ a.label:focus {
   outline: 0;
 }
 
-/* line 1830, ../../sass/catstrap/catstrap.scss */
 #header_site #search .form-actions {
   display: inline;
 }
 
-/* line 1833, ../../sass/catstrap/catstrap.scss */
 #header_site #search .form-actions input[type="submit"] {
   text-indent: -9999em;
   background: url("../img/search-icon.png");
@@ -2421,7 +2112,6 @@ a.label:focus {
   outline: 0;
 }
 
-/* line 1847, ../../sass/catstrap/catstrap.scss */
 #header_site #search form {
   border: 1px solid #d3d7de;
   background-color: #eef1f1;
@@ -2433,7 +2123,6 @@ a.label:focus {
 }
 
 @media (max-width: 47.9em) {
-  /* line 1857, ../../sass/catstrap/catstrap.scss */
   #header_site #search {
     width: 100%;
     float: none;
@@ -2442,12 +2131,10 @@ a.label:focus {
 }
 /* End Layout - Header */
 /* Layout - Menu */
-/* line 1865, ../../sass/catstrap/catstrap.scss */
 #main_nav {
   clear: both;
 }
 
-/* line 1868, ../../sass/catstrap/catstrap.scss */
 #main_nav > ul {
   display: block;
   list-style: none;
@@ -2456,7 +2143,6 @@ a.label:focus {
   padding: 0;
 }
 
-/* line 1875, ../../sass/catstrap/catstrap.scss */
 #main_nav > ul > li {
   list-style: none;
   display: inline-block;
@@ -2465,13 +2151,11 @@ a.label:focus {
   float: left;
 }
 
-/* line 1882, ../../sass/catstrap/catstrap.scss */
 #main_nav > ul > li.last {
   padding: 0 10px;
   padding: 0 .625rem;
 }
 
-/* line 1886, ../../sass/catstrap/catstrap.scss */
 #main_nav > ul > li > a {
   color: #395180;
   text-transform: uppercase;
@@ -2484,7 +2168,6 @@ a.label:focus {
   float: left;
 }
 
-/* line 1898, ../../sass/catstrap/catstrap.scss */
 #main_nav > ul > li > a:hover,
 #main_nav > ul > li > a:focus {
   text-decoration: none;
@@ -2493,25 +2176,21 @@ a.label:focus {
 
 /* END Layout - Menu */
 /* Layout - Sidebar */
-/* line 1904, ../../sass/catstrap/catstrap.scss */
 #sidebar_first .quick-links h3 {
   margin-top: 38px;
   margin-top: 2.4rem;
 }
 
-/* line 1908, ../../sass/catstrap/catstrap.scss */
 #sidebar_first .quick-links ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 1913, ../../sass/catstrap/catstrap.scss */
 #sidebar_first .quick-links ul li {
   line-height: 1;
 }
 
-/* line 1916, ../../sass/catstrap/catstrap.scss */
 #sidebar_first .quick-links ul li a {
   display: block;
   color: #333;
@@ -2524,7 +2203,6 @@ a.label:focus {
   transition: none;
 }
 
-/* line 1927, ../../sass/catstrap/catstrap.scss */
 #sidebar_first .quick-links ul li a:hover {
   text-decoration: none;
   color: #0d6772;
@@ -2533,7 +2211,6 @@ a.label:focus {
 
 /* END Layout - Sidebar */
 /* Layout - Footer */
-/* line 1934, ../../sass/catstrap/catstrap.scss */
 footer#footer_site {
   margin-top: 40px;
   margin-top: 2.5rem;
@@ -2542,23 +2219,19 @@ footer#footer_site {
   padding: 2.5rem 0;
 }
 
-/* line 1941, ../../sass/catstrap/catstrap.scss */
 footer#footer_site a {
   color: #333;
   text-decoration: underline;
 }
 
-/* line 1945, ../../sass/catstrap/catstrap.scss */
 footer#footer_site a:hover {
   color: #777;
 }
 
-/* line 1948, ../../sass/catstrap/catstrap.scss */
 footer#footer_site #footer_logo {
   text-align: center;
 }
 
-/* line 1951, ../../sass/catstrap/catstrap.scss */
 footer#footer_site #footer_logo img {
   max-width: 360px;
   width: 80%;
@@ -2568,13 +2241,11 @@ footer#footer_site #footer_logo img {
 }
 
 @media (min-width: 62em) {
-  /* line 1959, ../../sass/catstrap/catstrap.scss */
   footer#footer_site #footer_logo img {
     float: left;
     margin: 0;
   }
 }
-/* line 1965, ../../sass/catstrap/catstrap.scss */
 footer#footer_site ul {
   display: block;
   margin: 0;
@@ -2583,7 +2254,6 @@ footer#footer_site ul {
   text-align: center;
 }
 
-/* line 1972, ../../sass/catstrap/catstrap.scss */
 footer#footer_site ul > li {
   display: inline-block;
   list-style: none;
@@ -2592,17 +2262,14 @@ footer#footer_site ul > li {
   border-right: 1px solid #a8a69d;
 }
 
-/* line 1979, ../../sass/catstrap/catstrap.scss */
 footer#footer_site ul > li.last {
   border-right: 0;
 }
 
-/* line 1982, ../../sass/catstrap/catstrap.scss */
 footer#footer_site ul > li a {
   color: #333;
 }
 
-/* line 1985, ../../sass/catstrap/catstrap.scss */
 footer#footer_site #footer_copyright {
   clear: both;
   border-top: 1px solid #a8a69d;
@@ -2615,39 +2282,33 @@ footer#footer_site #footer_copyright {
 }
 
 @media (min-width: 62em) {
-  /* line 1996, ../../sass/catstrap/catstrap.scss */
   footer#footer_site ul {
     float: right;
     text-align: right;
   }
 
-  /* line 2000, ../../sass/catstrap/catstrap.scss */
   footer#footer_site ul > li {
     float: left;
   }
 }
 /* END Layout - Footer */
 /* Layout */
-/* line 2007, ../../sass/catstrap/catstrap.scss */
 #footer_site {
   background-color: #cfccc0;
   padding: 32px 0;
   padding: 2rem 0;
 }
 
-/* line 2012, ../../sass/catstrap/catstrap.scss */
 #sidebar_first .quick-links ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 2017, ../../sass/catstrap/catstrap.scss */
 #sidebar_first .quick-links ul li {
   line-height: 1;
 }
 
-/* line 2020, ../../sass/catstrap/catstrap.scss */
 #sidebar_first .quick-links ul li a {
   display: block;
   color: #333;
@@ -2655,7 +2316,6 @@ footer#footer_site #footer_copyright {
   padding: 0.5rem 0.75rem 0.5rem 0.5rem;
 }
 
-/* line 2026, ../../sass/catstrap/catstrap.scss */
 #sidebar_first .quick-links ul li a:hover {
   text-decoration: none;
   color: #0d6772;
