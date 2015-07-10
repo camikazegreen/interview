@@ -48,7 +48,7 @@ This distribution can be built using [Drush make](http://docs.drush.org/en/stabl
 4. Check out a release tag (optional), e.g.:
 
         cd build/ua_quickstart
-        git checkout 7.x-1.0-beta1
+        git checkout 7.x-1.0-alpha1
 
 5. Change back into the directory that you want the built distribution folder to be created in, e.g.:
 
