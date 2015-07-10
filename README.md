@@ -45,7 +45,7 @@ This distribution can be built using [Drush make](http://docs.drush.org/en/stabl
 
         git clone https://bitbucket.org/ua_drupal/ua_quickstart.git build/ua_quickstart
 
-4. Check out a release tag (optional), e.g.:
+4. **OPTIONAL:** Check out a release tag, e.g.:
 
         cd build/ua_quickstart
         git checkout 7.x-1.0-alpha1
