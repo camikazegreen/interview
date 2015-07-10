@@ -1,7 +1,7 @@
 name = UA Unit
 description = Use to create and display UA academic units
 core = 7.x
-package = UA Features
+package = The University of Arizona
 version = 7.x-1.x-dev
 dependencies[] = ctools
 dependencies[] = features
