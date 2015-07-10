@@ -187,7 +187,7 @@ function ua_quickstart_enable_blocks() {
       'theme' => $default_theme,
       'region' => 'content',
       'pages' => '<front>',
-      'title' => '<none>',
+      'title' => 'Events',
       'visibility' => 1,
       'cache' => DRUPAL_NO_CACHE,
       'weight' => 20,
