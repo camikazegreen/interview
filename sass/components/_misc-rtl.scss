@@ -31,6 +31,7 @@
       /* A simple method to get navigation links to appear in one line. */
       float: right;
       padding: 0 0 0 10px;
+      padding: 0 0 0 0.625rem;
     }
   }
 }
@@ -40,6 +41,7 @@
  */
 .messages {
   padding: 10px 50px 10px 10px;
+  padding: 0.625rem 3.125rem 0.625rem 0.625rem;
   background-position: 99% 8px;
 }
 .messages--status {
@@ -77,12 +79,14 @@
 .inline li {
   /* Bug in Safari causes display: inline to fail. */
   display: inline-block;
-  padding: 0 0 0 1em;
+  padding: 0 0 0 16px;
+  padding: 0 0 0 1rem;
 }
 
 /* The inline field label used by the Fences.module */
 span.field-label {
-  padding: 0 0 0 1em;
+  padding: 0 0 0 16px;
+  padding: 0 0 0 1rem;
 }
 
 /**
@@ -97,6 +101,7 @@ span.field-label {
 .more-help-link a {
   background-position: 100% 50%;
   padding: 1px 20px 1px 0;
+  padding: 0.06rem 0 0.06rem 1.25rem;
 }
 
 /**
@@ -133,6 +138,7 @@ html.js #user-login-form li.openid-link,
   /* Un-do some of the padding on the ul list. */
   margin-left: 0;
   margin-right: -20px;
+  margin-left: -1.25rem;
 }
 
 /*
@@ -141,7 +147,8 @@ html.js #user-login-form li.openid-link,
 form {
   th {
     text-align: right;
-    padding-left: 1em;
+    padding-left: 16px;
+    padding-left: 1rem;
     padding-right: 0;
   }
 }
@@ -155,7 +162,8 @@ form {
   html.js .collapsible & {
     background-position: 98% 75%;
     padding-left: 0;
-    padding-right: 15px;
+    padding-right: 16px;
+    padding-right: 1rem;
   }
   html.js .collapsed & {
     background-image: inline-image("menu-collapsed-rtl.png");
