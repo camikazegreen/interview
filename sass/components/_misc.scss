@@ -510,84 +510,6 @@ span.field-label {
   color: #000;
 }
 
-/* footer menus */
-footer#footer_site {
-  h2 {
-    font: normal normal bold 0.88em MiloWeb, Verdana, Geneva, sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    color: #333;
-  }
-  .column-menu {
-  	display: block;
-    padding-top: 24px;
-    padding-top: 1.5rem;
-    border-top: 1px solid #a8a69d;
-    &:first-child { border-top: 0 none; }
-  	ul.menu li {
-  			display: block;
-  			float: none;
-  			border: 0 none;
-        padding: 0;
-        margin-bottom: 11px;
-  			margin-bottom: 0.7rem;
-        line-height: 1.2;
-        a, a:link, a:visited {
-          text-decoration: none;
-          font-weight: normal;
-        }
-        a:focus, a:hover, a:active {
-          color: #2A6496;
-        }
-  	}
-  }
-}
-
-@media screen and (min-width: 48em) {
-	footer#footer_site .column-menu {
-		display: inline-block;
-		vertical-align: top;
-    border: 0 none;
-		width: 49%;
-    h2 {
-      text-align: left;
-      padding: 0 32px;
-      padding: 0 2rem; }
-		ul.menu {
-      padding: 16px 32px 0;
-      padding: 1rem 2rem 0;
-			text-align: left;
-		}
-	}
-}
-
-@media screen and (min-width: 60em) {
-	footer#footer_site .column-menu {
-    position: relative;
-    padding: 0 0 0 16px;
-    padding: 0 0 0 1rem;
-		margin: 0 0 0 16px;
-		margin: 0 0 0 1rem;
-    border-top: 0 none;
-		border-left: 1px solid #a8a69d;
-		display: inline-block;
-		vertical-align: top;
-    min-height: 16em;
-		max-width: 14.5%; //approx. 1/4 of left-over space (730px/4)
-    h2 { padding: 0; }
-    ul.menu {
-      width: 100%;
-      padding: 16px 0;
-      padding: 1rem 0;
-      a {
-        font-size: 14px;
-        font-size: 0.875rem;
-      }
-    }
-  }
-}
-
-
 /**
  * Marker.
  */
@@ -727,6 +649,23 @@ a.button {
 /* Drupal's default login form block. */
 #user-login-form {
   text-align: left; /* LTR */
+}
+
+/* Drupal UI components */
+div.contextual-links-wrapper,
+#main div.contextual-links-wrapper,
+footer#footer_site div.contextual-links-wrapper {
+  ul.contextual-links {
+  display: none; /*resets display for contextual links js behavior*/
+  float: none;
+  }
+  li,
+  a:not(.contextual-links-trigger) { 
+    border: 0 none;
+    float: none;
+    display: inherit;
+    text-align: left;
+  }
 }
 
 /**
