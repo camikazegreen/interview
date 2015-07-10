@@ -651,6 +651,23 @@ a.button {
   text-align: left; /* LTR */
 }
 
+/* Drupal UI components */
+div.contextual-links-wrapper,
+#main div.contextual-links-wrapper,
+footer#footer_site div.contextual-links-wrapper {
+  ul.contextual-links {
+  display: none; /*resets display for contextual links js behavior*/
+  float: none;
+  }
+  li,
+  a:not(.contextual-links-trigger) { 
+    border: 0 none;
+    float: none;
+    display: inherit;
+    text-align: left;
+  }
+}
+
 /**
  * OpenID
  *
