@@ -265,21 +265,23 @@ ul {
   /* A simple method to get navigation links to appear in one line. */
   float: right;
   padding: 0 0 0 10px;
+  padding: 0 0 0 0.625rem;
 }
 
 /**
  * Messages.
  */
-/* line 41, ../sass/components/_misc-rtl.scss */
+/* line 42, ../sass/components/_misc-rtl.scss */
 .messages, .messages--status, .messages--warning, .messages--error {
   padding: 10px 50px 10px 10px;
+  padding: 0.625rem 3.125rem 0.625rem 0.625rem;
   background-position: 99% 8px;
 }
 
 /**
  * Tabs.
  */
-/* line 58, ../sass/components/_misc-rtl.scss */
+/* line 60, ../sass/components/_misc-rtl.scss */
 .tabs-primary__tab, .tabs-primary__tab.is-active, .tabs-secondary__tab,
 .tabs-secondary__tab.is-active {
   float: right;
@@ -289,42 +291,45 @@ ul {
  * Inline styles.
  */
 /* List of links */
-/* line 77, ../sass/components/_misc-rtl.scss */
+/* line 79, ../sass/components/_misc-rtl.scss */
 .inline li {
   /* Bug in Safari causes display: inline to fail. */
   display: inline-block;
-  padding: 0 0 0 1em;
+  padding: 0 0 0 16px;
+  padding: 0 0 0 1rem;
 }
 
 /* The inline field label used by the Fences.module */
-/* line 84, ../sass/components/_misc-rtl.scss */
+/* line 87, ../sass/components/_misc-rtl.scss */
 span.field-label {
-  padding: 0 0 0 1em;
+  padding: 0 0 0 16px;
+  padding: 0 0 0 1rem;
 }
 
 /**
  * "More" links.
  */
-/* line 91, ../sass/components/_misc-rtl.scss */
+/* line 95, ../sass/components/_misc-rtl.scss */
 .more-link {
   text-align: left;
 }
 
-/* line 94, ../sass/components/_misc-rtl.scss */
+/* line 98, ../sass/components/_misc-rtl.scss */
 .more-help-link {
   text-align: left;
 }
 
-/* line 97, ../sass/components/_misc-rtl.scss */
+/* line 101, ../sass/components/_misc-rtl.scss */
 .more-help-link a {
   background-position: 100% 50%;
   padding: 1px 20px 1px 0;
+  padding: 0.06rem 0 0.06rem 1.25rem;
 }
 
 /**
  * Menus.
  */
-/* line 105, ../sass/components/_misc-rtl.scss */
+/* line 110, ../sass/components/_misc-rtl.scss */
 .menu__item.is-collapsed {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
 }
@@ -333,7 +338,7 @@ span.field-label {
  * Comments.
  */
 /* Nested comments are indented. */
-/* line 117, ../sass/components/_misc-rtl.scss */
+/* line 122, ../sass/components/_misc-rtl.scss */
 .indented {
   margin-left: 0;
   margin-right: 30px;
@@ -343,26 +348,28 @@ span.field-label {
  * Forms.
  */
 /* Drupal's default login form block */
-/* line 127, ../sass/components/_misc-rtl.scss */
+/* line 132, ../sass/components/_misc-rtl.scss */
 #user-login-form {
   text-align: right;
 }
 
-/* line 132, ../sass/components/_misc-rtl.scss */
+/* line 137, ../sass/components/_misc-rtl.scss */
 html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   /* Un-do some of the padding on the ul list. */
   margin-left: 0;
   margin-right: -20px;
+  margin-left: -1.25rem;
 }
 
 /*
  * Drupal admin tables.
  */
-/* line 142, ../sass/components/_misc-rtl.scss */
+/* line 148, ../sass/components/_misc-rtl.scss */
 form th {
   text-align: right;
-  padding-left: 1em;
+  padding-left: 16px;
+  padding-left: 1rem;
   padding-right: 0;
 }
 
@@ -371,13 +378,14 @@ form th {
  *
  * @see collapse.js
  */
-/* line 155, ../sass/components/_misc-rtl.scss */
+/* line 162, ../sass/components/_misc-rtl.scss */
 html.js .collapsible .fieldset-legend {
   background-position: 98% 75%;
   padding-left: 0;
-  padding-right: 15px;
+  padding-right: 16px;
+  padding-right: 1rem;
 }
-/* line 160, ../sass/components/_misc-rtl.scss */
+/* line 168, ../sass/components/_misc-rtl.scss */
 html.js .collapsed .fieldset-legend {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
   background-position: 98% 50%;
