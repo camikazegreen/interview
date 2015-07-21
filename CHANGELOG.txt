@@ -1,0 +1,28 @@
+7.x-1.0-alpha1, 2015-07-10
+--------------------------
+- Preparing to tag 7.x-1.0-alpha1.
+- Merged in mmunro-ltrr/ua_navigation/UADIGITAL-132 (pull request #4).
+- Update Menu Block to the current drupal.org version.
+- Merged in UADIGITAL-113 (pull request #3).
+- UADIGIAL-113: Security update for jquery_update module.
+- Merged in UADIGITAL-105 (pull request #2).
+- UADIGITAL-105: Updating menu_block to 2.6.
+- UADIGITAL-17: Removing Responsive Menus module and libraries.
+- Adding jquery_admin_version variable.  Should fix UADIGITAL-40.
+- Removing 'brand' from various component names.
+- Merged in rename (pull request #1).
+- Updating README.
+- Renaming module, Part II.
+- Renaming module, Part I.
+- Adding all variables for Superfish block (gross).
+- Adding dev/master version of Superfish library (for now).
+- Adding jQuery Update version setting.
+- Documentation updates.
+- Adding secondary links variable.
+- Dev versions of superfish and reponsive menus...
+- Misc fixes.
+- README update.
+- Adding Utility links menu.
+- Renaming Superfish menu.
+- Adding README and updating .info file slightly.
+
