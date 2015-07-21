@@ -1,0 +1,60 @@
+UA Quickstart 7.x-1.0-alpha1, 2015-07-10
+----------------------------------------
+- UADIGITAL-98: Preparing to tag 7.x-1.0-alpha1.
+- Updating README in anticipation of initial alpha release.
+- UADIGITAL-98: Adding template make files to simplify distribution release tagging.
+- UADIGITAL-32: Enabling all individual features in install profile and adding them to README.
+- UADIGITAL-128: Enabling title for events block.
+- Merged in UADIGITAL-128 (pull request #6).
+- UADIGITAL-128: Moving events block into correct region.
+- Enabling UA News and Events blocks by default.
+- Merged in UADIGITAL-120 (pull request #5).
+- UADIGITAL-120: Drupal coding standards cleanup.
+- Merged in UADIGITAL-113 (pull request #4).
+- UADIGITAL-113: Drupal core security update.
+- Merged in UADIGITAL-65 (pull request #3).
+- UADIGITAL-65: Enabling views_ui during install.
+- UADIGITAL-32: Adding more content type features to distribution.
+- UADIGITAL-32: Adding additional content type features to makefile.
+- UADIGITAL-35: Adding UA CAS Feature.
+- Disabling powered by Drupal block.
+- Updating README.
+- Replacing legacy UA Content Types dependency with UA Page.  Related to UADIGITAL-47 and UADIGITAL-32.
+- Updating featured content block reference (for real this time).  Related to UADIGITAL-30 and UADIGITAL-42.
+- Reverting featured content block name change.  Refereces UADIGITAL-42.
+- Updating name of UA Featured Content (Hero) block.  Fixes UADIGITAL-42.
+- Drupal 7.37.  Fixes UADIGITAL-28.
+- Changing UA Drupal project references from private SSH URLs to public HTTPS URLs.  Fixes #UADIGITAL-24.
+- Merged in mjharmon-ua/ua_quickstart (pull request #2).
+- README.md edited online with Bitbucket.
+- Drupal-org.make edited online with Bitbucket - also the target name changed.
+- Drupal-org.make edited online with Bitbucket  - updated repo name in line 49.
+- Updating UA Featured Content URL(s).
+- Merged in rename (pull request #1).
+- Renaming distro, Part III.
+- Renaming distro, Part II.
+- Renaming distro, Part I.
+- Fixing featured_content block.
+- Enabling featured_content block.
+- Adding default permissions for system roles and tweaking blocks slightly.
+- Back to functional again.
+- Moving UA Zen up one directory level.
+- WIP changes.
+- Attempting enabling blocks in seperate install task.
+- Trying different approach for enabling blocks.
+- Simplifying block setup function a bit.
+- Moving block setup function into install file.
+- Updating build instructions.
+- Adding build instructions.
+- Adding primary superfish block.
+- Switching profile back to main branch.
+- Changing back to main branch for UA Featured Content.
+- Updating CALS features repo URL.
+- Documentation updates.
+- Simplifying block insertion code (without syntax errors this time).
+- Simplifying block insertion code.
+- Using temporary repositories/branches of dependencies for now.
+- Adding gitignore.
+- Adding default text formats and administrator role.
+- README update.
+
