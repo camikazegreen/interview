@@ -1,0 +1,16 @@
+7.x-1.0-alpha1, 2015-07-10
+--------------------------
+- Preparing to tag 7.x-1.0-alpha1.
+- Renaming README for consistency's sake.
+- Cleaning up UA News .info file in anticpation of release.
+- Merged in macaulay/ua_news (pull request #4).
+- Moved and renamed css file, updated .info reference, and updated readme name. Issue: UADIGITAL-77.
+- Merged macaulay/ua_news into 7.x-1.x.
+- Changed package name to be consistent with other features.
+- Merged ua_drupal/ua_news into 7.x-1.x.
+- Merged in macaulay/ua_news (pull request #3).
+- Included spotlight image style dependency for news spotlights.
+- Added views and styling to the news feature.
+- Removed project line to prevent complications.
+- Keeping w/ conventions: changed version to 7.x-1.x-dev.
+
