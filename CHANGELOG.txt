@@ -1,0 +1,8 @@
+7.x-1.0-alpha1, 2015-07-10
+--------------------------
+- Preparing to tag 7.x-1.0-alpha1.
+- Renaming README for consistency's sake.
+- Changed package name to be consistent with other features.
+- Removed project line to prevent complications.
+- Keeping w/ conventions: changed version from 7.x-1.0-dev to 7.x-1.x-dev.
+
