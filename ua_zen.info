@@ -14,7 +14,6 @@
 screenshot  = screenshot.png
 name        = UA Zen
 description = The University of Arizona's official sub-theme for Zen.
-version = 7.x-1.x-dev
 
 
 ; This theme is compatible with Drupal 7 core. And it is a sub-theme of Zen.
