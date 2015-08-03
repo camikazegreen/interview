@@ -37,26 +37,32 @@ This distribution can be built using [Drush make](http://docs.drush.org/en/stabl
 
         cd /var/www
 
+
 2. Create a temporary build folder, e.g.:
 
         mkdir build
 
+
 3. Clone the repository into the build folder, e.g.:
 
         git clone https://bitbucket.org/ua_drupal/ua_quickstart.git build/ua_quickstart
+
 
 4. **OPTIONAL:** Check out a release tag, e.g.:
 
         cd build/ua_quickstart
         git checkout 7.x-1.0-alpha1
 
+
 5. Change back into the directory that you want the built distribution folder to be created in, e.g.:
 
         cd /var/www
 
+
 6. Use drush make to build the distribution, e.g.:
 
         drush make build/ua_quickstart/build-ua_quickstart.make ua_quickstart
+
 
 7. Remove the build folder (optional), e.g.:
 
