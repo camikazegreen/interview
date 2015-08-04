@@ -301,6 +301,10 @@
     max-width: 960px;
     max-width: 60em;
   }
+  #content_featured .flexslider {
+      max-width: 930px;
+      max-width: 56em;
+  }
 }
 
 @media (min-width: 75em) {
