@@ -1,0 +1,82 @@
+7.x-1.0-alpha1, 2015-07-10
+--------------------------
+- Preparing to tag 7.x-1.0-alpha1.
+- Minor structural changes.
+- Merged in UADIGITAL-119 (pull request #14).
+- UADIGITAL-119: Misc Drupal Coding Standards cleanup.
+- Merged in UADIGITAL-115 (pull request #13).
+- UADIGITAL-115: Fleshing out 1200px breakpoint a bit more and removing some duplicate CSS.
+- Adding 1200px breakpoint.
+- Merged ua_drupal/ua_featured_content into 7.x-1.x.
+- Merged in trackleft/ua_featured_content/UADIGITAL-103-background-blend-mode-not- (pull request #11).
+- Fixed on safari.
+- Changed blend mode.
+- Merged in trackleft/ua_featured_content (pull request #10).
+- Merging prior to pull request.
+- Fixed ipad issue in webkit and mozilla and ie UADIGITAL-101.
+- Merged in trackleft/ua_featured_content/UADIGITAL-88-entity-object-wrapper-error (pull request #9).
+- Changed entity wrapper syntax UADIGITAL-88.
+- Merged in trackleft/ua_featured_content (pull request #8).
+- Merged in trackleft/ua_featured_contentflexslider_default_pr-1433175250825 (pull request #4).
+- Fixes for slides not triggering nav items.
+- Merged in trackleft/ua_featured_content (pull request #7).
+- Merged.
+- Removed flag again.
+- Added touch control to feature.
+- Removed contextual links.
+- Added contexual links styles.
+- Push.
+- More styles and contextual linksOC.
+- More style adjustments in 48em breakpoint.
+- Hide attachment at mobile.
+- Nav viewport background color.
+- More styles.
+- Adding styles to new field.
+- Removed flag.
+- Added field_short_summary.
+- Removed body and ua_page dependency.
+- Adding css back.
+- Adding entity as dependency.
+- Don't know what changed.
+- Removed views distinct.
+- Added description.
+- No orphans.
+- Dependencies and widowfix.
+- Ua_featured_content.js edited online with Bitbucket.
+- Merged in flexible-feature (pull request #3).
+- More joe edits.
+- More joe fixes.
+- With joe's edits.
+- Merged in flexible-feature (pull request #2).
+- Remove widowfix.
+- Merged in flexible-feature (pull request #1).
+- Flexible features.
+- Enabling link module dependency.
+- Replacing legacy UA Content Types dependency with UA Page.  Related to UADIGITAL-47 and UADIGITAL-32.
+- IADIGITAL-43: Using 2.4.0 version of flexslider. #close.
+- Merged in issue/1-rename-content-type (pull request #4).
+- Renaming view displays (for real this time).
+- Reorganizing template/css stuff a bit and adding flexslider prev/next images.
+- Fixing views_api_alter() implementation.
+- Adding CSS.
+- Merge branch '7.x-1.x' into issue/1-rename-content-type.
+- Reverting views block display name change (for now) and tweaking a couple other views settings.  Related to UADIGITAL-42.
+- Merged in trackleft/ua_featured_content (pull request #3).
+- Removed version and project.
+- Durrrr.
+- Ua_featured_content.info edited online with Bitbucket Removed project.
+- Ua_featured_content.info edited online with Bitbucket removed version.
+- Removing link dependency.
+- Adding navigation slider.
+- Updating UA Quickstart reference and project package setting.
+- Adding custom views template (needs to be removed from UA Zen).
+- Updating README.
+- Adding (and using) custom flexslider preset.
+- Renaming content type and fields.  Refs #1.
+- Reverting "Renaming content type and fields.  Refs #1."  Not ready for this yet.
+- Merged in makefile (pull request #1).
+- Merged in joegraduate/ua_featured_content/README (pull request #2).
+- Adding README.
+- Adding some additional comments.
+- Adding makefile.
+

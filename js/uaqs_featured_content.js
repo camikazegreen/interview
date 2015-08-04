@@ -1,26 +1,16 @@
 /**
  * @file
- * Funcion #1 remove orphans from any element with the class noWidows.
+ * Funcion #1 remove orphans from any element with the class no-widows.
  *
  * In order for this JavaScript to be loaded on pages, see the instructions in
  * the README.txt next to this file.
  */
-
-// JavaScript should be made compatible with libraries other than jQuery by
-// wrapping it with an "anonymous closure". See:
-// - https://drupal.org/node/1446420
-// - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
 (function ($, Drupal, window, document, undefined) {
-
-
-// To understand behaviors, see https://drupal.org/node/756722#behaviors
-Drupal.behaviors.ua_featured_content_behavior = {
-  attach: function(context, settings) {
-    $('.noWidows').each(function(i,d){
-       $(d).html( $(d).text().replace(/\s(?=[^\s]*$)/g, "&nbsp;") )
-    });
-  }
-};
-
-
+  Drupal.behaviors.ua_featured_content_behavior = {
+    attach: function(context, settings) {
+      $('.no-widows').each(function(i,d){
+        $(d).html($(d).text().replace(/\s(?=[^\s]*$)/g, "&nbsp;"))
+      });
+    }
+  };
 })(jQuery, Drupal, this, this.document);
