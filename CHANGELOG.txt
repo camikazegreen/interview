@@ -1,0 +1,22 @@
+UA Core 7.x-1.0-alpha1, 2015-07-10
+----------------------------------
+- UADIGITAL-98: Preparing to tag 7.x-1.0-alpha1.
+- Merged in mmunro-ltrr/ua_core/UADIGITAL-132 (pull request #2).
+- Update Features to the current drupal.org version.
+- UADIGITAL-131: Update to Migrate 2.8 for SA-CONTRIB-2015-0130.
+- View security update.
+- Merged in rename (pull request #1).
+- Updating README.
+- Renaming module, Part II.
+- Renaming module, Part I.
+- Moving Zen theme up one directory level.
+- Features module update.
+- Adding Default config module.
+- Documentation updates.
+- Contrib module updates.
+- Adding remaining UA Content Types dependencies to makefile.
+- Makefile update.
+- Changing project name (part 2).
+- Changing project name (part 1).
+- Adding initial makefile and basic module files.
+
