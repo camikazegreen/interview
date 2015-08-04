@@ -1,6 +1,7 @@
 name = UA Quickstart
 description = Install Drupal with the UA Quickstart install profile.
 core = 7.x
+exclusive = 1
 
 ; =====================================
 ; Module dependencies
