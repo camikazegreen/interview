@@ -11,24 +11,23 @@
 
 /* HTML element (SMACSS base) rules */
 @import "normalize";
-
-/* Layout rules */
-/*@import "layouts/responsive";*/
-@import "layouts/bootstrap-12-col";
+/*Import ua-bootstrap from repo*/
+@import "https://bitbucket.org/uadigital/ua-bootstrap/downloads/ua-bootstrap-1.0.0-alpha1.min.css";
 
 /* Component (SMACSS module) rules */
 @import "components/misc";
+
 // Optionally, add your own components here.
 @import "print";
 
-/* SMACSS theme rules */
-@import "catstrap/catstrap";
-@import "catstrap/catstrap-zen";
 
 /* OPTIONAL UA ZEN COMPONENTS - COMMENT OUT WHAT YOU DON'T NEED */
 
 @import "components/uazen-superfish";
 @import "components/uazen-main-nav";
+@import "components/uazen-search";
 @import "components/uazen-multilevelmenu";
 @import "components/uazen-home-modules";
 @import "components/uazen-views";
+@import "components/uazen-footer";
+@import "components/uazen-sidemenu";

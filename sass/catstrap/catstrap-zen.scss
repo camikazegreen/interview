@@ -31,17 +31,18 @@ html {
 			  display: inline;
 			  input {
 				  border-collapse: collapse;
+				  width: 221px;
 				  width: 13.8rem;
 				  font-family: MiloWeb, sans-serif;
 				  font-weight: normal;
 				  font-size: 18px;
 				  font-size: 1.125rem;
-				  line-height: 1em;
+				  line-height: 1;
 				  border: 0;
 				  background-color: #eef1f1;
 				  color: #333333;
 				  padding: 8px;
-				  padding: .5rem;
+				  padding: 0.5rem;
 				  outline: 0;
 				}
 			}
@@ -51,11 +52,10 @@ html {
 				  text-indent: -9999em;
 				  background: url("../images/search-icon.png");
 				  width: 40px;
-				  height: 40px;
 				  width: 2.5rem;
+				  height: 40px;
 				  height: 2.5rem;
 				  background-size: 24px 24px;
-				  background-size: 1.5rem 1.5rem;
 				  border: 0;
 				  background-repeat: no-repeat;
 				  background-position: 9px 7px;
@@ -187,6 +187,7 @@ html {
 	.view-news .views-row .views-field-field-news-photos img {
 		float: left;
 		max-width: 240px;
+		max-width: 15rem;
 		width: 100%;
 		height: auto;
 	}
@@ -227,7 +228,7 @@ footer#footer_site {
 		  display: inline-block;
 		  list-style: none;
 		  padding: 0 12px;
-		  padding: 0 .75rem;
+		  padding: 0 0.75rem;
 		  border-right: 1px solid #a8a69d;
 		}
 		> li.last {
