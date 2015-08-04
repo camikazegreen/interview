@@ -244,12 +244,12 @@ function ua_zen_preprocess_breadcrumb(&$variables) {
 }
 
 function ua_zen_breadcrumb($variables) {
-  $output = '';
   $breadcrumb = $variables['breadcrumb'];
+  $output = '';
 
   // Determine if we are to display the breadcrumb.
-  $zen_breadcrumb = theme_get_setting('zen_breadcrumb');
-  if (($zen_breadcrumb == 1 || ($zen_breadcrumb == 2 && arg(0) == 'admin')) && !empty($breadcrumb)) {
+  $show_breadcrumb = theme_get_setting('zen_breadcrumb');
+  if ($show_breadcrumb == 'yes' || $show_breadcrumb == 'admin' && arg(0) == 'admin') {
     $output = theme('item_list', array(
       'attributes' => array(
         'class' => array('breadcrumb'),
