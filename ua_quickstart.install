@@ -162,6 +162,13 @@ function ua_quickstart_enable_blocks() {
       'cache' => DRUPAL_NO_CACHE,
     ),
     array(
+      'module' => 'menu_block',
+      'delta' => 'ua-second-level',
+      'theme' => $default_theme,
+      'region' => 'sidebar_first',
+      'cache' => DRUPAL_NO_CACHE,
+    ),
+    array(
       'module' => 'views',
       'delta' => 'ua_hero_carousel-hero_block',
       'theme' => $default_theme,
