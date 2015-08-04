@@ -211,3 +211,53 @@ function ua_zen_form_search_block_form_alter(&$form, &$form_state, $form_id) {
   $form['search_block_form']['#attributes']['onfocus'] = "this.placeholder = ''";
   $form['search_block_form']['#attributes']['onblur'] = "this.placeholder = '" . t('Search Site') . "'";
 }
+
+/**
+ * Return a themed breadcrumb trail.
+ *
+ * @param $variables
+ *   - title: An optional string to be used as a navigational heading to give
+ *     context for breadcrumb links to screen-reader users.
+ *   - title_attributes_array: Array of HTML attributes for the title. It is
+ *     flattened into a string within the theme function.
+ *   - breadcrumb: An array containing the breadcrumb links.
+ * @return
+ *   A string containing the breadcrumb output.
+ */
+function ua_zen_preprocess_breadcrumb(&$variables) {
+  $breadcrumb = &$variables['breadcrumb'];
+
+  // Optionally get rid of the homepage link.
+  $show_breadcrumb_home = theme_get_setting('zen_breadcrumb_home');
+  if (!$show_breadcrumb_home) {
+    array_shift($breadcrumb);
+  }
+
+  if (theme_get_setting('zen_breadcrumb_title') && !empty($breadcrumb)) {
+    $item = menu_get_item();
+    $breadcrumb[] = array(
+      // If we are on a non-default tab, use the tab's title.
+      'data' => !empty($item['tab_parent']) ? check_plain($item['title']) : drupal_get_title(),
+      'class' => array('active'),
+    );
+  }
+}
+
+function ua_zen_breadcrumb($variables) {
+  $output = '';
+  $breadcrumb = $variables['breadcrumb'];
+
+  // Determine if we are to display the breadcrumb.
+  $zen_breadcrumb = theme_get_setting('zen_breadcrumb');
+  if (($zen_breadcrumb == 1 || ($zen_breadcrumb == 2 && arg(0) == 'admin')) && !empty($breadcrumb)) {
+    $output = theme('item_list', array(
+      'attributes' => array(
+        'class' => array('breadcrumb'),
+      ),
+      'items' => $breadcrumb,
+      'type' => 'ol',
+    ));
+  }
+  return $output;
+}
+
