@@ -13,7 +13,7 @@ function ua_navigation_menu_block_blocks() {
   return array(
     // Provides a second-level navigation menu block.
     'ua-second-level' => array(
-      'menu_name' => 'MENU_TREE__CURRENT_PAGE_MENU',
+      'menu_name' => MENU_TREE__CURRENT_PAGE_MENU,
       'parent_mlid' => 0,
       'title_link' => FALSE,
       'admin_title' => 'UA Second-level Navigation',
