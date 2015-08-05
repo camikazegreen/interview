@@ -38,7 +38,7 @@ projects[ua_featured_content][type] = module
 projects[ua_featured_content][subdir] = custom
 projects[ua_featured_content][download][type] = git
 projects[ua_featured_content][download][branch] = 7.x-1.x
-projects[ua_featured_content][download][revision] = 7c825e5
+projects[ua_featured_content][download][revision] = 91ce918
 projects[ua_featured_content][download][url] = https://bitbucket.org/ua_drupal/ua_featured_content.git
 
 projects[ua_navigation][type] = module
