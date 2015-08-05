@@ -15,7 +15,7 @@ defaults[projects][subdir] = contrib
 ; Contrib modules
 ; ------------------------------------------------------------------------------
 
-projects[flexslider][version] = 2.0-alpha3
+projects[flexslider][version] = 2.0-rc1
 
 projects[image_url_formatter][version] = 1.4
 
