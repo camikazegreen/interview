@@ -22,6 +22,11 @@ function ua_zen_footer_logo() {
   return $str_return;
 }
 
+// http://getbootstrap.com/css/#overview-responsive-images
+function ua_zen_preprocess_image_style(&$vars) {
+    $vars['attributes']['class'][] = 'img-responsive';
+}
+
 /**
  * Override or insert variables into the maintenance page template.
  *
