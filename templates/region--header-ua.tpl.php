@@ -31,14 +31,15 @@
  * @ingroup themeable
  */
 ?>
-<div class="<?php print $classes; ?> l-arizona-header red-bg" id="header_ua">
+<header id="region_header_ua" class="<?php print $classes; ?> l-arizona-header bg-cochineal-red">
   <div class="ua-redbar-v1">
-    <nav class="redbar navbar-static-top" role="navigation">
+    <nav role="navigation" class="redbar navbar-static-top">
       <div class="container">
-        <div class="navbar-header">
-          <a class="redbar-brand" href="http://www.arizona.edu"><p>The University of Arizona</p></a>
+        <div class="row">
+          <div class="navbar-header"><a href="http://www.arizona.edu" class="redbar-brand">
+              <p>The University of Arizona</p></a></div>
         </div>
       </div>
     </nav>
   </div>
-</div>
+</header>
