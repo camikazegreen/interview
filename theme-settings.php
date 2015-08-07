@@ -15,6 +15,12 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
   // copied the file from PHP's temporary holding space. This technique also
   // gives the field a "stock" feel to the user, rather than the bolt on feel
   // the prior solution created.
+  $form['breadcrumb']['breadcrumb_options']['zen_breadcrumb_separator'] = array(
+    '#access'        => FALSE
+  );
+  $form['breadcrumb']['breadcrumb_options']['zen_breadcrumb_trailing'] = array(
+    '#access'        => FALSE
+  );
   $form['logo']['settings']['footer_logo_path'] = array(
     '#type' => 'textfield',
     '#title' => t('Path to custom footer logo'),
