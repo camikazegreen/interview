@@ -39,15 +39,14 @@
     <script src="<?php print $base_path . $path_to_zen; ?>/js/respond.js"></script>
     <![endif]-->
   <?php endif; ?>
-  <link rel="stylesheet" href="http://static.arizona.edu/redbar-c39ca35b8b106c7cc49f89910684ed86/redbar.min.css">
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <?php if ($skip_link_text && $skip_link_anchor): ?>
     <p id="skip-link">
-      <a href="#<?php print $skip_link_anchor; ?>" class="element-invisible element-focusable"><?php print $skip_link_text; ?></a>
+      <a href="#<?php print $skip_link_anchor; ?>" class="sr-only sr-only-focusable"><?php print $skip_link_text; ?></a>
     </p>
   <?php endif; ?>
-  
+
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
