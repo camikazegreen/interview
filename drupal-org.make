@@ -41,6 +41,13 @@ projects[ua_featured_content][download][branch] = 7.x-1.x
 projects[ua_featured_content][download][revision] = 91ce918
 projects[ua_featured_content][download][url] = https://bitbucket.org/ua_drupal/ua_featured_content.git
 
+projects[ua_google_tag][type] = module
+projects[ua_google_tag][subdir] = custom
+projects[ua_google_tag][download][type] = git
+projects[ua_google_tag][download][branch] = 7.x-1.x
+projects[ua_google_tag][download][revision] = bfba545
+projects[ua_google_tag][download][url] = https://bitbucket.org/ua_drupal/ua_google_tag.git
+
 projects[ua_navigation][type] = module
 projects[ua_navigation][subdir] = custom
 projects[ua_navigation][download][type] = git

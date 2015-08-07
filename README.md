@@ -14,6 +14,7 @@ Demonstration/starter Drupal distribution and installation profile that packages
 
 - [UA Zen Theme](https://bitbucket.org/ua_drupal/ua_zen)
 - [UA CAS Feature](https://bitbucket.org/ua_drupal/ua_cas)
+- [UA Google Tag Feature](https://bitbucket.org/ua_drupal/ua_google_tag)
 - [UA Core Feature](https://bitbucket.org/ua_drupal/ua_core)
 - [UA Demo Content Feature](https://bitbucket.org/ua_drupal/ua_demo)
 - [UA Event Feature](https://bitbucket.org/ua_drupal/ua_event)
