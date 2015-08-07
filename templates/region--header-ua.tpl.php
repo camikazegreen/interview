@@ -31,7 +31,7 @@
  * @ingroup themeable
  */
 ?>
-<header id="region_header_ua" class="<?php print $classes; ?> l-arizona-header bg-cochineal-red">
+<header id="header_ua" class="<?php print $classes; ?> l-arizona-header bg-cochineal-red">
   <div class="ua-redbar-v1">
     <nav role="navigation" class="redbar navbar-static-top">
       <div class="container">
