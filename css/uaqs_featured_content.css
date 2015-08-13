@@ -51,10 +51,10 @@
   opacity:1;
 }
 .backgroundblendmode #content_featured .flexslider ul.slides li .slide-image-container {
-  opacity:1;
-  background-blend-mode: soft-light;
-  background-color: hsla(0, 0%, 0%, 0.8);
-  transition: all 0.3s ease;
+    opacity: 1;
+    background-blend-mode: soft-light;
+    background-color: hsla(0, 0%, 100%, 0.8);
+    transition: all 0.3s ease;
 }
 .backgroundblendmode #content_featured .flexslider ul.slides li.flex-active-slide .slide-image-container{
   opacity:1;
