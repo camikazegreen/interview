@@ -8,11 +8,14 @@
  * - $content: The content for this region, typically blocks.
  * - $classes: String of classes that can be used to style contextually through
  *   CSS. It can be manipulated through the variable $classes_array from
- *   preprocess functions. The default values can be one or more of the following:
+ *   preprocess functions. The default values can be one or more of the
+ *   following:
  *   - region: The current template type, i.e., "theming hook".
  *   - region-[name]: The name of the region with underscores replaced with
- *     dashes. For example, the page_top region would have a region-page-top class.
- * - $region: The name of the region variable as defined in the theme's .info file.
+ *     dashes. For example, the page_top region would have a region-page-top
+ *     class.
+ * - $region: The name of the region variable as defined in the theme's .info
+ *   file.
  *
  * Helper variables:
  * - $classes_array: Array of html class attribute values. It is flattened
@@ -28,40 +31,15 @@
  * @ingroup themeable
  */
 ?>
-<div class="<?php print $classes; ?> l-arizona-header red-bg" id="header_ua">
+<header id="header_ua" class="<?php print $classes; ?> l-arizona-header bg-cochineal-red">
   <div class="ua-redbar-v1">
-    <nav class="redbar navbar-static-top" role="navigation">
+    <nav role="navigation" class="redbar navbar-static-top">
       <div class="container">
-        <div class="navbar-header">
-          <a class="redbar-brand" href="http://www.arizona.edu"><p>The University of Arizona</p></a>
+        <div class="row">
+          <div class="navbar-header"><a href="http://www.arizona.edu" class="redbar-brand">
+              <p>The University of Arizona</p></a></div>
         </div>
       </div>
     </nav>
   </div>
- <!-- Chris Green's code: -->
-	<!-- commenting out for now
-  <button class="hamburger pull-left hidden-md hidden-sm hidden-lg" data-target=".arizona-menu-collapse" data-toggle="collapse" type="button">
-    <span class="sr-only">Toggle navigation</span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button> -->
-  <!--
-  <a class="arizona-logo arizona-line-logo" href="http://www.arizona.edu" title="The University of Arizona homepage" target="_blank">
-    <img alt="The University of Arizona Wordmark Line Logo White" class="arizona-line-logo" src="/<?php print drupal_get_path('theme',$GLOBALS['theme']); ?>/images/ua_wordmark_line_logo_white_RGB.svg" />
-  </a> -->
-  <!-- commenting out for now
-  <div class="collapse arizona-menu-collapse">
-    <ul class="arizona-menu">
-      <li class="first">
-        <a href="http://arizona.edu/apply">apply</a>
-      </li>                
-      <li>
-        <a href="http://arizona.edu/visit">visit</a>
-      </li>                
-      <li>
-        <a href="http://arizona.edu/give">give<span class="caret"></span></a>
-      </li>
-    </ul>
-  </div> -->
-</div>
+</header>

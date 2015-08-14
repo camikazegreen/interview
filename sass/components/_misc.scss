@@ -80,8 +80,20 @@
 /* Wrapping link for logo. */
 .header__logo {
   float: left; /* LTR */
-  margin: 2.5rem 0;
+  width: 100%;
+  text-align: center;
+  margin: 24px 0;
+  margin: 1.5rem 0;
   padding: 0;
+}
+
+@media (min-width: 48em) {
+  .header__logo {
+    width: auto;
+    text-align: left;
+    margin: 40px 0;
+    margin: 2.5rem 0;
+  }
 }
 
 /* Logo image. */
@@ -156,6 +168,7 @@
       /* A simple method to get navigation links to appear in one line. */
       float: left; /* LTR */
       padding: 0 10px 0 0; /* LTR */
+      padding: 0 0.625rem 0 0;
       list-style-type: none;
       list-style-image: none;
     }
@@ -178,17 +191,6 @@
   }
 }
 
-/**
- * Titles.
- */
-.page__title,          /* The title of the page. */
-.node__title,          /* Title of a piece of content when it is given in a list of content. */
-.block__title,         /* Block title. */
-.comments__title,      /* Comment section heading. */
-.comments__form-title, /* Comment form heading. */
-.comment__title {      /* Comment title. */
-  margin: 0;
-}
 
 /**
  * Messages.
@@ -196,6 +198,7 @@
 .messages {
   margin: rhythm(1) 0;
   padding: 10px 10px 10px 50px; /* LTR */
+  padding: 0.625rem 0.625rem 0.625rem 3.125rem;
   background-image: inline-image("message-24-ok.png");
   @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
     *background-image: image-url("message-24-ok.png");
@@ -269,11 +272,13 @@
   border-bottom: 1px solid $tabs-border \0/ie;
   margin: rhythm(1) 0;
   padding: 0 2px;
+  padding: 0 0.125rem;
   white-space: nowrap;
 }
 %tabs__tab {
   float: left; /* LTR */
   margin: 0 3px;
+  margin: 0 0.1875rem;
 }
 %tabs__tab-link {
   border: 1px solid #e9e9e9;
@@ -310,7 +315,8 @@
   color: #333;
   background-color: #dedede;
   letter-spacing: 1px;
-  padding: 0 1em;
+  padding: 0 16px;
+  padding: 0 1rem;
   text-align: center;
 }
 %tabs-primary__tab-link-is-hover {
@@ -343,7 +349,8 @@ a.tabs-primary__tab-link.is-active {
 /* Secondary tabs. */
 .tabs-secondary {
   @extend %tabs;
-  font-size: .9em;
+  font-size: 14px;
+  font-size: 0.875rem;
   /* Collapse bottom margin of ul.primary. */
   margin-top: -(rhythm(1));
 }
@@ -361,7 +368,8 @@ a.tabs-primary__tab-link.is-active {
   @include single-text-shadow(#fff, 1px, 1px, 0);
   background-color: #f2f2f2;
   color: #666;
-  padding: 0 .5em;
+  padding: 0 8px;
+  padding: 0 0.5rem;
 }
 %tabs-secondary__tab-link-is-focus {
   background-color: #dedede;
@@ -403,12 +411,14 @@ a.tabs-secondary__tab-link.is-active {
   li {
     display: inline;
     list-style-type: none;
-    padding: 0 1em 0 0; /* LTR */
+    padding: 0 16px 0 0;
+    padding: 0 1rem 0 0; /* LTR */
   }
 }
 
 /* The inline field label used by the Fences module. */
 span.field-label {
+  padding: 0 16px 0 0;
   padding: 0 1em 0 0; /* LTR */
 }
 
@@ -429,6 +439,7 @@ span.field-label {
   background-position: 0 50%; /* LTR */
   background-repeat: no-repeat;
   padding: 1px 0 1px 20px; /* LTR */
+  padding: 0.06rem 0 0.06rem 1.25rem;
 }
 
 /**
@@ -443,7 +454,8 @@ span.field-label {
 }
 %pager__item {
   display: inline;
-  padding: 0 0.5em;
+  padding: 0 8px;
+  padding: 0 0.5rem;
   list-style-type: none;
   background-image: none;
 }
@@ -467,10 +479,6 @@ span.field-label {
  * Blocks.
  */
 
-/* Block wrapper. */
-.block {
-  margin-bottom: rhythm(1);
-}
 
 /**
  * Menus.
@@ -526,6 +534,7 @@ span.field-label {
   background-color: transparent;
   color: #d8d8d8;
   font-size: 75px;
+  font-size: 4.7rem;
   line-height: 1;
   font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
   font-weight: bold;
@@ -541,7 +550,6 @@ span.field-label {
     position: relative;
   }
 }
-
 /**
  * Comments.
  */
@@ -603,14 +611,16 @@ span.field-label {
 
   /* The descriptive help text (separate from the label). */
   .description {
-    font-size: 0.85em;
+    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
 .form-type-radio,
 .form-type-checkbox {
   .description {
-    margin-left: 2.4em;
+    margin-left: 38px;
+    margin-left: 2.375rem;
   }
 }
 
@@ -641,6 +651,23 @@ a.button {
   text-align: left; /* LTR */
 }
 
+/* Drupal UI components */
+div.contextual-links-wrapper,
+#main div.contextual-links-wrapper,
+footer#footer_site div.contextual-links-wrapper {
+  ul.contextual-links {
+  display: none; /*resets display for contextual links js behavior*/
+  float: none;
+  }
+  li,
+  a:not(.contextual-links-trigger) { 
+    border: 0 none;
+    float: none;
+    display: inherit;
+    text-align: left;
+  }
+}
+
 /**
  * OpenID
  *
@@ -663,6 +690,7 @@ html.js #user-login-form li.openid-link,
 #user-login-form li.openid-link {
   /* Un-do some of the padding on the ul list. */
   margin-left: -20px; /* LTR */
+  margin-left: -1.25rem;
 }
 #user-login ul {
   margin: rhythm(1) 0;
@@ -674,7 +702,8 @@ html.js #user-login-form li.openid-link,
 form {
   th {
     text-align: left; /* LTR */
-    padding-right: 1em; /* LTR */
+    padding-right: 16px;
+    padding-right: 1rem; /* LTR */
     border-bottom: 3px solid #ccc;
   }
   tbody {
@@ -745,7 +774,8 @@ td.menu-disabled {
     }
     background-position: 5px 65%; /* LTR */
     background-repeat: no-repeat;
-    padding-left: 15px; /* LTR */
+    padding-left: 16px; /* LTR */
+    padding-left: 1rem;
   }
   html.js .collapsed & {
     background-image: inline-image("menu-collapsed.png"); /* LTR */
@@ -756,8 +786,10 @@ td.menu-disabled {
   }
   .summary {
     color: #999;
-    font-size: 0.9em;
-    margin-left: 0.5em;
+    font-size: 14px;
+    font-size: 0.875rem;
+    margin-left: 8px;
+    margin-left: 0.5rem;
   }
 }
 
@@ -773,7 +805,8 @@ tr.drag-previous {
   background-color: #ffd;
 }
 .tabledrag-toggle-weight {
-  font-size: 0.9em;
+  font-size: 14px;
+  font-size: 0.875em;
 }
 
 /**
@@ -804,3 +837,21 @@ tr.selected td {
     background-image: image-url("progress.gif");
   }
 }
+
+/*Misc. Helper classes*/
+/*.pull-left Floats an element to the leftFloatsTry it*/
+.pull-left {
+      float: left!important;
+ }
+/*.pull-right Floats an element to the rightFloatsTry it*/
+ .pull-right {
+      float: right!important;
+ }
+/*.relative Adds position relative*/
+ .relative {
+      position: relative!important;
+ }
+/*.absolute Adds position absolute*/
+ .absolute {
+      position: absolute!important;
+ }

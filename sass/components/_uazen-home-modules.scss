@@ -13,7 +13,7 @@
 		text-transform: none;
 	  line-height: 1.4;
 	}
-	a {
+	a:not(.contextual-links-trigger) {
 		display: block;
 		padding: 16px;
 		padding: 1rem;
@@ -31,53 +31,5 @@
 	.block.mission-statement h3 {
 		font-size: 36px;
 		font-size: 2.25rem;
-	}
-}
-// 3 COL NEWS BLOCK
-#block-views-news-home-3-col-news-block {
-	padding: 64px 0;
-	padding: 4rem 0;
-	h2.block-title {
-		text-align: center;
-		font-family: $milo;
-		font-weight: bold;
-		text-transform: uppercase;
-		font-size: 24px;
-		font-size: 1.5rem;
-		margin-bottom: 32px;
-		margin-bottom: 2rem;
-		&:before {
-			content: "—";
-			margin-right: 0.3em;
-			color: #c8d9d8;
-		}
-		&:after {
-			content: "—";
-			margin-left: 0.3em;
-			color: #c8d9d8;
-		}
-	}
-	.view-news {
-		.views-row {
-			width: 33%;
-			padding: 0 15px;
-			border: 0;
-			.views-field-field-news-photos {
-				img {
-					max-width: 100%;
-					padding-right: 0;
-				}
-			}
-			.views-field-title {
-				h2 {
-					display: block;
-					font-size: 22px;
-					font-size: 1.4rem;
-					float: left;
-					margin-top: 16px;
-					margin-top: 1rem;
-				}
-			}
-		}
 	}
 }
