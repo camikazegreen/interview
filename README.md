@@ -12,8 +12,13 @@ Change any instance of this into whatever you want your subtheme to be called, b
 
 2. Create a new .info file in your subtheme's folder, ua_zen_subtheme.info
 
-3. Add the following in your new .info file:
+3. Add the .info example below in your new .info file:
 
+4. Create the css folder in your subtheme.
+
+5. Create the overrides.css and place it in the css folder. Add some new styles like in the styles example below.
+
+.info Example:
 
     name = UA Zen Subtheme
     description = The University of Arizona's official sub-theme for UA Zen. Make all of your changes in this theme so that you can update to the latest UAZen.
@@ -26,12 +31,7 @@ Change any instance of this into whatever you want your subtheme to be called, b
     ; Optionally add an overrides file.
     stylesheets[all][] = css/overrides.css
 
-
-4. Create the css folder in your subtheme.
-
-5. Create the overrides.css and place it in the css folder. Add some new styles
-
-Example:
+styles Example:
 
     body {
       background: red;
