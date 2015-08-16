@@ -35,7 +35,7 @@ Complete pre-built versions of the UA Quickstart distribution are in the [downlo
 
 ## Contributing to the Project
 
-To contribute to the project you will need your own account on the [Bitbucket](bitbucket.org) repository hosting service, a local development environment (like a laptop or test web server) where you can use the [Git](http://git-scm.com/) version control system client and the widely used [Drush](http://docs.drush.org/en/master/) Drupal command-line utility. Ideally your development environment will include a web server that can support Drupal, for local testing of your work.
+To contribute to the project you will need your own account on the [Bitbucket](bitbucket.org) repository hosting service, as well as a local development environment (like a laptop or test web server) where you can use the [Git](http://git-scm.com/) version control system client and the widely used [Drush](http://docs.drush.org/en/master/) Drupal command-line utility. Ideally your development environment will include a web server that can support Drupal, for local testing of your work.
 
 ### 1. Fork a Repository on Bitbucket
 
@@ -43,7 +43,7 @@ Pick the repository on Bitbucket that contains the code you would like to modify
 
 ### 2. Clone your Forked Repository
 
-Clone a copy of your forked repository in some location where it is easy to work on. So after changing to the correct directory, it would be just the usual the command line Git clone:
+Clone a copy of your forked repository in some location where it is easy to work on. So after changing to the correct directory, it would be just the usual command line Git clone:
 
     cd ~/gitwork
     git clone git@bitbucket.org:tobiashume/ua_google_tag.git
@@ -122,7 +122,7 @@ Treat the new `ua_quickstart` directory as if it was a freshly downloaded copy o
 
 ### 10. Check the Changes on the New Site
 
-Use some web browsers to look at the new site in your test environment, checking that your changes work and have not broken anything else. The UA Demo Content module should be providing some pre-loaded test content that exercises most of the features that UA Quickstart includes.
+Use some web browsers to look at the new site in your test environment, checking that your changes work and have not broken anything else. The UA Demo Content module should be providing some pre-loaded test content that exercises most of the features within UA Quickstart.
 
 ### 11. Push Your Issue Branch to Bitbucket
 
@@ -130,7 +130,7 @@ Once everything seems to work (which might take a few iterations of further edit
 
     git push -u origin 'UADIGITAL-184'
 
-(where `origin` is the usual Git shorthand for the upstream repository, here your own fork if one of the various repositories for UA Quickstart themes and features, and the `-u` option updates what the remote repository has configured for its default branch).
+where `origin` is the usual Git shorthand for the upstream repository, here your own fork if one of the various repositories for UA Quickstart themes and features, and the `-u` option updates the branch configuration for the remote repository (unnecessary after the first push to the origin).
 
 ### 12. Issue a Pull Request
 
