@@ -86,8 +86,6 @@ with some telling it to use the current location; so for the example of a curren
     projects[ua_quickstart][download][branch] = UADIGITAL-184
     projects[ua_quickstart][download][url] = file:///home/tobiashume/gitwork/ua_quickstart/.git
 
-After the edit is complete, commit your change, but unlike your other commits you don't have to be too careful about the commit message, since this will not be preserved anywhere in the long term.
-
 ### 7. Modify UA Quickstart to Include Your Changes
 
 Your copy of UA Quickstart still refers back to the Bitbucket repository rather than your local copy of the theme or feature with all your recent work in it. If you have been working on `ua_google_tag` and your issue branch for the changes there is `UADIGITAL-184` edit the file `drupal-org.make` and replace the lines like
@@ -101,7 +99,9 @@ with the location of your recent work:
     projects[ua_google_tag][download][branch] = UADIGITAL-184
     projects[ua_google_tag][download][url] = file:///home/tobiashume/gitwork/ua_google_tag/.git
 
-The path to your work will always refer to the hidden Git directory within your working directory, so will always end in `/.git`.
+The paths to your changes will always refer to the hidden Git directory within your working directories, so will always end in `/.git`. After the edits are complete, commit your UA Quickstart changes, but unlike your other commits working on the issue you don't have to be too careful about the commit message, since this will not be preserved anywhere in the long term.
+
+    git commit -a -m 'Refer to local files, not Bitbucket.'
 
 ### 8. Build UA Quickstart
 
@@ -130,7 +130,7 @@ Once everything seems to work (which might take a few iterations of further edit
 
     git push -u origin 'UADIGITAL-184'
 
-where `origin` is the usual Git shorthand for the upstream repository, here your own fork if one of the various repositories for UA Quickstart themes and features, and the `-u` option updates the branch configuration for the remote repository (unnecessary after the first push to the origin).
+where `origin` is the usual Git shorthand for the upstream repository, here your own fork of one of the various repositories for UA Quickstart themes and features, and the `-u` option updates the branch configuration for the remote repository (unnecessary after the first push to the origin).
 
 ### 12. Issue a Pull Request
 
