@@ -18,7 +18,7 @@ defaults[projects][subdir] = contrib
 ; Contrib dependencies common to many UA features/sites
 ; ------------------------------------------------------------------------------
 
-projects[ctools][version] = 1.7
+projects[ctools][version] = 1.9
 
 projects[entity][version] = 1.6
 
