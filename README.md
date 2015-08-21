@@ -18,6 +18,8 @@ Change any instance of this into whatever you want your subtheme to be called, b
 
 5. Create the overrides.css and place it in the css folder. Add some new styles like in the styles example below.
 
+6. If you already have a logo for your site, place it in the subtheme's folder as `logo.png`. If not, copy the placeholder from ua_zen.
+
 .info Example:
 
     name = UA Zen Subtheme
