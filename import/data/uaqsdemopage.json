@@ -38,5 +38,10 @@
     "title" : "UA Program",
     "path" : "ua_program",
     "ua_page_body" : "Use a <em>UA Program</em> to add academic UA programs to the website."
+  },
+  {"id":9,
+    "title" : "UA Person",
+    "path" : "ua_person",
+    "ua_page_body" : "Use a <em>UA Person</em> to add the contact information and brief biography of a person. There are multiple options for displaying directories of UA Person entries: a grid layout, which is visually appealing, and a list layout, which suits more traditional formal personnel directories."
   }
 ]
