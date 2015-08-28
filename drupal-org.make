@@ -17,14 +17,14 @@ projects[ua_core][type] = module
 projects[ua_core][subdir] = custom
 projects[ua_core][download][type] = git
 projects[ua_core][download][branch] = 7.x-1.x
-projects[ua_core][download][revision] = c718ad9
+projects[ua_core][download][revision] = ec95e28
 projects[ua_core][download][url] = https://bitbucket.org/ua_drupal/ua_core.git
 
 projects[ua_demo][type] = module
 projects[ua_demo][subdir] = custom
 projects[ua_demo][download][type] = git
 projects[ua_demo][download][branch] = 7.x-1.x
-projects[ua_demo][download][revision] = a6b5ad9
+projects[ua_demo][download][revision] = eb94c32
 projects[ua_demo][download][url] = https://bitbucket.org/ua_drupal/ua_demo.git
 
 projects[ua_event][type] = module
@@ -73,7 +73,7 @@ projects[ua_person][type] = module
 projects[ua_person][subdir] = custom
 projects[ua_person][download][type] = git
 projects[ua_person][download][branch] = 7.x-1.x
-projects[ua_person][download][revision] = 39b729b
+projects[ua_person][download][revision] = 86f1e9c
 projects[ua_person][download][url] = https://bitbucket.org/ua_drupal/ua_person.git
 
 projects[ua_program][type] = module
