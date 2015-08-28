@@ -4,6 +4,14 @@ UA Quickstart* Drupal Distribution and Install Profile
 
 Demonstration/starter Drupal distribution and installation profile that packages various features consistent with community best practices and UA brand strategy.
 
+## A Complete Customized Drupal
+
+UA Quickstart is a complete customized version of the popular Drupal content management system, not an add-on to an existing Drupal-based web site. Previously to start a new Drupal site you would prepare a web server and database, then download the Drupal core software from drupal.org and install it (following the instructions at https://www.drupal.org/documentation/install). This would produce a minimally functional web site with no content, which you could then customize by adding themes and modules to fit it to your needs. Increasing, however, you can download Drupal distributions, which not only contain the core, but also complete sets of additions to make it almost immediately useful for a particular purpose, such as an online storefront. UA Quickstart is the distribution that provides many of the features specific to the University of Arizona, and rather than an empty site, initially shows some demonstration content (which can nevertheless be turned off instantly).
+
+## Packaged versions
+
+Complete pre-built versions of the UA Quickstart distribution are in the [download area](https://bitbucket.org/ua_drupal/ua_quickstart/downloads). The file names give the release version (you will generally want the most recent release), and the file suffixes give the compression method, `.zip` and `.tar.gz`. Treat these exactly as you would a manual download of Drupal itself from drupal.org: prepare a local development or test web server, a MySQL database, expand the `.zip` or `.tar.gz` file where you would like the site to appear, and go through the usual steps to bring up a new Drupal site, following the instructions from the drupal.org [installation guide](https://www.drupal.org/documentation/install). Pre-packaged [development .tar.gz](http://jenkins.ltrr.arizona.edu/job/ua_quickstart/lastSuccessfulBuild/artifact/ua_quickstart-7.x-1.x-dev.tar.gz) and [development .zip](http://jenkins.ltrr.arizona.edu/job/ua_quickstart/lastSuccessfulBuild/artifact/ua_quickstart-7.x-1.x-dev.zip) files are also available; these will generally contain the latest changes, which might be unstable experimental features, but might also be fixes for known problems.
+
 ## Install Profile Features
 
 - Creates default text formats (copied from Drupal Standard install profile, for now).
@@ -28,10 +36,6 @@ Demonstration/starter Drupal distribution and installation profile that packages
 - [UA Publication Feature](https://bitbucket.org/ua_drupal/ua_publication)
 - [UA Unit Feature](https://bitbucket.org/ua_drupal/ua_unit)
 - More to come...
-
-## Packaged versions
-
-Complete pre-built versions of the UA Quickstart distribution are in the [download area](https://bitbucket.org/ua_drupal/ua_quickstart/downloads). The file names give the release version (you will generally want the most recent release), and the file suffixes give the compression method, `.zip` and `.tar.gz`. Treat these exactly as you would a manual download of Drupal itself from drupal.org: prepare a local development or test web server, a MySQL database, expand the `.zip` or `.tar.gz` file where you would like the site to appear, and go through the usual steps to bring up a new Drupal site.
 
 ## Contributing to the Project
 
