@@ -18,7 +18,7 @@ defaults[projects][subdir] = contrib
 ; Contrib dependencies common to many UA features/sites
 ; ------------------------------------------------------------------------------
 
-projects[ctools][version] = 1.7
+projects[ctools][version] = 1.9
 
 projects[entity][version] = 1.6
 
@@ -38,6 +38,7 @@ projects[views][version] = 3.11
 projects[auto_nodetitle][version] = 1.0
 
 projects[date][version] = 2.8
+projects[date][patch][2294973] = http://drupal.org/files/issues/date-title_date_formats-2294973-70.patch
 
 projects[email][version] = 1.3
 
