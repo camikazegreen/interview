@@ -266,3 +266,10 @@ function ua_zen_breadcrumb($variables) {
   return $output;
 }
 
+
+function ua_zen_menu_tree(array $variables) {
+
+  $output = '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
+
+  return $output;
+}
