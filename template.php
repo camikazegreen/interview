@@ -8,6 +8,12 @@
  */
 
 /**
+ *  * Add UA Bootstrap
+ *   */
+
+drupal_add_css('//bitbucket.org/trackleft/ua-bootstrap-fork/downloads/ua-bootstrap.latest.min.css', array('type' => 'external'));
+
+/**
  * Custom function for the secondary footer logo option.
  */
 function ua_zen_footer_logo() {

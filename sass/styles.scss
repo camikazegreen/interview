@@ -11,8 +11,6 @@
 
 /* HTML element (SMACSS base) rules */
 @import "normalize";
-/*Import ua-bootstrap from repo*/
-@import "//bitbucket.org/uadigital/ua-bootstrap/downloads/ua-bootstrap-latest.min.css";
 
 /* Component (SMACSS module) rules */
 @import "components/misc";
