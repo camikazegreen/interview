@@ -267,7 +267,7 @@ function ua_zen_breadcrumb($variables) {
 }
 
 
-function ua_zen_menu_tree(array $variables) {
+function ua_zen_menu_tree__menu_block__ua_second_level(array $variables) {
 
   $output = '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
 
