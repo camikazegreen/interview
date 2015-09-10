@@ -27,7 +27,7 @@
  * HTML5 display definitions
  */
 /* Correct `block` display not defined in IE 8/9. */
-@import "//bitbucket.org/trackleft/ua-bootstrap-fork/downloads/ua-bootstrap.latest.min.css";
+@import "//bitbucket.org/uadigital/ua-bootstrap/downloads/ua-bootstrap-latest.min.css";
 /* line 23, ../sass/_normalize.scss */
 article,
 aside,
@@ -1008,7 +1008,7 @@ tr.selected td {
 /* line 835, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1441770841');
+  background-image: url('../images/progress.gif?1441906494');
 }
 
 /*Misc. Helper classes*/
