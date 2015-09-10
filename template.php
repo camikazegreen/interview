@@ -8,11 +8,6 @@
  */
 
 /**
- *  Add ua-bootstrap
- */
-
-
-/**
  * Custom function for the secondary footer logo option.
  */
 
