@@ -267,6 +267,12 @@ function ua_zen_breadcrumb($variables) {
 }
 
 /**
+ *  * UA Zen theme wrapper function for the primary menu links.
+ *   */
+function ua_zen_menu_tree__main_menu(&$variables) {
+      return '<ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul>';
+}
+/**
  * Overrides theme_menu_link().
  */
 function ua_zen_menu_link(array $variables) {
