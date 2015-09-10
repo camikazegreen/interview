@@ -27,7 +27,7 @@
       <?php print render($page['header']); ?>
 
     </div> <!-- /.container -->
-    <nav id="main_nav">
+    <nav id="main_nav" class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="row">
           <div class="navbar-header">
