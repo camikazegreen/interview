@@ -29,7 +29,15 @@
     </div> <!-- /.container -->
     <nav id="main_nav">
       <div class="container">
-        <?php print render($page['navigation']); ?>
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <?php print render($page['navigation']); ?>
+          </div>
+        </div>
+        <!-- /.nav-collapse-->
       </div>
     </nav>
   </header>
