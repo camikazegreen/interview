@@ -25,5 +25,5 @@ projects[image_url_formatter][version] = 1.4
 ; ------------------------------------------------------------------------------
 
 libraries[flexslider][download][type] = get
-libraries[flexslider][download][url] = https://github.com/woothemes/FlexSlider/archive/version/2.4.0.zip
+libraries[flexslider][download][url] = https://github.com/woothemes/FlexSlider/archive/version/2.4.0.tar.gz
 libraries[flexslider][directory_name] = flexslider
