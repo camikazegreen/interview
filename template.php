@@ -296,3 +296,10 @@ function ua_zen_menu_local_tasks(&$variables) {
   return $output;
 }
 
+
+function ua_zen_menu_tree__menu_block__ua_second_level(array $variables) {
+
+  $output = '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
+
+  return $output;
+}
