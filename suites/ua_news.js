@@ -14,8 +14,8 @@ casper.test.begin('News dates sort properly in the news view', function suite(te
     });
 
     var expected = ['Tuesday, July 21, 2015',
-                    'Saturday, March 14, 2015',
-                    'Monday, May 4, 2015',];
+                    'Monday, May 4, 2015',
+                    'Saturday, March 14, 2015',];
 
     test.assertEquals(dates[0], expected[0]);
     test.assertEquals(dates[1], expected[1]);
