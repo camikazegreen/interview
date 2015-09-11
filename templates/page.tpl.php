@@ -27,9 +27,22 @@
       <?php print render($page['header']); ?>
 
     </div> <!-- /.container -->
-    <nav id="main_nav">
+    <nav id="main_nav" class="navbar navbar-default navbar-static-top">
       <div class="container">
-        <?php print render($page['navigation']); ?>
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <?php print render($page['navigation']); ?>
+          </div>
+        </div>
+        <!-- /.nav-collapse-->
       </div>
     </nav>
   </header>
