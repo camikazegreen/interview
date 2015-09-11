@@ -6,7 +6,13 @@
  * Complete documentation for this file is available online.
  * @see https://drupal.org/node/1728096
  */
-
+drupal_add_js('//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array(
+        'type' => 'external',
+        'group' => JS_THEME,
+        'scope' => 'footer',
+        'weight' => 3,
+        )
+);
 /**
  * Custom function for the secondary footer logo option.
  */
