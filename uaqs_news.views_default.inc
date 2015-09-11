@@ -81,11 +81,11 @@ function ua_news_views_default_views() {
   $handler->display->display_options['fields']['field_ua_news_summary']['label'] = '';
   $handler->display->display_options['fields']['field_ua_news_summary']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ua_news_summary']['element_wrapper_class'] = 'ua-news-summary';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Content: Published (field_ua_news_published) */
+  $handler->display->display_options['sorts']['field_ua_news_published_value']['id'] = 'field_ua_news_published_value';
+  $handler->display->display_options['sorts']['field_ua_news_published_value']['table'] = 'field_data_field_ua_news_published';
+  $handler->display->display_options['sorts']['field_ua_news_published_value']['field'] = 'field_ua_news_published_value';
+  $handler->display->display_options['sorts']['field_ua_news_published_value']['order'] = 'DESC';
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -168,6 +168,30 @@ function ua_news_views_default_views() {
   $handler->display->display_options['fields']['field_ua_news_summary']['label'] = '';
   $handler->display->display_options['fields']['field_ua_news_summary']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ua_news_summary']['element_wrapper_class'] = 'ua-news-summary';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'ua_news' => 'ua_news',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Show on Front Page (field_ua_news_front) */
+  $handler->display->display_options['filters']['field_ua_news_front_value']['id'] = 'field_ua_news_front_value';
+  $handler->display->display_options['filters']['field_ua_news_front_value']['table'] = 'field_data_field_ua_news_front';
+  $handler->display->display_options['filters']['field_ua_news_front_value']['field'] = 'field_ua_news_front_value';
+  $handler->display->display_options['filters']['field_ua_news_front_value']['value'] = array(
+    1 => '1',
+  );
   $handler->display->display_options['block_description'] = 'Home News Block';
   $export['ua_news'] = $view;
 
