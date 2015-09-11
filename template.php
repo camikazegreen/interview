@@ -16,6 +16,7 @@ drupal_add_css('//mta-03.uanews.org/ua-bootstrap/css/ua-bootstrap.css', array('t
 /**
  * Custom function for the secondary footer logo option.
  */
+
 function ua_zen_footer_logo() {
   $str_return = "";
   $str_footer_logo_path = theme_get_setting('footer_logo_path');
@@ -269,6 +270,29 @@ function ua_zen_breadcrumb($variables) {
       'type' => 'ol',
     ));
   }
+  return $output;
+}
+
+/**
+ * Overrides theme_menu_local_tasks().
+ */
+function ua_zen_menu_local_tasks(&$variables) {
+  $output = '';
+
+  if (!empty($variables['primary'])) {
+    $variables['primary']['#prefix'] = '<h2 class="sr-only">' . t('Primary tabs') . '</h2>';
+    $variables['primary']['#prefix'] .= '<ul class="tabs--primary nav nav-tabs">';
+    $variables['primary']['#suffix'] = '</ul>';
+    $output .= drupal_render($variables['primary']);
+  }
+
+  if (!empty($variables['secondary'])) {
+    $variables['secondary']['#prefix'] = '<h2 class="sr-only">' . t('Secondary tabs') . '</h2>';
+    $variables['secondary']['#prefix'] .= '<ul class="tabs--secondary pagination pagination-sm">';
+    $variables['secondary']['#suffix'] = '</ul>';
+    $output .= drupal_render($variables['secondary']);
+  }
+
   return $output;
 }
 
