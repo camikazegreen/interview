@@ -59,7 +59,7 @@ projects[ua_news][type] = module
 projects[ua_news][subdir] = custom
 projects[ua_news][download][type] = git
 projects[ua_news][download][branch] = 7.x-1.x
-projects[ua_news][download][revision] = d2496dc
+projects[ua_news][download][revision] = e316a71
 projects[ua_news][download][url] = https://bitbucket.org/ua_drupal/ua_news.git
 
 projects[ua_page][type] = module
