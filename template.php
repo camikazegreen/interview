@@ -11,7 +11,7 @@
  *  * Add UA Bootstrap
  *   */
 
-drupal_add_css('//bitbucket.org/trackleft/ua-bootstrap-fork/downloads/ua-bootstrap.latest.min.css', array('type' => 'external'));
+drupal_add_css('//mta-03.uanews.org/ua-bootstrap/css/ua-bootstrap.css', array('type' => 'external'));
 
 /**
  * Custom function for the secondary footer logo option.
