@@ -27,8 +27,8 @@
       <?php print render($page['header']); ?>
 
     </div> <!-- /.container -->
-    <nav id="main_nav" class="navbar navbar-default navbar-static-top">
-      <div class="container">
+    <div class="container">
+      <nav id="main_nav" class="navbar navbar-default navbar-static-top">
         <div class="row">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -43,8 +43,8 @@
           </div>
         </div>
         <!-- /.nav-collapse-->
+        </nav>
       </div>
-    </nav>
   </header>
 
   <div id="main">
