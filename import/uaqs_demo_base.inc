@@ -172,8 +172,8 @@ abstract class UaDemoIntKeyedMigration extends UaDemoLocalfileMigration {
    *   The name of the key field in the migration source.
    */
   public function getSourceKeyFieldName() {
-    $fieldArray = array_keys($this->sourceKeyField);
-    return $fieldArray[0];
+    $fieldKey = array_keys($this->sourceKeyField);
+    return $fieldKey[0];
   }
 
   /**
