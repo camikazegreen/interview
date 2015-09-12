@@ -7,7 +7,6 @@
  * @see https://drupal.org/node/1728148
  */
 ?>
-<div id="l_page">
   <?php // Defined in template file: region--header-ua.tpl.php. ?>
   <?php print render($page['header_ua']); ?>
   <header class="header page-row" id="header_site" role="banner">
@@ -82,6 +81,5 @@
     <?php print render($page['footer']); ?>
     <?php print render($page['footer_sub']); ?>
   </footer>
-</div>
 
 <?php print render($page['bottom']); ?>
