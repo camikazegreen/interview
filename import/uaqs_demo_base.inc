@@ -173,8 +173,7 @@ abstract class UaDemoIntKeyedMigration extends UaDemoLocalfileMigration {
    */
   public function getSourceKeyFieldName() {
     $fieldArray = array_keys($this->sourceKeyField);
-    $fieldArrayIndex = $fieldArray[0];
-    return $fieldArrayIndex;
+    return $fieldArray[0];
   }
 
   /**
