@@ -10,7 +10,7 @@
 <div id="l_page">
   <?php // Defined in template file: region--header-ua.tpl.php. ?>
   <?php print render($page['header_ua']); ?>
-  <header class="header" id="header_site" role="banner">
+  <header class="header page-row" id="header_site" role="banner">
     <div class="container">
 
       <?php // If the logo option is on, do not display the site name and slogan. ?>
@@ -34,7 +34,7 @@
     </nav>
   </header>
 
-  <div id="main">
+  <div id="main" class="page-row page-row-expanded">
     <section id="content_featured">
       <?php print render($page['content_featured']); ?>
     </section>
@@ -78,7 +78,7 @@
     </div> <!-- /.container -->
   </div> <!-- /.main -->
 
-  <footer id="footer_site" class="<?php print $classes; ?>">
+  <footer id="footer_site" class="<?php print $classes; ?> page-row">
     <?php print render($page['footer']); ?>
     <?php print render($page['footer_sub']); ?>
   </footer>
