@@ -77,6 +77,7 @@ function ua_zen_preprocess_html(&$variables, $hook) {
 // */
 
 function ua_zen_preprocess_html(&$variables) {
+    $variables['html_attributes_array']['class'][]= 'sticky-footer';
 }
 
 /**
