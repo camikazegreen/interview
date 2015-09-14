@@ -181,7 +181,7 @@ function ua_zen_preprocess_region(&$variables, $hook) {
       if (strlen($str_footer_logo_html) == 0) {
         $str_logo_path = theme_get_setting('logo');
         if (strlen($str_logo_path) > 0) {
-          $str_footer_logo_html = "<img src=\"" . file_create_url($str_logo_path) . "\" alt=\"\" />";
+          $str_footer_logo_html = "<img class='img-responsive' src='" . file_create_url($str_logo_path) . "' alt='' />";
         }
       }
       break;

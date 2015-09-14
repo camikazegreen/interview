@@ -52,7 +52,7 @@
     </section>
 
     <div class="container">
-      <div class="row">
+      <div class="row page-row-padding-bottom">
         <section id="content" <?php print $content_column_class; ?> role="main">
           <?php print render($page['highlighted']); ?>
           <?php print $breadcrumb; ?>
