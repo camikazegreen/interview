@@ -28,7 +28,6 @@
     </div> <!-- /.container -->
     <div class="container">
       <nav id="main_nav" class="navbar navbar-default navbar-static-top">
-        <div class="row">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
@@ -40,7 +39,6 @@
           <div id="navbar" class="navbar-collapse collapse">
             <?php print render($page['navigation']); ?>
           </div>
-        </div>
         <!-- /.nav-collapse-->
         </nav>
       </div>
