@@ -314,7 +314,7 @@ function ua_zen_menu_tree__menu_block__ua_second_level(array $variables) {
  *  * UA Zen theme wrapper function for the primary menu links.
  *   */
 function ua_zen_menu_tree__main_menu(&$variables) {
-      return '<ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul><div class="clearfix"></div>';
+      return '<ul class="menu nav navbar-nav text-uppercase">' . $variables['tree'] . '</ul><div class="clearfix"></div>';
 }
 /**
  * Overrides theme_menu_link().
