@@ -15,14 +15,14 @@ function ua_event_views_default_views() {
   $view->description = 'Lists of events made with the UA Event content type.';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Events';
+  $view->human_name = 'UA Events';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'UA Events';
+  $handler->display->display_options['title'] = 'Calendar';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = '';
   $handler->display->display_options['access']['type'] = 'perm';
