@@ -22,7 +22,7 @@ function ua_person_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'UA Person Directory';
+  $handler->display->display_options['title'] = 'Directory';
   $handler->display->display_options['css_class'] = 'ua-person-list';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
