@@ -15,7 +15,7 @@ function ua_event_views_default_views() {
   $view->description = 'Lists of events made with the UA Event content type.';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'UA Events';
+  $view->human_name = 'Events';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
