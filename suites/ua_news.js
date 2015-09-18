@@ -32,6 +32,9 @@ casper.test.begin('News dates sort properly in the news view', function suite(te
     test.assertNotEquals(dates[2], expected[0]);
     test.assertNotEquals(dates[2], expected[1]);
     test.assertNotEquals(dates[2], expected[3]);
+    test.assertNotEquals(dates[3], expected[0]);
+    test.assertNotEquals(dates[3], expected[1]);
+    test.assertNotEquals(dates[3], expected[2]);
   });
 
   casper.run(function() {
