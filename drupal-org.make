@@ -24,21 +24,21 @@ projects[ua_demo][type] = module
 projects[ua_demo][subdir] = custom
 projects[ua_demo][download][type] = git
 projects[ua_demo][download][branch] = 7.x-1.x
-projects[ua_demo][download][revision] = e7430c2
+projects[ua_demo][download][revision] = 99ce845
 projects[ua_demo][download][url] = https://bitbucket.org/ua_drupal/ua_demo.git
 
 projects[ua_event][type] = module
 projects[ua_event][subdir] = custom
 projects[ua_event][download][type] = git
 projects[ua_event][download][branch] = 7.x-1.x
-projects[ua_event][download][revision] = d5587b6
+projects[ua_event][download][revision] = 3d50ec1
 projects[ua_event][download][url] = https://bitbucket.org/ua_drupal/ua_event.git
 
 projects[ua_featured_content][type] = module
 projects[ua_featured_content][subdir] = custom
 projects[ua_featured_content][download][type] = git
 projects[ua_featured_content][download][branch] = 7.x-1.x
-projects[ua_featured_content][download][revision] = 6b34f4b
+projects[ua_featured_content][download][revision] = e3bd1cd
 projects[ua_featured_content][download][url] = https://bitbucket.org/ua_drupal/ua_featured_content.git
 
 projects[ua_google_tag][type] = module
@@ -73,7 +73,7 @@ projects[ua_person][type] = module
 projects[ua_person][subdir] = custom
 projects[ua_person][download][type] = git
 projects[ua_person][download][branch] = 7.x-1.x
-projects[ua_person][download][revision] = 86f1e9c
+projects[ua_person][download][revision] = 8975196
 projects[ua_person][download][url] = https://bitbucket.org/ua_drupal/ua_person.git
 
 projects[ua_program][type] = module
@@ -106,5 +106,5 @@ projects[ua_zen][type] = theme
 projects[ua_zen][directory_name] = ua_zen
 projects[ua_zen][download][type] = git
 projects[ua_zen][download][branch] = 7.x-1.x
-projects[ua_zen][download][revision] = 22976f3
+projects[ua_zen][download][revision] = 61bf7e0
 projects[ua_zen][download][url] = https://bitbucket.org/ua_drupal/ua_zen.git

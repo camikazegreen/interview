@@ -27,6 +27,9 @@ function ua_quickstart_install() {
   // Disable bartik theme.
   theme_disable(array('bartik'));
 
+  // Insert custom sub footer text block.
+  ua_quickstart_insert_subfooter_block();
+
   // Enable some standard blocks.
   ua_quickstart_enable_blocks();
 
@@ -126,6 +129,21 @@ function ua_quickstart_install() {
 }
 
 /**
+ * Inserts custom sub footer text block.
+ */
+function ua_quickstart_insert_subfooter_block() {
+  $block = array(
+    'body' => '<p>The University of Arizona | Tucson, AZ 85721 | Phone: <a href="tel:5206212211">(520) 621-2211</a> | Email: <a href="mailto:department.name@email.arizona.edu">department.name@email.arizona.edu</a>.',
+    'info' => 'Sub Footer Text',
+    'format' => 'filtered_html',
+  );
+
+  db_insert('block_custom')
+    ->fields($block)
+    ->execute();
+}
+
+/**
  * Enables some default blocks.
  */
 function ua_quickstart_enable_blocks() {
@@ -187,6 +205,13 @@ function ua_quickstart_enable_blocks() {
       'visibility' => 1,
       'cache' => DRUPAL_NO_CACHE,
       'weight' => 10,
+    ),
+    array(
+      'module' => 'block',
+      'delta' => '1',
+      'theme' => $default_theme,
+      'region' => 'footer_sub',
+      'cache' => DRUPAL_NO_CACHE,
     ),
     array(
       'module' => 'views',
