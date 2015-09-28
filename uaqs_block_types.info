@@ -63,4 +63,3 @@ features[variable][] = field_bundle_settings_bean__ua_illustrated_link
 features[variable][] = field_bundle_settings_bean__ua_mini_blurb
 features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][features] = features
-project path = sites/all/modules/custom
