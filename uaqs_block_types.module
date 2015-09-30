@@ -49,8 +49,12 @@ function ua_zen_preprocess_block(&$variables, $hook) {
     $variables['attributes_array']['role'] = 'complementary';
   }
 }
+
 /**
  * Implements hook_theme_registry_alter().
+ *
+ * Taken directly from https://www.drupal.org/node/715160
+ * (Using template (.tpl.php) files in your own module).
  */
 function ua_block_types_theme_registry_alter(&$theme_registry) {
   // Defined path to the current module.
