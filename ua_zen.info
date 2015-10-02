@@ -138,7 +138,7 @@ settings[zen_html5_respond_meta][] = html5
 settings[zen_html5_respond_meta][] = meta
 settings[zen_rebuild_registry]     = 1
 settings[zen_wireframes]           = 0
-settings[ua_copyright_notice]      = 'Arizona Board of Regents. <a href=\"http://www.arizona.edu\" target=\"_blank\">The University of Arizona</a>, Tucson, Arizona'
+settings[ua_copyright_notice]      = 'The Arizona Board of Regents on behalf of <a href=\"http://www.arizona.edu\" target=\"_blank\">The University of Arizona</a>.'
 
 ; To make this sub-theme an admin theme with shortcut links next to titles,
 ; uncomment the line below.
