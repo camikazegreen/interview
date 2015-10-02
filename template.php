@@ -178,7 +178,7 @@ function ua_zen_preprocess_region(&$variables, $hook) {
         $str_copyright_notice = "<p class=\"copyright\">Copyright &copy; " . date('Y') . " " . $str_copyright_notice . "</p>";
       }
       else {
-        $str_copyright_notice = "<p class=\"copyright\">Copyright &copy; " . date('Y') . " The Arizona Board of Regents on behalf of <a href=\"http://www.arizona.edu\" target=\"_blank\">The University of Arizona</a>.";
+        $str_copyright_notice = "<p class=\"copyright\">Copyright &copy; " . date('Y') . " The Arizona Board of Regents on behalf of <a href=\"http://www.arizona.edu\" target=\"_blank\">The University of Arizona</a>.</p>";
       }
       break;
   }
