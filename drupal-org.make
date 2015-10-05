@@ -6,6 +6,13 @@ api = 2
 ; UA Modules
 ; =====================================
 
+projects[ua_block_types][type] = module
+projects[ua_block_types][subdir] = custom
+projects[ua_block_types][download][type] = git
+projects[ua_block_types][download][branch] = 7.x-1.x
+projects[ua_block_types][download][revision] = 1e27e3a
+projects[ua_block_types][download][url] = https://bitbucket.org/ua_drupal/ua_block_types.git
+
 projects[ua_cas][type] = module
 projects[ua_cas][subdir] = custom
 projects[ua_cas][download][type] = git
@@ -106,5 +113,5 @@ projects[ua_zen][type] = theme
 projects[ua_zen][directory_name] = ua_zen
 projects[ua_zen][download][type] = git
 projects[ua_zen][download][branch] = 7.x-1.x
-projects[ua_zen][download][revision] = 61bf7e0
+projects[ua_zen][download][revision] = 39e8483
 projects[ua_zen][download][url] = https://bitbucket.org/ua_drupal/ua_zen.git
