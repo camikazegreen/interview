@@ -17,7 +17,7 @@ drupal_add_js('//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', a
  *  * Add UA Bootstrap
  *   */
 
-drupal_add_css('//mta-03.uanews.org/ua-bootstrap/css/ua-bootstrap.css', array('type' => 'external'));
+drupal_add_css('//bitbucket.org/uadigital/ua-bootstrap/downloads/ua-bootstrap-1.0.0-alpha-2.min.css', array('type' => 'external'));
 
 /**
  * Custom function for the secondary footer logo option.
