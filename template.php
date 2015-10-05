@@ -175,10 +175,10 @@ function ua_zen_preprocess_region(&$variables, $hook) {
     case "footer_sub":
       $str_copyright_notice = theme_get_setting('ua_copyright_notice');
       if (strlen($str_copyright_notice) > 0) {
-        $str_copyright_notice = "<p class=\"copyright\">Copyright © " . date('Y') . " " . $str_copyright_notice . "</p>";
+        $str_copyright_notice = "<p class=\"copyright\">&copy; " . date('Y') . " " . $str_copyright_notice . "</p>";
       }
       else {
-        $str_copyright_notice = "<p class=\"copyright\">Copyright © " . date('Y') . " Arizona Board of Regents. <a href=\"http://www.arizona.edu\" target=\"_blank\">The University of Arizona</a>, Tucson, Arizona</p>";
+        $str_copyright_notice = "<p class=\"copyright\">&copy; " . date('Y') . " The Arizona Board of Regents on behalf of <a href=\"http://www.arizona.edu\" target=\"_blank\">The University of Arizona</a>.</p>";
       }
       break;
   }
