@@ -1,7 +1,7 @@
 name = UA Content Chunks
 description = Enables small structured pieces of content, which can be chained together as a substitute for the Body field or elsewhere.
 core = 7.x
-package = Features
+package = The University of Arizona
 files[] = templates/paragraphs-item--ua_column_image.tpl.php
 files[] = templates/paragraphs-item--ua_file_download.tpl.php
 files[] = templates/paragraphs-item--ua_headed_text.tpl.php
