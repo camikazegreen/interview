@@ -31,7 +31,7 @@
  * @ingroup themeable
  */
 ?>
-<header id="region_header_ua" class="l-arizona-header bg-red bg-cochineal-red">
+<header id="header_ua" class="l-arizona-header bg-red bg-cochineal-red">
     <section class="container l-container">
       <div class="row">
         <div class="col-xs-12">
