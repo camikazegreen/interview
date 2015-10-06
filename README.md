@@ -37,25 +37,38 @@ Entity Tokens is necessary because it provides tokens for generating the full na
 ## Views ##
 
 ### Structure ###
-The view included is modeled after a wireframe mockup provided by Student Affairs Marketing (image below).
+The views included are modeled after a wireframe mockup provided by Student Affairs Marketing and the Eller College of Management person directory ( https://www.eller.arizona.edu/directory)
 Included fields:
+
 - Photo (124px x 124px)
 - Full name
 - Job title(s)
 - Email
 - Phone number(s)
-![persons-view.png](https://bitbucket.org/repo/qyrqzr/images/288845954-persons-view.png)
+
+Both views are pages. The grid option is located at the alias "/people" and the list option is at the alias "/people-list" please choose the desired view and disable the other. Change the aliases as you wish.
+
+#### Grid Style View: ####
+![people-grid.png](https://bitbucket.org/repo/qeEk4j/images/926911236-people-grid.png)
+
+#### List Style View: ####
+![people-list.png](https://bitbucket.org/repo/qeEk4j/images/2185589448-people-list.png)
 
 ### Styling ###
 The view display for the persons content type has classes added to it through the Views UI to facilitate styling.
 
 Styling classes are as follows:
 
-- **Main View class:** *ua-people-grid* (I used the word "grid" because this display will show persons 3-across on large screens, 2-across on medium screens and 1-across on smallest screens)
-- **Row class:** *ua-people-row*
+- **Grid View class:** *ua-people-grid* (the word "grid" is used because this display will show persons 3-across on large screens, 2-across on medium screens and 1-across on smallest screens)
+- **List View class:** *ua-people-list* (the word "list" is used because this display is stacked in rows)
+- **Row class:** *ua-people-row* and *row* ("row" class is added for bootstrap layout purposes)
 - **Field Classes:**
     - Photo  *ua-person-photo*
     - Full name  *ua-person-name*
     - Job title(s)  *ua-person-job-titles*
     - Email  *ua-person-email*
     - Phone number(s)  *ua-person-phone*
+- **Note about the list view fields:** The list view has fields but all fields except image are excluded from display and put in global text fields for layout purposes. The list has three columns for its layout and corresponding classes for column layout:
+    - Photo  *ua-person-photo col-sm-3*
+    - Name and job titles  *ua-person-col col-sm-5*
+    - Email and phone numbers  *ua-person-col col-sm-4*

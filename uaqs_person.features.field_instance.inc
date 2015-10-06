@@ -262,7 +262,7 @@ function ua_person_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'ua_medium_square',
+          'image_style' => '',
         ),
         'type' => 'image',
         'weight' => 2,
@@ -281,7 +281,7 @@ function ua_person_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
-      'file_directory' => 'pictures',
+      'file_directory' => 'images/people',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '1 MB',
       'max_resolution' => '',

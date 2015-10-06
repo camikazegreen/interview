@@ -1,6 +1,9 @@
 /** View Display **/
 .ua-person-row {
     margin: 0 0 2rem;
+    padding-bottom: 16px;    
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #EEF1F1;
 }
 
 .ua-person-row .ua-person-name {
@@ -22,16 +25,27 @@
     list-style-type: none;
 }
 
+.ua-person-list .ua-person-row .ua-person-col { 
+    margin-top: 16px;
+    margin-top: 1rem;
+}
+
+.ua-person-list .ua-person-row .ua-person-col h3 {
+    margin-top: 0;   
+}
+
 @media screen and (min-width: 50em) {
     .ua-person-grid .ua-person-row {
         display: inline-block;
         vertical-align: top;
         width: 49%;
+        padding-bottom: ;    
+        border-bottom: 0 none;
     }
 }
 
 @media screen and (min-width: 75em) {
-    .ua-person-row:nth-child(3n+2) {
+    .ua-person-grid .ua-person-row:nth-child(3n+2) {
         margin-right: 4%;
         margin-left: 4%;
     }
