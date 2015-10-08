@@ -80,7 +80,7 @@ function ua_content_chunks_theme() {
   }
   $host_item_group = 'paragraphs_items';
   $theme[$host_item_group] = array(
-    'render element' => 'elements',
+    'render element' => 'element',
     'template' => strtr($host_item_group, '_', '-'),
     'path' => $theme_dir_path,
   );
