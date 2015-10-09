@@ -28,6 +28,7 @@ class UaDemoNavigationMigration extends UaDemoMenuLinksMigration {
       'link_path' => t('Menu item link Drupal path or external path'),
       'link_title' => t('Text displayed for this menu link'),
       'external' => t('Whether the link is a full external URL (1 = external, 0 = internal)'),
+      'expanded' => t('Determine whether a menu item is expanded'),
       'weight' => t('Weight to order links at the same depth in a menu'),
     );
 
