@@ -35,6 +35,7 @@ features[field_instance][] = node-ua_person-field_ua_person_lname
 features[field_instance][] = node-ua_person-field_ua_person_phones
 features[field_instance][] = node-ua_person-field_ua_person_photo
 features[field_instance][] = node-ua_person-field_ua_person_titles
+features[image][] = ua_entry_detail
 features[image][] = ua_medium_square
 features[node][] = ua_person
 features[variable][] = ant_pattern_ua_person
