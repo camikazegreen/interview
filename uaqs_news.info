@@ -45,6 +45,7 @@ features[field_instance][] = node-ua_news-field_ua_news_published
 features[field_instance][] = node-ua_news-field_ua_news_short_title
 features[field_instance][] = node-ua_news-field_ua_news_summary
 features[image][] = spotlight
+features[image][] = ua_news_detail_500
 features[node][] = ua_news
 features[variable][] = field_bundle_settings_node__ua_news
 features[variable][] = menu_options_ua_news

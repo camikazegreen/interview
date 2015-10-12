@@ -436,7 +436,7 @@ function ua_news_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'ua_news_detail_500',
         ),
         'type' => 'image',
         'weight' => 0,
