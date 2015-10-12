@@ -21,6 +21,31 @@ function ua_event_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function ua_event_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: ua_fixed_banner_460.
+  $styles['ua_fixed_banner_460'] = array(
+    'label' => 'Fixed banner 460',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => '',
+          'height' => 460,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function ua_event_node_info() {
