@@ -7,10 +7,9 @@
  * @see https://drupal.org/node/1728148
  */
 ?>
-<div id="l_page">
   <?php // Defined in template file: region--header-ua.tpl.php. ?>
   <?php print render($page['header_ua']); ?>
-  <header class="header" id="header_site" role="banner">
+  <header class="header page-row" id="header_site" role="banner">
     <div class="container">
 
       <?php // If the logo option is on, do not display the site name and slogan. ?>
@@ -27,20 +26,31 @@
       <?php print render($page['header']); ?>
 
     </div> <!-- /.container -->
-    <nav id="main_nav">
-      <div class="container">
-        <?php print render($page['navigation']); ?>
+    <div class="container">
+      <nav id="main_nav" class="navbar navbar-default navbar-static-top">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <?php print render($page['navigation']); ?>
+          </div>
+        <!-- /.nav-collapse-->
+        </nav>
       </div>
-    </nav>
   </header>
 
-  <div id="main">
+  <div id="main" class="page-row page-row-expanded">
     <section id="content_featured">
       <?php print render($page['content_featured']); ?>
     </section>
 
     <div class="container">
-      <div class="row">
+      <div class="row page-row-padding-bottom">
         <section id="content" <?php print $content_column_class; ?> role="main">
           <?php print render($page['highlighted']); ?>
           <?php print $breadcrumb; ?>
@@ -78,10 +88,9 @@
     </div> <!-- /.container -->
   </div> <!-- /.main -->
 
-  <footer id="footer_site" class="<?php print $classes; ?>">
+  <footer id="footer_site" class="<?php print $classes; ?> page-row">
     <?php print render($page['footer']); ?>
     <?php print render($page['footer_sub']); ?>
   </footer>
-</div>
 
 <?php print render($page['bottom']); ?>

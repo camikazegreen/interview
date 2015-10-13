@@ -8,7 +8,7 @@
  */
 ?>
 <?php if ($copyright_notice || $content): ?>
-<div id="footer_sub" class="<?php print $classes; ?>">
+<div id="footer_sub" class="<?php print $classes; ?> page-row-padding-top page-row-padding-bottom">
   	<div class="container">
     	<?php print $content; ?>
 	    <?php print $copyright_notice ?>
