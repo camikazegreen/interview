@@ -25,6 +25,6 @@ function ua_navigation_install() {
 /**
  * Disable Superfish module.
  */
-ua_navigation_update_7100() {
+function ua_navigation_update_7100() {
   module_disable(array('superfish'));
 }
