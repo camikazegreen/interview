@@ -4,7 +4,7 @@
  * Check the basic layout of the default homepage that ua_quickstart
  * generates on a new site.
  */
-casper.test.begin("UA Quickstart homepage", 7, function suite(test) {
+casper.test.begin("UA Quickstart homepage", 6, function suite(test) {
   var rootpath = '/'; // Assuming we're in the context of a running Drupal site.
 
   casper.start();
