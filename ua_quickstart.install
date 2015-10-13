@@ -172,8 +172,8 @@ function ua_quickstart_enable_blocks() {
       'cache' => DRUPAL_NO_CACHE,
     ),
     array(
-      'module' => 'superfish',
-      'delta' => '1',
+      'module' => 'menu_block',
+      'delta' => 'main',
       'theme' => $default_theme,
       'region' => 'navigation',
       'title' => '<none>',

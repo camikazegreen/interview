@@ -31,7 +31,7 @@ projects[ua_demo][type] = module
 projects[ua_demo][subdir] = custom
 projects[ua_demo][download][type] = git
 projects[ua_demo][download][branch] = 7.x-1.x
-projects[ua_demo][download][revision] = 99ce845
+projects[ua_demo][download][revision] = 380bd11
 projects[ua_demo][download][url] = https://bitbucket.org/ua_drupal/ua_demo.git
 
 projects[ua_event][type] = module
@@ -59,7 +59,7 @@ projects[ua_navigation][type] = module
 projects[ua_navigation][subdir] = custom
 projects[ua_navigation][download][type] = git
 projects[ua_navigation][download][branch] = 7.x-1.x
-projects[ua_navigation][download][revision] = 4da747f
+projects[ua_navigation][download][revision] = c0a3407
 projects[ua_navigation][download][url] = https://bitbucket.org/ua_drupal/ua_navigation.git
 
 projects[ua_news][type] = module
@@ -113,5 +113,5 @@ projects[ua_zen][type] = theme
 projects[ua_zen][directory_name] = ua_zen
 projects[ua_zen][download][type] = git
 projects[ua_zen][download][branch] = 7.x-1.x
-projects[ua_zen][download][revision] = 849e082
+projects[ua_zen][download][revision] = 8c53c5e
 projects[ua_zen][download][url] = https://bitbucket.org/ua_drupal/ua_zen.git
