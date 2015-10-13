@@ -31,7 +31,7 @@ projects[ua_demo][type] = module
 projects[ua_demo][subdir] = custom
 projects[ua_demo][download][type] = git
 projects[ua_demo][download][branch] = 7.x-1.x
-projects[ua_demo][download][revision] = 99ce845
+projects[ua_demo][download][revision] = 380bd11
 projects[ua_demo][download][url] = https://bitbucket.org/ua_drupal/ua_demo.git
 
 projects[ua_event][type] = module
