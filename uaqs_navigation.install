@@ -23,9 +23,8 @@ function ua_navigation_install() {
 }
 
 /**
- * Disable and uninstall superfish module.
+ * Disable Superfish module.
  */
 ua_navigation_update_7100() {
   module_disable(array('superfish'));
-  drupal_uninstall_modules(array('superfish'));
 }
