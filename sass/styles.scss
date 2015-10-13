@@ -11,8 +11,6 @@
 
 /* HTML element (SMACSS base) rules */
 @import "normalize";
-/*Import ua-bootstrap from repo*/
-@import "//bitbucket.org/uadigital/ua-bootstrap/downloads/ua-bootstrap-latest.min.css";
 
 /* Component (SMACSS module) rules */
 @import "components/misc";
@@ -23,8 +21,8 @@
 
 /* OPTIONAL UA ZEN COMPONENTS - COMMENT OUT WHAT YOU DON'T NEED */
 
-@import "components/uazen-superfish";
-@import "components/uazen-main-nav";
+// @import "components/uazen-superfish";
+// @import "components/uazen-main-nav";
 @import "components/uazen-search";
 @import "components/uazen-multilevelmenu";
 @import "components/uazen-home-modules";
