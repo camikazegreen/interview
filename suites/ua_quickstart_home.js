@@ -13,11 +13,11 @@ casper.test.begin("UA Quickstart homepage", 7, function suite(test) {
     test.assertHttpStatus(200, 'opens with an HTTP Success status code');
     // Major page region structure
 //    test.assertExists('#l_page', 'has the outermost page container (#l_page)');
-    test.assertExists('#l_page #header_ua', 'has the UofA header (#header_ua)');
-    test.assertExists('#l_page #header_site', 'has the site-specific header (#header_site)');
-    test.assertExists('#l_page #content_featured', 'has the featured content region (#content_featured)');
-    test.assertExists('#l_page #content', 'has the main content (#content)');
-    test.assertExists('#l_page #footer_site', 'has the site-specific footer (#footer_site)');
+    test.assertExists('#header_ua', 'has the UofA header (#header_ua)');
+    test.assertExists('#header_site', 'has the site-specific header (#header_site)');
+    test.assertExists('#content_featured', 'has the featured content region (#content_featured)');
+    test.assertExists('#content', 'has the main content (#content)');
+    test.assertExists('#footer_site', 'has the site-specific footer (#footer_site)');
   });
 
   casper.run(function() {
