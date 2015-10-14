@@ -185,7 +185,7 @@ fi
 # Try synchronizing with a remote copy that everyone can see
 
 drush -y sql-sync @uaquickstarttest @kitten
-drush -y rsync --delete @uaquickstarttest @kitten
+drush -y rsync @uaquickstarttest @kitten --delete
 drush -y cc all @kitten
 
 exit 0
