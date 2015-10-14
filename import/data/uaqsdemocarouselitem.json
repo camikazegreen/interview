@@ -15,9 +15,16 @@
   },
   {"id":3,
     "title" : "Here is the third headline.",
-    "short_summary" : "cum inter pluris duces virtute et genere praestans nomine Calgacus apud contractam multitudinem proelium poscentem in hunc modum locutus fertur",
-    "call_to_action" : "https://brand.arizona.edu/login",
-    "call_to_action_title" : "Learn more",
+    "short_summary" : "cum inter pluris duces virtute et genere praestans nomine Calgacus",
+    "call_to_action" : "",
+    "call_to_action_title" : "",
     "slide_image" : "demo-carousel-item-3.jpg"
+  },
+  {"id":4,
+    "title" : "Here is the fourth headline.",
+    "short_summary" : "apud contractam multitudinem proelium poscentem in hunc modum locutus fertur",
+    "call_to_action" : "https://brand.arizona.edu/guide/ua-quickstart",
+    "call_to_action_title" : "Learn more",
+    "slide_image" : "demo-carousel-item-4.jpg"
   }
 ]
