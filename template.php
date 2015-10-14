@@ -6,10 +6,23 @@
  * Complete documentation for this file is available online.
  * @see https://drupal.org/node/1728096
  */
+drupal_add_js('//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array(
+        'type' => 'external',
+        'group' => JS_THEME,
+        'scope' => 'footer',
+        'weight' => 3,
+        )
+);
+/**
+ ** Add UA Bootstrap
+ **/
+
+drupal_add_css('//bitbucket.org/uadigital/ua-bootstrap/downloads/ua-bootstrap-1.0.0-alpha-2.min.css', array('type' => 'external'));
 
 /**
  * Custom function for the secondary footer logo option.
  */
+
 function ua_zen_footer_logo() {
   $str_return = "";
   $str_footer_logo_path = theme_get_setting('footer_logo_path');
@@ -64,6 +77,7 @@ function ua_zen_preprocess_html(&$variables, $hook) {
 // */
 
 function ua_zen_preprocess_html(&$variables) {
+    $variables['html_attributes_array']['class'][]= 'sticky-footer';
 }
 
 /**
@@ -167,7 +181,7 @@ function ua_zen_preprocess_region(&$variables, $hook) {
       if (strlen($str_footer_logo_html) == 0) {
         $str_logo_path = theme_get_setting('logo');
         if (strlen($str_logo_path) > 0) {
-          $str_footer_logo_html = "<img src=\"" . file_create_url($str_logo_path) . "\" alt=\"\" />";
+          $str_footer_logo_html = "<img class='img-responsive' src='" . file_create_url($str_logo_path) . "' alt='' />";
         }
       }
       break;
@@ -175,10 +189,10 @@ function ua_zen_preprocess_region(&$variables, $hook) {
     case "footer_sub":
       $str_copyright_notice = theme_get_setting('ua_copyright_notice');
       if (strlen($str_copyright_notice) > 0) {
-        $str_copyright_notice = "<p class=\"copyright\">Copyright © " . date('Y') . " " . $str_copyright_notice . "</p>";
+        $str_copyright_notice = "<p class=\"copyright\">&copy; " . date('Y') . " " . $str_copyright_notice . "</p>";
       }
       else {
-        $str_copyright_notice = "<p class=\"copyright\">Copyright © " . date('Y') . " Arizona Board of Regents. <a href=\"http://www.arizona.edu\" target=\"_blank\">The University of Arizona</a>, Tucson, Arizona</p>";
+        $str_copyright_notice = "<p class=\"copyright\">&copy; " . date('Y') . " The Arizona Board of Regents on behalf of <a href=\"http://www.arizona.edu\" target=\"_blank\">The University of Arizona</a>.</p>";
       }
       break;
   }
@@ -266,3 +280,79 @@ function ua_zen_breadcrumb($variables) {
   return $output;
 }
 
+/**
+ * Overrides theme_menu_local_tasks().
+ */
+function ua_zen_menu_local_tasks(&$variables) {
+  $output = '';
+
+  if (!empty($variables['primary'])) {
+    $variables['primary']['#prefix'] = '<h2 class="sr-only">' . t('Primary tabs') . '</h2>';
+    $variables['primary']['#prefix'] .= '<ul class="tabs--primary nav nav-tabs">';
+    $variables['primary']['#suffix'] = '</ul>';
+    $output .= drupal_render($variables['primary']);
+  }
+
+  if (!empty($variables['secondary'])) {
+    $variables['secondary']['#prefix'] = '<h2 class="sr-only">' . t('Secondary tabs') . '</h2>';
+    $variables['secondary']['#prefix'] .= '<ul class="tabs--secondary pagination pagination-sm">';
+    $variables['secondary']['#suffix'] = '</ul>';
+    $output .= drupal_render($variables['secondary']);
+  }
+
+  return $output;
+}
+
+
+function ua_zen_menu_tree__menu_block__ua_second_level(array $variables) {
+
+  $output = '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
+
+  return $output;
+}
+/**
+ *  * UA Zen theme wrapper function for the primary menu links.
+ *   */
+function ua_zen_menu_tree__main_menu(&$variables) {
+      return '<ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul><div class="clearfix"></div>';
+}
+/**
+ * Overrides theme_menu_link().
+ */
+function ua_zen_menu_link(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  if (($element['#original_link']['depth'] <= 1)) {
+      $element['#localized_options']['attributes']['class'][] = 'text-uppercase';
+  }
+  if ($element['#below']) {
+    // Prevent dropdown functions from being added to management menu so it
+    // does not affect the navbar module.
+    if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
+      $sub_menu = drupal_render($element['#below']);
+    }
+    elseif ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] == 1)) {
+      // Add our own wrapper.
+      unset($element['#below']['#theme_wrappers']);
+      $sub_menu = '<ul class="dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
+      // Generate as standard dropdown.
+      $element['#title'] .= ' <span class="caret"></span>';
+      $element['#attributes']['class'][] = 'dropdown';
+      $element['#localized_options']['html'] = TRUE;
+
+      // Set dropdown trigger element to # to prevent inadvertant page loading
+      // when a submenu link is clicked.
+      // $element['#localized_options']['attributes']['data-target'] = '#';
+      // $element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
+      // $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
+    }
+  }
+  // On primary navigation menu, class 'active' is not set on active menu item.
+  // @see https://drupal.org/node/1896674
+  if (($element['#href'] == $_GET['q'] || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']))) {
+    $element['#attributes']['class'][] = 'active';
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}

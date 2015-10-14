@@ -9,6 +9,7 @@
 ?>
 <?php if ($footer_logo || $content): ?>
 <div class="container">
+    <div class="page-row-padding-top page-row-padding-bottom">
 	<?php if ($footer_logo): ?>
 		<div class="footer-logo">
 			<?php print $footer_logo; ?>
@@ -18,6 +19,7 @@
 		<div class="footer-content clearfix">
 			<?php print $content; ?>
 		</div>
-	<?php endif; ?>
+    <?php endif; ?>
+    </div>
 </div>
 <?php endif; ?>
