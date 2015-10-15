@@ -41,6 +41,22 @@ function ua_news_image_default_styles() {
     ),
   );
 
+  // Exported image style: ua_news_detail_500.
+  $styles['ua_news_detail_500'] = array(
+    'label' => 'News detail 500',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => '',
+          'height' => 500,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
 
