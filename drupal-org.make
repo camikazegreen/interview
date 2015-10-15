@@ -38,7 +38,7 @@ projects[ua_event][type] = module
 projects[ua_event][subdir] = custom
 projects[ua_event][download][type] = git
 projects[ua_event][download][branch] = 7.x-1.x
-projects[ua_event][download][revision] = 3d50ec1
+projects[ua_event][download][revision] = e3b4c8a
 projects[ua_event][download][url] = https://bitbucket.org/ua_drupal/ua_event.git
 
 projects[ua_featured_content][type] = module
@@ -66,7 +66,7 @@ projects[ua_news][type] = module
 projects[ua_news][subdir] = custom
 projects[ua_news][download][type] = git
 projects[ua_news][download][branch] = 7.x-1.x
-projects[ua_news][download][revision] = e316a71
+projects[ua_news][download][revision] = a19f5da
 projects[ua_news][download][url] = https://bitbucket.org/ua_drupal/ua_news.git
 
 projects[ua_page][type] = module
@@ -80,7 +80,7 @@ projects[ua_person][type] = module
 projects[ua_person][subdir] = custom
 projects[ua_person][download][type] = git
 projects[ua_person][download][branch] = 7.x-1.x
-projects[ua_person][download][revision] = 8975196
+projects[ua_person][download][revision] = c79de90
 projects[ua_person][download][url] = https://bitbucket.org/ua_drupal/ua_person.git
 
 projects[ua_program][type] = module
