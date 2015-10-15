@@ -461,7 +461,7 @@ If there is no map, simply fill in the location name or address in the title fie
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'ua_fixed_banner_460',
         ),
         'type' => 'image',
         'weight' => 0,
