@@ -45,7 +45,7 @@ class UaDemoUnitMigration extends UaDemoNodeMigration {
       t('Make demonstration UA Unit node content from pre-defined data.'));
 
     // Documented lists of source data fields.
-    // Seesee ua_unit ua_unit.features.field_instance.inc
+    // See ua_unit ua_unit.features.field_instance.inc
     // First, the single-value text fielda...
     $data_fields = array(
       'title' => t('Unit Name'),
