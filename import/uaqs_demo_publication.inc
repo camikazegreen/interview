@@ -48,7 +48,7 @@ class UaDemoPublicationMigration extends UaDemoNodeMigration {
 
     // Documented lists of source data fields: all names here MUST match
     // those in the corresponding content type.
-    // Seesee ua_publication ua_publication.features.field_instance.inc
+    // See ua_publication ua_publication.features.field_instance.inc
     // First, the node title and path alias fields...
     $title_fields = array(
       'title' => t('Title'),
