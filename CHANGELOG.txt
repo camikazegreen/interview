@@ -1,3 +1,17 @@
+7.x-1.0-alpha2, 2015-10-16
+------------------------------
+- Merged in UADIGITAL-322 (pull request #10).
+- UADIGITAL-322: Changes from feature module updates.
+- Merged in mmunro-ltrr/ua_news/UADIGITAL-302 (pull request #9).
+- Limit the ua_news_photo height in the UA News node display to match the featured content banner on the front page.
+- Merged ua_drupal/ua_news into 7.x-1.x.
+- Merged in macaulay/ua_news (pull request #8).
+- Put newest news items first in the views and made the front page block respect the 'Show on Front Page' boolean.
+- Merged in mmunro-ltrr/ua_news/UADIGITAL-139 (pull request #6).
+- Remove explicit version information.
+- Add a changelog so there is always something to modify for a release.
+- Back to dev.
+
 7.x-1.0-alpha1, 2015-07-10
 --------------------------
 - Preparing to tag 7.x-1.0-alpha1.

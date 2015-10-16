@@ -60,3 +60,4 @@ features_exclude[dependencies][options] = options
 features_exclude[variable][ant_pattern_ua_news] = ant_pattern_ua_news
 features_exclude[variable][ant_php_ua_news] = ant_php_ua_news
 features_exclude[variable][ant_ua_news] = ant_ua_news
+version = 7.x-1.0-alpha2
