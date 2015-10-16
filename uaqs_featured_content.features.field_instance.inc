@@ -10,7 +10,7 @@
 function ua_featured_content_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ua_carousel_item-field_call_to_action'
+  // Exported field_instance: 'node-ua_carousel_item-field_call_to_action'.
   $field_instances['node-ua_carousel_item-field_call_to_action'] = array(
     'bundle' => 'ua_carousel_item',
     'default_value' => NULL,
@@ -74,7 +74,7 @@ function ua_featured_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_carousel_item-field_short_summary'
+  // Exported field_instance: 'node-ua_carousel_item-field_short_summary'.
   $field_instances['node-ua_carousel_item-field_short_summary'] = array(
     'bundle' => 'ua_carousel_item',
     'default_value' => NULL,
@@ -121,7 +121,7 @@ function ua_featured_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_carousel_item-field_slide_image'
+  // Exported field_instance: 'node-ua_carousel_item-field_slide_image'.
   $field_instances['node-ua_carousel_item-field_slide_image'] = array(
     'bundle' => 'ua_carousel_item',
     'deleted' => 0,
