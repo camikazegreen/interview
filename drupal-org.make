@@ -101,7 +101,7 @@ projects[ua_unit][type] = module
 projects[ua_unit][subdir] = custom
 projects[ua_unit][download][type] = git
 projects[ua_unit][download][branch] = 7.x-1.x
-projects[ua_unit][download][revision] = ef9fe0a
+projects[ua_unit][download][revision] = b654927
 projects[ua_unit][download][url] = https://bitbucket.org/ua_drupal/ua_unit.git
 
 
