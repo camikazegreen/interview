@@ -14,3 +14,4 @@ features[field_instance][] = node-ua_page-ua_page_body
 features[node][] = ua_page
 features[variable][] = node_options_ua_page
 features[variable][] = node_submitted_ua_page
+version = 7.x-1.0-alpha2
