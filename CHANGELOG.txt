@@ -1,3 +1,22 @@
+7.x-1.0-alpha2, 2015-10-16
+------------------------------
+- Merged in UADIGITAL-322 (pull request #7).
+- UADIGITAL-322: Changes from feature module updates.
+- Merged in mmunro-ltrr/ua_person/UADIGITAL-302 (pull request #6).
+- Remove padding from the former colored area (from @macaulay).
+- Remove the colored background from .group-ua-person-contact-area in the individual node display.
+- Constrain the size of the image on the UA Person node display, using a 360x360px image style.
+- Merged ua_drupal/ua_person into 7.x-1.x.
+- Merged in macaulay/ua_person (pull request #5).
+- Renamed directory view from 'UA Person Directory' to 'Directory'.
+- UADIGITAL-158: Merged in macaulay/ua_person (pull request #4) 7.x 1.x.
+- README.md edited online with Bitbucket.
+- Added new view option for person directory (located at /person-list). Will update readme.md next.
+- Merged in mmunro-ltrr/ua_person/UADIGITAL-139 (pull request #3).
+- Remove explicit version information.
+- Add a changelog so there is always something to modify for a release.
+- Back to dev.
+
 7.x-1.0-alpha1, 2015-07-10
 --------------------------
 - Preparing to tag 7.x-1.0-alpha1.
