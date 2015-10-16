@@ -10,7 +10,7 @@
 function ua_unit_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_ua_unit_contact'
+  // Exported field_base: 'field_ua_unit_contact'.
   $field_bases['field_ua_unit_contact'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -31,7 +31,7 @@ function ua_unit_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_unit_focus_areas'
+  // Exported field_base: 'field_ua_unit_focus_areas'.
   $field_bases['field_ua_unit_focus_areas'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -57,7 +57,7 @@ function ua_unit_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_ua_unit_leadership_info'
+  // Exported field_base: 'field_ua_unit_leadership_info'.
   $field_bases['field_ua_unit_leadership_info'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -76,7 +76,7 @@ function ua_unit_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_ua_unit_location'
+  // Exported field_base: 'field_ua_unit_location'.
   $field_bases['field_ua_unit_location'] = array(
     'active' => 1,
     'cardinality' => 1,
