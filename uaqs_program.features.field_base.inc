@@ -10,7 +10,7 @@
 function ua_program_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_ua_program_focus_areas'
+  // Exported field_base: 'field_ua_program_focus_areas'.
   $field_bases['field_ua_program_focus_areas'] = array(
     'active' => 1,
     'cardinality' => -1,
