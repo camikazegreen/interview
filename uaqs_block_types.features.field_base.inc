@@ -10,7 +10,7 @@
 function ua_block_types_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_ua_blurb_text'
+  // Exported field_base: 'field_ua_blurb_text'.
   $field_bases['field_ua_blurb_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -29,7 +29,7 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_ua_contact_address'
+  // Exported field_base: 'field_ua_contact_address'.
   $field_bases['field_ua_contact_address'] = array(
     'active' => 1,
     'cardinality' => 3,
@@ -50,7 +50,7 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_contact_email'
+  // Exported field_base: 'field_ua_contact_email'.
   $field_bases['field_ua_contact_email'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -79,7 +79,7 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_contact_phone'
+  // Exported field_base: 'field_ua_contact_phone'.
   $field_bases['field_ua_contact_phone'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -108,7 +108,7 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_image_author'
+  // Exported field_base: 'field_ua_image_author'.
   $field_bases['field_ua_image_author'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -137,7 +137,7 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_image_caption'
+  // Exported field_base: 'field_ua_image_caption'.
   $field_bases['field_ua_image_caption'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -156,7 +156,7 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_ua_image_license'
+  // Exported field_base: 'field_ua_image_license'.
   $field_bases['field_ua_image_license'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -185,7 +185,7 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_image_title'
+  // Exported field_base: 'field_ua_image_title'.
   $field_bases['field_ua_image_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -214,7 +214,7 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_isolated_image'
+  // Exported field_base: 'field_ua_isolated_image'.
   $field_bases['field_ua_isolated_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -236,7 +236,7 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ua_prettylink_image'
+  // Exported field_base: 'field_ua_prettylink_image'.
   $field_bases['field_ua_prettylink_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -258,7 +258,7 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ua_prettylink_link'
+  // Exported field_base: 'field_ua_prettylink_link'.
   $field_bases['field_ua_prettylink_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -287,7 +287,7 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_read_more'
+  // Exported field_base: 'field_ua_read_more'.
   $field_bases['field_ua_read_more'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -316,7 +316,7 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_supporting_image'
+  // Exported field_base: 'field_ua_supporting_image'.
   $field_bases['field_ua_supporting_image'] = array(
     'active' => 1,
     'cardinality' => 1,

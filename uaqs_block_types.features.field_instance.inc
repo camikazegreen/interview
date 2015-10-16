@@ -10,7 +10,7 @@
 function ua_block_types_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'bean-ua_captioned_image-field_ua_image_author'
+  // Exported field_instance: 'bean-ua_captioned_image-field_ua_image_author'.
   $field_instances['bean-ua_captioned_image-field_ua_image_author'] = array(
     'bundle' => 'ua_captioned_image',
     'default_value' => NULL,
@@ -61,7 +61,7 @@ function ua_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-ua_captioned_image-field_ua_image_caption'
+  // Exported field_instance: 'bean-ua_captioned_image-field_ua_image_caption'.
   $field_instances['bean-ua_captioned_image-field_ua_image_caption'] = array(
     'bundle' => 'ua_captioned_image',
     'default_value' => NULL,
@@ -95,7 +95,7 @@ function ua_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-ua_captioned_image-field_ua_image_license'
+  // Exported field_instance: 'bean-ua_captioned_image-field_ua_image_license'.
   $field_instances['bean-ua_captioned_image-field_ua_image_license'] = array(
     'bundle' => 'ua_captioned_image',
     'default_value' => NULL,
@@ -146,7 +146,7 @@ function ua_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-ua_captioned_image-field_ua_image_title'
+  // Exported field_instance: 'bean-ua_captioned_image-field_ua_image_title'.
   $field_instances['bean-ua_captioned_image-field_ua_image_title'] = array(
     'bundle' => 'ua_captioned_image',
     'default_value' => NULL,
@@ -197,7 +197,7 @@ function ua_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-ua_captioned_image-field_ua_isolated_image'
+  // Exported field_instance: 'bean-ua_captioned_image-field_ua_isolated_image'.
   $field_instances['bean-ua_captioned_image-field_ua_isolated_image'] = array(
     'bundle' => 'ua_captioned_image',
     'deleted' => 0,
@@ -241,7 +241,8 @@ function ua_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-ua_contact_summary-field_ua_contact_address'
+  // Exported field_instance:
+  // 'bean-ua_contact_summary-field_ua_contact_address'.
   $field_instances['bean-ua_contact_summary-field_ua_contact_address'] = array(
     'bundle' => 'ua_contact_summary',
     'default_value' => NULL,
@@ -275,7 +276,7 @@ function ua_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-ua_contact_summary-field_ua_contact_email'
+  // Exported field_instance: 'bean-ua_contact_summary-field_ua_contact_email'.
   $field_instances['bean-ua_contact_summary-field_ua_contact_email'] = array(
     'bundle' => 'ua_contact_summary',
     'default_value' => NULL,
@@ -326,7 +327,7 @@ function ua_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-ua_contact_summary-field_ua_contact_phone'
+  // Exported field_instance: 'bean-ua_contact_summary-field_ua_contact_phone'.
   $field_instances['bean-ua_contact_summary-field_ua_contact_phone'] = array(
     'bundle' => 'ua_contact_summary',
     'default_value' => NULL,
@@ -377,7 +378,7 @@ function ua_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-ua_illustrated_blurb-field_ua_blurb_text'
+  // Exported field_instance: 'bean-ua_illustrated_blurb-field_ua_blurb_text'.
   $field_instances['bean-ua_illustrated_blurb-field_ua_blurb_text'] = array(
     'bundle' => 'ua_illustrated_blurb',
     'default_value' => NULL,
@@ -411,7 +412,7 @@ function ua_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-ua_illustrated_blurb-field_ua_read_more'
+  // Exported field_instance: 'bean-ua_illustrated_blurb-field_ua_read_more'.
   $field_instances['bean-ua_illustrated_blurb-field_ua_read_more'] = array(
     'bundle' => 'ua_illustrated_blurb',
     'default_value' => NULL,
@@ -463,7 +464,7 @@ function ua_block_types_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'bean-ua_illustrated_blurb-field_ua_supporting_image'
+  // 'bean-ua_illustrated_blurb-field_ua_supporting_image'.
   $field_instances['bean-ua_illustrated_blurb-field_ua_supporting_image'] = array(
     'bundle' => 'ua_illustrated_blurb',
     'deleted' => 0,
@@ -508,7 +509,7 @@ function ua_block_types_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'bean-ua_illustrated_link-field_ua_prettylink_image'
+  // 'bean-ua_illustrated_link-field_ua_prettylink_image'.
   $field_instances['bean-ua_illustrated_link-field_ua_prettylink_image'] = array(
     'bundle' => 'ua_illustrated_link',
     'deleted' => 0,
@@ -553,7 +554,7 @@ function ua_block_types_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'bean-ua_illustrated_link-field_ua_prettylink_link'
+  // 'bean-ua_illustrated_link-field_ua_prettylink_link'.
   $field_instances['bean-ua_illustrated_link-field_ua_prettylink_link'] = array(
     'bundle' => 'ua_illustrated_link',
     'default_value' => NULL,
@@ -604,7 +605,7 @@ function ua_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-ua_mini_blurb-field_ua_blurb_text'
+  // Exported field_instance: 'bean-ua_mini_blurb-field_ua_blurb_text'.
   $field_instances['bean-ua_mini_blurb-field_ua_blurb_text'] = array(
     'bundle' => 'ua_mini_blurb',
     'default_value' => NULL,
@@ -649,8 +650,6 @@ function ua_block_types_field_default_field_instances() {
   t('Email');
   t('General email address for this contact.');
   t('General phone number for the contact (use the form tel:+1-520-999-9999 for the URL).');
-  t('Heading');
-  t('Heading for a short piece of text.');
   t('Image');
   t('Image to associate with this link (there is no way to credit the image, so be sure you have appropriate rights to it).');
   t('License');
@@ -661,9 +660,8 @@ function ua_block_types_field_default_field_instances() {
   t('Phone');
   t('Read More');
   t('Short piece of text (only one or two paragraphs).');
+  t('Source title');
   t('Text');
-  t('The heading or title for the short piece of text.');
-  t('Title');
   t('Title for the image (original title preferred), optionally linked to the best source for the original.');
   t('Use to credit to the original author or authors of the image, and optionally link to a URL with more information.');
 
