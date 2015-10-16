@@ -10,7 +10,7 @@
 function ua_page_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ua_page-ua_page_body'
+  // Exported field_instance: 'node-ua_page-ua_page_body'.
   $field_instances['node-ua_page-ua_page_body'] = array(
     'bundle' => 'ua_page',
     'default_value' => NULL,
