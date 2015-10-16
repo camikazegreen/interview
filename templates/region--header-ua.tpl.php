@@ -31,15 +31,14 @@
  * @ingroup themeable
  */
 ?>
-<header id="header_ua" class="<?php print $classes; ?> l-arizona-header bg-cochineal-red">
-  <div class="ua-redbar-v1">
-    <nav role="navigation" class="redbar navbar-static-top">
-      <div class="container">
-        <div class="row">
-          <div class="navbar-header"><a href="http://www.arizona.edu" class="redbar-brand">
-              <p>The University of Arizona</p></a></div>
+<header id="header_ua" class="l-arizona-header bg-red bg-cochineal-red">
+    <section class="container l-container">
+      <div class="row">
+        <div class="col-xs-12">
+          <a href="http://www.arizona.edu" title="The University of Arizona homepage" class="arizona-logo">
+            <img alt="The University of Arizona Wordmark Line Logo White" src="https://brand.arizona.edu/sites/default/files/digital-resources/ua_wordmark_line_logo_white_rgb.svg" class="arizona-line-logo">
+          </a>
         </div>
       </div>
-    </nav>
-  </div>
+    </section>
 </header>
