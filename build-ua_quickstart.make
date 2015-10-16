@@ -11,5 +11,5 @@ includes[] = drupal-org-core.make
 ; Download install profile and recursively build all its dependencies.
 projects[ua_quickstart][type] = profile
 projects[ua_quickstart][download][type] = git
-projects[ua_quickstart][download][branch] = 7.x-1.x
+projects[ua_quickstart][download][tag] = 7.x-1.0-alpha2
 projects[ua_quickstart][download][url] = https://bitbucket.org/ua_drupal/ua_quickstart.git
