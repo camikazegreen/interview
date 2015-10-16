@@ -10,7 +10,7 @@ projects[ua_block_types][type] = module
 projects[ua_block_types][subdir] = custom
 projects[ua_block_types][download][type] = git
 projects[ua_block_types][download][branch] = 7.x-1.x
-projects[ua_block_types][download][revision] = 1e27e3a
+projects[ua_block_types][download][revision] = 89372cd
 projects[ua_block_types][download][url] = https://bitbucket.org/ua_drupal/ua_block_types.git
 
 projects[ua_cas][type] = module
