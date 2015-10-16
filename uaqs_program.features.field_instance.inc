@@ -10,7 +10,7 @@
 function ua_program_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ua_program-field_ua_program_focus_areas'
+  // Exported field_instance: 'node-ua_program-field_ua_program_focus_areas'.
   $field_instances['node-ua_program-field_ua_program_focus_areas'] = array(
     'bundle' => 'ua_program',
     'default_value' => NULL,
