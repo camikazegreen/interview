@@ -10,7 +10,7 @@
 function ua_person_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_ua_person_addresses'
+  // Exported field_base: 'field_ua_person_addresses'.
   $field_bases['field_ua_person_addresses'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -29,7 +29,7 @@ function ua_person_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_ua_person_bio'
+  // Exported field_base: 'field_ua_person_bio'.
   $field_bases['field_ua_person_bio'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -48,7 +48,7 @@ function ua_person_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_ua_person_email'
+  // Exported field_base: 'field_ua_person_email'.
   $field_bases['field_ua_person_email'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -63,7 +63,7 @@ function ua_person_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_ua_person_fname'
+  // Exported field_base: 'field_ua_person_fname'.
   $field_bases['field_ua_person_fname'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -84,7 +84,7 @@ function ua_person_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_person_lname'
+  // Exported field_base: 'field_ua_person_lname'.
   $field_bases['field_ua_person_lname'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -105,7 +105,7 @@ function ua_person_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_person_phones'
+  // Exported field_base: 'field_ua_person_phones'.
   $field_bases['field_ua_person_phones'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -126,7 +126,7 @@ function ua_person_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_person_photo'
+  // Exported field_base: 'field_ua_person_photo'.
   $field_bases['field_ua_person_photo'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -148,7 +148,7 @@ function ua_person_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ua_person_titles'
+  // Exported field_base: 'field_ua_person_titles'.
   $field_bases['field_ua_person_titles'] = array(
     'active' => 1,
     'cardinality' => -1,

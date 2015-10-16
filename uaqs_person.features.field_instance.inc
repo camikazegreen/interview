@@ -10,7 +10,7 @@
 function ua_person_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ua_person-field_ua_person_addresses'
+  // Exported field_instance: 'node-ua_person-field_ua_person_addresses'.
   $field_instances['node-ua_person-field_ua_person_addresses'] = array(
     'bundle' => 'ua_person',
     'default_value' => NULL,
@@ -52,7 +52,7 @@ function ua_person_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_person-field_ua_person_bio'
+  // Exported field_instance: 'node-ua_person-field_ua_person_bio'.
   $field_instances['node-ua_person-field_ua_person_bio'] = array(
     'bundle' => 'ua_person',
     'default_value' => NULL,
@@ -94,7 +94,7 @@ function ua_person_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_person-field_ua_person_email'
+  // Exported field_instance: 'node-ua_person-field_ua_person_email'.
   $field_instances['node-ua_person-field_ua_person_email'] = array(
     'bundle' => 'ua_person',
     'default_value' => NULL,
@@ -133,7 +133,7 @@ function ua_person_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_person-field_ua_person_fname'
+  // Exported field_instance: 'node-ua_person-field_ua_person_fname'.
   $field_instances['node-ua_person-field_ua_person_fname'] = array(
     'bundle' => 'ua_person',
     'default_value' => NULL,
@@ -172,7 +172,7 @@ function ua_person_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_person-field_ua_person_lname'
+  // Exported field_instance: 'node-ua_person-field_ua_person_lname'.
   $field_instances['node-ua_person-field_ua_person_lname'] = array(
     'bundle' => 'ua_person',
     'default_value' => NULL,
@@ -211,7 +211,7 @@ function ua_person_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_person-field_ua_person_phones'
+  // Exported field_instance: 'node-ua_person-field_ua_person_phones'.
   $field_instances['node-ua_person-field_ua_person_phones'] = array(
     'bundle' => 'ua_person',
     'default_value' => NULL,
@@ -251,7 +251,7 @@ function ua_person_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_person-field_ua_person_photo'
+  // Exported field_instance: 'node-ua_person-field_ua_person_photo'.
   $field_instances['node-ua_person-field_ua_person_photo'] = array(
     'bundle' => 'ua_person',
     'deleted' => 0,
@@ -301,7 +301,7 @@ function ua_person_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_person-field_ua_person_titles'
+  // Exported field_instance: 'node-ua_person-field_ua_person_titles'.
   $field_instances['node-ua_person-field_ua_person_titles'] = array(
     'bundle' => 'ua_person',
     'default_value' => NULL,
