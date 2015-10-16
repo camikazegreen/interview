@@ -106,6 +106,10 @@ for r in $UAQSPROJECTS ; do
   git add "$r.info"
   git commit -m "Back to dev."
 
+  printf "Cleaning up...\n"
+  # Delete temporary tag.
+  git tag -d "$UAQSTMPTAG"
+
   if [ "$push_mode" == "1" ]; then
     printf "Pushing to origin...\n"
     git push origin 7.x-1.x
@@ -125,9 +129,6 @@ for r in $UAQSPROJECTS ; do
   # Update project commit hash in distro's default drupal-org.make file.
   sed -i '' -E "/$r.*revision/s/.{7}$/$UAQSNEWHASH/" ../../drupal-org.make
  
-  printf "Cleaning up...\n"
-  # Delete temporary tag.
-  git tag -d "$UAQSTMPTAG"
   cd ..
 done
 
@@ -181,14 +182,14 @@ sed -i '' "/version = /d" ua_quickstart.info
 git add drupal-org.make build-ua_quickstart.make ua_quickstart.info
 git commit -m "Back to dev."
 
-if [ "$push_mode" == "1" ]; then
-  printf "Pushing to origin...\n"
-  git push origin 7.x-1.x
-  git push origin --tags
-fi
-
 printf "Cleaning up...\n"
 # Delete temporary tag.
 git tag -d "$UAQSTMPTAG"
 # Cleanup temporary folder.
 #rm -Rf release_tmp
+
+if [ "$push_mode" == "1" ]; then
+  printf "Pushing to origin...\n"
+  git push origin 7.x-1.x
+  git push origin --tags
+fi
