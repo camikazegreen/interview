@@ -58,7 +58,7 @@ projects[link][version] = 1.3
 
 projects[defaultconfig][version] = 1.0-alpha11
 
-projects[features][version] = 2.6
+projects[features][version] = 2.7
 
 projects[migrate][version] = 2.8
 
