@@ -11,3 +11,4 @@ features[features_api][] = api:2
 features[variable][] = jquery_update_jquery_admin_version
 features[variable][] = jquery_update_jquery_version
 features[variable][] = menu_secondary_links_source
+version = 7.x-1.0-alpha2
