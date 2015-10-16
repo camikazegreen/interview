@@ -63,3 +63,4 @@ features[variable][] = node_submitted_ua_event
 features[views_view][] = ua_events
 features_exclude[dependencies][file] = file
 features_exclude[dependencies][options] = options
+version = 7.x-1.0-alpha2

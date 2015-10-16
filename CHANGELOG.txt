@@ -1,3 +1,18 @@
+7.x-1.0-alpha2, 2015-10-16
+------------------------------
+- Merged in UADIGITAL-322 (pull request #9).
+- UADIGITAL-322: Changes from features & date module updates.
+- Merged in mmunro-ltrr/ua_event/UADIGITAL-302 (pull request #8).
+- Apply an image style limiting the ua_event_photo to a height of 460px.
+- Merged ua_drupal/ua_event into 7.x-1.x.
+- UADIGITAL-232: Merged in macaulay/ua_event (pull request #7).
+- Renamed full calendar page to 'Calendar' kept title as 'Events' on block display.
+- Removed 'UA' from view's page title.
+- Merged in mmunro-ltrr/ua_event/UADIGITAL-139 (pull request #6).
+- Remove explicit version information.
+- Add a changelog so there is always something to modify for a release.
+- Back to dev.
+
 7.x-1.0-alpha1, 2015-07-10
 --------------------------
 - Preparing to tag 7.x-1.0-alpha1.
