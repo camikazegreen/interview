@@ -10,7 +10,7 @@
 function ua_unit_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ua_unit-field_ua_unit_contact'
+  // Exported field_instance: 'node-ua_unit-field_ua_unit_contact'.
   $field_instances['node-ua_unit-field_ua_unit_contact'] = array(
     'bundle' => 'ua_unit',
     'default_value' => NULL,
@@ -50,7 +50,7 @@ function ua_unit_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_unit-field_ua_unit_focus_areas'
+  // Exported field_instance: 'node-ua_unit-field_ua_unit_focus_areas'.
   $field_instances['node-ua_unit-field_ua_unit_focus_areas'] = array(
     'bundle' => 'ua_unit',
     'default_value' => NULL,
@@ -90,7 +90,7 @@ function ua_unit_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_unit-field_ua_unit_leadership_info'
+  // Exported field_instance: 'node-ua_unit-field_ua_unit_leadership_info'.
   $field_instances['node-ua_unit-field_ua_unit_leadership_info'] = array(
     'bundle' => 'ua_unit',
     'default_value' => NULL,
@@ -132,7 +132,7 @@ function ua_unit_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_unit-field_ua_unit_location'
+  // Exported field_instance: 'node-ua_unit-field_ua_unit_location'.
   $field_instances['node-ua_unit-field_ua_unit_location'] = array(
     'bundle' => 'ua_unit',
     'default_value' => NULL,
