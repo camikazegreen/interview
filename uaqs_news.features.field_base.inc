@@ -10,7 +10,7 @@
 function ua_news_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_expiration_date'
+  // Exported field_base: 'field_expiration_date'.
   $field_bases['field_expiration_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -40,7 +40,7 @@ function ua_news_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_ua_news_attachments'
+  // Exported field_base: 'field_ua_news_attachments'.
   $field_bases['field_ua_news_attachments'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -63,7 +63,7 @@ function ua_news_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_ua_news_body'
+  // Exported field_base: 'field_ua_news_body'.
   $field_bases['field_ua_news_body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -82,7 +82,7 @@ function ua_news_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_ua_news_byline'
+  // Exported field_base: 'field_ua_news_byline'.
   $field_bases['field_ua_news_byline'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -103,7 +103,7 @@ function ua_news_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_news_contact_email'
+  // Exported field_base: 'field_ua_news_contact_email'.
   $field_bases['field_ua_news_contact_email'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -118,7 +118,7 @@ function ua_news_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_ua_news_contact_name'
+  // Exported field_base: 'field_ua_news_contact_name'.
   $field_bases['field_ua_news_contact_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -139,7 +139,7 @@ function ua_news_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_news_contact_phone'
+  // Exported field_base: 'field_ua_news_contact_phone'.
   $field_bases['field_ua_news_contact_phone'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -160,7 +160,7 @@ function ua_news_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_news_contacts'
+  // Exported field_base: 'field_ua_news_contacts'.
   $field_bases['field_ua_news_contacts'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -182,7 +182,7 @@ function ua_news_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_ua_news_front'
+  // Exported field_base: 'field_ua_news_front'.
   $field_bases['field_ua_news_front'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -207,7 +207,7 @@ function ua_news_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_ua_news_more_info'
+  // Exported field_base: 'field_ua_news_more_info'.
   $field_bases['field_ua_news_more_info'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -236,7 +236,7 @@ function ua_news_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_news_photo'
+  // Exported field_base: 'field_ua_news_photo'.
   $field_bases['field_ua_news_photo'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -258,7 +258,7 @@ function ua_news_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ua_news_published'
+  // Exported field_base: 'field_ua_news_published'.
   $field_bases['field_ua_news_published'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -288,7 +288,7 @@ function ua_news_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_ua_news_short_title'
+  // Exported field_base: 'field_ua_news_short_title'.
   $field_bases['field_ua_news_short_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -309,7 +309,7 @@ function ua_news_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_news_summary'
+  // Exported field_base: 'field_ua_news_summary'.
   $field_bases['field_ua_news_summary'] = array(
     'active' => 1,
     'cardinality' => 1,
