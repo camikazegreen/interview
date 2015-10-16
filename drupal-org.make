@@ -73,7 +73,7 @@ projects[ua_page][type] = module
 projects[ua_page][subdir] = custom
 projects[ua_page][download][type] = git
 projects[ua_page][download][branch] = 7.x-1.x
-projects[ua_page][download][revision] = 5bfb8c8
+projects[ua_page][download][revision] = 386b791
 projects[ua_page][download][url] = https://bitbucket.org/ua_drupal/ua_page.git
 
 projects[ua_person][type] = module
