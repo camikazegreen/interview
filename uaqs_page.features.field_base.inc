@@ -10,7 +10,7 @@
 function ua_page_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'ua_page_body'
+  // Exported field_base: 'ua_page_body'.
   $field_bases['ua_page_body'] = array(
     'active' => 1,
     'cardinality' => 1,
