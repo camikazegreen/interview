@@ -22,4 +22,3 @@ files[] = import/ua_demo_event.inc
 files[] = import/ua_demo_publication.inc
 files[] = import/ua_demo_program.inc
 files[] = import/ua_demo_navigation.inc
-version = 7.x-1.0-alpha2
