@@ -49,4 +49,3 @@ features[variable][] = node_preview_ua_person
 features[variable][] = node_submitted_ua_person
 features[views_view][] = ua_person_directory
 features_exclude[dependencies][ctools] = ctools
-version = 7.x-1.0-alpha2
