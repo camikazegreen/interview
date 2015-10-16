@@ -10,7 +10,8 @@
 function ua_event_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'field_collection_item-field_ua_event_contacts-field_ua_email_contact_phone'
+  // Exported field_instance:
+  // 'field_collection_item-field_ua_event_contacts-field_ua_email_contact_phone'.
   $field_instances['field_collection_item-field_ua_event_contacts-field_ua_email_contact_phone'] = array(
     'bundle' => 'field_ua_event_contacts',
     'default_value' => NULL,
@@ -44,7 +45,8 @@ function ua_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_ua_event_contacts-field_ua_event_contact_email'
+  // Exported field_instance:
+  // 'field_collection_item-field_ua_event_contacts-field_ua_event_contact_email'.
   $field_instances['field_collection_item-field_ua_event_contacts-field_ua_event_contact_email'] = array(
     'bundle' => 'field_ua_event_contacts',
     'default_value' => NULL,
@@ -77,7 +79,8 @@ function ua_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_ua_event_contacts-field_ua_event_contact_name'
+  // Exported field_instance:
+  // 'field_collection_item-field_ua_event_contacts-field_ua_event_contact_name'.
   $field_instances['field_collection_item-field_ua_event_contacts-field_ua_event_contact_name'] = array(
     'bundle' => 'field_ua_event_contacts',
     'default_value' => NULL,
@@ -111,7 +114,7 @@ function ua_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_event-field_ua_event_attachments'
+  // Exported field_instance: 'node-ua_event-field_ua_event_attachments'.
   $field_instances['node-ua_event-field_ua_event_attachments'] = array(
     'bundle' => 'ua_event',
     'deleted' => 0,
@@ -153,7 +156,7 @@ function ua_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_event-field_ua_event_contacts'
+  // Exported field_instance: 'node-ua_event-field_ua_event_contacts'.
   $field_instances['node-ua_event-field_ua_event_contacts'] = array(
     'bundle' => 'ua_event',
     'default_value' => NULL,
@@ -192,7 +195,7 @@ function ua_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_event-field_ua_event_date'
+  // Exported field_instance: 'node-ua_event-field_ua_event_date'.
   $field_instances['node-ua_event-field_ua_event_date'] = array(
     'bundle' => 'ua_event',
     'deleted' => 0,
@@ -249,7 +252,7 @@ function ua_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_event-field_ua_event_description'
+  // Exported field_instance: 'node-ua_event-field_ua_event_description'.
   $field_instances['node-ua_event-field_ua_event_description'] = array(
     'bundle' => 'ua_event',
     'default_value' => NULL,
@@ -291,7 +294,7 @@ function ua_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_event-field_ua_event_front'
+  // Exported field_instance: 'node-ua_event-field_ua_event_front'.
   $field_instances['node-ua_event-field_ua_event_front'] = array(
     'bundle' => 'ua_event',
     'default_value' => array(
@@ -333,7 +336,7 @@ function ua_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_event-field_ua_event_location'
+  // Exported field_instance: 'node-ua_event-field_ua_event_location'.
   $field_instances['node-ua_event-field_ua_event_location'] = array(
     'bundle' => 'ua_event',
     'default_value' => NULL,
@@ -393,7 +396,7 @@ If there is no map, simply fill in the location name or address in the title fie
     ),
   );
 
-  // Exported field_instance: 'node-ua_event-field_ua_event_more_info'
+  // Exported field_instance: 'node-ua_event-field_ua_event_more_info'.
   $field_instances['node-ua_event-field_ua_event_more_info'] = array(
     'bundle' => 'ua_event',
     'default_value' => NULL,
@@ -450,7 +453,7 @@ If there is no map, simply fill in the location name or address in the title fie
     ),
   );
 
-  // Exported field_instance: 'node-ua_event-field_ua_event_photo'
+  // Exported field_instance: 'node-ua_event-field_ua_event_photo'.
   $field_instances['node-ua_event-field_ua_event_photo'] = array(
     'bundle' => 'ua_event',
     'deleted' => 0,
@@ -500,7 +503,7 @@ If there is no map, simply fill in the location name or address in the title fie
     ),
   );
 
-  // Exported field_instance: 'node-ua_event-field_ua_event_short_title'
+  // Exported field_instance: 'node-ua_event-field_ua_event_short_title'.
   $field_instances['node-ua_event-field_ua_event_short_title'] = array(
     'bundle' => 'ua_event',
     'default_value' => NULL,
@@ -539,7 +542,7 @@ If there is no map, simply fill in the location name or address in the title fie
     ),
   );
 
-  // Exported field_instance: 'node-ua_event-field_ua_event_summary'
+  // Exported field_instance: 'node-ua_event-field_ua_event_summary'.
   $field_instances['node-ua_event-field_ua_event_summary'] = array(
     'bundle' => 'ua_event',
     'default_value' => NULL,

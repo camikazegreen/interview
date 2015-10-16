@@ -10,7 +10,7 @@
 function ua_event_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_ua_email_contact_phone'
+  // Exported field_base: 'field_ua_email_contact_phone'.
   $field_bases['field_ua_email_contact_phone'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -31,7 +31,7 @@ function ua_event_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_event_attachments'
+  // Exported field_base: 'field_ua_event_attachments'.
   $field_bases['field_ua_event_attachments'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -54,7 +54,7 @@ function ua_event_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_ua_event_contact_email'
+  // Exported field_base: 'field_ua_event_contact_email'.
   $field_bases['field_ua_event_contact_email'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -69,7 +69,7 @@ function ua_event_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_ua_event_contact_name'
+  // Exported field_base: 'field_ua_event_contact_name'.
   $field_bases['field_ua_event_contact_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -90,7 +90,7 @@ function ua_event_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_event_contacts'
+  // Exported field_base: 'field_ua_event_contacts'.
   $field_bases['field_ua_event_contacts'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -112,7 +112,7 @@ function ua_event_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_ua_event_date'
+  // Exported field_base: 'field_ua_event_date'.
   $field_bases['field_ua_event_date'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -142,7 +142,7 @@ function ua_event_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_ua_event_description'
+  // Exported field_base: 'field_ua_event_description'.
   $field_bases['field_ua_event_description'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -161,7 +161,7 @@ function ua_event_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_ua_event_front'
+  // Exported field_base: 'field_ua_event_front'.
   $field_bases['field_ua_event_front'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -186,7 +186,7 @@ function ua_event_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_ua_event_location'
+  // Exported field_base: 'field_ua_event_location'.
   $field_bases['field_ua_event_location'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -215,7 +215,7 @@ function ua_event_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_event_more_info'
+  // Exported field_base: 'field_ua_event_more_info'.
   $field_bases['field_ua_event_more_info'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -244,7 +244,7 @@ function ua_event_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_event_photo'
+  // Exported field_base: 'field_ua_event_photo'.
   $field_bases['field_ua_event_photo'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -266,7 +266,7 @@ function ua_event_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ua_event_short_title'
+  // Exported field_base: 'field_ua_event_short_title'.
   $field_bases['field_ua_event_short_title'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -287,7 +287,7 @@ function ua_event_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_event_summary'
+  // Exported field_base: 'field_ua_event_summary'.
   $field_bases['field_ua_event_summary'] = array(
     'active' => 1,
     'cardinality' => 1,
