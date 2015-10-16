@@ -10,7 +10,7 @@
 function ua_publication_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_ua_pub_addinfo'
+  // Exported field_base: 'field_ua_pub_addinfo'.
   $field_bases['field_ua_pub_addinfo'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -39,7 +39,7 @@ function ua_publication_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_pub_authors'
+  // Exported field_base: 'field_ua_pub_authors'.
   $field_bases['field_ua_pub_authors'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -60,7 +60,7 @@ function ua_publication_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_pub_date'
+  // Exported field_base: 'field_ua_pub_date'.
   $field_bases['field_ua_pub_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -90,7 +90,7 @@ function ua_publication_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_ua_pub_description'
+  // Exported field_base: 'field_ua_pub_description'.
   $field_bases['field_ua_pub_description'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -109,7 +109,7 @@ function ua_publication_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_ua_pub_photo'
+  // Exported field_base: 'field_ua_pub_photo'.
   $field_bases['field_ua_pub_photo'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -131,7 +131,7 @@ function ua_publication_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ua_pub_related_pubs'
+  // Exported field_base: 'field_ua_pub_related_pubs'.
   $field_bases['field_ua_pub_related_pubs'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -166,7 +166,7 @@ function ua_publication_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_ua_pub_research_categories'
+  // Exported field_base: 'field_ua_pub_research_categories'.
   $field_bases['field_ua_pub_research_categories'] = array(
     'active' => 1,
     'cardinality' => -1,

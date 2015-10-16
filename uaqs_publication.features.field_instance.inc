@@ -10,7 +10,7 @@
 function ua_publication_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ua_pub-field_ua_pub_addinfo'
+  // Exported field_instance: 'node-ua_pub-field_ua_pub_addinfo'.
   $field_instances['node-ua_pub-field_ua_pub_addinfo'] = array(
     'bundle' => 'ua_pub',
     'default_value' => NULL,
@@ -67,7 +67,7 @@ function ua_publication_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_pub-field_ua_pub_authors'
+  // Exported field_instance: 'node-ua_pub-field_ua_pub_authors'.
   $field_instances['node-ua_pub-field_ua_pub_authors'] = array(
     'bundle' => 'ua_pub',
     'default_value' => NULL,
@@ -107,7 +107,7 @@ function ua_publication_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_pub-field_ua_pub_date'
+  // Exported field_instance: 'node-ua_pub-field_ua_pub_date'.
   $field_instances['node-ua_pub-field_ua_pub_date'] = array(
     'bundle' => 'ua_pub',
     'deleted' => 0,
@@ -165,7 +165,7 @@ function ua_publication_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_pub-field_ua_pub_description'
+  // Exported field_instance: 'node-ua_pub-field_ua_pub_description'.
   $field_instances['node-ua_pub-field_ua_pub_description'] = array(
     'bundle' => 'ua_pub',
     'default_value' => NULL,
@@ -207,7 +207,7 @@ function ua_publication_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_pub-field_ua_pub_photo'
+  // Exported field_instance: 'node-ua_pub-field_ua_pub_photo'.
   $field_instances['node-ua_pub-field_ua_pub_photo'] = array(
     'bundle' => 'ua_pub',
     'deleted' => 0,
@@ -257,7 +257,7 @@ function ua_publication_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_pub-field_ua_pub_related_pubs'
+  // Exported field_instance: 'node-ua_pub-field_ua_pub_related_pubs'.
   $field_instances['node-ua_pub-field_ua_pub_related_pubs'] = array(
     'bundle' => 'ua_pub',
     'default_value' => NULL,
@@ -300,7 +300,7 @@ function ua_publication_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_pub-field_ua_pub_research_categories'
+  // Exported field_instance: 'node-ua_pub-field_ua_pub_research_categories'.
   $field_instances['node-ua_pub-field_ua_pub_research_categories'] = array(
     'bundle' => 'ua_pub',
     'default_value' => NULL,
