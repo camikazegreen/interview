@@ -1,3 +1,12 @@
+7.x-1.0-alpha2, 2015-10-16
+------------------------------
+- Merged in UADIGITAL-322 (pull request #2).
+- UADIGITAL-322: Changes from features module updates.
+- Merged in mmunro-ltrr/ua_publication/UADIGITAL-139 (pull request #1).
+- Remove explicit version information.
+- Add a changelog so there is always something to modify for a release.
+- Back to dev.
+
 7.x-1.0-alpha1, 2015-07-10
 --------------------------
 - Preparing to tag 7.x-1.0-alpha1.
