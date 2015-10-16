@@ -94,7 +94,7 @@ projects[ua_publication][type] = module
 projects[ua_publication][subdir] = custom
 projects[ua_publication][download][type] = git
 projects[ua_publication][download][branch] = 7.x-1.x
-projects[ua_publication][download][revision] = 27fee97
+projects[ua_publication][download][revision] = abee173
 projects[ua_publication][download][url] = https://bitbucket.org/ua_drupal/ua_publication.git
 
 projects[ua_unit][type] = module
