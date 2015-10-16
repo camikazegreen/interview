@@ -10,7 +10,7 @@
 function ua_featured_content_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_call_to_action'
+  // Exported field_base: 'field_call_to_action'.
   $field_bases['field_call_to_action'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -39,7 +39,7 @@ function ua_featured_content_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_short_summary'
+  // Exported field_base: 'field_short_summary'.
   $field_bases['field_short_summary'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -60,7 +60,7 @@ function ua_featured_content_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_slide_image'
+  // Exported field_base: 'field_slide_image'.
   $field_bases['field_slide_image'] = array(
     'active' => 1,
     'cardinality' => 1,
