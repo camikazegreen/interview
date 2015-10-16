@@ -185,6 +185,8 @@ fi
 # Try synchronizing with a remote copy that everyone can see
 
 drush -y sql-sync @uaquickstarttest @kitten
-drush -y rsync @uaquickstarttest @kitten
+drush -y @kitten image-flush --all
+drush -y rsync @uaquickstarttest @kitten --delete
+drush -y @kitten cc all
 
 exit 0

@@ -3,7 +3,7 @@
  */
 casper.test.begin('Calendar page is formatted properly', 10, function suite(test) {
   casper.start("/calendar", function() {
-    test.assertTitleMatch(/UA Events/, 'has UA Events in the title');
+    test.assertTitleMatch(/Calendar/, 'has Calendar in the title');
     var header = '.date-heading';
     var date = new Date();
     test.assertSelectorHasText(header, date.getFullYear());
