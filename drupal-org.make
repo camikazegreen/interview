@@ -52,7 +52,7 @@ projects[ua_google_tag][type] = module
 projects[ua_google_tag][subdir] = custom
 projects[ua_google_tag][download][type] = git
 projects[ua_google_tag][download][branch] = 7.x-1.x
-projects[ua_google_tag][download][revision] = bfba545
+projects[ua_google_tag][download][revision] = ad8f90c
 projects[ua_google_tag][download][url] = https://bitbucket.org/ua_drupal/ua_google_tag.git
 
 projects[ua_navigation][type] = module
