@@ -1,3 +1,30 @@
+UA Demo Content 7.x-1.0-alpha2, 2015-10-15
+----------------------------------------------
+- Merged in mmunro-ltrr/ua_demo/UADIGITAL-316 (pull request #15).
+- UADIGITAL-262: Update publications, programs and units in demo content.
+- Fix unrelated code and comment formatting cosmetics.
+- Add a fourth image to the UA Featured Content slidshow, split the third item filler text.
+- Merged ua_drupal/ua_demo into 7.x-1.x.
+- Merged in UADIGITAL-310 (pull request #14).
+- UADIGITAL-310: Expanding demo People menu item for dropdown nav.
+- UADIGITAL-212: Merged in trackleft/ua_demo/UADIGITAL-212-main-navigation-should-use (pull request #12).
+- UADIGITAL-228: Expand a terse expression to avoid syntax errors under the old PHP 5.3, without breaking recent PHP versions.
+- UADIGITAL-228.
+- Merged 7.x-1.x into UADIGITAL-212-main-navigation-should-use.
+- Merged in mmunro-ltrr/ua_demo/UADIGITAL-201 (pull request #11).
+- Expand menu items.
+- Correct English syntax, attempt paragraph breaks.
+- Add new UA News content with ua_news_front set false.
+- Set the front flag on the existing news content (the field, not the node property).
+- Merged in mmunro-ltrr/ua_demo/UADIGITAL-190 (pull request #10).
+- Add menu links for the grid and list views, and a landing page.
+- Merged in barrettbaffert/ua_demo/UADIGITAL-166-update-demo-copy-on-ua-qui (pull request #9).
+- Copy changes on demo homepage.
+- Merged in mmunro-ltrr/ua_demo/UADIGITAL-139 (pull request #8).
+- Remove explicit version information.
+- Add a changelog so there is always something to modify for a release.
+- Back to dev.
+
 UA Demo Content 7.x-1.0-alpha1, 2015-07-10
 ------------------------------------------
 - Preparing to tag 7.x-1.0-alpha1.
