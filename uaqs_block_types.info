@@ -63,3 +63,4 @@ files[] = templates/bean--ua_contact_summary--default.tpl.php
 files[] = templates/bean--ua_illustrated_blurb--default.tpl.php
 files[] = templates/bean--ua_illustrated_link--default.tpl.php
 files[] = templates/bean--ua_imini_blurb--default.tpl.php
+version = 7.x-1.0-alpha2
