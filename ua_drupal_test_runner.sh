@@ -124,7 +124,7 @@ fi
 
 # Fix up the files directory subtree group ownership and permissions
 
-filessubtree="$sitesdefault/files"
+filessubtree="../$sitesdefault/files"
 find "$filessubtree" ! -name '\.*' -exec chgrp "$webgroup" {} \;
 err="$?"
 if [ "$err" -ne 0 ]; then
