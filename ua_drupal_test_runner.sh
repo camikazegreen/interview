@@ -32,6 +32,7 @@ if [ $# -gt 9 ]; then
   shift 1
 fi
 user1pass=${9-'OGinIWereWhereGadieRins'}
+webgroup='www-data'
 
 # Local URL for the testing web server (the domain name will generally be something in
 # /etc/hosts pointing at 127.0.0.1 rather than in the DNS)...
@@ -89,17 +90,10 @@ else
   exit 1
 fi
 mkdir files
-if chmod 777 files; then
-  echo "Made a world-writable files directory..." >&2
+if chmod 775 files; then
+  echo "Made a group-writable files directory..." >&2
 else
-  echo "** could not make a world-writable files directory." >&2
-  exit 1
-fi
-mkdir files/styles
-if chmod 777 files/styles; then
-  echo "Made a world-writable styles directory..." >&2
-else
-  echo "** could not make a world-writable styles directory." >&2
+  echo "** could not make a group-writable files directory." >&2
   exit 1
 fi
 
@@ -126,6 +120,34 @@ if drush user-password "$adminuser" --password="$user1pass"; then
 else
   echo "** failed to set the pre-defined Drupal User1 ($adminuser) administrator password." >&2
   exit 1
+fi
+
+# Fix up the files directory subtree group ownership and permissions
+
+filessubtree="$itesdefault/files"
+find "$filessubtree" ! -name '\.*' -exec chgrp "$webgroup" {} \;
+err="$?"
+if [ "$err" -ne 0 ]; then
+  echo "** could not assign the $filessubtree directory subtree to the $webgroup group: error code $err." >&2
+  exit 1
+else
+  echo "Set the group $webgroup on the $filessubtree directory subtree..." >&2
+fi
+find "$filessubtree" -type d -exec chmod 2775 {} \;
+err="$?"
+if [ "$err" -ne 0 ]; then
+  echo "** could not make the $filessubtree directories group-writeable: error code $err." >&2
+  exit 1
+else
+  echo "Made the $filessubtree directories group-writeable..." >&2
+fi
+find "$filessubtree" ! -name '\.*' -a -type f -exec chmod 664 {} \;
+err="$?"
+if [ "$err" -ne 0 ]; then
+  echo "** could not make the $filessubtree files group-writeable: error code $err." >&2
+  exit 1
+else
+  echo "Made the $filessubtree files group-writeable..." >&2
 fi
 
 # Generate some CasperJS configuration files on the fly from templates and variables
