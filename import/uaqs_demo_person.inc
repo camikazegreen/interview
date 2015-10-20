@@ -27,7 +27,7 @@ class UaDemoPersonMigration extends UaDemoNodeMigration {
       t('Make demonstration UA Person content from pre-defined data.'));
 
     // Documented lists of source data fields:.
-    // Seesee ua_person ua_person.features.field_instance.inc
+    // See ua_person ua_person.features.field_instance.inc
     // First, the single-value text fielda...
     $single_value_fields = array(
       'ua_person_lname'  => t('Last Name'),

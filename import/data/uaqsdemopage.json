@@ -20,28 +20,28 @@
     "ua_page_body" : "Welcome to the University of Arizona's preconfigured version of Drupal. The goal is for University website users to move from one site to another without being distracted by changes in appearance and behavior. For those who build University websites, developers will not feel forced to conform to rigid mandates. Rather, UA Drupal helps assemble components that already conform to recommended Web standards. These components provide a start for Web designers for customization, and are not limited templates into which they should fit their content.\n\nWhen adding new content to a site it is important to add via UA Drupal rather than changing the demonstration content you see here. Make sure the content module for the demonstration is disabled before you start customizing the site or adding any content of your own. To do this, find the module called “UA Demo” in the list of enabled modules, and disable it. When you remove the demonstration content you will still have the recommended University of Arizona Drupal theme (a Zen subtheme that also includes some elements from the Bootstrap framework), plus various content types and views from features that will be common to many University sites."
   },
   {"id":5,
-    "title" : "UA Basic Page",
+    "title" : "Basic Page",
     "path" : "ua_page",
-    "ua_page_body" : "Use a <em>UA Basic Page</em> in the same way you would the generic Drupal Basic Page."
+    "ua_page_body" : "Use a <em>Basic Page</em> in the same way you would the generic Drupal Basic Page."
   },
   {"id":6,
-    "title" : "UA Publication",
+    "title" : "Publication",
     "path" : "ua_publication",
-    "ua_page_body" : "Use a <em>UA Publication</em> to add published works to the website."
+    "ua_page_body" : "Use a <em>Publication</em> to add published works to the website."
   },
   {"id":7,
-    "title" : "UA Unit",
+    "title" : "Unit",
     "path" : "ua_unit",
-    "ua_page_body" : "Use a <em>UA Unit</em> to create information about an academic unit."
+    "ua_page_body" : "Use a <em>Unit</em> to create information about an academic unit."
   },
   {"id":8,
-    "title" : "UA Program",
+    "title" : "Program",
     "path" : "ua_program",
-    "ua_page_body" : "Use a <em>UA Program</em> to add academic UA programs to the website."
+    "ua_page_body" : "Use a <em>Program</em> to add academic UA programs to the website."
   },
   {"id":9,
-    "title" : "UA Person",
+    "title" : "Person",
     "path" : "ua_person",
-    "ua_page_body" : "Use a <em>UA Person</em> to add the contact information and brief biography of a person. There are multiple options for displaying directories of UA Person entries: a grid layout, which is visually appealing, and a list layout, which suits more traditional formal personnel directories."
+    "ua_page_body" : "Use a <em>Person</em> to add the contact information and brief biography of a person. There are multiple options for displaying directories of Person entries: a grid layout, which is visually appealing, and a list layout, which suits more traditional formal personnel directories."
   }
 ]

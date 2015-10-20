@@ -45,7 +45,7 @@ class UaDemoProgramMigration extends UaDemoNodeMigration {
       t('Make demonstration UA Program node content from pre-defined data.'));
 
     // Documented lists of source data fields.
-    // Seesee ua_program ua_program.features.field_instance.inc
+    // See ua_program ua_program.features.field_instance.inc
     // First, the single-value text fielda...
     $data_fields = array(
       'title' => t('Program Name'),
