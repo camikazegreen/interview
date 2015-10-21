@@ -82,7 +82,6 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     '#default_value' => theme_get_setting('ua_copyright_notice'),
   );
 
-
   $form['#validate'][] = 'ua_zen_settings_form_validate';
   $form['#submit'][] = 'ua_zen_settings_form_submit';
 

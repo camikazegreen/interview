@@ -270,7 +270,6 @@ function ua_zen_preprocess_page(&$variables, $hook) {
   }
 }
 
-
 /**
  * Override or insert variables into the node templates.
  *
@@ -446,7 +445,6 @@ function ua_zen_menu_local_tasks(&$variables) {
 
   return $output;
 }
-
 
 function ua_zen_menu_tree__menu_block__ua_second_level(array $variables) {
 
