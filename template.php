@@ -94,8 +94,6 @@ function ua_zen_get_theme_info($theme_key = NULL, $key = NULL, $base_themes = TR
 
 function ua_zen_css_alter(&$css) {
   $theme_path = drupal_get_path('theme', 'ua_zen');
-  // Exclude specified CSS files from theme.
-  $excludes = ua_zen_get_theme_info(NULL, 'exclude][css');
   // Add Bootstrap CDN file and overrides.
   $ua_bootstrap_cdn = theme_get_setting('ua_bootstrap_cdn');
   $ua_bootstrap_minified = theme_get_setting('ua_bootstrap_minified');
@@ -132,9 +130,6 @@ function ua_zen_css_alter(&$css) {
       'browsers' => array('IE' => TRUE, '!IE' => TRUE),
       'weight' => -2,
     );
-  }
-  if (!empty($excludes)) {
-    $css = array_diff_key($css, drupal_map_assoc($excludes));
   }
 }
 
