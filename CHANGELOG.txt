@@ -1,3 +1,83 @@
+7.x-1.0-alpha2, 2015-10-15
+------------------------------
+- Merged in trackleft/ua_zen/UADIGITAL-305-add-bootstrap-alpha2-to-ua (pull request #70).
+- Fixed file path typo.
+- Adding local ua-bootstrap css until more advanced version is available with the new CDN.
+- Merged ua_drupal/ua_zen into 7.x-1.x.
+- Merged in UADIGITAL-258 (pull request #69).
+- UADIGITAL-258: Merge branch 'UADIGITAL-203-test-ua-bootstrap-v2' into UADIGITAL-258.
+- Restoring header_ua.
+- Merged UADIGITAL-211-ua-banner-should-match-new.
+- Merge UADIGITAL-212-main-navigation-should-use.
+- Merged UADIGITAL-229-update-copyright-statement.
+- Realigned comment asterisks.
+- Changed file.
+- Merged in macaulay/ua-zen/jquery-refremove (pull request #67).
+- Removed problematic jquery reference in html.tpl.php - related to https://jira.arizona.edu/browse/UADIGITAL-285.
+- Merged in UADIGITAL-229 (pull request #66).
+- UADIGITAL-229: Updating copyright statement (again).
+- Merged in trackleft/ua_zen/UADIGITAL-229-update-copyright-statement (pull request #65).
+- Adding closing paragraph tag.
+- Updated in template.php.
+- Update without copyright notice.
+- UADIGITAL-229.
+- UADIGITAL-165: Merged in awochna/ua_zen (pull request #57).
+- Fix dropdown toggle issue?.
+- Add uppercase class to link.
+- Padding in sub footer.
+- Removed row from navbar.
+- Text uppercase on navbar.
+- Sticky footer.
+- Merge.
+- Removed row class.
+- Prep for QA.
+- Adding bootstrap js.
+- Put nav in container.
+- Removed superflous styles.
+- Wrapped in nav classes.
+- Removed conflicting style.
+- This targets the second level menu in the menu block.
+- Replaced font variable.
+- UADIGITAL-214.
+- Removed remote add css.
+- Reverted to old stylesheet.
+- Fix contextual link issue.
+- Final nav classes to ul element.
+- Formatting.
+- Removed all styles as bootstrap handles it.
+- Matches both new and old ua-bootstrap.
+- This all works.
+- Removed element-invisible class and replaced with sr-only.
+- Add bootstrap classes to menu blocks.
+- UADIGITAL-209 add bootstrap classes to menu local task.
+- Merged macaulay/ua-zen into 7.x-1.x.
+- Add the one liner to help people not get confused about subtheming and logos in the README.
+- UADIGITAL-165: Merged in awochna/ua_zen (pull request #56).
+- Merged readme into 7.x-1.x.
+- Move the example code blocks out of the ordered list so that we give Bitbucket's Markdown parser absolutely no excuse to parse the code as a series of paragraphs in a list item.
+- Add extra line spacing so maybe Bitbucket's Markdown parser won't thing that the code to add to the .info file is part of a list item.
+- Remove existing README file and add a new one with instructions on subtheming ua_zen.
+- Merged in UADIGITAL-180 (pull request #55).
+- UADIGITAL-180: Disabling home breadcrumb by default and restroing header_ua ID.
+- Merged in trackleft/ua_zen/UADIGITAL-153-qa-breadcrumbs-configured- (pull request #52).
+- Add img-responsive class to images.
+- Updated sass.
+- Fix accessibility link.
+- Protocol neutral.
+- Changing tagged version of ua-bootstrap.
+- Removed locally hosted bootstrap.
+- Added bitbucket hosted css file back.
+- Adding sr-only, remove remote redbar banner.
+- Cleanup.
+- Fixed.
+- Bootstrap breadcrumbs.
+- Merged in UADIGITAL-153 (pull request #51).
+- UADIGITAL-153: Disabling content title in breadcrumbs by default.
+- Merged in mmunro-ltrr/ua_zen/UADIGITAL-139 (pull request #50).
+- Remove explicit version information.
+- Add a changelog so there is always something to modify for a release.
+- Back to dev.
+
 7.x-1.0-alpha1, 2015-07-10
 --------------------------
 - UADIGITAL-98: Preparing to tag 7.x-1.0-alpha1.
