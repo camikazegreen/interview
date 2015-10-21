@@ -14,7 +14,7 @@ defaults[projects][subdir] = contrib
 ; Contrib modules
 ; ------------------------------------------------------------------------------
 
-projects[jquery_update][version] = 2.6
+projects[jquery_update][version] = 2.7
 
 projects[menu_block][version] = 2.7
 
