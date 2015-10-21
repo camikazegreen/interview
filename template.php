@@ -118,18 +118,6 @@ function ua_zen_css_alter(&$css) {
       'browsers' => array('IE' => TRUE, '!IE' => TRUE),
       'weight' => -2,
     );
-    // Add overrides.
-    $override = $theme_path . '/css/styles.css';
-    $css[$override] = array(
-      'data' => $override,
-      'type' => 'file',
-      'every_page' => TRUE,
-      'media' => 'all',
-      'preprocess' => TRUE,
-      'group' => CSS_THEME,
-      'browsers' => array('IE' => TRUE, '!IE' => TRUE),
-      'weight' => -1,
-    );
   }
   else {
     // Add CDN.
@@ -144,19 +132,6 @@ function ua_zen_css_alter(&$css) {
       'browsers' => array('IE' => TRUE, '!IE' => TRUE),
       'weight' => -2,
     );
-    // Add overrides.
-    $override = $theme_path . '/css/styles.css';
-    $css[$override] = array(
-      'data' => $override,
-      'type' => 'file',
-      'every_page' => TRUE,
-      'media' => 'all',
-      'preprocess' => TRUE,
-      'group' => CSS_THEME,
-      'browsers' => array('IE' => TRUE, '!IE' => TRUE),
-      'weight' => -1,
-    );
-
   }
   if (!empty($excludes)) {
     $css = array_diff_key($css, drupal_map_assoc($excludes));
