@@ -42,6 +42,38 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     '#default_value' => theme_get_setting('ua_copyright_notice'),
   );
 
+  // Advanced settings.
+  $form['ua_settings']['advanced'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Advanced'),
+    '#group' => 'bootstrap',
+  );
+  // BootstrapCDN.
+  $form['ua_settings']['advanced']['ua_bootstrap_cdn'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('UA Bootstrap CDN'),
+    '#description' => t('Use !bootstrapcdn to serve the Bootstrap framework files. Enabling this setting will prevent this theme from attempting to load any Bootstrap framework files locally. !warning', array(
+      '!bootstrapcdn' => l(t('UA Bootstrap CDN'), 'https://bitbucket.org/uadigital/ua-bootstrap/downloads', array(
+        'external' => TRUE,
+      )),
+      '!warning' => '<div class="alert alert-info messages info"><strong>' . t('NOTE') . ':</strong> ' . t('While BootstrapCDN (content distribution network) is the preferred method for providing huge performance gains in load time, this method does depend on using this third party service. BootstrapCDN is under no obligation or commitment to provide guaranteed up-time or service quality for this theme. If you choose to disable this setting, you must provide your own Bootstrap source and/or optional CDN delivery implementation.') . '</div>',
+    )),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['ua_settings']['advanced']['ua_bootstrap_cdn']['ua_bootstrap_cdn'] = array(
+    '#type' => 'select',
+    '#title' => t('UA Bootstrap CDN version'),
+    '#options' => drupal_map_assoc(array(
+      '1.0.0-alpha1',
+      '1.0.0-alpha1',
+      '1.0.0-latest',
+    )),
+    '#default_value' => theme_get_setting('ua_bootstrap_cdn'),
+    '#empty_option' => t('Disabled'),
+    '#empty_value' => NULL,
+  );
+
   $form['#validate'][] = 'ua_zen_settings_form_validate';
   $form['#submit'][] = 'ua_zen_settings_form_submit';
 
