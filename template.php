@@ -120,11 +120,11 @@ function ua_zen_css_alter(&$css) {
     );
   }
   else {
-    // Add CDN.
-    $cdn = drupal_get_path('theme', 'ua_zen') . '/css/ua-bootstrap-1.0.0-alpha2' . $ua_bootstrap_minified . '.css';
-    $css[$cdn] = array(
-      'data' => $cdn,
-      'type' => 'external',
+    // Add local CSS.
+    $local = drupal_get_path('theme', 'ua_zen') . '/css/ua-bootstrap-1.0.0-alpha2' . $ua_bootstrap_minified . '.css';
+    $css[$local] = array(
+      'data' => $local,
+      'type' => 'internal',
       'every_page' => TRUE,
       'media' => 'all',
       'preprocess' => FALSE,
