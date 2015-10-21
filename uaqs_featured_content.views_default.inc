@@ -35,55 +35,10 @@ function ua_featured_content_views_default_views() {
   $handler->display->display_options['style_options']['optionset'] = 'ua_hero_carousel';
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'ua_featured_content';
-  /* Field: Content: Slide Image */
-  $handler->display->display_options['fields']['field_slide_image']['id'] = 'field_slide_image';
-  $handler->display->display_options['fields']['field_slide_image']['table'] = 'field_data_field_slide_image';
-  $handler->display->display_options['fields']['field_slide_image']['field'] = 'field_slide_image';
-  $handler->display->display_options['fields']['field_slide_image']['label'] = '';
-  $handler->display->display_options['fields']['field_slide_image']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_slide_image']['alter']['text'] = '[field_slide_image]';
-  $handler->display->display_options['fields']['field_slide_image']['alter']['trim_whitespace'] = TRUE;
-  $handler->display->display_options['fields']['field_slide_image']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['field_slide_image']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_slide_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_slide_image']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_slide_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_slide_image']['type'] = 'image_url';
-  $handler->display->display_options['fields']['field_slide_image']['settings'] = array(
-    'url_type' => '1',
-    'image_style' => '',
-    'image_link' => '',
-  );
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'container';
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['element_type'] = 'p';
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
-  /* Field: Content: Call to Action */
-  $handler->display->display_options['fields']['field_call_to_action']['id'] = 'field_call_to_action';
-  $handler->display->display_options['fields']['field_call_to_action']['table'] = 'field_data_field_call_to_action';
-  $handler->display->display_options['fields']['field_call_to_action']['field'] = 'field_call_to_action';
-  $handler->display->display_options['fields']['field_call_to_action']['label'] = '';
-  $handler->display->display_options['fields']['field_call_to_action']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_call_to_action']['element_wrapper_class'] = 'more-link';
-  $handler->display->display_options['fields']['field_call_to_action']['click_sort_column'] = 'url';
-  /* Field: Content: Call to Action */
-  $handler->display->display_options['fields']['field_call_to_action_1']['id'] = 'field_call_to_action_1';
-  $handler->display->display_options['fields']['field_call_to_action_1']['table'] = 'field_data_field_call_to_action';
-  $handler->display->display_options['fields']['field_call_to_action_1']['field'] = 'field_call_to_action';
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -108,21 +63,7 @@ function ua_featured_content_views_default_views() {
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'content-featured-container';
   $handler->display->display_options['display_description'] = 'Main Hero Carousel Block';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'flexslider';
-  $handler->display->display_options['style_options']['optionset'] = 'ua_hero_carousel';
-  $handler->display->display_options['style_options']['id'] = 'content_featured_slides';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'entity';
-  $handler->display->display_options['row_options']['view_mode'] = 'ua_featured_content';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
 
   /* Display: Hero Navigation */
   $handler = $view->new_display('attachment', 'Hero Navigation', 'hero_nav');

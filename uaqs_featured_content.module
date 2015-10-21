@@ -7,15 +7,12 @@
 include_once 'ua_featured_content.features.inc';
 
 /**
- * Implements hook_views_api_alter().
- *
- * hook_views_api() is implemented by features but we need to add our views
- * template path.
+ * Implements hook_entity_info_alter().
  */
 function ua_featured_content_entity_info_alter(&$entity_info) {
   $entity_info['node']['view modes']['ua_featured_content'] = array(
     'label' => t('ua_featured_content_display'),
-    'custom settings' => TRUE,
+    'custom settings' => FALSE,
   );
 }
 

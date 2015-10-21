@@ -16,8 +16,6 @@ function ua_featured_content_flexslider_default_presets() {
   $preset->name = 'ua_hero_carousel';
   $preset->title = 'UA Hero Carousel';
   $preset->theme = 'classic';
-  $preset->imagestyle_normal = 'flexslider_full';
-  $preset->imagestyle_thumbnail = 'flexslider_thumbnail';
   $preset->options = array(
     'namespace' => 'flex-',
     'selector' => '.slides > li',
@@ -68,8 +66,6 @@ function ua_featured_content_flexslider_default_presets() {
   $preset->name = 'ua_hero_carousel_nav';
   $preset->title = 'UA Hero Carousel Navigation';
   $preset->theme = 'classic';
-  $preset->imagestyle_normal = 'flexslider_full';
-  $preset->imagestyle_thumbnail = 'flexslider_thumbnail';
   $preset->options = array(
     'namespace' => '',
     'selector' => '.slides > li',
