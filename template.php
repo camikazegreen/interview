@@ -25,7 +25,7 @@ function ua_zen_css_alter(&$css) {
   else {
     $ua_bootstrap_minified = '';
   }
-  if ($ua_bootstrap_cdn) {
+  if (!is_null($ua_bootstrap_cdn) && isset($ua_bootstrap_cdn)) {
     // Add CDN.
     $cdn = '//bitbucket.org/uadigital/ua-bootstrap/downloads/ua-bootstrap-' . $ua_bootstrap_cdn . $ua_bootstrap_minified . '.css';
     $css[$cdn] = array(
