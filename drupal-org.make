@@ -59,7 +59,7 @@ projects[ua_navigation][type] = module
 projects[ua_navigation][subdir] = custom
 projects[ua_navigation][download][type] = git
 projects[ua_navigation][download][branch] = 7.x-1.x
-projects[ua_navigation][download][revision] = 346c2dd
+projects[ua_navigation][download][revision] = 56d028a
 projects[ua_navigation][download][url] = https://bitbucket.org/ua_drupal/ua_navigation.git
 
 projects[ua_news][type] = module
