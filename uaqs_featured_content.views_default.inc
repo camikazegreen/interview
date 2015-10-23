@@ -33,6 +33,7 @@ function ua_featured_content_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'flexslider';
   $handler->display->display_options['style_options']['optionset'] = 'ua_hero_carousel';
+  $handler->display->display_options['style_options']['id'] = 'content_featured_slides';
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'ua_featured_content';
   /* Field: Content: Nid */
