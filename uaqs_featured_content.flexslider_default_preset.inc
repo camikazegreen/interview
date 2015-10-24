@@ -84,7 +84,7 @@ function ua_featured_content_flexslider_default_presets() {
     'mousewheel' => 0,
     'controlsContainer' => '.flex-control-nav-container',
     'sync' => '',
-    'asNavFor' => '#flexslider-1',
+    'asNavFor' => '#content_featured_slides',
     'itemWidth' => '300',
     'itemMargin' => '0',
     'minItems' => '0',
