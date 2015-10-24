@@ -53,9 +53,6 @@ function ua_zen_css_alter(&$css) {
       'weight' => -2,
     );
   }
-  if (!empty($excludes)) {
-    $css = array_diff_key($css, drupal_map_assoc($excludes));
-  }
 }
 
 /**
