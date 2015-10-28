@@ -27,9 +27,6 @@ function ua_quickstart_install() {
   // Disable bartik theme.
   theme_disable(array('bartik'));
 
-  // Insert custom sub footer text block.
-  ua_quickstart_insert_subfooter_block();
-
   // Enable some standard blocks.
   ua_quickstart_default_blocks($default_theme, $admin_theme);
 
@@ -132,21 +129,6 @@ function ua_quickstart_install() {
   if (module_enable(array('ua_demo'))) {
     ua_quickstart_demo_blocks($default_theme, $admin_theme);
   }
-}
-
-/**
- * Inserts custom sub footer text block.
- */
-function ua_quickstart_insert_subfooter_block() {
-  $block = array(
-    'body' => '<p>The University of Arizona | Tucson, AZ 85721 | Phone: <a href="tel:5206212211">(520) 621-2211</a> | Email: <a href="mailto:department.name@email.arizona.edu">department.name@email.arizona.edu</a>.',
-    'info' => 'Sub Footer Text',
-    'format' => 'filtered_html',
-  );
-
-  db_insert('block_custom')
-    ->fields($block)
-    ->execute();
 }
 
 /**
@@ -314,5 +296,19 @@ function ua_quickstart_demo_blocks($default_theme, $admin_theme) {
     'cache' => DRUPAL_NO_CACHE,
   );
 
-  // Place code to update blocks of demo content here.
+  // Enable the contact summary block in the footer_sub region.
+  if (module_exists('ua_block_types')) {
+    $contact_delta = 'main-unit-or-department-contact-';
+    $contact_summary_blocks = array(
+      $contact_delta => array(
+        'region' => 'footer_sub',
+      ),
+    );
+    $record = array_merge($base_common, $contact_summary_blocks[$contact_delta]);
+    $updated = ua_quickstart_block_db_update($default_theme, 'bean', $contact_delta, $record);
+    if (!$updated) {
+      // Updating failed: try inserting the block in the database directly.
+      ua_quickstart_block_db_insert($default_theme, 'bean', $contact_summary_blocks, $base_common);
+    }
+  }
 }
