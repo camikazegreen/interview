@@ -31,7 +31,7 @@ function ua_quickstart_install() {
   ua_quickstart_insert_subfooter_block();
 
   // Enable some standard blocks.
-  ua_quickstart_enable_blocks();
+  ua_quickstart_default_blocks($default_theme, $admin_theme);
 
   // Add default text formats.
   $filtered_html_format = array(
@@ -126,6 +126,12 @@ function ua_quickstart_install() {
   db_insert('users_roles')
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
+
+  // Enable the demo content here, not via ua_quickstart.info.
+  // See https://www.drupal.org/node/1901116 for the reasons.
+  if (module_enable(array('ua_demo'))) {
+    ua_quickstart_demo_blocks($default_theme, $admin_theme);
+  }
 }
 
 /**
@@ -144,122 +150,169 @@ function ua_quickstart_insert_subfooter_block() {
 }
 
 /**
- * Enables some default blocks.
+ * Insert block definitions in the database.
+ *
+ * All blocks start with a common set of base block description values,
+ * overriden by the additional block-specific values.
+ *
+ * @param string $theme
+ *   Theme in which these block definitions apply.
+ * @param string $module
+ *   The module responsible for the block.
+ * @param array $block_defs
+ *   An associative array of settings for each block:
+ *   - delta: The block identifier (string).
+ *   - description: Block description (associative array).
+ * @param array $common
+ *   The settings common to all blocks.
  */
-function ua_quickstart_enable_blocks() {
-  $default_theme = variable_get('theme_default', 'ua_zen');
-  $admin_theme = 'seven';
-  $blocks = array(
-    array(
-      'module' => 'system',
-      'delta' => 'main',
-      'theme' => $default_theme,
-      'region' => 'content',
-      'cache' => DRUPAL_NO_CACHE,
-    ),
-    array(
-      'module' => 'search',
-      'delta' => 'form',
-      'theme' => $default_theme,
-      'region' => 'header',
-      'cache' => DRUPAL_NO_CACHE,
-    ),
-    array(
-      'module' => 'system',
-      'delta' => 'help',
-      'theme' => $default_theme,
-      'region' => 'help',
-      'cache' => DRUPAL_NO_CACHE,
-    ),
-    array(
-      'module' => 'menu_block',
-      'delta' => 'main',
-      'theme' => $default_theme,
-      'region' => 'navigation',
-      'title' => '<none>',
-      'cache' => DRUPAL_NO_CACHE,
-    ),
-    array(
-      'module' => 'menu_block',
-      'delta' => 'ua-second-level',
-      'theme' => $default_theme,
-      'region' => 'sidebar_first',
-      'cache' => DRUPAL_NO_CACHE,
-    ),
-    array(
-      'module' => 'views',
-      'delta' => 'ua_hero_carousel-hero_block',
-      'theme' => $default_theme,
-      'region' => 'content_featured',
-      'pages' => '<front>',
-      'title' => '<none>',
-      'visibility' => 1,
-      'cache' => DRUPAL_NO_CACHE,
-    ),
-    array(
-      'module' => 'views',
-      'delta' => 'ua_news-home_3_col_news_block',
-      'theme' => $default_theme,
-      'region' => 'content',
-      'pages' => '<front>',
-      'visibility' => 1,
-      'cache' => DRUPAL_NO_CACHE,
-      'weight' => 10,
-    ),
-    array(
-      'module' => 'block',
-      'delta' => '1',
-      'theme' => $default_theme,
-      'region' => 'footer_sub',
-      'cache' => DRUPAL_NO_CACHE,
-    ),
-    array(
-      'module' => 'views',
-      'delta' => 'ua_events-block',
-      'theme' => $default_theme,
-      'region' => 'content',
-      'pages' => '<front>',
-      'title' => 'Events',
-      'visibility' => 1,
-      'cache' => DRUPAL_NO_CACHE,
-      'weight' => 20,
-    ),
-    array(
-      'module' => 'system',
-      'delta' => 'main',
-      'theme' => $admin_theme,
-      'region' => 'content',
-      'cache' => DRUPAL_NO_CACHE,
-    ),
-    array(
-      'module' => 'system',
-      'delta' => 'help',
-      'theme' => $admin_theme,
-      'region' => 'help',
-      'cache' => DRUPAL_NO_CACHE,
-    ),
-  );
-
-  $block_defaults = array(
-    'status' => 1,
-    'weight' => 0,
-    'visibility' => 0,
-    'pages' => '',
-    'title' => '',
-  );
-
-  // Merge default values.
-  if (!empty($blocks)) {
-    $merged_blocks = array();
-    foreach ($blocks as $block) {
-      $merged_blocks[] = array_merge($block_defaults, $block);
-    }
-    $blocks = $merged_blocks;
-  }
-
-  foreach ($blocks as $record) {
+function ua_quickstart_block_db_insert($theme, $module, array $block_defs, array $common) {
+  $common['theme'] = $theme;
+  $common['module'] = $module;
+  foreach ($block_defs as $delta => $description) {
+    $record = array_merge($common, $description);
+    $record['delta'] = $delta;
     db_insert('block')
       ->fields($record)
       ->execute();
   }
+}
+
+/**
+ * Update a single block definition in the database.
+ *
+ * The combination of theme, module and delta should form a unique key to find
+ * a block if it exists, so this should update at most one block.
+ *
+ * @param string $theme
+ *   Theme in which the block definition applies.
+ * @param string $module
+ *   The module responsible for the block.
+ * @param string $delta
+ *   The block identifier (distinct from the numeric bid).
+ * @param array $fields
+ *   Fields to update the block definition (associative array).
+ *
+ * @return bool
+ *   TRUE on success, FALSE on failure.
+ */
+function ua_quickstart_block_db_update($theme, $module, $delta, array $fields) {
+  $n_updated = db_update('block')
+    ->fields($fields)
+    ->condition('module', $module)
+    ->condition('delta', $delta)
+    ->condition('theme', $theme)
+    ->execute();
+  return ($n_updated == 1);
+}
+
+/**
+ * Enable some default blocks.
+ *
+ * @param string $default_theme
+ *   Default theme in which the block definitions apply.
+ * @param string $admin_theme
+ *   Administrative theme to use for relevant block definitions.
+ */
+function ua_quickstart_default_blocks($default_theme, $admin_theme) {
+  $base_common = array(
+    'status' => 1,
+    'weight' => 0,
+    'visibility' => BLOCK_VISIBILITY_NOTLISTED,
+    'pages' => '',
+    'title' => '',
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  $front_views = $base_common;
+  $front_views['visibility'] = BLOCK_VISIBILITY_LISTED;
+  $front_views['pages'] = '<front>';
+
+  // Basic core system blocks.
+  $system_blocks = array(
+    'main' => array(
+        'region' => 'content',
+    ),
+    'help' => array (
+        'region' => 'help',
+    ),
+  );
+  ua_quickstart_block_db_insert($default_theme, 'system', $system_blocks, $base_common);
+  ua_quickstart_block_db_insert($admin_theme, 'system', $system_blocks, $base_common);
+
+  // Basic search.
+  $search_blocks = array(
+    'form' => array(
+      'region' => 'header'
+    ),
+  );
+  ua_quickstart_block_db_insert($default_theme, 'search', $search_blocks, $base_common);
+
+  // UA Navigation Feature Module.
+  if (module_exists('ua_navigation')) {
+    $menu_blocks = array(
+      'main' => array(
+        'region' => 'navigation',
+        'title' => '<none>',
+      ),
+      'ua-second-level' => array(
+        'region' => 'sidebar_first',
+      ),
+    );
+    ua_quickstart_block_db_insert($default_theme, 'menu_block', $menu_blocks, $base_common);
+  }
+
+  // UA Featured Content.
+  if (module_exists('ua_featured_content')) {
+    $carousel_blocks = array(
+      'ua_hero_carousel-hero_block' => array(
+        'region' => 'content_featured',
+        'title' => '<none>',
+      ),
+    );
+    ua_quickstart_block_db_insert($default_theme, 'views', $carousel_blocks, $front_views);
+  }
+
+  // UA News.
+  if (module_exists('ua_news')) {
+    $news_blocks = array(
+      'ua_news-home_3_col_news_block' => array(
+        'region' => 'content',
+        'weight' => 10,
+      ),
+    );
+    ua_quickstart_block_db_insert($default_theme, 'views', $news_blocks, $front_views);
+  }
+
+  // UA Event.
+  if (module_exists('ua_event')) {
+    $event_blocks = array(
+      'ua_events-block' => array(
+        'region' => 'content',
+        'title' => 'Events',
+        'weight' => 20,
+      ),
+    );
+    ua_quickstart_block_db_insert($default_theme, 'views', $event_blocks, $front_views);
+  }
+}
+
+/**
+ * Enable additional demo blocks.
+ *
+ * @param string $default_theme
+ *   Default theme in which the block definitions apply.
+ * @param string $admin_theme
+ *   Administrative theme to use for relevant block definitions.
+ */
+function ua_quickstart_demo_blocks($default_theme, $admin_theme) {
+  $base_common = array(
+    'status' => 1,
+    'weight' => 0,
+    'visibility' => BLOCK_VISIBILITY_NOTLISTED,
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => DRUPAL_NO_CACHE,
+  );
+
+  // Place code to update blocks of demo content here.
 }
