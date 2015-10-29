@@ -14,46 +14,45 @@ drupal_add_js('//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', a
         )
 );
 
+/**
+ * Implements hook_css_alter().
+ *
+ * Adds UA Bootstrap CSS based on theme settings.
+ */
 function ua_zen_css_alter(&$css) {
-  $theme_path = drupal_get_path('theme', 'ua_zen');
-  // Add Bootstrap CDN file and overrides.
-  $ua_bootstrap_cdn = theme_get_setting('ua_bootstrap_cdn');
+  $ua_bootstrap_path = '';
+  $ua_bootstrap_source = theme_get_setting('ua_bootstrap_source');
   $ua_bootstrap_minified = theme_get_setting('ua_bootstrap_minified');
-  if($ua_bootstrap_minified == TRUE){
-    $ua_bootstrap_minified = '.min';
+
+  $ua_bootstrap_css_info = array(
+    'every_page' => TRUE,
+    'media' => 'all',
+    'preprocess' => FALSE,
+    'group' => CSS_THEME,
+    'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+    'weight' => -2,
+  );
+
+  if ($ua_bootstrap_source == 'cdn') {
+    $ua_bootstrap_cdn_version = theme_get_setting('ua_bootstrap_cdn_version');
+    $ua_bootstrap_path = '//bitbucket.org/uadigital/ua-bootstrap/downloads/ua-bootstrap-' . $ua_bootstrap_cdn_version;
+    $ua_bootstrap_css_info['type'] = 'external';
   }
   else {
-    $ua_bootstrap_minified = '';
+    $ua_bootstrap_local_version = "1.0.0-alpha2";
+    $ua_bootstrap_path = drupal_get_path('theme', 'ua_zen') . "/css/ua-bootstrap-" . $ua_bootstrap_local_version;
+    $ua_bootstrap_css_info['type'] = 'internal';
   }
-  if (!is_null($ua_bootstrap_cdn) && $ua_bootstrap_cdn) {
-    // Add CDN.
-    $cdn = '//bitbucket.org/uadigital/ua-bootstrap/downloads/ua-bootstrap-' . $ua_bootstrap_cdn . $ua_bootstrap_minified . '.css';
-    $css[$cdn] = array(
-      'data' => $cdn,
-      'type' => 'external',
-      'every_page' => TRUE,
-      'media' => 'all',
-      'preprocess' => FALSE,
-      'group' => CSS_THEME,
-      'browsers' => array('IE' => TRUE, '!IE' => TRUE),
-      'weight' => -2,
-    );
+
+  if ($ua_bootstrap_minified) {
+    $ua_bootstrap_path .= ".min";
   }
-  else {
-    // Add local CSS.
-    $local = drupal_get_path('theme', 'ua_zen') . '/css/ua-bootstrap-1.0.0-alpha2' . $ua_bootstrap_minified . '.css';
-    $css[$local] = array(
-      'data' => $local,
-      'type' => 'internal',
-      'every_page' => TRUE,
-      'media' => 'all',
-      'preprocess' => FALSE,
-      'group' => CSS_THEME,
-      'browsers' => array('IE' => TRUE, '!IE' => TRUE),
-      'weight' => -2,
-    );
-  }
+  $ua_bootstrap_path .= ".css";
+
+  $ua_bootstrap_css_info['data'] = $ua_bootstrap_path;
+  $css[$ua_bootstrap_path] = $ua_bootstrap_css_info;
 }
+
 
 /**
  * Custom function for the secondary footer logo option.
