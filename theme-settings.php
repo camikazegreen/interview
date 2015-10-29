@@ -1,4 +1,7 @@
 <?php
+
+include_once dirname(__FILE__) . '/includes/common.inc';
+
 /**
  * Implements hook_form_system_theme_settings_alter().
  */
@@ -19,7 +22,7 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     '#type' => 'radios',
     '#title' => t('UA Bootstrap Source'),
     '#options' => array(
-      'local' => t('Use local copy of UA Bootstrap packaged with UA Zen (1.0.0-alpha2)'),
+      'local' => t('Use local copy of UA Bootstrap packaged with UA Zen <em>(!stableversion)</em>', array('!stableversion' => UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION)),
       'cdn' => t('Use external copy of UA Bootstrap hosted on the UA Bootstrap CDN'),
     ),
     '#default_value' => theme_get_setting('ua_bootstrap_source'),
@@ -46,9 +49,8 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     '#type' => 'select',
     '#title' => t('UA Bootstrap CDN version'),
     '#options' => array(
-      '1.0.0-alpha2' => '1.0.0-alpha2 (Recommended)',
-      '1.0.0-alpha1' => '1.0.0-alpha1',
-      'latest' => 'Latest dev version',
+      UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION => t('!stableversion (Recommended)', array('!stableversion' => UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION)),
+      'latest' => t('Latest dev version'),
     ),
     '#default_value' => theme_get_setting('ua_bootstrap_cdn_version'),
   );

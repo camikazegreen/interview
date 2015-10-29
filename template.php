@@ -6,6 +6,9 @@
  * Complete documentation for this file is available online.
  * @see https://drupal.org/node/1728096
  */
+
+include_once dirname(__FILE__) . '/includes/common.inc';
+
 drupal_add_js('//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array(
         'type' => 'external',
         'group' => JS_THEME,
@@ -39,7 +42,7 @@ function ua_zen_css_alter(&$css) {
     $ua_bootstrap_css_info['type'] = 'external';
   }
   else {
-    $ua_bootstrap_local_version = "1.0.0-alpha2";
+    $ua_bootstrap_local_version = UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION;
     $ua_bootstrap_path = drupal_get_path('theme', 'ua_zen') . "/css/ua-bootstrap-" . $ua_bootstrap_local_version;
     $ua_bootstrap_css_info['type'] = 'internal';
   }
