@@ -396,6 +396,6 @@ function ua_zen_menu_link(array $variables) {
 }
 
 // Display a warning if jquery_update isn't enabled.
-  if ((!module_exists('jquery_update') || !version_compare(variable_get('jquery_update_jquery_version', 0), 1.7, '>=')) && !theme_get_setting('bootstrap_toggle_jquery_error')) {
+  if ((!module_exists('jquery_update') || !version_compare(variable_get('jquery_update_jquery_version', 0), 1.9, '>=')) && !theme_get_setting('bootstrap_toggle_jquery_error')) {
     drupal_set_message(t('jQuery Update is not enabled, Bootstrap requires a minimum jQuery version of 1.9 or higher.<br/>Please enable <a href="https://drupal.org/project/jquery_update">jQuery Update module</a> 7.x-2.3 or higher, you must manually set this in the configuration after it is installed.'), 'error');
   }
