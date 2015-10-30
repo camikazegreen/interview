@@ -252,6 +252,285 @@ abstract class UaDemoNodeMigration extends UaDemoIntKeyedMigration {
 }
 
 /**
+ * Defines a MigrateDestination for entities based on the Bean module.
+ *
+ * Various proposals in the issue queue for the Bean Module add Migrate
+ * support, but (unlike most of the patches there) this uses the Bean API
+ * rather than the more generic Entity API.
+ *
+ * @see https://www.drupal.org/node/2295973
+ */
+class UaDemoMigrateDestinationBean extends MigrateDestinationEntity {
+
+  /**
+   * Implements MigrateDestination::getKeySchema().
+   *
+   * Bean entities use 'bid' as the unique primary key: compare bean_schema()
+   * in the Bean module bean.install.
+   *
+   * @return array
+   *   Schema field definition corresponding to the destination primary key.
+   */
+  static public function getKeySchema() {
+    return array(
+      'bid' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'description' => 'ID of destination bean',
+      ),
+    );
+  }
+
+  /**
+   * Constructor.
+   *
+   * @param string $bundle
+   *   The particular Bean type.
+   * @param array $options
+   *   Options applied to Bean entities.
+   */
+  public function __construct($bundle, array $options = array()) {
+    parent::__construct('bean', $bundle, $options);
+  }
+
+  /**
+   * Generates a list of fields on this Bean type available for mapping.
+   *
+   * @param object $migration
+   *   Optionally, the migration containing this destination.
+   *
+   * @return array
+   *   An associative array giving the field machine names and descriptions.
+   */
+  public function fields($migration = NULL) {
+    // Property fields always defined for Bean entities...
+    $property_fields = array(
+      'bid' => t('Primary Key: Unique bean item ID.'),
+      'vid' => t('Revision ID'),
+      'delta' => t('The Block ID (delta) for this bean.'),
+      'label' => t('Displays in the Admin page.'),
+      'title' => t('The human-readable name of this bean.'),
+      'type' => t('The Bean type of this bean.'),
+      'view_mode' => t('The View mode to use as the bean.'),
+      'data' => t('A serialized array of additional data related to this bean.'),
+      'uid' => t('The author ID for the revision.'),
+      'created' => t('The Unix timestamp when the bean was created.'),
+      'changed' => t('The Unix timestamp when the bean was most recently saved.'),
+    );
+    // Additional bundle fields for this Bean type...
+    $bundle_fields = migrate_handler_invoke_all('Entity', 'fields',
+      $this->entityType, $this->bundle, $migration);
+
+    $fields = $property_fields + $bundle_fields;
+    return $fields;
+  }
+
+  /**
+   * Delete a previously migrated bean.
+   *
+   * @param array $key
+   *   Array of one bid, the key for the single bean to delete.
+   *
+   * @return bool
+   *   The status of the delete operation.
+   */
+  public function rollback(array $key) {
+    $bid = reset($key);
+    migrate_instrument_start('bean_load');
+    $bean = bean_load($bid);
+    migrate_instrument_stop('bean_load');
+    $is_absent = empty($bean);
+    if (!$is_absent) {
+      // The bean needs deletion.
+      migrate_instrument_start('bean_delete');
+      $this->prepareRollback($bid);
+      $is_absent = (bool) bean_delete($bean);
+      $this->completeRollback($bid);
+      migrate_instrument_stop('bean_delete');
+    }
+    return $is_absent;
+  }
+
+
+  /**
+   * Import a single bean.
+   *
+   * Derived from MigrateDestinationNode::import() code.
+   *
+   * @param object $dest_bean_vals
+   *   A generic object holding fields to create or update a Bean entity.
+   * @param object $row
+   *   The raw source data object, passed through to prepare/complete handlers.
+   *
+   * @throws MigrateException
+   *   Exceptions are thrown for the same conditions as Node imports.
+   *
+   * @return array
+   *   Array with the successfully saved bean primary key, or FALSE on failure.
+   */
+  public function import(stdClass $dest_bean_vals, stdClass $row) {
+    $migration = Migration::currentMigration();
+
+    // Updating previously-migrated content?
+    if (isset($row->migrate_map_destid1)) {
+      // Make sure is_new is off.
+      $dest_bean_vals->is_new = FALSE;
+
+      if (isset($dest_bean_vals->bid)) {
+        if ($dest_bean_vals->bid != $row->migrate_map_destid1) {
+          throw new MigrateException(t("Incoming id !bid and map destination bid !destid1 don't match",
+            array('!bid' => $dest_bean_vals->bid, '!destid1' => $row->migrate_map_destid1)));
+        }
+      }
+      else {
+        $dest_bean_vals->bid = $row->migrate_map_destid1;
+      }
+      // Get the existing revision ID so updates don't generate notices.
+      $values = db_select('bean', 'b')
+                ->fields('b', 'vid')
+                ->condition('bid', $dest_bean_vals->bid)
+                ->execute()
+                ->fetchAssoc();
+      if (empty($values)) {
+        throw new MigrateException(t("Incoming bean ID !bid no longer exists",
+                    array('!bid' => $dest_bean_vals->bid)));
+      }
+      $dest_bean_vals->vid = $values['vid'];
+    }
+
+    if ($migration->getSystemOfRecord() == Migration::DESTINATION) {
+      if (!isset($dest_bean_vals->bid)) {
+        throw new MigrateException(t('System-of-record is DESTINATION, but no destination bid provided'));
+      }
+      $old_bean = bean_load($dest_bean_vals->bid);
+      if (empty($old_bean)) {
+        throw new MigrateException(t('System-of-record is DESTINATION, but bean !bid does not exist',
+                                   array('!bid' => $dest_bean_vals->bid)));
+      }
+      if (!isset($dest_bean_vals->created)) {
+        $dest_bean_vals->created = $old_bean->created;
+      }
+      if (!isset($dest_bean_vals->vid)) {
+        $dest_bean_vals->vid = $old_bean->vid;
+      }
+      if (!isset($dest_bean_vals->uid)) {
+        $dest_bean_vals->uid = $old_bean->uid;
+      }
+    }
+
+    if (!isset($dest_bean_vals->type)) {
+      $dest_bean_vals->type = $this->bundle;
+    }
+
+    // Invoke migration prepare handlers.
+    $this->prepare($dest_bean_vals, $row);
+
+    // Trying to update an existing bean.
+    if ($migration->getSystemOfRecord() == Migration::DESTINATION) {
+      // Incoming data overrides existing data: only copy non-existent fields.
+      foreach ($old_bean as $field => $value) {
+        // An explicit NULL in the source data means to wipe to old value (i.e.,
+        // don't copy it over from $old_bean).
+        if (property_exists($dest_bean_vals, $field) && is_null($dest_bean_vals->$field)) {
+          // Ignore this field.
+        }
+        elseif (!isset($dest_bean_vals->$field)) {
+          $dest_bean_vals->$field = $old_bean->$field;
+        }
+      }
+    }
+
+    $updating = isset($dest_bean_vals->bid);
+
+    // Make sure that if is_new is not TRUE, it is not present.
+    if (isset($dest_bean_vals->is_new) && empty($dest_bean_vals->is_new)) {
+      unset($dest_bean_vals->is_new);
+    }
+
+    // Validate field data prior to saving.
+    field_attach_validate('bean', $dest_bean_vals);
+
+    // Copy the values (from an unstructured stdClass) to a real Bean:
+    // some fields (like delta) get good defailts in $bean,
+    // but this does not update $dest_bean_vals.
+    $bean = bean_create(get_object_vars($dest_bean_vals));
+
+    migrate_instrument_start('bean_save');
+    $saved = bean_save($bean);
+    migrate_instrument_stop('bean_save');
+
+    if ($saved) {
+      if ($updating) {
+        $this->numUpdated++;
+      }
+      else {
+        $this->numCreated++;
+      }
+
+      // Potentially fix the uid in the bean_revisions table.
+      $query = db_update('bean_revision')
+               ->condition('vid', $bean->vid);
+      if ($bean->uid != $GLOBALS['user']->uid) {
+        $fields['uid'] = $bean->uid;
+      }
+      if (!empty($fields)) {
+        // We actually have something to update.
+        $query->fields($fields);
+        $query->execute();
+      }
+    }
+    $keyarr = ($saved) ? array($bean->bid) : FALSE;
+
+    $this->complete($dest_bean_vals, $row);
+    return $keyarr;
+  }
+
+}
+
+/**
+ * Defines a customized migration into Beans (fieldable block entities).
+ *
+ * The Bean module does not yet support Migrate directly, but the missing
+ * MigrateDestination class appears here.
+ *
+ * @see UaDemoMigrateDestinationBean
+ */
+abstract class UaDemoBeanMigration extends UaDemoIntKeyedMigration {
+
+  /**
+   * Constructor.
+   *
+   * @param array $arguments
+   *   Arguments for the parent constructor (Migration standard behavior).
+   * @param string $bundle
+   *   Bean type name.
+   * @param string $description
+   *   Detailed information describing the migration.
+   */
+  public function __construct(array $arguments, $bundle, $description) {
+    parent::__construct($arguments, 'id',
+      UaDemoMigrateDestinationBean::getKeySchema());
+
+    $this->description = $description;
+
+    // Destination.
+    $this->destination = new UaDemoMigrateDestinationBean($bundle);
+
+    // These fields get placeholders, as in Nodes...
+    $this->addFieldMapping('uid')
+         ->defaultValue(1);
+    $arbitrary_timestamp = "2015-07-21 09:38:00";
+    $this->addFieldMapping('created')
+         ->defaultValue($arbitrary_timestamp);
+    $this->addFieldMapping('changed')
+         ->defaultValue($arbitrary_timestamp);
+    $this->addFieldMapping('view_mode')
+         ->defaultValue('default');
+  }
+
+}
+
+/**
  * Defines a migration into a Field Collection.
  *
  * The Migration module has no direct support for Field Collections
