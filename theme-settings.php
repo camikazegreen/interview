@@ -98,6 +98,15 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     '#description' => t('A copyright notice for this site. The value here will appear after a "Copyright YYYY" notice (where YYYY is the current year).'),
     '#default_value' => theme_get_setting('ua_copyright_notice'),
   );
+  // Suppress jQuery message.
+  $form['ua_settings']['settings']['ua_bootstrap_toggle_jquery_error'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Suppress jQuery version error message'),
+    '#default_value' => theme_get_setting('ua_bootstrap_toggle_jquery_error'),
+    '#description' => t('Enable this if the version of jQuery has been upgraded to 1.9+ using a method other than the !jquery_update module.', array(
+      '!jquery_update' => l(t('jQuery Update'), 'https://drupal.org/project/jquery_update'),
+    )),
+  );
 
   $form['#validate'][] = 'ua_zen_settings_form_validate';
   $form['#submit'][] = 'ua_zen_settings_form_submit';

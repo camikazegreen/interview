@@ -3,6 +3,10 @@
 The UA Zen theme is a Drupal subtheme of Zen using the UA's new branding guidelines.
 It incorporates the the UA Bootstrap framework to provide lots of helpful classes for designers and developers.
 
+## Dependencies
+
+Bootstrap javascript requires jQuery 1.9+
+
 ## Making a UA Zen subtheme ##
 
 The following instructions make a new subtheme called ua_zen_subtheme.
