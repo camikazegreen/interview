@@ -46,10 +46,10 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     ),
   );
   $form['ua_settings']['ua_bootstrap']['ua_bootstrap_cdn']['ua_bootstrap_cdn_version'] = array(
-    '#type' => 'select',
+    '#type' => 'radios',
     '#title' => t('UA Bootstrap CDN version'),
     '#options' => array(
-      UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION => t('!stableversion (Recommended)', array('!stableversion' => UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION)),
+      'stable' => t('Stable version: <em>!stableversion</em> (Recommended)', array('!stableversion' => UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION)),
       'latest' => t('Latest dev version'),
     ),
     '#default_value' => theme_get_setting('ua_bootstrap_cdn_version'),

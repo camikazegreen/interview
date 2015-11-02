@@ -38,12 +38,14 @@ function ua_zen_css_alter(&$css) {
 
   if ($ua_bootstrap_source == 'cdn') {
     $ua_bootstrap_cdn_version = theme_get_setting('ua_bootstrap_cdn_version');
+    if ($ua_bootstrap_cdn_version == 'stable') {
+      $ua_bootstrap_cdn_version = UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION;
+    }
     $ua_bootstrap_path = '//bitbucket.org/uadigital/ua-bootstrap/downloads/ua-bootstrap-' . $ua_bootstrap_cdn_version;
     $ua_bootstrap_css_info['type'] = 'external';
   }
   else {
-    $ua_bootstrap_local_version = UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION;
-    $ua_bootstrap_path = drupal_get_path('theme', 'ua_zen') . "/css/ua-bootstrap-" . $ua_bootstrap_local_version;
+    $ua_bootstrap_path = drupal_get_path('theme', 'ua_zen') . "/css/ua-bootstrap-" . UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION;
     $ua_bootstrap_css_info['type'] = 'internal';
   }
 
