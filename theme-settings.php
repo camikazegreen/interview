@@ -1,4 +1,7 @@
 <?php
+
+include_once dirname(__FILE__) . '/includes/common.inc';
+
 /**
  * Implements hook_form_system_theme_settings_alter().
  */
@@ -8,6 +11,66 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     return;
   }
 
+  //
+  // UA Bootstrap settings.
+  //
+  $form['ua_settings']['ua_bootstrap'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('UA Bootstrap Settings'),
+  );
+  $form['ua_settings']['ua_bootstrap']['ua_bootstrap_source'] = array(
+    '#type' => 'radios',
+    '#title' => t('UA Bootstrap Source'),
+    '#options' => array(
+      'local' => t('Use local copy of UA Bootstrap packaged with UA Zen <em>(!stableversion)</em>', array('!stableversion' => UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION)),
+      'cdn' => t('Use external copy of UA Bootstrap hosted on the UA Bootstrap CDN'),
+    ),
+    '#default_value' => theme_get_setting('ua_bootstrap_source'),
+    '#prefix' =>  t('UA Zen requires the !uabootstrap front-end framework.  UA Bootstrap can either be loaded from the local copy packaged with UA Zen or from the !uabootstrapcdn. !warning', array(
+      '!uabootstrap' => l(t('UA Bootstrap'), 'http://uadigital.arizona.edu/ua-bootstrap', array(
+        'external' => TRUE,
+      )),
+      '!uabootstrapcdn' => l(t('UA Bootstrap CDN'), 'https://bitbucket.org/uadigital/ua-bootstrap/downloads', array(
+        'external' => TRUE,
+      )),
+      '!warning' => '<div class="alert alert-info messages info"><strong>' . t('NOTE') . ':</strong> ' . t('While the UA Bootstrap CDN is the preferred method for providing huge performance gains in load time, this method does depend on using this third party service (BitBucket). Bitbucket is under no obligation or commitment to provide guaranteed up-time or service quality for this theme.') . '</div>',
+    )),
+  );
+  $form['ua_settings']['ua_bootstrap']['ua_bootstrap_cdn'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('UA Bootstrap CDN Settings'),
+    '#states' => array(
+      'visible' => array(
+        ':input[name="ua_bootstrap_source"]' => array('value' => 'cdn'),
+      )
+    ),
+  );
+  $form['ua_settings']['ua_bootstrap']['ua_bootstrap_cdn']['ua_bootstrap_cdn_version'] = array(
+    '#type' => 'radios',
+    '#title' => t('UA Bootstrap CDN version'),
+    '#options' => array(
+      'stable' => t('Stable version: <em>!stableversion</em> (Recommended)', array('!stableversion' => UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION)),
+      'latest' => t('Latest dev version'),
+    ),
+    '#default_value' => theme_get_setting('ua_bootstrap_cdn_version'),
+  );
+  $form['ua_settings']['ua_bootstrap']['ua_bootstrap_minified'] = array(
+    '#default_value' => theme_get_setting('ua_bootstrap_minified'),
+    '#type'          => 'checkbox',
+    '#title'         => t('Use minified version of UA Bootstrap.'),
+    '#default_value' => theme_get_setting('ua_bootstrap_minified'),
+  );
+
+  //
+  // Breadcrumb settings.
+  //
+  $form['breadcrumb']['breadcrumb_options']['zen_breadcrumb_separator'] = array(
+    '#access'        => FALSE
+  );
+  $form['breadcrumb']['breadcrumb_options']['zen_breadcrumb_trailing'] = array(
+    '#access'        => FALSE
+  );
+
   // Add secondary logo upload field to theme settings. Code source: mjharmon's
   // research on Drupal core & his own knowledge of Drupal internals and
   // development doctrine this approach sidesteps the need to mark the file as
@@ -15,12 +78,6 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
   // copied the file from PHP's temporary holding space. This technique also
   // gives the field a "stock" feel to the user, rather than the bolt on feel
   // the prior solution created.
-  $form['breadcrumb']['breadcrumb_options']['zen_breadcrumb_separator'] = array(
-    '#access'        => FALSE
-  );
-  $form['breadcrumb']['breadcrumb_options']['zen_breadcrumb_trailing'] = array(
-    '#access'        => FALSE
-  );
   $form['logo']['settings']['footer_logo_path'] = array(
     '#type' => 'textfield',
     '#title' => t('Path to custom footer logo'),
