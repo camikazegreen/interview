@@ -7,6 +7,8 @@ It incorporates the the UA Bootstrap framework to provide lots of helpful classe
 
 Bootstrap javascript requires jQuery 1.9+
 
+If you don't want to use jQuery Update, you can suppress the jQuery version message within the theme settings.
+
 ## Making a UA Zen subtheme ##
 
 The following instructions make a new subtheme called ua_zen_subtheme.
