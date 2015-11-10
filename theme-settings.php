@@ -27,11 +27,11 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
 
     // Ensure the jQuery version is >= 1.9.
     if (!$jquery_version || !version_compare($jquery_version, '1.9', '>=')) {
-      drupal_set_message(t('UA Zen requires a minimum jQuery version of 1.9 or higher. Please enable the <a href="!jquery_update_project_url">jQuery Update</a> module. If you are seeing this message, then you must <a href="!jquery_update_configure">manually configure</a> this setting or optionally <a href="!suppress_jquery_error">suppress this message</a> instead.', array(
+      drupal_set_message(t('UA Zen requires a minimum jQuery version of 1.9 or higher. Please enable the <a href="!jquery_update_project_url">jQuery Update</a> module. If you are seeing this message, then you must enable and <a href="!jquery_update_configure">configure</a> jQuery Update or optionally <a href="!suppress_jquery_error">suppress this message</a> instead.', array(
         '!jquery_update_project_url' => 'https://www.drupal.org/project/jquery_update',
         '!jquery_update_configure' => url('admin/config/development/jquery_update'),
         '!suppress_jquery_error' => url('admin/appearance/settings/' . $theme, array(
-          'fragment' => 'edit-ua-bootstrap-toggle-jquerqy-error',
+          'fragment' => 'edit-ua-bootstrap-toggle-jquery-error',
         )),
       )), 'error', FALSE);
     }
