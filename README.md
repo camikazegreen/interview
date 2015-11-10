@@ -5,9 +5,7 @@ It incorporates the the UA Bootstrap framework to provide lots of helpful classe
 
 ## Dependencies
 
-Bootstrap javascript requires jQuery 1.9+
-
-If you don't want to use jQuery Update, and add the required jQuery version another way, you can suppress the jQuery version message within the theme settings.
+UA Zen uses the [UA Bootstrap](http://uadigital.arizona.edu/ua-bootstrap) front-end framework which requires jQuery version 1.9 or higher.  The recommended method for enabling a newer version of jQuery for Drupal is to install and enable the [jQuery Update](https://www.drupal.org/project/jquery_update) module.  If you don't want to use jQuery Update, and are able to meet the jQuery dependency another way, you can manually supress the jQuery version warning message within the theme settings.
 
 ## Making a UA Zen subtheme ##
 
