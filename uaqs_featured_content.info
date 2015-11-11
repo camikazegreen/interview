@@ -6,6 +6,7 @@ dependencies[] = flexslider
 dependencies[] = flexslider_views
 dependencies[] = image
 dependencies[] = image_url_formatter
+dependencies[] = jquery_update
 dependencies[] = link
 dependencies[] = strongarm
 dependencies[] = text
