@@ -1,0 +1,12 @@
+<?php
+/**
+ * @file
+ * ua_featured_content.install
+ */
+
+/**
+ * Disable unused Image URL Formatter module.
+ */
+function ua_featured_content_update_7100() {
+  module_disable(array('image_url_formatter'));
+}
