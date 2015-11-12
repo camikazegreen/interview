@@ -124,7 +124,7 @@ function ua_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -158,7 +158,7 @@ function ua_news_field_default_field_instances() {
         'year_range' => '-1:+3',
       ),
       'type' => 'date_select',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -173,7 +173,7 @@ function ua_news_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -200,7 +200,7 @@ function ua_news_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -216,7 +216,7 @@ function ua_news_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -242,7 +242,7 @@ function ua_news_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -258,7 +258,7 @@ function ua_news_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -282,7 +282,7 @@ function ua_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -304,7 +304,7 @@ function ua_news_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -325,7 +325,7 @@ function ua_news_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -344,7 +344,7 @@ function ua_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -367,7 +367,7 @@ function ua_news_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -383,7 +383,7 @@ function ua_news_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -424,7 +424,7 @@ function ua_news_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -442,7 +442,7 @@ function ua_news_field_default_field_instances() {
           'image_style' => 'ua_news_detail_500',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -474,7 +474,7 @@ function ua_news_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -497,7 +497,7 @@ function ua_news_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -531,7 +531,7 @@ function ua_news_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_select',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -546,7 +546,7 @@ function ua_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -558,6 +558,46 @@ function ua_news_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_ua_news_short_title',
     'label' => 'Short Title',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-ua_news-field_ua_news_subtitle'.
+  $field_instances['node-ua_news-field_ua_news_subtitle'] = array(
+    'bundle' => 'ua_news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ua_news_subtitle',
+    'label' => 'Subtitle',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -585,7 +625,7 @@ function ua_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -609,7 +649,7 @@ function ua_news_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -634,6 +674,7 @@ function ua_news_field_default_field_instances() {
   t('Published');
   t('Short Title');
   t('Show on Front Page');
+  t('Subtitle');
   t('Summary');
   t('The date and time this news item drops out of website displays');
 
