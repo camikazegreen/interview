@@ -17,7 +17,6 @@ When this module is used as part of a Drupal distribution (such as [UA Quickstar
 ### Drupal Contrib Modules
 
 - [Flexslider](https://www.drupal.org/project/flexslider)
-- [Image URL Formatter](https://www.drupal.org/project/image_url_formatter)
 
 ### Libraries
 

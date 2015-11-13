@@ -17,6 +17,7 @@ defaults[projects][subdir] = contrib
 
 projects[flexslider][version] = 2.0-rc1
 
+; TODO: remove this from build after next release.
 projects[image_url_formatter][version] = 1.4
 
 
