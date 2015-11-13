@@ -22,7 +22,7 @@ function ua_event_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Calendar';
+  $handler->display->display_options['title'] = 'UA Events';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = '';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -202,7 +202,6 @@ function ua_event_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
   $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
-  $handler->display->display_options['arguments']['date_argument']['granularity_reset'] = 0;
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_ua_event_date.field_ua_event_date_value' => 'field_data_field_ua_event_date.field_ua_event_date_value',
   );
