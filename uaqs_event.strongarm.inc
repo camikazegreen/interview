@@ -13,27 +13,6 @@ function ua_event_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'ant_pattern_ua_event';
-  $strongarm->value = '';
-  $export['ant_pattern_ua_event'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ant_php_ua_event';
-  $strongarm->value = 0;
-  $export['ant_php_ua_event'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'ant_ua_event';
-  $strongarm->value = '0';
-  $export['ant_ua_event'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'date_format_abbr_month_only';
   $strongarm->value = 'M';
   $export['date_format_abbr_month_only'] = $strongarm;
@@ -81,9 +60,6 @@ function ua_event_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
-        'custom_settings' => FALSE,
-      ),
-      'revision' => array(
         'custom_settings' => FALSE,
       ),
     ),
