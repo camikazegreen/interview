@@ -32,6 +32,7 @@ class UaDemoEventMigration extends UaDemoNodeMigration {
     );
     // The single-value text fielda...
     $single_value_fields = array(
+      'ua_event_subtitle' => t('Sub-title'),
       'ua_event_short_title' => t('Short title'),
       'ua_event_front' => t('Show on front page'),
       'ua_event_date' => t('Event date'),

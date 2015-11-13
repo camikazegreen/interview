@@ -48,6 +48,7 @@ class UaDemoPageMigration extends UaDemoNodeMigration {
     // See ua_page ua_page.features.field_instance.inc.
     $data_fields = array(
       'title' => t('Title'),
+      'ua_page_subtitle' => t('Sub-title'),
       'path' => t('URL path settings'),
       'ua_page_body' => t('Page body'),
     );
@@ -60,6 +61,7 @@ class UaDemoPageMigration extends UaDemoNodeMigration {
 
     // Map JSON names to simple content type fields and subfields.
     $this->addSimpleMappings(array('title'));
+    $this->addFieldMapping('field_ua_page_subtitle', 'ua_page_subtitle');
     $this->addSimpleMappings(array('path'));
     $this->addSimpleMappings(array('ua_page_body'));
     // Allow limited HTML markup in the page body field.
