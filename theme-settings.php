@@ -6,9 +6,35 @@ include_once dirname(__FILE__) . '/includes/common.inc';
  * Implements hook_form_system_theme_settings_alter().
  */
 function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL) {
+  $theme = !empty($form_state['build_info']['args'][0]) ? $form_state['build_info']['args'][0] : FALSE;
   // Work-around for a core bug affecting admin themes. See issue #943212.
-  if (isset($form_id)) {
+  if (isset($form_id) || $theme === FALSE) {
     return;
+  }
+
+  // Display a warning if jQuery Update isn't enabled or using a lower version.
+  if (!theme_get_setting('ua_bootstrap_toggle_jquery_error')) {
+    $jquery_version = FALSE;
+    if (module_exists('jquery_update')) {
+      // Get theme specific jQuery version.
+      $jquery_version = theme_get_setting('jquery_update_jquery_version', $theme);
+
+      // Get site wide jQuery version if theme specific one is not set.
+      if (!$jquery_version) {
+        $jquery_version = variable_get('jquery_update_jquery_version', '1.10');
+      }
+    }
+
+    // Ensure the jQuery version is >= 1.9.
+    if (!$jquery_version || !version_compare($jquery_version, '1.9', '>=')) {
+      drupal_set_message(t('UA Zen requires a minimum jQuery version of 1.9 or higher. Please enable the <a href="!jquery_update_project_url">jQuery Update</a> module. If you are seeing this message, then you must enable and <a href="!jquery_update_configure">configure</a> jQuery Update or optionally <a href="!suppress_jquery_error">suppress this message</a> instead.', array(
+        '!jquery_update_project_url' => 'https://www.drupal.org/project/jquery_update',
+        '!jquery_update_configure' => url('admin/config/development/jquery_update'),
+        '!suppress_jquery_error' => url('admin/appearance/settings/' . $theme, array(
+          'fragment' => 'edit-ua-bootstrap-toggle-jquery-error',
+        )),
+      )), 'error', FALSE);
+    }
   }
 
   //
@@ -59,6 +85,16 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     '#type'          => 'checkbox',
     '#title'         => t('Use minified version of UA Bootstrap.'),
     '#default_value' => theme_get_setting('ua_bootstrap_minified'),
+  );
+
+  // Suppress jQuery message.
+  $form['ua_settings']['ua_bootstrap']['ua_bootstrap_toggle_jquery_error'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Suppress jQuery version error message.'),
+    '#default_value' => theme_get_setting('ua_bootstrap_toggle_jquery_error'),
+    '#description' => t('Enable this if the version of jQuery has been upgraded to 1.9+ using a method other than the !jquery_update module.', array(
+      '!jquery_update' => l(t('jQuery Update'), 'https://drupal.org/project/jquery_update'),
+    )),
   );
 
   //
