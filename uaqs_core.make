@@ -28,7 +28,7 @@ projects[pathauto][version] = 1.2
 
 projects[token][version] = 1.6
 
-projects[views][version] = 3.11
+projects[views][version] = 3.13
 
 
 ; ------------------------------------------------------------------------------
