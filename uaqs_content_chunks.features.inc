@@ -18,8 +18,8 @@ function ua_content_chunks_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function ua_content_chunks_node_info() {
   $items = array(
-    'ua_main_page' => array(
-      'name' => t('UA Main Page'),
+    'ua_flexible_page' => array(
+      'name' => t('UA Flexible Page'),
       'base' => 'node_content',
       'description' => t('The preferred way to add basic content to a UA web site.'),
       'has_title' => '1',

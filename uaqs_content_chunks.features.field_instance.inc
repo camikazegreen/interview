@@ -10,9 +10,9 @@
 function ua_content_chunks_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ua_main_page-field_main_content'
-  $field_instances['node-ua_main_page-field_main_content'] = array(
-    'bundle' => 'ua_main_page',
+  // Exported field_instance: 'node-ua_flexible_page-field_main_content'
+  $field_instances['node-ua_flexible_page-field_main_content'] = array(
+    'bundle' => 'ua_flexible_page',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
