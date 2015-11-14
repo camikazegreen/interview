@@ -1,6 +1,7 @@
 [
   {"id":1,
     "title" : "New Institute Favors Views Held by State Legislators",
+    "ua_news_subtitle" : "Skeptical perspectives on the form of the Earth.",
     "ua_news_short_title" : "Institute of Skeptical Astronomy Established",
     "ua_news_front" : true,
     "ua_news_byline" : "Ana Phylactic — University of Arizona Allioideae",
@@ -19,6 +20,7 @@
   },
   {"id":2,
     "title" : "Innovative Import Initiative Seeks to Enhance the University of Arizona's Revenue Stream",
+    "ua_news_subtitle" : "",
     "ua_news_short_title" : "Taking Advantage of a Location Near an International Border",
     "ua_news_front" : true,
     "ua_news_byline" : "Poly Crates — University of Arizona Allioideae",
@@ -36,6 +38,7 @@
   },
   {"id":3,
     "title" : "University of Arizona Branding Brings a New Experience to Incoming Freshmen",
+    "ua_news_subtitle" : "A new ceremony on the University Mall.",
     "ua_news_short_title" : "This Fall Incoming Students will be Branded",
     "ua_news_front" : true,
     "ua_news_byline" : "Perry Stalsis — University of Arizona Allioideae",
@@ -53,6 +56,7 @@
   }
   {"id":4,
     "title" : "New Light on the Origins of “Bear Down”",
+    "ua_news_subtitle" : "A secret society and the underfur of hibernating bears.",
     "ua_news_short_title" : "Underfur of Hibernating Bears",
     "ua_news_front" : false,
     "ua_news_byline" : "Alan Dente — University of Arizona Allioideae",

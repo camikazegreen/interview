@@ -34,6 +34,7 @@ class UaDemoNewsMigration extends UaDemoNodeMigration {
     );
     // The single-value text fielda...
     $single_value_fields = array(
+      'ua_news_subtitle' => t('Sub-title'),
       'ua_news_short_title' => t('Short title'),
       'ua_news_front' => t('Show on front page'),
       'ua_news_byline' => t('Byline'),
