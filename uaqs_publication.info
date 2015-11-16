@@ -38,3 +38,4 @@ features[variable][] = node_submitted_ua_pub
 features_exclude[variable][ant_pattern_ua_pub] = ant_pattern_ua_pub
 features_exclude[variable][ant_php_ua_pub] = ant_php_ua_pub
 features_exclude[variable][ant_ua_pub] = ant_ua_pub
+version = 7.x-1.0-alpha3
