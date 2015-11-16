@@ -21,3 +21,4 @@ features[variable][] = node_submitted_ua_program
 features_exclude[variable][ant_pattern_ua_program] = ant_pattern_ua_program
 features_exclude[variable][ant_php_ua_program] = ant_php_ua_program
 features_exclude[variable][ant_ua_program] = ant_ua_program
+version = 7.x-1.0-alpha3
