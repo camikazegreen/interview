@@ -1,3 +1,9 @@
+UA Core 7.x-1.0-alpha3, 2015-11-13
+--------------------------------------
+- Merged in mmunro-ltrr/ua_core/UADIGITAL-377 (pull request #9).
+- Bump the version number on Views.
+- Back to dev.
+
 UA Core 7.x-1.0-alpha2, 2015-10-16
 --------------------------------------
 - Merged in UADIGITAL-315 (pull request #8).
