@@ -1,3 +1,12 @@
+UA Demo Content 7.x-1.0-alpha3, 2015-11-13
+----------------------------------------------
+- Merged in mmunro-ltrr/ua_demo/UADIGITAL-384 (pull request #17).
+- Add demo content for the sub-title fields in the UA Event, UA News and UA Page features.
+- Merged in mmunro-ltrr/ua_demo/UADIGITAL-337 (pull request #16).
+- Add Bean Migrate support, and demo content for the UA Contact Summary block.
+- Merged ua_drupal/ua_demo into 7.x-1.x.
+- Back to dev.
+
 UA Demo Content 7.x-1.0-alpha2, 2015-10-15
 ----------------------------------------------
 - Merged in mmunro-ltrr/ua_demo/UADIGITAL-316 (pull request #15).
