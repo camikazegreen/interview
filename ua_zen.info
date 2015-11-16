@@ -151,4 +151,3 @@ settings[ua_bootstrap_minified]    = 1
 ; To add a Panels layout (which can also be used by Display Suite), uncomment
 ; the line below and see the documentation at: https://drupal.org/node/495654
 ;plugins[panels][layouts] = panels-layouts
-version = 7.x-1.0-alpha3
