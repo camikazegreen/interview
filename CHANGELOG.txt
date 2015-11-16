@@ -1,3 +1,10 @@
+7.x-1.0-alpha3, 2015-11-13
+------------------------------
+- UADIGITAL-375: Reverting some unexpected feature updates.
+- Merged in macaulay/ua_page/uadigital-375 (pull request #4).
+- UADIGITAL-375: Added sub-title field to the Page content type and placed it to display under the title field.
+- Back to dev.
+
 7.x-1.0-alpha2, 2015-10-16
 ------------------------------
 - Merged in UADIGITAL-322 (pull request #3).

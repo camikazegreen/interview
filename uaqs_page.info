@@ -17,3 +17,4 @@ features[node][] = ua_page
 features[variable][] = field_bundle_settings_node__ua_page
 features[variable][] = node_options_ua_page
 features[variable][] = node_submitted_ua_page
+version = 7.x-1.0-alpha3
