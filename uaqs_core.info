@@ -5,4 +5,3 @@ package = The University of Arizona
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = strongarm
-version = 7.x-1.0-alpha3
