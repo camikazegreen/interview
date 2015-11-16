@@ -205,5 +205,14 @@
     "external" : 0,
     "expanded" : 0,
     "weight" : 1
+  },
+  {"mlid":24,
+    "parent_id" : 2,
+    "menu_name" : "main-menu",
+    "link_path" : "ua_flexible_page",
+    "link_title" : "UA Flexible Page",
+    "external" : 0,
+    "expanded" : 0,
+    "weight" : 3
   }
 ]

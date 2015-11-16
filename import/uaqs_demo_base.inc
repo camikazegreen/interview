@@ -594,6 +594,42 @@ abstract class UaDemoFieldCollectionMigration extends UaDemoIntKeyedMigration {
 }
 
 /**
+ * Defines migration into Paragraphs Items.
+ *
+ * The Migration module has no direct support for Paragraphs Items
+ * (which are use freestanding entities, distinct from nodes), but the
+ * Paragraphs module itself defines a Migration api.
+ */
+abstract class UaDemoParagraphsItemMigration extends UaDemoIntKeyedMigration {
+
+  /**
+   * Constructor.
+   *
+   * @param array $arguments
+   *   Arguments for the parent constructor (Migration standard behavior).
+   * @param string $bundle
+   *   The Paragraph type machine name.
+   * @param string $field_name
+   *   Name of the field where the Paragraphs attach to a host entity.
+   * @param string $description
+   *   Detailed information describing the migration.
+   */
+  public function __construct(array $arguments, $bundle, $field_name, $description) {
+    parent::__construct($arguments, 'id', MigrateDestinationParagraphsItem::getKeySchema());
+
+    $this->description = $description;
+    $this->destination = new MigrateDestinationParagraphsItem(
+      $bundle,
+      array(
+        'field_name' => $field_name,
+        'text_format' => 'ua_phrasing_content',
+      )
+    );
+  }
+
+}
+
+/**
  * Defines a customized migration into Drupal menu items.
  *
  * The Migration module's standard MigrateDestinationMenuLinks is the basis of
