@@ -1,3 +1,12 @@
+7.x-1.0-alpha3, 2015-11-13
+------------------------------
+- UADIGITAL-375: Reverting some unexpected feature updates.
+- Merged in macaulay/ua_news/uadigital-375 (pull request #11).
+- UADIGITAL-375: Added subtitle field to the News content type and placed it to display under the title field.
+- Merged macaulay/ua_news into 7.x-1.x.
+- Back to dev.
+- Merged ua_drupal/ua_news into 7.x-1.x.
+
 7.x-1.0-alpha2, 2015-10-16
 ------------------------------
 - Merged in UADIGITAL-322 (pull request #10).
