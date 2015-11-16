@@ -1,3 +1,29 @@
+UA Quickstart 7.x-1.0-alpha3, 2015-11-13
+--------------------------------------------
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-384 (pull request #33).
+- Update the UA Demo reference for the sub-title demo content addition.
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-377 (pull request #32).
+- Reference the updated UA Core module foir the Views version update.
+- Updating ua_page for UADIGITAL-375: Adding subtitle field.
+- Updating ua_featured_content for UA-DIGITAL-347 & UADIGITAL-348: Fixing dependencies.
+- Updating ua_zen for UADIGITAL-358: Define jQuery as UA Zen dependency.
+- Updating ua_news & ua_event for UADIGITAL-375: Adding subtitle field.
+- Updating UA Zen for UADIGITAL-125: Add UA Bootstrap CDN settings to theme.
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-337 (pull request #31).
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-351 (pull request #30).
+- Replace the custom block in the footer_sub region with a block using the Bean module.
+- Move enabling of ua_demo into ua_quickstart.install, refactor block handling there.
+- Updating ua_featured_content for UADIGITAL-349: Make featured content module easier to use without UA Zen.
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-344 (pull request #29).
+- UADIGITAL-344: Updating jquery_update to version 7.x-2.7.
+- Merged ua_drupal/ua_quickstart into 7.x-1.x.
+- Merged in UADIGITAL-343 (pull request #28).
+- UADIGITAL-343: Updating Drupal core to version 7.41.
+- Updating ua_zen for UADIGITAL-320: Using hosted ua-bootstrap-latest.min.css by default again.
+- Merged in UADIGITAL-336 (pull request #27).
+- UADIGITAL-336: Cleaning up temporary tags before pushing to remote.
+- Back to dev.
+
 UA Quickstart 7.x-1.0-alpha2, 2015-10-16
 --------------------------------------------
 - Merged in UADIGITAL-322 (pull request #26).
