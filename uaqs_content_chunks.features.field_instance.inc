@@ -10,8 +10,8 @@
 function ua_content_chunks_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ua_flexible_page-field_main_content'
-  $field_instances['node-ua_flexible_page-field_main_content'] = array(
+  // Exported field_instance: 'node-ua_flexible_page-field_ua_main_content'
+  $field_instances['node-ua_flexible_page-field_ua_main_content'] = array(
     'bundle' => 'ua_flexible_page',
     'default_value' => NULL,
     'deleted' => 0,
@@ -40,7 +40,7 @@ function ua_content_chunks_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_main_content',
+    'field_name' => 'field_ua_main_content',
     'label' => 'Main Content',
     'required' => 1,
     'settings' => array(
