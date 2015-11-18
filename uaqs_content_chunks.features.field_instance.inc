@@ -40,7 +40,7 @@ function ua_content_chunks_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_ua_flexible_page_subtitle',
-    'label' => 'UA Flexible Page Subtitle',
+    'label' => 'Subtitle',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
