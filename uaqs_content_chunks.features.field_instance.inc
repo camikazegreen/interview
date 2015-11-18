@@ -10,7 +10,7 @@
 function ua_content_chunks_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ua_flexible_page-field_ua_main_content'
+  // Exported field_instance: 'node-ua_flexible_page-field_ua_main_content'.
   $field_instances['node-ua_flexible_page-field_ua_main_content'] = array(
     'bundle' => 'ua_flexible_page',
     'default_value' => NULL,
@@ -72,7 +72,7 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_column_image-field_ua_caption_text'
+  // 'paragraphs_item-ua_column_image-field_ua_caption_text'.
   $field_instances['paragraphs_item-ua_column_image-field_ua_caption_text'] = array(
     'bundle' => 'ua_column_image',
     'default_value' => NULL,
@@ -113,7 +113,7 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_column_image-field_ua_image_credit'
+  // 'paragraphs_item-ua_column_image-field_ua_image_credit'.
   $field_instances['paragraphs_item-ua_column_image-field_ua_image_credit'] = array(
     'bundle' => 'ua_column_image',
     'default_value' => NULL,
@@ -154,7 +154,7 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_column_image-field_ua_image_wide'
+  // 'paragraphs_item-ua_column_image-field_ua_image_wide'.
   $field_instances['paragraphs_item-ua_column_image-field_ua_image_wide'] = array(
     'bundle' => 'ua_column_image',
     'deleted' => 0,
@@ -205,7 +205,7 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_file_download-field_ua_download_description'
+  // 'paragraphs_item-ua_file_download-field_ua_download_description'.
   $field_instances['paragraphs_item-ua_file_download-field_ua_download_description'] = array(
     'bundle' => 'ua_file_download',
     'default_value' => NULL,
@@ -246,7 +246,7 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_file_download-field_ua_download_file'
+  // 'paragraphs_item-ua_file_download-field_ua_download_file'.
   $field_instances['paragraphs_item-ua_file_download-field_ua_download_file'] = array(
     'bundle' => 'ua_file_download',
     'deleted' => 0,
@@ -289,7 +289,7 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_file_download-field_ua_download_name'
+  // 'paragraphs_item-ua_file_download-field_ua_download_name'.
   $field_instances['paragraphs_item-ua_file_download-field_ua_download_name'] = array(
     'bundle' => 'ua_file_download',
     'default_value' => NULL,
@@ -330,7 +330,7 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_file_download-field_ua_download_preview_image'
+  // 'paragraphs_item-ua_file_download-field_ua_download_preview_image'.
   $field_instances['paragraphs_item-ua_file_download-field_ua_download_preview_image'] = array(
     'bundle' => 'ua_file_download',
     'deleted' => 0,
@@ -381,7 +381,7 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_headed_text-field_ua_text_area'
+  // 'paragraphs_item-ua_headed_text-field_ua_text_area'.
   $field_instances['paragraphs_item-ua_headed_text-field_ua_text_area'] = array(
     'bundle' => 'ua_headed_text',
     'default_value' => NULL,
@@ -422,7 +422,7 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_headed_text-field_ua_text_heading'
+  // 'paragraphs_item-ua_headed_text-field_ua_text_heading'.
   $field_instances['paragraphs_item-ua_headed_text-field_ua_text_heading'] = array(
     'bundle' => 'ua_headed_text',
     'default_value' => NULL,
@@ -463,7 +463,7 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_plain_text-field_ua_text_area'
+  // 'paragraphs_item-ua_plain_text-field_ua_text_area'.
   $field_instances['paragraphs_item-ua_plain_text-field_ua_text_area'] = array(
     'bundle' => 'ua_plain_text',
     'default_value' => NULL,
@@ -503,7 +503,7 @@ function ua_content_chunks_field_default_field_instances() {
     ),
   );
 
-  // Translatables
+  // Translatables.
   // Included for use with string extractors like potx.
   t('Caption');
   t('Image Credit');

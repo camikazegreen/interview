@@ -10,7 +10,7 @@
 function ua_content_chunks_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_ua_caption_text'
+  // Exported field_base: 'field_ua_caption_text'.
   $field_bases['field_ua_caption_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -29,7 +29,7 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_ua_download_description'
+  // Exported field_base: 'field_ua_download_description'.
   $field_bases['field_ua_download_description'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -48,7 +48,7 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_ua_download_file'
+  // Exported field_base: 'field_ua_download_file'.
   $field_bases['field_ua_download_file'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -71,7 +71,7 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_ua_download_name'
+  // Exported field_base: 'field_ua_download_name'.
   $field_bases['field_ua_download_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -92,7 +92,7 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_download_preview_image'
+  // Exported field_base: 'field_ua_download_preview_image'.
   $field_bases['field_ua_download_preview_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -114,7 +114,7 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ua_image_credit'
+  // Exported field_base: 'field_ua_image_credit'.
   $field_bases['field_ua_image_credit'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -135,7 +135,7 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_image_wide'
+  // Exported field_base: 'field_ua_image_wide'.
   $field_bases['field_ua_image_wide'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -157,7 +157,7 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ua_text_area'
+  // Exported field_base: 'field_ua_text_area'.
   $field_bases['field_ua_text_area'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -176,7 +176,7 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_ua_text_heading'
+  // Exported field_base: 'field_ua_text_heading'.
   $field_bases['field_ua_text_heading'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -197,7 +197,7 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_main_content'
+  // Exported field_base: 'field_ua_main_content'.
   $field_bases['field_ua_main_content'] = array(
     'active' => 1,
     'cardinality' => -1,
