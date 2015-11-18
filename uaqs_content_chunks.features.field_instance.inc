@@ -10,6 +10,53 @@
 function ua_content_chunks_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance:
+  // 'node-ua_flexible_page-field_ua_flexible_page_subtitle'.
+  $field_instances['node-ua_flexible_page-field_ua_flexible_page_subtitle'] = array(
+    'bundle' => 'ua_flexible_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ua_featured_content' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ua_flexible_page_subtitle',
+    'label' => 'UA Flexible Page Subtitle',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-ua_flexible_page-field_ua_main_content'.
   $field_instances['node-ua_flexible_page-field_ua_main_content'] = array(
     'bundle' => 'ua_flexible_page',
@@ -67,7 +114,7 @@ function ua_content_chunks_field_default_field_instances() {
       'module' => 'paragraphs',
       'settings' => array(),
       'type' => 'paragraphs_embed',
-      'weight' => -4,
+      'weight' => 2,
     ),
   );
 
@@ -507,14 +554,15 @@ function ua_content_chunks_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Caption');
   t('Image Credit');
+  t('Main Content');
   t('UA Download Description');
   t('UA Download File');
   t('UA Download Name');
   t('UA Download Preview Image');
+  t('UA Flexible Page Subtitle');
   t('UA Image Wide');
   t('UA Text Area');
   t('UA Text Heading');
-  t('Main Content');
 
   return $field_instances;
 }
