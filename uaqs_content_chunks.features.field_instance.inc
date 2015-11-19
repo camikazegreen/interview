@@ -19,11 +19,11 @@ function ua_content_chunks_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -71,7 +71,7 @@ function ua_content_chunks_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'paragraphs_view',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -555,11 +555,11 @@ function ua_content_chunks_field_default_field_instances() {
   t('Caption');
   t('Image Credit');
   t('Main Content');
+  t('Subtitle');
   t('UA Download Description');
   t('UA Download File');
   t('UA Download Name');
   t('UA Download Preview Image');
-  t('UA Flexible Page Subtitle');
   t('UA Image Wide');
   t('UA Text Area');
   t('UA Text Heading');
