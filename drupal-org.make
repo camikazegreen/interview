@@ -20,6 +20,13 @@ projects[ua_cas][download][branch] = 7.x-1.x
 projects[ua_cas][download][revision] = a566583
 projects[ua_cas][download][url] = https://bitbucket.org/ua_drupal/ua_cas.git
 
+projects[ua_content_chunks][type] = module
+projects[ua_content_chunks][subdir] = custom
+projects[ua_content_chunks][download][type] = git
+projects[ua_content_chunks][download][branch] = 7.x-1.x
+projects[ua_content_chunks][download][revision] = d014405
+projects[ua_content_chunks][download][url] = https://bitbucket.org/ua_drupal/ua_content_chunks.git
+
 projects[ua_core][type] = module
 projects[ua_core][subdir] = custom
 projects[ua_core][download][type] = git
@@ -31,7 +38,7 @@ projects[ua_demo][type] = module
 projects[ua_demo][subdir] = custom
 projects[ua_demo][download][type] = git
 projects[ua_demo][download][branch] = 7.x-1.x
-projects[ua_demo][download][revision] = 29ed9ba
+projects[ua_demo][download][revision] = 5986dc3
 projects[ua_demo][download][url] = https://bitbucket.org/ua_drupal/ua_demo.git
 
 projects[ua_event][type] = module
