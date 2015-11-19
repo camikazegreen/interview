@@ -3,9 +3,11 @@
 /**
  * @file
  * Add content to demonstrate the UA Flexible Page feature.
+ *
  * The main contributed Migrate module does not support the Paragraphs-based
  * entities that are the main point of a UA Flexible Page, but the Paragraphs
  * module itself includes Migrate support.
+ *
  * @see https://www.drupal.org/node/2271181
  */
 
@@ -40,7 +42,7 @@ class UaDemoPlainTextMigration extends UaDemoParagraphsItemMigration {
     // Allow limited HTML markup in the text area field.
     $this->addFieldMapping('field_ua_text_area:format')
          ->defaultValue('ua_phrasing_content');
-   }
+  }
 
 }
 
@@ -77,7 +79,7 @@ class UaDemoHeadedTextMigration extends UaDemoParagraphsItemMigration {
     // Allow limited HTML markup in the text area field.
     $this->addFieldMapping('field_ua_text_area:format')
          ->defaultValue('ua_phrasing_content');
-   }
+  }
 
 }
 
@@ -126,7 +128,7 @@ class UaDemoColumnImageMigration extends UaDemoParagraphsItemMigration {
          ->defaultValue('MigrateFileUri');
     $this->addFieldMapping($image_dst_field . ':source_dir')
          ->defaultValue($this->imagePath());
-   }
+  }
 
 }
 
@@ -174,8 +176,8 @@ class UaDemoFlexiblePageMigration extends UaDemoNodeMigration {
          ->sourceMigration(array(
            'UaDemoPlainText',
            'UaDemoHeadedText',
-           'UaDemoColumnImage'));
+           'UaDemoColumnImage',
+         ));
   }
 
 }
-
