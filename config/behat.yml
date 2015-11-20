@@ -11,7 +11,7 @@ default:
     Behat\MinkExtension:
       goutte: ~
       selenium2: ~
-      base_url: http://quickstart.dev
+      base_url: 'http://example.dev'
     Drupal\DrupalExtension:
       blackbox: ~
       api_driver: 'drupal'
