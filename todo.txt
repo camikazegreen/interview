@@ -1,3 +1,0 @@
-Make a behat.yml.dist file?
-Add profile for user stories, @stories
-Convert remaining tests from casper to behat
