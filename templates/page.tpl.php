@@ -46,7 +46,7 @@
 
   <div id="main" class="page-row page-row-expanded">
     <?php if (!empty($page['help']) || ($messages)) : ?>
-<?php print 'derp'; ?><section class="container">
+    <section class="container">
         <div class="row">
             <div class="col-xs-12">
                 <?php print $messages; ?>
