@@ -1,3 +1,32 @@
+7.x-1.0-alpha3, 2015-11-13
+------------------------------
+- Merged in UADIGITAL-358 (pull request #75).
+- UADIGITAL-358: Tweaking jQuery warning message.
+- UADIGITAL-358: Fleshing out README notes about jQuery dependency further.
+- UADIGITAL-358: Moving jQuery warning to theme settings page.
+- README.md edited online with Bitbucket.
+- Template.php edited online with Bitbucket.
+- UADIGITAL-358.
+- Merged in UADIGITAL-125 (pull request #73).
+- UADIGITAL-125: Changing theme UA Bootstrap CDN version setting storage to be non version-specifc.
+- UADIGITAL-125: Replacing all individual hard-coded version references with one constant.
+- UADIGITAL-125: Adding additional theme variable to simplify config interface for UA Bootstrap settings.
+- Removed unused if statement.
+- Removed isset.
+- Https://bitbucket.org/ua_drupal/ua_zen/pull-requests/72/remove-theme_get_info-function/diff#comment-11035298.
+- Https://bitbucket.org/ua_drupal/ua_zen/pull-requests/72/adding-features-per-parsonsj/diff#comment-11035280.
+- Remove excludes.
+- Add defaults.
+- Added comments and changed variable names.
+- Added back styles.css and removed override component from cdn section.
+- Removed extra line.
+- Initial commit adding bitbucket CDN as theme setting.
+- Initial commit of theme settings.
+- Merged ua_drupal/ua_zen into 7.x-1.x.
+- Merged in UADIGITAL-320 (pull request #71).
+- UADIGITAL-320: Using hosted ua-bootstrap-latest.min.css by default again.
+- Back to dev.
+
 7.x-1.0-alpha2, 2015-10-15
 ------------------------------
 - Merged in trackleft/ua_zen/UADIGITAL-305-add-bootstrap-alpha2-to-ua (pull request #70).

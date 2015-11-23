@@ -3,6 +3,10 @@
 The UA Zen theme is a Drupal subtheme of Zen using the UA's new branding guidelines.
 It incorporates the the UA Bootstrap framework to provide lots of helpful classes for designers and developers.
 
+## Dependencies
+
+UA Zen uses the [UA Bootstrap](http://uadigital.arizona.edu/ua-bootstrap) front-end framework which requires jQuery version 1.9 or higher.  The recommended method for enabling a newer version of jQuery for Drupal is to install and enable the [jQuery Update](https://www.drupal.org/project/jquery_update) module.  If you don't want to use jQuery Update, and are able to meet the jQuery dependency another way, you can manually supress the jQuery version warning message within the theme settings.
+
 ## Making a UA Zen subtheme ##
 
 The following instructions make a new subtheme called ua_zen_subtheme.

@@ -6,6 +6,9 @@
  * Complete documentation for this file is available online.
  * @see https://drupal.org/node/1728096
  */
+
+include_once dirname(__FILE__) . '/includes/common.inc';
+
 drupal_add_js('//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array(
         'type' => 'external',
         'group' => JS_THEME,
@@ -13,12 +16,48 @@ drupal_add_js('//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', a
         'weight' => 3,
         )
 );
-/**
- ** Add UA Bootstrap
- **/
 
-drupal_add_css('//bitbucket.org/uadigital/ua-bootstrap/downloads/ua-bootstrap-latest.min.css', array('type' => 'external'));
-//drupal_add_css(drupal_get_path('theme', 'ua_zen') . '/css/ua-bootstrap-1.0.0-alpha-2.min.css');
+/**
+ * Implements hook_css_alter().
+ *
+ * Adds UA Bootstrap CSS based on theme settings.
+ */
+function ua_zen_css_alter(&$css) {
+  $ua_bootstrap_path = '';
+  $ua_bootstrap_source = theme_get_setting('ua_bootstrap_source');
+  $ua_bootstrap_minified = theme_get_setting('ua_bootstrap_minified');
+
+  $ua_bootstrap_css_info = array(
+    'every_page' => TRUE,
+    'media' => 'all',
+    'preprocess' => FALSE,
+    'group' => CSS_THEME,
+    'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+    'weight' => -2,
+  );
+
+  if ($ua_bootstrap_source == 'cdn') {
+    $ua_bootstrap_cdn_version = theme_get_setting('ua_bootstrap_cdn_version');
+    if ($ua_bootstrap_cdn_version == 'stable') {
+      $ua_bootstrap_cdn_version = UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION;
+    }
+    $ua_bootstrap_path = '//bitbucket.org/uadigital/ua-bootstrap/downloads/ua-bootstrap-' . $ua_bootstrap_cdn_version;
+    $ua_bootstrap_css_info['type'] = 'external';
+  }
+  else {
+    $ua_bootstrap_path = drupal_get_path('theme', 'ua_zen') . "/css/ua-bootstrap-" . UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION;
+    $ua_bootstrap_css_info['type'] = 'internal';
+  }
+
+  if ($ua_bootstrap_minified) {
+    $ua_bootstrap_path .= ".min";
+  }
+  $ua_bootstrap_path .= ".css";
+
+  $ua_bootstrap_css_info['data'] = $ua_bootstrap_path;
+  $css[$ua_bootstrap_path] = $ua_bootstrap_css_info;
+}
+
 
 /**
  * Custom function for the secondary footer logo option.
@@ -126,7 +165,6 @@ function ua_zen_preprocess_page(&$variables, $hook) {
       '#theme_wrappers' => array('region'));
   }
 }
-
 
 /**
  * Override or insert variables into the node templates.
@@ -303,7 +341,6 @@ function ua_zen_menu_local_tasks(&$variables) {
 
   return $output;
 }
-
 
 function ua_zen_menu_tree__menu_block__ua_second_level(array $variables) {
 
