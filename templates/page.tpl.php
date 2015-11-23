@@ -45,6 +45,14 @@
   </header>
 
   <div id="main" class="page-row page-row-expanded">
+    <section class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <?php print $messages; ?>
+                <?php print render($page['help']); ?>
+            </div>
+        </div>
+    </section>
     <section id="content_featured">
       <?php print render($page['content_featured']); ?>
     </section>
@@ -60,9 +68,7 @@
             <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
           <?php endif; ?>
           <?php print render($title_suffix); ?>
-          <?php print $messages; ?>
           <?php print render($tabs); ?>
-          <?php print render($page['help']); ?>
           <?php if ($action_links): ?>
             <ul class="action-links"><?php print render($action_links); ?></ul>
           <?php endif; ?>
