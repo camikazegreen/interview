@@ -45,7 +45,8 @@
   </header>
 
   <div id="main" class="page-row page-row-expanded">
-    <section class="container">
+    <?php if (!empty($page['help']) || ($messages)) : ?>
+<?php print 'derp'; ?><section class="container">
         <div class="row">
             <div class="col-xs-12">
                 <?php print $messages; ?>
@@ -53,6 +54,7 @@
             </div>
         </div>
     </section>
+    <?php endif; ?>
     <section id="content_featured">
       <?php print render($page['content_featured']); ?>
     </section>
