@@ -1,3 +1,25 @@
+7.x-1.0-alpha3, 2015-10-23
+------------------------------
+- Merged in UADIGITAL-344 (pull request #8).
+- UADIGITAL-344: Updating jquery_update to version 7.x-2.7.
+- Back to dev.
+
+7.x-1.0-alpha2, 2015-10-12
+------------------------------
+- UADIGITAL-307: Fixing dumb syntax error with DB update function.
+- Merged in UADIGITAL-307 (pull request #7).
+- UADIGITAL-307: Don't uninstall Superfish, just disable.
+- UADIGITAL-307: Using correct update number.
+- UADIGITAL-307: Disabling & uninstaling superfish before removing it from makefile.
+- UADIGITAL-212: Merged in trackleft/ua_navigation/UADIGITAL-212-main-navigation-should-use (pull request #6).
+- Remove superfish library.
+- Rebuild feature without superfish.
+- UADIGITAL-156: Fixing custom secondary navigation block definition.
+- Merged in mmunro-ltrr/ua_navigation/UADIGITAL-139 (pull request #5).
+- Remove explicit version information.
+- Add a changelog so there is always something to modify for a release.
+- Back to dev.
+
 7.x-1.0-alpha1, 2015-07-10
 --------------------------
 - Preparing to tag 7.x-1.0-alpha1.
