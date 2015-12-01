@@ -5,3 +5,7 @@ package = The University of Arizona
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = strongarm
+dependencies[] = defaultconfig
+features[defaultconfig][] = strongarm:jquery_update_jquery_admin_version
+features[defaultconfig][] = strongarm:jquery_update_jquery_version
+features[features_api][] = api:2
