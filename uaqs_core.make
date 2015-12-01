@@ -30,6 +30,7 @@ projects[token][version] = 1.6
 
 projects[views][version] = 3.13
 
+projects[jquery_update][version] = 2.7
 
 ; ------------------------------------------------------------------------------
 ; Commonly used field modules
