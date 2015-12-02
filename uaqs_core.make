@@ -12,7 +12,7 @@ core = 7.x
 api = 2
 
 ; Set default contrib destination
-; defaults[projects][subdir] = contrib
+defaults[projects][subdir] = contrib
 
 ; ------------------------------------------------------------------------------
 ; Contrib dependencies common to many UA features/sites
