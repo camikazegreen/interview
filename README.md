@@ -151,5 +151,39 @@ It should be showing you a summary of your changes in the same diff format the r
 
 Wait for someone to merge or decline your request (the reviewers might want to check your contribution in their own environments, which takes time). But follow up with the reviewers if several days pass with no obvious activity, since other changes may make it difficult to merge your request if too much time passes. If there is a reason for the delay there should be discussion on Slack, or on the comments associated with the request within Bitbucket.
 
-Merging the request puts your changes into the main UA Quickstart repository for a particular theme or feature, where anyone interested in the project should find them easily, but they will not be part of a build of the UA Quickstart distribution until someone updates the specific Git commit references in the  `drupal-org.make` file in the main repository for UA Quickstart  itself: the reference should be to the commit that merged your changes (or something more recent). As soon as this last change goes through, the Jenkins continuous integration system will build a fresh UA Quickstart distribution, run some tests on this, and (if they pass) install it on a generally visible [demonstration server](http://kitten.ltrr.arizona.edu/)
-.
+Merging the request puts your changes into the main UA Quickstart repository for a particular theme or feature, where anyone interested in the project should find them easily, but they will not be part of a build of the UA Quickstart distribution until someone updates the specific Git commit references in the  `drupal-org.make` file in the main repository for UA Quickstart  itself: the reference should be to the commit that merged your changes (or something more recent). As soon as this last change goes through, the Jenkins continuous integration system will build a fresh UA Quickstart distribution, run some tests on this, and (if they pass) install it on a generally visible [demonstration server](http://kitten.ltrr.arizona.edu/).
+
+## Release management
+
+Releases for UA Quickstart and its individual features/components happen at the same time.  When a new version of UA Quickstart is ready to be tagged for release, all of the individual UA Quickstart component projects repositories should also be tagged with the same release version, whether changes to the individual project have occurred or not.
+
+### Tagging new releases
+
+To simplify the process of tagging synchronized releases for UA Quickstart and its various components by UA Quickstart maintainers, a `release.sh` shell script has been added to the UA Quickstart repository which automates the process of preparing each of the individual projects for release and creates the actual release tags.
+
+The `release.sh` script automates the following steps:
+
+- Creates a temporary clone of each individual UA Quickstart component repository.
+- Updates CHANGELOG.txt and adds version information to the .info file for each component.
+- Creates a new release tag for each component.
+- Restores each component back to its default dev state (removes version information from .info file).
+- Pushes the new tag and other changes made to each component to the component's origin repository (optional).
+- Updates the references to each component in UA Quickstart's drush make files.
+- Updates CHANGELOG.txt and adds version information to UA Quickstart's .info and build-ua_quickstart.make files.
+- Creates a new release tag for UA Quickstart.
+- Pushes the new tag and other changes made to UA Quickstart to its origin repository (optional).
+- Restores UA Quickstart back to its default dev state (removes version information from .info and build-ua_quickstart.make files).
+
+To create a new release tag for UA Quickstart and all of its components using this script, a UA Quickstart maintainer should follow these steps:
+
+1. Clone a fresh copy of the UA Quickstart repository in a temporary location.
+
+    git clone git@bitbucket.org:ua_drupal/ua_quickstart.git
+
+2. Change into the cloned repository directory.
+
+    cd ua_quickstart
+
+3. Execute the `release.sh` script using the previous release tag version as the first argument and the new release tag version as the second argument.  The optional `-p` option enables "push mode", which will automatically push the changes made by the script (including the new release tags) to the origin reopositries.  Special care should be taken when using the `-p` option.  It is recommended to execute this script without the `-p` option once to verify that everything works as expected without pushing anything to the origin repositories and then repeating steps 1-2 before running the script again with the `-p` option.
+
+    ./release.sh -p 7.x-1.0-alpha1 7.x-1.0-alpha2

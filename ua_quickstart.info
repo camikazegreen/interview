@@ -45,7 +45,7 @@ dependencies[] = update
 ; ----------------
 dependencies[] = ua_cas
 dependencies[] = ua_core
-dependencies[] = ua_demo
+dependencies[] = ua_block_types
 dependencies[] = ua_featured_content
 dependencies[] = ua_google_tag
 dependencies[] = ua_navigation

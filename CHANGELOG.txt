@@ -1,3 +1,119 @@
+UA Quickstart 7.x-1.0-alpha3, 2015-11-13
+--------------------------------------------
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-384 (pull request #33).
+- Update the UA Demo reference for the sub-title demo content addition.
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-377 (pull request #32).
+- Reference the updated UA Core module foir the Views version update.
+- Updating ua_page for UADIGITAL-375: Adding subtitle field.
+- Updating ua_featured_content for UA-DIGITAL-347 & UADIGITAL-348: Fixing dependencies.
+- Updating ua_zen for UADIGITAL-358: Define jQuery as UA Zen dependency.
+- Updating ua_news & ua_event for UADIGITAL-375: Adding subtitle field.
+- Updating UA Zen for UADIGITAL-125: Add UA Bootstrap CDN settings to theme.
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-337 (pull request #31).
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-351 (pull request #30).
+- Replace the custom block in the footer_sub region with a block using the Bean module.
+- Move enabling of ua_demo into ua_quickstart.install, refactor block handling there.
+- Updating ua_featured_content for UADIGITAL-349: Make featured content module easier to use without UA Zen.
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-344 (pull request #29).
+- UADIGITAL-344: Updating jquery_update to version 7.x-2.7.
+- Merged ua_drupal/ua_quickstart into 7.x-1.x.
+- Merged in UADIGITAL-343 (pull request #28).
+- UADIGITAL-343: Updating Drupal core to version 7.41.
+- Updating ua_zen for UADIGITAL-320: Using hosted ua-bootstrap-latest.min.css by default again.
+- Merged in UADIGITAL-336 (pull request #27).
+- UADIGITAL-336: Cleaning up temporary tags before pushing to remote.
+- Back to dev.
+
+UA Quickstart 7.x-1.0-alpha2, 2015-10-16
+--------------------------------------------
+- Merged in UADIGITAL-322 (pull request #26).
+- Updating ua_block_types for UADIGITAL-322: Changes from features module updates.
+- Updating ua_unit for UADIGITAL-322: Changes from features module updates.
+- Updating ua_program for UADIGITAL-322: Changes from features module updates.
+- Merged in UADIGITAL-313 (pull request #25).
+- Updating ua_google_tag for UADIGITAL-322: Changes from features module updates.
+- Updating ua_publication for UADIGITAL-322: Changes from features module updates.
+- Updating ua_person for UADIGITAL-322: Changes from features module updates.
+- Updating ua_page for UADIGITAL-322: Changes from features module updates.
+- Updating ua_news for UADIGITAL-322: Changes from features module updates.
+- Updating ua_event for UADIGITAL-322: Changes from features module updates.
+- Updating ua_featured_content for UADIGITAL-313, UADIGITAL-322 & UADIGITAL=323: Cleaning up UA Featured Content feature.
+- Updating ua_core for UADIGITAL-315: Updating features to version 7.x-2.7.
+- Updating ua_zen for UADIGITAL-305: Adding UA Bootstrap to UA Zen for alpha2 release.
+- Updating ua_news, ua_event & ua_person for UADIGITAL-302: Images displaying original size.
+- Updating ua_demo for UADIGITAL-316, UADIGITAL-262: update the Featured Content carousel content for a 4th item, remove the UA prefix from some documentation pages.
+- Merged in UADIGITAL-318 (pull request #24).
+- UADIGITAL-318: Updating Drupal core to version 7.40.
+- Updating ua_featured_content for UADIGITAL-86: Allow 4 items in slideshow.
+- Merged in UADIGITAL-314 (pull request #23).
+- Updating ua_featured_content for UADIGTAL-312.
+- Updating ua_demo for UADIGITAL-310: Expanding "People" demo menu item.
+- Updating ua_navigation for UADIGITAL-307: Dumb syntax error.
+- Merged in UADIGITAL-258 (pull request #22).
+- Updating ua_navigation for UADIGITAL-307: Be careful how we remove Superfish module.
+- Merge branch 'UADIGITAL-212' into UADIGITAL-258.
+- Updating ua_zen for UADIGITAL-258 (and friends): Applying Bootstrap v2 changes to UA Zen.
+- Updating ua_navigation for UADIGITAL-212: Removing Superfish module, library, and configuration.
+- Updating ua_demo for UADIGITAL-212: Expanding certain demo menu items for bootstrap nav.
+- UADIGITAL-212: Replacing superfish block with menu block.
+- UADIGITAL-300: Automate release tagging process.
+- Adding placeholders for new components to drupal-org-release.make.
+- UADIGITAL-300: Adding release.sh and documentation.
+- Updating ua_zen for UADIGITAL-285: Removing hard-coded jQuery refernce from html.tpl.php.
+- Updating ua_zen for UADIGITAL-229: Updating copyright statment (again).
+- Updating ua_zen for UADIGITAL-229: Updating copyright statement.
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-263 (pull request #19).
+- Disable UA Block Types initially on installation.
+- Updating ua_core for UADIGITAL-283: Updating defaultconfig to 1.0-alpha11.
+- Follow a minor documentation change.
+- Include the initial version of the UA Block Types feature.
+- Merged ua_drupal/ua_quickstart into 7.x-1.x.
+- Updating ua_event for UADIGITAL-232: Calendar view page title is now "Calendar".
+- Updating ua_person for UADIGITAL-232: Renamed directory view from 'UA Person Directory' to 'Directory'.
+- Updating ua_zen for UADIGITAL-165: Add the one liner to help people not get confused about subtheming and logos in the README.
+- UADIGITAL-228: (UA Demo) expand a terse expression to avoid syntax errors under the old PHP 5.3, without breaking recent PHP versions.
+- Merged in UADIGITAL-151 (pull request #18).
+- Updating ua_featured_content for UADIGITAL-14: Referencing tar.gz instead of zip for library dependencies.
+- UADIGITAL-151: Updating Sub Footer Text block description.
+- UADIGITAL-151: Adding simple subfooter information block.
+- Updating ua_demo for UADIGITAL-201: Update demo content to account for showing newest news items first.
+- Updating ua_news for UADIGITAL-193: Newest news items first in views.
+- Updating ua_core for UADIGITAL-208: Update the Date module version from 2.8 to 2.9, removing the patch to 2.8.
+- Updating ua_core for UADIGITAL-135: Fixing calendar display titles.
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-191 (pull request #16).
+- Clarify the instalation instructions (suggestions from Erix Samboy).
+- Updating ua_demo for UADIGITAL-190: Add menu item for "people" options.
+- UADIGITAL-158: make the list view added to UA Person part of the standard UA Quickstart build.
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-187 (pull request #15).
+- Merge overlooked updates from 7.x-1.x into UADIGITAL-187.
+- Refer to the correct commit in UA Core merging UADIGITAL-188.
+- Bump the Drupal core version (security update).
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-184 (pull request #14).
+- Include Flexslider background change by @chrisgreen (no associated Jira issue).
+- Clarify when the throwaway UA Quickstart commits happen, fix another typo.
+- Fix typos in the README content.
+- Rewrite the instructions for obtaining and contributing to the distribution.
+- Updating UA Zen for UADIGITAL-180: Disabling home breadcrumb by default.
+- Updating UA Zen for UADIGITAL-153 (etc).
+- Merged in UADIGITAL-144 (pull request #12).
+- UADIGITAL-144: Adding UA Google Tag Manager module.
+- UADIGITAL-147: Updating flexslider module PLUS adding 60em rule and fixed flexslider widths.
+- Updating ua_zen for UADIGITAL-153: Disabling content title in breadcrumbs by default.
+- Merged in mmunro-ltrr/ua_quickstart_deversioned/UADIGITAL-156 (pull request #10).
+- Updating ua_demo for UADIGITAL-166: Copy changes on demo homepage.
+- Remove unnecessary suppression of the menu block on hte front page.
+- Enable the ua-second-level menu block in the first sidebar on all pages except front.
+- Updating ua_navigation for UADIGITAL-156: Fixing custom secondary navigation block definition.
+- UADIGITAL-13: Enhancing installation UX even more.
+- Merged in mmunro-ltrr/ua_quickstart_deversioned/UADIGITAL-13 (pull request #8).
+- Do not show the user a profile selection form during installation: pre-selct UA Quickstart.
+- Trivial change to README to test Jenkins integration.
+- Merged in mmunro-ltrr/ua_quickstart_deversioned/UADIGITAL-139 (pull request #7).
+- Refer to development versions of the various UA Quickstart subprojects by the individual Git commits.
+- Remove explicit version information.
+- Add a changelog so there is always something to modify for a release.
+- Back to dev.
+
 UA Quickstart 7.x-1.0-alpha1, 2015-07-10
 ----------------------------------------
 - UADIGITAL-98: Preparing to tag 7.x-1.0-alpha1.
