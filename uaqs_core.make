@@ -70,8 +70,8 @@ projects[strongarm][version] = 2.0
 ; ------------------------------------------------------------------------------
 
 projects[zen][version] = 5.5
+projects[zen][type] = theme
 projects[zen][subdir] = ''
-
 
 ; ------------------------------------------------------------------------------
 ; Libraries
