@@ -15,7 +15,6 @@ When this module is used as part of a Drupal distribution (such as [UA Quickstar
 
 ### Drupal Contrib Modules
 
-- [jQuery Update](https://www.drupal.org/project/jquery_update)
 - [Menu Block](https://www.drupal.org/project/menu_block)
 - [Superfish](https://www.drupal.org/project/superfish)
 
