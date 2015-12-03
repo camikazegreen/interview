@@ -36,7 +36,7 @@ function ua_block_types_field_default_field_instances() {
         'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => 'author',
-        'target' => 'default',
+        'target' => 'user',
         'title' => '',
       ),
       'display' => array(
@@ -121,7 +121,7 @@ function ua_block_types_field_default_field_instances() {
         'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'default',
+        'target' => 'user',
         'title' => '',
       ),
       'display' => array(
@@ -172,7 +172,7 @@ function ua_block_types_field_default_field_instances() {
         'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'default',
+        'target' => 'user',
         'title' => '',
       ),
       'display' => array(
@@ -281,7 +281,8 @@ function ua_block_types_field_default_field_instances() {
     'bundle' => 'ua_contact_summary',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'General email address for this contact.',
+    'description' => 'General email address for this contact.<br />
+<strong>URL format:</strong> mailto:email@email.arizona.edu',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -438,7 +439,7 @@ function ua_block_types_field_default_field_instances() {
         'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'default',
+        'target' => 'user',
         'title' => '',
       ),
       'display' => array(
@@ -580,7 +581,7 @@ function ua_block_types_field_default_field_instances() {
         'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'default',
+        'target' => 'user',
         'title' => '',
       ),
       'display' => array(
@@ -648,7 +649,8 @@ function ua_block_types_field_default_field_instances() {
   t('Author');
   t('Caption');
   t('Email');
-  t('General email address for this contact.');
+  t('General email address for this contact.<br />
+<strong>URL format:</strong> mailto:email@email.arizona.edu');
   t('General phone number for the contact (use the form tel:+1-520-999-9999 for the URL).');
   t('Image');
   t('Image to associate with this link (there is no way to credit the image, so be sure you have appropriate rights to it).');

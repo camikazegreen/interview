@@ -97,7 +97,7 @@ function ua_block_types_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'default' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'token' => array(
         'custom_settings' => FALSE,
@@ -121,7 +121,7 @@ function ua_block_types_strongarm() {
       'display' => array(
         'title' => array(
           'default' => array(
-            'weight' => '-9',
+            'weight' => '1',
             'visible' => TRUE,
           ),
         ),
