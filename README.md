@@ -15,6 +15,7 @@ When this module is used as part of a Drupal distribution (such as [UA Quickstar
 - [Pathauto](https://www.drupal.org/project/pathauto)
 - [Token](https://www.drupal.org/project/token)
 - [Views](https://www.drupal.org/project/views)
+- [jQuery Update](https://www.drupal.org/project/jquery_update)
 
 #### Common Contrib Field Modules
 - [Automatic Nodetitles](https://www.drupal.org/project/auto_nodetitle)
