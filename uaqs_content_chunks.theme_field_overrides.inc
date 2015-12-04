@@ -149,7 +149,7 @@ function ua_zen_field__field_ua_text_area(array $variables) {
 }
 
 /**
- * Returns HTML for a main_content field.
+ * Returns HTML for a ua_main_content field.
  *
  * Note that this is generally the host node's field for all the Paragraphs.
  *
@@ -159,6 +159,6 @@ function ua_zen_field__field_ua_text_area(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_main_content(array $variables) {
+function ua_zen_field__field_ua_main_content(array $variables) {
   return render_unadorned_values($variables);
 }
