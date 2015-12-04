@@ -59,6 +59,27 @@ function ua_demo_migrate_api() {
         'group_name' => 'ua_demo',
         'dependencies' => array('UaDemoEvent'),
       ),
+      'UaDemoColumnImage' => array(
+        'class_name' => 'UaDemoColumnImageMigration',
+        'group_name' => 'ua_demo',
+      ),
+      'UaDemoHeadedText' => array(
+        'class_name' => 'UaDemoHeadedTextMigration',
+        'group_name' => 'ua_demo',
+      ),
+      'UaDemoPlainText' => array(
+        'class_name' => 'UaDemoPlainTextMigration',
+        'group_name' => 'ua_demo',
+      ),
+      'UaDemoFlexiblePage' => array(
+        'class_name' => 'UaDemoFlexiblePageMigration',
+        'group_name' => 'ua_demo',
+        'dependencies' => array(
+          'UaDemoColumnImage',
+          'UaDemoHeadedText',
+          'UaDemoPlainText',
+        ),
+      ),
       'UaDemoPublicationTerm' => array(
         'class_name' => 'UaDemoPublicationTermMigration',
         'group_name' => 'ua_demo',
