@@ -83,21 +83,36 @@ stylesheets[all][] = css/styles.css
 ; And you'll use this variable in maintenance-page.tpl.php:
 ;   <?php print $header_top; ?>
 
-;regions[header_ua]        = UA Header
-regions[header]            = Header
-regions[navigation]        = Navigation bar
-regions[highlighted]       = Highlighted
-regions[help]              = Help
-regions[content_featured]  = Featured Content
-regions[content]           = Content
-regions[sidebar_first]     = First sidebar
-regions[sidebar_second]    = Second sidebar
-regions[content_bottom]    = Bottom Content
-regions[footer]            = Footer
-regions[footer_sub]        = Sub Footer
-regions[bottom]            = Page bottom
-;regions[footer_ua]        = UA Main Footer
-;regions[footer_ua_hidden] = UA Hidden Footer
+regions[alert]                = Alert
+;regions[header_ua]           = UA header
+regions[header]               = Header
+regions[navigation]           = Navigation bar
+regions[help]                 = Help
+regions[content_featured]     = Featured content
+regions[sidebar_first]        = First sidebar
+regions[highlighted]          = Highlighted
+regions[content_top]          = Content top
+regions[full_width_content_1] = Full width content
+regions[sidebar_third]        = Third sidebar
+regions[content]              = Content Body
+regions[sidebar_fourth]       = Fourth sidebar
+regions[content_2_col_1]      = Content 2-column stacked(1)
+regions[content_2_col_2]      = Content 2-column stacked(2)
+regions[content_3_col_1]      = Content 3-column stacked(1)
+regions[content_3_col_2]      = Content 3-column stacked(2)
+regions[content_3_col_3]      = Content 3-column stacked(3)
+regions[sidebar_second]       = Second sidebar
+regions[full_width_content_2] = Full width content 2
+regions[content_4_col_1]      = Content 4-column stacked(1)
+regions[content_4_col_2]      = Content 4-column stacked(2)
+regions[content_4_col_3]      = Content 4-column stacked(3)
+regions[content_4_col_4]      = Content 4-column stacked(4)
+regions[content_bottom]       = Content bottom
+regions[footer]               = Footer
+regions[footer_sub]           = Sub footer
+regions[bottom]               = Page bottom
+;regions[footer_ua]           = UA main footer
+;regions[footer_ua_hidden]    = UA hidden footer
 
 ; The page_top and page_bottom regions are hidden, which means they will not
 ; show up on the blocks administration page. But they are required in order for
