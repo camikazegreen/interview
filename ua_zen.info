@@ -166,3 +166,7 @@ settings[ua_bootstrap_minified]    = 1
 ; To add a Panels layout (which can also be used by Display Suite), uncomment
 ; the line below and see the documentation at: https://drupal.org/node/495654
 ;plugins[panels][layouts] = panels-layouts
+
+; regionclass module default settings
+settings[regionclass][full_width_content_1][] = background-wrapper bg-triangles-fade bg-ologie-light-river
+settings[regionclass][full_width_content_2][] = background-wrapper bg-triangles-mosaic bg-sky
