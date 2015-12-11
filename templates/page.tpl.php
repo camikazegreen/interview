@@ -7,8 +7,19 @@
  * @see https://drupal.org/node/1728148
  */
 ?>
+  <?php if (!empty($page['alert'])) : ?>
+  <section class="container">
+      <div class="row">
+          <div class="col-xs-12">
+              <?php print render($page['alert']); ?>
+          </div>
+      </div>
+  </section>
+  <?php endif; ?>
   <?php // Defined in template file: region--header-ua.tpl.php. ?>
+  <?php if (!empty($page['header_ua'])) : ?>
   <?php print render($page['header_ua']); ?>
+  <?php endif; ?>
   <header class="header page-row" id="header_site" role="banner">
     <div class="container">
 
@@ -26,6 +37,7 @@
       <?php print render($page['header']); ?>
 
     </div> <!-- /.container -->
+    <?php if (!empty($page['navigation'])) : ?>
     <div class="container">
       <nav id="main_nav" class="navbar navbar-default navbar-static-top">
           <div class="navbar-header">
@@ -42,6 +54,7 @@
         <!-- /.nav-collapse-->
         </nav>
       </div>
+      <?php endif; ?>
   </header>
 
   <div id="main" class="page-row page-row-expanded">
@@ -50,19 +63,26 @@
         <div class="row">
             <div class="col-xs-12">
                 <?php print $messages; ?>
+                <?php if (!empty($page['help'])) : ?>
                 <?php print render($page['help']); ?>
+                <?php endif; ?>
             </div>
         </div>
     </section>
     <?php endif; ?>
+    <?php if (!empty($page['content_featured'])) : ?>
     <section id="content_featured">
       <?php print render($page['content_featured']); ?>
     </section>
-
+    <?php endif; ?>
     <div class="container">
-      <div class="row page-row-padding-bottom">
-        <section id="content" <?php print $content_column_class; ?> role="main">
+      <div class="row">
+        <?php if (!empty($page['highlighted'])) : ?>
+        <div class="col-xs-12">
           <?php print render($page['highlighted']); ?>
+        </div>
+        <?php endif; ?>
+        <section id="content" <?php print $content_column_class_top; ?> role="main">
           <?php print $breadcrumb; ?>
           <a id="main-content"></a>
           <?php print render($title_prefix); ?>
@@ -70,27 +90,115 @@
             <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
           <?php endif; ?>
           <?php print render($title_suffix); ?>
+          <?php if (!empty($page['content_top'])) : ?>
+                      <?php print render($page['content_top']); ?>
+          <?php endif; ?>
+          <?php if (!empty($page['full_width_content_1'])) : ?>
+        </section><!--Close section-->
+    <?php if (!empty($page['sidebar_first']) && empty($page['sidebar_second'])): ?>
+      <aside class="col-sm-3 col-sm-pull-9" role="complementary">
+        <?php print render($page['sidebar_first']); ?>
+      </aside>  <!-- /#sidebar-first -->
+    <?php endif; ?>
+    <?php if (!empty($page['sidebar_first']) && !empty($page['sidebar_second'])): ?>
+      <aside class="col-sm-3 col-sm-pull-6" role="complementary">
+        <?php print render($page['sidebar_first']); ?>
+      </aside>  <!-- /#sidebar-first -->
+    <?php endif; ?>
+    <?php if (!empty($page['sidebar_second'])): ?>
+      <aside class="col-sm-3" role="complementary">
+        <?php print render($page['sidebar_second']); ?>
+      </aside>  <!-- /#sidebar-second -->
+    <?php endif; ?>
+        </div><!--Close row-->
+      </section>
+      </div><!--Close container-->
+      <?php print render($page['full_width_content_1']); ?>
+      <div class="container"> <!-- Restart regular columns -->
+        <div class="row">
+          <section <?php print $content_column_class_body; ?>>
+        <?php endif; ?>
           <?php print render($tabs); ?>
           <?php if ($action_links): ?>
             <ul class="action-links"><?php print render($action_links); ?></ul>
           <?php endif; ?>
           <?php print render($page['content']); ?>
           <?php print $feed_icons; ?>
+          <?php if (!empty($page['content_2_col_1']) || !empty($page['content_2_col_2'])) : ?>
+                <div class="row">
+                  <div class="col-md-6">
+                      <?php print render($page['content_2_col_1']); ?>
+                  </div>
+                  <div class="col-md-6">
+                      <?php print render($page['content_2_col_2']); ?>
+                  </div>
+                </div>
+          <?php endif; ?>
+          <?php if (!empty($page['content_3_col_1']) || !empty($page['content_3_col_2']) || !empty($page['content_3_col_3'])) : ?>
+                <div class="row">
+                  <div class="col-md-4">
+                      <?php print render($page['content_3_col_1']); ?>
+                  </div>
+                  <div class="col-md-4">
+                      <?php print render($page['content_3_col_2']); ?>
+                  </div>
+                  <div class="col-md-4">
+                      <?php print render($page['content_3_col_3']); ?>
+                  </div>
+                </div>
+          <?php endif; ?>
+      <section id="content" <?php print $content_column_class_body; ?> role="main">
         </section>
-        <?php if (!empty($page['sidebar_first']) && empty($page['sidebar_second'])): ?>
-          <aside class="col-sm-3 col-sm-pull-9" role="complementary">
-            <?php print render($page['sidebar_first']); ?>
-          </aside>  <!-- /#sidebar-first -->
-        <?php endif; ?>
-        <?php if (!empty($page['sidebar_first']) && !empty($page['sidebar_second'])): ?>
-          <aside class="col-sm-3 col-sm-pull-6" role="complementary">
-            <?php print render($page['sidebar_first']); ?>
-          </aside>  <!-- /#sidebar-first -->
-        <?php endif; ?>
-        <?php if (!empty($page['sidebar_second'])): ?>
-          <aside class="col-sm-3" role="complementary">
-            <?php print render($page['sidebar_second']); ?>
-          </aside>  <!-- /#sidebar-second -->
+          <?php if (!empty($page['full_width_content_2'])) : ?>
+            </section>
+    <?php if (!empty($page['sidebar_third']) && empty($page['sidebar_fourth'])): ?>
+      <aside class="col-sm-3 col-sm-pull-9" role="complementary">
+        <?php print render($page['sidebar_third']); ?>
+      </aside>  <!-- /#sidebar-third -->
+    <?php endif; ?>
+    <?php if (!empty($page['sidebar_third']) && !empty($page['sidebar_fourth'])): ?>
+      <aside class="col-sm-3 col-sm-pull-6" role="complementary">
+        <?php print render($page['sidebar_third']); ?>
+      </aside>  <!-- /#sidebar-third -->
+    <?php endif; ?>
+    <?php if (!empty($page['sidebar_fourth'])): ?>
+      <aside class="col-sm-3" role="complementary">
+        <?php print render($page['sidebar_fourth']); ?>
+      </aside>  <!-- /#sidebar-fourth -->
+    <?php endif; ?>
+          </div><!--Close row-->
+        </div><!--Close container-->
+        <?php print render($page['full_width_content_2']); ?>
+        <div class="container"> <!-- Restart regular columns -->
+          <div class="row">
+          <section <?php print $content_column_class_body; ?>>
+          <?php endif; ?>
+          <?php if (!empty($page['content_bottom'])) : ?>
+                      <?php print render($page['content_bottom']); ?>
+          <?php endif; ?>
+        <?php if (!empty($page['content_4_col_1']) || !empty($page['content_4_col_2']) || !empty($page['content_4_col_3']) || !empty($page['content_4_col_4'])) : ?>
+        </div>
+        </div>
+        <div class="container">
+            <div class="row">
+          <section <?php print $content_column_class_body; ?>>
+            <div class="row">
+              <div class="col-md-3">
+                  <?php print render($page['content_4_col_1']); ?>
+              </div>
+              <div class="col-md-3">
+                  <?php print render($page['content_4_col_2']); ?>
+              </div>
+              <div class="col-md-3">
+                  <?php print render($page['content_4_col_3']); ?>
+              </div>
+              <div class="col-md-3">
+                  <?php print render($page['content_4_col_4']); ?>
+              </div>
+            </div>
+          </section>
+</div>
+</div>
         <?php endif; ?>
       </div>
     </div> <!-- /.container -->
@@ -102,3 +210,4 @@
   </footer>
 
 <?php print render($page['bottom']); ?>
+
