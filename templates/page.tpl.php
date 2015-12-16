@@ -82,7 +82,7 @@
           <?php print render($page['highlighted']); ?>
         </div>
         <?php endif; ?>
-        <section id="content" <?php print $content_column_class_top; ?> role="main">
+        <article id="content" <?php print $content_column_class_top; ?> role="main">
           <?php print $breadcrumb; ?>
           <a id="main-content"></a>
           <?php print render($title_prefix); ?>
@@ -90,34 +90,30 @@
             <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
           <?php endif; ?>
           <?php print render($title_suffix); ?>
-          <?php if (!empty($page['content_top'])) : ?>
+              <?php if (!empty($page['content_top'])) : ?>
                       <?php print render($page['content_top']); ?>
+              <?php endif; ?>
+          </article>
+          <?php if (!empty($page['sidebar_first']) && empty($page['sidebar_second'])): ?>
+            <aside class="col-sm-3 col-sm-pull-9" role="complementary">
+              <?php print render($page['sidebar_first']); ?>
+            </aside>  <!-- /#sidebar-first -->
           <?php endif; ?>
-          <?php if (!empty($page['full_width_content_1'])) : ?>
-        </section><!--Close section-->
-    <?php if (!empty($page['sidebar_first']) && empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-3 col-sm-pull-9" role="complementary">
-        <?php print render($page['sidebar_first']); ?>
-      </aside>  <!-- /#sidebar-first -->
-    <?php endif; ?>
-    <?php if (!empty($page['sidebar_first']) && !empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-3 col-sm-pull-6" role="complementary">
-        <?php print render($page['sidebar_first']); ?>
-      </aside>  <!-- /#sidebar-first -->
-    <?php endif; ?>
-    <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-3" role="complementary">
-        <?php print render($page['sidebar_second']); ?>
-      </aside>  <!-- /#sidebar-second -->
-    <?php endif; ?>
-        </div><!--Close row-->
-      </section>
-      </div><!--Close container-->
-      <?php print render($page['full_width_content_1']); ?>
-      <div class="container"> <!-- Restart regular columns -->
-        <div class="row">
-          <section <?php print $content_column_class_body; ?>>
-        <?php endif; ?>
+          <?php if (!empty($page['sidebar_first']) && !empty($page['sidebar_second'])): ?>
+            <aside class="col-sm-3 col-sm-pull-6" role="complementary">
+              <?php print render($page['sidebar_first']); ?>
+            </aside>  <!-- /#sidebar-first -->
+          <?php endif; ?>
+          <?php if (!empty($page['sidebar_second'])): ?>
+            <aside class="col-sm-3" role="complementary">
+              <?php print render($page['sidebar_second']); ?>
+            </aside>  <!-- /#sidebar-second -->
+          <?php endif; ?>
+          <div class="row"></div>
+          <?php if (!empty($page['full_width_content_top'])) : ?>
+            <?php print render($page['full_width_content_top']); ?>
+          <?php endif; ?>
+          <article <?php print $content_column_class_body; ?>>
           <?php print render($tabs); ?>
           <?php if ($action_links): ?>
             <ul class="action-links"><?php print render($action_links); ?></ul>
@@ -147,60 +143,50 @@
                   </div>
                 </div>
           <?php endif; ?>
-      <section id="content" <?php print $content_column_class_body; ?> role="main">
-        </section>
-          <?php if (!empty($page['full_width_content_2'])) : ?>
-            </section>
-    <?php if (!empty($page['sidebar_third']) && empty($page['sidebar_fourth'])): ?>
-      <aside class="col-sm-3 col-sm-pull-9" role="complementary">
-        <?php print render($page['sidebar_third']); ?>
-      </aside>  <!-- /#sidebar-third -->
-    <?php endif; ?>
-    <?php if (!empty($page['sidebar_third']) && !empty($page['sidebar_fourth'])): ?>
-      <aside class="col-sm-3 col-sm-pull-6" role="complementary">
-        <?php print render($page['sidebar_third']); ?>
-      </aside>  <!-- /#sidebar-third -->
-    <?php endif; ?>
-    <?php if (!empty($page['sidebar_fourth'])): ?>
-      <aside class="col-sm-3" role="complementary">
-        <?php print render($page['sidebar_fourth']); ?>
-      </aside>  <!-- /#sidebar-fourth -->
-    <?php endif; ?>
-          </div><!--Close row-->
-        </div><!--Close container-->
-        <?php print render($page['full_width_content_2']); ?>
-        <div class="container"> <!-- Restart regular columns -->
-          <div class="row">
-          <section <?php print $content_column_class_body; ?>>
-          <?php endif; ?>
+      </article>
+      <?php if (!empty($page['sidebar_third']) && empty($page['sidebar_fourth'])): ?>
+        <aside class="col-sm-3 col-sm-pull-9" role="complementary">
+          <?php print render($page['sidebar_third']); ?>
+        </aside>  <!-- /#sidebar-third -->
+      <?php endif; ?>
+      <?php if (!empty($page['sidebar_third']) && !empty($page['sidebar_fourth'])): ?>
+        <aside class="col-sm-3 col-sm-pull-6" role="complementary">
+          <?php print render($page['sidebar_third']); ?>
+        </aside>  <!-- /#sidebar-third -->
+      <?php endif; ?>
+      <?php if (!empty($page['sidebar_fourth'])): ?>
+        <aside class="col-sm-3" role="complementary">
+          <?php print render($page['sidebar_fourth']); ?>
+        </aside>  <!-- /#sidebar-fourth -->
+      <?php endif; ?>
+      <?php if (!empty($page['full_width_content_bottom'])) : ?>
+        <?php print render($page['full_width_content_bottom']) ?>
+      <?php endif; ?>
+      </div> <!-- ./ end of row-->
+      <div class="row"></div>
+      <div class="row">
+        <article <?php print $content_column_class_body; ?> role="complementary">
           <?php if (!empty($page['content_bottom'])) : ?>
-                      <?php print render($page['content_bottom']); ?>
+             <?php print render($page['content_bottom']); ?>
           <?php endif; ?>
         <?php if (!empty($page['content_4_col_1']) || !empty($page['content_4_col_2']) || !empty($page['content_4_col_3']) || !empty($page['content_4_col_4'])) : ?>
-        </div>
-        </div>
-        <div class="container">
             <div class="row">
-          <section <?php print $content_column_class_body; ?>>
-            <div class="row">
-              <div class="col-md-3">
-                  <?php print render($page['content_4_col_1']); ?>
-              </div>
-              <div class="col-md-3">
-                  <?php print render($page['content_4_col_2']); ?>
-              </div>
-              <div class="col-md-3">
-                  <?php print render($page['content_4_col_3']); ?>
-              </div>
-              <div class="col-md-3">
-                  <?php print render($page['content_4_col_4']); ?>
-              </div>
+            <div class="col-md-3">
+                <?php print render($page['content_4_col_1']); ?>
             </div>
-          </section>
-</div>
-</div>
+            <div class="col-md-3">
+                <?php print render($page['content_4_col_2']); ?>
+            </div>
+            <div class="col-md-3">
+                <?php print render($page['content_4_col_3']); ?>
+            </div>
+            <div class="col-md-3">
+                <?php print render($page['content_4_col_4']); ?>
+            </div>
+            </div>
         <?php endif; ?>
-      </div>
+        </article>
+      </div> <!-- /.row -->
     </div> <!-- /.container -->
   </div> <!-- /.main -->
 
