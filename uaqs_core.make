@@ -20,7 +20,13 @@ defaults[projects][subdir] = contrib
 
 projects[ctools][version] = 1.9
 
+projects[elements][version] = 1.4
+
 projects[entity][version] = 1.6
+
+projects[html5_tools][version] = 1.3
+
+projects[jquery_update][version] = 2.7
 
 projects[libraries][version] = 2.2
 
@@ -30,7 +36,6 @@ projects[token][version] = 1.6
 
 projects[views][version] = 3.13
 
-projects[jquery_update][version] = 2.7
 
 ; ------------------------------------------------------------------------------
 ; Commonly used field modules
@@ -43,8 +48,6 @@ projects[date][version] = 2.9
 projects[email][version] = 1.3
 
 projects[entityreference][version] = 1.1
-
-projects[auto_nodetitle][version] = 1.0
 
 projects[field_collection][version] = 1.0-beta8
 

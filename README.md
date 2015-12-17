@@ -10,12 +10,14 @@ When this module is used as part of a Drupal distribution (such as [UA Quickstar
 
 #### Common Contrib Module Dependencies
 - [Chaos tool suite (ctools)](https://www.drupal.org/project/ctools)
+- [Elements](https://www.drupal.org/project/elements)
 - [Entity API](https://www.drupal.org/project/entity)
+- [HTML5 Tools](https://www.drupal.org/project/html5_tools)
+- [jQuery Update](https://www.drupal.org/project/jquery_update)
 - [Libraries API](https://www.drupal.org/project/libraries)
 - [Pathauto](https://www.drupal.org/project/pathauto)
 - [Token](https://www.drupal.org/project/token)
 - [Views](https://www.drupal.org/project/views)
-- [jQuery Update](https://www.drupal.org/project/jquery_update)
 
 #### Common Contrib Field Modules
 - [Automatic Nodetitles](https://www.drupal.org/project/auto_nodetitle)
