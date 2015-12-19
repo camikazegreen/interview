@@ -181,16 +181,13 @@
             </div>
         <?php endif; ?>
         </article>
+      </div> <!-- /.row -->
     </div> <!-- /.container -->
   </div> <!-- /.main -->
 
   <footer id="footer_site" class="<?php print $classes; ?> page-row">
-    <div class="row">
     <?php print render($page['footer']); ?>
-    </div>
-    <div class="row">
     <?php print render($page['footer_sub']); ?>
-    </div>
   </footer>
 
 <?php print render($page['bottom']); ?>
