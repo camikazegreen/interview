@@ -90,9 +90,13 @@
             <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
           <?php endif; ?>
           <?php print render($title_suffix); ?>
-              <?php if (!empty($page['content_top'])) : ?>
-                      <?php print render($page['content_top']); ?>
-              <?php endif; ?>
+          <?php print render($tabs); ?>
+          <?php if ($action_links): ?>
+            <ul class="action-links"><?php print render($action_links); ?></ul>
+          <?php endif; ?>
+          <?php if (!empty($page['content_top'])) : ?>
+            <?php print render($page['content_top']); ?>
+          <?php endif; ?>
           </article>
           <?php if (!empty($page['sidebar_first']) && empty($page['sidebar_second'])): ?>
             <aside class="col-sm-3 col-sm-pull-9" role="complementary">
@@ -114,10 +118,6 @@
             <?php print render($page['full_width_content_top']); ?>
           <?php endif; ?>
           <article <?php print $content_column_class_body; ?>>
-          <?php print render($tabs); ?>
-          <?php if ($action_links): ?>
-            <ul class="action-links"><?php print render($action_links); ?></ul>
-          <?php endif; ?>
           <?php print render($page['content']); ?>
           <?php print $feed_icons; ?>
           </article>
