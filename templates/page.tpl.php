@@ -136,7 +136,6 @@
               <?php print render($page['sidebar_fourth']); ?>
             </aside>  <!-- /#sidebar-fourth -->
           <?php endif; ?>
-      </div> <!-- ./ end of row-->
           <?php if (!empty($page['full_width_content_bottom'])) : ?>
             <?php print render($page['full_width_content_bottom']) ?>
           <?php endif; ?>

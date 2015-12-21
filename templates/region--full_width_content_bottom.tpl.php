@@ -8,7 +8,7 @@
  */
 ?>
 <?php if ($content): ?>
-
+  </div> <!-- ./ end of row-->
 </div> <!--close container-->
 <div class="<?php print $classes;?>">
   <div class="container">
