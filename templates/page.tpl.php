@@ -98,6 +98,29 @@
             <?php print render($page['content_top']); ?>
           <?php endif; ?>
           </article>
+          <?php if (!empty($page['sidebar_first_top']) && empty($page['sidebar_second_top'])): ?>
+            <aside class="col-sm-3 col-sm-pull-9" role="complementary">
+              <?php print render($page['sidebar_first_top']); ?>
+            </aside>  <!-- /#sidebar-first-top -->
+          <?php endif; ?>
+          <?php if (!empty($page['sidebar_first_top']) && !empty($page['sidebar_second_top'])): ?>
+            <aside class="col-sm-3 col-sm-pull-6" role="complementary">
+              <?php print render($page['sidebar_first_top']); ?>
+            </aside>  <!-- /#sidebar-first-top -->
+          <?php endif; ?>
+          <?php if (!empty($page['sidebar_second_top'])): ?>
+            <aside class="col-sm-3" role="complementary">
+              <?php print render($page['sidebar_second_top']); ?>
+            </aside>  <!-- /#sidebar-second-top -->
+          <?php endif; ?>
+          <div class="row"></div>
+          <?php if (!empty($page['full_width_content_top'])) : ?>
+            <?php print render($page['full_width_content_top']); ?>
+          <?php endif; ?>
+          <article <?php print $content_column_class_body; ?>>
+          <?php print render($page['content']); ?>
+          <?php print $feed_icons; ?>
+          </article>
           <?php if (!empty($page['sidebar_first']) && empty($page['sidebar_second'])): ?>
             <aside class="col-sm-3 col-sm-pull-9" role="complementary">
               <?php print render($page['sidebar_first']); ?>
@@ -112,29 +135,6 @@
             <aside class="col-sm-3" role="complementary">
               <?php print render($page['sidebar_second']); ?>
             </aside>  <!-- /#sidebar-second -->
-          <?php endif; ?>
-          <div class="row"></div>
-          <?php if (!empty($page['full_width_content_top'])) : ?>
-            <?php print render($page['full_width_content_top']); ?>
-          <?php endif; ?>
-          <article <?php print $content_column_class_body; ?>>
-          <?php print render($page['content']); ?>
-          <?php print $feed_icons; ?>
-          </article>
-          <?php if (!empty($page['sidebar_third']) && empty($page['sidebar_fourth'])): ?>
-            <aside class="col-sm-3 col-sm-pull-9" role="complementary">
-              <?php print render($page['sidebar_third']); ?>
-            </aside>  <!-- /#sidebar-third -->
-          <?php endif; ?>
-          <?php if (!empty($page['sidebar_third']) && !empty($page['sidebar_fourth'])): ?>
-            <aside class="col-sm-3 col-sm-pull-6" role="complementary">
-              <?php print render($page['sidebar_third']); ?>
-            </aside>  <!-- /#sidebar-third -->
-          <?php endif; ?>
-          <?php if (!empty($page['sidebar_fourth'])): ?>
-            <aside class="col-sm-3" role="complementary">
-              <?php print render($page['sidebar_fourth']); ?>
-            </aside>  <!-- /#sidebar-fourth -->
           <?php endif; ?>
           <?php if (!empty($page['full_width_content_bottom'])) : ?>
             <?php print render($page['full_width_content_bottom']) ?>
