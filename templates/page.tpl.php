@@ -106,12 +106,12 @@
           <?php if (!empty($page['sidebar_first_top']) && !empty($page['sidebar_second_top'])): ?>
             <aside class="col-sm-3 col-sm-pull-6" role="complementary">
               <?php print render($page['sidebar_first_top']); ?>
-            </aside>  <!-- /#sidebar-first -->
+            </aside>  <!-- /#sidebar-first-top -->
           <?php endif; ?>
           <?php if (!empty($page['sidebar_second_top'])): ?>
             <aside class="col-sm-3" role="complementary">
               <?php print render($page['sidebar_second_top']); ?>
-            </aside>  <!-- /#sidebar-second -->
+            </aside>  <!-- /#sidebar-second-top -->
           <?php endif; ?>
           <div class="row"></div>
           <?php if (!empty($page['full_width_content_top'])) : ?>
@@ -124,17 +124,17 @@
           <?php if (!empty($page['sidebar_first']) && empty($page['sidebar_second'])): ?>
             <aside class="col-sm-3 col-sm-pull-9" role="complementary">
               <?php print render($page['sidebar_first']); ?>
-            </aside>  <!-- /#sidebar-third -->
+            </aside>  <!-- /#sidebar-first -->
           <?php endif; ?>
           <?php if (!empty($page['sidebar_first']) && !empty($page['sidebar_second'])): ?>
             <aside class="col-sm-3 col-sm-pull-6" role="complementary">
               <?php print render($page['sidebar_first']); ?>
-            </aside>  <!-- /#sidebar-third -->
+            </aside>  <!-- /#sidebar-first -->
           <?php endif; ?>
           <?php if (!empty($page['sidebar_second'])): ?>
             <aside class="col-sm-3" role="complementary">
               <?php print render($page['sidebar_second']); ?>
-            </aside>  <!-- /#sidebar-fourth -->
+            </aside>  <!-- /#sidebar-second -->
           <?php endif; ?>
           <?php if (!empty($page['full_width_content_bottom'])) : ?>
             <?php print render($page['full_width_content_bottom']) ?>
