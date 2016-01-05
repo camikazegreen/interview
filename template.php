@@ -131,29 +131,29 @@ function ua_zen_preprocess_html(&$variables) {
 function ua_zen_preprocess_page(&$variables, $hook) {
   // Add information about the number of sidebars.
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
-    $variables['content_column_class_top'] = ' class="column col-sm-6 col-sm-push-3"';
-  }
-  elseif (!empty($variables['page']['sidebar_first']) && empty($variables['page']['sidebar_second'])) {
-    $variables['content_column_class_top'] = ' class="column col-sm-9 col-sm-push-3"';
-  }
-  elseif (empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
-    $variables['content_column_class_top'] = ' class="column col-sm-9 col-sm-3"';
-  }
-  else {
-    $variables['content_column_class_top'] = ' class="column col-sm-12"';
-  }
-  // Add information about the number of sidebars for 3 and 4 now.
-  if (!empty($variables['page']['sidebar_third']) && !empty($variables['page']['sidebar_fourth'])) {
     $variables['content_column_class_body'] = ' class="column col-sm-6 col-sm-push-3"';
   }
-  elseif (!empty($variables['page']['sidebar_third']) && empty($variables['page']['sidebar_fourth'])) {
+  elseif (!empty($variables['page']['sidebar_first']) && empty($variables['page']['sidebar_second'])) {
     $variables['content_column_class_body'] = ' class="column col-sm-9 col-sm-push-3"';
   }
-  elseif (empty($variables['page']['sidebar_third']) && !empty($variables['page']['sidebar_fourth'])) {
+  elseif (empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
     $variables['content_column_class_body'] = ' class="column col-sm-9 col-sm-3"';
   }
   else {
     $variables['content_column_class_body'] = ' class="column col-sm-12"';
+  }
+  // Add information about the number of sidebars for 3 and 4 now.
+  if (!empty($variables['page']['sidebar_first_top']) && !empty($variables['page']['sidebar_second_top'])) {
+    $variables['content_column_class_top'] = ' class="column col-sm-6 col-sm-push-3"';
+  }
+  elseif (!empty($variables['page']['sidebar_first_top']) && empty($variables['page']['sidebar_second_top'])) {
+    $variables['content_column_class_top'] = ' class="column col-sm-9 col-sm-push-3"';
+  }
+  elseif (empty($variables['page']['sidebar_first_top']) && !empty($variables['page']['sidebar_second_top'])) {
+    $variables['content_column_class_top'] = ' class="column col-sm-9 col-sm-3"';
+  }
+  else {
+    $variables['content_column_class_top'] = ' class="column col-sm-12"';
   }
   // Allows there to be a template file for the UA Header and Footers without
   // allowing blocks to be placed there - regions defined in .info, but
