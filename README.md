@@ -4,6 +4,10 @@ A library of pre-defined fieldable Drupal blocks, based on the [Bean](https://ww
 
 For a similar approach at a different university, see the [Stanford Bean Types](https://github.com/SU-SWS/stanford_bean_types).
 
+## UA Card
+
+Built to use ua-bootstrap card styles.
+
 ## UA Captioned Image
 
 An image wrapped in an HTML5 `figure` with optional attribution and caption information.
