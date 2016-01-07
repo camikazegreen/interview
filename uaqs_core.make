@@ -52,7 +52,7 @@ projects[entityreference][version] = 1.1
 projects[field_collection][version] = 1.0-beta10
 projects[field_collection][patch][2599248] = http://drupal.org/files/issues/field-collection-2599248-2.patch
 
-projects[field_group][version] = 1.4
+projects[field_group][version] = 1.5
 
 projects[link][version] = 1.3
 
