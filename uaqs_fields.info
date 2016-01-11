@@ -26,7 +26,6 @@ features[field_base][] = field_uaqs_contact_name
 features[field_base][] = field_uaqs_contact_phone
 features[field_base][] = field_uaqs_contacts
 features[field_base][] = field_uaqs_date
-features[field_base][] = field_uaqs_description
 features[field_base][] = field_uaqs_front
 features[field_base][] = field_uaqs_leadership_info
 features[field_base][] = field_uaqs_location
