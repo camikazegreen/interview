@@ -41,7 +41,7 @@
     <div class="container-fluid">
       <nav id="main_nav" class="navbar navbar-default navbar-static-top">
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapse" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
               <span class="text">MAIN MENU</span>
             </button>
