@@ -34,5 +34,5 @@ features[field_base][] = field_uaqs_subtitle
 features[field_base][] = field_uaqs_summary
 features[field_instance][] = field_collection_item-field_uaqs_contacts-field_uaqs_contact_email
 features[field_instance][] = field_collection_item-field_uaqs_contacts-field_uaqs_contact_name
-features_exclude[field_base][field_ua_email_contact_phone] = field_ua_email_contact_phone
+features[field_instance][] = field_collection_item-field_uaqs_contacts-field_uaqs_contact_phone
 project path = profiles/ua_quickstart/modules/custom

@@ -85,10 +85,50 @@ function uaqs_fields_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'field_collection_item-field_uaqs_contacts-field_uaqs_contact_phone'.
+  $field_instances['field_collection_item-field_uaqs_contacts-field_uaqs_contact_phone'] = array(
+    'bundle' => 'field_uaqs_contacts',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '<strong>Suggested format:</strong> 520-626-0000',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_uaqs_contact_phone',
+    'label' => 'Contact Phone',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('<strong>Suggested format:</strong> 520-626-0000');
   t('Contact Email');
   t('Contact Name');
+  t('Contact Phone');
   t('Full name if possible');
 
   return $field_instances;
