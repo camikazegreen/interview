@@ -11,6 +11,7 @@ function uaqs_fields_defaultconfig_features() {
   return array(
     'uaqs_fields' => array(
       'field_default_fields' => 'field_default_fields',
+      'strongarm' => 'strongarm',
     ),
   );
 }
@@ -214,4 +215,59 @@ function uaqs_fields_defaultconfig_field_default_fields() {
   t('Full name if possible');
 
   return $fields;
+}
+
+/**
+ * Implements hook_defaultconfig_strongarm().
+ */
+function uaqs_fields_defaultconfig_strongarm() {
+  $export = array();
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'title_bean';
+  $strongarm->value = array(
+    'auto_attach' => array(
+      'title' => 0,
+    ),
+    'hide_label' => array(
+      'page' => 0,
+      'entity' => 0,
+    ),
+  );
+  $export['title_bean'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'title_node';
+  $strongarm->value = array(
+    'auto_attach' => array(
+      'title' => 'title',
+    ),
+    'hide_label' => array(
+      'page' => 'page',
+      'entity' => 'entity',
+    ),
+  );
+  $export['title_node'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'title_taxonomy_term';
+  $strongarm->value = array(
+    'auto_attach' => array(
+      'name' => 0,
+      'description' => 0,
+    ),
+    'hide_label' => array(
+      'page' => 0,
+      'entity' => 0,
+    ),
+  );
+  $export['title_taxonomy_term'] = $strongarm;
+
+  return $export;
 }
