@@ -38,7 +38,7 @@
 
     </div> <!-- /.container -->
     <?php if (!empty($page['navigation'])) : ?>
-    <div class="container-fluid">
+    <div class="container">
       <nav id="main_nav" class="navbar navbar-default navbar-static-top">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
