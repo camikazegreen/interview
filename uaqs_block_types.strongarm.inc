@@ -41,8 +41,8 @@ function ua_block_types_strongarm() {
       'display' => array(
         'title' => array(
           'default' => array(
-            'weight' => '0',
-            'visible' => FALSE,
+            'weight' => '1',
+            'visible' => TRUE,
           ),
         ),
       ),
@@ -81,7 +81,7 @@ function ua_block_types_strongarm() {
       'display' => array(
         'title' => array(
           'default' => array(
-            'weight' => '-9',
+            'weight' => '3',
             'visible' => FALSE,
           ),
         ),

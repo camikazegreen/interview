@@ -55,5 +55,14 @@ function ua_block_types_user_default_permissions() {
     'module' => 'bean',
   );
 
+  // Exported permission: 'view any ua_card bean'.
+  $permissions['view any ua_card bean'] = array(
+    'name' => 'view any ua_card bean',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+    ),
+    'module' => 'bean',
+  );
+  
   return $permissions;
 }
