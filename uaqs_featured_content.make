@@ -17,9 +17,6 @@ defaults[projects][subdir] = contrib
 
 projects[flexslider][version] = 2.0-rc1
 
-projects[image_url_formatter][version] = 1.4
-
-
 ; ------------------------------------------------------------------------------
 ; Libraries
 ; ------------------------------------------------------------------------------

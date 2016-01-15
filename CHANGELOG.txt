@@ -1,3 +1,16 @@
+7.x-1.0-alpha3, 2015-11-13
+------------------------------
+- Merged in UADIGITAL-347 (pull request #25).
+- UADIGITAL-347: Ensure jQuery module is enabled.
+- UADIGITAL-348: Disabling unused Image URL Formatter module.
+- UADIGITAL-347: Declaring jQuery Update as formal dependency.
+- UADIGITAL-349: Merged in awochna/ua_featured_content (pull request #24).
+- Add ID back to Hero carousel.
+- Merge branch '7.x-1.x' of https://bitbucket.org/ua_drupal/ua_featured_content into 7.x-1.x.
+- Change some minor flexslider and views options to use better CSS id's and maintain functionality.
+- Back to dev.
+- Change ua_zen specific region id for a class provided by the module, change the max-widths for sliders to use rems.
+
 7.x-1.0-alpha2, 2015-10-16
 ------------------------------
 - Merged in UADIGITAL-322 (pull request #23).
