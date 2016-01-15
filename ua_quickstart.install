@@ -232,10 +232,6 @@ function ua_quickstart_default_blocks($default_theme, $admin_theme) {
   // UA Navigation Feature Module.
   if (module_exists('ua_navigation')) {
     $menu_blocks = array(
-      'main' => array(
-        'region' => 'navigation',
-        'title' => '<none>',
-      ),
       'ua-second-level' => array(
         'region' => 'sidebar_first',
       ),
