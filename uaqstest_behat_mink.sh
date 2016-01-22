@@ -83,7 +83,7 @@ fi
 
 # Export Behat environment specific settings...
 
-export BEHAT_PARAMS='{"extensions": {"Behat\\MinkExtension": {"base_url": "'"$UAQSTEST_BASEURL"'"},"Drupal\\DrupalExtension": {"drupal": {"drupal_root": "'"${UAQSTEST_DRUPALROOT}"'"}}}}'
+export BEHAT_PARAMS='{"extensions": {"Behat\\MinkExtension": {"base_url": "'"$UAQSTEST_BASEURL"'"},"Drupal\\DrupalExtension": {"drupal": {"drupal_root": "'"${UAQSTEST_DRUPALROOT}"'"}, "drush": {"root": "'"${UAQSTEST_DRUPALROOT}"'"}}}}'
 
 # Run the tests...
 
