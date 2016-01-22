@@ -4,3 +4,13 @@
  * Code for the UAQS Fields feature.
  */
 include_once 'uaqs_fields.features.inc';
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function uaqs_news_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['uaqs_teaser_list'] = array(
+    'label' => t('UA Bootstrap Media List'),
+    'custom settings' => FALSE,
+  );
+}
