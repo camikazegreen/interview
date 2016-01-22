@@ -147,6 +147,36 @@ function uaqs_fields_field_default_field_bases() {
     'type' => 'email',
   );
 
+  // Exported field_base: 'field_uaqs_expiration_date'.
+  $field_bases['field_uaqs_expiration_date'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_uaqs_expiration_date',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'date',
+    'settings' => array(
+      'cache_count' => 4,
+      'cache_enabled' => 0,
+      'granularity' => array(
+        'day' => 'day',
+        'hour' => 'hour',
+        'minute' => 'minute',
+        'month' => 'month',
+        'second' => 0,
+        'year' => 'year',
+      ),
+      'repeat' => 0,
+      'timezone_db' => 'UTC',
+      'todate' => '',
+      'tz_handling' => 'site',
+    ),
+    'translatable' => 0,
+    'type' => 'datetime',
+  );
+
   // Exported field_base: 'field_uaqs_contact_name'.
   $field_bases['field_uaqs_contact_name'] = array(
     'active' => 1,

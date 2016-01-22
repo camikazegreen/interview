@@ -29,6 +29,7 @@ features[field_base][] = field_uaqs_contact_phone
 features[field_base][] = field_uaqs_contacts
 features[field_base][] = field_uaqs_date
 features[field_base][] = field_uaqs_email
+features[field_base][] = field_uaqs_expiration_date
 features[field_base][] = field_uaqs_fname
 features[field_base][] = field_uaqs_front
 features[field_base][] = field_uaqs_leadership_info
