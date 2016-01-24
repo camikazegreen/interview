@@ -27,11 +27,11 @@ function uaqs_fields_defaultconfig_strongarm() {
   $strongarm->name = 'title_bean';
   $strongarm->value = array(
     'auto_attach' => array(
-      'title' => 0,
+      'title' => 'title',
     ),
     'hide_label' => array(
-      'page' => 0,
-      'entity' => 0,
+      'page' => 'page',
+      'entity' => 'entity',
     ),
   );
   $export['title_bean'] = $strongarm;
@@ -42,11 +42,11 @@ function uaqs_fields_defaultconfig_strongarm() {
   $strongarm->name = 'title_node';
   $strongarm->value = array(
     'auto_attach' => array(
-      'title' => 'title',
+      'title' => 0,
     ),
     'hide_label' => array(
-      'page' => 'page',
-      'entity' => 'entity',
+      'page' => 0,
+      'entity' => 0,
     ),
   );
   $export['title_node'] = $strongarm;
