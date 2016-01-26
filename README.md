@@ -13,7 +13,10 @@ This repository contains a module made with [Features](https://www.drupal.org/pr
   - Contributed modules
     - [CTools](https://www.drupal.org/project/ctools) used in support of the Strongarm module
     - [StrongArm](https://www.drupal.org/project/strongarm) used to save content type settings
-
+  - UAQS modules
+    - [UAQS Fields](...) Provides base fields for the uaqs_program content type
+    - [UAQS Unit](...) Provides base fields for the uaqs_program content type and taxonomy
+	
 Handy Drush dl/en command:
 
 ```
