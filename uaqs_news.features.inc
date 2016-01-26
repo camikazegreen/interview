@@ -1,13 +1,16 @@
 <?php
 /**
  * @file
- * ua_news.features.inc
+ * uaqs_news.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function ua_news_ctools_plugin_api($module = NULL, $api = NULL) {
+function uaqs_news_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "field_group" && $api == "field_group") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -16,18 +19,18 @@ function ua_news_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_views_api().
  */
-function ua_news_views_api($module = NULL, $api = NULL) {
+function uaqs_news_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
 /**
  * Implements hook_image_default_styles().
  */
-function ua_news_image_default_styles() {
+function uaqs_news_image_default_styles() {
   $styles = array();
 
-  // Exported image style: spotlight.
-  $styles['spotlight'] = array(
+  // Exported image style: uaqs_spotlight.
+  $styles['uaqs_spotlight'] = array(
     'label' => 'Spotlight',
     'effects' => array(
       3 => array(
@@ -41,8 +44,8 @@ function ua_news_image_default_styles() {
     ),
   );
 
-  // Exported image style: ua_news_detail_500.
-  $styles['ua_news_detail_500'] = array(
+  // Exported image style: uaqs_news_detail_500.
+  $styles['uaqs_news_detail_500'] = array(
     'label' => 'News detail 500',
     'effects' => array(
       4 => array(
@@ -63,10 +66,10 @@ function ua_news_image_default_styles() {
 /**
  * Implements hook_node_info().
  */
-function ua_news_node_info() {
+function uaqs_news_node_info() {
   $items = array(
-    'ua_news' => array(
-      'name' => t('UA News'),
+    'uaqs_news' => array(
+      'name' => t('UAQS News'),
       'base' => 'node_content',
       'description' => t('Use <em>news</em> to add news articles to the website.'),
       'has_title' => '1',

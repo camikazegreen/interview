@@ -1,19 +1,19 @@
 <?php
 /**
  * @file
- * ua_news.strongarm.inc
+ * uaqs_news.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function ua_news_strongarm() {
+function uaqs_news_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__ua_news';
+  $strongarm->name = 'field_bundle_settings_node__uaqs_news';
   $strongarm->value = array(
     'view_modes' => array(
       'teaser' => array(
@@ -34,57 +34,60 @@ function ua_news_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'uaqs_teaser_list' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '2',
         ),
       ),
       'display' => array(),
     ),
   );
-  $export['field_bundle_settings_node__ua_news'] = $strongarm;
+  $export['field_bundle_settings_node__uaqs_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_ua_news';
+  $strongarm->name = 'menu_options_uaqs_news';
   $strongarm->value = array(
     0 => 'main-menu',
   );
-  $export['menu_options_ua_news'] = $strongarm;
+  $export['menu_options_uaqs_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_ua_news';
+  $strongarm->name = 'menu_parent_uaqs_news';
   $strongarm->value = 'main-menu:0';
-  $export['menu_parent_ua_news'] = $strongarm;
+  $export['menu_parent_uaqs_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_ua_news';
+  $strongarm->name = 'node_options_uaqs_news';
   $strongarm->value = array(
     0 => 'status',
     1 => 'revision',
   );
-  $export['node_options_ua_news'] = $strongarm;
+  $export['node_options_uaqs_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_ua_news';
+  $strongarm->name = 'node_preview_uaqs_news';
   $strongarm->value = '1';
-  $export['node_preview_ua_news'] = $strongarm;
+  $export['node_preview_uaqs_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_ua_news';
+  $strongarm->name = 'node_submitted_uaqs_news';
   $strongarm->value = 0;
-  $export['node_submitted_ua_news'] = $strongarm;
+  $export['node_submitted_uaqs_news'] = $strongarm;
 
   return $export;
 }

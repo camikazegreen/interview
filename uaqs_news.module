@@ -4,4 +4,4 @@
  * Code for the UA News feature.
  */
 
-include_once 'ua_news.features.inc';
+include_once 'uaqs_news.features.inc';

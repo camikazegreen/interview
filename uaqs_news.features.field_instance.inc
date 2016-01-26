@@ -1,68 +1,150 @@
 <?php
 /**
  * @file
- * ua_news.features.field_instance.inc
+ * uaqs_news.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function ua_news_field_default_field_instances() {
+function uaqs_news_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance:
-  // 'field_collection_item-field_ua_news_contacts-field_ua_news_contact_email'.
-  $field_instances['field_collection_item-field_ua_news_contacts-field_ua_news_contact_email'] = array(
-    'bundle' => 'field_ua_news_contacts',
+  // Exported field_instance: 'node-uaqs_news-field_uaqs_attachments'.
+  $field_instances['node-uaqs_news-field_uaqs_attachments'] = array(
+    'bundle' => 'uaqs_news',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'file',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'file_default',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
+      'uaqs_teaser_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_uaqs_attachments',
+    'label' => 'Attachments',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 1,
+      'file_directory' => 'documents',
+      'file_extensions' => 'pdf',
+      'max_filesize' => '10 MB',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'node-uaqs_news-field_uaqs_body'.
+  $field_instances['node-uaqs_news-field_uaqs_body'] = array(
+    'bundle' => 'uaqs_news',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'email',
+        'module' => 'text',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
         'settings' => array(),
-        'type' => 'email_default',
-        'weight' => 1,
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
+      'uaqs_teaser_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
     ),
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_ua_news_contact_email',
-    'label' => 'Contact Email',
-    'required' => 0,
+    'entity_type' => 'node',
+    'field_name' => 'field_uaqs_body',
+    'label' => 'Article Body',
+    'required' => 1,
     'settings' => array(
+      'display_summary' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'email',
+      'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'rows' => 20,
+        'summary_rows' => 5,
       ),
-      'type' => 'email_textfield',
-      'weight' => 2,
+      'type' => 'text_textarea_with_summary',
+      'weight' => 10,
     ),
   );
 
-  // Exported field_instance:
-  // 'field_collection_item-field_ua_news_contacts-field_ua_news_contact_name'.
-  $field_instances['field_collection_item-field_ua_news_contacts-field_ua_news_contact_name'] = array(
-    'bundle' => 'field_ua_news_contacts',
+  // Exported field_instance: 'node-uaqs_news-field_uaqs_byline'.
+  $field_instances['node-uaqs_news-field_uaqs_byline'] = array(
+    'bundle' => 'uaqs_news',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Full name if possible',
+    'description' => 'Author of this article',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'uaqs_teaser_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
       ),
     ),
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_ua_news_contact_name',
-    'label' => 'Contact Name',
+    'entity_type' => 'node',
+    'field_name' => 'field_uaqs_byline',
+    'label' => 'Byline',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -75,48 +157,64 @@ function ua_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 6,
     ),
   );
 
-  // Exported field_instance:
-  // 'field_collection_item-field_ua_news_contacts-field_ua_news_contact_phone'.
-  $field_instances['field_collection_item-field_ua_news_contacts-field_ua_news_contact_phone'] = array(
-    'bundle' => 'field_ua_news_contacts',
+  // Exported field_instance: 'node-uaqs_news-field_uaqs_contacts'.
+  $field_instances['node-uaqs_news-field_uaqs_contacts'] = array(
+    'bundle' => 'uaqs_news',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '<strong>Suggested format:</strong> 520-626-0000',
+    'description' => 'Persons who can be contacted about the news article',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => TRUE,
+          'edit' => 'Edit',
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 2,
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
+      'uaqs_teaser_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
     ),
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_ua_news_contact_phone',
-    'label' => 'Contact Phone',
+    'entity_type' => 'node',
+    'field_name' => 'field_uaqs_contacts',
+    'label' => 'Contacts',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 3,
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 11,
     ),
   );
 
-  // Exported field_instance: 'node-ua_news-field_expiration_date'.
-  $field_instances['node-ua_news-field_expiration_date'] = array(
-    'bundle' => 'ua_news',
+  // Exported field_instance: 'node-uaqs_news-field_uaqs_expiration_date'.
+  $field_instances['node-uaqs_news-field_uaqs_expiration_date'] = array(
+    'bundle' => 'uaqs_news',
     'deleted' => 0,
     'description' => 'The date and time this news item drops out of website displays',
     'display' => array(
@@ -124,17 +222,23 @@ function ua_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 13,
+      ),
+      'uaqs_teaser_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_expiration_date',
+    'field_name' => 'field_uaqs_expiration_date',
     'label' => 'Expiration Date',
     'required' => 0,
     'settings' => array(
@@ -158,180 +262,13 @@ function ua_news_field_default_field_instances() {
         'year_range' => '-1:+3',
       ),
       'type' => 'date_select',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
-  // Exported field_instance: 'node-ua_news-field_ua_news_attachments'.
-  $field_instances['node-ua_news-field_ua_news_attachments'] = array(
-    'bundle' => 'ua_news',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 7,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ua_news_attachments',
-    'label' => 'Attachments',
-    'required' => 0,
-    'settings' => array(
-      'description_field' => 1,
-      'file_directory' => 'documents',
-      'file_extensions' => 'pdf',
-      'max_filesize' => '10 MB',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'file',
-      'settings' => array(
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'file_generic',
-      'weight' => 12,
-    ),
-  );
-
-  // Exported field_instance: 'node-ua_news-field_ua_news_body'.
-  $field_instances['node-ua_news-field_ua_news_body'] = array(
-    'bundle' => 'ua_news',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ua_news_body',
-    'label' => 'Article Body',
-    'required' => 1,
-    'settings' => array(
-      'display_summary' => 0,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-ua_news-field_ua_news_byline'.
-  $field_instances['node-ua_news-field_ua_news_byline'] = array(
-    'bundle' => 'ua_news',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Author of this article',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 2,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ua_news_byline',
-    'label' => 'Byline',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-ua_news-field_ua_news_contacts'.
-  $field_instances['node-ua_news-field_ua_news_contacts'] = array(
-    'bundle' => 'ua_news',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Persons who can be contacted about the news article',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'field_collection',
-        'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_view',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ua_news_contacts',
-    'label' => 'Contacts',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'field_collection',
-      'settings' => array(),
-      'type' => 'field_collection_embed',
-      'weight' => 10,
-    ),
-  );
-
-  // Exported field_instance: 'node-ua_news-field_ua_news_front'.
-  $field_instances['node-ua_news-field_ua_news_front'] = array(
-    'bundle' => 'ua_news',
+  // Exported field_instance: 'node-uaqs_news-field_uaqs_front'.
+  $field_instances['node-uaqs_news-field_uaqs_front'] = array(
+    'bundle' => 'uaqs_news',
     'default_value' => array(
       0 => array(
         'value' => 0,
@@ -344,17 +281,23 @@ function ua_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 8,
+      ),
+      'uaqs_teaser_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_news_front',
+    'field_name' => 'field_uaqs_front',
     'label' => 'Show on Front Page',
     'required' => 0,
     'settings' => array(
@@ -371,29 +314,38 @@ function ua_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_news-field_ua_news_more_info'.
-  $field_instances['node-ua_news-field_ua_news_more_info'] = array(
-    'bundle' => 'ua_news',
+  // Exported field_instance: 'node-uaqs_news-field_uaqs_more_info'.
+  $field_instances['node-uaqs_news-field_uaqs_more_info'] = array(
+    'bundle' => 'uaqs_news',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'link_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
+      ),
+      'uaqs_teaser_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_news_more_info',
+    'field_name' => 'field_uaqs_more_info',
     'label' => 'More Information',
     'required' => 0,
     'settings' => array(
@@ -424,35 +376,51 @@ function ua_news_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
-  // Exported field_instance: 'node-ua_news-field_ua_news_photo'.
-  $field_instances['node-ua_news-field_ua_news_photo'] = array(
-    'bundle' => 'ua_news',
+  // Exported field_instance: 'node-uaqs_news-field_uaqs_photo'.
+  $field_instances['node-uaqs_news-field_uaqs_photo'] = array(
+    'bundle' => 'uaqs_news',
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => 'ua_news_detail_500',
-        ),
-        'type' => 'image',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'class' => '',
+          'field_multiple_limit' => 1,
+          'field_multiple_limit_offset' => 0,
+          'image_link' => 'content',
+          'image_style' => 'uaqs_spotlight',
+        ),
+        'type' => 'image',
         'weight' => 0,
+      ),
+      'uaqs_teaser_list' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'class' => 'media-object',
+          'field_multiple_limit' => 1,
+          'field_multiple_limit_offset' => 0,
+          'image_link' => 'content',
+          'image_style' => 'ua_medium_square',
+        ),
+        'type' => 'image',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_news_photo',
+    'field_name' => 'field_uaqs_photo',
     'label' => 'News Article Photos',
     'required' => 0,
     'settings' => array(
@@ -478,16 +446,52 @@ function ua_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_news-field_ua_news_published'.
-  $field_instances['node-ua_news-field_ua_news_published'] = array(
-    'bundle' => 'ua_news',
+  // Exported field_instance: 'node-uaqs_news-field_uaqs_published'.
+  $field_instances['node-uaqs_news-field_uaqs_published'] = array(
+    'bundle' => 'uaqs_news',
     'deleted' => 0,
     'description' => 'Date when article was published',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+          'show_repeat_rule' => 'show',
+        ),
+        'type' => 'date_default',
+        'weight' => 2,
+      ),
+      'uaqs_teaser_list' => array(
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
           'format_type' => 'long',
           'fromto' => 'both',
           'multiple_from' => '',
@@ -499,15 +503,9 @@ function ua_news_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 3,
       ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_news_published',
+    'field_name' => 'field_uaqs_published',
     'label' => 'Published',
     'required' => 0,
     'settings' => array(
@@ -531,13 +529,13 @@ function ua_news_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_select',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
-  // Exported field_instance: 'node-ua_news-field_ua_news_short_title'.
-  $field_instances['node-ua_news-field_ua_news_short_title'] = array(
-    'bundle' => 'ua_news',
+  // Exported field_instance: 'node-uaqs_news-field_uaqs_short_title'.
+  $field_instances['node-uaqs_news-field_uaqs_short_title'] = array(
+    'bundle' => 'uaqs_news',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '<strong>Suggested character limit:</strong> 30',
@@ -546,17 +544,30 @@ function ua_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 10,
       ),
       'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'title_class' => 'card-title',
+          'title_link' => 'content',
+          'title_style' => 'h4',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
+      ),
+      'uaqs_teaser_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_news_short_title',
+    'field_name' => 'field_uaqs_short_title',
     'label' => 'Short Title',
     'required' => 0,
     'settings' => array(
@@ -574,68 +585,42 @@ function ua_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_news-field_ua_news_subtitle'.
-  $field_instances['node-ua_news-field_ua_news_subtitle'] = array(
-    'bundle' => 'ua_news',
+  // Exported field_instance: 'node-uaqs_news-field_uaqs_summary'.
+  $field_instances['node-uaqs_news-field_uaqs_summary'] = array(
+    'bundle' => 'uaqs_news',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
+      'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 4,
       ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ua_news_subtitle',
-    'label' => 'Subtitle',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance: 'node-ua_news-field_ua_news_summary'.
-  $field_instances['node-ua_news-field_ua_news_summary'] = array(
-    'bundle' => 'ua_news',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+      'uaqs_teaser_list' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'text_default',
+        'weight' => 17,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_news_summary',
+    'field_name' => 'field_uaqs_summary',
     'label' => 'Summary',
     'required' => 0,
     'settings' => array(
@@ -649,25 +634,131 @@ function ua_news_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 8,
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-uaqs_news-field_uaqs_summary_short'.
+  $field_instances['node-uaqs_news-field_uaqs_summary_short'] = array(
+    'bundle' => 'uaqs_news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'uaqs_teaser_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_uaqs_summary_short',
+    'label' => 'Subtitle',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 255,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-uaqs_news-title_field'.
+  $field_instances['node-uaqs_news-title_field'] = array(
+    'bundle' => 'uaqs_news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'h1',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'uaqs_teaser_list' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'title_class' => '',
+          'title_link' => 'content',
+          'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
+        'weight' => 15,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => TRUE,
+    'settings' => array(
+      'hide_label' => array(
+        'entity' => 'entity',
+        'page' => 'page',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('<strong>Suggested character limit:</strong> 30');
-  t('<strong>Suggested format:</strong> 520-626-0000');
   t('Article Body');
   t('Attachments');
   t('Author of this article');
   t('Byline');
-  t('Contact Email');
-  t('Contact Name');
-  t('Contact Phone');
   t('Contacts');
   t('Date when article was published');
   t('Expiration Date');
-  t('Full name if possible');
   t('More Information');
   t('News Article Photos');
   t('Persons who can be contacted about the news article');
@@ -677,6 +768,7 @@ function ua_news_field_default_field_instances() {
   t('Subtitle');
   t('Summary');
   t('The date and time this news item drops out of website displays');
+  t('Title');
 
   return $field_instances;
 }
