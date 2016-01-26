@@ -70,11 +70,11 @@ function render_html_inline(array $variables) {
 }
 
 /**
- * UA Captioned Image fields.
+ * UAQS Captioned Image fields.
  */
 
 /**
- * Returns HTML for a ua_image_author field.
+ * Returns HTML for a uaqs_image_author field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -82,12 +82,12 @@ function render_html_inline(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_image_author(array $variables) {
+function ua_zen_field__field_uaqs_image_author(array $variables) {
   return render_html_inline($variables);
 }
 
 /**
- * Returns HTML for a ua_image_caption field.
+ * Returns HTML for a uaqs_image_caption field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -95,12 +95,12 @@ function ua_zen_field__field_ua_image_author(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_image_caption(array $variables) {
+function ua_zen_field__field_uaqs_image_caption(array $variables) {
   return render_html_inline($variables);
 }
 
 /**
- * Returns HTML for a ua_image_license field.
+ * Returns HTML for a uaqs_image_license field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -108,12 +108,12 @@ function ua_zen_field__field_ua_image_caption(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_image_license(array $variables) {
+function ua_zen_field__field_uaqs_image_license(array $variables) {
   return render_html_inline($variables);
 }
 
 /**
- * Returns HTML for a ua_image_title field.
+ * Returns HTML for a uaqs_image_title field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -121,12 +121,12 @@ function ua_zen_field__field_ua_image_license(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_image_title(array $variables) {
+function ua_zen_field__field_uaqs_image_title(array $variables) {
   return render_html_inline($variables);
 }
 
 /**
- * Returns HTML for a ua_isolated_image field.
+ * Returns HTML for a uaqs_isolated_image field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -134,16 +134,16 @@ function ua_zen_field__field_ua_image_title(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_isolated_image(array $variables) {
+function ua_zen_field__field_uaqs_isolated_image(array $variables) {
   return render_minimal_values($variables);
 }
 
 /**
- * UA Contact Summary fields.
+ * UAQS Contact Summary fields.
  */
 
 /**
- * Returns HTML for a ua_contact_address field.
+ * Returns HTML for a uaqs_contact_address field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -151,12 +151,12 @@ function ua_zen_field__field_ua_isolated_image(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_contact_address(array $variables) {
+function ua_zen_field__field_uaqs_contact_address(array $variables) {
   return render_html_inline($variables);
 }
 
 /**
- * Returns HTML for a ua_contact_email field.
+ * Returns HTML for a uaqs_contact_mail_link field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -164,12 +164,12 @@ function ua_zen_field__field_ua_contact_address(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_contact_email(array $variables) {
+function ua_zen_field__field_uaqs_contact_mail_link(array $variables) {
   return render_html_inline($variables);
 }
 
 /**
- * Returns HTML for a ua_contact_phone field.
+ * Returns HTML for a uaqs_contact_phone field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -177,16 +177,16 @@ function ua_zen_field__field_ua_contact_email(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_contact_phone(array $variables) {
+function ua_zen_field__field_uaqs_contact_phone_link(array $variables) {
   return render_html_inline($variables);
 }
 
 /**
- * UA Illustrated Blurb fields.
+ * UAQS Illustrated Blurb fields.
  */
 
 /**
- * Returns HTML for a ua_blurb_text field.
+ * Returns HTML for a uaqs_blurb_text field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -194,12 +194,12 @@ function ua_zen_field__field_ua_contact_phone(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_blurb_text(array $variables) {
+function ua_zen_field__field_uaqs_blurb_text(array $variables) {
   return render_minimal_values($variables);
 }
 
 /**
- * Returns HTML for a ua_read_more field.
+ * Returns HTML for a uaqs_read_more field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -207,12 +207,12 @@ function ua_zen_field__field_ua_blurb_text(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_read_more(array $variables) {
+function ua_zen_field__field_uaqs_read_more(array $variables) {
   return render_minimal_values($variables);
 }
 
 /**
- * Returns HTML for a ua_supporting_image field.
+ * Returns HTML for a uaqs_supporting_image field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -220,16 +220,16 @@ function ua_zen_field__field_ua_read_more(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_supporting_image(array $variables) {
+function ua_zen_field__field_uaqs_supporting_image(array $variables) {
   return render_minimal_values($variables);
 }
 
 /**
- * UA Illustrated Link fields.
+ * UAQS Illustrated Link fields.
  */
 
 /**
- * Returns HTML for a ua_prettylink_image field.
+ * Returns HTML for a uaqs_prettylink_image field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -237,12 +237,12 @@ function ua_zen_field__field_ua_supporting_image(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_prettylink_image(array $variables) {
+function ua_zen_field__field_uaqs_prettylink_image(array $variables) {
   return render_minimal_values($variables);
 }
 
 /**
- * Returns HTML for a ua_prettylink_link field.
+ * Returns HTML for a uaqs_prettylink_link field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -250,6 +250,6 @@ function ua_zen_field__field_ua_prettylink_image(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_prettylink_link(array $variables) {
+function ua_zen_field__field_uaqs_prettylink_link(array $variables) {
   return render_minimal_values($variables);
 }

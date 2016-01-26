@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ua_block_types.features.inc
+ * uaqs_block_types.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function ua_block_types_ctools_plugin_api($module = NULL, $api = NULL) {
+function uaqs_block_types_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "bean_admin_ui" && $api == "bean") {
     return array("version" => "5");
   }
@@ -22,7 +22,7 @@ function ua_block_types_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_image_default_styles().
  */
-function ua_block_types_image_default_styles() {
+function uaqs_block_types_image_default_styles() {
   $styles = array();
 
   // Exported image style: large_tile.

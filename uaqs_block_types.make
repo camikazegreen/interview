@@ -1,7 +1,7 @@
 ; ------------------------------------------------------------------------------
-; UA Block Types Makefile
+; UAQS Block Types Makefile
 ;
-; Downloads the Bean module dependencies for UA Block Types components.
+; Downloads the Bean module dependencies for UAQS Block Types components.
 ; Although the UI might not be necessary for users, it is required for some
 ; of the Bean pre-configuration.
 ; ------------------------------------------------------------------------------

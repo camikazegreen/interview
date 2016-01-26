@@ -1,12 +1,12 @@
 <?php
 /**
  * @file
- * Display simplified UA Illustrated Link content.
+ * Display simplified UAQS Illustrated Link content.
  *
  * Available variables:
  * - $content: An associative array of fields ready for rendering
- *   - field_ua_prettylink_image: A decorative or supplementary image.
- *   - field_ua_prettylink_link: The link itself.
+ *   - field_uaqs_prettylink_image: A decorative or supplementary image.
+ *   - field_uaqs_prettylink_link: The link itself.
  *   field names as keys and the render arrays as values.
  * - $classes: A string containing CSS classes for the outer wrapper.
  * - $attributes: A string containing HTML attributes for the wrapper.
@@ -17,6 +17,6 @@
  */
 ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <?php print render($content['field_ua_prettylink_image']); ?>
-  <?php print render($content['field_ua_prettylink_link']); ?>
+  <?php print render($content['field_uaqs_prettylink_image']); ?>
+  <?php print render($content['field_uaqs_prettylink_link']); ?>
 </div>

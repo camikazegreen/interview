@@ -1,14 +1,14 @@
 <?php
 /**
  * @file
- * Code for the UA Block Types feature.
+ * Code for the UAQS Block Types feature.
  */
 
-const OUR_PREFIX = 'ua-block-types-';
+const OUR_PREFIX = 'uaqs-block-types-';
 
-include_once 'ua_block_types.features.inc';
-include_once 'ua_block_types.theme_block_overrides.inc';
-include_once 'ua_block_types.theme_field_overrides.inc';
+include_once 'uaqs_block_types.features.inc';
+include_once 'uaqs_block_types.theme_block_overrides.inc';
+include_once 'uaqs_block_types.theme_field_overrides.inc';
 
 /**
  * Override or insert variables into the Bean templates.
@@ -56,9 +56,9 @@ function ua_zen_preprocess_block(&$variables, $hook) {
  * Taken directly from https://www.drupal.org/node/715160
  * (Using template (.tpl.php) files in your own module).
  */
-function ua_block_types_theme_registry_alter(&$theme_registry) {
+function uaqs_block_types_theme_registry_alter(&$theme_registry) {
   // Defined path to the current module.
-  $module_path = drupal_get_path('module', 'ua_block_types');
+  $module_path = drupal_get_path('module', 'uaqs_block_types');
   // Find all .tpl.php files in this module's folder recursively.
   $template_file_objects = drupal_find_theme_templates($theme_registry, '.tpl.php', $module_path);
   // Iterate through all found template file objects.

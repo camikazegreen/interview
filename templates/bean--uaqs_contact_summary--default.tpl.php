@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Display simplified UA Contact Summary content.
+ * Display simplified UAQS Contact Summary content.
  *
  * Available variables:
  * - $content: An associative array of fields ready for rendering, with the

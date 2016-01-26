@@ -1,19 +1,19 @@
 <?php
 /**
  * @file
- * ua_block_types.strongarm.inc
+ * uaqs_block_types.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function ua_block_types_strongarm() {
+function uaqs_block_types_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_bean__ua_captioned_image';
+  $strongarm->name = 'field_bundle_settings_bean__uaqs_captioned_image';
   $strongarm->value = array(
     'view_modes' => array(
       'default' => array(
@@ -48,12 +48,12 @@ function ua_block_types_strongarm() {
       ),
     ),
   );
-  $export['field_bundle_settings_bean__ua_captioned_image'] = $strongarm;
+  $export['field_bundle_settings_bean__uaqs_captioned_image'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_bean__ua_contact_summary';
+  $strongarm->name = 'field_bundle_settings_bean__uaqs_contact_summary';
   $strongarm->value = array(
     'view_modes' => array(
       'default' => array(
@@ -88,12 +88,12 @@ function ua_block_types_strongarm() {
       ),
     ),
   );
-  $export['field_bundle_settings_bean__ua_contact_summary'] = $strongarm;
+  $export['field_bundle_settings_bean__uaqs_contact_summary'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_bean__ua_illustrated_blurb';
+  $strongarm->name = 'field_bundle_settings_bean__uaqs_illustrated_blurb';
   $strongarm->value = array(
     'view_modes' => array(
       'default' => array(
@@ -128,12 +128,12 @@ function ua_block_types_strongarm() {
       ),
     ),
   );
-  $export['field_bundle_settings_bean__ua_illustrated_blurb'] = $strongarm;
+  $export['field_bundle_settings_bean__uaqs_illustrated_blurb'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_bean__ua_illustrated_link';
+  $strongarm->name = 'field_bundle_settings_bean__uaqs_illustrated_link';
   $strongarm->value = array(
     'view_modes' => array(
       'default' => array(
@@ -168,12 +168,12 @@ function ua_block_types_strongarm() {
       ),
     ),
   );
-  $export['field_bundle_settings_bean__ua_illustrated_link'] = $strongarm;
+  $export['field_bundle_settings_bean__uaqs_illustrated_link'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_bean__ua_mini_blurb';
+  $strongarm->name = 'field_bundle_settings_bean__uaqs_mini_blurb';
   $strongarm->value = array(
     'view_modes' => array(),
     'extra_fields' => array(
@@ -194,7 +194,7 @@ function ua_block_types_strongarm() {
       'display' => array(),
     ),
   );
-  $export['field_bundle_settings_bean__ua_mini_blurb'] = $strongarm;
+  $export['field_bundle_settings_bean__uaqs_mini_blurb'] = $strongarm;
 
   return $export;
 }

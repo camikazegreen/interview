@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * Display simplified UA Illustrated Blurb content.
+ * Display simplified UAQS Illustrated Blurb content.
  *
  * Available variables:
  * - $content: An associative array of fields ready for rendering
- *   - field_ua_blurb_text: One or two paragraphs of text.
- *   - field_ua_read_more: A link to further relevant content.
- *   - field_ua_supporting_image: A decorative or supplementary image.
+ *   - field_uaqs_blurb_text: One or two paragraphs of text.
+ *   - field_uaqs_read_more: A link to further relevant content.
+ *   - field_uaqs_supporting_image: A decorative or supplementary image.
  * - $classes: A string containing CSS classes for the outer wrapper.
  * - $attributes: A string containing HTML attributes for the outer wrapper.
  * - $content_attributes: A string containing HTML attributes for the inner
@@ -20,11 +20,11 @@
  */
 ?>
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <?php print render($content['field_ua_supporting_image']); ?>
+  <?php print render($content['field_uaqs_supporting_image']); ?>
   <div class="content"<?php print $content_attributes; ?>>
     <?php
-      print render($content['field_ua_blurb_text']);
-      print render($content['field_ua_read_more']);
+      print render($content['field_uaqs_blurb_text']);
+      print render($content['field_uaqs_read_more']);
     ?>
   </div>
 </div>

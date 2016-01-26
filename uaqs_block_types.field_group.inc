@@ -1,29 +1,29 @@
 <?php
 /**
  * @file
- * ua_block_types.field_group.inc
+ * uaqs_block_types.field_group.inc
  */
 
 /**
  * Implements hook_field_group_info().
  */
-function ua_block_types_field_group_info() {
+function uaqs_block_types_field_group_info() {
   $export = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_card_block_1|bean|ua_card|default';
+  $field_group->identifier = 'group_card_block_1|bean|uaqs_card|default';
   $field_group->group_name = 'group_card_block_1';
   $field_group->entity_type = 'bean';
-  $field_group->bundle = 'ua_card';
+  $field_group->bundle = 'uaqs_card';
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_card';
   $field_group->data = array(
     'label' => 'Card Block',
     'weight' => '12',
     'children' => array(
-      0 => 'field_ua_blurb_text',
+      0 => 'field_uaqs_blurb_text',
       1 => 'field_call_to_action',
     ),
     'format_type' => 'html-element',
@@ -38,15 +38,15 @@ function ua_block_types_field_group_info() {
       ),
     ),
   );
-  $export['group_card_block_1|bean|ua_card|default'] = $field_group;
+  $export['group_card_block_1|bean|uaqs_card|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_card_header|bean|ua_card|default';
+  $field_group->identifier = 'group_card_header|bean|uaqs_card|default';
   $field_group->group_name = 'group_card_header';
   $field_group->entity_type = 'bean';
-  $field_group->bundle = 'ua_card';
+  $field_group->bundle = 'uaqs_card';
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_card';
   $field_group->data = array(
@@ -67,15 +67,15 @@ function ua_block_types_field_group_info() {
       ),
     ),
   );
-  $export['group_card_header|bean|ua_card|default'] = $field_group;
+  $export['group_card_header|bean|uaqs_card|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_card_title|bean|ua_card|default';
+  $field_group->identifier = 'group_card_title|bean|uaqs_card|default';
   $field_group->group_name = 'group_card_title';
   $field_group->entity_type = 'bean';
-  $field_group->bundle = 'ua_card';
+  $field_group->bundle = 'uaqs_card';
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_card_header';
   $field_group->data = array(
@@ -96,15 +96,15 @@ function ua_block_types_field_group_info() {
       ),
     ),
   );
-  $export['group_card_title|bean|ua_card|default'] = $field_group;
+  $export['group_card_title|bean|uaqs_card|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_card|bean|ua_card|default';
+  $field_group->identifier = 'group_card|bean|uaqs_card|default';
   $field_group->group_name = 'group_card';
   $field_group->entity_type = 'bean';
-  $field_group->bundle = 'ua_card';
+  $field_group->bundle = 'uaqs_card';
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
@@ -127,7 +127,7 @@ function ua_block_types_field_group_info() {
       ),
     ),
   );
-  $export['group_card|bean|ua_card|default'] = $field_group;
+  $export['group_card|bean|uaqs_card|default'] = $field_group;
 
   return $export;
 }

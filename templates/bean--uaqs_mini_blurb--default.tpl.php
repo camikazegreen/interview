@@ -1,11 +1,11 @@
 <?php
 /**
  * @file
- * Display simplified UA Mini Blurb content.
+ * Display simplified UAQS Mini Blurb content.
  *
  * Available variables:
  * - $content: An associative array of fields ready for rendering
- *   - field_ua_blurb_text: A freestanding text block.
+ *   - field_uaqs_blurb_text: A freestanding text block.
  * - $classes: A string containing CSS classes for the outer wrapper.
  * - $attributes: A string containing HTML attributes for the outer wrapper.
  * - $content_attributes: A string of HTML attributes for the inner wrapper.
@@ -19,6 +19,6 @@
 ?>
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
-    <?php print render($content['field_ua_blurb_text']); ?>
+    <?php print render($content['field_uaqs_blurb_text']); ?>
   </div>
 </div>

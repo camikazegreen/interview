@@ -1,22 +1,22 @@
 <?php
 /**
  * @file
- * ua_block_types.features.field_base.inc
+ * uaqs_block_types.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function ua_block_types_field_default_field_bases() {
+function uaqs_block_types_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_ua_blurb_text'.
-  $field_bases['field_ua_blurb_text'] = array(
+  // Exported field_base: 'field_uaqs_blurb_text'.
+  $field_bases['field_uaqs_blurb_text'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_blurb_text',
+    'field_name' => 'field_uaqs_blurb_text',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -29,13 +29,13 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_ua_contact_address'.
-  $field_bases['field_ua_contact_address'] = array(
+  // Exported field_base: 'field_uaqs_contact_address'.
+  $field_bases['field_uaqs_contact_address'] = array(
     'active' => 1,
     'cardinality' => 3,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_contact_address',
+    'field_name' => 'field_uaqs_contact_address',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -50,13 +50,13 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_contact_email'.
-  $field_bases['field_ua_contact_email'] = array(
+  // Exported field_base: 'field_uaqs_contact_mail_link'.
+  $field_bases['field_uaqs_contact_mail_link'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_contact_email',
+    'field_name' => 'field_uaqs_contact_mail_link',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -79,13 +79,13 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_contact_phone'.
-  $field_bases['field_ua_contact_phone'] = array(
+  // Exported field_base: 'field_uaqs_contact_phone_link'.
+  $field_bases['field_uaqs_contact_phone_link'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_contact_phone',
+    'field_name' => 'field_uaqs_contact_phone_link',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -108,13 +108,13 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_image_author'.
-  $field_bases['field_ua_image_author'] = array(
+  // Exported field_base: 'field_uaqs_image_author'.
+  $field_bases['field_uaqs_image_author'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_image_author',
+    'field_name' => 'field_uaqs_image_author',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -137,13 +137,13 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_image_caption'.
-  $field_bases['field_ua_image_caption'] = array(
+  // Exported field_base: 'field_uaqs_image_caption'.
+  $field_bases['field_uaqs_image_caption'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_image_caption',
+    'field_name' => 'field_uaqs_image_caption',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -156,13 +156,13 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_ua_image_license'.
-  $field_bases['field_ua_image_license'] = array(
+  // Exported field_base: 'field_uaqs_image_license'.
+  $field_bases['field_uaqs_image_license'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_image_license',
+    'field_name' => 'field_uaqs_image_license',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -185,13 +185,13 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_image_title'.
-  $field_bases['field_ua_image_title'] = array(
+  // Exported field_base: 'field_uaqs_image_title'.
+  $field_bases['field_uaqs_image_title'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_image_title',
+    'field_name' => 'field_uaqs_image_title',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -214,13 +214,13 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_isolated_image'.
-  $field_bases['field_ua_isolated_image'] = array(
+  // Exported field_base: 'field_uaqs_isolated_image'.
+  $field_bases['field_uaqs_isolated_image'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_isolated_image',
+    'field_name' => 'field_uaqs_isolated_image',
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -236,13 +236,13 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ua_prettylink_image'.
-  $field_bases['field_ua_prettylink_image'] = array(
+  // Exported field_base: 'field_uaqs_prettylink_image'.
+  $field_bases['field_uaqs_prettylink_image'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_prettylink_image',
+    'field_name' => 'field_uaqs_prettylink_image',
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -258,13 +258,13 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ua_prettylink_link'.
-  $field_bases['field_ua_prettylink_link'] = array(
+  // Exported field_base: 'field_uaqs_prettylink_link'.
+  $field_bases['field_uaqs_prettylink_link'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_prettylink_link',
+    'field_name' => 'field_uaqs_prettylink_link',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -287,13 +287,13 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_read_more'.
-  $field_bases['field_ua_read_more'] = array(
+  // Exported field_base: 'field_uaqs_read_more'.
+  $field_bases['field_uaqs_read_more'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_read_more',
+    'field_name' => 'field_uaqs_read_more',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -316,13 +316,13 @@ function ua_block_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ua_supporting_image'.
-  $field_bases['field_ua_supporting_image'] = array(
+  // Exported field_base: 'field_uaqs_supporting_image'.
+  $field_bases['field_uaqs_supporting_image'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_supporting_image',
+    'field_name' => 'field_uaqs_supporting_image',
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
