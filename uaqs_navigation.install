@@ -1,17 +1,17 @@
 <?php
 /**
  * @file
- * ua_navigation.install
+ * uaqs_navigation.install
  */
 
 /**
  * Implements hook_install().
  */
-function ua_navigation_install() {
+function uaqs_navigation_install() {
   $t = get_t();
 
   // Create 'utility links' menu if it doesn't already exist.
-  $menu_name = 'ua-utility-links';
+  $menu_name = 'uaqs-utility-links';
   if (!menu_load($menu_name)) {
     $menu = array(
       'menu_name' => $menu_name,
@@ -25,6 +25,6 @@ function ua_navigation_install() {
 /**
  * Disable Superfish module.
  */
-function ua_navigation_update_7100() {
+function uaqs_navigation_update_7100() {
   module_disable(array('superfish'));
 }

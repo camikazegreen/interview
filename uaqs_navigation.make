@@ -1,7 +1,7 @@
 ; ------------------------------------------------------------------------------
-; UA Navigation Makefile
+; UAQS Navigation Makefile
 ;
-; Downloads module and library dependencies for UA Navigation components.
+; Downloads module and library dependencies for UAQS Navigation components.
 ; ------------------------------------------------------------------------------
 
 core = 7.x

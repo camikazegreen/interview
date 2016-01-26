@@ -1,5 +1,5 @@
-name = UA Navigation
-description = Provides various dependencies and configuration for navigation components consistent with UA web branding standards.
+name = UAQS Navigation
+description = Provides various dependencies and configuration for navigation components consistent with UAQS web branding standards.
 core = 7.x
 package = The University of Arizona
 dependencies[] = ctools

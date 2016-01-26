@@ -1,4 +1,4 @@
-# UA Navigation Feature Module
+# UAQS Navigation Feature Module
 
 Provides various dependencies and configuration for navigation components consistent with UA web branding standards.
 
