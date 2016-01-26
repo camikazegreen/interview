@@ -1,28 +1,37 @@
 <?php
 /**
  * @file
- * ua_page.features.field_instance.inc
+ * uaqs_page.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function ua_page_field_default_field_instances() {
+function uaqs_page_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ua_page-field_ua_page_subtitle'.
-  $field_instances['node-ua_page-field_ua_page_subtitle'] = array(
-    'bundle' => 'ua_page',
+  // Exported field_instance: 'node-uaqs_page-field_uaqs_body'.
+  $field_instances['node-uaqs_page-field_uaqs_body'] = array(
+    'bundle' => 'uaqs_page',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -32,7 +41,52 @@ function ua_page_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_page_subtitle',
+    'field_name' => 'field_uaqs_body',
+    'label' => 'Body',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-uaqs_page-field_uaqs_summary_short'.
+  $field_instances['node-uaqs_page-field_uaqs_summary_short'] = array(
+    'bundle' => 'uaqs_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_uaqs_summary_short',
     'label' => 'Subtitle',
     'required' => 0,
     'settings' => array(
@@ -43,53 +97,9 @@ function ua_page_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance: 'node-ua_page-ua_page_body'.
-  $field_instances['node-ua_page-ua_page_body'] = array(
-    'bundle' => 'ua_page',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'ua_page_body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
       'weight' => 2,
     ),
   );
