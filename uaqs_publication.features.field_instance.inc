@@ -1,18 +1,18 @@
 <?php
 /**
  * @file
- * ua_publication.features.field_instance.inc
+ * uaqs_publication.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function ua_publication_field_default_field_instances() {
+function uaqs_publication_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ua_pub-field_ua_pub_addinfo'.
-  $field_instances['node-ua_pub-field_ua_pub_addinfo'] = array(
-    'bundle' => 'ua_pub',
+  // Exported field_instance: 'node-uaqs_pub-field_uaqs_pub_addinfo'.
+  $field_instances['node-uaqs_pub-field_uaqs_pub_addinfo'] = array(
+    'bundle' => 'uaqs_pub',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -20,9 +20,12 @@ function ua_publication_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -32,7 +35,7 @@ function ua_publication_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_pub_addinfo',
+    'field_name' => 'field_uaqs_pub_addinfo',
     'label' => 'Additional Information',
     'required' => 0,
     'settings' => array(
@@ -63,13 +66,13 @@ function ua_publication_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => -2,
+      'weight' => 4,
     ),
   );
 
-  // Exported field_instance: 'node-ua_pub-field_ua_pub_authors'.
-  $field_instances['node-ua_pub-field_ua_pub_authors'] = array(
-    'bundle' => 'ua_pub',
+  // Exported field_instance: 'node-uaqs_pub-field_uaqs_pub_authors'.
+  $field_instances['node-uaqs_pub-field_uaqs_pub_authors'] = array(
+    'bundle' => 'uaqs_pub',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -77,9 +80,12 @@ function ua_publication_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -89,7 +95,7 @@ function ua_publication_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_pub_authors',
+    'field_name' => 'field_uaqs_pub_authors',
     'label' => 'Authors',
     'required' => 0,
     'settings' => array(
@@ -103,30 +109,27 @@ function ua_publication_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -4,
+      'weight' => 1,
     ),
   );
 
-  // Exported field_instance: 'node-ua_pub-field_ua_pub_date'.
-  $field_instances['node-ua_pub-field_ua_pub_date'] = array(
-    'bundle' => 'ua_pub',
+  // Exported field_instance: 'node-uaqs_pub-field_uaqs_pub_related_pubs'.
+  $field_instances['node-uaqs_pub-field_uaqs_pub_related_pubs'] = array(
+    'bundle' => 'uaqs_pub',
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Other publications on the site that relate to this publication.',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
-        'module' => 'date',
+        'label' => 'above',
+        'module' => 'entityreference',
         'settings' => array(
-          'format_type' => 'medium',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_remaining_days' => 0,
-          'show_repeat_rule' => 'show',
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'link' => 1,
         ),
-        'type' => 'date_default',
-        'weight' => 4,
+        'type' => 'entityreference_label',
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -136,38 +139,71 @@ function ua_publication_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_pub_date',
-    'label' => 'Date of publication',
+    'field_name' => 'field_uaqs_pub_related_pubs',
+    'label' => 'Related Publications',
     'required' => 0,
     'settings' => array(
-      'default_value' => 'now',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'date',
+      'module' => 'entityreference',
       'settings' => array(
-        'display_all_day' => 0,
-        'increment' => 15,
-        'input_format' => 'm/d/Y - g:i:sa',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'no_fieldset' => 0,
-        'repeat_collapsed' => 0,
-        'text_parts' => array(),
-        'year_range' => '1900:+2',
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
       ),
-      'type' => 'date_select',
-      'weight' => 0,
+      'type' => 'entityreference_autocomplete',
+      'weight' => 10,
     ),
   );
 
-  // Exported field_instance: 'node-ua_pub-field_ua_pub_description'.
-  $field_instances['node-ua_pub-field_ua_pub_description'] = array(
-    'bundle' => 'ua_pub',
+  // Exported field_instance: 'node-uaqs_pub-field_uaqs_pub_research_categories'.
+  $field_instances['node-uaqs_pub-field_uaqs_pub_research_categories'] = array(
+    'bundle' => 'uaqs_pub',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_uaqs_pub_research_categories',
+    'label' => 'Research Categories',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-uaqs_pub-field_uaqs_body'.
+  $field_instances['node-uaqs_pub-field_uaqs_body'] = array(
+    'bundle' => 'uaqs_pub',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -175,19 +211,16 @@ function ua_publication_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'text_default',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_pub_description',
+    'field_name' => 'field_uaqs_body',
     'label' => 'Description',
     'required' => 0,
     'settings' => array(
@@ -203,13 +236,13 @@ function ua_publication_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -3,
+      'weight' => 3,
     ),
   );
 
-  // Exported field_instance: 'node-ua_pub-field_ua_pub_photo'.
-  $field_instances['node-ua_pub-field_ua_pub_photo'] = array(
-    'bundle' => 'ua_pub',
+  // Exported field_instance: 'node-uaqs_pub-field_uaqs_photo'.
+  $field_instances['node-uaqs_pub-field_uaqs_photo'] = array(
+    'bundle' => 'uaqs_pub',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -217,21 +250,18 @@ function ua_publication_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'class' => '',
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
           'image_link' => '',
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 2,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_pub_photo',
+    'field_name' => 'field_uaqs_photo',
     'label' => 'Publication Photo',
     'required' => 0,
     'settings' => array(
@@ -253,90 +283,97 @@ function ua_publication_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => -1,
+      'weight' => 6,
     ),
   );
 
-  // Exported field_instance: 'node-ua_pub-field_ua_pub_related_pubs'.
-  $field_instances['node-ua_pub-field_ua_pub_related_pubs'] = array(
-    'bundle' => 'ua_pub',
-    'default_value' => NULL,
+  // Exported field_instance: 'node-uaqs_pub-field_uaqs_year'.
+  $field_instances['node-uaqs_pub-field_uaqs_year'] = array(
+    'bundle' => 'uaqs_pub',
     'deleted' => 0,
-    'description' => 'Other publications on the site that relate to this publication.',
+    'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
+        'label' => 'inline',
+        'module' => 'date',
         'settings' => array(
-          'link' => 1,
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'format_type' => 'medium',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => 0,
+          'show_repeat_rule' => 'show',
         ),
-        'type' => 'entityreference_label',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'date_default',
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_pub_related_pubs',
-    'label' => 'Related Publications',
+    'field_name' => 'field_uaqs_year',
+    'label' => 'Date of publication',
     'required' => 0,
     'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'date',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
+        'display_all_day' => 0,
+        'increment' => 15,
+        'input_format' => 'Y/m/d - g:i:sa',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'repeat_collapsed' => 0,
+        'text_parts' => array(),
+        'year_range' => '1900:+2',
       ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 2,
+      'type' => 'date_select',
+      'weight' => 8,
     ),
   );
 
-  // Exported field_instance: 'node-ua_pub-field_ua_pub_research_categories'.
-  $field_instances['node-ua_pub-field_ua_pub_research_categories'] = array(
-    'bundle' => 'ua_pub',
+  // Exported field_instance: 'node-uaqs_pub-title_field'.
+  $field_instances['node-uaqs_pub-title_field'] = array(
+    'bundle' => 'uaqs_pub',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_pub_research_categories',
-    'label' => 'Research Categories',
-    'required' => 0,
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => TRUE,
     'settings' => array(
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'taxonomy',
+      'module' => 'text',
       'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
         'size' => 60,
       ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 1,
+      'type' => 'text_textfield',
+      'weight' => 0,
     ),
   );
 
@@ -350,6 +387,7 @@ function ua_publication_field_default_field_instances() {
   t('Publication Photo');
   t('Related Publications');
   t('Research Categories');
+  t('Title');
 
   return $field_instances;
 }

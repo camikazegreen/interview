@@ -1,7 +1,7 @@
-# UA Publication #
+# UAQS Publication #
 
 ## Overview ##
-This repository contains a module made with [Features](https://www.drupal.org/project/features) that provides a UA Publication content type.
+This repository contains a module made with [Features](https://www.drupal.org/project/features) that provides a UAQS Publication content type.
 
 ## Requirements ##
 - In order to use this feature, you must first download and enable the [Features](https://www.drupal.org/project/features) module. 
@@ -17,6 +17,8 @@ This repository contains a module made with [Features](https://www.drupal.org/pr
     - [Entity Reference](https://www.drupal.org/project/entityreference) used to reference relating publications
     - [Link](https://www.drupal.org/project/link) used for the more information link
     - [StrongArm](https://www.drupal.org/project/strongarm) used to save content type settings
+  - UAQS modules
+    - [UAQS Fields](...) Provides base fields for the uaqs_publication content type
 
 Handy Drush dl/en command:
 

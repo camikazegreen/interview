@@ -4,4 +4,4 @@
  * Code for the UA Publication feature.
  */
 
-include_once 'ua_publication.features.inc';
+include_once 'uaqs_publication.features.inc';

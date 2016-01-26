@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ua_publication.features.taxonomy.inc
+ * uaqs_publication.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function ua_publication_taxonomy_default_vocabularies() {
+function uaqs_publication_taxonomy_default_vocabularies() {
   return array(
     'research_categories' => array(
       'name' => 'Research Categories',

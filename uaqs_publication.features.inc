@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ua_publication.features.inc
+ * uaqs_publication.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function ua_publication_ctools_plugin_api($module = NULL, $api = NULL) {
+function uaqs_publication_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -16,12 +16,12 @@ function ua_publication_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_node_info().
  */
-function ua_publication_node_info() {
+function uaqs_publication_node_info() {
   $items = array(
-    'ua_pub' => array(
-      'name' => t('UA Publication'),
+    'uaqs_pub' => array(
+      'name' => t('UAQS Publication'),
       'base' => 'node_content',
-      'description' => t('Use a <em>UA publication</em> to add published works to the website.'),
+      'description' => t('Use a <em>UAQS publication</em> to add published works to the website.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
