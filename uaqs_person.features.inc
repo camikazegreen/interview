@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ua_person.features.inc
+ * uaqs_person.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function ua_person_ctools_plugin_api($module = NULL, $api = NULL) {
+function uaqs_person_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "field_group" && $api == "field_group") {
     return array("version" => "1");
   }
@@ -19,14 +19,14 @@ function ua_person_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_views_api().
  */
-function ua_person_views_api($module = NULL, $api = NULL) {
+function uaqs_person_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
 /**
  * Implements hook_image_default_styles().
  */
-function ua_person_image_default_styles() {
+function uaqs_person_image_default_styles() {
   $styles = array();
 
   // Exported image style: ua_entry_detail.
@@ -65,10 +65,10 @@ function ua_person_image_default_styles() {
 /**
  * Implements hook_node_info().
  */
-function ua_person_node_info() {
+function uaqs_person_node_info() {
   $items = array(
-    'ua_person' => array(
-      'name' => t('UA Person'),
+    'uaqs_person' => array(
+      'name' => t('UAQS Person'),
       'base' => 'node_content',
       'description' => t('Use a <em>person</em> to add to a personnel directory.'),
       'has_title' => '1',

@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the UA Person feature.
+ * Code for the UAQS Person feature.
  */
 
-include_once 'ua_person.features.inc';
+include_once 'uaqs_person.features.inc';
