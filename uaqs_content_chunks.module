@@ -1,15 +1,15 @@
 <?php
 /**
  * @file
- * Code for the UA Content Chunks feature.
+ * Code for the UAQS Content Chunks feature.
  */
 
-include_once 'ua_content_chunks.features.inc';
-include_once 'ua_content_chunks.theme_field_overrides.inc';
-include_once 'ua_content_chunks.preprocess_entity_overrides.inc';
+include_once 'uaqs_content_chunks.features.inc';
+include_once 'uaqs_content_chunks.theme_field_overrides.inc';
+include_once 'uaqs_content_chunks.preprocess_entity_overrides.inc';
 
 /**
- * Override or insert variables into the UA Content Chunks templates.
+ * Override or insert variables into the UAQS Content Chunks templates.
  *
  * Based on the optional extra function
  * STARTERKIT_preprocess_node(&$variables, $hook) from template.php in the Zen
@@ -22,7 +22,7 @@ include_once 'ua_content_chunks.preprocess_entity_overrides.inc';
  * @param string $hook
  *   The hook name.
  */
-function ua_content_chunks_preprocess_entity(array &$variables, $hook) {
+function uaqs_content_chunks_preprocess_entity(array &$variables, $hook) {
   $entity_type = $variables['elements']['#entity_type'];
   if ($entity_type == 'paragraphs_item') {
     $bundle = $variables['elements']['#bundle'];
@@ -38,9 +38,9 @@ function ua_content_chunks_preprocess_entity(array &$variables, $hook) {
  *
  * Taken directly from https://www.drupal.org/node/715160
  * (Using template (.tpl.php) files in your own module).
-function ua_content_chunks_theme_registry_alter(&$theme_registry) {
+function uaqs_content_chunks_theme_registry_alter(&$theme_registry) {
   // Defined path to the current module.
-  $module_path = drupal_get_path('module', 'ua_content_chunks');
+  $module_path = drupal_get_path('module', 'uaqs_content_chunks');
   // Find all .tpl.php files in this module's folder recursively.
   $template_file_objects = drupal_find_theme_templates($theme_registry, '.tpl.php', $module_path);
   // Iterate through all found template file objects.
@@ -59,15 +59,15 @@ function ua_content_chunks_theme_registry_alter(&$theme_registry) {
 /**
  * Implements hook_theme().
  */
-function ua_content_chunks_theme() {
-  $ourname = 'ua_content_chunks';
+function uaqs_content_chunks_theme() {
+  $ourname = 'uaqs_content_chunks';
   $ourprefix = 'paragraphs_item__';
   $fileprefix = strtr($ourprefix, '_', '-');
   $content_chunk_types = array(
-    'ua_column_image',
-    'ua_file_download',
-    'ua_headed_text',
-    'ua_plain_text',
+    'uaqs_column_image',
+    'uaqs_file_download',
+    'uaqs_headed_text',
+    'uaqs_plain_text',
   );
   $theme_dir_path = drupal_get_path('module', $ourname) . '/templates';
   $theme = array();

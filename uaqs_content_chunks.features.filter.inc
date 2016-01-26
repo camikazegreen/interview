@@ -1,19 +1,19 @@
 <?php
 /**
  * @file
- * ua_content_chunks.features.filter.inc
+ * uaqs_content_chunks.features.filter.inc
  */
 
 /**
  * Implements hook_filter_default_formats().
  */
-function ua_content_chunks_filter_default_formats() {
+function uaqs_content_chunks_filter_default_formats() {
   $formats = array();
 
-  // Exported format: UA Phrasing Content.
-  $formats['ua_phrasing_content'] = array(
-    'format' => 'ua_phrasing_content',
-    'name' => 'UA Phrasing Content',
+  // Exported format: UAQS Phrasing Content.
+  $formats['uaqs_phrasing_content'] = array(
+    'format' => 'uaqs_phrasing_content',
+    'name' => 'UAQS Phrasing Content',
     'cache' => 1,
     'status' => 1,
     'weight' => 0,

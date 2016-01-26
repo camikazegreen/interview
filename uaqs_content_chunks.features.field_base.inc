@@ -1,22 +1,22 @@
 <?php
 /**
  * @file
- * ua_content_chunks.features.field_base.inc
+ * uaqs_content_chunks.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function ua_content_chunks_field_default_field_bases() {
+function uaqs_content_chunks_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_ua_caption_text'.
-  $field_bases['field_ua_caption_text'] = array(
+  // Exported field_base: 'field_uaqs_caption_text'.
+  $field_bases['field_uaqs_caption_text'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_caption_text',
+    'field_name' => 'field_uaqs_caption_text',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -29,13 +29,13 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_ua_download_description'.
-  $field_bases['field_ua_download_description'] = array(
+  // Exported field_base: 'field_uaqs_download_description'.
+  $field_bases['field_uaqs_download_description'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_download_description',
+    'field_name' => 'field_uaqs_download_description',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -48,13 +48,13 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_ua_download_file'.
-  $field_bases['field_ua_download_file'] = array(
+  // Exported field_base: 'field_uaqs_download_file'.
+  $field_bases['field_uaqs_download_file'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_download_file',
+    'field_name' => 'field_uaqs_download_file',
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -71,13 +71,13 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_ua_download_name'.
-  $field_bases['field_ua_download_name'] = array(
+  // Exported field_base: 'field_uaqs_download_name'.
+  $field_bases['field_uaqs_download_name'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_download_name',
+    'field_name' => 'field_uaqs_download_name',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -92,13 +92,13 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_download_preview_image'.
-  $field_bases['field_ua_download_preview_image'] = array(
+  // Exported field_base: 'field_uaqs_download_preview'.
+  $field_bases['field_uaqs_download_preview'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_download_preview_image',
+    'field_name' => 'field_uaqs_download_preview',
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -114,13 +114,13 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ua_flexible_page_subtitle'.
-  $field_bases['field_ua_flexible_page_subtitle'] = array(
+  // Exported field_base: 'field_uaqs_flexible_page_sub'.
+  $field_bases['field_uaqs_flexible_page_sub'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_flexible_page_subtitle',
+    'field_name' => 'field_uaqs_flexible_page_sub',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -135,13 +135,13 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_image_credit'.
-  $field_bases['field_ua_image_credit'] = array(
+  // Exported field_base: 'field_uaqs_image_credit'.
+  $field_bases['field_uaqs_image_credit'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_image_credit',
+    'field_name' => 'field_uaqs_image_credit',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -156,13 +156,13 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ua_image_wide'.
-  $field_bases['field_ua_image_wide'] = array(
+  // Exported field_base: 'field_uaqs_image_wide'.
+  $field_bases['field_uaqs_image_wide'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_image_wide',
+    'field_name' => 'field_uaqs_image_wide',
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -178,13 +178,13 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ua_main_content'.
-  $field_bases['field_ua_main_content'] = array(
+  // Exported field_base: 'field_uaqs_main_content'.
+  $field_bases['field_uaqs_main_content'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_main_content',
+    'field_name' => 'field_uaqs_main_content',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'paragraphs',
@@ -193,13 +193,13 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'paragraphs',
   );
 
-  // Exported field_base: 'field_ua_text_area'.
-  $field_bases['field_ua_text_area'] = array(
+  // Exported field_base: 'field_uaqs_text_area'.
+  $field_bases['field_uaqs_text_area'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_text_area',
+    'field_name' => 'field_uaqs_text_area',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -212,13 +212,13 @@ function ua_content_chunks_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_ua_text_heading'.
-  $field_bases['field_ua_text_heading'] = array(
+  // Exported field_base: 'field_uaqs_text_heading'.
+  $field_bases['field_uaqs_text_heading'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ua_text_heading',
+    'field_name' => 'field_uaqs_text_heading',
     'indexes' => array(
       'format' => array(
         0 => 'format',

@@ -1,7 +1,7 @@
 ; ------------------------------------------------------------------------------
-; UA Content Chunks Makefile
+; UAQS Content Chunks Makefile
 ;
-; Downloads the Paragraph module dependencies for UA Content Chunks components.
+; Downloads the Paragraph module dependencies for UAQS Content Chunks components.
 ; ------------------------------------------------------------------------------
 
 core = 7.x

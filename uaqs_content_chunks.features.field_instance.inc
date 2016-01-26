@@ -1,19 +1,19 @@
 <?php
 /**
  * @file
- * ua_content_chunks.features.field_instance.inc
+ * uaqs_content_chunks.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function ua_content_chunks_field_default_field_instances() {
+function uaqs_content_chunks_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'node-ua_flexible_page-field_ua_flexible_page_subtitle'.
-  $field_instances['node-ua_flexible_page-field_ua_flexible_page_subtitle'] = array(
-    'bundle' => 'ua_flexible_page',
+  // 'node-uaqs_flexible_page-field_uaqs_flexible_page_sub'.
+  $field_instances['node-uaqs_flexible_page-field_uaqs_flexible_page_sub'] = array(
+    'bundle' => 'uaqs_flexible_page',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -31,7 +31,7 @@ function ua_content_chunks_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'ua_featured_content' => array(
+      'uaqs_featured_content' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -39,7 +39,7 @@ function ua_content_chunks_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_flexible_page_subtitle',
+    'field_name' => 'field_uaqs_flexible_page_sub',
     'label' => 'Subtitle',
     'required' => 0,
     'settings' => array(
@@ -57,9 +57,9 @@ function ua_content_chunks_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_flexible_page-field_ua_main_content'.
-  $field_instances['node-ua_flexible_page-field_ua_main_content'] = array(
-    'bundle' => 'ua_flexible_page',
+  // Exported field_instance: 'node-uaqs_flexible_page-field_uaqs_main_content'.
+  $field_instances['node-uaqs_flexible_page-field_uaqs_main_content'] = array(
+    'bundle' => 'uaqs_flexible_page',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -79,7 +79,7 @@ function ua_content_chunks_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'ua_featured_content' => array(
+      'uaqs_featured_content' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -87,22 +87,22 @@ function ua_content_chunks_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_main_content',
+    'field_name' => 'field_uaqs_main_content',
     'label' => 'Main Content',
     'required' => 1,
     'settings' => array(
       'add_mode' => 'select',
       'allowed_bundles' => array(
-        'ua_column_image' => 'ua_column_image',
-        'ua_file_download' => 'ua_file_download',
-        'ua_headed_text' => 'ua_headed_text',
-        'ua_plain_text' => 'ua_plain_text',
+        'uaqs_column_image' => 'uaqs_column_image',
+        'uaqs_file_download' => 'uaqs_file_download',
+        'uaqs_headed_text' => 'uaqs_headed_text',
+        'uaqs_plain_text' => 'uaqs_plain_text',
       ),
       'bundle_weights' => array(
-        'ua_column_image' => 2,
-        'ua_file_download' => 7,
-        'ua_headed_text' => 8,
-        'ua_plain_text' => 3,
+        'uaqs_column_image' => 2,
+        'uaqs_file_download' => 7,
+        'uaqs_headed_text' => 8,
+        'uaqs_plain_text' => 3,
       ),
       'default_edit_mode' => 'open',
       'title' => 'Paragraph',
@@ -119,9 +119,9 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_column_image-field_ua_caption_text'.
-  $field_instances['paragraphs_item-ua_column_image-field_ua_caption_text'] = array(
-    'bundle' => 'ua_column_image',
+  // 'paragraphs_item-uaqs_column_image-field_uaqs_caption_text'.
+  $field_instances['paragraphs_item-uaqs_column_image-field_uaqs_caption_text'] = array(
+    'bundle' => 'uaqs_column_image',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -141,7 +141,7 @@ function ua_content_chunks_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_ua_caption_text',
+    'field_name' => 'field_uaqs_caption_text',
     'label' => 'Caption',
     'required' => 0,
     'settings' => array(
@@ -160,9 +160,9 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_column_image-field_ua_image_credit'.
-  $field_instances['paragraphs_item-ua_column_image-field_ua_image_credit'] = array(
-    'bundle' => 'ua_column_image',
+  // 'paragraphs_item-uaqs_column_image-field_uaqs_image_credit'.
+  $field_instances['paragraphs_item-uaqs_column_image-field_uaqs_image_credit'] = array(
+    'bundle' => 'uaqs_column_image',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -182,7 +182,7 @@ function ua_content_chunks_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_ua_image_credit',
+    'field_name' => 'field_uaqs_image_credit',
     'label' => 'Image Credit',
     'required' => 0,
     'settings' => array(
@@ -201,9 +201,9 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_column_image-field_ua_image_wide'.
-  $field_instances['paragraphs_item-ua_column_image-field_ua_image_wide'] = array(
-    'bundle' => 'ua_column_image',
+  // 'paragraphs_item-uaqs_column_image-field_uaqs_image_wide'.
+  $field_instances['paragraphs_item-uaqs_column_image-field_uaqs_image_wide'] = array(
+    'bundle' => 'uaqs_column_image',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -225,8 +225,8 @@ function ua_content_chunks_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_ua_image_wide',
-    'label' => 'UA Image Wide',
+    'field_name' => 'field_uaqs_image_wide',
+    'label' => 'UAQS Image Wide',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
@@ -252,9 +252,9 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_file_download-field_ua_download_description'.
-  $field_instances['paragraphs_item-ua_file_download-field_ua_download_description'] = array(
-    'bundle' => 'ua_file_download',
+  // 'paragraphs_item-uaqs_file_download-field_uaqs_download_description'.
+  $field_instances['paragraphs_item-uaqs_file_download-field_uaqs_download_description'] = array(
+    'bundle' => 'uaqs_file_download',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -274,8 +274,8 @@ function ua_content_chunks_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_ua_download_description',
-    'label' => 'UA Download Description',
+    'field_name' => 'field_uaqs_download_description',
+    'label' => 'UAQS Download Description',
     'required' => 0,
     'settings' => array(
       'text_processing' => 1,
@@ -293,9 +293,9 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_file_download-field_ua_download_file'.
-  $field_instances['paragraphs_item-ua_file_download-field_ua_download_file'] = array(
-    'bundle' => 'ua_file_download',
+  // 'paragraphs_item-uaqs_file_download-field_uaqs_download_file'.
+  $field_instances['paragraphs_item-uaqs_file_download-field_uaqs_download_file'] = array(
+    'bundle' => 'uaqs_file_download',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -314,8 +314,8 @@ function ua_content_chunks_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_ua_download_file',
-    'label' => 'UA Download File',
+    'field_name' => 'field_uaqs_download_file',
+    'label' => 'UAQS Download File',
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
@@ -336,9 +336,9 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_file_download-field_ua_download_name'.
-  $field_instances['paragraphs_item-ua_file_download-field_ua_download_name'] = array(
-    'bundle' => 'ua_file_download',
+  // 'paragraphs_item-uaqs_file_download-field_uaqs_download_name'.
+  $field_instances['paragraphs_item-uaqs_file_download-field_uaqs_download_name'] = array(
+    'bundle' => 'uaqs_file_download',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -358,8 +358,8 @@ function ua_content_chunks_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_ua_download_name',
-    'label' => 'UA Download Name',
+    'field_name' => 'field_uaqs_download_name',
+    'label' => 'UAQS Download Name',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -377,9 +377,9 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_file_download-field_ua_download_preview_image'.
-  $field_instances['paragraphs_item-ua_file_download-field_ua_download_preview_image'] = array(
-    'bundle' => 'ua_file_download',
+  // 'paragraphs_item-uaqs_file_download-field_uaqs_download_preview'.
+  $field_instances['paragraphs_item-uaqs_file_download-field_uaqs_download_preview'] = array(
+    'bundle' => 'uaqs_file_download',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -401,8 +401,8 @@ function ua_content_chunks_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_ua_download_preview_image',
-    'label' => 'UA Download Preview Image',
+    'field_name' => 'field_uaqs_download_preview',
+    'label' => 'UAQS Download Preview Image',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
@@ -428,9 +428,9 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_headed_text-field_ua_text_area'.
-  $field_instances['paragraphs_item-ua_headed_text-field_ua_text_area'] = array(
-    'bundle' => 'ua_headed_text',
+  // 'paragraphs_item-uaqs_headed_text-field_uaqs_text_area'.
+  $field_instances['paragraphs_item-uaqs_headed_text-field_uaqs_text_area'] = array(
+    'bundle' => 'uaqs_headed_text',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -450,8 +450,8 @@ function ua_content_chunks_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_ua_text_area',
-    'label' => 'UA Text Area',
+    'field_name' => 'field_uaqs_text_area',
+    'label' => 'UAQS Text Area',
     'required' => 0,
     'settings' => array(
       'text_processing' => 1,
@@ -469,9 +469,9 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_headed_text-field_ua_text_heading'.
-  $field_instances['paragraphs_item-ua_headed_text-field_ua_text_heading'] = array(
-    'bundle' => 'ua_headed_text',
+  // 'paragraphs_item-uaqs_headed_text-field_uaqs_text_heading'.
+  $field_instances['paragraphs_item-uaqs_headed_text-field_uaqs_text_heading'] = array(
+    'bundle' => 'uaqs_headed_text',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -491,8 +491,8 @@ function ua_content_chunks_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_ua_text_heading',
-    'label' => 'UA Text Heading',
+    'field_name' => 'field_uaqs_text_heading',
+    'label' => 'UAQS Text Heading',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -510,9 +510,9 @@ function ua_content_chunks_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-ua_plain_text-field_ua_text_area'.
-  $field_instances['paragraphs_item-ua_plain_text-field_ua_text_area'] = array(
-    'bundle' => 'ua_plain_text',
+  // 'paragraphs_item-uaqs_plain_text-field_uaqs_text_area'.
+  $field_instances['paragraphs_item-uaqs_plain_text-field_uaqs_text_area'] = array(
+    'bundle' => 'uaqs_plain_text',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -532,8 +532,8 @@ function ua_content_chunks_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_ua_text_area',
-    'label' => 'UA Text Area',
+    'field_name' => 'field_uaqs_text_area',
+    'label' => 'UAQS Text Area',
     'required' => 1,
     'settings' => array(
       'text_processing' => 1,
@@ -556,13 +556,13 @@ function ua_content_chunks_field_default_field_instances() {
   t('Image Credit');
   t('Main Content');
   t('Subtitle');
-  t('UA Download Description');
-  t('UA Download File');
-  t('UA Download Name');
-  t('UA Download Preview Image');
-  t('UA Image Wide');
-  t('UA Text Area');
-  t('UA Text Heading');
+  t('UAQS Download Description');
+  t('UAQS Download File');
+  t('UAQS Download Name');
+  t('UAQS Download Preview Image');
+  t('UAQS Image Wide');
+  t('UAQS Text Area');
+  t('UAQS Text Heading');
 
   return $field_instances;
 }

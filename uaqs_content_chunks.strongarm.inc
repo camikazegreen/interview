@@ -1,25 +1,25 @@
 <?php
 /**
  * @file
- * ua_content_chunks.strongarm.inc
+ * uaqs_content_chunks.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function ua_content_chunks_strongarm() {
+function uaqs_content_chunks_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__ua_flexible_page';
+  $strongarm->name = 'field_bundle_settings_node__uaqs_flexible_page';
   $strongarm->value = array(
     'view_modes' => array(
       'teaser' => array(
         'custom_settings' => TRUE,
       ),
-      'ua_featured_content' => array(
+      'uaqs_featured_content' => array(
         'custom_settings' => TRUE,
       ),
       'full' => array(
@@ -47,12 +47,12 @@ function ua_content_chunks_strongarm() {
       'display' => array(),
     ),
   );
-  $export['field_bundle_settings_node__ua_flexible_page'] = $strongarm;
+  $export['field_bundle_settings_node__uaqs_flexible_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_paragraphs_item__ua_column_image';
+  $strongarm->name = 'field_bundle_settings_paragraphs_item__uaqs_column_image';
   $strongarm->value = array(
     'view_modes' => array(
       'paragraphs_editor_preview' => array(
@@ -70,12 +70,12 @@ function ua_content_chunks_strongarm() {
       'display' => array(),
     ),
   );
-  $export['field_bundle_settings_paragraphs_item__ua_column_image'] = $strongarm;
+  $export['field_bundle_settings_paragraphs_item__uaqs_column_image'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_paragraphs_item__ua_file_download';
+  $strongarm->name = 'field_bundle_settings_paragraphs_item__uaqs_file_download';
   $strongarm->value = array(
     'view_modes' => array(
       'paragraphs_editor_preview' => array(
@@ -93,12 +93,12 @@ function ua_content_chunks_strongarm() {
       'display' => array(),
     ),
   );
-  $export['field_bundle_settings_paragraphs_item__ua_file_download'] = $strongarm;
+  $export['field_bundle_settings_paragraphs_item__uaqs_file_download'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_paragraphs_item__ua_headed_text';
+  $strongarm->name = 'field_bundle_settings_paragraphs_item__uaqs_headed_text';
   $strongarm->value = array(
     'view_modes' => array(
       'paragraphs_editor_preview' => array(
@@ -116,12 +116,12 @@ function ua_content_chunks_strongarm() {
       'display' => array(),
     ),
   );
-  $export['field_bundle_settings_paragraphs_item__ua_headed_text'] = $strongarm;
+  $export['field_bundle_settings_paragraphs_item__uaqs_headed_text'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_paragraphs_item__ua_plain_text';
+  $strongarm->name = 'field_bundle_settings_paragraphs_item__uaqs_plain_text';
   $strongarm->value = array(
     'view_modes' => array(
       'paragraphs_editor_preview' => array(
@@ -139,46 +139,46 @@ function ua_content_chunks_strongarm() {
       'display' => array(),
     ),
   );
-  $export['field_bundle_settings_paragraphs_item__ua_plain_text'] = $strongarm;
+  $export['field_bundle_settings_paragraphs_item__uaqs_plain_text'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_ua_flexible_page';
+  $strongarm->name = 'menu_options_uaqs_flexible_page';
   $strongarm->value = array(
     0 => 'main-menu',
   );
-  $export['menu_options_ua_flexible_page'] = $strongarm;
+  $export['menu_options_uaqs_flexible_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_ua_flexible_page';
+  $strongarm->name = 'menu_parent_uaqs_flexible_page';
   $strongarm->value = 'main-menu:0';
-  $export['menu_parent_ua_flexible_page'] = $strongarm;
+  $export['menu_parent_uaqs_flexible_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_ua_flexible_page';
+  $strongarm->name = 'node_options_uaqs_flexible_page';
   $strongarm->value = array(
     0 => 'status',
   );
-  $export['node_options_ua_flexible_page'] = $strongarm;
+  $export['node_options_uaqs_flexible_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_ua_flexible_page';
+  $strongarm->name = 'node_preview_uaqs_flexible_page';
   $strongarm->value = '1';
-  $export['node_preview_ua_flexible_page'] = $strongarm;
+  $export['node_preview_uaqs_flexible_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_ua_flexible_page';
+  $strongarm->name = 'node_submitted_uaqs_flexible_page';
   $strongarm->value = 0;
-  $export['node_submitted_ua_flexible_page'] = $strongarm;
+  $export['node_submitted_uaqs_flexible_page'] = $strongarm;
 
   return $export;
 }

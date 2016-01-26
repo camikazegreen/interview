@@ -6,7 +6,7 @@
  * The default rendering of field labels and values places them within nested
  * sets of div elements, which add to the overall complexity of the markup,
  * and make theming more difficult. The overrides for the Field API's default
- * theme_field() function help the UA Zen theme render fields appropriately.
+ * theme_field() function help the UAQS Zen theme render fields appropriately.
  */
 
 /**
@@ -32,7 +32,7 @@ function render_unadorned_values(array $variables) {
 }
 
 /**
- * Returns HTML for a ua_caption_text field.
+ * Returns HTML for a uaqs_caption_text field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -40,12 +40,12 @@ function render_unadorned_values(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_caption_text(array $variables) {
+function ua_zen_field__field_uaqs_caption_text(array $variables) {
   return render_unadorned_values($variables);
 }
 
 /**
- * Returns HTML for a ua_image_credit field.
+ * Returns HTML for a uaqs_image_credit field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -53,12 +53,12 @@ function ua_zen_field__field_ua_caption_text(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_image_credit(array $variables) {
+function ua_zen_field__field_uaqs_image_credit(array $variables) {
   return render_unadorned_values($variables);
 }
 
 /**
- * Returns HTML for a ua_image_wide field.
+ * Returns HTML for a uaqs_image_wide field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -66,12 +66,12 @@ function ua_zen_field__field_ua_image_credit(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_image_wide(array $variables) {
+function ua_zen_field__field_uaqs_image_wide(array $variables) {
   return render_unadorned_values($variables);
 }
 
 /**
- * Returns HTML for a ua_download_description field.
+ * Returns HTML for a uaqs_download_description field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -79,12 +79,12 @@ function ua_zen_field__field_ua_image_wide(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_download_description(array $variables) {
+function ua_zen_field__field_uaqs_download_description(array $variables) {
   return render_unadorned_values($variables);
 }
 
 /**
- * Returns HTML for a ua_download_file field.
+ * Returns HTML for a uaqs_download_file field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -92,12 +92,12 @@ function ua_zen_field__field_ua_download_description(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_download_file(array $variables) {
+function ua_zen_field__field_uaqs_download_file(array $variables) {
   return render_unadorned_values($variables);
 }
 
 /**
- * Returns HTML for a ua_download_name field.
+ * Returns HTML for a uaqs_download_name field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -105,12 +105,12 @@ function ua_zen_field__field_ua_download_file(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_download_name(array $variables) {
+function ua_zen_field__field_uaqs_download_name(array $variables) {
   return render_unadorned_values($variables);
 }
 
 /**
- * Returns HTML for a ua_download_preview_image field.
+ * Returns HTML for a uaqs_download_preview field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -118,12 +118,12 @@ function ua_zen_field__field_ua_download_name(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_download_preview_image(array $variables) {
+function ua_zen_field__field_uaqs_download_preview(array $variables) {
   return render_unadorned_values($variables);
 }
 
 /**
- * Returns HTML for a ua_text_heading field.
+ * Returns HTML for a uaqs_text_heading field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -131,12 +131,12 @@ function ua_zen_field__field_ua_download_preview_image(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_text_heading(array $variables) {
+function ua_zen_field__field_uaqs_text_heading(array $variables) {
   return render_unadorned_values($variables);
 }
 
 /**
- * Returns HTML for a ua_text_area field.
+ * Returns HTML for a uaqs_text_area field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -144,12 +144,12 @@ function ua_zen_field__field_ua_text_heading(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_text_area(array $variables) {
+function ua_zen_field__field_uaqs_text_area(array $variables) {
   return render_unadorned_values($variables);
 }
 
 /**
- * Returns HTML for a ua_main_content field.
+ * Returns HTML for a uaqs_main_content field.
  *
  * Note that this is generally the host node's field for all the Paragraphs.
  *
@@ -159,6 +159,6 @@ function ua_zen_field__field_ua_text_area(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_ua_main_content(array $variables) {
+function ua_zen_field__field_uaqs_main_content(array $variables) {
   return render_unadorned_values($variables);
 }
