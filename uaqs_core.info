@@ -1,5 +1,5 @@
-name = UA Core
-description = Provides miscellaneous fields, blocks, and settings common to UA components/features.
+name = UAQS Core
+description = Provides miscellaneous fields, blocks, and settings common to UAQS components/features.
 core = 7.x
 package = The University of Arizona
 dependencies[] = ctools

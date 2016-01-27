@@ -20,12 +20,16 @@ When this module is used as part of a Drupal distribution (such as [UA Quickstar
 - [Views](https://www.drupal.org/project/views)
 
 #### Common Contrib Field Modules
-- [Automatic Nodetitles](https://www.drupal.org/project/auto_nodetitle)
+- [Automatic entity label](https://www.drupal.org/project/auto_entitylabel)
 - [Date](https://www.drupal.org/project/date)
 - [Email Field](https://www.drupal.org/project/email)
 - [Entity reference](https://www.drupal.org/project/entityreference)
 - [Field collection](https://www.drupal.org/project/field_collection)
+- [Title](https://www.drupal.org/project/title)
+- [Field multiple limit](https://www.drupal.org/project/field_multiple_limit)
+- [Field formatter settings](https://www.drupal.org/project/field_formatter_settings)
 - [Field Group](https://www.drupal.org/project/field_group)
+- [Entity view mode](https://www.drupal.org/project/entity_view_mode)
 - [Link](https://www.drupal.org/project/link)
 
 #### Features-related Contrib Modules

@@ -1,5 +1,5 @@
 ; ------------------------------------------------------------------------------
-; UA Core Makefile
+; UAQS Core Makefile
 ;
 ; This makefile should stay as bare-bones as possilbe.  In general, individual
 ; modules/features should include their own makefiles to package their own
@@ -15,7 +15,7 @@ api = 2
 defaults[projects][subdir] = contrib
 
 ; ------------------------------------------------------------------------------
-; Contrib dependencies common to many UA features/sites
+; Contrib dependencies common to many UAQS features/sites
 ; ------------------------------------------------------------------------------
 
 projects[ctools][version] = 1.9
@@ -41,7 +41,7 @@ projects[views][version] = 3.13
 ; Commonly used field modules
 ; ------------------------------------------------------------------------------
 
-projects[auto_nodetitle][version] = 1.0
+projects[auto_entitylabel][version] = 1.3
 
 projects[date][version] = 2.9
 
@@ -49,10 +49,18 @@ projects[email][version] = 1.3
 
 projects[entityreference][version] = 1.1
 
+projects[entity_view_mode][version] = 1.0-rc1
+
 projects[field_collection][version] = 1.0-beta10
 projects[field_collection][patch][2599248] = http://drupal.org/files/issues/field-collection-2599248-2.patch
 
 projects[field_group][version] = 1.5
+
+projects[title][version] = 1.0-alpha7
+
+projects[field_formatter_settings][version] = 1.1
+
+projects[field_multiple_limit][version] = 1.0-alpha4
 
 projects[link][version] = 1.3
 

@@ -1,15 +1,15 @@
 <?php
 /**
  * @file
- * ua_core.features.defaultconfig.inc
+ * uaqs_core.features.defaultconfig.inc
  */
 
 /**
  * Implements hook_defaultconfig_features().
  */
-function ua_core_defaultconfig_features() {
+function uaqs_core_defaultconfig_features() {
   return array(
-    'ua_core' => array(
+    'uaqs_core' => array(
       'strongarm' => 'strongarm',
     ),
   );
@@ -18,7 +18,7 @@ function ua_core_defaultconfig_features() {
 /**
  * Implements hook_defaultconfig_strongarm().
  */
-function ua_core_defaultconfig_strongarm() {
+function uaqs_core_defaultconfig_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
