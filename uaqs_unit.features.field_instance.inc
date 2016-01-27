@@ -1,26 +1,35 @@
 <?php
 /**
  * @file
- * ua_unit.features.field_instance.inc
+ * uaqs_unit.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function ua_unit_field_default_field_instances() {
+function uaqs_unit_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ua_unit-field_ua_unit_contact'.
-  $field_instances['node-ua_unit-field_ua_unit_contact'] = array(
-    'bundle' => 'ua_unit',
+  // Exported field_instance: 'node-uaqs_unit-field_uaqs_contact'.
+  $field_instances['node-uaqs_unit-field_uaqs_contact'] = array(
+    'bundle' => 'uaqs_unit',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Person to contact about this unit',
     'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'text_default',
         'weight' => 1,
       ),
@@ -32,7 +41,7 @@ function ua_unit_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_unit_contact',
+    'field_name' => 'field_uaqs_contact',
     'label' => 'General Contact',
     'required' => 0,
     'settings' => array(
@@ -50,17 +59,26 @@ function ua_unit_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_unit-field_ua_unit_focus_areas'.
-  $field_instances['node-ua_unit-field_ua_unit_focus_areas'] = array(
-    'bundle' => 'ua_unit',
+  // Exported field_instance: 'node-uaqs_unit-field_uaqs_focus_areas'.
+  $field_instances['node-uaqs_unit-field_uaqs_focus_areas'] = array(
+    'bundle' => 'uaqs_unit',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'taxonomy',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 3,
       ),
@@ -72,7 +90,7 @@ function ua_unit_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_unit_focus_areas',
+    'field_name' => 'field_uaqs_focus_areas',
     'label' => 'Focus Areas',
     'required' => 0,
     'settings' => array(
@@ -90,17 +108,26 @@ function ua_unit_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_unit-field_ua_unit_leadership_info'.
-  $field_instances['node-ua_unit-field_ua_unit_leadership_info'] = array(
-    'bundle' => 'ua_unit',
+  // Exported field_instance: 'node-uaqs_unit-field_uaqs_leadership_info'.
+  $field_instances['node-uaqs_unit-field_uaqs_leadership_info'] = array(
+    'bundle' => 'uaqs_unit',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'text_default',
         'weight' => 0,
       ),
@@ -112,7 +139,7 @@ function ua_unit_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_unit_leadership_info',
+    'field_name' => 'field_uaqs_leadership_info',
     'label' => 'Leadership Information',
     'required' => 0,
     'settings' => array(
@@ -132,9 +159,9 @@ function ua_unit_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ua_unit-field_ua_unit_location'.
-  $field_instances['node-ua_unit-field_ua_unit_location'] = array(
-    'bundle' => 'ua_unit',
+  // Exported field_instance: 'node-uaqs_unit-field_uaqs_location'.
+  $field_instances['node-uaqs_unit-field_uaqs_location'] = array(
+    'bundle' => 'uaqs_unit',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Specify a URL if there is an online map for the location.<br />
@@ -142,10 +169,19 @@ If there is no map, simply fill in the location name or address in the title fie
 <strong>Campus Map: </strong> http://map.arizona.edu<br />
 <strong>Google Maps: </strong> http://maps.google.com',
     'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'default' => array(
         'label' => 'above',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'link_default',
         'weight' => 2,
       ),
@@ -157,7 +193,7 @@ If there is no map, simply fill in the location name or address in the title fie
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ua_unit_location',
+    'field_name' => 'field_uaqs_location',
     'label' => 'Location',
     'required' => 0,
     'settings' => array(
@@ -192,6 +228,54 @@ If there is no map, simply fill in the location name or address in the title fie
     ),
   );
 
+  // Exported field_instance: 'node-uaqs_unit-title_field'.
+  $field_instances['node-uaqs_unit-title_field'] = array(
+    'bundle' => 'uaqs_unit',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => TRUE,
+    'settings' => array(
+      'hide_label' => array(
+        'entity' => 'entity',
+        'page' => 'page',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Focus Areas');
@@ -203,6 +287,7 @@ If there is no map, simply fill in the location name or address in the title fie
 If there is no map, simply fill in the location name or address in the title field.<br />
 <strong>Campus Map: </strong> http://map.arizona.edu<br />
 <strong>Google Maps: </strong> http://maps.google.com');
+  t('Title');
 
   return $field_instances;
 }

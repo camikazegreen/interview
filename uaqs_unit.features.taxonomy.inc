@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ua_unit.features.taxonomy.inc
+ * uaqs_unit.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function ua_unit_taxonomy_default_vocabularies() {
+function uaqs_unit_taxonomy_default_vocabularies() {
   return array(
     'tags' => array(
       'name' => 'Focus Areas',
