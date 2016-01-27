@@ -158,8 +158,8 @@ function uaqs_publication_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-uaqs_pub-field_uaqs_pub_research_categories'.
-  $field_instances['node-uaqs_pub-field_uaqs_pub_research_categories'] = array(
+  // Exported field_instance: 'node-uaqs_pub-field_uaqs_pub_research_areas'.
+  $field_instances['node-uaqs_pub-field_uaqs_pub_research_areas'] = array(
     'bundle' => 'uaqs_pub',
     'default_value' => NULL,
     'deleted' => 0,
@@ -183,7 +183,7 @@ function uaqs_publication_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_uaqs_pub_research_categories',
+    'field_name' => 'field_uaqs_pub_research_areas',
     'label' => 'Research Categories',
     'required' => 0,
     'settings' => array(
