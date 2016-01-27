@@ -6,7 +6,7 @@
  * the README.txt next to this file.
  */
 (function ($, Drupal, window, document, undefined) {
-  Drupal.behaviors.ua_featured_content_behavior = {
+  Drupal.behaviors.uaqs_featured_content_behavior = {
     attach: function(context, settings) {
       $('.no-widows').each(function(i,d){
         $(d).html($(d).text().replace(/\s(?=[^\s]*$)/g, "&nbsp;"))

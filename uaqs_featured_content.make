@@ -1,5 +1,5 @@
 ; ------------------------------------------------------------------------------
-; UA Featured Content Makefile
+; UAQS Featured Content Makefile
 ;
 ; Downloads contrib module and library dependencies for UA Featured Content
 ; component.

@@ -1,4 +1,4 @@
-# UA Featured Content* (Carousel) Drupal Feature Module
+# UAQS Featured Content* (Carousel) Drupal Feature Module
 
 (*) Name subject to change.
 

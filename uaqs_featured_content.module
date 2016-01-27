@@ -4,14 +4,14 @@
  * Code for the UA Featured Content feature.
  */
 
-include_once 'ua_featured_content.features.inc';
+include_once 'uaqs_featured_content.features.inc';
 
 /**
  * Implements hook_entity_info_alter().
  */
-function ua_featured_content_entity_info_alter(&$entity_info) {
-  $entity_info['node']['view modes']['ua_featured_content'] = array(
-    'label' => t('ua_featured_content_display'),
+function uaqs_featured_content_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['uaqs_featured_content'] = array(
+    'label' => t('UAQS Featured Content'),
     'custom settings' => FALSE,
   );
 }
@@ -19,46 +19,49 @@ function ua_featured_content_entity_info_alter(&$entity_info) {
 /**
  * Implements hook_preprocess_node().
  */
-function ua_featured_content_preprocess_node(&$vars) {
-  drupal_add_js(drupal_get_path('module', 'ua_featured_content') . '/js/modernizr.custom.7860.js');
-  drupal_add_js(drupal_get_path('module', 'ua_featured_content') . '/js/ua_featured_content.js');
+function uaqs_featured_content_preprocess_node(&$vars) {
+  drupal_add_js(drupal_get_path('module', 'uaqs_featured_content') . '/js/modernizr.custom.7860.js');
+  drupal_add_js(drupal_get_path('module', 'uaqs_featured_content') . '/js/uaqs_featured_content.js');
 
   $wrapper = entity_metadata_wrapper('node', $vars['node']);
-  $nid = $wrapper->getIdentifier();
-  $path_to_node = url("node/$nid");
-  $has_cta = FALSE;
-  $vars['ua_featured_content']['image_path'] = '';
+   if ($wrapper->getBundle() == 'uaqs_carousel_item') {
+    $nid = $wrapper->getIdentifier();
+    $path_to_node = url("node/$nid");
+    $has_cta = FALSE;
+    $vars['uaqs_featured_content']['image_path'] = '';
+    if (field_info_instance('node', 'field_uaqs_photo', $wrapper->getBundle()) && isset($wrapper->field_uaqs_photo[0])) {
+      $photos = $wrapper->field_uaqs_photo;
+      $photo = $photos[0]->file->value();
+      $slide_image_uri = $photo->uri;
+      $slide_styled_path = image_style_url('flexslider_full', $slide_image_uri);
+      $vars['uaqs_featured_content']['image_path'] = $slide_styled_path;
+    }
 
-  if (field_info_instance('node', 'field_slide_image', $wrapper->getBundle())) {
-    $slide_image_uri = $wrapper->field_slide_image->file->value()->uri;
-    $slide_styled_path = image_style_url('flexslider_full', $slide_image_uri);
-    $vars['ua_featured_content']['image_path'] = $slide_styled_path;
-  }
-
-  if (field_info_instance('node', 'field_call_to_action', $wrapper->getBundle())) {
-    $has_cta = $wrapper->field_call_to_action->value();
-    if (isset($has_cta)) {
-      $vars['ua_featured_content']['path'] = $wrapper->field_call_to_action->url->value();
+    if (field_info_instance('node', 'field_uaqs_link', $wrapper->getBundle())) {
+      $has_cta = $wrapper->field_uaqs_link->value();
+      if (isset($has_cta)) {
+        $vars['uaqs_featured_content']['path'] = $wrapper->field_uaqs_link->url->value();
+      }
+      else {
+        $vars['uaqs_featured_content']['path'] = $path_to_node;
+      }
     }
     else {
-      $vars['ua_featured_content']['path'] = $path_to_node;
+      $vars['uaqs_featured_content']['path'] = $path_to_node;
     }
-  }
-  else {
-    $vars['ua_featured_content']['path'] = $path_to_node;
-  }
 
-  if ($vars['view_mode'] == 'ua_featured_content') {
-    $vars['theme_hook_suggestions'][] = 'node__ua_featured_content';
-  }
+    if ($vars['view_mode'] == 'uaqs_featured_content') {
+      $vars['theme_hook_suggestions'][] = 'node__uaqs_featured_content';
+    }
+   }
 }
 
 /**
  * Implements hook_theme_registry_alter().
  */
-function ua_featured_content_theme_registry_alter(&$theme_registry) {
+function uaqs_featured_content_theme_registry_alter(&$theme_registry) {
   // Find all .tpl.php files in this module's folder recursively.
-  $module_path = drupal_get_path('module', 'ua_featured_content');
+  $module_path = drupal_get_path('module', 'uaqs_featured_content');
   $template_file_objects = drupal_find_theme_templates($theme_registry, '.tpl.php', $module_path);
 
   // Iterate through all found template file objects.

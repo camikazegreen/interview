@@ -1,17 +1,17 @@
 <?php
 /**
  * @file
- * ua_featured_content.views_default.inc
+ * uaqs_featured_content.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function ua_featured_content_views_default_views() {
+function uaqs_featured_content_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'ua_hero_carousel';
+  $view->name = 'uaqs_hero_carousel';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -32,10 +32,10 @@ function ua_featured_content_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'flexslider';
-  $handler->display->display_options['style_options']['optionset'] = 'ua_hero_carousel';
+  $handler->display->display_options['style_options']['optionset'] = 'uaqs_hero_carousel';
   $handler->display->display_options['style_options']['id'] = 'content_featured_slides';
   $handler->display->display_options['row_plugin'] = 'entity';
-  $handler->display->display_options['row_options']['view_mode'] = 'ua_featured_content';
+  $handler->display->display_options['row_options']['view_mode'] = 'uaqs_featured_content';
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -54,7 +54,7 @@ function ua_featured_content_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'ua_carousel_item' => 'ua_carousel_item',
+    'uaqs_carousel_item' => 'uaqs_carousel_item',
   );
 
   /* Display: Hero Block */
@@ -78,7 +78,7 @@ function ua_featured_content_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'flexslider';
-  $handler->display->display_options['style_options']['optionset'] = 'ua_hero_carousel_nav';
+  $handler->display->display_options['style_options']['optionset'] = 'uaqs_hero_carousel_nav';
   $handler->display->display_options['style_options']['id'] = 'content_featured_nav';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
@@ -111,14 +111,14 @@ function ua_featured_content_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'ua_carousel_item' => 'ua_carousel_item',
+    'uaqs_carousel_item' => 'uaqs_carousel_item',
   );
   $handler->display->display_options['displays'] = array(
     'hero_block' => 'hero_block',
     'default' => 0,
   );
   $handler->display->display_options['attachment_position'] = 'after';
-  $export['ua_hero_carousel'] = $view;
+  $export['uaqs_hero_carousel'] = $view;
 
   return $export;
 }

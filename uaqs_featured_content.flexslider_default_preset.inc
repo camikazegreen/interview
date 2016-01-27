@@ -1,20 +1,20 @@
 <?php
 /**
  * @file
- * ua_featured_content.flexslider_default_preset.inc
+ * uaqs_featured_content.flexslider_default_preset.inc
  */
 
 /**
  * Implements hook_flexslider_default_presets().
  */
-function ua_featured_content_flexslider_default_presets() {
+function uaqs_featured_content_flexslider_default_presets() {
   $export = array();
 
   $preset = new stdClass();
   $preset->disabled = FALSE; /* Edit this to true to make a default preset disabled initially */
   $preset->api_version = 1;
-  $preset->name = 'ua_hero_carousel';
-  $preset->title = 'UA Hero Carousel';
+  $preset->name = 'uaqs_hero_carousel';
+  $preset->title = 'UAQS Hero Carousel';
   $preset->theme = 'classic';
   $preset->options = array(
     'namespace' => 'flex-',
@@ -58,13 +58,13 @@ function ua_featured_content_flexslider_default_presets() {
     'pauseOnHover' => 1,
     'manualControls' => '',
   );
-  $export['ua_hero_carousel'] = $preset;
+  $export['uaqs_hero_carousel'] = $preset;
 
   $preset = new stdClass();
   $preset->disabled = FALSE; /* Edit this to true to make a default preset disabled initially */
   $preset->api_version = 1;
-  $preset->name = 'ua_hero_carousel_nav';
-  $preset->title = 'UA Hero Carousel Navigation';
+  $preset->name = 'uaqs_hero_carousel_nav';
+  $preset->title = 'UAQS Hero Carousel Navigation';
   $preset->theme = 'classic';
   $preset->options = array(
     'namespace' => '',
@@ -108,7 +108,7 @@ function ua_featured_content_flexslider_default_presets() {
     'pauseOnHover' => 0,
     'manualControls' => '',
   );
-  $export['ua_hero_carousel_nav'] = $preset;
+  $export['uaqs_hero_carousel_nav'] = $preset;
 
   return $export;
 }

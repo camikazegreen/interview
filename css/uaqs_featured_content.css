@@ -20,16 +20,16 @@
   font-size: 1.5rem;
   line-height: 1.2;
 }
-.mask .field-name-field-short-summary{
+.mask .field-name-field-summary-short{
   font-weight: normal;
   font-style: normal;
 }
-.mask .field-name-field-call-to-action {
+.mask .field-name-field-uaqs-link {
   font-weight: bold;
   font-size: 1.4rem;
   text-transform:uppercase;
 }
-.mask .field-name-field-call-to-action:after {
+.mask .field-name-field-uaqs-link:after {
   content: " »";
   font-weight: bold;
   font-size: 1.6rem;

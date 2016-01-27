@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ua_featured_content.features.inc
+ * uaqs_featured_content.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function ua_featured_content_ctools_plugin_api($module = NULL, $api = NULL) {
+function uaqs_featured_content_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "flexslider" && $api == "flexslider_default_preset") {
     return array("version" => "1");
   }
@@ -19,17 +19,17 @@ function ua_featured_content_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_views_api().
  */
-function ua_featured_content_views_api($module = NULL, $api = NULL) {
+function uaqs_featured_content_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
 /**
  * Implements hook_node_info().
  */
-function ua_featured_content_node_info() {
+function uaqs_featured_content_node_info() {
   $items = array(
-    'ua_carousel_item' => array(
-      'name' => t('Carousel Item'),
+    'uaqs_carousel_item' => array(
+      'name' => t('UAQS Carousel Item'),
       'base' => 'node_content',
       'description' => t('Use <em>carousel items</em> to prominently feature links to content on the front page.'),
       'has_title' => '1',
