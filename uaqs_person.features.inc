@@ -29,8 +29,8 @@ function uaqs_person_views_api($module = NULL, $api = NULL) {
 function uaqs_person_image_default_styles() {
   $styles = array();
 
-  // Exported image style: ua_entry_detail.
-  $styles['ua_entry_detail'] = array(
+  // Exported image style: uaqs_entry_detail.
+  $styles['uaqs_entry_detail'] = array(
     'label' => 'Entry detail (360x360)',
     'effects' => array(
       1 => array(
@@ -44,8 +44,8 @@ function uaqs_person_image_default_styles() {
     ),
   );
 
-  // Exported image style: ua_medium_square.
-  $styles['ua_medium_square'] = array(
+  // Exported image style: uaqs_medium_square.
+  $styles['uaqs_medium_square'] = array(
     'label' => 'Medium Square (220x220)',
     'effects' => array(
       2 => array(

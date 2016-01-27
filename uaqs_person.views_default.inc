@@ -45,7 +45,7 @@ function uaqs_person_views_default_views() {
   $handler->display->display_options['fields']['field_uaqs_photo']['element_wrapper_class'] = 'uaqs-person-photo';
   $handler->display->display_options['fields']['field_uaqs_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_uaqs_photo']['settings'] = array(
-    'image_style' => 'ua_medium_square',
+    'image_style' => 'uaqs_medium_square',
     'image_link' => 'content',
   );
   /* Field: Content: Full Name (node title) */
@@ -145,7 +145,7 @@ function uaqs_person_views_default_views() {
   $handler = $view->new_display('page', 'Row Page', 'page_1');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = '.ua-person-row row';
+  $handler->display->display_options['style_options']['row_class'] = '.uaqs-person-row row';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -163,7 +163,7 @@ function uaqs_person_views_default_views() {
   $handler->display->display_options['fields']['field_uaqs_photo']['element_wrapper_class'] = 'uaqs-person-photo col-sm-3';
   $handler->display->display_options['fields']['field_uaqs_photo']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_uaqs_photo']['settings'] = array(
-    'image_style' => 'ua_medium_square',
+    'image_style' => 'uaqs_medium_square',
     'image_link' => 'content',
   );
   /* Field: Content: Full Name (node title) */

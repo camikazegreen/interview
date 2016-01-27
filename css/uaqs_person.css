@@ -1,41 +1,41 @@
 /** View Display **/
-.ua-person-row {
+.uaqs-person-row {
     margin: 0 0 2rem;
     padding-bottom: 16px;
     padding-bottom: 1rem;
     border-bottom: 2px solid #EEF1F1;
 }
 
-.ua-person-row .ua-person-name {
+.uaqs-person-row .uaqs-person-name {
     font-size: 1.4rem;
 }
 
-.ua-person-row .ua-person-job-titles {
+.uaqs-person-row .uaqs-person-job-titles {
     margin: 0 0 1rem;
 }
 
-.ua-person-row .ua-person-job-titles ul,
-.ua-person-row .ua-person-phone ul {
+.uaqs-person-row .uaqs-person-job-titles ul,
+.uaqs-person-row .uaqs-person-phone ul {
     padding: 0;
     margin: 0;
 }
 
-.ua-person-row .ua-person-job-titles ul li,
-.ua-person-row .ua-person-phone ul li {
+.uaqs-person-row .uaqs-person-job-titles ul li,
+.uaqs-person-row .uaqs-person-phone ul li {
     list-style-type: none;
 }
 
-.ua-person-list .ua-person-row .ua-person-col {
+.uaqs-person-list .uaqs-person-row .uaqs-person-col {
     margin-top: 16px;
     margin-top: 1rem;
 }
 
-.ua-person-list .ua-person-row .ua-person-col h3 {
+.uaqs-person-list .uaqs-person-row .uaqs-person-col h3 {
     margin-top: 0;
 }
 
 @media screen and (min-width: 50em) {
-    .ua-person-grid .ua-person-row {
+    .uaqs-person-grid .uaqs-person-row {
         display: inline-block;
         vertical-align: top;
         width: 49%;
@@ -45,11 +45,11 @@
 }
 
 @media screen and (min-width: 75em) {
-    .ua-person-grid .ua-person-row:nth-child(3n+2) {
+    .uaqs-person-grid .uaqs-person-row:nth-child(3n+2) {
         margin-right: 4%;
         margin-left: 4%;
     }
-    .ua-person-grid .ua-person-row {
+    .uaqs-person-grid .uaqs-person-row {
         display: inline-block;
         vertical-align: top;
         width: 30%;
@@ -57,7 +57,7 @@
 }
 
 /** Node Display **/
-.node-ua-person .field-name-field-ua-person-titles {
+.node-uaqs-person .field-name-field-uaqs-person-titles {
     color: #49595e;
     font-size: 1.4rem;
     font-weight: 300;
@@ -67,11 +67,11 @@
     border-top: 2px solid #EEF1F1;;
 }
 
-.node-ua-person .group-ua-person-contact-area {
+.node-uaqs-person .group-uaqs-person-contact-area {
     margin: 0 0 2rem;
 }
 
-.node-ua-person .group-ua-person-contact-area .field-name-field-ua-person-photo {
+.node-uaqs-person .group-uaqs-person-contact-area .field-name-field-uaqs-person-photo {
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #B6BEC1;
     margin: 0 auto 1rem;
@@ -79,7 +79,7 @@
 }
 
 @media screen and (min-width: 50em) {
-    .node-ua-person .group-ua-person-contact-area .field-name-field-ua-person-photo {
+    .node-uaqs-person .group-uaqs-person-contact-area .field-name-field-uaqs-person-photo {
         padding-bottom: 0;
         border-bottom: 0 none;
         margin: 0 1.5rem 0 0;

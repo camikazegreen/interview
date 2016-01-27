@@ -1,10 +1,10 @@
-# UA Person #
+# UAQS Person #
 
 ## Overview ##
-This repository contains a module made with [Features](https://www.drupal.org/project/features) that provides a UA Person content type and a simple view display for a profile directory.
+This repository contains a module made with [Features](https://www.drupal.org/project/features) that provides a UAQS Person content type and a simple view display for a profile directory.
 
 ## Requirements ##
-- In order to use this feature, you must first download and enable the [Features](https://www.drupal.org/project/features) module. 
+- In order to use this feature, you must first download and enable the [Features](https://www.drupal.org/project/features) module.
 - Place the feature from this repository into your site's module folder and enable it as you would any other module.
 - Dependencies:
   - Drupal Core modules
@@ -29,7 +29,7 @@ drush en auto_nodetitle email entity entity_token field_group token views views_
 ## Automatically Generated Titles ##
 
 ### Why: ###
-Drupal does not allow you to simply not fill in a node's title—it's necessary, but in a person content type it doesn't make much sense to have it. The Automatic Nodetitles module makes it possible to hide a node's title and populate it with the first and last name fields. Instead of having a content manager put in the person's full name (in the title field) and then redundantly fill in the first and last name, they only have to put in the person's first and last name. This also makes it easier for developers to make views of people which can be sorted by last or first name, or make URLs based on part of a name (e.g. mysite.com/people/macaulay).
+Drupal does not allow you to simply not fill in a node's title-it's necessary, but in a person content type it doesn't make much sense to have it. The Automatic Nodetitles module makes it possible to hide a node's title and populate it with the first and last name fields. Instead of having a content manager put in the person's full name (in the title field) and then redundantly fill in the first and last name, they only have to put in the person's first and last name. This also makes it easier for developers to make views of people which can be sorted by last or first name, or make URLs based on part of a name (e.g. mysite.com/people/macaulay).
 
 ### Tokens: ###
 Entity Tokens is necessary because it provides tokens for generating the full name field. These tokens (with dashes, not underscores) translate apostrophes or any other type of special character (e.g. generates Taters O'Brian instead of Taters O&#039;Brian).
@@ -59,16 +59,16 @@ The view display for the persons content type has classes added to it through th
 
 Styling classes are as follows:
 
-- **Grid View class:** *ua-people-grid* (the word "grid" is used because this display will show persons 3-across on large screens, 2-across on medium screens and 1-across on smallest screens)
-- **List View class:** *ua-people-list* (the word "list" is used because this display is stacked in rows)
-- **Row class:** *ua-people-row* and *row* ("row" class is added for bootstrap layout purposes)
+- **Grid View class:** *uaqs-people-grid* (the word "grid" is used because this display will show persons 3-across on large screens, 2-across on medium screens and 1-across on smallest screens)
+- **List View class:** *uaqs-people-list* (the word "list" is used because this display is stacked in rows)
+- **Row class:** *uaqs-people-row* and *row* ("row" class is added for bootstrap layout purposes)
 - **Field Classes:**
-    - Photo  *ua-person-photo*
-    - Full name  *ua-person-name*
-    - Job title(s)  *ua-person-job-titles*
-    - Email  *ua-person-email*
-    - Phone number(s)  *ua-person-phone*
+    - Photo  *uaqs-person-photo*
+    - Full name  *uaqs-person-name*
+    - Job title(s)  *uaqs-person-job-titles*
+    - Email  *uaqs-person-email*
+    - Phone number(s)  *uaqs-person-phone*
 - **Note about the list view fields:** The list view has fields but all fields except image are excluded from display and put in global text fields for layout purposes. The list has three columns for its layout and corresponding classes for column layout:
-    - Photo  *ua-person-photo col-sm-3*
-    - Name and job titles  *ua-person-col col-sm-5*
-    - Email and phone numbers  *ua-person-col col-sm-4*
+    - Photo  *uaqs-person-photo col-sm-3*
+    - Name and job titles  *uaqs-person-col col-sm-5*
+    - Email and phone numbers  *uaqs-person-col col-sm-4*
