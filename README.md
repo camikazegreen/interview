@@ -19,6 +19,9 @@ This repository contains a module made with [Features](https://www.drupal.org/pr
     - [Field Collection](https://www.drupal.org/project/field_collection) used for the contact persons (includes fields Name, Email, and Phone)
     - [Link](https://www.drupal.org/project/link) used for the location and more information links
 
+  - UAQS modules
+    - [UAQS Fields](...) Provides base fields for the uaqs_news content type
+
 Handy Drush dl/en command:
 
 ```

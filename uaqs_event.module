@@ -4,4 +4,4 @@
  * Code for the UA Event feature.
  */
 
-include_once 'ua_event.features.inc';
+include_once 'uaqs_event.features.inc';
