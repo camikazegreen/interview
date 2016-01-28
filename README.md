@@ -40,7 +40,7 @@ dependencies will be automatically packaged with the distribution.
 
 
 ### Contributed modules
-- [Bean](https://drupal.org/project/bean) Provides base fields and their required modules for the uaqs_block_types.
+- [Bean](https://drupal.org/project/bean) Makes blocks entities allowing them to be fieldable and displayed using view modes.
 
 ## Dependencies not packaged with uaqs_block_types
 
