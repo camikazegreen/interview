@@ -28,17 +28,24 @@ A link associated with a decorative or supplementary image.
 
 A paragraph or two of freestanding text, with a heading.
 
+## Requirements ##
+- In order to use this feature, you must first download and enable the [Features](https://www.drupal.org/project/features) module.
+- Place the feature from this repository into your site's module folder and enable it as you would any other module.
+
 ## Packaged Dependencies
 
 When this module is used as part of a Drupal distribution (such as [UA
 Quickstart](https://bitbucket.org/ua_drupal/ua_quickstart)), the following
 dependencies will be automatically packaged with the distribution.
 
-## Requirements ##
-- In order to use this feature, you must first download and enable the [Features](https://www.drupal.org/project/features) module.
-- Place the feature from this repository into your site's module folder and enable it as you would any other module.
 
 ### Contributed modules
 - [Bean](https://drupal.org/project/bean) Provides base fields and their required modules for the uaqs_block_types.
+
+## Dependencies not packaged with uaqs_block_types
+
+In order to allow site builders maximum flexibility using shared fields, the following feature
+module is required.
+
 ### UAQS modules
 - [UAQS Fields](https://bitbucket.org/ua_drupal/uaqs_fields) Provides base fields and their required modules for the uaqs_block_types.
