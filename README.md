@@ -1,4 +1,4 @@
-# UA Core Module
+# UAQS Core Module
 
 Provides core dependencies and features for the [UA Quickstart](https://bitbucket.org/ua_drupal/ua_quickstart) Drupal Distribution (or any other distributions wishing to make use of it).
 

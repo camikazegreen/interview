@@ -4,7 +4,7 @@
 ; This makefile should stay as bare-bones as possilbe.  In general, individual
 ; modules/features should include their own makefiles to package their own
 ; dependencies.  Ideally, only dependencies that are common to most sites using
-; the UA Drupal distribution (regardless of how many individual features have
+; the UAQS Drupal distribution (regardless of how many individual features have
 ; been enabled) should be included here.
 ; ------------------------------------------------------------------------------
 
