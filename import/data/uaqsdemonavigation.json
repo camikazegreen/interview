@@ -214,5 +214,14 @@
     "external" : 0,
     "expanded" : 0,
     "weight" : 3
+  },
+  {"mlid":25,
+    "parent_id" : 2,
+    "menu_name" : "main-menu",
+    "link_path" : "uaqs_block_types",
+    "link_title" : "UAQS Block Types",
+    "external" : 0,
+    "expanded" : 0,
+    "weight" : 4
   }
 ]

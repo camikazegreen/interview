@@ -15,6 +15,7 @@ dependencies[] = uaqs_event
 dependencies[] = uaqs_publication
 dependencies[] = uaqs_program
 files[] = import/uaqs_demo_base.inc
+files[] = import/uaqs_demo_card.inc
 files[] = import/uaqs_demo_carousel_item.inc
 files[] = import/uaqs_demo_contact_summary.inc
 files[] = import/uaqs_demo_flexible_page.inc

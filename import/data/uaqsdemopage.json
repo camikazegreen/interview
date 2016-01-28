@@ -21,7 +21,7 @@
     "title" : "UA QuickStart",
     "uaqs_summary_short" : "",
     "path" : "uaqs_drupal",
-    "field_uaqs_body" : "Welcome to the University of Arizona's preconfigured version of Drupal. The goal is for University website users to move from one site to another without being distracted by changes in appearance and behavior. For those who build University websites, developers will not feel forced to conform to rigid mandates. Rather, UA QuickStart helps assemble components that already conform to recommended Web standards. These components provide a start for Web designers for customization, and are not limited templates into which they should fit their content.\n\nWhen adding new content to a site it is important to add via UA QuickStart rather than changing the demonstration content you see here. Make sure the content module for the demonstration is disabled before you start customizing the site or adding any content of your own. To do this, find the module called “UA Demo” in the list of enabled modules, and disable it. When you remove the demonstration content you will still have the recommended University of Arizona Drupal theme (a Zen subtheme that also includes some elements from the Bootstrap framework), plus various content types and views from features that will be common to many University sites."
+    "field_uaqs_body" : "Welcome to the University of Arizona's preconfigured version of Drupal. The goal is for University website users to move from one site to another without being distracted by changes in appearance and behavior. For those who build University websites, developers will not feel forced to conform to rigid mandates. Rather, UA QuickStart helps assemble components that already conform to recommended Web standards. These components provide a start for Web designers for customization, and are not limited templates into which they should fit their content.\n\nWhen adding new content to a site it is important to add via UA QuickStart rather than changing the demonstration content you see here. Make sure the content module for the demonstration is disabled before you start customizing the site or adding any content of your own. To do this, find the module called “UAQS Demo” in the list of enabled modules, and disable it. When you remove the demonstration content you will still have the recommended University of Arizona Drupal theme (a Zen subtheme that also includes some elements from the Bootstrap framework), plus various content types and views from features that will be common to many University sites."
   },
   {"id":5,
     "title" : "Basic Page",
@@ -52,5 +52,11 @@
     "uaqs_summary_short" : "",
     "path" : "uaqs_person",
     "field_uaqs_body" : "Use a <em>Person</em> to add the contact information and brief biography of a person. There are multiple options for displaying directories of Person entries: a grid layout, which is visually appealing, and a list layout, which suits more traditional formal personnel directories."
+  },
+  {"id":10,
+    "title" : "Block Types",
+    "uaqs_summary_short" : "",
+    "path" : "uaqs_block_types",
+    "field_uaqs_body" : "Use <em>Block Types</em> to define small independent blocks of content that conform to one of a few pre-defined layouts and can be positioned within various different regions on the page."
   }
 ]

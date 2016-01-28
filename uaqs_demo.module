@@ -28,6 +28,10 @@ function uaqs_demo_migrate_api() {
         'class_name' => 'UaqsDemoContactSummaryMigration',
         'group_name' => 'uaqs_demo',
       ),
+      'UaqsDemoCard' => array(
+        'class_name' => 'UaqsDemoCardMigration',
+        'group_name' => 'uaqs_demo',
+      ),
       'UaqsDemoPerson' => array(
         'class_name' => 'UaqsDemoPersonMigration',
         'group_name' => 'uaqs_demo',
