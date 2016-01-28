@@ -1,6 +1,6 @@
-# UA Demo Content Module
+# UAQS Demo Content Module
 
-Provides some sample content and menu links to demonstrate various features of the [UA Zen theme](https://bitbucket.org/uabrandingdigitalassets/ua_zen) and other UA Drupal components/features.
+Provides some sample content and menu links to demonstrate various features of the [UA Zen theme](https://bitbucket.org/uabrandingdigitalassets/ua_zen) and other UA QuickStart components/features.
 
 ## Features
 

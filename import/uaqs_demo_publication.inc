@@ -2,17 +2,17 @@
 
 /**
  * @file
- * Add content to demonstrate the UA Publication feature.
+ * Add content to demonstrate the UAQS Publication feature.
  */
 
 /**
- * Makes demonstration UA Publication taxonomy terms from pre-defined data.
+ * Makes demonstration UAQS Publication taxonomy terms from pre-defined data.
  *
  * Terms come from a local JSON-formatted text file.
  *
- * @see UaDemoTermMigration
+ * @see UaqsDemoTermMigration
  */
-class UaDemoPublicationTermMigration extends UaDemoTermMigration {
+class UaqsDemoPublicationTermMigration extends UaqsDemoTermMigration {
 
   /**
    * Constructor.
@@ -21,20 +21,20 @@ class UaDemoPublicationTermMigration extends UaDemoTermMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'research_categories',
-      t('Add demonstration UA Publication taxonomy terms to a vocabulary.'));
+    parent::__construct($arguments, 'research_areas',
+      t('Add demonstration UAQS Publication taxonomy terms to a vocabulary.'));
   }
 
 }
 
 /**
- * Makes demonstration UA Publication content from pre-defined data.
+ * Makes demonstration UAQS Publication content from pre-defined data.
  *
- * The content from most of the UA Publication fields comes from a JSON file,
+ * The content from most of the UAQS Publication fields comes from a JSON file,
  * but note that the entity reference field (related publications) might
  * not be populated.
  */
-class UaDemoPublicationMigration extends UaDemoNodeMigration {
+class UaqsDemoPublicationMigration extends UaqsDemoNodeMigration {
 
   /**
    * Constructor.
@@ -43,12 +43,12 @@ class UaDemoPublicationMigration extends UaDemoNodeMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'ua_pub',
-      t('Make demonstration UA Publication content from pre-defined data.'));
+    parent::__construct($arguments, 'uaqs_pub',
+      t('Make demonstration UAQS Publication content from pre-defined data.'));
 
     // Documented lists of source data fields: all names here MUST match
     // those in the corresponding content type.
-    // See ua_publication ua_publication.features.field_instance.inc
+    // See uaqs_publication uaqs_publication.features.field_instance.inc
     // First, the node title and path alias fields...
     $title_fields = array(
       'title' => t('Title'),
@@ -56,21 +56,21 @@ class UaDemoPublicationMigration extends UaDemoNodeMigration {
     );
     // The single-value text fielda...
     $single_value_fields = array(
-      'ua_pub_description' => t('Description'),
-      'ua_pub_date' => t('Published'),
+      'uaqs_body' => t('Description'),
+      'uaqs_year' => t('Published'),
     );
     // Multi-value fields...
     $multi_value_fields = array(
-      'ua_pub_authors' => t('Authors'),
-      'ua_pub_addinfo' => t('Additional information (link)'),
-      'ua_pub_related_pubs' => t('Related publications (entity references)'),
-      'ua_pub_research_categories' => t('Research categories (term references)'),
+      'uaqs_pub_authors' => t('Authors'),
+      'uaqs_pub_addinfo' => t('Additional information (link)'),
+      'uaqs_pub_related_pubs' => t('Related publications (entity references)'),
+      'uaqs_pub_research_areas' => t('Research areas (term references)'),
     );
     $link_title_fields = array(
-      'ua_pub_addinfo_title' => t('Information link title'),
+      'uaqs_pub_addinfo_title' => t('Information link title'),
     );
     // Image fields...
-    $image_src_field = 'ua_pub_photo';
+    $image_src_field = 'uaqs_photo';
     $image_fields = array(
       $image_src_field => t('Publication photo filename'),
       $image_src_field . '_alt' => t('Alternate text'),
@@ -97,7 +97,7 @@ class UaDemoPublicationMigration extends UaDemoNodeMigration {
     }
 
     // Link title is a special case.
-    $this->addFieldMapping('field_ua_pub_addinfo:title', 'ua_pub_addinfo_title')
+    $this->addFieldMapping('field_uaqs_pub_addinfo:title', 'uaqs_pub_addinfo_title')
         ->separator('|');
 
     // Image.
@@ -113,7 +113,7 @@ class UaDemoPublicationMigration extends UaDemoNodeMigration {
     $this->addFieldMapping($image_dst_field . ':alt', $image_src_field . '_alt');
 
     // Allow limited HTML markup in the description field.
-    $this->addFieldMapping('field_ua_pub_description:format')
+    $this->addFieldMapping('field_uaqs_body:format')
          ->defaultValue('filtered_html');
   }
 

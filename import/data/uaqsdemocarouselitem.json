@@ -1,30 +1,30 @@
 [
   {"id":1,
     "title" : "Here is the first headline.",
-    "short_summary" : "Iamque super triginta milia armatorum aspiciebantur",
-    "call_to_action" : "http://www.arizona.edu/",
-    "call_to_action_title" : "Call to action",
-    "slide_image" : "demo-carousel-item-1.jpg"
+    "uaqs_summary_short" : "Iamque super triginta milia armatorum aspiciebantur",
+    "uaqs_link" : "http://www.arizona.edu/",
+    "uaqs_link_title" : "Call to action",
+    "uaqs_photo" : "demo-carousel-item-1.jpg"
   },
   {"id":2,
     "title" : "Here is the second headline.",
-    "short_summary" : "et adhuc adfluebat omnis iuventus et quibus cruda ac viridis senectus, clari bello et sua quisque decora gestantes",
-    "call_to_action" : "",
-    "call_to_action_title" : "",
-    "slide_image" : "demo-carousel-item-2.jpg"
+    "uaqs_summary_short" : "et adhuc adfluebat omnis iuventus et quibus cruda ac viridis senectus, clari bello et sua quisque decora gestantes",
+    "uaqs_link" : "",
+    "uaqs_link_title" : "",
+    "uaqs_photo" : "demo-carousel-item-2.jpg"
   },
   {"id":3,
     "title" : "Here is the third headline.",
-    "short_summary" : "cum inter pluris duces virtute et genere praestans nomine Calgacus",
-    "call_to_action" : "",
-    "call_to_action_title" : "",
-    "slide_image" : "demo-carousel-item-3.jpg"
+    "uaqs_summary_short" : "cum inter pluris duces virtute et genere praestans nomine Calgacus",
+    "uaqs_link" : "",
+    "uaqs_link_title" : "",
+    "uaqs_photo" : "demo-carousel-item-3.jpg"
   },
   {"id":4,
     "title" : "Here is the fourth headline.",
-    "short_summary" : "apud contractam multitudinem proelium poscentem in hunc modum locutus fertur",
-    "call_to_action" : "https://brand.arizona.edu/guide/ua-quickstart",
-    "call_to_action_title" : "Learn more",
-    "slide_image" : "demo-carousel-item-4.jpg"
+    "uaqs_summary_short" : "apud contractam multitudinem proelium poscentem in hunc modum locutus fertur",
+    "uaqs_link" : "https://brand.arizona.edu/guide/ua-quickstart",
+    "uaqs_link_title" : "Learn more",
+    "uaqs_photo" : "demo-carousel-item-4.jpg"
   }
 ]

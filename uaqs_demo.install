@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * ua_demo.install
+ * uaqs_demo.install
  */
 
 /**
@@ -12,38 +12,38 @@
  * @param string $level
  *   message type
  */
-function _ua_demo_null_message($message, $level) {
+function _uaqs_demo_null_message($message, $level) {
   return;
 }
 
 /**
  * Implements hook_enable().
  */
-function ua_demo_enable() {
+function uaqs_demo_enable() {
   migrate_static_registration();
-  $info = ua_demo_migrate_api();
-  Migration::setDisplayFunction('_ua_demo_null_message');
+  $info = uaqs_demo_migrate_api();
+  Migration::setDisplayFunction('_uaqs_demo_null_message');
   foreach ($info['migrations'] as $machine_name => $arguments) {
     $migration = Migration::getInstance($machine_name);
     $migration->processImport();
   }
   variable_set(
     'site_frontpage',
-    Migration::getInstance('UaDemoPage')->getFrontPageNode()
+    Migration::getInstance('UaqsDemoPage')->getFrontPageNode()
   );
 }
 
 /**
  * Implements hook_disable().
  */
-function ua_demo_disable() {
-  $info = ua_demo_migrate_api();
-  Migration::setDisplayFunction('_ua_demo_null_message');
+function uaqs_demo_disable() {
+  $info = uaqs_demo_migrate_api();
+  Migration::setDisplayFunction('_uaqs_demo_null_message');
   $hitlist = array_reverse($info['migrations']);
   foreach ($hitlist as $machine_name => $arguments) {
     $migration = Migration::getInstance($machine_name);
     $migration->processRollback();
   }
-  MigrateGroup::deregister('ua_demo');
+  MigrateGroup::deregister('uaqs_demo');
   variable_set('site_frontpage', 'node');
 }

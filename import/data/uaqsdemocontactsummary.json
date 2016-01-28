@@ -1,10 +1,10 @@
 [
   {"id":1,
     "label" : "Main Unit or Department Contact Information",
-    "ua_contact_address" : "The University of Arizona|Tucson|AZ 85721",
-    "ua_contact_phone" : "tel:5206212211",
-    "ua_contact_phone_title" : "(520) 621-2211",
-    "ua_contact_email" : "mailto:department.name@email.arizona.edu",
-    "ua_program_email_title" : "department.name@email.arizona.edu"
+    "uaqs_contact_address" : "The University of Arizona|Tucson|AZ 85721",
+    "uaqs_contact_phone_link" : "tel:5206212211",
+    "uaqs_contact_phone_link_title" : "(520) 621-2211",
+    "uaqs_contact_mail_link" : "mailto:department.name@email.arizona.edu",
+    "uaqs_program_mail_link_title" : "department.name@email.arizona.edu"
   }
 ]

@@ -2,15 +2,15 @@
 
 /**
  * @file
- * Add content to demonstrate the UA Basic Page feature.
+ * Add content to demonstrate the UAQS Basic Page feature.
  */
 
 /**
- * Makes demonstration UA Basic Page content from pre-defined data.
+ * Makes demonstration UAQS Basic Page content from pre-defined data.
  *
  * The field contents come from a JSON file.
  */
-class UaDemoPageMigration extends UaDemoNodeMigration {
+class UaqsDemoPageMigration extends UaqsDemoNodeMigration {
 
   /**
    * Numeric ID of the JSON file entry for the front page.
@@ -18,7 +18,7 @@ class UaDemoPageMigration extends UaDemoNodeMigration {
   const FRONT_PAGE_SOURCE_ID = 4;
 
   /**
-   * The UA Basic Page (as a Drupal node) to use as the site front page.
+   * The UAQS Basic Page (as a Drupal node) to use as the site front page.
    *
    * @return string
    *   The non-aliased Drupal node path, or 'node' if there is none.
@@ -41,16 +41,16 @@ class UaDemoPageMigration extends UaDemoNodeMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'ua_page',
-      t('Make demonstration UA Basic Page node content from pre-defined data.'));
+    parent::__construct($arguments, 'uaqs_page',
+      t('Make demonstration UAQS Basic Page node content from pre-defined data.'));
 
     // Documented lists of source data fields.
-    // See ua_page ua_page.features.field_instance.inc.
+    // See uaqs_page uaqs_page.features.field_instance.inc.
     $data_fields = array(
       'title' => t('Title'),
-      'ua_page_subtitle' => t('Sub-title'),
+      'uaqs_summary_short' => t('Sub-title'),
       'path' => t('URL path settings'),
-      'ua_page_body' => t('Page body'),
+      'field_uaqs_body' => t('Page body'),
     );
 
     // All the fields to migrate.
@@ -61,11 +61,11 @@ class UaDemoPageMigration extends UaDemoNodeMigration {
 
     // Map JSON names to simple content type fields and subfields.
     $this->addSimpleMappings(array('title'));
-    $this->addFieldMapping('field_ua_page_subtitle', 'ua_page_subtitle');
+    $this->addFieldMapping('field_uaqs_subtitle', 'uaqs_subtitle');
     $this->addSimpleMappings(array('path'));
-    $this->addSimpleMappings(array('ua_page_body'));
+    $this->addSimpleMappings(array('field_uaqs_body'));
     // Allow limited HTML markup in the page body field.
-    $this->addFieldMapping('ua_page_body:format')
+    $this->addFieldMapping('field_uaqs_body:format')
          ->defaultValue('filtered_html');
 
   }

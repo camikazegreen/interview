@@ -2,17 +2,17 @@
 
 /**
  * @file
- * Add content to demonstrate the UA Program feature.
+ * Add content to demonstrate the UAQS Program feature.
  */
 
 /**
- * Makes demonstration UA Program taxonomy terms from pre-defined data.
+ * Makes demonstration UAQS Program taxonomy terms from pre-defined data.
  *
  * Terms come from a local JSON-formatted text file.
  *
- * @see UaDemoTermMigration
+ * @see UaqsDemoTermMigration
  */
-class UaDemoProgramTermMigration extends UaDemoTermMigration {
+class UaqsDemoProgramTermMigration extends UaqsDemoTermMigration {
 
   /**
    * Constructor.
@@ -22,17 +22,17 @@ class UaDemoProgramTermMigration extends UaDemoTermMigration {
    */
   public function __construct(array $arguments) {
     parent::__construct($arguments, 'tags',
-      t('Add demonstration UA Program taxonomy terms to a vocabulary.'));
+      t('Add demonstration UAQS Program taxonomy terms to a vocabulary.'));
   }
 
 }
 
 /**
- * Makes demonstration UA Program node content from pre-defined data.
+ * Makes demonstration UAQS Program node content from pre-defined data.
  *
  * The field contents come from a JSON file.
  */
-class UaDemoProgramMigration extends UaDemoNodeMigration {
+class UaqsDemoProgramMigration extends UaqsDemoNodeMigration {
 
   /**
    * Constructor.
@@ -41,16 +41,16 @@ class UaDemoProgramMigration extends UaDemoNodeMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'ua_program',
-      t('Make demonstration UA Program node content from pre-defined data.'));
+    parent::__construct($arguments, 'uaqs_program',
+      t('Make demonstration UAQS Program node content from pre-defined data.'));
 
     // Documented lists of source data fields.
-    // See ua_program ua_program.features.field_instance.inc
+    // See uaqs_program uaqs_program.features.field_instance.inc
     // First, the single-value text fielda...
     $data_fields = array(
       'title' => t('Program Name'),
       'path' => t('URL path settings'),
-      'ua_program_focus_areas' => t('Focus Areas (term references)'),
+      'uaqs_focus_areas' => t('Focus Areas (term references)'),
     );
 
     // All the fields to migrate.
@@ -61,7 +61,7 @@ class UaDemoProgramMigration extends UaDemoNodeMigration {
 
     // JSON names to simple content type fields and subfields.
     $this->addSimpleMappings(array('title', 'path'));
-    $this->addFieldMapping('field_ua_program_focus_areas', 'ua_program_focus_areas')
+    $this->addFieldMapping('field_uaqs_focus_areas', 'uaqs_focus_areas')
          ->separator('|');
   }
 

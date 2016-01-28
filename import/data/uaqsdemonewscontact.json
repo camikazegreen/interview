@@ -1,26 +1,26 @@
 [
   {"id":1,
-    "ua_news_id" : 1,
-    "ua_news_contact_name" : "Samuel Rowbotham",
-    "ua_news_contact_email" : "srowbotham@email.arizona.edu",
-    "ua_news_contact_phone" : "022-333-8888"
+    "uaqs_news_id" : 1,
+    "uaqs_contact_name" : "Samuel Rowbotham",
+    "uaqs_contact_email" : "srowbotham@email.arizona.edu",
+    "uaqs_contact_phone" : "022-333-8888"
   },
   {"id":2,
-    "ua_news_id" : 1,
-    "ua_news_contact_name" : "Elizabeth Blount",
-    "ua_news_contact_email" : "blout@email.arizona.edu",
-    "ua_news_contact_phone" : "022-333-8888"
+    "uaqs_news_id" : 1,
+    "uaqs_contact_name" : "Elizabeth Blount",
+    "uaqs_contact_email" : "blout@email.arizona.edu",
+    "uaqs_contact_phone" : "022-333-8888"
   },
   {"id":3,
-    "ua_news_id" : 2,
-    "ua_news_contact_name" : "William Kidd",
-    "ua_news_contact_email" : "captainkidd@email.arizona.edu",
-    "ua_news_contact_phone" : "081-980-7100"
+    "uaqs_news_id" : 2,
+    "uaqs_contact_name" : "William Kidd",
+    "uaqs_contact_email" : "captainkidd@email.arizona.edu",
+    "uaqs_contact_phone" : "081-980-7100"
   },
   {"id":4,
-    "ua_news_id" : 3,
-    "ua_news_contact_name" : "Marketing Communications & Brand Management",
-    "ua_news_contact_email" : "brand@email.arizona.edu",
-    "ua_news_contact_phone" : "520-621-8747"
+    "uaqs_news_id" : 3,
+    "uaqs_contact_name" : "Marketing Communications & Brand Management",
+    "uaqs_contact_email" : "brand@email.arizona.edu",
+    "uaqs_contact_phone" : "520-621-8747"
   }
 ]

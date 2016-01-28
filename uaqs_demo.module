@@ -1,113 +1,113 @@
 <?php
 /**
  * @file
- * ua_demo.module
+ * uaqs_demo.module
  */
 
 /**
  * Implements hook_migrate_api().
  */
-function ua_demo_migrate_api() {
+function uaqs_demo_migrate_api() {
   $api = array(
     'api' => 2,
     'groups' => array(
-      'ua_demo' => array(
-        'title' => t('UA Demo Content'),
+      'uaqs_demo' => array(
+        'title' => t('UAQS Demo Content'),
       ),
     ),
     'migrations' => array(
-      'UaDemoPage' => array(
-        'class_name' => 'UaDemoPageMigration',
-        'group_name' => 'ua_demo',
+      'UaqsDemoPage' => array(
+        'class_name' => 'UaqsDemoPageMigration',
+        'group_name' => 'uaqs_demo',
       ),
-      'UaDemoCarouselItem' => array(
-        'class_name' => 'UaDemoCarouselItemMigration',
-        'group_name' => 'ua_demo',
+      'UaqsDemoCarouselItem' => array(
+        'class_name' => 'UaqsDemoCarouselItemMigration',
+        'group_name' => 'uaqs_demo',
       ),
-      'UaDemoContactSummary' => array(
-        'class_name' => 'UaDemoContactSummaryMigration',
-        'group_name' => 'ua_demo',
+      'UaqsDemoContactSummary' => array(
+        'class_name' => 'UaqsDemoContactSummaryMigration',
+        'group_name' => 'uaqs_demo',
       ),
-      'UaDemoPerson' => array(
-        'class_name' => 'UaDemoPersonMigration',
-        'group_name' => 'ua_demo',
+      'UaqsDemoPerson' => array(
+        'class_name' => 'UaqsDemoPersonMigration',
+        'group_name' => 'uaqs_demo',
       ),
-      'UaDemoUnitTerm' => array(
-        'class_name' => 'UaDemoUnitTermMigration',
-        'group_name' => 'ua_demo',
+      'UaqsDemoUnitTerm' => array(
+        'class_name' => 'UaqsDemoUnitTermMigration',
+        'group_name' => 'uaqs_demo',
       ),
-      'UaDemoUnit' => array(
-        'class_name' => 'UaDemoUnitMigration',
-        'group_name' => 'ua_demo',
-        'dependencies' => array('UaDemoUnitTerm'),
+      'UaqsDemoUnit' => array(
+        'class_name' => 'UaqsDemoUnitMigration',
+        'group_name' => 'uaqs_demo',
+        'dependencies' => array('UaqsDemoUnitTerm'),
       ),
-      'UaDemoNews' => array(
-        'class_name' => 'UaDemoNewsMigration',
-        'group_name' => 'ua_demo',
+      'UaqsDemoNews' => array(
+        'class_name' => 'UaqsDemoNewsMigration',
+        'group_name' => 'uaqs_demo',
       ),
-      'UaDemoNewsContact' => array(
-        'class_name' => 'UaDemoNewsContactMigration',
-        'group_name' => 'ua_demo',
-        'dependencies' => array('UaDemoNews'),
+      'UaqsDemoNewsContact' => array(
+        'class_name' => 'UaqsDemoNewsContactMigration',
+        'group_name' => 'uaqs_demo',
+        'dependencies' => array('UaqsDemoNews'),
       ),
-      'UaDemoEvent' => array(
-        'class_name' => 'UaDemoEventMigration',
-        'group_name' => 'ua_demo',
+      'UaqsDemoEvent' => array(
+        'class_name' => 'UaqsDemoEventMigration',
+        'group_name' => 'uaqs_demo',
       ),
-      'UaDemoEventContact' => array(
-        'class_name' => 'UaDemoEventContactMigration',
-        'group_name' => 'ua_demo',
-        'dependencies' => array('UaDemoEvent'),
+      'UaqsDemoEventContact' => array(
+        'class_name' => 'UaqsDemoEventContactMigration',
+        'group_name' => 'uaqs_demo',
+        'dependencies' => array('UaqsDemoEvent'),
       ),
-      'UaDemoColumnImage' => array(
-        'class_name' => 'UaDemoColumnImageMigration',
-        'group_name' => 'ua_demo',
+      'UaqsDemoColumnImage' => array(
+        'class_name' => 'UaqsDemoColumnImageMigration',
+        'group_name' => 'uaqs_demo',
       ),
-      'UaDemoHeadedText' => array(
-        'class_name' => 'UaDemoHeadedTextMigration',
-        'group_name' => 'ua_demo',
+      'UaqsDemoHeadedText' => array(
+        'class_name' => 'UaqsDemoHeadedTextMigration',
+        'group_name' => 'uaqs_demo',
       ),
-      'UaDemoPlainText' => array(
-        'class_name' => 'UaDemoPlainTextMigration',
-        'group_name' => 'ua_demo',
+      'UaqsDemoPlainText' => array(
+        'class_name' => 'UaqsDemoPlainTextMigration',
+        'group_name' => 'uaqs_demo',
       ),
-      'UaDemoFlexiblePage' => array(
-        'class_name' => 'UaDemoFlexiblePageMigration',
-        'group_name' => 'ua_demo',
+      'UaqsDemoFlexiblePage' => array(
+        'class_name' => 'UaqsDemoFlexiblePageMigration',
+        'group_name' => 'uaqs_demo',
         'dependencies' => array(
-          'UaDemoColumnImage',
-          'UaDemoHeadedText',
-          'UaDemoPlainText',
+          'UaqsDemoColumnImage',
+          'UaqsDemoHeadedText',
+          'UaqsDemoPlainText',
         ),
       ),
-      'UaDemoPublicationTerm' => array(
-        'class_name' => 'UaDemoPublicationTermMigration',
-        'group_name' => 'ua_demo',
+      'UaqsDemoPublicationTerm' => array(
+        'class_name' => 'UaqsDemoPublicationTermMigration',
+        'group_name' => 'uaqs_demo',
       ),
-      'UaDemoPublication' => array(
-        'class_name' => 'UaDemoPublicationMigration',
-        'group_name' => 'ua_demo',
-        'dependencies' => array('UaDemoPublicationTerm'),
+      'UaqsDemoPublication' => array(
+        'class_name' => 'UaqsDemoPublicationMigration',
+        'group_name' => 'uaqs_demo',
+        'dependencies' => array('UaqsDemoPublicationTerm'),
       ),
-      'UaDemoProgramTerm' => array(
-        'class_name' => 'UaDemoProgramTermMigration',
-        'group_name' => 'ua_demo',
+      'UaqsDemoProgramTerm' => array(
+        'class_name' => 'UaqsDemoProgramTermMigration',
+        'group_name' => 'uaqs_demo',
       ),
-      'UaDemoProgram' => array(
-        'class_name' => 'UaDemoProgramMigration',
-        'group_name' => 'ua_demo',
-        'dependencies' => array('UaDemoProgramTerm'),
+      'UaqsDemoProgram' => array(
+        'class_name' => 'UaqsDemoProgramMigration',
+        'group_name' => 'uaqs_demo',
+        'dependencies' => array('UaqsDemoProgramTerm'),
       ),
-      'UaDemoNavigation' => array(
-        'class_name' => 'UaDemoNavigationMigration',
-        'group_name' => 'ua_demo',
+      'UaqsDemoNavigation' => array(
+        'class_name' => 'UaqsDemoNavigationMigration',
+        'group_name' => 'uaqs_demo',
         'dependencies' => array(
-          'UaDemoPage',
-          'UaDemoPerson',
-          'UaDemoNews',
-          'UaDemoUnit',
-          'UaDemoProgram',
-          'UaDemoPublication',
+          'UaqsDemoPage',
+          'UaqsDemoPerson',
+          'UaqsDemoNews',
+          'UaqsDemoUnit',
+          'UaqsDemoProgram',
+          'UaqsDemoPublication',
         ),
       ),
     ),

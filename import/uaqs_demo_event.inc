@@ -2,17 +2,17 @@
 
 /**
  * @file
- * Add content to demonstrate the UA Event feature.
+ * Add content to demonstrate the UAQS Event feature.
  */
 
 /**
- * Makes demonstration UA Event content from pre-defined data.
+ * Makes demonstration UAQS Event content from pre-defined data.
  *
- * This migration imports most of the UA Event content from a JSON file, but
+ * This migration imports most of the UAQS Event content from a JSON file, but
  * the contacts list for the event is a distinct entity and needs its own
  * migration (see below).
  */
-class UaDemoEventMigration extends UaDemoNodeMigration {
+class UaqsDemoEventMigration extends UaqsDemoNodeMigration {
 
   /**
    * Constructor.
@@ -21,44 +21,44 @@ class UaDemoEventMigration extends UaDemoNodeMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'ua_event',
-      t('Make demonstration UA Event content from pre-defined data.'));
+    parent::__construct($arguments, 'uaqs_event',
+      t('Make demonstration UAQS Event content from pre-defined data.'));
 
     // Documented lists of source data fields.
-    // See ua_event ua_event.features.field_instance.inc
+    // See uaqs_event uaqs_event.features.field_instance.inc
     // First, the node title field...
     $title_field = array(
       'title' => t('Title'),
     );
     // The single-value text fielda...
     $single_value_fields = array(
-      'ua_event_subtitle' => t('Sub-title'),
-      'ua_event_short_title' => t('Short title'),
-      'ua_event_front' => t('Show on front page'),
-      'ua_event_date' => t('Event date'),
-      'ua_event_summary' => t('Summary'),
-      'ua_event_description' => t('Description'),
-      'ua_event_location' => t('Event location'),
-      'ua_event_more_info' => t('More information'),
+      'uaqs_summary_short' => t('Sub-title'),
+      'uaqs_short_title' => t('Short title'),
+      'uaqs_front' => t('Show on front page'),
+      'uaqs_date' => t('Event date'),
+      'uaqs_summary' => t('Summary'),
+      'uaqs_body' => t('Description'),
+      'uaqs_location' => t('Event location'),
+      'uaqs_more_info' => t('More information'),
     );
     // Date ending and repeat fields...
     $date_extra_fields = array(
-      'ua_event_date_to' => t('Event end date'),
-      'ua_event_date_rrule' => t('Event date repeat rule'),
+      'uaqs_date_to' => t('Event end date'),
+      'uaqs_date_rrule' => t('Event date repeat rule'),
     );
     // Titles for links...
     $link_title_fields = array(
-      'ua_event_location_title' => t('Location link title'),
-      'ua_event_more_info_title' => t('Information link title'),
+      'uaqs_location_title' => t('Location link title'),
+      'uaqs_more_info_title' => t('Information link title'),
     );
     // File fields...
-    $file_src_field = 'ua_event_attachments';
+    $file_src_field = 'uaqs_attachments';
     $file_fields = array(
       $file_src_field => t('Attachment filename'),
       $file_src_field . '_description' => t('Attachment description'),
     );
     // Image fields...
-    $image_src_field = 'ua_event_photo';
+    $image_src_field = 'uaqs_photo';
     $image_fields = array(
       $image_src_field => t('Event Photo'),
       $image_src_field . '_title' => t('Event photo title'),
@@ -80,12 +80,12 @@ class UaDemoEventMigration extends UaDemoNodeMigration {
     }
 
     // Date extras.
-    $this->addFieldMapping('field_ua_event_date:to', 'ua_event_date_to');
-    $this->addFieldMapping('field_ua_event_date:rrule', 'ua_event_date_rrule');
+    $this->addFieldMapping('field_uaqs_date:to', 'uaqs_date_to');
+    $this->addFieldMapping('field_uaqs_date:rrule', 'uaqs_date_rrule');
 
     // Link titles.
-    $this->addFieldMapping('field_ua_event_location:title', 'ua_event_location_title');
-    $this->addFieldMapping('field_ua_event_more_info:title', 'ua_event_more_info_title');
+    $this->addFieldMapping('field_uaqs_location:title', 'uaqs_location_title');
+    $this->addFieldMapping('field_uaqs_more_info:title', 'uaqs_more_info_title');
 
     // Images and attachments.
     $image_dst_field = 'field_' . $image_src_field;
@@ -117,16 +117,16 @@ class UaDemoEventMigration extends UaDemoNodeMigration {
          ->separator('|');
 
     // Allow limited HTML markup in the description field.
-    $this->addFieldMapping('field_ua_event_description:format')
+    $this->addFieldMapping('field_uaqs_body:format')
          ->defaultValue('filtered_html');
   }
 
 }
 
 /**
- * Populate the Contacts field collection within UA Event content.
+ * Populate the Contacts field collection within UAQS Event content.
  */
-class UaDemoEventContactMigration extends UaDemoFieldCollectionMigration {
+class UaqsDemoEventContactMigration extends UaqsDemoFieldCollectionMigration {
 
   /**
    * Constructor.
@@ -135,14 +135,14 @@ class UaDemoEventContactMigration extends UaDemoFieldCollectionMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'field_ua_event_contacts', 'ua_event_id', 'UaDemoEvent',
-      t('Populate demonstration UA Event contact field collections.'));
+    parent::__construct($arguments, 'field_uaqs_contacts', 'uaqs_event_id', 'UaqsDemoEvent',
+      t('Populate demonstration UAQS Event contact field collections.'));
 
     // Data fields.
     $data_fields = array(
-      'ua_event_contact_name' => t('Contact Name'),
-      'ua_event_contact_email' => t('Contact Email'),
-      'ua_email_contact_phone' => t('Contact Phone'),
+      'uaqs_contact_name' => t('Contact Name'),
+      'uaqs_contact_email' => t('Contact Email'),
+      'uaqs_contact_phone' => t('Contact Phone'),
     );
 
     $fields = $this->getSourceKeyField() + $this->getForeignKeyField() + $data_fields;
@@ -156,8 +156,8 @@ class UaDemoEventContactMigration extends UaDemoFieldCollectionMigration {
 
     // Unmigrated fields.
     $this->addUnmigratedDestinations(array(
-      'field_ua_email_contact_phone:language',
-      'field_ua_event_contact_name:language',
+      'field_uaqs_contact_phone:language',
+      'field_uaqs_contact_name:language',
     ));
   }
 

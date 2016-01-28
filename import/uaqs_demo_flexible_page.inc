@@ -2,19 +2,19 @@
 
 /**
  * @file
- * Add content to demonstrate the UA Flexible Page feature.
+ * Add content to demonstrate the UAQS Flexible Page feature.
  *
  * The main contributed Migrate module does not support the Paragraphs-based
- * entities that are the main point of a UA Flexible Page, but the Paragraphs
+ * entities that are the main point of a UAQS Flexible Page, but the Paragraphs
  * module itself includes Migrate support.
  *
  * @see https://www.drupal.org/node/2271181
  */
 
 /**
- * Defines migration into the UA Plain Text type of Paragraphs entity.
+ * Defines migration into the UAQS Plain Text type of Paragraphs entity.
  */
-class UaDemoPlainTextMigration extends UaDemoParagraphsItemMigration {
+class UaqsDemoPlainTextMigration extends UaqsDemoParagraphsItemMigration {
 
   /**
    * Constructor.
@@ -23,12 +23,12 @@ class UaDemoPlainTextMigration extends UaDemoParagraphsItemMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'ua_plain_text', 'field_ua_main_content',
-      t('Populate demonstration UA Plain Text entities (based on Paragraphs).'));
+    parent::__construct($arguments, 'uaqs_plain_text', 'field_uaqs_main_content',
+      t('Populate demonstration UAQS Plain Text entities (based on Paragraphs).'));
 
     // Fields to import to the bundle.
     $data_fields = array(
-      'ua_text_area' => t('Generic multi-line text area'),
+      'uaqs_text_area' => t('Generic multi-line text area'),
     );
 
     // All the fields to migrate.
@@ -38,18 +38,18 @@ class UaDemoPlainTextMigration extends UaDemoParagraphsItemMigration {
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
     // Map JSON names to simple content type fields and subfields.
-    $this->addFieldMapping('field_ua_text_area', 'ua_text_area');
+    $this->addFieldMapping('field_uaqs_text_area', 'uaqs_text_area');
     // Allow limited HTML markup in the text area field.
-    $this->addFieldMapping('field_ua_text_area:format')
-         ->defaultValue('ua_phrasing_content');
+    $this->addFieldMapping('field_uaqs_text_area:format')
+         ->defaultValue('uaqs_phrasing_content');
   }
 
 }
 
 /**
- * Defines migration into the UA Headed Text type of Paragraphs entity.
+ * Defines migration into the UAQS Headed Text type of Paragraphs entity.
  */
-class UaDemoHeadedTextMigration extends UaDemoParagraphsItemMigration {
+class UaqsDemoHeadedTextMigration extends UaqsDemoParagraphsItemMigration {
 
   /**
    * Constructor.
@@ -58,13 +58,13 @@ class UaDemoHeadedTextMigration extends UaDemoParagraphsItemMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'ua_headed_text', 'field_ua_main_content',
-      t('Populate demonstration UA Headed Text entities (based on Paragraphs).'));
+    parent::__construct($arguments, 'uaqs_headed_text', 'field_uaqs_main_content',
+      t('Populate demonstration UAQS Headed Text entities (based on Paragraphs).'));
 
     // Fields to import to the bundle.
     $data_fields = array(
-      'ua_text_heading' => t('Heading for the following text'),
-      'ua_text_area' => t('Generic multi-line text area'),
+      'uaqs_text_heading' => t('Heading for the following text'),
+      'uaqs_text_area' => t('Generic multi-line text area'),
     );
 
     // All the fields to migrate.
@@ -74,19 +74,19 @@ class UaDemoHeadedTextMigration extends UaDemoParagraphsItemMigration {
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
     // Map JSON names to simple content type fields and subfields.
-    $this->addFieldMapping('field_ua_text_heading', 'ua_text_heading');
-    $this->addFieldMapping('field_ua_text_area', 'ua_text_area');
+    $this->addFieldMapping('field_uaqs_text_heading', 'uaqs_text_heading');
+    $this->addFieldMapping('field_uaqs_text_area', 'uaqs_text_area');
     // Allow limited HTML markup in the text area field.
-    $this->addFieldMapping('field_ua_text_area:format')
-         ->defaultValue('ua_phrasing_content');
+    $this->addFieldMapping('field_uaqs_text_area:format')
+         ->defaultValue('uaqs_phrasing_content');
   }
 
 }
 
 /**
- * Defines migration into the UA Column Image type of Paragraphs entity.
+ * Defines migration into the UAQS Column Image type of Paragraphs entity.
  */
-class UaDemoColumnImageMigration extends UaDemoParagraphsItemMigration {
+class UaqsDemoColumnImageMigration extends UaqsDemoParagraphsItemMigration {
 
   /**
    * Constructor.
@@ -95,16 +95,16 @@ class UaDemoColumnImageMigration extends UaDemoParagraphsItemMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'ua_column_image', 'field_ua_main_content',
-      t('Populate demonstration UA Column Image entities (based on Paragraphs).'));
+    parent::__construct($arguments, 'uaqs_column_image', 'field_uaqs_main_content',
+      t('Populate demonstration UAQS Column Image entities (based on Paragraphs).'));
 
     // Fields to import to the bundle.
     $data_fields = array(
-      'ua_caption_text' => t('Image caption'),
-      'ua_image_credit' => t('Image source or copyright holder'),
+      'uaqs_caption_text' => t('Image caption'),
+      'uaqs_image_credit' => t('Image source or copyright holder'),
     );
     // Image fields...
-    $image_src_field = 'ua_image_wide';
+    $image_src_field = 'uaqs_image_wide';
     $image_fields = array(
       $image_src_field => t('Image to place in content'),
     );
@@ -116,8 +116,8 @@ class UaDemoColumnImageMigration extends UaDemoParagraphsItemMigration {
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
     // Map JSON names to simple content type fields and subfields.
-    $this->addFieldMapping('field_ua_caption_text', 'ua_caption_text');
-    $this->addFieldMapping('field_ua_image_credit', 'ua_image_credit');
+    $this->addFieldMapping('field_uaqs_caption_text', 'uaqs_caption_text');
+    $this->addFieldMapping('field_uaqs_image_credit', 'uaqs_image_credit');
     // Images.
     $image_dst_field = 'field_' . $image_src_field;
     $this->addFieldMapping($image_dst_field, $image_src_field)
@@ -133,13 +133,13 @@ class UaDemoColumnImageMigration extends UaDemoParagraphsItemMigration {
 }
 
 /**
- * Makes demonstration UA Flexible Page content from pre-defined data.
+ * Makes demonstration UAQS Flexible Page content from pre-defined data.
  *
- * This migration imports a small part of the UA FlexiblePage content directly
+ * This migration imports a small part of the UAQS FlexiblePage content directly
  * from a JSON file, but most of it is encapsulated in a series of entities
  * from the Paragraphs module, which get their own migrations (see above).
  */
-class UaDemoFlexiblePageMigration extends UaDemoNodeMigration {
+class UaqsDemoFlexiblePageMigration extends UaqsDemoNodeMigration {
 
   /**
    * Constructor.
@@ -148,15 +148,15 @@ class UaDemoFlexiblePageMigration extends UaDemoNodeMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'ua_flexible_page',
-      t('Make demonstration UA Flexible Page content from pre-defined data.'));
+    parent::__construct($arguments, 'uaqs_flexible_page',
+      t('Make demonstration UAQS Flexible Page content from pre-defined data.'));
 
     // Source data fields:
     $data_fields = array(
       'title' => t('Title'),
-      'ua_flexible_page_subtitle' => t('Sub-title'),
+      'uaqs_flexible_page_subtitle' => t('Sub-title'),
       'path' => t('URL path settings'),
-      'ua_main_content' => t('Main Content'),
+      'uaqs_main_content' => t('Main Content'),
     );
 
     // All the fields to migrate.
@@ -168,15 +168,15 @@ class UaDemoFlexiblePageMigration extends UaDemoNodeMigration {
     // The title and path have no prefixes.
     $this->addSimpleMappings(array('title'));
     $this->addSimpleMappings(array('path'));
-    $this->addFieldMapping('field_ua_flexible_page_subtitle', 'ua_flexible_page_subtitle');
+    $this->addFieldMapping('field_uaqs_flexible_page_subtitle', 'uaqs_flexible_page_subtitle');
 
-    // Paragraphs (UA Content Chunks).
-    $this->addFieldMapping('field_ua_main_content', 'ua_main_content')
+    // Paragraphs (UAQS Content Chunks).
+    $this->addFieldMapping('field_uaqs_main_content', 'uaqs_main_content')
          ->separator('|')
          ->sourceMigration(array(
-           'UaDemoPlainText',
-           'UaDemoHeadedText',
-           'UaDemoColumnImage',
+           'UaqsDemoPlainText',
+           'UaqsDemoHeadedText',
+           'UaqsDemoColumnImage',
          ));
   }
 

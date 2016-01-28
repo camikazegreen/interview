@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Add content to demonstrate the UA Navigation feature.
+ * Add content to demonstrate the UAQS Navigation feature.
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * The menu item contents come from a JSON file.
  */
-class UaDemoNavigationMigration extends UaDemoMenuLinksMigration {
+class UaqsDemoNavigationMigration extends UaqsDemoMenuLinksMigration {
 
   /**
    * Constructor.
@@ -20,7 +20,7 @@ class UaDemoNavigationMigration extends UaDemoMenuLinksMigration {
    */
   public function __construct(array $arguments) {
     parent::__construct($arguments, 'parent_id',
-      t('Make demonstration UA Navigation menu from pre-defined data.'));
+      t('Make demonstration UAQS Navigation menu from pre-defined data.'));
 
     // Documented lists of source data fields.
     $menu_fields = array(

@@ -2,15 +2,15 @@
 
 /**
  * @file
- * Add content to demonstrate the UA Featured Content feature.
+ * Add content to demonstrate the UAQS Featured Content feature.
  */
 
 /**
- * Makes demonstration UA Carousel Item node content from pre-defined data.
+ * Makes demonstration UAQS Carousel Item node content from pre-defined data.
  *
  * The field contents come from a JSON file.
  */
-class UaDemoCarouselItemMigration extends UaDemoNodeMigration {
+class UaqsDemoCarouselItemMigration extends UaqsDemoNodeMigration {
 
   /**
    * Constructor.
@@ -19,26 +19,26 @@ class UaDemoCarouselItemMigration extends UaDemoNodeMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'ua_carousel_item',
-      t('Make demonstration UA Carousel Item node content from pre-defined data.'));
+    parent::__construct($arguments, 'uaqs_carousel_item',
+      t('Make demonstration UAQS Carousel Item node content from pre-defined data.'));
 
     // Documented lists of source data fields.
-    // see ua_featured_content ua_featured_content.features.field_instance.inc
+    // see uaqs_featured_content uaqs_featured_content.features.field_instance.inc
     // First, the node title field...
     $title_field = array(
       'title' => t('Headline'),
     );
     // The single-value text fields...
     $single_value_fields = array(
-      'short_summary' => t('Short summary'),
-      'call_to_action' => t('Call to action link'),
+      'uaqs_summary_short' => t('Short summary'),
+      'uaqs_link' => t('Call to action link'),
     );
     // Titles for links...
     $link_title_fields = array(
-      'call_to_action_title' => t('Call to action link title'),
+      'uaqs_link_title' => t('Call to action link title'),
     );
     // Image fields...
-    $image_src_field = 'slide_image';
+    $image_src_field = 'uaqs_photo';
     $image_fields = array(
       $image_src_field => t('Slide image'),
     );
@@ -58,7 +58,7 @@ class UaDemoCarouselItemMigration extends UaDemoNodeMigration {
     }
 
     // Link titles.
-    $this->addFieldMapping('field_call_to_action:title', 'call_to_action_title');
+    $this->addFieldMapping('field_uaqs_link:title', 'uaqs_link_title');
 
     // Images.
     $image_dst_field = 'field_' . $image_src_field;

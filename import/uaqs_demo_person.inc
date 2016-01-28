@@ -2,19 +2,19 @@
 
 /**
  * @file
- * Add content to demonstrate the UA Person feature.
+ * Add content to demonstrate the UAQS Person feature.
  */
 
 /**
- * Makes demonstration UA Person content from pre-defined data.
+ * Makes demonstration UAQS Person content from pre-defined data.
  *
- * Most of the content in the UA Person Drupal nodes comes directly from a
+ * Most of the content in the UAQS Person Drupal nodes comes directly from a
  * JSON file, but the alt text for the images gets created on the fly by
  * concatenating the contents of the name fields.
  *
  * @see https://www.drupal.org/node/1152160
  */
-class UaDemoPersonMigration extends UaDemoNodeMigration {
+class UaqsDemoPersonMigration extends UaqsDemoNodeMigration {
 
   /**
    * Constructor.
@@ -23,26 +23,26 @@ class UaDemoPersonMigration extends UaDemoNodeMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'ua_person',
-      t('Make demonstration UA Person content from pre-defined data.'));
+    parent::__construct($arguments, 'uaqs_person',
+      t('Make demonstration UAQS Person content from pre-defined data.'));
 
     // Documented lists of source data fields:.
-    // See ua_person ua_person.features.field_instance.inc
+    // See uaqs_person uaqs_person.features.field_instance.inc
     // First, the single-value text fielda...
     $single_value_fields = array(
-      'ua_person_lname'  => t('Last Name'),
-      'ua_person_fname'  => t('First Name'),
-      'ua_person_email'  => t('E-mail'),
-      'ua_person_addresses' => t('Office location(s))'),
-      'ua_person_bio'    => t('Biography'),
+      'uaqs_lname'  => t('Last Name'),
+      'uaqs_fname'  => t('First Name'),
+      'uaqs_email'  => t('E-mail'),
+      'uaqs_addresses' => t('Office location(s))'),
+      'uaqs_bio'    => t('Biography'),
     );
     // Then the multi-value text fields...
     $multi_value_fields = array(
-      'ua_person_phones' => t('Phone Number(s)'),
-      'ua_person_titles' => t('Job Title(s)'),
+      'uaqs_phones' => t('Phone Number(s)'),
+      'uaqs_titles' => t('Job Title(s)'),
     );
     // Image fields need special treatment, isolate them...
-    $image_src_field = 'ua_person_photo';
+    $image_src_field = 'uaqs_photo';
     $image_fields = array(
       $image_src_field => t('Photo filename'),
       'image_alt_text' => t('Photo alt text (derived from other fields)'),
@@ -78,7 +78,7 @@ class UaDemoPersonMigration extends UaDemoNodeMigration {
          ->defaultValue($this->imagePath());
 
     // Allow limited HTML markup in the bio field.
-    $this->addFieldMapping('field_ua_person_bio:format')
+    $this->addFieldMapping('field_uaqs_bio:format')
          ->defaultValue('filtered_html');
   }
 
@@ -103,8 +103,8 @@ class UaDemoPersonMigration extends UaDemoNodeMigration {
 
     // Concatenate names and suffix into one derived field.
     $row->image_alt_text = implode(' ', array(
-      $row->ua_person_fname,
-      $row->ua_person_lname,
+      $row->uaqs_fname,
+      $row->uaqs_lname,
       'portrait',
     ));
     return TRUE;

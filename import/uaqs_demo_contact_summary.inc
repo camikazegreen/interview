@@ -2,18 +2,18 @@
 
 /**
  * @file
- * Add content to demonstrate a UA Contact Summary block.
+ * Add content to demonstrate a UAQS Contact Summary block.
  */
 
 /**
- * Makes demonstration UA Contact Summary bean content from pre-defined data.
+ * Makes demonstration UAQS Contact Summary bean content from pre-defined data.
  *
- * The UA Block Types feature for fieldable blocks based on the Bean module
+ * The UAQS Block Types feature for fieldable blocks based on the Bean module
  * provides the entity used for this.
  *
  * The field contents come from a JSON file.
  */
-class UaDemoContactSummaryMigration extends UaDemoBeanMigration {
+class UaqsDemoContactSummaryMigration extends UaqsDemoBeanMigration {
 
   /**
    * Constructor.
@@ -22,22 +22,22 @@ class UaDemoContactSummaryMigration extends UaDemoBeanMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'ua_contact_summary',
-      t('Make demonstration UA Contact Summary content from pre-defined data.'));
+    parent::__construct($arguments, 'uaqs_contact_summary',
+      t('Make demonstration UAQS Contact Summary content from pre-defined data.'));
 
     // Documented lists of source data fields.
-    // See ua_block_types.features.field_instance.inc.
+    // See uaqs_block_types.features.field_instance.inc.
     $data_fields = array(
       'label' => t('Descriptive title that the administrative interface uses'),
-      'ua_contact_address' => t('Postal address'),
-      'ua_contact_email' => t('Email address'),
-      'ua_contact_phone' => t('Phone number'),
+      'uaqs_contact_address' => t('Postal address'),
+      'uaqs_contact_mail_link' => t('Email address'),
+      'uaqs_contact_phone' => t('Phone number'),
     );
 
     // Titles for links...
     $link_title_fields = array(
-      'ua_contact_email_title' => t('Email address title'),
-      'ua_contact_phone_title' => t('Phone number title'),
+      'uaqs_contact_mail_link_title' => t('Email address title'),
+      'uaqs_contact_phone_title' => t('Phone number title'),
     );
 
     // All the fields to migrate.
@@ -49,13 +49,13 @@ class UaDemoContactSummaryMigration extends UaDemoBeanMigration {
     // JSON names to fields mappings.
     $this->addSimpleMappings(array('label'));
 
-    $this->addFieldMapping('field_ua_contact_address', 'ua_contact_address')
+    $this->addFieldMapping('field_uaqs_contact_address', 'uaqs_contact_address')
          ->separator('|');
-    $this->addFieldMapping('field_ua_contact_email', 'ua_contact_email');
-    $this->addFieldMapping('field_ua_contact_phone', 'ua_contact_phone');
+    $this->addFieldMapping('field_uaqs_contact_mail_link', 'uaqs_contact_mail_link');
+    $this->addFieldMapping('field_uaqs_contact_phone', 'uaqs_contact_phone');
 
-    $this->addFieldMapping('field_ua_contact_email:title', 'ua_contact_email_title');
-    $this->addFieldMapping('field_ua_contact_phone:title', 'ua_contact_phone_title');
+    $this->addFieldMapping('field_uaqs_contact_mail_link:title', 'uaqs_contact_mail_link_title');
+    $this->addFieldMapping('field_uaqs_contact_phone:title', 'uaqs_contact_phone_title');
   }
 
 }

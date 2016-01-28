@@ -15,7 +15,7 @@
  * additional files (PDF documents, JPEG and PNG images) are in a parallel
  * images subdirectory.
  */
-abstract class UaDemoLocalfileMigration extends Migration {
+abstract class UaqsDemoLocalfileMigration extends Migration {
 
   /**
    * Constructor.
@@ -34,7 +34,7 @@ abstract class UaDemoLocalfileMigration extends Migration {
    *   The path of our directory relative to DRUPAL_ROOT.
    */
   public function importRoot() {
-    return drupal_get_path('module', 'ua_demo') . '/import';
+    return drupal_get_path('module', 'uaqs_demo') . '/import';
   }
 
   /**
@@ -79,7 +79,7 @@ abstract class UaDemoLocalfileMigration extends Migration {
  *
  * @see https://www.drupal.org/node/1152160
  */
-abstract class UaDemoTermMigration extends UaDemoLocalfileMigration {
+abstract class UaqsDemoTermMigration extends UaqsDemoLocalfileMigration {
 
   /**
    * Constructor.
@@ -148,7 +148,7 @@ abstract class UaDemoTermMigration extends UaDemoLocalfileMigration {
  *
  * @see https://www.drupal.org/node/1007004
  */
-abstract class UaDemoIntKeyedMigration extends UaDemoLocalfileMigration {
+abstract class UaqsDemoIntKeyedMigration extends UaqsDemoLocalfileMigration {
 
   /**
    * Name and label for the source key.
@@ -210,11 +210,11 @@ abstract class UaDemoIntKeyedMigration extends UaDemoLocalfileMigration {
  * Defines a customized migration into Drupal nodes.
  *
  * The Migration module's standard MigrateDestinationNode is the basis of this
- * which makes some assumptions to match the rest of the UA Demo migrations.
+ * which makes some assumptions to match the rest of the UAQS Demo migrations.
  *
  * @see https://www.drupal.org/node/1349696
  */
-abstract class UaDemoNodeMigration extends UaDemoIntKeyedMigration {
+abstract class UaqsDemoNodeMigration extends UaqsDemoIntKeyedMigration {
 
   /**
    * Constructor.
@@ -260,7 +260,7 @@ abstract class UaDemoNodeMigration extends UaDemoIntKeyedMigration {
  *
  * @see https://www.drupal.org/node/2295973
  */
-class UaDemoMigrateDestinationBean extends MigrateDestinationEntity {
+class UaqsDemoMigrateDestinationBean extends MigrateDestinationEntity {
 
   /**
    * Implements MigrateDestination::getKeySchema().
@@ -493,9 +493,9 @@ class UaDemoMigrateDestinationBean extends MigrateDestinationEntity {
  * The Bean module does not yet support Migrate directly, but the missing
  * MigrateDestination class appears here.
  *
- * @see UaDemoMigrateDestinationBean
+ * @see UaqsDemoMigrateDestinationBean
  */
-abstract class UaDemoBeanMigration extends UaDemoIntKeyedMigration {
+abstract class UaqsDemoBeanMigration extends UaqsDemoIntKeyedMigration {
 
   /**
    * Constructor.
@@ -509,12 +509,12 @@ abstract class UaDemoBeanMigration extends UaDemoIntKeyedMigration {
    */
   public function __construct(array $arguments, $bundle, $description) {
     parent::__construct($arguments, 'id',
-      UaDemoMigrateDestinationBean::getKeySchema());
+      UaqsDemoMigrateDestinationBean::getKeySchema());
 
     $this->description = $description;
 
     // Destination.
-    $this->destination = new UaDemoMigrateDestinationBean($bundle);
+    $this->destination = new UaqsDemoMigrateDestinationBean($bundle);
 
     // These fields get placeholders, as in Nodes...
     $this->addFieldMapping('uid')
@@ -541,7 +541,7 @@ abstract class UaDemoBeanMigration extends UaDemoIntKeyedMigration {
  *
  * @see https://www.drupal.org/node/1900640
  */
-abstract class UaDemoFieldCollectionMigration extends UaDemoIntKeyedMigration {
+abstract class UaqsDemoFieldCollectionMigration extends UaqsDemoIntKeyedMigration {
 
   /**
    * Name and label for the foreign key.
@@ -600,7 +600,7 @@ abstract class UaDemoFieldCollectionMigration extends UaDemoIntKeyedMigration {
  * (which are use freestanding entities, distinct from nodes), but the
  * Paragraphs module itself defines a Migration api.
  */
-abstract class UaDemoParagraphsItemMigration extends UaDemoIntKeyedMigration {
+abstract class UaqsDemoParagraphsItemMigration extends UaqsDemoIntKeyedMigration {
 
   /**
    * Constructor.
@@ -622,7 +622,7 @@ abstract class UaDemoParagraphsItemMigration extends UaDemoIntKeyedMigration {
       $bundle,
       array(
         'field_name' => $field_name,
-        'text_format' => 'ua_phrasing_content',
+        'text_format' => 'uaqs_phrasing_content',
       )
     );
   }
@@ -633,10 +633,10 @@ abstract class UaDemoParagraphsItemMigration extends UaDemoIntKeyedMigration {
  * Defines a customized migration into Drupal menu items.
  *
  * The Migration module's standard MigrateDestinationMenuLinks is the basis of
- * this, which makes some assumptions to match the rest of the UA Demo
+ * this, which makes some assumptions to match the rest of the UAQS Demo
  * migrations.
  */
-abstract class UaDemoMenuLinksMigration extends UaDemoIntKeyedMigration {
+abstract class UaqsDemoMenuLinksMigration extends UaqsDemoIntKeyedMigration {
 
   /**
    * Name and label for the foreign key.
