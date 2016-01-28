@@ -31,7 +31,7 @@ function uaqs_event_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'ua-event-row';
+  $handler->display->display_options['style_options']['row_class'] = 'uaqs-event-row';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_uaqs_date']['id'] = 'field_uaqs_date';
@@ -40,7 +40,7 @@ function uaqs_event_views_default_views() {
   $handler->display->display_options['fields']['field_uaqs_date']['label'] = '';
   $handler->display->display_options['fields']['field_uaqs_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_uaqs_date']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['field_uaqs_date']['element_wrapper_class'] = 'ua-event-date';
+  $handler->display->display_options['fields']['field_uaqs_date']['element_wrapper_class'] = 'uaqs-event-date';
   $handler->display->display_options['fields']['field_uaqs_date']['settings'] = array(
     'format_type' => 'event_date',
     'fromto' => 'value',
@@ -60,7 +60,7 @@ function uaqs_event_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'ua-event-title';
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'uaqs-event-title';
   /* Sort criterion: Content: Event Date -  start date (field_uaqs_date) */
   $handler->display->display_options['sorts']['field_uaqs_date_value']['id'] = 'field_uaqs_date_value';
   $handler->display->display_options['sorts']['field_uaqs_date_value']['table'] = 'field_data_field_uaqs_date';
@@ -83,7 +83,7 @@ function uaqs_event_views_default_views() {
   /* Display: Full Calendar */
   $handler = $view->new_display('page', 'Full Calendar', 'page');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'ua-event-calendar';
+  $handler->display->display_options['css_class'] = 'uaqs-event-calendar';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'date_views_pager';
   $handler->display->display_options['defaults']['empty'] = FALSE;
@@ -104,7 +104,7 @@ function uaqs_event_views_default_views() {
   $handler->display->display_options['fields']['field_uaqs_date']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_uaqs_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_uaqs_date']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['field_uaqs_date']['element_wrapper_class'] = 'ua-event-date';
+  $handler->display->display_options['fields']['field_uaqs_date']['element_wrapper_class'] = 'uaqs-event-date';
   $handler->display->display_options['fields']['field_uaqs_date']['settings'] = array(
     'format_type' => 'abbr_month_only',
     'fromto' => 'value',
@@ -164,7 +164,7 @@ function uaqs_event_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'ua-event-title';
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'uaqs-event-title';
   /* Field: Content: Summary */
   $handler->display->display_options['fields']['field_uaqs_summary']['id'] = 'field_uaqs_summary';
   $handler->display->display_options['fields']['field_uaqs_summary']['table'] = 'field_data_field_uaqs_summary';
@@ -182,7 +182,7 @@ function uaqs_event_views_default_views() {
 [field_uaqs_date_1]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'ua-event-left-group';
+  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'uaqs-event-left-group';
   /* Field: Global text: right group */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
@@ -194,7 +194,7 @@ function uaqs_event_views_default_views() {
 [field_uaqs_summary]';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing_1']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['nothing_1']['element_wrapper_class'] = 'ua-event-right-group';
+  $handler->display->display_options['fields']['nothing_1']['element_wrapper_class'] = 'uaqs-event-right-group';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
@@ -213,7 +213,7 @@ function uaqs_event_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Events';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'ua-event-block-list';
+  $handler->display->display_options['css_class'] = 'uaqs-event-block-list';
   $handler->display->display_options['display_description'] = 'Use in sidebar or narrow display area';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;

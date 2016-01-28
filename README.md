@@ -1,10 +1,10 @@
-# UA Event #
+# UAQS Event #
 
 ## Overview ##
-This repository contains a module made with [Features](https://www.drupal.org/project/features) that provides a UA Event content type.
+This repository contains a module made with [Features](https://www.drupal.org/project/features) that provides a UAQS Event content type.
 
 ## Requirements ##
-- In order to use this feature, you must first download and enable the [Features](https://www.drupal.org/project/features) module. 
+- In order to use this feature, you must first download and enable the [Features](https://www.drupal.org/project/features) module.
 - Place the feature from this repository into your site's module folder and enable it as you would any other module.
 - Dependencies:
   - Drupal Core modules
@@ -27,7 +27,7 @@ Handy Drush dl/en command:
 ```
 #!
 
-drush en date date_all_day date_api date_repeat date_repeat_field email field_collection link 
+drush en date date_all_day date_api date_repeat date_repeat_field email field_collection link
 ```
 ## Views ##
 
@@ -48,17 +48,17 @@ To facilitate styling, the view displays have classes added to them via the View
 
 #### Styling classes are as follows: ####
 
-- **Full Calendar class:** *ua-event-calendar*
-- **Block class:** *ua-event-block-list*
-- **Row class:** *ua-event-row*
+- **Full Calendar class:** *uaqs-event-calendar*
+- **Block class:** *uaqs-event-block-list*
+- **Row class:** *uaqs-event-row*
 - **Field Classes (block):**
-    - Date  *ua-event-date*
-    - Title  *ua-event-title*
+    - Date  *uaqs-event-date*
+    - Title  *uaqs-event-title*
 - **Field Classes (page):**
-    - Date  *ua-event-date*
-    - Title  *ua-event-title*
-    - Left Global Text group (contains month and day)  *ua-event-left-group*
-    - Right Global Text group (contains title, time and summary) *ua-event-right-group*
+    - Date  *uaqs-event-date*
+    - Title  *uaqs-event-title*
+    - Left Global Text group (contains month and day)  *uaqs-event-left-group*
+    - Right Global Text group (contains title, time and summary) *uaqs-event-right-group*
 
 
 ### Screenshots ###
