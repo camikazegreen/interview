@@ -8,7 +8,7 @@ Provides content type and view for Featured Content Carousel component consisten
 
 - Provides 'featured_content' content type.
 - Provides carousel view for featured_content items.
-- Provides 'ua_hero_carousel' Flexslider preset.
+- Provides 'uaqs_hero_carousel' Flexslider preset.
 
 ## Packaged Dependencies
 

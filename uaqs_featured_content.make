@@ -1,7 +1,7 @@
 ; ------------------------------------------------------------------------------
 ; UAQS Featured Content Makefile
 ;
-; Downloads contrib module and library dependencies for UA Featured Content
+; Downloads contrib module and library dependencies for UAQS Featured Content
 ; component.
 ; ------------------------------------------------------------------------------
 
