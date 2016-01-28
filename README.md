@@ -4,7 +4,7 @@
 This repository contains a module made with [Features](https://www.drupal.org/project/features) that provides a UAQS News content type.
 
 ## Requirements ##
-- In order to use this feature, you must first download and enable the [Features](https://www.drupal.org/project/features) module. 
+- In order to use this feature, you must first download and enable the [Features](https://www.drupal.org/project/features) module.
 - Place the feature from this repository into your site's module folder and enable it as you would any other module.
 - Dependencies:
   - Drupal Core modules
@@ -52,4 +52,4 @@ To facilitate styling, the view displays have classes added to them via the View
 
 #### Styling classes are as follows: ####
 
-- **Row class:** *ua-news-row*
+- **Row class:** *uaqs-news-row*

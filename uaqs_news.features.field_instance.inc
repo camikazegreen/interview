@@ -413,7 +413,7 @@ function uaqs_news_field_default_field_instances() {
           'field_multiple_limit' => 1,
           'field_multiple_limit_offset' => 0,
           'image_link' => 'content',
-          'image_style' => 'ua_medium_square',
+          'image_style' => 'uaqs_medium_square',
         ),
         'type' => 'image',
         'weight' => 3,

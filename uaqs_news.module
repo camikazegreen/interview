@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the UA News feature.
+ * Code for the UAQS News feature.
  */
 
 include_once 'uaqs_news.features.inc';
