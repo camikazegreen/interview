@@ -36,7 +36,7 @@ function uaqs_person_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['view_mode'] = 'uaqs_card';
   $handler->display->display_options['row_options']['links'] = FALSE;
-  /* Field: Content: Photo */
+  /* Field: Field: Photo */
   $handler->display->display_options['fields']['field_uaqs_photo']['id'] = 'field_uaqs_photo';
   $handler->display->display_options['fields']['field_uaqs_photo']['table'] = 'field_data_field_uaqs_photo';
   $handler->display->display_options['fields']['field_uaqs_photo']['field'] = 'field_uaqs_photo';
@@ -154,7 +154,7 @@ function uaqs_person_views_default_views() {
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Photo */
+  /* Field: Field: Photo */
   $handler->display->display_options['fields']['field_uaqs_photo']['id'] = 'field_uaqs_photo';
   $handler->display->display_options['fields']['field_uaqs_photo']['table'] = 'field_data_field_uaqs_photo';
   $handler->display->display_options['fields']['field_uaqs_photo']['field'] = 'field_uaqs_photo';
