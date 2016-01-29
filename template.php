@@ -77,7 +77,9 @@ function ua_zen_footer_logo() {
 
 // http://getbootstrap.com/css/#overview-responsive-images
 function ua_zen_preprocess_image_style(&$vars) {
+  if(!module_exists('image_class')){
     $vars['attributes']['class'][] = 'img-responsive';
+  }
 }
 
 /**
