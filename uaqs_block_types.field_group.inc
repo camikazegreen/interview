@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function uaqs_block_types_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -21,10 +21,9 @@ function uaqs_block_types_field_group_info() {
   $field_group->parent_name = 'group_card';
   $field_group->data = array(
     'label' => 'Card Block',
-    'weight' => '12',
+    'weight' => '13',
     'children' => array(
       0 => 'field_uaqs_blurb_text',
-      1 => 'field_call_to_action',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -38,7 +37,37 @@ function uaqs_block_types_field_group_info() {
       ),
     ),
   );
-  $export['group_card_block_1|bean|uaqs_card|default'] = $field_group;
+  $field_groups['group_card_block_1|bean|uaqs_card|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_card_block_2|bean|uaqs_card|default';
+  $field_group->group_name = 'group_card_block_2';
+  $field_group->entity_type = 'bean';
+  $field_group->bundle = 'uaqs_card';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_card';
+  $field_group->data = array(
+    'label' => 'Card Block',
+    'weight' => '14',
+    'children' => array(
+      0 => 'field_uaqs_link',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Card Block',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card-block',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_card_block_2|bean|uaqs_card|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -67,7 +96,7 @@ function uaqs_block_types_field_group_info() {
       ),
     ),
   );
-  $export['group_card_header|bean|uaqs_card|default'] = $field_group;
+  $field_groups['group_card_header|bean|uaqs_card|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -82,7 +111,7 @@ function uaqs_block_types_field_group_info() {
     'label' => 'Card Title',
     'weight' => '7',
     'children' => array(
-      0 => 'title',
+      0 => 'title_field',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -96,7 +125,7 @@ function uaqs_block_types_field_group_info() {
       ),
     ),
   );
-  $export['group_card_title|bean|uaqs_card|default'] = $field_group;
+  $field_groups['group_card_title|bean|uaqs_card|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -111,9 +140,10 @@ function uaqs_block_types_field_group_info() {
     'label' => 'Card',
     'weight' => '2',
     'children' => array(
-      0 => 'field_slide_image',
+      0 => 'field_uaqs_photo',
       1 => 'group_card_block_1',
       2 => 'group_card_header',
+      3 => 'group_card_block_2',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -127,7 +157,14 @@ function uaqs_block_types_field_group_info() {
       ),
     ),
   );
-  $export['group_card|bean|uaqs_card|default'] = $field_group;
+  $field_groups['group_card|bean|uaqs_card|default'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Card');
+  t('Card Block');
+  t('Card Header');
+  t('Card Title');
+
+  return $field_groups;
 }
