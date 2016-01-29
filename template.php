@@ -177,6 +177,14 @@ function ua_zen_preprocess_page(&$variables, $hook) {
       '#weight' => '-10',
       '#theme_wrappers' => array('region'));
   }
+  // Primary nav.
+  $variables['primary_nav'] = FALSE;
+  if ($variables['main_menu']) {
+    // Build links.
+    $variables['primary_nav'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+    // Provide default theme wrapper function.
+    $variables['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
+  }
 }
 
 /**
@@ -355,18 +363,23 @@ function ua_zen_menu_local_tasks(&$variables) {
   return $output;
 }
 
+/**
+ *  Theme wrapper function for the ua_second_level menu block.
+ */
 function ua_zen_menu_tree__menu_block__ua_second_level(array $variables) {
 
   $output = '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
 
   return $output;
 }
+
 /**
- *  * UA Zen theme wrapper function for the primary menu links.
- *   */
-function ua_zen_menu_tree__main_menu(&$variables) {
+ *  Theme wrapper function for the primary menu links.
+ */
+function ua_zen_menu_tree__primary(&$variables) {
       return '<ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul><div class="clearfix"></div>';
 }
+
 /**
  * Overrides theme_menu_link().
  */

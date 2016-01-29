@@ -37,7 +37,7 @@
       <?php print render($page['header']); ?>
 
     </div> <!-- /.container -->
-    <?php if (!empty($page['navigation'])) : ?>
+    <?php if (!empty($primary_nav) || !empty($page['navigation'])): ?>
     <div class="container">
       <nav id="main_nav" class="navbar navbar-default navbar-static-top">
           <div class="navbar-header">
@@ -47,11 +47,16 @@
             </button>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
-            <?php print render($page['navigation']); ?>
+            <?php if (!empty($primary_nav)): ?>
+              <?php print render($primary_nav); ?>
+            <?php endif; ?>
+            <?php if (!empty($page['navigation'])): ?>
+              <?php print render($page['navigation']); ?>
+            <?php endif; ?>
           </div>
         <!-- /.nav-collapse-->
       </nav>
-    </div>
+    </div> <!-- /.container -->
       <?php endif; ?>
   </header>
 
