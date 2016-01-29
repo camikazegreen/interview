@@ -10,7 +10,8 @@
 function uaqs_block_types_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'bean-uaqs_captioned_image-field_uaqs_image_author'.
+  // Exported field_instance:
+  // 'bean-uaqs_captioned_image-field_uaqs_image_author'.
   $field_instances['bean-uaqs_captioned_image-field_uaqs_image_author'] = array(
     'bundle' => 'uaqs_captioned_image',
     'default_value' => NULL,
@@ -20,7 +21,10 @@ function uaqs_block_types_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'link_default',
         'weight' => 3,
       ),
@@ -61,7 +65,8 @@ function uaqs_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-uaqs_captioned_image-field_uaqs_image_caption'.
+  // Exported field_instance:
+  // 'bean-uaqs_captioned_image-field_uaqs_image_caption'.
   $field_instances['bean-uaqs_captioned_image-field_uaqs_image_caption'] = array(
     'bundle' => 'uaqs_captioned_image',
     'default_value' => NULL,
@@ -71,7 +76,10 @@ function uaqs_block_types_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'text_default',
         'weight' => 5,
       ),
@@ -95,7 +103,8 @@ function uaqs_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-uaqs_captioned_image-field_uaqs_image_license'.
+  // Exported field_instance:
+  // 'bean-uaqs_captioned_image-field_uaqs_image_license'.
   $field_instances['bean-uaqs_captioned_image-field_uaqs_image_license'] = array(
     'bundle' => 'uaqs_captioned_image',
     'default_value' => NULL,
@@ -105,7 +114,10 @@ function uaqs_block_types_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'link_default',
         'weight' => 4,
       ),
@@ -146,7 +158,8 @@ function uaqs_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-uaqs_captioned_image-field_uaqs_image_title'.
+  // Exported field_instance:
+  // 'bean-uaqs_captioned_image-field_uaqs_image_title'.
   $field_instances['bean-uaqs_captioned_image-field_uaqs_image_title'] = array(
     'bundle' => 'uaqs_captioned_image',
     'default_value' => NULL,
@@ -156,7 +169,10 @@ function uaqs_block_types_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'link_default',
         'weight' => 2,
       ),
@@ -197,7 +213,8 @@ function uaqs_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-uaqs_captioned_image-field_uaqs_isolated_image'.
+  // Exported field_instance:
+  // 'bean-uaqs_captioned_image-field_uaqs_isolated_image'.
   $field_instances['bean-uaqs_captioned_image-field_uaqs_isolated_image'] = array(
     'bundle' => 'uaqs_captioned_image',
     'deleted' => 0,
@@ -207,6 +224,9 @@ function uaqs_block_types_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'class' => '',
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
           'image_link' => '',
           'image_style' => 'large_tile',
         ),
@@ -241,8 +261,45 @@ function uaqs_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-uaqs_card-field_call_to_action'.
-  $field_instances['bean-uaqs_card-field_call_to_action'] = array(
+  // Exported field_instance: 'bean-uaqs_card-field_uaqs_blurb_text'.
+  $field_instances['bean-uaqs_card-field_uaqs_blurb_text'] = array(
+    'bundle' => 'uaqs_card',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'bean',
+    'field_name' => 'field_uaqs_blurb_text',
+    'label' => 'Text',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'bean-uaqs_card-field_uaqs_link'.
+  $field_instances['bean-uaqs_card-field_uaqs_link'] = array(
     'bundle' => 'uaqs_card',
     'default_value' => NULL,
     'deleted' => 0,
@@ -251,20 +308,23 @@ function uaqs_block_types_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'bean',
-    'field_name' => 'field_call_to_action',
-    'label' => 'Call to Action',
+    'field_name' => 'field_uaqs_link',
+    'label' => 'Call to action',
     'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
-        'configurable_class' => 0,
+        'configurable_class' => 1,
         'configurable_title' => 0,
         'rel' => '',
         'target' => 'default',
@@ -288,12 +348,12 @@ function uaqs_block_types_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
-  // Exported field_instance: 'bean-uaqs_card-field_slide_image'.
-  $field_instances['bean-uaqs_card-field_slide_image'] = array(
+  // Exported field_instance: 'bean-uaqs_card-field_uaqs_photo'.
+  $field_instances['bean-uaqs_card-field_uaqs_photo'] = array(
     'bundle' => 'uaqs_card',
     'deleted' => 0,
     'description' => '',
@@ -302,16 +362,19 @@ function uaqs_block_types_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'class' => '',
+          'field_multiple_limit' => 1,
+          'field_multiple_limit_offset' => 0,
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'uaqs_fixed_banner_460',
         ),
         'type' => 'image',
-        'weight' => 13,
+        'weight' => 12,
       ),
     ),
     'entity_type' => 'bean',
-    'field_name' => 'field_slide_image',
-    'label' => 'Slide Image',
+    'field_name' => 'field_uaqs_photo',
+    'label' => 'Photo',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
@@ -336,37 +399,46 @@ function uaqs_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-uaqs_card-field_uaqs_blurb_text'.
-  $field_instances['bean-uaqs_card-field_uaqs_blurb_text'] = array(
+  // Exported field_instance: 'bean-uaqs_card-title_field'.
+  $field_instances['bean-uaqs_card-title_field'] = array(
     'bundle' => 'uaqs_card',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'The Title of the block.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 2,
+        'module' => 'title',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'title_class' => 'card-title',
+          'title_link' => '',
+          'title_style' => 'h4',
+        ),
+        'type' => 'title_linked',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'bean',
-    'field_name' => 'field_uaqs_blurb_text',
-    'label' => 'Text',
-    'required' => 0,
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => FALSE,
     'settings' => array(
+      'hide_label' => array(
+        'entity' => 'entity',
+        'page' => 'page',
+      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'size' => 60,
       ),
-      'type' => 'text_textarea',
-      'weight' => 4,
+      'type' => 'text_textfield',
+      'weight' => 1,
     ),
   );
 
@@ -381,7 +453,10 @@ function uaqs_block_types_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'text_default',
         'weight' => 0,
       ),
@@ -405,7 +480,8 @@ function uaqs_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-uaqs_contact_summary-field_uaqs_contact_mail_link'.
+  // Exported field_instance:
+  // 'bean-uaqs_contact_summary-field_uaqs_contact_mail_link'.
   $field_instances['bean-uaqs_contact_summary-field_uaqs_contact_mail_link'] = array(
     'bundle' => 'uaqs_contact_summary',
     'default_value' => NULL,
@@ -416,7 +492,10 @@ function uaqs_block_types_field_default_field_instances() {
       'default' => array(
         'label' => 'inline',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'link_default',
         'weight' => 1,
       ),
@@ -457,7 +536,8 @@ function uaqs_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-uaqs_contact_summary-field_uaqs_contact_phone_link'.
+  // Exported field_instance:
+  // 'bean-uaqs_contact_summary-field_uaqs_contact_phone_link'.
   $field_instances['bean-uaqs_contact_summary-field_uaqs_contact_phone_link'] = array(
     'bundle' => 'uaqs_contact_summary',
     'default_value' => NULL,
@@ -467,7 +547,10 @@ function uaqs_block_types_field_default_field_instances() {
       'default' => array(
         'label' => 'inline',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'link_default',
         'weight' => 2,
       ),
@@ -508,7 +591,8 @@ function uaqs_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-uaqs_illustrated_blurb-field_uaqs_blurb_text'.
+  // Exported field_instance:
+  // 'bean-uaqs_illustrated_blurb-field_uaqs_blurb_text'.
   $field_instances['bean-uaqs_illustrated_blurb-field_uaqs_blurb_text'] = array(
     'bundle' => 'uaqs_illustrated_blurb',
     'default_value' => NULL,
@@ -518,7 +602,10 @@ function uaqs_block_types_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'text_default',
         'weight' => 2,
       ),
@@ -542,7 +629,8 @@ function uaqs_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-uaqs_illustrated_blurb-field_uaqs_read_more'.
+  // Exported field_instance:
+  // 'bean-uaqs_illustrated_blurb-field_uaqs_read_more'.
   $field_instances['bean-uaqs_illustrated_blurb-field_uaqs_read_more'] = array(
     'bundle' => 'uaqs_illustrated_blurb',
     'default_value' => NULL,
@@ -552,7 +640,10 @@ function uaqs_block_types_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'link_default',
         'weight' => 3,
       ),
@@ -604,6 +695,9 @@ function uaqs_block_types_field_default_field_instances() {
         'label' => 'above',
         'module' => 'image',
         'settings' => array(
+          'class' => '',
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
           'image_link' => 'file',
           'image_style' => 'medium_inset_square',
         ),
@@ -649,6 +743,9 @@ function uaqs_block_types_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'class' => '',
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
           'image_link' => '',
           'image_style' => 'medium_tile',
         ),
@@ -694,7 +791,10 @@ function uaqs_block_types_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'link_default',
         'weight' => 0,
       ),
@@ -745,7 +845,10 @@ function uaqs_block_types_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'text_default',
         'weight' => 1,
       ),
@@ -779,7 +882,10 @@ function uaqs_block_types_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'text_default',
         'weight' => 1,
       ),
@@ -813,7 +919,10 @@ function uaqs_block_types_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
         'type' => 'link_default',
         'weight' => 2,
       ),
@@ -861,7 +970,7 @@ function uaqs_block_types_field_default_field_instances() {
   t('Address');
   t('An image to support the text (which should still make sense if the image is absent). Provide image credits and accessibility support through the Alt and Title information.');
   t('Author');
-  t('Call to Action');
+  t('Call to action');
   t('Caption');
   t('Email');
   t('General email address for this contact.<br />
@@ -875,11 +984,13 @@ function uaqs_block_types_field_default_field_instances() {
   t('Link to an external or internal web location (for accessibility, make sure the link title makes sense without an associated image).');
   t('One or two paragraphs of text.');
   t('Phone');
+  t('Photo');
   t('Read More');
   t('Short piece of text (only one or two paragraphs).');
-  t('Slide Image');
   t('Source title');
   t('Text');
+  t('The Title of the block.');
+  t('Title');
   t('Title for the image (original title preferred), optionally linked to the best source for the original.');
   t('Use to credit to the original author or authors of the image, and optionally link to a URL with more information.');
 

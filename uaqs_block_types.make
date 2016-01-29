@@ -17,4 +17,3 @@ defaults[projects][subdir] = contrib
 ; ------------------------------------------------------------------------------
 
 projects[bean][version] = 1.9
-projects[bean][patch][] = "https://www.drupal.org/files/issues/bean-title-should-be-movable-in-display-settings-185841-drupal-7-ua_quickstart.patch"
