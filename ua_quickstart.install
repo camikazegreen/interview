@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Installation code for UA Quickstart.
+ * Installation code for UA QuickStart.
  */
 
 /**
@@ -126,7 +126,7 @@ function ua_quickstart_install() {
 
   // Enable the demo content here, not via ua_quickstart.info.
   // See https://www.drupal.org/node/1901116 for the reasons.
-  if (module_enable(array('ua_demo'))) {
+  if (module_enable(array('uaqs_demo'))) {
     ua_quickstart_demo_blocks($default_theme, $admin_theme);
   }
 }
@@ -230,7 +230,7 @@ function ua_quickstart_default_blocks($default_theme, $admin_theme) {
   ua_quickstart_block_db_insert($default_theme, 'search', $search_blocks, $base_common);
 
   // UA Navigation Feature Module.
-  if (module_exists('ua_navigation')) {
+  if (module_exists('uaqs_navigation')) {
     $menu_blocks = array(
       'ua-second-level' => array(
         'region' => 'sidebar_first',
@@ -240,9 +240,9 @@ function ua_quickstart_default_blocks($default_theme, $admin_theme) {
   }
 
   // UA Featured Content.
-  if (module_exists('ua_featured_content')) {
+  if (module_exists('uaqs_featured_content')) {
     $carousel_blocks = array(
-      'ua_hero_carousel-hero_block' => array(
+      'uaqs_hero_carousel-hero_block' => array(
         'region' => 'content_featured',
         'title' => '<none>',
       ),
@@ -251,9 +251,9 @@ function ua_quickstart_default_blocks($default_theme, $admin_theme) {
   }
 
   // UA News.
-  if (module_exists('ua_news')) {
+  if (module_exists('uaqs_news')) {
     $news_blocks = array(
-      'ua_news-home_3_col_news_block' => array(
+      'uaqs_news-home_3_col_news_block' => array(
         'region' => 'content',
         'weight' => 10,
       ),
@@ -262,9 +262,9 @@ function ua_quickstart_default_blocks($default_theme, $admin_theme) {
   }
 
   // UA Event.
-  if (module_exists('ua_event')) {
+  if (module_exists('uaqs_event')) {
     $event_blocks = array(
-      'ua_events-block' => array(
+      'uaqs_events-block' => array(
         'region' => 'content',
         'title' => 'Events',
         'weight' => 20,
@@ -293,7 +293,7 @@ function ua_quickstart_demo_blocks($default_theme, $admin_theme) {
   );
 
   // Enable the contact summary block in the footer_sub region.
-  if (module_exists('ua_block_types')) {
+  if (module_exists('uaqs_block_types')) {
     $contact_delta = 'main-unit-or-department-contact-';
     $contact_summary_blocks = array(
       $contact_delta => array(

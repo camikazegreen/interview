@@ -1,9 +1,9 @@
 #!/bin/bash
-# Script to prepare and tag releases for UA Quickstart distribution and
+# Script to prepare and tag releases for UA QuickStart distribution and
 # related proejcts.
 #
 # This script should be executed from within an up-to-date working-copy of the
-# UA Quickstart git repository.
+# UA QuickStart git repository.
 #
 # To use this script, you must have Git Release Notes for Drush installed
 # @see https://drupal.org/project/grn
@@ -51,16 +51,16 @@ export UAQSTMPTAG="$UAQSNEWTAG"-tmp
 mkdir release_tmp
 cd release_tmp
 
-# Define list of UA Quickstart components to tag releases for.
+# Define list of UA QuickStart components to tag releases for.
 # Option 1: List automatically derived from drupal-org.make.
 export UAQSPROJECTS=`grep 'https://bitbucket.org/' ../drupal-org.make | awk '{ print $3; }' | sed 's/.*ua_drupal\/\(.*\)\.git.*/\1/'` ;
 # Option 2: Manual list.
-#export UAQSPROJECTS="ua_block_types ua_cas ua_core ua_demo ua_event ua_featured_content ua_google_tag ua_navigation ua_news ua_page ua_person ua_program ua_publication ua_unit ua_zen" ;
+#export UAQSPROJECTS="uaqs_block_types ua_cas uaqs_core uaqs_demo uaqs_event uaqs_featured_content uaqs_fields ua_google_tag uaqs_navigation uaqs_news uaqs_page uaqs_person uaqs_program uaqs_publication uaqs_unit ua_zen" ;
 
 #
-# Update CHANGELOG and tag new release for each UA Quickstart component.
+# Update CHANGELOG and tag new release for each UA QuickStart component.
 #
-printf "Preparing to tag releases for individual UA Quickstart components...\n"
+printf "Preparing to tag releases for individual UA QuickStart components...\n"
 for r in $UAQSPROJECTS ; do
   printf "\nCloning $r...\n"
   git clone --quiet "git@bitbucket.org:ua_drupal/$r.git"
@@ -116,7 +116,7 @@ for r in $UAQSPROJECTS ; do
     git push --tags
   fi
 
-  printf "Updating $r references in UA Quickstart...\n"
+  printf "Updating $r references in UA QuickStart...\n"
   export UAQSNEWHASH=`git rev-parse --short HEAD`
   # Update project tag reference in distro's drupal.org-release.make file.
   if [ "$UAQSOLDREF" == "$1" ]; then
@@ -133,11 +133,11 @@ for r in $UAQSPROJECTS ; do
 done
 
 #
-# Prepare UA Quickstart distribution for release, tag new release, then restore
+# Prepare UA QuickStart distribution for release, tag new release, then restore
 # files to their default dev state. 
 #
 
-printf "\nPreparing to tag release for UA Quickstart Distribution...\n"
+printf "\nPreparing to tag release for UA QuickStart Distribution...\n"
 # Navigate to root of ua_quickstart directory.
 cd ..
 printf "Updating CHANGELOG.txt...\n"
@@ -172,7 +172,7 @@ git add drupal-org-release.make drupal-org.make build-ua_quickstart.make ua_quic
 git commit -m "Preparing to tag $UAQSNEWTAG."
 git tag "$UAQSNEWTAG"
 
-printf "Restoring UA Quickstart to default dev state...\n"
+printf "Restoring UA QuickStart to default dev state...\n"
 # Restore dev version of drupal-org.make file with uncommitted modifications.
 mv drupal-org.make.bak drupal-org.make
 # Restore build-ua_quickstart.make to default dev state.
