@@ -31,6 +31,7 @@ features[field_group][] = group_card|node|uaqs_person|uaqs_card
 features[field_group][] = group_column_left|node|uaqs_person|teaser
 features[field_group][] = group_column_middle|node|uaqs_person|teaser
 features[field_group][] = group_column_right|node|uaqs_person|teaser
+features[field_group][] = group_footer|node|uaqs_person|teaser
 features[field_group][] = group_left|node|uaqs_person|full
 features[field_group][] = group_right|node|uaqs_person|full
 features[field_group][] = group_row|node|uaqs_person|full

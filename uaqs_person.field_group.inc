@@ -112,7 +112,7 @@ function uaqs_person_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'uaqs_person';
   $field_group->mode = 'teaser';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_footer';
   $field_group->data = array(
     'label' => 'Left Column',
     'weight' => '0',
@@ -142,13 +142,13 @@ function uaqs_person_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'uaqs_person';
   $field_group->mode = 'teaser';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_footer';
   $field_group->data = array(
     'label' => 'Middle Column',
     'weight' => '1',
     'children' => array(
-      0 => 'title_field',
-      1 => 'field_uaqs_titles',
+      0 => 'field_uaqs_titles',
+      1 => 'title_field',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -173,7 +173,7 @@ function uaqs_person_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'uaqs_person';
   $field_group->mode = 'teaser';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_footer';
   $field_group->data = array(
     'label' => 'Right Column',
     'weight' => '2',
@@ -195,6 +195,38 @@ function uaqs_person_field_group_info() {
     ),
   );
   $field_groups['group_column_right|node|uaqs_person|teaser'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_footer|node|uaqs_person|teaser';
+  $field_group->group_name = 'group_footer';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_person';
+  $field_group->mode = 'teaser';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Row',
+    'weight' => '3',
+    'children' => array(
+      0 => 'group_column_left',
+      1 => 'group_column_middle',
+      2 => 'group_column_right',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Row',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'row border-separator',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_footer|node|uaqs_person|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -368,6 +400,7 @@ function uaqs_person_field_group_info() {
   t('Left Column');
   t('Middle Column');
   t('Right Column');
+  t('Row');
   t('Top Row');
 
   return $field_groups;
