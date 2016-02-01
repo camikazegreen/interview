@@ -36,6 +36,12 @@ projects[token][version] = 1.6
 
 projects[views][version] = 3.13
 
+projects[views_bootstrap][version] = 3.x-dev
+projects[views_bootstrap][download][type] = git
+projects[views_bootstrap][download][revision] = 9c9a049
+projects[views_bootstrap][download][branch] = 7.x-3.x
+projects[views_bootstrap][patch][2203111] = http://drupal.org/files/issues/views_bootstrap-breakpoint-control-2203111-92-7.x.patch
+
 
 ; ------------------------------------------------------------------------------
 ; Commonly used field modules
