@@ -1,6 +1,6 @@
-name = UA Quickstart
-distribution_name = UA Quickstart
-description = Install Drupal with the UA Quickstart install profile.
+name = UA QuickStart
+distribution_name = UA QuickStart
+description = Install Drupal with the UA QuickStart install profile.
 core = 7.x
 exclusive = TRUE
 
@@ -41,22 +41,22 @@ dependencies[] = update
 ;dependencies[] = statistics
 ;dependencies[] = syslog
 
-; UA Modules
+; UAQS Modules
 ; ----------------
 dependencies[] = ua_cas
-dependencies[] = ua_core
-dependencies[] = ua_block_types
-dependencies[] = ua_content_chunks
-dependencies[] = ua_featured_content
+dependencies[] = uaqs_core
+dependencies[] = uaqs_block_types
+dependencies[] = uaqs_content_chunks
+dependencies[] = uaqs_featured_content
 dependencies[] = ua_google_tag
-dependencies[] = ua_navigation
-dependencies[] = ua_page
-dependencies[] = ua_person
-dependencies[] = ua_unit
-dependencies[] = ua_news
-dependencies[] = ua_event
-dependencies[] = ua_publication
-dependencies[] = ua_program
+dependencies[] = uaqs_navigation
+dependencies[] = uaqs_page
+dependencies[] = uaqs_person
+dependencies[] = uaqs_unit
+dependencies[] = uaqs_news
+dependencies[] = uaqs_event
+dependencies[] = uaqs_publication
+dependencies[] = uaqs_program
 
 ; 'Soft' contrib module dependencies
 ; These will be enabled by the install profile but can still be disabled.

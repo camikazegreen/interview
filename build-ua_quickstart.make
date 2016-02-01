@@ -1,5 +1,5 @@
 ; Use this file to build a full distribution including Drupal core and the
-; UA Quickstart dependencies using the following command:
+; UA QuickStart dependencies using the following command:
 ;
 ; drush make build-ua_quickstart.make <target directory>
 

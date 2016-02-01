@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Enables modules and site configuration for a UA Quickstart site installation.
+ * Enables modules and site configuration for a UA QuickStart site installation.
  */
 
 /**
