@@ -10,7 +10,7 @@ projects[uaqs_block_types][type] = module
 projects[uaqs_block_types][subdir] = custom
 projects[uaqs_block_types][download][type] = git
 projects[uaqs_block_types][download][branch] = 7.x-1.x
-projects[uaqs_block_types][download][revision] = 2269ab8
+projects[uaqs_block_types][download][revision] = 18e2057
 projects[uaqs_block_types][download][url] = https://bitbucket.org/ua_drupal/uaqs_block_types.git
 
 projects[ua_cas][type] = module
