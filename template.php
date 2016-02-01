@@ -366,9 +366,9 @@ function ua_zen_menu_local_tasks(&$variables) {
 }
 
 /**
- *  Theme wrapper function for the ua_second_level menu block.
+ *  Theme wrapper function for the uaqs_second_level menu block.
  */
-function ua_zen_menu_tree__menu_block__ua_second_level(array $variables) {
+function ua_zen_menu_tree__menu_block__uaqs_second_level(array $variables) {
 
   $output = '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
 
