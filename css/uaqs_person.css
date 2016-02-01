@@ -12,3 +12,7 @@
     padding-bottom: 1rem;
     border-bottom: 0px solid #EEF1F1;
 }
+
+.node-uaqs-person a[href^="mailto"] {
+    word-break:break-all;
+}
