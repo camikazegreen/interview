@@ -17,4 +17,8 @@ function uaqs_news_entity_info_alter(&$entity_info) {
     'label' => t('UA Bootstrap Card'),
     'custom settings' => FALSE,
   );
+  $entity_info['bean']['view modes']['uaqs_card'] = array(
+    'label' => t('UA Bootstrap Card Overlay'),
+    'custom settings' => FALSE,
+  );
 }
