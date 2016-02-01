@@ -21,7 +21,7 @@ class UaqsDemoPublicationTermMigration extends UaqsDemoTermMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'research_areas',
+    parent::__construct($arguments, 'uaqs_research_areas',
       t('Add demonstration UAQS Publication taxonomy terms to a vocabulary.'));
   }
 
