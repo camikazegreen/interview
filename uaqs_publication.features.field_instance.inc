@@ -10,6 +10,92 @@
 function uaqs_publication_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-uaqs_pub-field_uaqs_body'.
+  $field_instances['node-uaqs_pub-field_uaqs_body'] = array(
+    'bundle' => 'uaqs_pub',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_uaqs_body',
+    'label' => 'Description',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 15,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-uaqs_pub-field_uaqs_photo'.
+  $field_instances['node-uaqs_pub-field_uaqs_photo'] = array(
+    'bundle' => 'uaqs_pub',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'class' => '',
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_uaqs_photo',
+    'label' => 'Publication Photo',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'file_directory' => 'images/publications',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '2 MB',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-uaqs_pub-field_uaqs_pub_addinfo'.
   $field_instances['node-uaqs_pub-field_uaqs_pub_addinfo'] = array(
     'bundle' => 'uaqs_pub',
@@ -198,92 +284,6 @@ function uaqs_publication_field_default_field_instances() {
       ),
       'type' => 'taxonomy_autocomplete',
       'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-uaqs_pub-field_uaqs_body'.
-  $field_instances['node-uaqs_pub-field_uaqs_body'] = array(
-    'bundle' => 'uaqs_pub',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-        ),
-        'type' => 'text_default',
-        'weight' => 3,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_uaqs_body',
-    'label' => 'Description',
-    'required' => 0,
-    'settings' => array(
-      'display_summary' => 0,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 15,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'node-uaqs_pub-field_uaqs_photo'.
-  $field_instances['node-uaqs_pub-field_uaqs_photo'] = array(
-    'bundle' => 'uaqs_pub',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'class' => '',
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 5,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_uaqs_photo',
-    'label' => 'Publication Photo',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 1,
-      'default_image' => 0,
-      'file_directory' => 'images/publications',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '2 MB',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 6,
     ),
   );
 
