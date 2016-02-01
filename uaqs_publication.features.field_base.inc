@@ -112,7 +112,7 @@ function uaqs_publication_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'research_categories',
+          'vocabulary' => 'uaqs_research_areas',
           'parent' => 0,
         ),
       ),

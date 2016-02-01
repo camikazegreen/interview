@@ -9,9 +9,9 @@
  */
 function uaqs_publication_taxonomy_default_vocabularies() {
   return array(
-    'research_categories' => array(
+    'uaqs_research_areas' => array(
       'name' => 'Research Categories',
-      'machine_name' => 'research_categories',
+      'machine_name' => 'uaqs_research_areas',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
