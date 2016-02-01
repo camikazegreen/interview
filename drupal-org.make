@@ -38,7 +38,7 @@ projects[uaqs_demo][type] = module
 projects[uaqs_demo][subdir] = custom
 projects[uaqs_demo][download][type] = git
 projects[uaqs_demo][download][branch] = 7.x-1.x
-projects[uaqs_demo][download][revision] = 246d503
+projects[uaqs_demo][download][revision] = 5a7824c
 projects[uaqs_demo][download][url] = https://bitbucket.org/ua_drupal/uaqs_demo.git
 
 projects[uaqs_event][type] = module
@@ -108,7 +108,7 @@ projects[uaqs_publication][type] = module
 projects[uaqs_publication][subdir] = custom
 projects[uaqs_publication][download][type] = git
 projects[uaqs_publication][download][branch] = 7.x-1.x
-projects[uaqs_publication][download][revision] = 6a242db
+projects[uaqs_publication][download][revision] = 121a8d0
 projects[uaqs_publication][download][url] = https://bitbucket.org/ua_drupal/uaqs_publication.git
 
 projects[uaqs_unit][type] = module
