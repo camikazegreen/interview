@@ -18,6 +18,7 @@ When this module is used as part of a Drupal distribution (such as [UA Quickstar
 - [Pathauto](https://www.drupal.org/project/pathauto)
 - [Token](https://www.drupal.org/project/token)
 - [Views](https://www.drupal.org/project/views)
+- [Views Bootstrap](https://www.drupal.org/project/views_bootstrap)
 
 #### Common Contrib Field Modules
 - [Automatic entity label](https://www.drupal.org/project/auto_entitylabel)
