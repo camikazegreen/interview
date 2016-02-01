@@ -37,6 +37,12 @@ function uaqs_person_strongarm() {
       'uaqs_card' => array(
         'custom_settings' => TRUE,
       ),
+      'uaqs_featured_content' => array(
+        'custom_settings' => FALSE,
+      ),
+      'uaqs_teaser_list' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

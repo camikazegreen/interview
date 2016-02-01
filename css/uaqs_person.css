@@ -1,89 +1,18 @@
 /** View Display **/
 .uaqs-person-row {
+    margin: 0 0 1rem;
+    padding-bottom: 16px;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid hsl(180, 10%, 94%);
+}
+
+.uaqs-person-row:last-child {
     margin: 0 0 2rem;
     padding-bottom: 16px;
     padding-bottom: 1rem;
-    border-bottom: 2px solid #EEF1F1;
+    border-bottom: 0px solid #EEF1F1;
 }
 
-.uaqs-person-row .uaqs-person-name {
-    font-size: 1.4rem;
-}
-
-.uaqs-person-row .uaqs-person-job-titles {
-    margin: 0 0 1rem;
-}
-
-.uaqs-person-row .uaqs-person-job-titles ul,
-.uaqs-person-row .uaqs-person-phone ul {
-    padding: 0;
-    margin: 0;
-}
-
-.uaqs-person-row .uaqs-person-job-titles ul li,
-.uaqs-person-row .uaqs-person-phone ul li {
-    list-style-type: none;
-}
-
-.uaqs-person-list .uaqs-person-row .uaqs-person-col {
-    margin-top: 16px;
-    margin-top: 1rem;
-}
-
-.uaqs-person-list .uaqs-person-row .uaqs-person-col h3 {
-    margin-top: 0;
-}
-
-@media screen and (min-width: 50em) {
-    .uaqs-person-grid .uaqs-person-row {
-        display: inline-block;
-        vertical-align: top;
-        width: 49%;
-        padding-bottom: ;
-        border-bottom: 0 none;
-    }
-}
-
-@media screen and (min-width: 75em) {
-    .uaqs-person-grid .uaqs-person-row:nth-child(3n+2) {
-        margin-right: 4%;
-        margin-left: 4%;
-    }
-    .uaqs-person-grid .uaqs-person-row {
-        display: inline-block;
-        vertical-align: top;
-        width: 30%;
-    }
-}
-
-/** Node Display **/
-.node-uaqs-person .field-name-field-uaqs-person-titles {
-    color: #49595e;
-    font-size: 1.4rem;
-    font-weight: 300;
-    line-height: 1.5;
-    margin-bottom: 1.2rem;
-    padding-top: 1rem;
-    border-top: 2px solid #EEF1F1;;
-}
-
-.node-uaqs-person .group-uaqs-person-contact-area {
-    margin: 0 0 2rem;
-}
-
-.node-uaqs-person .group-uaqs-person-contact-area .field-name-field-uaqs-person-photo {
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #B6BEC1;
-    margin: 0 auto 1rem;
-    text-align: center;
-}
-
-@media screen and (min-width: 50em) {
-    .node-uaqs-person .group-uaqs-person-contact-area .field-name-field-uaqs-person-photo {
-        padding-bottom: 0;
-        border-bottom: 0 none;
-        margin: 0 1.5rem 0 0;
-        float: left;
-        text-align: left;
-    }
+.node-uaqs-person a[href^="mailto"] {
+    word-break:break-all;
 }

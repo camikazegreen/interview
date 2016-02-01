@@ -383,7 +383,7 @@ function uaqs_person_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'class' => '',
+          'class' => 'img-responsive',
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'image_link' => '',
