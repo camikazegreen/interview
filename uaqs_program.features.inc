@@ -19,9 +19,9 @@ function uaqs_program_ctools_plugin_api($module = NULL, $api = NULL) {
 function uaqs_program_node_info() {
   $items = array(
     'uaqs_program' => array(
-      'name' => t('UAQS Program'),
+      'name' => t('Program'),
       'base' => 'node_content',
-      'description' => t('Use a <em>UAQS Program</em> to add academic UAQS Programs to the website.'),
+      'description' => t('The UA QuickStart component that describes academic programs at the University of Arizona.'),
       'has_title' => '1',
       'title_label' => t('Program Name'),
       'help' => '',
