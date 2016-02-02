@@ -68,9 +68,9 @@ function uaqs_person_image_default_styles() {
 function uaqs_person_node_info() {
   $items = array(
     'uaqs_person' => array(
-      'name' => t('UAQS Person'),
+      'name' => t('Person'),
       'base' => 'node_content',
-      'description' => t('Use a <em>person</em> to add to a personnel directory.'),
+      'description' => t('The UA QuickStart component for the contact information and brief biography of a person.'),
       'has_title' => '1',
       'title_label' => t('Full Name'),
       'help' => '',
