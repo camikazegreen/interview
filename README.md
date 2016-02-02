@@ -1,7 +1,7 @@
 # UAQS News #
 
 ## Overview ##
-This repository contains a module made with [Features](https://www.drupal.org/project/features) that provides a UAQS News content type.
+The UA QuickStart component for a short news article. This repository contains a module made with [Features](https://www.drupal.org/project/features) that provides a UAQS News content type.
 
 ## Requirements ##
 - In order to use this feature, you must first download and enable the [Features](https://www.drupal.org/project/features) module.
