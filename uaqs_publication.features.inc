@@ -19,9 +19,9 @@ function uaqs_publication_ctools_plugin_api($module = NULL, $api = NULL) {
 function uaqs_publication_node_info() {
   $items = array(
     'uaqs_pub' => array(
-      'name' => t('UAQS Publication'),
+      'name' => t('Publication'),
       'base' => 'node_content',
-      'description' => t('Use a <em>UAQS publication</em> to add published works to the website.'),
+      'description' => t('The UA QuickStart component that describes a publication reference.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
