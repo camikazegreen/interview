@@ -19,9 +19,9 @@ function uaqs_page_ctools_plugin_api($module = NULL, $api = NULL) {
 function uaqs_page_node_info() {
   $items = array(
     'uaqs_page' => array(
-      'name' => t('UAQS Basic page'),
+      'name' => t('Basic page'),
       'base' => 'node_content',
-      'description' => t('Use <em>basic pages</em> for your static content, such as an \'About us\' page.'),
+      'description' => t('The UA QuickStart component for basic page content. Use basic pages for your static content, such as an \'About us\' page.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
