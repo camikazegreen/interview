@@ -69,9 +69,9 @@ function uaqs_news_image_default_styles() {
 function uaqs_news_node_info() {
   $items = array(
     'uaqs_news' => array(
-      'name' => t('UAQS News'),
+      'name' => t('News'),
       'base' => 'node_content',
-      'description' => t('Use <em>news</em> to add news articles to the website.'),
+      'description' => t('The UA QuickStart component for news. Use to add short articles about topics of current interest.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
