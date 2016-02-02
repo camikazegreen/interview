@@ -19,9 +19,9 @@ function uaqs_content_chunks_ctools_plugin_api($module = NULL, $api = NULL) {
 function uaqs_content_chunks_node_info() {
   $items = array(
     'uaqs_flexible_page' => array(
-      'name' => t('UAQS Flexible Page'),
+      'name' => t('Flexible Page'),
       'base' => 'node_content',
-      'description' => t('The preferred way to add basic content to a UAQS web site.'),
+      'description' => t('The UA QuickStart component for pages containing content chunks (Paragraphs).'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
