@@ -217,7 +217,7 @@ function uaqs_block_types_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_card_title|bean|uaqs_card|uaqs_card'] = $field_group;
+  $field_groups['group_card_title|bean|uaqs_card|uaqs_card_overlay'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
