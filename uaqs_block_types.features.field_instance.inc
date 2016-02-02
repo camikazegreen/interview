@@ -278,7 +278,7 @@ function uaqs_block_types_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
-      'uaqs_card' => array(
+      'uaqs_card_overlay' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
@@ -325,7 +325,7 @@ function uaqs_block_types_field_default_field_instances() {
         'type' => 'link_default',
         'weight' => 4,
       ),
-      'uaqs_card' => array(
+      'uaqs_card_overlay' => array(
         'label' => 'hidden',
         'module' => 'link',
         'settings' => array(
@@ -391,7 +391,7 @@ function uaqs_block_types_field_default_field_instances() {
         'type' => 'image',
         'weight' => 12,
       ),
-      'uaqs_card' => array(
+      'uaqs_card_overlay' => array(
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
@@ -452,7 +452,7 @@ function uaqs_block_types_field_default_field_instances() {
         'type' => 'title_linked',
         'weight' => 3,
       ),
-      'uaqs_card' => array(
+      'uaqs_card_overlay' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
