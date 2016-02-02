@@ -229,17 +229,17 @@ function ua_quickstart_default_blocks($default_theme, $admin_theme) {
   );
   ua_quickstart_block_db_insert($default_theme, 'search', $search_blocks, $base_common);
 
-  // UA Navigation Feature Module.
+  // UAQS Navigation Feature Module.
   if (module_exists('uaqs_navigation')) {
     $menu_blocks = array(
-      'ua-second-level' => array(
+      'uaqs-second-level' => array(
         'region' => 'sidebar_first',
       ),
     );
     ua_quickstart_block_db_insert($default_theme, 'menu_block', $menu_blocks, $base_common);
   }
 
-  // UA Featured Content.
+  // UAQS Featured Content.
   if (module_exists('uaqs_featured_content')) {
     $carousel_blocks = array(
       'uaqs_hero_carousel-hero_block' => array(
@@ -250,7 +250,7 @@ function ua_quickstart_default_blocks($default_theme, $admin_theme) {
     ua_quickstart_block_db_insert($default_theme, 'views', $carousel_blocks, $front_views);
   }
 
-  // UA News.
+  // UAQS News.
   if (module_exists('uaqs_news')) {
     $news_blocks = array(
       'uaqs_news-home_3_col_news_block' => array(
@@ -261,7 +261,7 @@ function ua_quickstart_default_blocks($default_theme, $admin_theme) {
     ua_quickstart_block_db_insert($default_theme, 'views', $news_blocks, $front_views);
   }
 
-  // UA Event.
+  // UAQS Event.
   if (module_exists('uaqs_event')) {
     $event_blocks = array(
       'uaqs_events-block' => array(
