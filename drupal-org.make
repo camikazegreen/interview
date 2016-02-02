@@ -24,7 +24,7 @@ projects[uaqs_content_chunks][type] = module
 projects[uaqs_content_chunks][subdir] = custom
 projects[uaqs_content_chunks][download][type] = git
 projects[uaqs_content_chunks][download][branch] = 7.x-1.x
-projects[uaqs_content_chunks][download][revision] = 20c9297
+projects[uaqs_content_chunks][download][revision] = f17d7a2
 projects[uaqs_content_chunks][download][url] = https://bitbucket.org/ua_drupal/uaqs_content_chunks.git
 
 projects[uaqs_core][type] = module
@@ -45,7 +45,7 @@ projects[uaqs_event][type] = module
 projects[uaqs_event][subdir] = custom
 projects[uaqs_event][download][type] = git
 projects[uaqs_event][download][branch] = 7.x-1.x
-projects[uaqs_event][download][revision] = 973f7bf
+projects[uaqs_event][download][revision] = 8de1273
 projects[uaqs_event][download][url] = https://bitbucket.org/ua_drupal/uaqs_event.git
 
 projects[uaqs_fields][type] = module
@@ -59,7 +59,7 @@ projects[uaqs_featured_content][type] = module
 projects[uaqs_featured_content][subdir] = custom
 projects[uaqs_featured_content][download][type] = git
 projects[uaqs_featured_content][download][branch] = 7.x-1.x
-projects[uaqs_featured_content][download][revision] = beb96cc
+projects[uaqs_featured_content][download][revision] = cc75bfc
 projects[uaqs_featured_content][download][url] = https://bitbucket.org/ua_drupal/uaqs_featured_content.git
 
 projects[ua_google_tag][type] = module
@@ -73,49 +73,49 @@ projects[uaqs_navigation][type] = module
 projects[uaqs_navigation][subdir] = custom
 projects[uaqs_navigation][download][type] = git
 projects[uaqs_navigation][download][branch] = 7.x-1.x
-projects[uaqs_navigation][download][revision] = 3a1c285
+projects[uaqs_navigation][download][revision] = 1ce4bcb
 projects[uaqs_navigation][download][url] = https://bitbucket.org/ua_drupal/uaqs_navigation.git
 
 projects[uaqs_news][type] = module
 projects[uaqs_news][subdir] = custom
 projects[uaqs_news][download][type] = git
 projects[uaqs_news][download][branch] = 7.x-1.x
-projects[uaqs_news][download][revision] = 8955042
+projects[uaqs_news][download][revision] = f28d2fd
 projects[uaqs_news][download][url] = https://bitbucket.org/ua_drupal/uaqs_news.git
 
 projects[uaqs_page][type] = module
 projects[uaqs_page][subdir] = custom
 projects[uaqs_page][download][type] = git
 projects[uaqs_page][download][branch] = 7.x-1.x
-projects[uaqs_page][download][revision] = 8bbba30
+projects[uaqs_page][download][revision] = 6d79e52
 projects[uaqs_page][download][url] = https://bitbucket.org/ua_drupal/uaqs_page.git
 
 projects[uaqs_person][type] = module
 projects[uaqs_person][subdir] = custom
 projects[uaqs_person][download][type] = git
 projects[uaqs_person][download][branch] = 7.x-1.x
-projects[uaqs_person][download][revision] = 4b74547
+projects[uaqs_person][download][revision] = 9608823
 projects[uaqs_person][download][url] = https://bitbucket.org/ua_drupal/uaqs_person.git
 
 projects[uaqs_program][type] = module
 projects[uaqs_program][subdir] = custom
 projects[uaqs_program][download][type] = git
 projects[uaqs_program][download][branch] = 7.x-1.x
-projects[uaqs_program][download][revision] = cceb739
+projects[uaqs_program][download][revision] = ce0d80c
 projects[uaqs_program][download][url] = https://bitbucket.org/ua_drupal/uaqs_program.git
 
 projects[uaqs_publication][type] = module
 projects[uaqs_publication][subdir] = custom
 projects[uaqs_publication][download][type] = git
 projects[uaqs_publication][download][branch] = 7.x-1.x
-projects[uaqs_publication][download][revision] = 121a8d0
+projects[uaqs_publication][download][revision] = ef2abae
 projects[uaqs_publication][download][url] = https://bitbucket.org/ua_drupal/uaqs_publication.git
 
 projects[uaqs_unit][type] = module
 projects[uaqs_unit][subdir] = custom
 projects[uaqs_unit][download][type] = git
 projects[uaqs_unit][download][branch] = 7.x-1.x
-projects[uaqs_unit][download][revision] = 3683be2
+projects[uaqs_unit][download][revision] = b0ce988
 projects[uaqs_unit][download][url] = https://bitbucket.org/ua_drupal/uaqs_unit.git
 
 
