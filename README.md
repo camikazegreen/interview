@@ -1,7 +1,7 @@
 # UAQS Event #
 
 ## Overview ##
-This repository contains a module made with [Features](https://www.drupal.org/project/features) that provides a UAQS Event content type.
+The UA QuickStart component for calendar entries and other events. This repository contains a module made with [Features](https://www.drupal.org/project/features) that provides a UAQS Event content type.
 
 ## Requirements ##
 - In order to use this feature, you must first download and enable the [Features](https://www.drupal.org/project/features) module.

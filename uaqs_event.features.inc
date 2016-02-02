@@ -51,9 +51,9 @@ function uaqs_event_image_default_styles() {
 function uaqs_event_node_info() {
   $items = array(
     'uaqs_event' => array(
-      'name' => t('UAQS Event'),
+      'name' => t('Event'),
       'base' => 'node_content',
-      'description' => t('Use an <em>event</em> to add events to the site\'s event displays.'),
+      'description' => t('The UA QuickStart component for calendar entries and other events.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
