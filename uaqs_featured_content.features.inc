@@ -29,9 +29,9 @@ function uaqs_featured_content_views_api($module = NULL, $api = NULL) {
 function uaqs_featured_content_node_info() {
   $items = array(
     'uaqs_carousel_item' => array(
-      'name' => t('UAQS Carousel Item'),
+      'name' => t('Carousel Item'),
       'base' => 'node_content',
-      'description' => t('Use <em>carousel items</em> to prominently feature links to content on the front page.'),
+      'description' => t('The UA QuickStart component for a prominent (hero) display of rotating content items.'),
       'has_title' => '1',
       'title_label' => t('Headline'),
       'help' => '',

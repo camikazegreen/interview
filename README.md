@@ -2,7 +2,7 @@
 
 (*) Name subject to change.
 
-Provides content type and view for Featured Content Carousel component consistent with UA brand strategy.
+The UA QuickStart component for a prominent (hero) display of rotating content items.
 
 ## Features
 
