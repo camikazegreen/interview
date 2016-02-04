@@ -6,74 +6,95 @@
 
 /**
  * Implements hook_migrate_api().
+ *
+ * @todo Investigate why setting the 'import_root' argument doesn't work at the
+ *   group level. Should work. https://www.drupal.org/node/1824884
  */
 function uaqs_demo_migrate_api() {
+  $import_root = drupal_get_path('module', 'uaqs_demo') . '/import';
+
   $api = array(
     'api' => 2,
     'groups' => array(
       'uaqs_demo' => array(
         'title' => t('UAQS Demo Content'),
+// This should work...
+//        'import_root' > $import_root,
       ),
     ),
     'migrations' => array(
       'UaqsDemoPage' => array(
         'class_name' => 'UaqsDemoPageMigration',
         'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
       ),
       'UaqsDemoCarouselItem' => array(
         'class_name' => 'UaqsDemoCarouselItemMigration',
         'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
       ),
       'UaqsDemoContactSummary' => array(
         'class_name' => 'UaqsDemoContactSummaryMigration',
         'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
       ),
       'UaqsDemoCard' => array(
         'class_name' => 'UaqsDemoCardMigration',
         'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
       ),
       'UaqsDemoPerson' => array(
         'class_name' => 'UaqsDemoPersonMigration',
         'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
       ),
       'UaqsDemoUnitTerm' => array(
         'class_name' => 'UaqsDemoUnitTermMigration',
         'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
       ),
       'UaqsDemoUnit' => array(
         'class_name' => 'UaqsDemoUnitMigration',
         'group_name' => 'uaqs_demo',
         'dependencies' => array('UaqsDemoUnitTerm'),
+        'import_root' => $import_root,
       ),
       'UaqsDemoNews' => array(
         'class_name' => 'UaqsDemoNewsMigration',
         'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
       ),
       'UaqsDemoNewsContact' => array(
         'class_name' => 'UaqsDemoNewsContactMigration',
         'group_name' => 'uaqs_demo',
         'dependencies' => array('UaqsDemoNews'),
+        'import_root' => $import_root,
       ),
       'UaqsDemoEvent' => array(
         'class_name' => 'UaqsDemoEventMigration',
         'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
       ),
       'UaqsDemoEventContact' => array(
         'class_name' => 'UaqsDemoEventContactMigration',
         'group_name' => 'uaqs_demo',
         'dependencies' => array('UaqsDemoEvent'),
+        'import_root' => $import_root,
       ),
       'UaqsDemoColumnImage' => array(
         'class_name' => 'UaqsDemoColumnImageMigration',
         'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
       ),
       'UaqsDemoHeadedText' => array(
         'class_name' => 'UaqsDemoHeadedTextMigration',
         'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
       ),
       'UaqsDemoPlainText' => array(
         'class_name' => 'UaqsDemoPlainTextMigration',
         'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
       ),
       'UaqsDemoFlexiblePage' => array(
         'class_name' => 'UaqsDemoFlexiblePageMigration',
@@ -83,24 +104,29 @@ function uaqs_demo_migrate_api() {
           'UaqsDemoHeadedText',
           'UaqsDemoPlainText',
         ),
+        'import_root' => $import_root,
       ),
       'UaqsDemoPublicationTerm' => array(
         'class_name' => 'UaqsDemoPublicationTermMigration',
         'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
       ),
       'UaqsDemoPublication' => array(
         'class_name' => 'UaqsDemoPublicationMigration',
         'group_name' => 'uaqs_demo',
         'dependencies' => array('UaqsDemoPublicationTerm'),
+        'import_root' => $import_root,
       ),
       'UaqsDemoProgramTerm' => array(
         'class_name' => 'UaqsDemoProgramTermMigration',
         'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
       ),
       'UaqsDemoProgram' => array(
         'class_name' => 'UaqsDemoProgramMigration',
         'group_name' => 'uaqs_demo',
         'dependencies' => array('UaqsDemoProgramTerm'),
+        'import_root' => $import_root,
       ),
       'UaqsDemoNavigation' => array(
         'class_name' => 'UaqsDemoNavigationMigration',
@@ -113,9 +139,9 @@ function uaqs_demo_migrate_api() {
           'UaqsDemoProgram',
           'UaqsDemoPublication',
         ),
+        'import_root' => $import_root,
       ),
     ),
   );
   return $api;
 }
-

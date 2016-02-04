@@ -14,7 +14,7 @@
  *
  * @see https://www.drupal.org/node/1152160
  */
-class UaqsDemoPersonMigration extends UaqsDemoNodeMigration {
+class UaqsDemoPersonMigration extends UaqsNodeMigration {
 
   /**
    * Constructor.

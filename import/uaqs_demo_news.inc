@@ -14,7 +14,7 @@
  *
  * @see https://www.drupal.org/node/1152160
  */
-class UaqsDemoNewsMigration extends UaqsDemoNodeMigration {
+class UaqsDemoNewsMigration extends UaqsNodeMigration {
 
   /**
    * Constructor.
@@ -121,7 +121,7 @@ class UaqsDemoNewsMigration extends UaqsDemoNodeMigration {
 /**
  * Populate the Contacts field collection within UAQS News content.
  */
-class UaqsDemoNewsContactMigration extends UaqsDemoFieldCollectionMigration {
+class UaqsDemoNewsContactMigration extends UaqsFieldCollectionMigration {
 
   /**
    * Constructor.
