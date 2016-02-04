@@ -46,7 +46,7 @@ function ua_zen_css_alter(&$css) {
   }
   else {
     $ua_bootstrap_path = drupal_get_path('theme', 'ua_zen') . "/css/ua-bootstrap-" . UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION;
-    $ua_bootstrap_css_info['type'] = 'internal';
+    $ua_bootstrap_css_info['type'] = 'file';
   }
 
   if ($ua_bootstrap_minified) {
