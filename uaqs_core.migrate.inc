@@ -15,7 +15,9 @@
  * additional files (PDF documents, JPEG and PNG images) are in a parallel
  * images subdirectory.
  */
-abstract class UaqsDemoLocalfileMigration extends Migration {
+abstract class UaqsLocalfileMigration extends Migration {
+
+  public $importRoot;
 
   /**
    * Constructor.
@@ -25,6 +27,13 @@ abstract class UaqsDemoLocalfileMigration extends Migration {
    */
   public function __construct(array $arguments) {
     parent::__construct($arguments);
+
+    if (isset($arguments['import_root'])) {
+      $this->importRoot = $arguments['import_root'];
+    }
+    else {
+      $this->importRoot = $this->defaultImportRoot();
+    }
   }
 
   /**
@@ -33,8 +42,8 @@ abstract class UaqsDemoLocalfileMigration extends Migration {
    * @return string
    *   The path of our directory relative to DRUPAL_ROOT.
    */
-  public function importRoot() {
-    return drupal_get_path('module', 'uaqs_demo') . '/import';
+  public function defaultImportRoot() {
+    return drupal_get_path('module', 'uaqs_core') . '/import';
   }
 
   /**
@@ -44,7 +53,7 @@ abstract class UaqsDemoLocalfileMigration extends Migration {
    *   The path relative to DRUPAL_ROOT.
    */
   public function dataPath() {
-    return $this->importRoot() . '/data';
+    return $this->importRoot . '/data';
   }
 
   /**
@@ -54,7 +63,7 @@ abstract class UaqsDemoLocalfileMigration extends Migration {
    *   The path relative to DRUPAL_ROOT.
    */
   public function imagePath() {
-    return $this->importRoot() . '/images';
+    return $this->importRoot . '/images';
   }
 
   /**
@@ -79,7 +88,7 @@ abstract class UaqsDemoLocalfileMigration extends Migration {
  *
  * @see https://www.drupal.org/node/1152160
  */
-abstract class UaqsDemoTermMigration extends UaqsDemoLocalfileMigration {
+abstract class UaqsTermMigration extends UaqsLocalfileMigration {
 
   /**
    * Constructor.
@@ -148,7 +157,7 @@ abstract class UaqsDemoTermMigration extends UaqsDemoLocalfileMigration {
  *
  * @see https://www.drupal.org/node/1007004
  */
-abstract class UaqsDemoIntKeyedMigration extends UaqsDemoLocalfileMigration {
+abstract class UaqsIntKeyedMigration extends UaqsLocalfileMigration {
 
   /**
    * Name and label for the source key.
@@ -214,7 +223,7 @@ abstract class UaqsDemoIntKeyedMigration extends UaqsDemoLocalfileMigration {
  *
  * @see https://www.drupal.org/node/1349696
  */
-abstract class UaqsDemoNodeMigration extends UaqsDemoIntKeyedMigration {
+abstract class UaqsNodeMigration extends UaqsIntKeyedMigration {
 
   /**
    * Constructor.
@@ -260,7 +269,7 @@ abstract class UaqsDemoNodeMigration extends UaqsDemoIntKeyedMigration {
  *
  * @see https://www.drupal.org/node/2295973
  */
-class UaqsDemoMigrateDestinationBean extends MigrateDestinationEntity {
+class UaqsMigrateDestinationBean extends MigrateDestinationEntity {
 
   /**
    * Implements MigrateDestination::getKeySchema().
@@ -493,9 +502,9 @@ class UaqsDemoMigrateDestinationBean extends MigrateDestinationEntity {
  * The Bean module does not yet support Migrate directly, but the missing
  * MigrateDestination class appears here.
  *
- * @see UaqsDemoMigrateDestinationBean
+ * @see UaqsMigrateDestinationBean
  */
-abstract class UaqsDemoBeanMigration extends UaqsDemoIntKeyedMigration {
+abstract class UaqsBeanMigration extends UaqsIntKeyedMigration {
 
   /**
    * Constructor.
@@ -509,12 +518,12 @@ abstract class UaqsDemoBeanMigration extends UaqsDemoIntKeyedMigration {
    */
   public function __construct(array $arguments, $bundle, $description) {
     parent::__construct($arguments, 'id',
-      UaqsDemoMigrateDestinationBean::getKeySchema());
+      UaqsMigrateDestinationBean::getKeySchema());
 
     $this->description = $description;
 
     // Destination.
-    $this->destination = new UaqsDemoMigrateDestinationBean($bundle);
+    $this->destination = new UaqsMigrateDestinationBean($bundle);
 
     // These fields get placeholders, as in Nodes...
     $this->addFieldMapping('uid')
@@ -541,7 +550,7 @@ abstract class UaqsDemoBeanMigration extends UaqsDemoIntKeyedMigration {
  *
  * @see https://www.drupal.org/node/1900640
  */
-abstract class UaqsDemoFieldCollectionMigration extends UaqsDemoIntKeyedMigration {
+abstract class UaqsFieldCollectionMigration extends UaqsIntKeyedMigration {
 
   /**
    * Name and label for the foreign key.
@@ -600,7 +609,7 @@ abstract class UaqsDemoFieldCollectionMigration extends UaqsDemoIntKeyedMigratio
  * (which are use freestanding entities, distinct from nodes), but the
  * Paragraphs module itself defines a Migration api.
  */
-abstract class UaqsDemoParagraphsItemMigration extends UaqsDemoIntKeyedMigration {
+abstract class UaqsParagraphsItemMigration extends UaqsIntKeyedMigration {
 
   /**
    * Constructor.
@@ -636,7 +645,7 @@ abstract class UaqsDemoParagraphsItemMigration extends UaqsDemoIntKeyedMigration
  * this, which makes some assumptions to match the rest of the UAQS Demo
  * migrations.
  */
-abstract class UaqsDemoMenuLinksMigration extends UaqsDemoIntKeyedMigration {
+abstract class UaqsMenuLinksMigration extends UaqsIntKeyedMigration {
 
   /**
    * Name and label for the foreign key.
