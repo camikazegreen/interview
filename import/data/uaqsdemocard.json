@@ -1,4 +1,5 @@
-{
+[
+  {
     "id": 1,
     "label": "Anti-social media app",
     "title": "Myxine",
@@ -14,4 +15,5 @@
     "visibility": "1",
     "pages": "uaqs_block_types",
     "weight": "1"
-}]
+  }
+]
