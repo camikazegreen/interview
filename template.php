@@ -46,7 +46,7 @@ function ua_zen_css_alter(&$css) {
   }
   else {
     $ua_bootstrap_path = drupal_get_path('theme', 'ua_zen') . "/css/ua-bootstrap-" . UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION;
-    $ua_bootstrap_css_info['type'] = 'internal';
+    $ua_bootstrap_css_info['type'] = 'file';
   }
 
   if ($ua_bootstrap_minified) {
@@ -77,7 +77,9 @@ function ua_zen_footer_logo() {
 
 // http://getbootstrap.com/css/#overview-responsive-images
 function ua_zen_preprocess_image_style(&$vars) {
+  if(!module_exists('image_class')){
     $vars['attributes']['class'][] = 'img-responsive';
+  }
 }
 
 /**
@@ -176,6 +178,14 @@ function ua_zen_preprocess_page(&$variables, $hook) {
       '#region' => 'footer_sub',
       '#weight' => '-10',
       '#theme_wrappers' => array('region'));
+  }
+  // Primary nav.
+  $variables['primary_nav'] = FALSE;
+  if ($variables['main_menu']) {
+    // Build links.
+    $variables['primary_nav'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+    // Provide default theme wrapper function.
+    $variables['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
   }
 }
 
@@ -355,18 +365,23 @@ function ua_zen_menu_local_tasks(&$variables) {
   return $output;
 }
 
-function ua_zen_menu_tree__menu_block__ua_second_level(array $variables) {
+/**
+ *  Theme wrapper function for the uaqs_second_level menu block.
+ */
+function ua_zen_menu_tree__menu_block__uaqs_second_level(array $variables) {
 
   $output = '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
 
   return $output;
 }
+
 /**
- *  * UA Zen theme wrapper function for the primary menu links.
- *   */
-function ua_zen_menu_tree__main_menu(&$variables) {
+ *  Theme wrapper function for the primary menu links.
+ */
+function ua_zen_menu_tree__primary(&$variables) {
       return '<ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul><div class="clearfix"></div>';
 }
+
 /**
  * Overrides theme_menu_link().
  */
