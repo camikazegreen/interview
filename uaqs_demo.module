@@ -19,7 +19,7 @@ function uaqs_demo_migrate_api() {
       'uaqs_demo' => array(
         'title' => t('UAQS Demo Content'),
 // This should work...
-//        'import_root' > $import_root,
+//        'import_root' => $import_root,
       ),
     ),
     'migrations' => array(
