@@ -103,7 +103,7 @@ function ua_zen_preprocess_image_style(&$vars) {
  * @ingroup theme_functions
  */
 
-function uams_ua_zen_status_messages($variables) {
+function ua_zen_status_messages($variables) {
   $display = $variables['display'];
   $output = '';
 
