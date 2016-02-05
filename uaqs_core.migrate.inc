@@ -17,7 +17,20 @@
  */
 abstract class UaqsLocalfileMigration extends Migration {
 
-  public $importRoot;
+  /**
+   * The path of the import data directory.
+   */
+  protected $importRoot;
+
+  /**
+   * Gets the path of the import data directory.
+   *
+   * @return string
+   *   The path of the directory relative to DRUPAL_ROOT.
+   */
+  public function getImportRoot() {
+    return $this->importRoot;
+  }
 
   /**
    * Constructor.
@@ -31,19 +44,6 @@ abstract class UaqsLocalfileMigration extends Migration {
     if (isset($arguments['import_root'])) {
       $this->importRoot = $arguments['import_root'];
     }
-    else {
-      $this->importRoot = $this->defaultImportRoot();
-    }
-  }
-
-  /**
-   * Hard-codes the name for the subdirectory within this module's directory.
-   *
-   * @return string
-   *   The path of our directory relative to DRUPAL_ROOT.
-   */
-  public function defaultImportRoot() {
-    return drupal_get_path('module', 'uaqs_core') . '/import';
   }
 
   /**
@@ -53,7 +53,7 @@ abstract class UaqsLocalfileMigration extends Migration {
    *   The path relative to DRUPAL_ROOT.
    */
   public function dataPath() {
-    return $this->importRoot . '/data';
+    return $this->getImportRoot() . '/data';
   }
 
   /**
@@ -63,7 +63,7 @@ abstract class UaqsLocalfileMigration extends Migration {
    *   The path relative to DRUPAL_ROOT.
    */
   public function imagePath() {
-    return $this->importRoot . '/images';
+    return $this->getImportRoot() . '/images';
   }
 
   /**
