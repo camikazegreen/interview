@@ -10,7 +10,7 @@
  *
  * The field contents come from a JSON file.
  */
-class UaqsDemoCarouselItemMigration extends UaqsDemoNodeMigration {
+class UaqsDemoCarouselItemMigration extends UaqsNodeMigration {
 
   /**
    * Constructor.

@@ -13,7 +13,7 @@
  *
  * The field contents come from a JSON file.
  */
-class UaqsDemoContactSummaryMigration extends UaqsDemoBeanMigration {
+class UaqsDemoContactSummaryMigration extends UaqsBeanMigration {
 
   /**
    * Constructor.

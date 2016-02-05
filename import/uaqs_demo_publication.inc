@@ -10,9 +10,9 @@
  *
  * Terms come from a local JSON-formatted text file.
  *
- * @see UaqsDemoTermMigration
+ * @see UaqsTermMigration
  */
-class UaqsDemoPublicationTermMigration extends UaqsDemoTermMigration {
+class UaqsDemoPublicationTermMigration extends UaqsTermMigration {
 
   /**
    * Constructor.
@@ -34,7 +34,7 @@ class UaqsDemoPublicationTermMigration extends UaqsDemoTermMigration {
  * but note that the entity reference field (related publications) might
  * not be populated.
  */
-class UaqsDemoPublicationMigration extends UaqsDemoNodeMigration {
+class UaqsDemoPublicationMigration extends UaqsNodeMigration {
 
   /**
    * Constructor.

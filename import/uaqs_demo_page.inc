@@ -10,7 +10,7 @@
  *
  * The field contents come from a JSON file.
  */
-class UaqsDemoPageMigration extends UaqsDemoNodeMigration {
+class UaqsDemoPageMigration extends UaqsNodeMigration {
 
   /**
    * Numeric ID of the JSON file entry for the front page.

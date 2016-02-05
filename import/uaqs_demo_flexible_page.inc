@@ -14,7 +14,7 @@
 /**
  * Defines migration into the UAQS Plain Text type of Paragraphs entity.
  */
-class UaqsDemoPlainTextMigration extends UaqsDemoParagraphsItemMigration {
+class UaqsDemoPlainTextMigration extends UaqsParagraphsItemMigration {
 
   /**
    * Constructor.
@@ -49,7 +49,7 @@ class UaqsDemoPlainTextMigration extends UaqsDemoParagraphsItemMigration {
 /**
  * Defines migration into the UAQS Headed Text type of Paragraphs entity.
  */
-class UaqsDemoHeadedTextMigration extends UaqsDemoParagraphsItemMigration {
+class UaqsDemoHeadedTextMigration extends UaqsParagraphsItemMigration {
 
   /**
    * Constructor.
@@ -86,7 +86,7 @@ class UaqsDemoHeadedTextMigration extends UaqsDemoParagraphsItemMigration {
 /**
  * Defines migration into the UAQS Column Image type of Paragraphs entity.
  */
-class UaqsDemoColumnImageMigration extends UaqsDemoParagraphsItemMigration {
+class UaqsDemoColumnImageMigration extends UaqsParagraphsItemMigration {
 
   /**
    * Constructor.
@@ -139,7 +139,7 @@ class UaqsDemoColumnImageMigration extends UaqsDemoParagraphsItemMigration {
  * from a JSON file, but most of it is encapsulated in a series of entities
  * from the Paragraphs module, which get their own migrations (see above).
  */
-class UaqsDemoFlexiblePageMigration extends UaqsDemoNodeMigration {
+class UaqsDemoFlexiblePageMigration extends UaqsNodeMigration {
 
   /**
    * Constructor.

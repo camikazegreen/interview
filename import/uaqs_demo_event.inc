@@ -12,7 +12,7 @@
  * the contacts list for the event is a distinct entity and needs its own
  * migration (see below).
  */
-class UaqsDemoEventMigration extends UaqsDemoNodeMigration {
+class UaqsDemoEventMigration extends UaqsNodeMigration {
 
   /**
    * Constructor.
@@ -126,7 +126,7 @@ class UaqsDemoEventMigration extends UaqsDemoNodeMigration {
 /**
  * Populate the Contacts field collection within UAQS Event content.
  */
-class UaqsDemoEventContactMigration extends UaqsDemoFieldCollectionMigration {
+class UaqsDemoEventContactMigration extends UaqsFieldCollectionMigration {
 
   /**
    * Constructor.

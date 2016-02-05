@@ -10,7 +10,7 @@
  *
  * The menu item contents come from a JSON file.
  */
-class UaqsDemoNavigationMigration extends UaqsDemoMenuLinksMigration {
+class UaqsDemoNavigationMigration extends UaqsMenuLinksMigration {
 
   /**
    * Constructor.

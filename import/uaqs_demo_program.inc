@@ -10,9 +10,9 @@
  *
  * Terms come from a local JSON-formatted text file.
  *
- * @see UaqsDemoTermMigration
+ * @see UaqsTermMigration
  */
-class UaqsDemoProgramTermMigration extends UaqsDemoTermMigration {
+class UaqsDemoProgramTermMigration extends UaqsTermMigration {
 
   /**
    * Constructor.
@@ -32,7 +32,7 @@ class UaqsDemoProgramTermMigration extends UaqsDemoTermMigration {
  *
  * The field contents come from a JSON file.
  */
-class UaqsDemoProgramMigration extends UaqsDemoNodeMigration {
+class UaqsDemoProgramMigration extends UaqsNodeMigration {
 
   /**
    * Constructor.
