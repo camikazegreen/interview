@@ -29,9 +29,9 @@ function uaqs_featured_content_preprocess_node(&$vars) {
     $path_to_node = url("node/$nid");
     $has_cta = FALSE;
     $vars['uaqs_featured_content']['image_path'] = '';
-    if (field_info_instance('node', 'field_uaqs_photo', $wrapper->getBundle()) && isset($wrapper->field_uaqs_photo[0])) {
+    if (field_info_instance('node', 'field_uaqs_photo', $wrapper->getBundle()) && isset($wrapper->field_uaqs_photo)) {
       $photos = $wrapper->field_uaqs_photo;
-      $photo = $photos[0]->file->value();
+      $photo = $photos->file->value();
       $slide_image_uri = $photo->uri;
       $slide_styled_path = image_style_url('flexslider_full', $slide_image_uri);
       $vars['uaqs_featured_content']['image_path'] = $slide_styled_path;
