@@ -53,7 +53,7 @@ function uaqs_news_field_group_info() {
     'label' => 'Left Column',
     'weight' => '1',
     'children' => array(
-      0 => 'field_uaqs_photo',
+      0 => 'field_uaqs_photos',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
