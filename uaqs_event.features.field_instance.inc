@@ -441,7 +441,7 @@ If there is no map, simply fill in the location name or address in the title fie
     ),
     'entity_type' => 'node',
     'field_name' => 'field_uaqs_photos',
-    'label' => 'Event Photo',
+    'label' => 'Event Photos',
     'required' => 0,
     'settings' => array(
       'alt_field' => 1,
@@ -675,7 +675,7 @@ If there is no map, simply fill in the location name or address in the title fie
   t('Event Contacts');
   t('Event Date');
   t('Event Location');
-  t('Event Photo');
+  t('Event Photos');
   t('More Information');
   t('Persons who can be contacted about the event');
   t('Short Title');
