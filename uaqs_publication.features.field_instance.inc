@@ -49,8 +49,8 @@ function uaqs_publication_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-uaqs_pub-field_uaqs_photo'.
-  $field_instances['node-uaqs_pub-field_uaqs_photo'] = array(
+  // Exported field_instance: 'node-uaqs_pub-field_uaqs_photos'.
+  $field_instances['node-uaqs_pub-field_uaqs_photos'] = array(
     'bundle' => 'uaqs_pub',
     'deleted' => 0,
     'description' => '',
@@ -70,8 +70,8 @@ function uaqs_publication_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_uaqs_photo',
-    'label' => 'Publication Photo',
+    'field_name' => 'field_uaqs_photos',
+    'label' => 'Publication Photos',
     'required' => 0,
     'settings' => array(
       'alt_field' => 1,
@@ -384,7 +384,7 @@ function uaqs_publication_field_default_field_instances() {
   t('Date of publication');
   t('Description');
   t('Other publications on the site that relate to this publication.');
-  t('Publication Photo');
+  t('Publication Photos');
   t('Related Publications');
   t('Research Categories');
   t('Title');
