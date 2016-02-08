@@ -70,7 +70,7 @@ class UaqsDemoPublicationMigration extends UaqsNodeMigration {
       'uaqs_pub_addinfo_title' => t('Information link title'),
     );
     // Image fields...
-    $image_src_field = 'uaqs_photo';
+    $image_src_field = 'uaqs_photos';
     $image_fields = array(
       $image_src_field => t('Publication photo filename'),
       $image_src_field . '_alt' => t('Alternate text'),

@@ -14,9 +14,9 @@
     "uaqs_more_info_title" : "Background to skeptical astronomy",
     "uaqs_attachments" : "long_publication_history.pdf|hostile_account_of_experiments.pdf",
     "uaqs_attachments_description" : "Covers from some of the extensive literature.|Early experiments reported in the journal Nature (from a hostile perspective).",
-    "uaqs_photo" : "path_of_the_sun.png|sun_december_21.jpg|sun_june_21.jpg",
-    "uaqs_photo_title" : "Expansion and contraction of the Sun's path.|Path of the Sun on December 21.|Path of the Sun on June 21.",
-    "uaqs_photo_alt" : "diagram showing concentric circles|illustration of the Sun above the Earth|illustration of the Sun above the Earth"
+    "uaqs_photos" : "path_of_the_sun.png|sun_december_21.jpg|sun_june_21.jpg",
+    "uaqs_photos_title" : "Expansion and contraction of the Sun's path.|Path of the Sun on December 21.|Path of the Sun on June 21.",
+    "uaqs_photos_alt" : "diagram showing concentric circles|illustration of the Sun above the Earth|illustration of the Sun above the Earth"
 
   },
   {"id":2,
@@ -34,9 +34,9 @@
     "uaqs_more_info_title" : "",
     "uaqs_attachments" : "",
     "uaqs_attachments_description" : "",
-    "uaqs_photo" : "borderlands.png|delivery_platform.jpg",
-    "uaqs_photo_title" : "Arizona-Sonora Borderlands|The delivery platform",
-    "uaqs_photo_alt" : "map showing main roads and topography|drone in flight"
+    "uaqs_photos" : "borderlands.png|delivery_platform.jpg",
+    "uaqs_photos_title" : "Arizona-Sonora Borderlands|The delivery platform",
+    "uaqs_photos_alt" : "map showing main roads and topography|drone in flight"
   },
   {"id":3,
     "title" : "University of Arizona Branding Brings a New Experience to Incoming Freshmen",
@@ -53,9 +53,9 @@
     "uaqs_more_info_title" : "The University of Arizona Brand",
     "uaqs_attachments" : "",
     "uaqs_attachments_description" : "",
-    "uaqs_photo" : "branding_iron.jpg",
-    "uaqs_photo_title" : "Branding iron",
-    "uaqs_photo_alt" : "example letter A (differing from the UofA design)"
+    "uaqs_photos" : "branding_iron.jpg",
+    "uaqs_photos_title" : "Branding iron",
+    "uaqs_photos_alt" : "example letter A (differing from the UofA design)"
   }
   {"id":4,
     "title" : "New Light on the Origins of “Bear Down”",
@@ -72,8 +72,8 @@
     "uaqs_more_info_title" : "“Button” Salmon",
     "uaqs_attachments" : "",
     "uaqs_attachments_description" : "",
-    "uaqs_photo" : "fws_gov_hillebrand_black_bear_nc.jpg",
-    "uaqs_photo_title" : "U.S. Fish and Wildlife Service: black bear, Alligator National Wildlife Refuge",
-    "uaqs_photo_alt" : "black bear"
+    "uaqs_photos" : "fws_gov_hillebrand_black_bear_nc.jpg",
+    "uaqs_photos_title" : "U.S. Fish and Wildlife Service: black bear, Alligator National Wildlife Refuge",
+    "uaqs_photos_alt" : "black bear"
   }
 ]

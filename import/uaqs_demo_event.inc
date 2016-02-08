@@ -58,7 +58,7 @@ class UaqsDemoEventMigration extends UaqsNodeMigration {
       $file_src_field . '_description' => t('Attachment description'),
     );
     // Image fields...
-    $image_src_field = 'uaqs_photo';
+    $image_src_field = 'uaqs_photos';
     $image_fields = array(
       $image_src_field => t('Event Photo'),
       $image_src_field . '_title' => t('Event photo title'),
