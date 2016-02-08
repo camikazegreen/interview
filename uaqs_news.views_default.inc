@@ -37,20 +37,20 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   /* Field: Content: Slide Image */
-  $handler->display->display_options['fields']['field_uaqs_photo']['id'] = 'field_uaqs_photo';
-  $handler->display->display_options['fields']['field_uaqs_photo']['table'] = 'field_data_field_uaqs_photo';
-  $handler->display->display_options['fields']['field_uaqs_photo']['field'] = 'field_uaqs_photo';
-  $handler->display->display_options['fields']['field_uaqs_photo']['label'] = '';
-  $handler->display->display_options['fields']['field_uaqs_photo']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_uaqs_photo']['element_wrapper_class'] = 'uaqs-news-photo';
-  $handler->display->display_options['fields']['field_uaqs_photo']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_uaqs_photo']['settings'] = array(
+  $handler->display->display_options['fields']['field_uaqs_photos']['id'] = 'field_uaqs_photos';
+  $handler->display->display_options['fields']['field_uaqs_photos']['table'] = 'field_data_field_uaqs_photos';
+  $handler->display->display_options['fields']['field_uaqs_photos']['field'] = 'field_uaqs_photos';
+  $handler->display->display_options['fields']['field_uaqs_photos']['label'] = '';
+  $handler->display->display_options['fields']['field_uaqs_photos']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_uaqs_photos']['element_wrapper_class'] = 'uaqs-news-photo';
+  $handler->display->display_options['fields']['field_uaqs_photos']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_uaqs_photos']['settings'] = array(
     'image_style' => 'uaqs_spotlight',
     'image_link' => 'content',
   );
-  $handler->display->display_options['fields']['field_uaqs_photo']['delta_limit'] = '1';
-  $handler->display->display_options['fields']['field_uaqs_photo']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_uaqs_photo']['separator'] = '';
+  $handler->display->display_options['fields']['field_uaqs_photos']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_uaqs_photos']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_uaqs_photos']['separator'] = '';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -141,23 +141,23 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Slide Image */
-  $handler->display->display_options['fields']['field_uaqs_photo']['id'] = 'field_uaqs_photo';
-  $handler->display->display_options['fields']['field_uaqs_photo']['table'] = 'field_data_field_uaqs_photo';
-  $handler->display->display_options['fields']['field_uaqs_photo']['field'] = 'field_uaqs_photo';
-  $handler->display->display_options['fields']['field_uaqs_photo']['label'] = '';
-  $handler->display->display_options['fields']['field_uaqs_photo']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_uaqs_photo']['element_label_type'] = '0';
-  $handler->display->display_options['fields']['field_uaqs_photo']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_uaqs_photo']['element_wrapper_class'] = 'uaqs-news-photo';
-  $handler->display->display_options['fields']['field_uaqs_photo']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_uaqs_photo']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_uaqs_photo']['settings'] = array(
+  $handler->display->display_options['fields']['field_uaqs_photos']['id'] = 'field_uaqs_photos';
+  $handler->display->display_options['fields']['field_uaqs_photos']['table'] = 'field_data_field_uaqs_photos';
+  $handler->display->display_options['fields']['field_uaqs_photos']['field'] = 'field_uaqs_photos';
+  $handler->display->display_options['fields']['field_uaqs_photos']['label'] = '';
+  $handler->display->display_options['fields']['field_uaqs_photos']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_uaqs_photos']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['field_uaqs_photos']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_uaqs_photos']['element_wrapper_class'] = 'uaqs-news-photo';
+  $handler->display->display_options['fields']['field_uaqs_photos']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_uaqs_photos']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_uaqs_photos']['settings'] = array(
     'image_style' => 'uaqs_spotlight',
     'image_link' => 'content',
   );
-  $handler->display->display_options['fields']['field_uaqs_photo']['delta_limit'] = '1';
-  $handler->display->display_options['fields']['field_uaqs_photo']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_uaqs_photo']['separator'] = '';
+  $handler->display->display_options['fields']['field_uaqs_photos']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_uaqs_photos']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_uaqs_photos']['separator'] = '';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
