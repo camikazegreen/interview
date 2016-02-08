@@ -483,7 +483,7 @@ function uaqs_fields_field_default_field_bases() {
   // Exported field_base: 'field_uaqs_photo'.
   $field_bases['field_uaqs_photo'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_uaqs_photo',
@@ -502,6 +502,27 @@ function uaqs_fields_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_uaqs_photo'.
+  $field_bases['field_uaqs_photos'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_uaqs_photos',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'image',
+    'settings' => array(
+      'default_image' => 0,
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'image',
+  );
   // Exported field_base: 'field_uaqs_published'.
   $field_bases['field_uaqs_published'] = array(
     'active' => 1,
