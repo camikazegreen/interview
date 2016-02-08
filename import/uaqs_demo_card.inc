@@ -97,7 +97,7 @@ class UaqsDemoCardMigration extends UaqsBeanMigration {
      ->fields(array('region' => $row->region, 'status' => 1, 'visibility' => $row->visibility, 'pages' => $row->pages, 'weight' => $row->weight))
      ->condition('module', 'bean')
      ->condition('delta', $bean_block_delta, 'IN')
-     ->condition('theme', 'uaqs_zen')
+     ->condition('theme', 'ua_zen')
      ->execute();
   }
 
