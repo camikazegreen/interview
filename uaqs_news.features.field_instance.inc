@@ -380,8 +380,8 @@ function uaqs_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-uaqs_news-field_uaqs_photo'.
-  $field_instances['node-uaqs_news-field_uaqs_photo'] = array(
+  // Exported field_instance: 'node-uaqs_news-field_uaqs_photos'.
+  $field_instances['node-uaqs_news-field_uaqs_photos'] = array(
     'bundle' => 'uaqs_news',
     'deleted' => 0,
     'description' => '',
@@ -420,7 +420,7 @@ function uaqs_news_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_uaqs_photo',
+    'field_name' => 'field_uaqs_photos',
     'label' => 'News Article Photos',
     'required' => 0,
     'settings' => array(
