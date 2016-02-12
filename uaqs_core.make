@@ -55,8 +55,7 @@ projects[email][version] = 1.3
 
 projects[entityreference][version] = 1.1
 
-projects[field_collection][version] = 1.0-beta10
-projects[field_collection][patch][2599248] = http://drupal.org/files/issues/field-collection-2599248-2.patch
+projects[field_collection][version] = 1.0-beta11
 
 projects[field_formatter_settings][version] = 1.1
 
@@ -66,7 +65,7 @@ projects[field_multiple_limit][version] = 1.0-alpha4
 
 projects[image_class][version] = 1.0
 
-projects[link][version] = 1.3
+projects[link][version] = 1.4
 
 projects[title][version] = 1.x-dev
 projects[title][download][type] = git
@@ -91,7 +90,7 @@ projects[strongarm][version] = 2.0
 ; UA Zen theme dependencies
 ; ------------------------------------------------------------------------------
 
-projects[zen][version] = 5.5
+projects[zen][version] = 5.6
 projects[zen][type] = theme
 projects[zen][subdir] = ''
 
