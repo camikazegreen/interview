@@ -20,6 +20,8 @@ defaults[projects][subdir] = contrib
 
 projects[ctools][version] = 1.9
 
+projects[draggableviews][version] = 2.1
+
 projects[elements][version] = 1.4
 
 projects[entity][version] = 1.6
