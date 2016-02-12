@@ -17,7 +17,7 @@ projects[ua_cas][type] = module
 projects[ua_cas][subdir] = custom
 projects[ua_cas][download][type] = git
 projects[ua_cas][download][branch] = 7.x-1.x
-projects[ua_cas][download][revision] = 3bcc8e0
+projects[ua_cas][download][revision] = 75e3ba3
 projects[ua_cas][download][url] = https://bitbucket.org/ua_drupal/ua_cas.git
 
 projects[uaqs_content_chunks][type] = module
@@ -31,7 +31,7 @@ projects[uaqs_core][type] = module
 projects[uaqs_core][subdir] = custom
 projects[uaqs_core][download][type] = git
 projects[uaqs_core][download][branch] = 7.x-1.x
-projects[uaqs_core][download][revision] = f0c8be9
+projects[uaqs_core][download][revision] = 7f21fb8
 projects[uaqs_core][download][url] = https://bitbucket.org/ua_drupal/uaqs_core.git
 
 projects[uaqs_demo][type] = module
