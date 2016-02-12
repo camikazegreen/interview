@@ -16,7 +16,6 @@ defaults[projects][subdir] = contrib
 ; ------------------------------------------------------------------------------
 
 projects[flexslider][version] = 2.0-rc1
-projects[draggableviews][version] = 2.1
 
 ; ------------------------------------------------------------------------------
 ; Libraries
