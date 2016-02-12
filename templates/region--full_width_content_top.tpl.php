@@ -8,8 +8,6 @@
  */
 ?>
 <?php if ($content): ?>
-    </div>
-</div> <!--close container-->
 <div class="<?php print $classes;?>">
   <div class="container">
     <div class="row">
@@ -19,7 +17,5 @@
     </div>
   </div>
 </div> <!--Close wrapper-->
-<div class="container"> <!-- Restart regular columns -->
-  <div class="row">
 <?php endif; ?>
 
