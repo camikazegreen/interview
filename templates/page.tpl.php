@@ -87,7 +87,7 @@
     <?php endif; ?>
     <div class="container">
         <div class="row">
-            <article id="content" <?php print $content_column_class; ?> role="main">
+            <article id="content" class="col-xs-12" role="main">
             <?php print $breadcrumb; ?>
             <a id="main-content"></a>
             <?php print render($title_prefix); ?>
@@ -184,7 +184,7 @@
             </div>
         </div>
     </div>
-    <?php endif; ?>
+     <?php endif; ?>
 </div> <!-- /.main -->
 <footer id="footer_site" class="<?php print $classes; ?> page-row">
   <?php print render($page['footer']); ?>
