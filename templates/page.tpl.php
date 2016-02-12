@@ -89,16 +89,6 @@
         <div class="row">
             <article id="content" class="col-xs-12" role="main">
             <?php print $breadcrumb; ?>
-            <a id="main-content"></a>
-            <?php print render($title_prefix); ?>
-            <?php if ($title): ?>
-              <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
-            <?php endif; ?>
-            <?php print render($title_suffix); ?>
-            <?php print render($tabs); ?>
-            <?php if ($action_links): ?>
-              <ul class="action-links"><?php print render($action_links); ?></ul>
-            <?php endif; ?>
             <?php if (!empty($page['content_top'])) : ?>
               <?php print render($page['content_top']); ?>
             <?php endif; ?>
@@ -108,6 +98,16 @@
     <div class="container">
         <div class="row">
         <article <?php print $content_column_class; ?>>
+        <a id="main-content"></a>
+        <?php print render($title_prefix); ?>
+        <?php if ($title): ?>
+          <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+        <?php endif; ?>
+        <?php print render($title_suffix); ?>
+        <?php print render($tabs); ?>
+        <?php if ($action_links): ?>
+          <ul class="action-links"><?php print render($action_links); ?></ul>
+        <?php endif; ?>
         <?php print render($page['content']); ?>
         <?php print $feed_icons; ?>
         </article>
