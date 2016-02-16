@@ -108,9 +108,6 @@ function ua_zen_preprocess_image_style(&$vars) {
  *
  * @ingroup theme_functions
  */
-drupal_set_message(t('An error occurred and processing did not complete.'), 'error');
-drupal_set_message(t('An warning occurred and processing did not complete.'), 'warning');
-drupal_set_message(t('An error occurred and processing did not complete.'), 'status');
 
 function ua_zen_status_messages($variables) {
   $display = $variables['display'];
