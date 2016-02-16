@@ -7,7 +7,6 @@
  */
 
 define('UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION', '1.0.0-alpha4');
-
 /**
  * Return information from the .info file of a theme (and possible base themes).
  *
