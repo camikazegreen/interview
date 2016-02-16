@@ -108,6 +108,9 @@ function ua_zen_preprocess_image_style(&$vars) {
  *
  * @ingroup theme_functions
  */
+drupal_set_message(t('An error occurred and processing did not complete.'), 'error');
+drupal_set_message(t('An warning occurred and processing did not complete.'), 'warning');
+drupal_set_message(t('An error occurred and processing did not complete.'), 'status');
 
 function ua_zen_status_messages($variables) {
   $display = $variables['display'];
@@ -134,23 +137,32 @@ function ua_zen_status_messages($variables) {
 
   foreach (drupal_get_messages($display) as $type => $messages) {
     $class = (isset($status_class[$type])) ? ' alert-' . $status_class[$type] : '';
-    $output .= "<div class=\"alert alert-block$class messages $type\">\n";
+    $output .= "<div class=\"alert alert-block$class messages $type\" role=\"alertdialog\" aria-labelledby=\"$status_class[$type]\" >\n";
+    $output .= "  <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>\n";
     $output .= "  <a class=\"close\" data-dismiss=\"alert\" href=\"#\"><i class=\"ua-brand-x\"></i></a>\n";
 
     if (!empty($status_heading[$type])) {
-      $output .= '<h4 class="element-invisible">' . $status_heading[$type] . "</h4>\n";
+        $output .= '<h4 class="sr-only" id="' . $status_class[$type] . '">' . $status_heading[$type] . "</h4>\n";
     }
 
     if (count($messages) > 1) {
       $output .= " <ul>\n";
       foreach ($messages as $message) {
-        $output .= '  <li>' . $message . "</li>\n";
+        $has_link = strstr($message, 'href');
+        if ($has_link){
+            $message = str_replace('href=', 'class="alert-link" href=', $message);
+        }
+        $output .= '  <li role="alert">' . $message . "</li>\n";
       }
       $output .= " </ul>\n";
     }
     else {
-      $output .= $messages[0];
-    }
+        $has_link = strstr($messages[0], 'href');
+        if ($has_link){
+            $message[0] = str_replace('href', 'class="alert-link" href', $message[0]);
+        }
+        $output .= '<span role="alert">' . $messages[0] . '</span>';
+        }
 
     $output .= "</div>\n";
   }
