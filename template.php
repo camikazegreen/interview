@@ -143,7 +143,6 @@ function ua_zen_status_messages($variables) {
     }
 
     if (count($messages) > 1) {
-      $output .= "  <strong aria-hidden=\"true\" class=\"text-uppercase\">$status_class[$type]: </strong>";
       $output .= " <ul id=\"$status_class[$type]-description\">\n";
       foreach ($messages as $message) {
         $has_link = strstr($message, 'href');
@@ -159,7 +158,6 @@ function ua_zen_status_messages($variables) {
         if ($has_link){
             $message[0] = str_replace('href', 'class="alert-link" href', $message[0]);
         }
-        $output .= "  <strong aria-hidden=\"true\" class=\"text-uppercase\">$status_class[$type]: </strong>";
         $output .= "<span id=\"$status_class[$type]-description\" role=\"alert\">$messages[0]</span>";
         }
 
