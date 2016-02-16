@@ -36,7 +36,7 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Field: Content: Slide Image */
+  /* Field: Content: Publication Photos */
   $handler->display->display_options['fields']['field_uaqs_photos']['id'] = 'field_uaqs_photos';
   $handler->display->display_options['fields']['field_uaqs_photos']['table'] = 'field_data_field_uaqs_photos';
   $handler->display->display_options['fields']['field_uaqs_photos']['field'] = 'field_uaqs_photos';
@@ -140,7 +140,7 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Slide Image */
+  /* Field: Content: Publication Photos */
   $handler->display->display_options['fields']['field_uaqs_photos']['id'] = 'field_uaqs_photos';
   $handler->display->display_options['fields']['field_uaqs_photos']['table'] = 'field_data_field_uaqs_photos';
   $handler->display->display_options['fields']['field_uaqs_photos']['field'] = 'field_uaqs_photos';

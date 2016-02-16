@@ -136,22 +136,52 @@ function uaqs_news_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_text_column|node|uaqs_news|default';
-  $field_group->group_name = 'group_text_column';
+  $field_group->identifier = 'group_row|node|uaqs_news|default';
+  $field_group->group_name = 'group_row';
   $field_group->entity_type = 'node';
   $field_group->bundle = 'uaqs_news';
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Text Column',
+    'label' => 'Row',
     'weight' => '0',
     'children' => array(
-      0 => 'title_field',
-      1 => 'field_uaqs_body',
-      2 => 'field_uaqs_byline',
-      3 => 'field_uaqs_more_info',
-      4 => 'field_uaqs_published',
-      5 => 'field_uaqs_summary_short',
+      0 => 'group_text_column',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Row',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'row',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_row|node|uaqs_news|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_text_column|node|uaqs_news|default';
+  $field_group->group_name = 'group_text_column';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_news';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_row';
+  $field_group->data = array(
+    'label' => 'Text Column',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_uaqs_body',
+      1 => 'field_uaqs_byline',
+      2 => 'field_uaqs_more_info',
+      3 => 'field_uaqs_published',
+      4 => 'field_uaqs_summary_short',
+      5 => 'title_field',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -233,6 +263,7 @@ function uaqs_news_field_group_info() {
   t('Left Column');
   t('Media');
   t('Right Column');
+  t('Row');
   t('Text Column');
   t('Text Muted');
   t('h4');
