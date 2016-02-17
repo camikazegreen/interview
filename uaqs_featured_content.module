@@ -17,12 +17,20 @@ function uaqs_featured_content_entity_info_alter(&$entity_info) {
 }
 
 /**
+ * Implements hook_preprocess_views_view().
+ */
+function uaqs_featured_content_preprocess_views_view(&$vars) {
+  $view = $vars['view'];
+  if ($view->name == 'uaqs_hero_carousel' && $view->current_display == 'hero_block') {
+    drupal_add_js(drupal_get_path('module', 'uaqs_featured_content') . '/js/modernizr.custom.7860.js');
+    drupal_add_js(drupal_get_path('module', 'uaqs_featured_content') . '/js/uaqs_featured_content.js');
+  }
+}
+
+/**
  * Implements hook_preprocess_node().
  */
 function uaqs_featured_content_preprocess_node(&$vars) {
-  drupal_add_js(drupal_get_path('module', 'uaqs_featured_content') . '/js/modernizr.custom.7860.js');
-  drupal_add_js(drupal_get_path('module', 'uaqs_featured_content') . '/js/uaqs_featured_content.js');
-
   $wrapper = entity_metadata_wrapper('node', $vars['node']);
    if ($wrapper->getBundle() == 'uaqs_carousel_item') {
     $nid = $wrapper->getIdentifier();
