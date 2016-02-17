@@ -156,7 +156,7 @@ function ua_zen_status_messages($variables) {
     else {
         $has_link = strstr($messages[0], 'href');
         if ($has_link){
-            $message[0] = str_replace('href', 'class="alert-link" href', $message[0]);
+            $messages[0] = str_replace('href', 'class="alert-link" href', $messages[0]);
         }
         $output .= "<span id=\"$status_class[$type]-description\" role=\"alert\">$messages[0]</span>";
         }
