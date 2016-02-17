@@ -16,13 +16,15 @@ drupal_add_js('//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', a
         'weight' => 3,
         )
 );
-
 /**
  * Implements hook_css_alter().
  *
  * Adds UA Bootstrap CSS based on theme settings.
  */
 function ua_zen_css_alter(&$css) {
+
+  // Exclude specified CSS files from theme.
+  $excludes = ua_zen_get_theme_info(NULL, 'exclude][css');
   $ua_bootstrap_path = '';
   $ua_bootstrap_source = theme_get_setting('ua_bootstrap_source');
   $ua_bootstrap_minified = theme_get_setting('ua_bootstrap_minified');
@@ -56,6 +58,10 @@ function ua_zen_css_alter(&$css) {
 
   $ua_bootstrap_css_info['data'] = $ua_bootstrap_path;
   $css[$ua_bootstrap_path] = $ua_bootstrap_css_info;
+
+  if (!empty($excludes)) {
+    $css = array_diff_key($css, drupal_map_assoc($excludes));
+  }
 }
 
 
@@ -80,6 +86,84 @@ function ua_zen_preprocess_image_style(&$vars) {
   if(!module_exists('image_class')){
     $vars['attributes']['class'][] = 'img-responsive';
   }
+}
+
+
+/**
+ * Returns HTML for status and/or error messages, grouped by type.
+ *
+ * An invisible heading identifies the messages for assistive technology.
+ * Sighted users see a colored box. See http://www.w3.org/TR/WCAG-TECHS/H69.html
+ * for info.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - display: (optional) Set to 'status' or 'error' to display only messages
+ *     of that type.
+ *
+ * @return string
+ *   The constructed HTML.
+ *
+ * @see theme_status_messages()
+ *
+ * @ingroup theme_functions
+ */
+
+function ua_zen_status_messages($variables) {
+  $display = $variables['display'];
+  $output = '';
+
+  $status_heading = array(
+    'status' => t('Status message'),
+    'error' => t('Error message'),
+    'warning' => t('Warning message'),
+    'info' => t('Informative message'),
+  );
+
+  // Map Drupal message types to their corresponding Bootstrap classes.
+  // @see http://twitter.github.com/bootstrap/components.html#alerts
+  $status_class = array(
+    'status' => 'success',
+    'error' => 'danger',
+    'warning' => 'warning',
+    // Not supported, but in theory a module could send any type of message.
+    // @see drupal_set_message()
+    // @see theme_status_messages()
+    'info' => 'info',
+  );
+
+  foreach (drupal_get_messages($display) as $type => $messages) {
+    $class = (isset($status_class[$type])) ? ' alert-' . $status_class[$type] : '';
+    $output .= "<div class=\"alert alert-block$class messages $type\" role=\"alertdialog\" aria-labelledby=\"$status_class[$type]-label\" aria-describedby=\"$status_class[$type]-description\">\n";
+    $output .= "  <span class=\"glyphicon glyphicon-exclamation-sign sr-only\" aria-hidden=\"true\"></span>\n";
+    $output .= "  <a class=\"close\" data-dismiss=\"alert\" href=\"#\" aria-hidden=\"true\"><i class=\"ua-brand-x\" aria-hidden=\"true\"></i></a>\n";
+
+    if (!empty($status_heading[$type])) {
+        $output .= "<h4 aria-hidden=\"true\" class=\"sr-only\" id=\"$status_class[$type]-label\">$status_heading[$type]</h4>\n";
+    }
+
+    if (count($messages) > 1) {
+      $output .= " <ul id=\"$status_class[$type]-description\">\n";
+      foreach ($messages as $message) {
+        $has_link = strstr($message, 'href');
+        if ($has_link){
+            $message = str_replace('href=', 'class="alert-link" href=', $message);
+        }
+        $output .= "  <li role=\"alert\">$message</li>\n";
+      }
+      $output .= " </ul>\n";
+    }
+    else {
+        $has_link = strstr($messages[0], 'href');
+        if ($has_link){
+            $messages[0] = str_replace('href', 'class="alert-link" href', $messages[0]);
+        }
+        $output .= "<span id=\"$status_class[$type]-description\" role=\"alert\">$messages[0]</span>";
+        }
+
+    $output .= "</div>\n";
+  }
+  return $output;
 }
 
 /**
