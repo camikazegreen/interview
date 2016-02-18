@@ -146,6 +146,8 @@ to make DevDesktop versions of _drush_ and _composer_ available to the shell. On
 - `BEHAT_PARAMS` one-line JSON configuration definition used by Behat itself.
 - `UAQSTEST_ARCHIVE` name of a .zip or .tar.gz file containing a pre-built packaged UA Quickstart distribution.
 - `UAQSTEST_BASEURL` URL (without a trailing slash) where Behat can find the local web site for testing.
+- `UAQSTEST_BBUSER` BitBucket account user name to use when uploading UA QuickStart packages to BitBucket.
+- `UAQSTEST_BBPASS` BitBucket account password to use when uploading UA QuickStart packages to BitBucket.
 - `UAQSTEST_DBNAME` MySQL database name for the local test web site.
 - `UAQSTEST_DBHOST` name or address for the MySQL server (including optional port, as 127.0.0.1:33067).
 - `UAQSTEST_DBPASS` password used to access the local MySQL server as a user with full access.
