@@ -10,7 +10,7 @@ if [ x"$UAQSTEST_BBUSER" = x ]; then
   exit 1
 fi
 
-# The BitBucket user name:
+# The BitBucket password:
 if [ x"$UAQSTEST_BBPASS" = x ]; then
   echo "** no BitBucket password (must set UAQSTEST_BBPASS)." >&2
   exit 1
