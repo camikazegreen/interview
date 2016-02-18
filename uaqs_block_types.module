@@ -24,7 +24,7 @@ include_once 'uaqs_block_types.theme_field_overrides.inc';
  * @param string $hook
  *   The hook name.
  */
-function uaqs_block_types_preprocess_entity(array &$variables, $hook) {
+function uaqs_block_types_preprocess_entity(&$variables) {
   if ($variables['entity_type'] == 'bean') {
     $function = __FUNCTION__ . '_bean_' . $variables['bean']->type;
     if (function_exists($function)) {
@@ -44,7 +44,7 @@ function uaqs_block_types_preprocess_entity(array &$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered.
  */
-function uaqs_block_types_preprocess_block(&$variables, $hook) {
+function uaqs_block_types_preprocess_block(&$variables) {
   if (empty($variables['attributes_array']['role'])) {
     $variables['attributes_array']['role'] = 'complementary';
   }
