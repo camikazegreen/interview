@@ -18,7 +18,7 @@ function uaqs_navigation_menu_block_blocks() {
       'title_link' => FALSE,
       'admin_title' => 'UAQS Second-level Navigation',
       'level' => 2,
-      'depth' => 1,
+      'depth' => 2,
     ),
   );
 }
