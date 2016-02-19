@@ -1,10 +1,23 @@
 #!/bin/bash
 #
-# Build & packaging script for Jenkins.
+# Release build & packaging script for Jenkins.
 #
 
+if [ $GIT_BRANCH ] ; then
+  echo "Working on Git branch or tag $GIT_BRANCH..." >&2
+else
+  echo "** could not determine the Git branch or tag." >&2
+  exit 1
+fi
+tag=`echo "$GIT_BRANCH" | awk -F'/' '{ print $NF; }'`
+if [ $tag ] ; then
+  echo "Using tag $tag..." >&2
+else
+  echo "** could not determine the Git tag." >&2
+  exit 1
+fi
 distroname='ua_quickstart'
-artefact="${distroname}-${GIT_BRANCH}-dev"
+artefact="${distroname}-${tag}"
 tarball="${artefact}.tar.gz"
 zipfile="${artefact}.zip"
 if [ -e "$tarball" ] ; then
@@ -33,7 +46,7 @@ else
   echo "** $distromakefile makefile missing." >&2
   exit 1
 fi
-if drush make --no-cache "$distromakefile" "$distrobuilddir" ; then
+if drush make --no-cache --prepare-install "$distromakefile" "$distrobuilddir" ; then
   echo "Made a distribution from the $distromakefile makefile..." >&2
 else
   echo "** drush make failed..." >&2
