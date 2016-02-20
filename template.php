@@ -496,3 +496,14 @@ function ua_zen_menu_link(array $variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+/**
+ * Overrides theme_menu_link().
+ *
+ * Restores default behavior for menu blocks.
+ *
+ * @see https://www.drupal.org/node/1850194
+ */
+function ua_zen_menu_link__menu_block($variables) {
+  return theme_menu_link($variables);
+}
