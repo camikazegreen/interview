@@ -52,7 +52,7 @@ projects[uaqs_fields][type] = module
 projects[uaqs_fields][subdir] = custom
 projects[uaqs_fields][download][type] = git
 projects[uaqs_fields][download][branch] = 7.x-1.x
-projects[uaqs_fields][download][revision] = fd1fc3b
+projects[uaqs_fields][download][revision] = 994b09f
 projects[uaqs_fields][download][url] = https://bitbucket.org/ua_drupal/uaqs_fields.git
 
 projects[uaqs_featured_content][type] = module
