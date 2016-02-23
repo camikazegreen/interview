@@ -58,7 +58,7 @@
     <?php endif; // End primary_nav?>
 </header>
 
-<div id="main" class="page-row page-row-expanded page-row-padding-top page-row-padding-bottom">
+<div id="main" class="page-row page-row-expanded page-row-padding-bottom">
   <?php if (!empty($page['help']) || ($messages)) : ?>
   <section class="container">
       <div class="row">
