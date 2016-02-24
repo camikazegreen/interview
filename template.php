@@ -217,15 +217,19 @@ function ua_zen_preprocess_html(&$variables) {
 function ua_zen_preprocess_page(&$variables, $hook) {
   // Add information about the number of sidebars.
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+    $variables['second_sidebar_column_class'] = ' class="col-sm-3"';
     $variables['content_column_class'] = ' class="column col-sm-6 col-sm-push-3"';
   }
   elseif (!empty($variables['page']['sidebar_first']) && empty($variables['page']['sidebar_second'])) {
+    $variables['second_sidebar_column_class'] = ' class="col-sm-3"';
     $variables['content_column_class'] = ' class="column col-sm-9 col-sm-push-3"';
   }
   elseif (empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
-    $variables['content_column_class'] = ' class="column col-sm-9 col-sm-3"';
+    $variables['content_column_class'] = ' class="col-sm-7 col-md-8 col-lg-8 col-8 column"';
+    $variables['second_sidebar_column_class'] = ' class="col-sm-5 col-md-4 col-lg-4 column"';
   }
   else {
+    $variables['second_sidebar_column_class'] = ' class="col-sm-3"';
     $variables['content_column_class'] = ' class="column col-sm-12"';
   }
   // Allows there to be a template file for the UA Header and Footers without
