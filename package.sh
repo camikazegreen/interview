@@ -4,7 +4,20 @@
 #
 
 distroname='ua_quickstart'
-artefact="${distroname}-${GIT_BRANCH}-dev"
+if [ "$GIT_BRANCH" ] ; then
+  echo "Working on Git branch ${GIT_BRANCH}..." >&2
+else
+  echo "** could not determine the Git branch." >&2
+  exit 1
+fi
+branch=`echo "$GIT_BRANCH" | awk -F'/' '{ print $NF; }'`
+if [ "$branch" ] ; then
+  echo "Using ${branch} as the branch name..." >&2
+else
+  echo "** could not determine the branch name." >&2
+  exit 1
+fi
+artefact="${distroname}-${branch}-dev"
 tarball="${artefact}.tar.gz"
 zipfile="${artefact}.zip"
 if [ -e "$tarball" ] ; then
