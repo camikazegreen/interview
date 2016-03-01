@@ -223,5 +223,14 @@
     "external" : 0,
     "expanded" : 0,
     "weight" : 4
+  },
+  {"mlid":26,
+    "parent_id" : 0,
+    "menu_name" : "main-menu",
+    "link_path" : "news",
+    "link_title" : "News",
+    "external" : 0,
+    "expanded" : 0,
+    "weight" : 0
   }
 ]
