@@ -168,13 +168,31 @@ function uaqs_featured_content_views_default_views() {
   $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
+  /* Field: Field: Photo */
+  $handler->display->display_options['fields']['field_uaqs_photo']['id'] = 'field_uaqs_photo';
+  $handler->display->display_options['fields']['field_uaqs_photo']['table'] = 'field_data_field_uaqs_photo';
+  $handler->display->display_options['fields']['field_uaqs_photo']['field'] = 'field_uaqs_photo';
+  $handler->display->display_options['fields']['field_uaqs_photo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_uaqs_photo']['settings'] = array(
+    'image_style' => 'medium',
+    'image_link' => '',
+    'class' => '',
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['label'] = 'Headline';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Field: Call to action */
+  $handler->display->display_options['fields']['field_uaqs_link']['id'] = 'field_uaqs_link';
+  $handler->display->display_options['fields']['field_uaqs_link']['table'] = 'field_data_field_uaqs_link';
+  $handler->display->display_options['fields']['field_uaqs_link']['field'] = 'field_uaqs_link';
+  $handler->display->display_options['fields']['field_uaqs_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_uaqs_link']['settings'] = array(
+    'class' => '',
+  );
   /* Sort criterion: Draggableviews: Weight */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
