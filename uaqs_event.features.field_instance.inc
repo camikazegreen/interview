@@ -341,8 +341,8 @@ If there is no map, simply fill in the location name or address in the title fie
     ),
   );
 
-  // Exported field_instance: 'node-uaqs_event-field_uaqs_more_info'.
-  $field_instances['node-uaqs_event-field_uaqs_more_info'] = array(
+  // Exported field_instance: 'node-uaqs_event-field_uaqs_link'.
+  $field_instances['node-uaqs_event-field_uaqs_link'] = array(
     'bundle' => 'uaqs_event',
     'default_value' => NULL,
     'deleted' => 0,
@@ -372,7 +372,7 @@ If there is no map, simply fill in the location name or address in the title fie
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_uaqs_more_info',
+    'field_name' => 'field_uaqs_link',
     'label' => 'More Information',
     'required' => 0,
     'settings' => array(
