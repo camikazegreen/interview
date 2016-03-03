@@ -20,7 +20,7 @@ The UA QuickStart component for a short news article. This repository contains a
     - [Field Group](https://www.drupal.org/project/field_group) used for adding style to display modes.
     - [Field Multiple Limit](https://www.drupal.org/project/field_multiple_limit) used to limit the amount of images displayed in display modes.
     - [Image Class](https://www.drupal.org/project/image_class) used to set UA Bootstrap classes on images in media lists.
-    - [Link](https://www.drupal.org/project/link) used for the more information link
+    - [Link](https://www.drupal.org/project/link) used to link to publication.
     - [Strongarm](https://www.drupal.org/project/strongarm) used maintain content type settings
     - [Title](https://www.drupal.org/project/title) used for making the title adjustable as a field in display modes.
     - [Views](https://www.drupal.org/project/views) provides views.

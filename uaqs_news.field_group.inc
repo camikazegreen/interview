@@ -178,7 +178,7 @@ function uaqs_news_field_group_info() {
     'children' => array(
       0 => 'field_uaqs_body',
       1 => 'field_uaqs_byline',
-      2 => 'field_uaqs_more_info',
+      2 => 'field_uaqs_link',
       3 => 'field_uaqs_published',
       4 => 'field_uaqs_summary_short',
       5 => 'title_field',
