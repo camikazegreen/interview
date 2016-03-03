@@ -23,7 +23,7 @@ function uaqs_block_types_field_group_info() {
     'label' => 'Card Block',
     'weight' => '13',
     'children' => array(
-      0 => 'field_uaqs_blurb_text',
+      0 => 'field_uaqs_text_area',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -143,7 +143,7 @@ function uaqs_block_types_field_group_info() {
     'label' => 'Card Text',
     'weight' => '10',
     'children' => array(
-      0 => 'field_uaqs_blurb_text',
+      0 => 'field_uaqs_text_area',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(

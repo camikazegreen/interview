@@ -5,7 +5,7 @@
  *
  * Available variables:
  * - $content: An associative array of fields ready for rendering
- *   - field_uaqs_blurb_text: One or two paragraphs of text.
+ *   - field_uaqs_text_area: One or two paragraphs of text.
  *   - field_uaqs_read_more: A link to further relevant content.
  * - $classes: A string containing CSS classes for the outer wrapper.
  * - $attributes: A string containing HTML attributes for the outer wrapper.
@@ -23,7 +23,7 @@
     <div class="row">
       <p class="col-md-10 col-md-offset-1 text-center-not-xs text-center-md lead serif" <?php print $content_attributes; ?>>
         <?php
-          print render($content['field_uaqs_blurb_text']);
+          print render($content['field_uaqs_text_area']);
         ?>
         <?php if ($content['have_link']): ?>
           <br />

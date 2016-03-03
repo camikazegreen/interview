@@ -261,8 +261,8 @@ function uaqs_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-uaqs_card-field_uaqs_blurb_text'.
-  $field_instances['bean-uaqs_card-field_uaqs_blurb_text'] = array(
+  // Exported field_instance: 'bean-uaqs_card-field_uaqs_text_area'.
+  $field_instances['bean-uaqs_card-field_uaqs_text_area'] = array(
     'bundle' => 'uaqs_card',
     'default_value' => NULL,
     'deleted' => 0,
@@ -290,11 +290,11 @@ function uaqs_block_types_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'bean',
-    'field_name' => 'field_uaqs_blurb_text',
+    'field_name' => 'field_uaqs_text_area',
     'label' => 'Text',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -635,8 +635,8 @@ function uaqs_block_types_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'bean-uaqs_illustrated_blurb-field_uaqs_blurb_text'.
-  $field_instances['bean-uaqs_illustrated_blurb-field_uaqs_blurb_text'] = array(
+  // 'bean-uaqs_illustrated_blurb-field_uaqs_text_area'.
+  $field_instances['bean-uaqs_illustrated_blurb-field_uaqs_text_area'] = array(
     'bundle' => 'uaqs_illustrated_blurb',
     'default_value' => NULL,
     'deleted' => 0,
@@ -654,7 +654,7 @@ function uaqs_block_types_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'bean',
-    'field_name' => 'field_uaqs_blurb_text',
+    'field_name' => 'field_uaqs_text_area',
     'label' => 'Text',
     'required' => 0,
     'settings' => array(
@@ -878,8 +878,8 @@ function uaqs_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-uaqs_mini_blurb-field_uaqs_blurb_text'.
-  $field_instances['bean-uaqs_mini_blurb-field_uaqs_blurb_text'] = array(
+  // Exported field_instance: 'bean-uaqs_mini_blurb-field_uaqs_text_area'.
+  $field_instances['bean-uaqs_mini_blurb-field_uaqs_text_area'] = array(
     'bundle' => 'uaqs_mini_blurb',
     'default_value' => NULL,
     'deleted' => 0,
@@ -897,7 +897,7 @@ function uaqs_block_types_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'bean',
-    'field_name' => 'field_uaqs_blurb_text',
+    'field_name' => 'field_uaqs_text_area',
     'label' => 'Text',
     'required' => 0,
     'settings' => array(
@@ -915,8 +915,8 @@ function uaqs_block_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'bean-uaqs_statement-field_uaqs_blurb_text'.
-  $field_instances['bean-uaqs_statement-field_uaqs_blurb_text'] = array(
+  // Exported field_instance: 'bean-uaqs_statement-field_uaqs_text_area'.
+  $field_instances['bean-uaqs_statement-field_uaqs_text_area'] = array(
     'bundle' => 'uaqs_statement',
     'default_value' => NULL,
     'deleted' => 0,
@@ -934,7 +934,7 @@ function uaqs_block_types_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'bean',
-    'field_name' => 'field_uaqs_blurb_text',
+    'field_name' => 'field_uaqs_text_area',
     'label' => 'Text',
     'required' => 0,
     'settings' => array(

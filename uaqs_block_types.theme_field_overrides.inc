@@ -182,23 +182,6 @@ function ua_zen_field__field_uaqs_contact_phone_link(array $variables) {
 }
 
 /**
- * UAQS Illustrated Blurb fields.
- */
-
-/**
- * Returns HTML for a uaqs_blurb_text field.
- *
- * @param array $variables
- *   The usual field associative array for rendering.
- *
- * @return string
- *   The rendered field.
- */
-function ua_zen_field__field_uaqs_blurb_text(array $variables) {
-  return render_minimal_values($variables);
-}
-
-/**
  * Returns HTML for a uaqs_read_more field.
  *
  * @param array $variables
