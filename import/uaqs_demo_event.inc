@@ -39,7 +39,7 @@ class UaqsDemoEventMigration extends UaqsNodeMigration {
       'uaqs_summary' => t('Summary'),
       'uaqs_body' => t('Description'),
       'uaqs_location' => t('Event location'),
-      'uaqs_more_info' => t('More information'),
+      'uaqs_link' => t('More information'),
     );
     // Date ending and repeat fields...
     $date_extra_fields = array(
@@ -49,7 +49,7 @@ class UaqsDemoEventMigration extends UaqsNodeMigration {
     // Titles for links...
     $link_title_fields = array(
       'uaqs_location_title' => t('Location link title'),
-      'uaqs_more_info_title' => t('Information link title'),
+      'uaqs_link_title' => t('Information link title'),
     );
     // File fields...
     $file_src_field = 'uaqs_attachments';
@@ -85,7 +85,7 @@ class UaqsDemoEventMigration extends UaqsNodeMigration {
 
     // Link titles.
     $this->addFieldMapping('field_uaqs_location:title', 'uaqs_location_title');
-    $this->addFieldMapping('field_uaqs_more_info:title', 'uaqs_more_info_title');
+    $this->addFieldMapping('field_uaqs_link:title', 'uaqs_link_title');
 
     // Images and attachments.
     $image_dst_field = 'field_' . $image_src_field;

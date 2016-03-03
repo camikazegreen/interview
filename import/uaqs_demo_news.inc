@@ -47,11 +47,11 @@ class UaqsDemoNewsMigration extends UaqsNodeMigration {
       'expiration_date' => t('Expiration date'),
       'uaqs_summary' => t('Summary'),
       'uaqs_body' => t('Article body'),
-      'uaqs_more_info' => t('Link to more information'),
+      'uaqs_link' => t('Link to more information'),
     );
     // Titles for links...
     $link_title_fields = array(
-      'uaqs_more_info_title' => t('Information link title'),
+      'uaqs_link_title' => t('Information link title'),
     );
     // File fields...
     $file_src_field = 'uaqs_attachments';
@@ -85,7 +85,7 @@ class UaqsDemoNewsMigration extends UaqsNodeMigration {
     }
 
     // Link title is a special case.
-    $this->addFieldMapping('field_uaqs_more_info:title', 'uaqs_more_info_title');
+    $this->addFieldMapping('field_uaqs_link:title', 'uaqs_link_title');
 
     // Images and attachments.
     foreach (array($image_src_field, $file_src_field) as $src_field) {
