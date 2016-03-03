@@ -7,6 +7,21 @@ It incorporates the the UA Bootstrap framework to provide lots of helpful classe
 
 UA Zen uses the [UA Bootstrap](http://uadigital.arizona.edu/ua-bootstrap) front-end framework which requires jQuery version 1.9 or higher.  The recommended method for enabling a newer version of jQuery for Drupal is to install and enable the [jQuery Update](https://www.drupal.org/project/jquery_update) module.  If you don't want to use jQuery Update, and are able to meet the jQuery dependency another way, you can manually supress the jQuery version warning message within the theme settings.
 
+## Development Information
+
+### SASS/Compass
+
+UA Zen uses SASS and the Compass SASS framework.  Currently, both the source .scss files and the compiled .css files are kept in version control and included in released/packaged versions of UA Zen.  If the generation of compiled CSS files can be sufficiently automated for packaging/distrubtion, the compiled css files may be eventually removed from version control.
+
+#### Compiling SASS
+In order to simplify commit diffs and pull requests, UA Zen maintainers should be sure to set the Compass environment to "production" by using the `-e production` option when using the `compass compile` or `compass watch` commands, e.g.:
+
+```bundle exec compass compile -e production```
+
+or
+
+```bundle exec compass watch -e production```
+
 ## Making a UA Zen subtheme ##
 
 The following instructions make a new subtheme called ua_zen_subtheme.
