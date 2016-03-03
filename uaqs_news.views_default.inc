@@ -61,7 +61,7 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'uaqs-news-title';
-  /* Field: Content: Published */
+  /* Field: Content: Date of publication */
   $handler->display->display_options['fields']['field_uaqs_published']['id'] = 'field_uaqs_published';
   $handler->display->display_options['fields']['field_uaqs_published']['table'] = 'field_data_field_uaqs_published';
   $handler->display->display_options['fields']['field_uaqs_published']['field'] = 'field_uaqs_published';
@@ -73,14 +73,14 @@ function uaqs_news_views_default_views() {
     'interval' => 2,
     'interval_display' => 'time ago',
   );
-  /* Field: Content: Summary */
+  /* Field: Field: Summary */
   $handler->display->display_options['fields']['field_uaqs_summary']['id'] = 'field_uaqs_summary';
   $handler->display->display_options['fields']['field_uaqs_summary']['table'] = 'field_data_field_uaqs_summary';
   $handler->display->display_options['fields']['field_uaqs_summary']['field'] = 'field_uaqs_summary';
   $handler->display->display_options['fields']['field_uaqs_summary']['label'] = '';
   $handler->display->display_options['fields']['field_uaqs_summary']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_uaqs_summary']['element_wrapper_class'] = 'uaqs-news-summary';
-  /* Sort criterion: Content: Published (field_uaqs_published) */
+  /* Sort criterion: Content: Date of publication (field_uaqs_published) */
   $handler->display->display_options['sorts']['field_uaqs_published_value']['id'] = 'field_uaqs_published_value';
   $handler->display->display_options['sorts']['field_uaqs_published_value']['table'] = 'field_data_field_uaqs_published';
   $handler->display->display_options['sorts']['field_uaqs_published_value']['field'] = 'field_uaqs_published_value';
@@ -101,13 +101,12 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: Media List Page */
+  $handler = $view->new_display('page', 'Media List Page', 'uaqs_media_list_page');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'row';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'column col-sm-12 card-block';
+  $handler->display->display_options['style_options']['row_class'] = 'media-list-row';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -117,12 +116,13 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['path'] = 'news';
-  $handler->display->display_options['menu']['type'] = 'normal';
-  $handler->display->display_options['menu']['title'] = 'News';
+  $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'home_3_col_news_block');
+  /* Display: Home Teaser Block */
+  $handler = $view->new_display('block', 'Home Teaser Block', 'home_3_col_news_block');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'row';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -168,7 +168,7 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'uaqs-news-title';
-  /* Field: Content: Published */
+  /* Field: Content: Date of publication */
   $handler->display->display_options['fields']['field_uaqs_published']['id'] = 'field_uaqs_published';
   $handler->display->display_options['fields']['field_uaqs_published']['table'] = 'field_data_field_uaqs_published';
   $handler->display->display_options['fields']['field_uaqs_published']['field'] = 'field_uaqs_published';
@@ -184,7 +184,7 @@ function uaqs_news_views_default_views() {
     'multiple_to' => '',
     'show_repeat_rule' => 'show',
   );
-  /* Field: Content: Summary */
+  /* Field: Field: Summary */
   $handler->display->display_options['fields']['field_uaqs_summary']['id'] = 'field_uaqs_summary';
   $handler->display->display_options['fields']['field_uaqs_summary']['table'] = 'field_data_field_uaqs_summary';
   $handler->display->display_options['fields']['field_uaqs_summary']['field'] = 'field_uaqs_summary';
@@ -192,7 +192,7 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['fields']['field_uaqs_summary']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_uaqs_summary']['element_wrapper_class'] = 'uaqs-news-summary';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Published (field_uaqs_published) */
+  /* Sort criterion: Content: Date of publication (field_uaqs_published) */
   $handler->display->display_options['sorts']['field_uaqs_published_value']['id'] = 'field_uaqs_published_value';
   $handler->display->display_options['sorts']['field_uaqs_published_value']['table'] = 'field_data_field_uaqs_published';
   $handler->display->display_options['sorts']['field_uaqs_published_value']['field'] = 'field_uaqs_published_value';
@@ -220,6 +220,105 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
   $handler->display->display_options['block_description'] = 'Home News Block';
+
+  /* Display: Sidebar promoted news block */
+  $handler = $view->new_display('block', 'Sidebar promoted news block', 'sidebar_promoted_news_block');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['view_mode'] = 'uaqs_sidebar_teaser_list';
+  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Publication Photos */
+  $handler->display->display_options['fields']['field_uaqs_photos']['id'] = 'field_uaqs_photos';
+  $handler->display->display_options['fields']['field_uaqs_photos']['table'] = 'field_data_field_uaqs_photos';
+  $handler->display->display_options['fields']['field_uaqs_photos']['field'] = 'field_uaqs_photos';
+  $handler->display->display_options['fields']['field_uaqs_photos']['label'] = '';
+  $handler->display->display_options['fields']['field_uaqs_photos']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_uaqs_photos']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['field_uaqs_photos']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_uaqs_photos']['element_wrapper_class'] = 'uaqs-news-photo';
+  $handler->display->display_options['fields']['field_uaqs_photos']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_uaqs_photos']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_uaqs_photos']['settings'] = array(
+    'image_style' => 'uaqs_spotlight',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_uaqs_photos']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_uaqs_photos']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_uaqs_photos']['separator'] = '';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'uaqs-news-title';
+  /* Field: Content: Date of publication */
+  $handler->display->display_options['fields']['field_uaqs_published']['id'] = 'field_uaqs_published';
+  $handler->display->display_options['fields']['field_uaqs_published']['table'] = 'field_data_field_uaqs_published';
+  $handler->display->display_options['fields']['field_uaqs_published']['field'] = 'field_uaqs_published';
+  $handler->display->display_options['fields']['field_uaqs_published']['label'] = '';
+  $handler->display->display_options['fields']['field_uaqs_published']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_uaqs_published']['element_wrapper_class'] = 'uaqs-news-published';
+  $handler->display->display_options['fields']['field_uaqs_published']['type'] = 'ap_date';
+  $handler->display->display_options['fields']['field_uaqs_published']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  /* Field: Field: Summary */
+  $handler->display->display_options['fields']['field_uaqs_summary']['id'] = 'field_uaqs_summary';
+  $handler->display->display_options['fields']['field_uaqs_summary']['table'] = 'field_data_field_uaqs_summary';
+  $handler->display->display_options['fields']['field_uaqs_summary']['field'] = 'field_uaqs_summary';
+  $handler->display->display_options['fields']['field_uaqs_summary']['label'] = '';
+  $handler->display->display_options['fields']['field_uaqs_summary']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_uaqs_summary']['element_wrapper_class'] = 'uaqs-news-summary';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Date of publication (field_uaqs_published) */
+  $handler->display->display_options['sorts']['field_uaqs_published_value']['id'] = 'field_uaqs_published_value';
+  $handler->display->display_options['sorts']['field_uaqs_published_value']['table'] = 'field_data_field_uaqs_published';
+  $handler->display->display_options['sorts']['field_uaqs_published_value']['field'] = 'field_uaqs_published_value';
+  $handler->display->display_options['sorts']['field_uaqs_published_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'uaqs_news' => 'uaqs_news',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Promoted to front page */
+  $handler->display->display_options['filters']['promote']['id'] = 'promote';
+  $handler->display->display_options['filters']['promote']['table'] = 'node';
+  $handler->display->display_options['filters']['promote']['field'] = 'promote';
+  $handler->display->display_options['filters']['promote']['value'] = '1';
+  $handler->display->display_options['block_description'] = 'Sidebar Promoted News Block';
   $export['uaqs_news'] = $view;
 
   return $export;
