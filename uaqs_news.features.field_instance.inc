@@ -314,8 +314,8 @@ function uaqs_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-uaqs_news-field_uaqs_more_info'.
-  $field_instances['node-uaqs_news-field_uaqs_more_info'] = array(
+  // Exported field_instance: 'node-uaqs_news-field_uaqs_link'.
+  $field_instances['node-uaqs_news-field_uaqs_link'] = array(
     'bundle' => 'uaqs_news',
     'default_value' => NULL,
     'deleted' => 0,
@@ -345,7 +345,7 @@ function uaqs_news_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_uaqs_more_info',
+    'field_name' => 'field_uaqs_link',
     'label' => 'More Information',
     'required' => 0,
     'settings' => array(
