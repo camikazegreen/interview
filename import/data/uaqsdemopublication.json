@@ -7,8 +7,8 @@
     "uaqs_body" : "London : Macmillan, 2007.",
     "uaqs_pub_addinfo" : "http://universityofarizona.worldcat.org/oclc/64314113|http://us.macmillan.com/flatearth/ChristineGarwood",
     "uaqs_pub_addinfo_title" : "UofA Library Catalog|Publisher's web site",
-    "uaqs_photo" : "garwood_cover.jpg",
-    "uaqs_photo_alt" : "jacket illustration",
+    "uaqs_photos" : "garwood_cover.jpg",
+    "uaqs_photos_alt" : "jacket illustration",
     "uaqs_pub_related_pubs" : "",
     "uaqs_pub_research_areas" : "Geodesy"
   },
@@ -20,8 +20,8 @@
     "uaqs_body" : "[Parallax, pseud.]. London: Simpkin, Marshall, and Co., 1881.",
     "uaqs_pub_addinfo" : "http://www.sacred-texts.com/earth/za/za00.htm",
     "uaqs_pub_addinfo_title" : "Full text online, ed. John Bruno Hare",
-    "uaqs_photo" : "rowbotham_title.jpg",
-    "uaqs_photo_alt" : "The original title page.",
+    "uaqs_photos" : "rowbotham_title.jpg",
+    "uaqs_photos_alt" : "The original title page.",
     "uaqs_pub_related_pubs" : "",
     "uaqs_pub_research_areas" : "Geodesy"
   },
@@ -33,8 +33,8 @@
     "uaqs_body" : "In <em>Die Dinge als Zeichen: Kulturelles Wissen und materielle Kultur</em> (proceedings of a conference at Johann Wolfgang Goethe University, Frankfurt am Main, April 3–5 2003), edited by Tobias L. Kienlin, 329–338. Bonn: Verlag Dr. Rudolf Habelt, 2005.",
     "uaqs_pub_addinfo" : "http://www.academia.edu/6066190/Zur_objektiv-hermeneutischen_Interpretation_des_Symbolguts_pr%C3%A4historischer_Kulturen_am_Fallbeispiel_des_Entenvogels_der_Urnenfelderzeit",
     "uaqs_pub_addinfo_title" : "Full text uploaded to academia.edu",
-    "uaqs_photo" : "",
-    "uaqs_photo_alt" : "",
+    "uaqs_photos" : "",
+    "uaqs_photos_alt" : "",
     "uaqs_pub_related_pubs" : "",
     "uaqs_pub_research_areas" : "Archaeology|Art history"
   },
@@ -46,8 +46,8 @@
     "uaqs_body" : "<em>Proceedings of the National Academy of Sciences</em> 103, no. 46 17184–17189. doi: 10.1073/pnas.0608163103",
     "uaqs_pub_addinfo" : "http://www.pnas.org/content/103/46/17184.full",
     "uaqs_pub_addinfo_title" : "Full text on PNAS website.",
-    "uaqs_photo" : "",
-    "uaqs_photo_alt" : "",
+    "uaqs_photos" : "",
+    "uaqs_photos_alt" : "",
     "uaqs_pub_related_pubs" : "",
     "uaqs_pub_research_areas" : "Geoengineering"
   },
@@ -59,8 +59,8 @@
     "uaqs_body" : "<em>Journal of Geophysical Research: Atmospheres</em> 118, 8320–8332. doi:10.1002/jgrd.50646",
     "uaqs_pub_addinfo" : "http://climate.envsci.rutgers.edu/pdf/KravitzGeoMIPjgrd50646.pdf|http://climate.envsci.rutgers.edu/pdf/KravitzGeoMIPjgrd50646SOM.pdf",
     "uaqs_pub_addinfo_title" : "Full text in Robock's article collection|Supplemental Online Material",
-    "uaqs_photo" : "",
-    "uaqs_photo_alt" : "",
+    "uaqs_photos" : "",
+    "uaqs_photos_alt" : "",
     "uaqs_pub_related_pubs" : "",
     "uaqs_pub_research_areas" : "Geoengineering"
   },
@@ -72,8 +72,8 @@
     "uaqs_body" : "[subtitle: or, a most exquisite table for resolving all manner of triangles, whether plaine or sphericall, rectangular or obliquangular, with greater facility, then ever hitherto hath been practised: most necessary for all such as would attaine to the exact knowledge of fortification, dyaling, navigation, surveying, architecture, the art of shadowing, taking of heights, and distances, the use of both the globes, perspective, the skill of making the maps, the theory of the planets, the calculating of their motions, and of all other astronomicall computations whatsoever. Now lately invented, and perfected, explained, commented on, and with all possible brevity, and perspicuity, in the hiddest, and most re-searched mysteries, from the very first grounds of the science it selfe, proved, and convincingly demonstrated]. London: James Young, 1645.",
     "uaqs_pub_addinfo" : "https://archive.org/stream/worksofsirthomas00mait#page/52/mode/2up",
     "uaqs_pub_addinfo_title" : "Full text online",
-    "uaqs_photo" : "",
-    "uaqs_photo_alt" : "",
+    "uaqs_photos" : "",
+    "uaqs_photos_alt" : "",
     "uaqs_pub_related_pubs" : "",
     "uaqs_pub_research_areas" : "Mathematics"
   },
@@ -85,8 +85,8 @@
     "uaqs_body" : "",
     "uaqs_pub_addinfo" : "",
     "uaqs_pub_addinfo_title" : "",
-    "uaqs_photo" : "",
-    "uaqs_photo_alt" : "",
+    "uaqs_photos" : "",
+    "uaqs_photos_alt" : "",
     "uaqs_pub_related_pubs" : "",
     "uaqs_pub_research_areas" : "French|Literature"
   }
