@@ -6,7 +6,7 @@
  * The default rendering of field labels and values places them within nested
  * sets of div elements, which add to the overall complexity of the markup,
  * and make theming more difficult. The overrides for the Field API's default
- * theme_field() function help the UAQS Zen theme render fields appropriately.
+ * theme_field() function help the UA Zen theme render fields appropriately.
  */
 
 /**
@@ -132,19 +132,6 @@ function ua_zen_field__field_uaqs_download_preview(array $variables) {
  *   The rendered field.
  */
 function ua_zen_field__field_uaqs_text_heading(array $variables) {
-  return render_unadorned_values($variables);
-}
-
-/**
- * Returns HTML for a uaqs_text_area field.
- *
- * @param array $variables
- *   The usual field associative array for rendering.
- *
- * @return string
- *   The rendered field.
- */
-function ua_zen_field__field_uaqs_text_area(array $variables) {
   return render_unadorned_values($variables);
 }
 
