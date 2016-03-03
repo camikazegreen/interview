@@ -38,21 +38,21 @@ projects[uaqs_demo][type] = module
 projects[uaqs_demo][subdir] = custom
 projects[uaqs_demo][download][type] = git
 projects[uaqs_demo][download][branch] = 7.x-1.x
-projects[uaqs_demo][download][revision] = 8760133
+projects[uaqs_demo][download][revision] = 64e07f4
 projects[uaqs_demo][download][url] = https://bitbucket.org/ua_drupal/uaqs_demo.git
 
 projects[uaqs_event][type] = module
 projects[uaqs_event][subdir] = custom
 projects[uaqs_event][download][type] = git
 projects[uaqs_event][download][branch] = 7.x-1.x
-projects[uaqs_event][download][revision] = 055350a
+projects[uaqs_event][download][revision] = 36b6372
 projects[uaqs_event][download][url] = https://bitbucket.org/ua_drupal/uaqs_event.git
 
 projects[uaqs_fields][type] = module
 projects[uaqs_fields][subdir] = custom
 projects[uaqs_fields][download][type] = git
 projects[uaqs_fields][download][branch] = 7.x-1.x
-projects[uaqs_fields][download][revision] = 994b09f
+projects[uaqs_fields][download][revision] = 938db04
 projects[uaqs_fields][download][url] = https://bitbucket.org/ua_drupal/uaqs_fields.git
 
 projects[uaqs_featured_content][type] = module
@@ -80,7 +80,7 @@ projects[uaqs_news][type] = module
 projects[uaqs_news][subdir] = custom
 projects[uaqs_news][download][type] = git
 projects[uaqs_news][download][branch] = 7.x-1.x
-projects[uaqs_news][download][revision] = 51d0021
+projects[uaqs_news][download][revision] = 9087dc8
 projects[uaqs_news][download][url] = https://bitbucket.org/ua_drupal/uaqs_news.git
 
 projects[uaqs_page][type] = module
