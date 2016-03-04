@@ -15,6 +15,7 @@ function uaqs_content_chunks_schema_alter(&$schema){
       'description' => 'View mode of paragraph item.',
       'type' => 'varchar',
       'length' => 32,
+      'default' => 'default',
     );
   }
 }
