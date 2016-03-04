@@ -15,6 +15,4 @@
  */
 
 ?>
-<p class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <?php print render($content['field_uaqs_text_area']); ?>
-</p>

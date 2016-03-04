@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function uaqs_content_chunks_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "field_group" && $api == "field_group") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -36,18 +39,28 @@ function uaqs_content_chunks_node_info() {
  */
 function uaqs_content_chunks_paragraphs_info() {
   $items = array(
+    'uaqs_card_deck' => array(
+      'name' => 'Card deck',
+      'bundle' => 'uaqs_card_deck',
+      'locked' => '1',
+    ),
     'uaqs_column_image' => array(
-      'name' => 'UAQS Column Image',
+      'name' => 'Image with caption',
       'bundle' => 'uaqs_column_image',
       'locked' => '1',
     ),
     'uaqs_file_download' => array(
-      'name' => 'UAQS File Download',
+      'name' => 'File attachment',
       'bundle' => 'uaqs_file_download',
       'locked' => '1',
     ),
+    'uaqs_full_width_bg_wrapper' => array(
+      'name' => 'Full width background wrapper',
+      'bundle' => 'uaqs_full_width_bg_wrapper',
+      'locked' => '1',
+    ),
     'uaqs_headed_text' => array(
-      'name' => 'UAQS Headed Text',
+      'name' => 'Text with heading',
       'bundle' => 'uaqs_headed_text',
       'locked' => '1',
     ),
