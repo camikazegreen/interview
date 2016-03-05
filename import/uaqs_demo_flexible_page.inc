@@ -113,7 +113,7 @@ class UaqsDemoColumnImageMigration extends UaqsParagraphsItemMigration {
     );
 
     // All the fields to migrate.
-    $fields = $this->getSourceKeyField() + $paragraph_core + $data_fields + $image_fields;
+    $fields = $this->getSourceKeyField() + $paragraphs_core + $data_fields + $image_fields;
 
     // Source definition.
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
