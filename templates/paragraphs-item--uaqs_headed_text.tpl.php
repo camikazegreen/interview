@@ -16,9 +16,4 @@
  */
 
 ?>
-<h3>
-  <?php print render($content['field_uaqs_text_heading']); ?>
-</h3>
-<p class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <?php print render($content['field_uaqs_text_area']); ?>
-</p>
+  <?php print render($content); ?>

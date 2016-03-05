@@ -58,7 +58,7 @@ function ua_zen_field__field_uaqs_image_credit(array $variables) {
 }
 
 /**
- * Returns HTML for a uaqs_image_wide field.
+ * Returns HTML for a uaqs_photo field.
  *
  * @param array $variables
  *   The usual field associative array for rendering.
@@ -66,9 +66,9 @@ function ua_zen_field__field_uaqs_image_credit(array $variables) {
  * @return string
  *   The rendered field.
  */
-function ua_zen_field__field_uaqs_image_wide(array $variables) {
-  return render_unadorned_values($variables);
-}
+//function ua_zen_field__field_uaqs_photo(array $variables) {
+  //return render_unadorned_values($variables);
+//}
 
 /**
  * Returns HTML for a uaqs_download_description field.
