@@ -98,7 +98,7 @@ class UaqsDemoColumnImageMigration extends UaqsParagraphsItemMigration {
     parent::__construct($arguments, 'uaqs_column_image', 'field_uaqs_main_content',
       t('Populate demonstration UAQS Column Image entities (based on Paragraphs).'));
     // Paragraphs view_mode
-    $paragraph_core = array (
+    $paragraphs_core = array (
       'view_mode' => t('View Mode'),
     );
     // Fields to import to the bundle.
