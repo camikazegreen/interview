@@ -104,7 +104,7 @@ class UaqsDemoColumnImageMigration extends UaqsParagraphsItemMigration {
       'uaqs_image_credit' => t('Image source or copyright holder'),
     );
     // Image fields...
-    $image_src_field = 'uaqs_image_wide';
+    $image_src_field = 'uaqs_photo';
     $image_fields = array(
       $image_src_field => t('Image to place in content'),
     );
