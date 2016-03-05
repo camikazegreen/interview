@@ -502,7 +502,7 @@ function uaqs_fields_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_uaqs_photo'.
+  // Exported field_base: 'field_uaqs_photos'.
   $field_bases['field_uaqs_photos'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -523,6 +523,7 @@ function uaqs_fields_field_default_field_bases() {
     'translatable' => 0,
     'type' => 'image',
   );
+
   // Exported field_base: 'field_uaqs_published'.
   $field_bases['field_uaqs_published'] = array(
     'active' => 1,
