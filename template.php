@@ -262,6 +262,11 @@ function ua_zen_preprocess_page(&$variables, $hook) {
     // Provide default theme wrapper function.
     $variables['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
   }
+  // Allow hiding of title of front page node
+  if (theme_get_setting('ua_zen_hide_front_title') == 1 && drupal_is_front_page()){
+    $variables['title'] = FALSE;
+  }
+
 }
 
 /**
