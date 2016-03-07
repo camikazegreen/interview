@@ -135,6 +135,13 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     '#default_value' => theme_get_setting('ua_copyright_notice'),
   );
 
+  $form['ua_settings']['settings']['ua_zen_hide_front_title'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Hide title of front page node'),
+    '#description' => t('If this is checked, the title of the node being displayed on the front page will not be visible'),
+    '#default_value' => theme_get_setting('ua_zen_hide_front_title'),
+  );
+
   $form['#validate'][] = 'ua_zen_settings_form_validate';
   $form['#submit'][] = 'ua_zen_settings_form_submit';
 
