@@ -127,5 +127,5 @@ projects[ua_zen][type] = theme
 projects[ua_zen][directory_name] = ua_zen
 projects[ua_zen][download][type] = git
 projects[ua_zen][download][branch] = 7.x-1.x
-projects[ua_zen][download][revision] = c00b378
+projects[ua_zen][download][revision] = f8fd59f
 projects[ua_zen][download][url] = https://bitbucket.org/ua_drupal/ua_zen.git
