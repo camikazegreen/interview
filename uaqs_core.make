@@ -74,7 +74,10 @@ projects[image_class][download][branch] = 7.x-1.x
 
 projects[link][version] = 1.4
 
-projects[title][version] = 1.0-alpha7
+projects[title][version] = 1.x-dev
+projects[title][download][type] = git
+projects[title][download][revision] = d6f2000
+projects[title][download][branch] = 7.x-1.x
 
 
 ; ------------------------------------------------------------------------------
