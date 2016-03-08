@@ -63,16 +63,18 @@ projects[field_formatter_settings][version] = 1.1
 
 projects[field_group][version] = 1.5
 
+projects[field_group_link][version] = 1.5
+
 projects[field_multiple_limit][version] = 1.0-alpha4
 
-projects[image_class][version] = 1.0
+projects[image_class][version] = 1.x-dev
+projects[image_class][download][type] = git
+projects[image_class][download][revision] = a4baf33
+projects[image_class][download][branch] = 7.x-1.x
 
 projects[link][version] = 1.4
 
-projects[title][version] = 1.x-dev
-projects[title][download][type] = git
-projects[title][download][revision] = d6f2000
-projects[title][download][branch] = 7.x-1.x
+projects[title][version] = 1.0-alpha7
 
 
 ; ------------------------------------------------------------------------------

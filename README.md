@@ -28,6 +28,7 @@ When this module is used as part of a Drupal distribution (such as [UA Quickstar
 - [Field collection](https://www.drupal.org/project/field_collection)
 - [Field formatter settings](https://www.drupal.org/project/field_formatter_settings)
 - [Field group](https://www.drupal.org/project/field_group)
+- [Field group link](https://www.drupal.org/project/field_group_link)
 - [Field multiple limit](https://www.drupal.org/project/field_multiple_limit)
 - [Image class](https://www.drupal.org/project/image_class)
 - [Link](https://www.drupal.org/project/link)
