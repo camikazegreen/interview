@@ -57,12 +57,6 @@ class UaqsDemoNewsMigration extends UaqsNodeMigration {
     $content_chunks = array(
       'uaqs_main_content' => t('Main Content'),
     );
-    // File fields...
-    $file_src_field = 'uaqs_attachments';
-    $file_fields = array(
-      $file_src_field => t('Attachment filename'),
-      $file_src_field . '_description' => t('Attachment description'),
-    );
     // Image fields...
     $image_src_field = 'uaqs_photo';
     $image_fields = array(
@@ -72,7 +66,7 @@ class UaqsDemoNewsMigration extends UaqsNodeMigration {
     );
 
     // All the fields to migrate.
-    $fields = $this->getSourceKeyField() + $title_field + $node_core + $single_value_fields + $link_title_fields + $file_fields + $image_fields + $content_chunks;
+    $fields = $this->getSourceKeyField() + $title_field + $node_core + $single_value_fields + $link_title_fields + $image_fields + $content_chunks;
 
     // Source definition.
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
@@ -91,7 +85,7 @@ class UaqsDemoNewsMigration extends UaqsNodeMigration {
     $this->addFieldMapping('field_uaqs_link:title', 'uaqs_link_title');
 
     // Images and attachments.
-    foreach (array($image_src_field, $file_src_field) as $src_field) {
+    foreach (array($image_src_field) as $src_field) {
       $dst_field = 'field_' . $src_field;
       $this->addFieldMapping($dst_field, $src_field)
            ->separator('|');
@@ -109,18 +103,13 @@ class UaqsDemoNewsMigration extends UaqsNodeMigration {
            ->separator('|');
     }
 
-    // Attachment description field.
-    $label = 'description';
-    $this->addFieldMapping('field_' . $file_src_field . ':' . $label, $file_src_field . '_' . $label)
-         ->separator('|');
-
     // Paragraphs (UAQS Content Chunks).
     $this->addFieldMapping('field_uaqs_main_content', 'uaqs_main_content')
          ->separator('|')
          ->sourceMigration(array(
            'UaqsDemoColumnImage',
            'UaqsDemoExtraInfo',
-           //'UaqsFileAttachment'
+           'UaqsDemoFileAttachment'
          ));
 
     // Allow limited HTML markup in the body field.

@@ -65,6 +65,7 @@ function uaqs_demo_migrate_api() {
         'dependencies' => array(
             'UaqsDemoColumnImage',
             'UaqsDemoExtraInfo',
+            'UaqsDemoFileAttachment',
         ),
         'import_root' => $import_root,
       ),
@@ -89,6 +90,11 @@ function uaqs_demo_migrate_api() {
       ),
       'UaqsDemoExtraInfo' => array(
         'class_name' => 'UaqsDemoExtraInfoMigration',
+        'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
+      ),
+      'UaqsDemoFileAttachment' => array(
+        'class_name' => 'UaqsDemoFileAttachmentMigration',
         'group_name' => 'uaqs_demo',
         'import_root' => $import_root,
       ),

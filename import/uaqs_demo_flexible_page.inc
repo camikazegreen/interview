@@ -145,7 +145,7 @@ class UaqsDemoExtraInfoMigration extends UaqsParagraphsItemMigration {
    */
   public function __construct(array $arguments) {
     parent::__construct($arguments, 'uaqs_extra_info', 'field_uaqs_main_content',
-      t('Populate demonstration UAQS Column Image entities (based on Paragraphs).'));
+      t('Populate demonstration UAQS Extra Info entities (based on Paragraphs).'));
 
     // Fields to import to the bundle.
     $data_fields = array(
@@ -171,6 +171,76 @@ class UaqsDemoExtraInfoMigration extends UaqsParagraphsItemMigration {
 
 }
 
+/**
+ * Defines migration into the UAQS File Attachment type of Paragraphs entity.
+ */
+class UaqsDemoFileAttachmentMigration extends UaqsParagraphsItemMigration {
+
+  /**
+   * Constructor.
+   *
+   * @param array $arguments
+   *   Arguments for the parent constructor (Migration standard behavior).
+   */
+  public function __construct(array $arguments) {
+    parent::__construct($arguments, 'uaqs_file_download', 'field_uaqs_main_content',
+      t('Populate demonstration UAQS File Attachment entities (based on Paragraphs).'));
+
+    // The single-value text fielda...
+    $single_value_fields = array(
+      'uaqs_download_name' => t('Name'),
+      'uaqs_download_description' => t('Description'),
+    );
+    // File fields...
+    $file_src_field = 'uaqs_download_file';
+    $file_fields = array(
+      $file_src_field => t('Attachment filename'),
+      $file_src_field . '_description' => t('Attachment description'),
+    );
+    // Image fields...
+    $image_src_field = 'uaqs_download_preview';
+    $image_fields = array(
+      $image_src_field => t('Download Preview'),
+      $image_src_field . '_title' => t('Photo title'),
+      $image_src_field . '_alt' => t('Photo alt text'),
+    );
+
+    // All the fields to migrate.
+    $fields = $this->getSourceKeyField() + $single_value_fields + $file_fields + $image_fields;
+
+    // Source definition.
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
+
+    // One-to-one correspondence: JSON names and simple content type fields.
+    foreach (array_keys($single_value_fields) as $src_field) {
+      $this->addFieldMapping('field_' . $src_field, $src_field);
+    }
+
+    // Images and attachments.
+    foreach (array($image_src_field, $file_src_field) as $src_field) {
+      $dst_field = 'field_' . $src_field;
+      $this->addFieldMapping($dst_field, $src_field)
+           ->separator('|');
+      $this->addFieldMapping($dst_field . ':file_replace')
+           ->defaultValue(FILE_EXISTS_REPLACE);
+      $this->addFieldMapping($dst_field . ':file_class')
+           ->defaultValue('MigrateFileUri');
+      $this->addFieldMapping($dst_field . ':source_dir')
+           ->defaultValue($this->imagePath());
+    }
+
+    // Image alt and title fields.
+    foreach (array('alt', 'title') as $label) {
+      $this->addFieldMapping('field_' . $image_src_field . ':' . $label, $image_src_field . '_' . $label)
+           ->separator('|');
+    }
+
+    // Attachment description field.
+    $label = 'description';
+    $this->addFieldMapping('field_' . $file_src_field . ':' . $label, $file_src_field . '_' . $label)
+         ->separator('|');
+  }
+}
 
 /**
  * Makes demonstration UAQS Flexible Page content from pre-defined data.
