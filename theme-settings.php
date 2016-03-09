@@ -103,34 +103,34 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
-  $form['ua_settings']['tables']['ua_bootstrap_table_bordered'] = array(
+  $form['ua_settings']['tables']['ua_zen_table_bordered'] = array(
     '#type' => 'checkbox',
     '#title' => t('Bordered table'),
-    '#default_value' => theme_get_setting('ua_bootstrap_table_bordered', $theme),
+    '#default_value' => theme_get_setting('ua_zen_table_bordered', $theme),
     '#description' => t('Add borders on all sides of the table and cells.'),
   );
-  $form['ua_settings']['tables']['ua_bootstrap_table_condensed'] = array(
+  $form['ua_settings']['tables']['ua_zen_table_condensed'] = array(
     '#type' => 'checkbox',
     '#title' => t('Condensed table'),
-    '#default_value' => theme_get_setting('ua_bootstrap_table_condensed', $theme),
+    '#default_value' => theme_get_setting('ua_zen_table_condensed', $theme),
     '#description' => t('Make tables more compact by cutting cell padding in half.'),
   );
-  $form['ua_settings']['tables']['ua_bootstrap_table_hover'] = array(
+  $form['ua_settings']['tables']['ua_zen_table_hover'] = array(
     '#type' => 'checkbox',
     '#title' => t('Hover rows'),
-    '#default_value' => theme_get_setting('ua_bootstrap_table_hover', $theme),
+    '#default_value' => theme_get_setting('ua_zen_table_hover', $theme),
     '#description' => t('Enable a hover state on table rows.'),
   );
-  $form['ua_settings']['tables']['ua_bootstrap_table_striped'] = array(
+  $form['ua_settings']['tables']['ua_zen_table_striped'] = array(
     '#type' => 'checkbox',
     '#title' => t('Striped rows'),
-    '#default_value' => theme_get_setting('ua_bootstrap_table_striped', $theme),
+    '#default_value' => theme_get_setting('ua_zen_table_striped', $theme),
     '#description' => t('Add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>. <strong>Note:</strong> Striped tables are styled via the <code>:nth-child</code> CSS selector, which is not available in Internet Explorer 8.'),
   );
-  $form['ua_settings']['tables']['ua_bootstrap_table_responsive'] = array(
+  $form['ua_settings']['tables']['ua_zen_table_responsive'] = array(
     '#type' => 'checkbox',
     '#title' => t('Responsive tables'),
-    '#default_value' => theme_get_setting('ua_bootstrap_table_responsive', $theme),
+    '#default_value' => theme_get_setting('ua_zen_table_responsive', $theme),
     '#description' => t('Makes tables responsive by wrapping them in <code>.table-responsive</code> to make them scroll horizontally up to small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in these tables.'),
   );
   //
