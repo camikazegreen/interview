@@ -30,7 +30,13 @@ function uaqs_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 8,
+      ),
+      'uaqs_sidebar_teaser_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'uaqs_teaser_list' => array(
         'label' => 'above',
@@ -57,7 +63,7 @@ function uaqs_news_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 13,
+      'weight' => 10,
     ),
   );
 
@@ -76,25 +82,32 @@ function uaqs_news_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 9,
       ),
-      'uaqs_teaser_list' => array(
+      'uaqs_sidebar_teaser_list' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 7,
       ),
+      'uaqs_teaser_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_body',
     'label' => 'Article Body',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'display_summary' => 0,
       'text_processing' => 1,
@@ -108,7 +121,7 @@ function uaqs_news_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 10,
+      'weight' => 5,
     ),
   );
 
@@ -127,19 +140,25 @@ function uaqs_news_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 10,
+      ),
+      'uaqs_sidebar_teaser_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'uaqs_teaser_list' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -157,7 +176,7 @@ function uaqs_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 3,
     ),
   );
 
@@ -187,7 +206,13 @@ function uaqs_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 11,
+      ),
+      'uaqs_sidebar_teaser_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'uaqs_teaser_list' => array(
         'label' => 'above',
@@ -208,7 +233,7 @@ function uaqs_news_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 11,
+      'weight' => 7,
     ),
   );
 
@@ -219,7 +244,7 @@ function uaqs_news_field_default_field_instances() {
     'description' => 'The date and time this news item drops out of website displays',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 6,
@@ -228,16 +253,23 @@ function uaqs_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 12,
+      ),
+      'uaqs_sidebar_teaser_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'uaqs_teaser_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_expiration_date',
     'label' => 'Expiration Date',
     'required' => 0,
@@ -257,105 +289,81 @@ function uaqs_news_field_default_field_instances() {
         'input_format' => 'm/d/Y - g:i:sa',
         'input_format_custom' => '',
         'label_position' => 'within',
+        'no_fieldset' => 0,
         'repeat_collapsed' => 0,
         'text_parts' => array(),
         'year_range' => '-1:+3',
       ),
       'type' => 'date_select',
-      'weight' => 8,
-    ),
-  );
-
-  // Exported field_instance: 'node-uaqs_news-field_uaqs_front'.
-  $field_instances['node-uaqs_news-field_uaqs_front'] = array(
-    'bundle' => 'uaqs_news',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'uaqs_teaser_list' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_uaqs_front',
-    'label' => 'Show on Front Page',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 3,
+      'weight' => 20,
     ),
   );
 
   // Exported field_instance: 'node-uaqs_news-field_uaqs_link'.
   $field_instances['node-uaqs_news-field_uaqs_link'] = array(
     'bundle' => 'uaqs_news',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'title' => 'Read more',
+        'url' => '[node:url]',
+        'attributes' => array(
+          'class' => 'btn-arrow',
+        ),
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
+      'teaser' => array(
         'label' => 'hidden',
         'module' => 'link',
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
         ),
-        'type' => 'link_default',
+        'type' => 'link_title_plain',
         'weight' => 6,
       ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
+      'uaqs_sidebar_teaser_list' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'link_title_plain',
+        'weight' => 9,
       ),
       'uaqs_teaser_list' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'link_title_plain',
+        'weight' => 18,
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_link',
-    'label' => 'More Information',
+    'label' => 'Link to content',
     'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
       'attributes' => array(
-        'class' => '',
-        'configurable_class' => 0,
+        'class' => 'btn-arrow',
+        'configurable_class' => 1,
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'user',
+        'target' => 'default',
         'title' => '',
       ),
       'display' => array(
@@ -364,19 +372,106 @@ function uaqs_news_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
-      'title_label_use_field_label' => 1,
+      'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
       'user_register_form' => FALSE,
-      'validate_url' => 1,
+      'validate_url' => 0,
     ),
     'widget' => array(
       'active' => 0,
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 12,
+      'weight' => 17,
+    ),
+  );
+
+  // Exported field_instance: 'node-uaqs_news-field_uaqs_photo'.
+  $field_instances['node-uaqs_news-field_uaqs_photo'] = array(
+    'bundle' => 'uaqs_news',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'class' => 'margin-align-middle margin-zero-top',
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'class' => '',
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'image_link' => '',
+          'image_style' => 'uaqs_spotlight',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+      'uaqs_sidebar_teaser_list' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'class' => 'media-object',
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'image_link' => '',
+          'image_style' => 'thumbnail',
+        ),
+        'type' => 'image',
+        'weight' => 8,
+      ),
+      'uaqs_teaser_list' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'class' => 'media-object',
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'image_link' => '',
+          'image_style' => 'medium',
+        ),
+        'type' => 'image',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_uaqs_photo',
+    'label' => 'Photo',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 18,
     ),
   );
 
@@ -394,29 +489,21 @@ function uaqs_news_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'class' => '',
-          'field_multiple_limit' => 1,
-          'field_multiple_limit_offset' => 0,
-          'image_link' => 'content',
-          'image_style' => 'uaqs_spotlight',
-        ),
-        'type' => 'image',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
+      'uaqs_sidebar_teaser_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'uaqs_teaser_list' => array(
         'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'class' => 'media-object',
-          'field_multiple_limit' => 1,
-          'field_multiple_limit_offset' => 0,
-          'image_link' => 'content',
-          'image_style' => 'uaqs_medium_square',
-        ),
-        'type' => 'image',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -442,7 +529,7 @@ function uaqs_news_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 4,
+      'weight' => 6,
     ),
   );
 
@@ -467,7 +554,7 @@ function uaqs_news_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 4,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -480,11 +567,17 @@ function uaqs_news_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
-          'show_remaining_days' => FALSE,
+          'show_remaining_days' => 0,
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 2,
+        'weight' => 3,
+      ),
+      'uaqs_sidebar_teaser_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'uaqs_teaser_list' => array(
         'label' => 'hidden',
@@ -505,8 +598,9 @@ function uaqs_news_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_published',
-    'label' => 'Published',
+    'label' => 'Date of publication',
     'required' => 0,
     'settings' => array(
       'default_value' => 'now',
@@ -524,24 +618,29 @@ function uaqs_news_field_default_field_instances() {
         'input_format' => 'm/d/Y - g:i:sa',
         'input_format_custom' => '',
         'label_position' => 'within',
+        'no_fieldset' => 0,
         'repeat_collapsed' => 0,
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
       'type' => 'date_select',
-      'weight' => 7,
+      'weight' => 4,
     ),
   );
 
   // Exported field_instance: 'node-uaqs_news-field_uaqs_short_title'.
   $field_instances['node-uaqs_news-field_uaqs_short_title'] = array(
     'bundle' => 'uaqs_news',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => '[node:title]',
+      ),
+    ),
     'deleted' => 0,
     'description' => '<strong>Suggested character limit:</strong> 30',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 5,
@@ -553,20 +652,27 @@ function uaqs_news_field_default_field_instances() {
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'title_class' => 'card-title',
-          'title_link' => 'content',
+          'title_link' => '',
           'title_style' => 'h4',
         ),
         'type' => 'title_linked',
-        'weight' => 1,
+        'weight' => 2,
+      ),
+      'uaqs_sidebar_teaser_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
       ),
       'uaqs_teaser_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_short_title',
     'label' => 'Short Title',
     'required' => 0,
@@ -581,7 +687,7 @@ function uaqs_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 16,
     ),
   );
 
@@ -593,10 +699,10 @@ function uaqs_news_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -608,6 +714,12 @@ function uaqs_news_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 4,
       ),
+      'uaqs_sidebar_teaser_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'uaqs_teaser_list' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -616,15 +728,16 @@ function uaqs_news_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 17,
+        'weight' => 29,
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_summary',
     'label' => 'Summary',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 1,
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -634,7 +747,7 @@ function uaqs_news_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 9,
+      'weight' => 19,
     ),
   );
 
@@ -653,13 +766,19 @@ function uaqs_news_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
+      ),
+      'uaqs_sidebar_teaser_list' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'uaqs_teaser_list' => array(
         'label' => 'hidden',
@@ -669,8 +788,9 @@ function uaqs_news_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_summary_short',
-    'label' => 'Subtitle',
+    'label' => 'Subheading',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -680,10 +800,10 @@ function uaqs_news_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 255,
+        'size' => 100,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -705,13 +825,26 @@ function uaqs_news_field_default_field_instances() {
           'title_style' => 'h1',
         ),
         'type' => 'title_linked',
-        'weight' => 1,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 7,
+      ),
+      'uaqs_sidebar_teaser_list' => array(
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
       ),
       'uaqs_teaser_list' => array(
         'label' => 'hidden',
@@ -720,17 +853,18 @@ function uaqs_news_field_default_field_instances() {
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'title_class' => '',
-          'title_link' => 'content',
+          'title_link' => '',
           'title_style' => '_none',
         ),
         'type' => 'title_linked',
-        'weight' => 15,
+        'weight' => 22,
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'title_field',
     'label' => 'Title',
-    'required' => TRUE,
+    'required' => 1,
     'settings' => array(
       'hide_label' => array(
         'entity' => 'entity',
@@ -740,6 +874,7 @@ function uaqs_news_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'size' => 60,
@@ -757,15 +892,15 @@ function uaqs_news_field_default_field_instances() {
   t('Author of this article');
   t('Byline');
   t('Contacts');
+  t('Date of publication');
   t('Date when article was published');
   t('Expiration Date');
-  t('More Information');
+  t('Link to content');
   t('News Article Photos');
   t('Persons who can be contacted about the news article');
-  t('Published');
+  t('Photo');
   t('Short Title');
-  t('Show on Front Page');
-  t('Subtitle');
+  t('Subheading');
   t('Summary');
   t('The date and time this news item drops out of website displays');
   t('Title');
