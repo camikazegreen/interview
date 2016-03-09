@@ -115,11 +115,11 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     '#collapsed' => FALSE,
   );
 
-  $form['pager']['ua_bootstrap_pager_first_and_last'] = array(
+  $form['pager']['ua_zen_pager_first_and_last'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show "First" and "Last" links in the pager'),
     '#description' => t('Allow user to choose whether to display "First" and "Last" links on pagers.'),
-    '#default_value' => theme_get_setting('ua_bootstrap_pager_first_and_last'),
+    '#default_value' => theme_get_setting('ua_zen_pager_first_and_last'),
   );
 
 

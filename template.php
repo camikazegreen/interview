@@ -601,7 +601,7 @@ function ua_zen_pager($variables) {
   if ($pager_total[$element] > 1) {
 
     // Only show "first" link if set on components' theme setting
-    if ($li_first && theme_get_setting('ua_bootstrap_pager_first_and_last')) {
+    if ($li_first && theme_get_setting('ua_zen_pager_first_and_last')) {
       $items[] = array(
         'class' => array('pager-first'),
         'data' => $li_first,
@@ -667,7 +667,7 @@ function ua_zen_pager($variables) {
       );
     }
     // // Only show "last" link if set on components' theme setting
-    if ($li_last && theme_get_setting('ua_bootstrap_pager_first_and_last')) {
+    if ($li_last && theme_get_setting('ua_zen_pager_first_and_last')) {
       $items[] = array(
        'class' => array('pager-last'),
        'data' => $li_last,
