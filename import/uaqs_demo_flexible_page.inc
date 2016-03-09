@@ -133,6 +133,46 @@ class UaqsDemoColumnImageMigration extends UaqsParagraphsItemMigration {
 }
 
 /**
+ * Defines migration into the UAQS Extra Info type of Paragraphs entity.
+ */
+class UaqsDemoExtraInfoMigration extends UaqsParagraphsItemMigration {
+
+  /**
+   * Constructor.
+   *
+   * @param array $arguments
+   *   Arguments for the parent constructor (Migration standard behavior).
+   */
+  public function __construct(array $arguments) {
+    parent::__construct($arguments, 'uaqs_extra_info', 'field_uaqs_main_content',
+      t('Populate demonstration UAQS Column Image entities (based on Paragraphs).'));
+
+    // Fields to import to the bundle.
+    $data_fields = array(
+      'uaqs_link' => t('More information links'),
+    );
+    // Titles for link...
+    $link_title_fields = array(
+      'uaqs_link_title' => t('More information link title'),
+    );
+
+    // All the fields to migrate.
+    $fields = $this->getSourceKeyField() + $data_fields + $link_title_fields;
+
+    // Source definition.
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
+
+    // Map JSON names to simple content type fields and subfields.
+    $this->addFieldMapping('field_uaqs_link', 'uaqs_link');
+    // Link title is a special case.
+    $this->addFieldMapping('field_uaqs_link:title', 'uaqs_link_title');
+
+  }
+
+}
+
+
+/**
  * Makes demonstration UAQS Flexible Page content from pre-defined data.
  *
  * This migration imports a small part of the UAQS FlexiblePage content directly
