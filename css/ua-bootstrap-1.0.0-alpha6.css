@@ -6022,18 +6022,25 @@ h3, h4, h5, h6,
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-  margin-top: .5em;
-  margin-bottom: 1em; }
+  margin-top: 1em;
+  margin-bottom: .5em; }
+
+h1, .h1 {
+  letter-spacing: -0.00625em; }
 
 @media (min-width: 768px) {
   h1, .h1,
   h2, .h2,
   h3, .h3 {
-    margin-top: .5em;
-    margin-bottom: 1em; } }
+    margin-top: 1em;
+    margin-bottom: .5em; } }
 
 strong, bold {
   font-weight: bold; }
+
+.page-header {
+  margin: 3rem 0 2rem;
+  line-height: 1.2; }
 
 ul.triangle {
   overflow: hidden; }
@@ -7316,11 +7323,17 @@ button.list-group-item-danger {
   height: 48px; }
 
 .navbar-default {
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  border-color: #eef1f1;
+  border-top: none;
+  border-bottom: none;
+  border-color: none;
   border-left: 0;
   border-right: 0; }
+
+@media (min-width: 768px) {
+  .navbar-default {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #eef1f1; } }
 
 .navbar-default .navbar-nav > li > a {
   color: #395180;
