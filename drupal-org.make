@@ -38,7 +38,7 @@ projects[uaqs_demo][type] = module
 projects[uaqs_demo][subdir] = custom
 projects[uaqs_demo][download][type] = git
 projects[uaqs_demo][download][branch] = 7.x-1.x
-projects[uaqs_demo][download][revision] = 8571f3d
+projects[uaqs_demo][download][revision] = 131f858
 projects[uaqs_demo][download][url] = https://bitbucket.org/ua_drupal/uaqs_demo.git
 
 projects[uaqs_event][type] = module
