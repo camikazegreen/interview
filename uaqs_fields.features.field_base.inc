@@ -175,18 +175,12 @@ function uaqs_fields_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_uaqs_contact_phone',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
+    'module' => 'telephone',
+    'settings' => array(),
     'translatable' => 0,
-    'type' => 'text',
+    'type' => 'telephone',
   );
 
   // Exported field_base: 'field_uaqs_contacts'.
@@ -466,18 +460,12 @@ function uaqs_fields_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_uaqs_phones',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
+    'module' => 'telephone',
+    'settings' => array(),
     'translatable' => 0,
-    'type' => 'text',
+    'type' => 'telephone',
   );
 
   // Exported field_base: 'field_uaqs_photo'.
