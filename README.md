@@ -1,10 +1,19 @@
 # UA Drupal Test
 
-This repository holds the tests for UA Quickstart.
-Tests are Gherkin-style features using the `behat` and `mink` libraries.
-The readable tests are located in the `features/` directory and each test file ends in `.feature`.
-For more information about this style of testing, search for `behat`, `gherkin`, and the `behat drupal extension`.
-More generally, it might also be of value to search for `behavior-driven development` and `user stories`.
+## Background ##
+
+This configures automated tests of a custom Drupal distribution built by [UA Quickstart](https://bitbucket.org/ua_drupal/ua_quickstart) as one of the [University of Arizona Drupal](https://bitbucket.org/ua_drupal) projects.
+It uses descriptions of how a web site based on UA Quickstart should behave that are simple enough that they read like plain English, but are not merely additional documentation.
+They are written using the popular [Gherkin](http://docs.behat.org/en/v2.5/guides/1.gherkin.html) syntax, which automated testing software can process.
+It supports at least two contrasting styles of test.
+
+- _User Stories:_ The UX and development teams should collaborate on the tests for new features added to UA Quickstart to be sure that they work as expected (the methodology known as behavior-driven development).
+These very high-level tests are the main justification for the friendly natural language syntax.
+- _Integration Tests:_ Developers working on UA Quickstart can nevertheless couch their tests in the same style, but refer to the low-level behavior of pieces of code and fragments of web pages.
+These are particularly important for regression testing (checking that additions and bug fixes do not break existing code).
+
+[Behat](https://github.com/Behat/Behat) processes the tests; it is a general behavior-driven development tool for PHP, augmented in this case by [Mink](http://mink.behat.org/en/latest/index.html), an adapter library that provides a unified PHP interface to several different web browsers (allowing Behat tests to refer to web sites), and by additional extensions giving immediate access to the Drupal installation running a web site, [The Drupal Extension to Behat and Mink](https://github.com/jhedstrom/drupalextension).
+A different software tool, Cucumber, originally introduced the Gherkin syntax, so this is widely used and documented.
 
 ## Local Development ##
 
@@ -46,17 +55,6 @@ To help define what users should be able to do, we'll want to codeify user stori
 Those tests will be tagged with `@story` and operate on a higher level than the `@regression` tagged tests.
 
 ## CI Server ##
-
-### Background ###
-
-This configures automated tests of a custom Drupal distribution built by [UA Quickstart](https://bitbucket.org/ua_drupal/ua_quickstart) as one of the [University of Arizona Drupal](https://bitbucket.org/ua_drupal) projects.
-It uses descriptions of how a web site based on UA Quickstart should behave that are simple enough that people who do not have a web development background can understand them, but are not merely additional documentation; they are written using the popular [Gherkin](http://docs.behat.org/en/v2.5/guides/1.gherkin.html) syntax, which automated testing software can process.
-It supports at least two contrasting styles of test.
-
-- _User Stories:_ The UX and development teams should collaborate on the tests for new features added to UA Quickstart to be sure that they work as expected (the methodology known as behavior-driven development); these very high-level tests are the main justification for the friendly natural language syntax.
-- _Integration Tests:_ Developers working on UA Quickstart can nevertheless couch their tests in the same style, but refer to the low-level behavior of pieces of code and fragments of web pages; these are particularly important for regression testing (checking that additions and bug fixes do not break existing code).
-
-[Behat](https://github.com/Behat/Behat) processes the tests; it is a general behavior-driven development tool for PHP, augmented in this case by [Mink](http://mink.behat.org/en/latest/index.html), an adapter library that provides a unified PHP interface to several different web browsers (allowing Behat tests to refer to web sites), and by additional extensions giving immediate access to the Drupal installation running a web site, [The Drupal Extension to Behat and Mink](https://github.com/jhedstrom/drupalextension). A different software tool, Cucumber, originally introduced the Gherkin syntax, so this is widely used and documented.
 
 ### Requirements ###
 
