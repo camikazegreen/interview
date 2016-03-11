@@ -53,14 +53,12 @@ class UaqsDemoNewsMigration extends UaqsNodeMigration {
     $link_title_fields = array(
       'uaqs_link_title' => t('Information link title'),
     );
-    // File fields...
-    $file_src_field = 'uaqs_attachments';
-    $file_fields = array(
-      $file_src_field => t('Attachment filename'),
-      $file_src_field . '_description' => t('Attachment description'),
+    // Content Chunks...
+    $content_chunks = array(
+      'uaqs_main_content' => t('Main Content'),
     );
     // Image fields...
-    $image_src_field = 'uaqs_photos';
+    $image_src_field = 'uaqs_photo';
     $image_fields = array(
       $image_src_field => t('Photo filename'),
       $image_src_field . '_title' => t('Photo title'),
@@ -68,7 +66,7 @@ class UaqsDemoNewsMigration extends UaqsNodeMigration {
     );
 
     // All the fields to migrate.
-    $fields = $this->getSourceKeyField() + $title_field + $node_core + $single_value_fields + $link_title_fields + $file_fields + $image_fields;
+    $fields = $this->getSourceKeyField() + $title_field + $node_core + $single_value_fields + $link_title_fields + $image_fields + $content_chunks;
 
     // Source definition.
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
@@ -77,7 +75,6 @@ class UaqsDemoNewsMigration extends UaqsNodeMigration {
     $this->addSimpleMappings(array('title'));
 
     $this->addSimpleMappings(array('promote'));
-
 
     // One-to-one correspondence: JSON names and simple content type fields.
     foreach (array_keys($single_value_fields) as $src_field) {
@@ -88,7 +85,7 @@ class UaqsDemoNewsMigration extends UaqsNodeMigration {
     $this->addFieldMapping('field_uaqs_link:title', 'uaqs_link_title');
 
     // Images and attachments.
-    foreach (array($image_src_field, $file_src_field) as $src_field) {
+    foreach (array($image_src_field) as $src_field) {
       $dst_field = 'field_' . $src_field;
       $this->addFieldMapping($dst_field, $src_field)
            ->separator('|');
@@ -106,10 +103,14 @@ class UaqsDemoNewsMigration extends UaqsNodeMigration {
            ->separator('|');
     }
 
-    // Attachment description field.
-    $label = 'description';
-    $this->addFieldMapping('field_' . $file_src_field . ':' . $label, $file_src_field . '_' . $label)
-         ->separator('|');
+    // Paragraphs (UAQS Content Chunks).
+    $this->addFieldMapping('field_uaqs_main_content', 'uaqs_main_content')
+         ->separator('|')
+         ->sourceMigration(array(
+           'UaqsDemoColumnImage',
+           'UaqsDemoExtraInfo',
+           'UaqsDemoFileAttachment'
+         ));
 
     // Allow limited HTML markup in the body field.
     $this->addFieldMapping('field_uaqs_body:format')
