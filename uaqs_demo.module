@@ -59,16 +59,6 @@ function uaqs_demo_migrate_api() {
         'dependencies' => array('UaqsDemoUnitTerm'),
         'import_root' => $import_root,
       ),
-      'UaqsDemoNews' => array(
-        'class_name' => 'UaqsDemoNewsMigration',
-        'group_name' => 'uaqs_demo',
-        'dependencies' => array(
-            'UaqsDemoColumnImage',
-            'UaqsDemoExtraInfo',
-            'UaqsDemoFileAttachment',
-        ),
-        'import_root' => $import_root,
-      ),
       'UaqsDemoNewsContact' => array(
         'class_name' => 'UaqsDemoNewsContactMigration',
         'group_name' => 'uaqs_demo',
@@ -111,6 +101,16 @@ function uaqs_demo_migrate_api() {
       'UaqsDemoPlainText' => array(
         'class_name' => 'UaqsDemoPlainTextMigration',
         'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
+      ),
+      'UaqsDemoNews' => array(
+        'class_name' => 'UaqsDemoNewsMigration',
+        'group_name' => 'uaqs_demo',
+        'dependencies' => array(
+            'UaqsDemoColumnImage',
+            'UaqsDemoExtraInfo',
+            'UaqsDemoFileAttachment',
+        ),
         'import_root' => $import_root,
       ),
       'UaqsDemoFlexiblePage' => array(
