@@ -324,26 +324,22 @@ function uaqs_news_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Main content',
-    'weight' => '1',
+    'label' => 'Extra fields',
+    'weight' => '8',
     'children' => array(
       0 => 'field_uaqs_attachments',
-      1 => 'field_uaqs_body',
-      2 => 'field_uaqs_byline',
-      3 => 'field_uaqs_contacts',
-      4 => 'field_uaqs_more_info',
-      5 => 'field_uaqs_photos',
-      6 => 'field_uaqs_published',
-      7 => 'field_uaqs_summary_short',
+      1 => 'field_uaqs_contacts',
+      2 => 'field_uaqs_photos',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Extra fields',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-main-content field-group-tab',
         'required_fields' => 1,
+        'classes' => 'group-main-content field-group-tab',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $field_groups['group_main_content|node|uaqs_news|form'] = $field_group;
@@ -726,13 +722,12 @@ function uaqs_news_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Summary fields',
-    'weight' => '5',
+    'weight' => '7',
     'children' => array(
       0 => 'field_uaqs_expiration_date',
-      1 => 'field_uaqs_short_title',
-      2 => 'field_uaqs_summary',
-      3 => 'field_uaqs_link',
-      4 => 'field_uaqs_photo',
+      1 => 'field_uaqs_link',
+      2 => 'field_uaqs_short_title',
+      3 => 'field_uaqs_summary',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -761,7 +756,8 @@ function uaqs_news_field_group_info() {
     'children' => array(
       0 => 'field_uaqs_body',
       1 => 'field_uaqs_photo',
-      2 => 'group_lead',
+      2 => 'field_uaqs_main_content',
+      3 => 'group_lead',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -902,11 +898,11 @@ function uaqs_news_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Extra fields');
   t('Heading');
   t('Lead');
   t('Link');
   t('Link Placement');
-  t('Main content');
   t('Media');
   t('Media Body');
   t('Media Object');

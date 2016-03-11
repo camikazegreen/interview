@@ -63,7 +63,7 @@ function uaqs_news_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
@@ -82,7 +82,7 @@ function uaqs_news_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -176,7 +176,7 @@ function uaqs_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 1,
     ),
   );
 
@@ -233,7 +233,7 @@ function uaqs_news_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -388,6 +388,82 @@ function uaqs_news_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-uaqs_news-field_uaqs_main_content'.
+  $field_instances['node-uaqs_news-field_uaqs_main_content'] = array(
+    'bundle' => 'uaqs_news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'uaqs_sidebar_teaser_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'uaqs_teaser_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_uaqs_main_content',
+    'label' => 'Extra body content',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'button',
+      'allowed_bundles' => array(
+        'uaqs_card_deck' => 'uaqs_card_deck',
+        'uaqs_column_image' => 'uaqs_column_image',
+        'uaqs_extra_info' => 'uaqs_extra_info',
+        'uaqs_file_download' => 'uaqs_file_download',
+        'uaqs_full_width_bg_wrapper' => -1,
+        'uaqs_headed_text' => 'uaqs_headed_text',
+        'uaqs_plain_text' => -1,
+      ),
+      'bundle_weights' => array(
+        'uaqs_card_deck' => 2,
+        'uaqs_column_image' => 3,
+        'uaqs_extra_info' => 11,
+        'uaqs_file_download' => 4,
+        'uaqs_full_width_bg_wrapper' => 5,
+        'uaqs_headed_text' => 6,
+        'uaqs_plain_text' => 7,
+      ),
+      'default_edit_mode' => 'open',
+      'title' => 'Paragraph',
+      'title_multiple' => 'Paragraphs',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-uaqs_news-field_uaqs_photo'.
   $field_instances['node-uaqs_news-field_uaqs_photo'] = array(
     'bundle' => 'uaqs_news',
@@ -405,7 +481,7 @@ function uaqs_news_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -471,7 +547,7 @@ function uaqs_news_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 18,
+      'weight' => 3,
     ),
   );
 
@@ -529,7 +605,7 @@ function uaqs_news_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 6,
+      'weight' => 10,
     ),
   );
 
@@ -624,7 +700,7 @@ function uaqs_news_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_select',
-      'weight' => 4,
+      'weight' => 2,
     ),
   );
 
@@ -803,7 +879,7 @@ function uaqs_news_field_default_field_instances() {
         'size' => 100,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 4,
     ),
   );
 
@@ -895,6 +971,7 @@ function uaqs_news_field_default_field_instances() {
   t('Date of publication');
   t('Date when article was published');
   t('Expiration Date');
+  t('Extra body content');
   t('Link to content');
   t('News Article Photos');
   t('Persons who can be contacted about the news article');
