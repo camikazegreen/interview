@@ -1,9 +1,12 @@
 # UA Drupal Test
 
-## Local Development ##
+This repository holds the tests for UA Quickstart.
+Tests are Gherkin-style features using the `behat` and `mink` libraries.
+The readable tests are located in the `features/` directory and each test file ends in `.feature`.
+For more information about this style of testing, search for `behat`, `gherkin`, and the `behat drupal extension`.
+More generally, it might also be of value to search for `behavior-driven development` and `user stories`.
 
-Local development testing uses the `behat` and `mink` libraries.
-All of the tests are defined as featured in the `features/` directory and the files end in `.feature`.
+## Local Development ##
 
 ### Setup ###
 
