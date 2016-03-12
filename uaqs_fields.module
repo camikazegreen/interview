@@ -3,7 +3,154 @@
  * @file
  * Code for the UAQS Fields feature.
  */
-include_once 'uaqs_fields.features.inc';
+
+// Expose the default format list where Features can use it.
+include_once 'uaqs_fields.features.filter.inc';
+
+// Needed to discover the currently defined field bases.
+include_once 'uaqs_fields.features.field_base.inc';
+
+/**
+ * Defines the fields that need special default formats applied.
+ *
+ * Assume that the canonical format for any instances of these fields in any
+ * entity is defined here, since the all of the field bases are belong to us.
+ *
+ * @return array
+ *   An array with field base names as keys, format names or NULL as values.
+ */
+function uaqs_fields_using_format() {
+  $usingformat = array_fill_keys(array_keys(uaqs_fields_field_default_field_bases()), NULL);
+  $usingformat['field_uaqs_text_area'] = array(
+    'uaqs_textual_content' => 'Textual Content',
+  );
+  $usingformat['field_uaqs_body'] = array(
+    'uaqs_unconstrained' => 'Unconstrained Markup',
+  );
+  $usingformat['field_uaqs_bio'] = array(
+    'uaqs_unconstrained' => 'Unconstrained Markup',
+  );
+  return $usingformat;
+}
+/**
+ * Implements hook_element_info_alter().
+ *
+ * Appends our fixup function to the standard filter_process_format(), which
+ * expands a Form API element into a base element with a text format selector
+ * attached.
+ * Based on better_formats_element_info_alter() in the Better Formats
+ * contributed module. See also
+ * http://drupal.stackexchange.com/questions/16036/how-do-you-set-a-default-input-text-format-per-content-type
+ *
+ * @param &$type
+ *   The Form API element type to alter.
+ */
+function uaqs_fields_element_info_alter(&$type) {
+  $filter_process_format_location = array_search('filter_process_format', $type['text_format']['#process']);
+  $our_fixup = array('filter_process_format', 'uaqs_fields_filter_process_format');
+  array_splice($type['text_format']['#process'], $filter_process_format_location, 1, $our_fixup);
+}
+
+/**
+ * Fix up the results of the standard filter_process_format().
+ *
+ * Based on better_formats_filter_process_format() in the Better Formats
+ * contributed module, this does not replace the standard
+ * filter_process_format() function in filter.module, but is a post-processor,
+ * further modifying its output.
+ *
+ * @param $element
+ *   The form element to process.
+ *
+ * @return
+ *   The form element, possibly with more changes applied.
+ */
+function uaqs_fields_filter_process_format($element) {
+  // Check if the user has permission to use the currently assigned format.
+  $field_allowed = !isset($element['format']['#access']) || $element['format']['#access'];
+  $have_entity = isset($element['#entity_type']);
+
+  // Hide parts of the element (depending on the current user's permissions).
+  $hide_selection = $have_entity && !user_access('show format selection for ' . $element['#entity_type']);
+  $hide_tips      = !user_access('show format tips');
+  $hide_tips_link = !user_access('show more format tips link');
+  if ($hide_selection) {
+    $element['format']['format']['#access'] = FALSE;
+  }
+  if ($hide_tips) {
+    $element['format']['guidelines']['#access'] = FALSE;
+  }
+  if ($hide_tips_link) {
+    $element['format']['help']['#access'] = FALSE;
+  }
+
+  // Possibly change the format on an allowed field.
+  if ($have_entity && $field_allowed) {
+    $instance_info = field_info_instance($element['#entity_type'], $element['#field_name'], $element['#bundle']);
+    $ourformats = uaqs_fields_using_format();
+    $fmts = $ourformats[$element['#field_name']];
+    if ($fmts) {
+      // Format settings for creation forms.
+      if (!empty($element['#entity']) && !empty($element['#entity_type'])) {
+        list($eid, $vid, $bundle) = entity_extract_ids($element['#entity_type'], $element['#entity']);
+        if (empty($eid)) {
+          $all_formats = filter_formats();
+          $default = NULL;
+          while (!$default && (list($fmtkey,) = each($fmts))) {
+            if (isset($all_formats[$fmtkey])) {
+              $default = $fmtkey;
+            }
+          }
+          $element['format']['format']['#default_value'] = $default;
+          reset($fmts);
+        }
+      }
+      // Filter the list of available formats to those allowed on this field.
+      $options = &$element['format']['format']['#options'];
+      $options = array_intersect_key($options, $fmts);
+      // Hide the selector if there is only one allowed format.
+      $hide_selection = (count($options) == 1);
+      if ($hide_selection) {
+        $element['format']['format']['#access'] = FALSE;
+      }
+      // Deny access completely if there are no allowed formats.
+      if (empty($options)) {
+        $element['#access'] = FALSE;
+      }
+      elseif (!isset($options[$element['format']['format']['#default_value']])) {
+        // No text in the field, so assign a new default format.
+        if (!isset($element['value']['#default_value']) || $element['value']['#default_value']==='') {
+          $format_ids = array_keys($options);
+          $element['format']['format']['#default_value'] = reset($format_ids);
+        }
+        // Require manual format selection for existing content.
+        else {
+          $element['format']['format']['#required'] = TRUE;
+          $element['format']['format']['#default_value'] = NULL;
+          // Show the format selector, even if hidden previously.
+          $element['format']['#access'] = TRUE;
+          $element['format']['format']['#access'] = TRUE;
+        }
+      }
+    }
+  }
+
+  // Hide guidelines if the format selector is already hidden.
+  if ($hide_selection && isset($element['format']['format']['#default_value'])) {
+    foreach (element_children($element['format']['guidelines']) as $format_id) {
+      if ($format_id != $element['format']['format']['#default_value']) {
+        $element['format']['guidelines'][$format_id]['#access'] = FALSE;
+      }
+    }
+  }
+
+  // Hide the entire text format fieldset if the user has no access.
+  if ($hide_selection && $hide_tips && $hide_tips_link) {
+    $element['format']['#type'] = 'container';
+  }
+
+  return $element;
+}
 
 /**
  * Implements hook_entity_info_alter().
