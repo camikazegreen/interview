@@ -79,7 +79,7 @@ class UaqsDemoPersonMigration extends UaqsNodeMigration {
 
     // Allow limited HTML markup in the bio field.
     $this->addFieldMapping('field_uaqs_bio:format')
-         ->defaultValue('filtered_html');
+         ->defaultValue('uaqs_unconstrained');
   }
 
   /**

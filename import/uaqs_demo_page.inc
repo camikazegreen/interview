@@ -66,7 +66,7 @@ class UaqsDemoPageMigration extends UaqsNodeMigration {
     $this->addSimpleMappings(array('field_uaqs_body'));
     // Allow limited HTML markup in the page body field.
     $this->addFieldMapping('field_uaqs_body:format')
-         ->defaultValue('filtered_html');
+         ->defaultValue('uaqs_unconstrained');
 
   }
 
