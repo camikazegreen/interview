@@ -59,17 +59,6 @@ function uaqs_demo_migrate_api() {
         'dependencies' => array('UaqsDemoUnitTerm'),
         'import_root' => $import_root,
       ),
-      'UaqsDemoNews' => array(
-        'class_name' => 'UaqsDemoNewsMigration',
-        'group_name' => 'uaqs_demo',
-        'import_root' => $import_root,
-      ),
-      'UaqsDemoNewsContact' => array(
-        'class_name' => 'UaqsDemoNewsContactMigration',
-        'group_name' => 'uaqs_demo',
-        'dependencies' => array('UaqsDemoNews'),
-        'import_root' => $import_root,
-      ),
       'UaqsDemoEvent' => array(
         'class_name' => 'UaqsDemoEventMigration',
         'group_name' => 'uaqs_demo',
@@ -79,6 +68,16 @@ function uaqs_demo_migrate_api() {
         'class_name' => 'UaqsDemoEventContactMigration',
         'group_name' => 'uaqs_demo',
         'dependencies' => array('UaqsDemoEvent'),
+        'import_root' => $import_root,
+      ),
+      'UaqsDemoExtraInfo' => array(
+        'class_name' => 'UaqsDemoExtraInfoMigration',
+        'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
+      ),
+      'UaqsDemoFileAttachment' => array(
+        'class_name' => 'UaqsDemoFileAttachmentMigration',
+        'group_name' => 'uaqs_demo',
         'import_root' => $import_root,
       ),
       'UaqsDemoColumnImage' => array(
@@ -94,6 +93,24 @@ function uaqs_demo_migrate_api() {
       'UaqsDemoPlainText' => array(
         'class_name' => 'UaqsDemoPlainTextMigration',
         'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
+      ),
+      'UaqsDemoNewsContact' => array(
+        'class_name' => 'UaqsDemoNewsContactMigration',
+        'group_name' => 'uaqs_demo',
+        'dependencies' => array(
+            'UaqsDemoNews',
+        ),
+        'import_root' => $import_root,
+      ),
+      'UaqsDemoNews' => array(
+        'class_name' => 'UaqsDemoNewsMigration',
+        'group_name' => 'uaqs_demo',
+        'dependencies' => array(
+            'UaqsDemoColumnImage',
+            'UaqsDemoExtraInfo',
+            'UaqsDemoFileAttachment',
+        ),
         'import_root' => $import_root,
       ),
       'UaqsDemoFlexiblePage' => array(
