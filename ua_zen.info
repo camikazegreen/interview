@@ -201,6 +201,10 @@ settings[ua_bootstrap_cdn_version] = stable
 settings[ua_bootstrap_minified]    = 1
 settings[ua_zen_hide_front_title]  = 0
 
+; Pager
+; --------------
+settings[ua_zen_pager_first_and_last] = 1
+
 ; Tables
 ; --------------
 settings[ua_zen_table_bordered] = 0

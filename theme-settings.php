@@ -143,6 +143,22 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     '#access'        => FALSE
   );
 
+  // Pager
+  $form['pager'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Pagination'),
+    '#collapsible' => FALSE,
+    '#collapsed' => FALSE,
+  );
+
+  $form['pager']['ua_zen_pager_first_and_last'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show "First" and "Last" links in the pager'),
+    '#description' => t('Allow user to choose whether to display "First" and "Last" links on pagers.'),
+    '#default_value' => theme_get_setting('ua_zen_pager_first_and_last'),
+  );
+
+
   // Add secondary logo upload field to theme settings. Code source: mjharmon's
   // research on Drupal core & his own knowledge of Drupal internals and
   // development doctrine this approach sidesteps the need to mark the file as
