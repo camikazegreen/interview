@@ -205,6 +205,14 @@ settings[ua_zen_hide_front_title]  = 0
 ; --------------
 settings[ua_zen_pager_first_and_last] = 1
 
+; Tables
+; --------------
+settings[ua_zen_table_bordered] = 0
+settings[ua_zen_table_condensed] = 0
+settings[ua_zen_table_hover] = 1
+settings[ua_zen_table_striped] = 1
+settings[ua_zen_table_responsive] = 1
+
 ; To make this sub-theme an admin theme with shortcut links next to titles,
 ; uncomment the line below.
 
