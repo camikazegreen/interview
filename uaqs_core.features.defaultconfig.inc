@@ -81,7 +81,7 @@ function uaqs_core_defaultconfig_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_user_pattern';
-  $strongarm->value = 'people/[user:name]';
+  $strongarm->value = 'users/[user:name]';
   $export['pathauto_user_pattern'] = $strongarm;
 
   return $export;
