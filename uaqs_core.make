@@ -78,7 +78,7 @@ projects[title][version] = 1.x-dev
 projects[title][download][type] = git
 projects[title][download][revision] = d6f2000
 projects[title][download][branch] = 7.x-1.x
-projects[title][patch][2040055] = http:/drupal.org/files/issues/notice_undefined-2040055-17.patch
+projects[title][patch][2040055] = http://drupal.org/files/issues/notice_undefined-2040055-17.patch
 
 
 ; ------------------------------------------------------------------------------
