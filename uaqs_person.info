@@ -12,6 +12,7 @@ dependencies[] = features
 dependencies[] = field_group
 dependencies[] = image
 dependencies[] = strongarm
+dependencies[] = telephone
 dependencies[] = text
 dependencies[] = title
 dependencies[] = token
