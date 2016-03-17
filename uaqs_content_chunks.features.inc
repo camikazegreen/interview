@@ -49,6 +49,11 @@ function uaqs_content_chunks_paragraphs_info() {
       'bundle' => 'uaqs_column_image',
       'locked' => '1',
     ),
+    'uaqs_extra_info' => array(
+      'name' => 'Extra info',
+      'bundle' => 'uaqs_extra_info',
+      'locked' => '1',
+    ),
     'uaqs_file_download' => array(
       'name' => 'File attachment',
       'bundle' => 'uaqs_file_download',
