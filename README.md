@@ -15,48 +15,36 @@ These are particularly important for regression testing (checking that additions
 [Behat](https://github.com/Behat/Behat) processes the tests; it is a general behavior-driven development tool for PHP, augmented in this case by [Mink](http://mink.behat.org/en/latest/index.html), an adapter library that provides a unified PHP interface to several different web browsers (allowing Behat tests to refer to web sites), and by additional extensions giving immediate access to the Drupal installation running a web site, [The Drupal Extension to Behat and Mink](https://github.com/jhedstrom/drupalextension).
 A different software tool, Cucumber, originally introduced the Gherkin syntax, so this is widely used and documented.
 
-## Local Development ##
+## Quick Start ##
 
-### Setup ###
+If you just want to get started quickly, follow these steps.
+If something isn't working, look at the instructions below this section for more detailed information.
+Of course, you can also read it all to just understand how it works better.
 
-1. Clone the repository somewhere on your machine.
-It doesn't have to be in the directory with UA Quickstart.
+* Make sure you can run a Drupal site (MySQL, PHP, Apache/nginx) and have composer installed.
+* Set an environment variable for where Drupal should be:
 
-2. Run `composer install` from this project's directory.
-If you don't have composer, [go check it out](http://getcomposer.org)
+    export UAQSTEST_DRUPALROOT='/path/to/where/you/want/drupal/to/be'
 
-3. Replace the `base_url` and `drupal_root` values with the base url to your site and the location on disk of your drupal root directory.
+* Make sure you have your server configured to look there for your site.
+* Set an environment variable for the URL to your server host:
 
-4. Run the tests by running the `behat` executable in the `bin/` directory of this project: e.g. `bin/behat`.
+    export UAQSTEST_BASEURL='http://quickstart.dev' # Change to your url
 
-### Making new tests ###
+* Set environment variables for your drupal user mysql password (for drupal installation) and the password you want the administrator for the drupal instance to use:
 
-Behat, Mink, and the Drupal extension we are using have a pretty sizable library of steps that are already defined.
-To see them on the command line, run:
+    export UAQSTEST_DBPASS='drupal_mysql_password'
+    export UAQSTEST_USER1PASS='drupal_admin_password'
 
-    bin/behat --definitions l
+* Run the setup scripts:
 
-Or run `bin/behat --definitions i` to get a short description of most of the steps.
+    ./uaqstest_drupal_download.sh # Downloads the distribution for you
+    ./uaqstest_drupal_install.sh  # Installs the distribution for you
+    ./uaqstest_behat_mink.sh      # Configures Behat variables and runs the tests.
 
-Look at existing features to get a sense of how the [gherkin](http://docs.behat.org/en/v2.5/guides/1.gherkin.html) syntax looks and feels.
+* Once the `./uaqstest_behat_mink.sh` script has been run, you can just use the `bin/behat` command to run the tests again and again.
 
-### Tags ###
-
-We currently have 2 tags defined to help separate our tests:
-
-#### `@regression` ####
-
-After a bug has been found, `@regression` scenarios should be able to replicate the bug.
-That way, when the bug is fixed, the test will pass and we can make sure the bug doesn't come back.
-
-#### `@story` ####
-
-To help define what users should be able to do, we'll want to codeify user stories from the UI/UX team.
-Those tests will be tagged with `@story` and operate on a higher level than the `@regression` tagged tests.
-
-## CI Server ##
-
-### Requirements ###
+## Requirements ##
 
 The tests are supposed to run in a local development environment (for example, on a developer's own machine, or on a continuous integration server like Jenkins), and use an ephemeral web site installation, which should not be exposed on the public Internet.
 The web server configuration and system configuration files such as `/etc/hosts` might need edits to give names to purely local address such as `127.0.0.1`.
@@ -73,22 +61,22 @@ If you are unfamiliar with setting environment variables from the shell command 
 You can also pre-define the variables in your shell's startup files, or put a collection of commonly used settings in one file and use the `source` command to read this.
 Bash or the sh shell should be present in most Unix-like systems, including OSX and Linux; for Windows see the notes later in this section.
 
-## Setup
+## Setup ##
 
 The tests in this repository should work if it is cloned at any convenient location within the local test environment.
 
-### UA Quickstart Drupal Distribution
+### UA Quickstart Drupal Distribution ###
 
 The tests need a fully built copy of the UA Quickstart distribution.
 A developer contributing to the project will generally have built their own version (under the control of Git), with some of the features coming from local variants that are still being edited; the section “Contributing to the Project” in the README.md from the main [UA Quickstart repository](https://bitbucket.org/ua_drupal/ua_quickstart) gives general advice on setting this up.
 
-#### Downloading
+#### Downloading ####
 
 Someone testing the distribution as a whole will generally start from the same pre-packaged archive files that are available as for everyone to download; a script here, `uaqstest_drupal_download.sh`, helps document or automate this process.
 It downloads the archive file from somewhere specified by a URL, extracts the archive into a directory subtree in a staging area, and finally moves this to a location that the local web server will use as the Drupal root directory.
 The environment variable `UAQSTEST_DRUPALROOT` is important for setting this, as the default value will almost never be correct.
 
-#### Installing
+#### Installing ####
 
 Once a copy of UA Quickstart is sitting in a directory known to the local web server, the usual configuration for a new Drupal site should work.
 A script here, `uaqstest_drupal_install.sh`, automates the process by invoking the `drush site-install` command.
@@ -98,7 +86,7 @@ There are no default settings for the Drupal User1 and database user passwords, 
 - `UAQSTEST_DBPASS` password used to access the local MySQL server as a user with full access to the database Drupal will use.
 - `UAQSTEST_USER1PASS` Drupal administrative user (User1) password for the local test site.
 
-### Behat, Mink and the Drupal Extension
+### Behat, Mink and the Drupal Extension ###
 
 The Composer PHP dependency management tool should install Behat, the Mink library and the Drupal extensions, using the `composer.lock` file for almost all the configuration, requiring only the location of the Drupal root directory, and the URL at which the local web server will have brought up the site under test.
 As a convenience, the shell script `uaqstest_behat_mink.sh` here invokes `composer install`, and automates the process of configuring Behat without needing any extra .yml configuration files, setting an environment variable `BEHAT_PARAMS`, which in turn comes from the `UAQSTEST_DRUPALROOT` environment variable mentioned previously, and the `UAQSTEST_BASEURL` local URL for the web site.
