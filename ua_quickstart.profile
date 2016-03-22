@@ -4,22 +4,15 @@
  * Enables modules and site configuration for a UA QuickStart site installation.
  */
 
-/**
- * Set profile-specific flags for the installation..
- *
- * @param $install_state
- *   An array of information about the current installation state.
- */
-function ua_quickstart_install_flags(&$install_state) {
-  variable_set('uaqs_verbose', $install_state['uaqs_verbosity']);
-}
+const UAQS_FORM_VERBOSE = 'uaqs_verbosity';
+const UAQS_STATE_OPTIONS_SET = 'uaqs_options_set';
+const UAQS_VAR_VERBOSE = 'uaqs_verbose';
 
 /**
  * Implements hook_install_tasks_alter().
  *
- * We need to insert our flag-setting hack after we can modify an existing
- * form to include the flag settings, after there's a database in which
- * to store variables, but before installing most of the package's modules.
+ * We need to insert our option-setting form after there's a database in which
+ * to store variables, but before installing most of the non-core modules.
  *
  * @param $tasks
  *   The array of all available installation tasks.
@@ -27,60 +20,51 @@ function ua_quickstart_install_flags(&$install_state) {
  *   The array of information about the current installation state.
  */
 function ua_quickstart_install_tasks_alter(&$tasks, $install_state) {
-  $flaghack = array('ua_quickstart_install_flags' => array());
+  $optionsform = array('ua_quickstart_install_options_form' => array(
+    'display_name' => st('Set profile-specific options'),
+    'type' => 'form',
+    'run' => empty($install_state[UAQS_STATE_OPTIONS_SET]) ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
+  ));
   $offset = array_search('install_bootstrap_full', array_keys($tasks));
-  $tasks = array_merge(array_slice($tasks, 0, $offset), $flaghack, array_slice($tasks, $offset));
+  if ($offset) {
+    // Found the built-in Drupal bootstrap install task at a non-zero offset.
+    $preboot_tasks = array_slice($tasks, 0, $offset);
+    $boot_tasks = array_slice($tasks, $offset);
+    $tasks = array_merge($preboot_tasks, $optionsform, $boot_tasks);
+  }
 }
 
 /**
- * Pre-process the UA Quickstart additions to the validation handler.
- *
- * The submit handler will not see our additional field states in
- * $form_state['values'], so we have to copy them to $form_state['storage']
- * instead. The blog post
- * https://www.previousnext.com.au/blog/collecting-and-writing-configuration-settings-settingphp-install-profile
- * gives an example of the same approach.
+ * Profile-specific options form submit handler.
  *
  * @param $form
  *   The nested array of form elements that defines the form.
  * @param $form_state
  *   A keyed array containing the current state of the form.
  */
-function uaqs_install_settings_form_validate($form, &$form_state) {
+function ua_quickstart_install_options_form_submit($form, &$form_state) {
   global $install_state;
-  $form_state['storage']['uaqs_verbosity'] = $form_state['values']['uaqs_verbosity'];
+  variable_set(UAQS_VAR_VERBOSE, (! empty($form_state['values'][UAQS_FORM_VERBOSE])));
+  $install_state[UAQS_STATE_OPTIONS_SET] = TRUE;
 }
 
 /**
- * Pre-process the UA Quickstart additions to the submit handler.
+ * Display the profile-specific options (install task callback).
  *
  * @param $form
- *   The nested array of form elements that defines the form.
+ *   Unused (we initialize the form here).
  * @param $form_state
  *   A keyed array containing the current state of the form.
- */
-function uaqs_install_settings_form_submit($form, &$form_state) {
-  global $install_state;
-  $install_state['uaqs_verbosity'] = (! empty($form_state['storage']['uaqs_verbosity']));
-}
-
-/**
- * Implements hook_form_FORM_ID_alter().
+ * @param $install_state
+ *   The array of information about the current installation state.
  *
- * Note that this is an ugly hack: we're trying to force our additional
- * form fields into the same form that Drupal Core is using to record the
- * database configuration settings. Instead, we should provide a distinct form
- * with its own handlers for these extras, but at the moment that would mean
- * presenting the user with another complete configuration screen for just
- * two radio buttons. See http://drupal.org/node/1153646 for more discussion.
- *
- * @param $form
+ * @return array
  *   The nested array of form elements that defines the form.
- * @param $form_state
- *   A keyed array containing the current state of the form.
  */
-function system_form_install_settings_form_alter(&$form, &$form_state) {
-  $form['uaqs_verbosity'] = array(
+function ua_quickstart_install_options_form($form, &$form_state, &$install_state) {
+  drupal_set_title(st('Profile-specific options'));
+  $form = array();
+  $form[UAQS_FORM_VERBOSE] = array(
     '#type' => 'radios',
     '#title' => st('How much detail to show in optional messages during installation'),
     '#options' => array(
@@ -89,14 +73,12 @@ function system_form_install_settings_form_alter(&$form, &$form_state) {
     ),
     '#default_value' => 0,
   );
-  $form['#validate'] = array(
-    'uaqs_install_settings_form_validate',
-    'install_settings_form_validate',
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => st('Save and continue'),
+    '#submit' => array('ua_quickstart_install_options_form_submit'),
   );
-  $form['actions']['save']['#submit'] = array(
-    'uaqs_install_settings_form_submit',
-    'install_settings_form_submit',
-  );
+  return $form;
 }
 
 /**
