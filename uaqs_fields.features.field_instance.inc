@@ -114,11 +114,12 @@ function uaqs_fields_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'text',
+      'module' => 'telephone',
       'settings' => array(
+        'placeholder' => '',
         'size' => 60,
       ),
-      'type' => 'text_textfield',
+      'type' => 'telephone_default',
       'weight' => 3,
     ),
   );
