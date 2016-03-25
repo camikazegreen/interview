@@ -24,25 +24,25 @@ Of course, you can also read it all to just understand how it works better.
 * Make sure you can run a Drupal site (MySQL, PHP, Apache/nginx) and have composer installed.
 * Set an environment variable for where Drupal should be:
 
-    export UAQSTEST_DRUPALROOT='/path/to/where/you/want/drupal/to/be'
+        export UAQSTEST_DRUPALROOT='/path/to/where/you/want/drupal/to/be'
 
 * Make sure you have your server configured to look there for your site.
 * Set an environment variable for the URL to your server host:
 
-    export UAQSTEST_BASEURL='http://quickstart.dev' # Change to your url
+        export UAQSTEST_BASEURL='http://quickstart.dev' # Change to your url
 
 * Set environment variables for your drupal mysql settings (for drupal installation) and the password you want the administrator for the drupal instance to use:
 
-    export UAQSTEST_DBNAME='drupal_mysql_database'
-    export UAQSTEST_DBUSER='drupal_mysql_username'
-    export UAQSTEST_DBPASS='drupal_mysql_password'
-    export UAQSTEST_USER1PASS='drupal_admin_password'
+        export UAQSTEST_DBNAME='drupal_mysql_database'
+        export UAQSTEST_DBUSER='drupal_mysql_username'
+        export UAQSTEST_DBPASS='drupal_mysql_password'
+        export UAQSTEST_USER1PASS='drupal_admin_password'
 
 * Run the setup scripts:
 
-    ./uaqstest_drupal_download.sh # Downloads the distribution for you
-    ./uaqstest_drupal_install.sh  # Installs the distribution for you
-    ./uaqstest_behat_mink.sh      # Configures Behat variables and runs the tests.
+        ./uaqstest_drupal_download.sh # Downloads the distribution for you
+        ./uaqstest_drupal_install.sh  # Installs the distribution for you
+        ./uaqstest_behat_mink.sh      # Configures Behat variables and runs the tests.
 
 * Once the `./uaqstest_behat_mink.sh` script has been run, you can just use the `bin/behat` command to run the tests again and again.
 
