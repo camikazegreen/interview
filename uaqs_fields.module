@@ -11,27 +11,33 @@ include_once 'uaqs_fields.features.filter.inc';
 include_once 'uaqs_fields.features.field_base.inc';
 
 /**
+ * Format IDs defined elsewhere in this module.
+ */
+const UAQS_TEXTUAL_CONTENT = 'uaqs_textual_content';
+const UAQS_UNCONSTRAINED = 'uaqs_unconstrained';
+
+/**
  * Defines the fields that need special default formats applied.
  *
  * Assume that the canonical format for any instances of these fields in any
- * entity is defined here, since the all of the field bases are belong to us.
+ * entity is defined here, since all your field bases are belong to us.
  *
  * @return array
- *   An array with field base names as keys, format names or NULL as values.
+ *   An array with field base names as keys, format definitions as values.
  */
 function uaqs_fields_using_format() {
-  $usingformat = array_fill_keys(array_keys(uaqs_fields_field_default_field_bases()), NULL);
-  $usingformat['field_uaqs_text_area'] = array(
-    'uaqs_textual_content' => 'Textual Content',
-  );
-  $usingformat['field_uaqs_body'] = array(
-    'uaqs_unconstrained' => 'Unconstrained Markup',
-  );
-  $usingformat['field_uaqs_bio'] = array(
-    'uaqs_unconstrained' => 'Unconstrained Markup',
-  );
+  $formatdef = uaqs_fields_filter_default_formats();
+  $usingformat = array_fill_keys(array_keys(uaqs_fields_field_default_field_bases()), array());
+  if (isset($formatdef[UAQS_TEXTUAL_CONTENT])) {
+    $usingformat['field_uaqs_text_area'][UAQS_TEXTUAL_CONTENT] = $formatdef[UAQS_TEXTUAL_CONTENT]['name'];
+  }
+  if (isset($formatdef[UAQS_UNCONSTRAINED])) {
+    $usingformat['field_uaqs_body'][UAQS_UNCONSTRAINED] = $formatdef[UAQS_UNCONSTRAINED]['name'];
+    $usingformat['field_uaqs_bio'][UAQS_UNCONSTRAINED] = $formatdef[UAQS_UNCONSTRAINED]['name'];
+  }
   return $usingformat;
 }
+
 /**
  * Implements hook_element_info_alter().
  *
