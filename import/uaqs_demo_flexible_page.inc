@@ -41,7 +41,7 @@ class UaqsDemoPlainTextMigration extends UaqsParagraphsItemMigration {
     $this->addFieldMapping('field_uaqs_text_area', 'uaqs_text_area');
     // Allow limited HTML markup in the text area field.
     $this->addFieldMapping('field_uaqs_text_area:format')
-         ->defaultValue('uaqs_phrasing_content');
+         ->defaultValue('uaqs_textual_content');
   }
 
 }
@@ -78,7 +78,7 @@ class UaqsDemoHeadedTextMigration extends UaqsParagraphsItemMigration {
     $this->addFieldMapping('field_uaqs_text_area', 'uaqs_text_area');
     // Allow limited HTML markup in the text area field.
     $this->addFieldMapping('field_uaqs_text_area:format')
-         ->defaultValue('uaqs_phrasing_content');
+         ->defaultValue('uaqs_textual_content');
   }
 
 }
