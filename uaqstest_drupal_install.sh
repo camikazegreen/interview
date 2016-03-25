@@ -37,6 +37,9 @@ fi
 # MySQL database host (as name or address:port):
 : ${UAQSTEST_DBHOST:='localhost'}
 
+# Profile-specific flag settings (in the format form.field=value):
+: ${UAQSTEST_FLAGS:='ua_quickstart_install_options_form.uaqs_verbosity=1'}
+
 # Drupal administrative user (User1) name:
 : ${UAQSTEST_USER1NAME:='userone'}
 
@@ -83,7 +86,7 @@ fi
 
 initial_path="$PWD"
 cd "$UAQSTEST_DRUPALROOT"
-if drush site-install "$UAQSTEST_PROFILE" --account-mail="$UAQSTEST_SITEEMAIL" --account-name="$UAQSTEST_USER1NAME" --db-url="$UAQSTEST_DBTYPE"://"$UAQSTEST_DBUSER":"$UAQSTEST_DBPASS"@"$UAQSTEST_DBHOST"/"$UAQSTEST_DBNAME" --site-name="$UAQSTEST_SITENAME" -y; then
+if drush site-install "$UAQSTEST_PROFILE" "$UAQSTEST_FLAGS" --account-mail="$UAQSTEST_SITEEMAIL" --account-name="$UAQSTEST_USER1NAME" --db-url="$UAQSTEST_DBTYPE"://"$UAQSTEST_DBUSER":"$UAQSTEST_DBPASS"@"$UAQSTEST_DBHOST"/"$UAQSTEST_DBNAME" --site-name="$UAQSTEST_SITENAME" -y; then
   echo "Successfully installed the site with demonstration content..." >&2
 else
   echo "** the Drupal site install failed (before any actual testing)." >&2
