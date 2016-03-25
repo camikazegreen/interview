@@ -177,6 +177,7 @@ On Windows, the Drupal root directory specified in the `BEHAT_PARAMS` environmen
 - `UAQSTEST_DUMPDIR` path to a directory for staging database dumps.
 - `UAQSTEST_EXTRACTDIR` path to a directory in which to extract the distribution archive.
 - `UAQSTEST_FETCH` command (with flags) needed to fetch a remote URL to standard input.
+- `UAQSTEST_FLAGS` profile-specific flags to include on the `drush site-install` command line.
 - `UAQSTEST_PROFILE` name of the profile to use for the Drupal installation.
 - `UAQSTEST_RUNTESTS` whether or not to hold off running the full set of tests immediately.
 - `UAQSTEST_SITEEMAIL` contact email address to build in to the Drupal installation.
