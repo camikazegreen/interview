@@ -10,7 +10,7 @@ projects[uaqs_block_types][type] = module
 projects[uaqs_block_types][subdir] = custom
 projects[uaqs_block_types][download][type] = git
 projects[uaqs_block_types][download][branch] = 7.x-1.x
-projects[uaqs_block_types][download][revision] = b943ef8
+projects[uaqs_block_types][download][revision] = 94ce115
 projects[uaqs_block_types][download][url] = https://bitbucket.org/ua_drupal/uaqs_block_types.git
 
 projects[ua_cas][type] = module
@@ -24,21 +24,21 @@ projects[uaqs_content_chunks][type] = module
 projects[uaqs_content_chunks][subdir] = custom
 projects[uaqs_content_chunks][download][type] = git
 projects[uaqs_content_chunks][download][branch] = 7.x-1.x
-projects[uaqs_content_chunks][download][revision] = 82eb24c
+projects[uaqs_content_chunks][download][revision] = f018d31
 projects[uaqs_content_chunks][download][url] = https://bitbucket.org/ua_drupal/uaqs_content_chunks.git
 
 projects[uaqs_core][type] = module
 projects[uaqs_core][subdir] = custom
 projects[uaqs_core][download][type] = git
 projects[uaqs_core][download][branch] = 7.x-1.x
-projects[uaqs_core][download][revision] = 4c7af6e
+projects[uaqs_core][download][revision] = ae49a5e
 projects[uaqs_core][download][url] = https://bitbucket.org/ua_drupal/uaqs_core.git
 
 projects[uaqs_demo][type] = module
 projects[uaqs_demo][subdir] = custom
 projects[uaqs_demo][download][type] = git
 projects[uaqs_demo][download][branch] = 7.x-1.x
-projects[uaqs_demo][download][revision] = 946e36d
+projects[uaqs_demo][download][revision] = 21e0845
 projects[uaqs_demo][download][url] = https://bitbucket.org/ua_drupal/uaqs_demo.git
 
 projects[uaqs_event][type] = module
@@ -52,7 +52,7 @@ projects[uaqs_fields][type] = module
 projects[uaqs_fields][subdir] = custom
 projects[uaqs_fields][download][type] = git
 projects[uaqs_fields][download][branch] = 7.x-1.x
-projects[uaqs_fields][download][revision] = 0773dc0
+projects[uaqs_fields][download][revision] = 94cbae2
 projects[uaqs_fields][download][url] = https://bitbucket.org/ua_drupal/uaqs_fields.git
 
 projects[uaqs_featured_content][type] = module
