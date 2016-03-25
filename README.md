@@ -31,8 +31,10 @@ Of course, you can also read it all to just understand how it works better.
 
     export UAQSTEST_BASEURL='http://quickstart.dev' # Change to your url
 
-* Set environment variables for your drupal user mysql password (for drupal installation) and the password you want the administrator for the drupal instance to use:
+* Set environment variables for your drupal mysql settings (for drupal installation) and the password you want the administrator for the drupal instance to use:
 
+    export UAQSTEST_DBNAME='drupal_mysql_database'
+    export UAQSTEST_DBUSER='drupal_mysql_username'
     export UAQSTEST_DBPASS='drupal_mysql_password'
     export UAQSTEST_USER1PASS='drupal_admin_password'
 
