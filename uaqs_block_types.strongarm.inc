@@ -62,6 +62,9 @@ function uaqs_block_types_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'uaqs_expanded' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

@@ -7,8 +7,7 @@
 const OUR_PREFIX = 'uaqs-block-types-';
 
 include_once 'uaqs_block_types.features.inc';
-include_once 'uaqs_block_types.theme_block_overrides.inc';
-include_once 'uaqs_block_types.theme_field_overrides.inc';
+include_once 'uaqs_block_types.preprocess_entity_overrides.inc';
 
 /**
  * Override or insert variables into the Bean templates.
@@ -72,3 +71,14 @@ function uaqs_block_types_theme_registry_alter(&$theme_registry) {
     }
   }
 }
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function uaqs_block_types_entity_info_alter(&$entity_info) {
+  $entity_info['bean']['view modes']['uaqs_expanded'] = array(
+    'label' => t('Expanded'),
+    'custom settings' => FALSE,
+  );
+}
+
