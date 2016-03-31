@@ -5,33 +5,7 @@
  */
 
 include_once 'uaqs_content_chunks.features.inc';
-include_once 'uaqs_content_chunks.theme_field_overrides.inc';
 include_once 'uaqs_content_chunks.preprocess_entity_overrides.inc';
-
-/**
- * Override or insert variables into the UAQS Content Chunks templates.
- *
- * Based on the optional extra function
- * STARTERKIT_preprocess_node(&$variables, $hook) from template.php in the Zen
- * theme,
- * http://drupal.stackexchange.com/questions/11114/is-it-possible-to-define-a-hook-preprocess-function-based-on-entity-type-such-as
- * and https://www.drupal.org/node/2521802
- *
- * @param array &$variables
- *   An array of variables to pass to the theme template.
- * @param string $hook
- *   The hook name.
- */
-//function uaqs_content_chunks_preprocess_entity(array &$variables, $hook) {
-  //$entity_type = $variables['elements']['#entity_type'];
-  //if ($entity_type == 'paragraphs_item') {
-    //$bundle = $variables['elements']['#bundle'];
-    //$function = __FUNCTION__ . '_paragraphs_item_' . $bundle;
-    //if (function_exists($function)) {
-      //$function($variables, $hook);
-    //}
-  //}
-//}
 
 /**
  * Implements hook_theme_registry_alter().
