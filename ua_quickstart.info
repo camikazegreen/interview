@@ -48,6 +48,7 @@ dependencies[] = uaqs_core
 dependencies[] = uaqs_block_types
 dependencies[] = uaqs_content_chunks
 dependencies[] = uaqs_featured_content
+dependencies[] = uaqs_flexible_block
 dependencies[] = ua_google_tag
 dependencies[] = uaqs_navigation
 dependencies[] = uaqs_page
