@@ -4,6 +4,83 @@
  * Enables modules and site configuration for a UA QuickStart site installation.
  */
 
+const UAQS_FORM_VERBOSE = 'uaqs_verbosity';
+const UAQS_STATE_OPTIONS_SET = 'uaqs_options_set';
+const UAQS_VAR_VERBOSE = 'uaqs_verbose';
+
+/**
+ * Implements hook_install_tasks_alter().
+ *
+ * We need to insert our option-setting form after there's a database in which
+ * to store variables, but before installing most of the non-core modules.
+ *
+ * @param $tasks
+ *   The array of all available installation tasks.
+ * @param $install_state
+ *   The array of information about the current installation state.
+ */
+function ua_quickstart_install_tasks_alter(&$tasks, $install_state) {
+  $optionsform = array('ua_quickstart_install_options_form' => array(
+    'display_name' => st('Set profile-specific options'),
+    'type' => 'form',
+    'run' => empty($install_state[UAQS_STATE_OPTIONS_SET]) ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
+  ));
+  $offset = array_search('install_bootstrap_full', array_keys($tasks));
+  if ($offset) {
+    // Found the built-in Drupal bootstrap install task at a non-zero offset.
+    $preboot_tasks = array_slice($tasks, 0, $offset);
+    $boot_tasks = array_slice($tasks, $offset);
+    $tasks = array_merge($preboot_tasks, $optionsform, $boot_tasks);
+  }
+}
+
+/**
+ * Profile-specific options form submit handler.
+ *
+ * @param $form
+ *   The nested array of form elements that defines the form.
+ * @param $form_state
+ *   A keyed array containing the current state of the form.
+ */
+function ua_quickstart_install_options_form_submit($form, &$form_state) {
+  global $install_state;
+  variable_set(UAQS_VAR_VERBOSE, (! empty($form_state['values'][UAQS_FORM_VERBOSE])));
+  $install_state[UAQS_STATE_OPTIONS_SET] = TRUE;
+}
+
+/**
+ * Display the profile-specific options (install task callback).
+ *
+ * @param $form
+ *   Unused (we initialize the form here).
+ * @param $form_state
+ *   A keyed array containing the current state of the form.
+ * @param $install_state
+ *   The array of information about the current installation state.
+ *
+ * @return array
+ *   The nested array of form elements that defines the form.
+ */
+function ua_quickstart_install_options_form($form, &$form_state, &$install_state) {
+  drupal_set_title(st('Profile-specific options'));
+  $form = array();
+  $form[UAQS_FORM_VERBOSE] = array(
+    '#type' => 'radios',
+    '#title' => st('How much detail to show in optional messages during installation'),
+    '#options' => array(
+      0 => st('Terse (for normal users)'),
+      1 => st('Verbose (for developers)'),
+    ),
+    '#default_value' => 0,
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => st('Save and continue'),
+    '#submit' => array('ua_quickstart_install_options_form_submit'),
+  );
+  return $form;
+}
+
 /**
  * Implements hook_form_FORM_ID_alter().
  */
