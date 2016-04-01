@@ -14,7 +14,7 @@
  * @param string $hook
  *   The hook name (generally the block type name).
  */
-function ua_zen_preprocess_entity_bean_uaqs_captioned_image(array &$variables, $hook) {
+function uaqs_block_types_preprocess_entity_bean_uaqs_captioned_image(array &$variables, $hook) {
   $have_author = !empty($variables['content']['field_uaqs_image_author']);
   $have_caption = !empty($variables['content']['field_uaqs_image_caption']);
   $have_license = !empty($variables['content']['field_uaqs_image_license']);
@@ -35,7 +35,7 @@ function ua_zen_preprocess_entity_bean_uaqs_captioned_image(array &$variables, $
  * @param string $hook
  *   The hook name (generally the block type name).
  */
-function ua_zen_preprocess_entity_bean_uaqs_statement(array &$variables, $hook) {
+function uaqs_block_types_preprocess_entity_bean_uaqs_statement(array &$variables, $hook) {
   $have_link = !empty($variables['content']['field_uaqs_read_more']);
   $variables['content']['have_link'] = $have_link;
 }
