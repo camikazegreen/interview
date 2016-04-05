@@ -631,7 +631,7 @@ abstract class UaqsParagraphsItemMigration extends UaqsIntKeyedMigration {
       $bundle,
       array(
         'field_name' => $field_name,
-        'text_format' => 'uaqs_phrasing_content',
+        'text_format' => 'uaqs_textual_content',
       )
     );
   }
