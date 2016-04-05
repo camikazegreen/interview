@@ -37,7 +37,6 @@ class UaqsDemoContactSummaryMigration extends UaqsBeanMigration {
     // Titles for links...
     $link_title_fields = array(
       'uaqs_contact_mail_link_title' => t('Email address title'),
-      'uaqs_contact_phone_title' => t('Phone number title'),
     );
 
     // All the fields to migrate.
@@ -55,7 +54,6 @@ class UaqsDemoContactSummaryMigration extends UaqsBeanMigration {
     $this->addFieldMapping('field_uaqs_contact_phone', 'uaqs_contact_phone');
 
     $this->addFieldMapping('field_uaqs_contact_mail_link:title', 'uaqs_contact_mail_link_title');
-    $this->addFieldMapping('field_uaqs_contact_phone:title', 'uaqs_contact_phone_title');
   }
 
 }

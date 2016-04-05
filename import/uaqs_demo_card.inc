@@ -64,10 +64,10 @@ class UaqsDemoCardMigration extends UaqsBeanMigration {
     $this->addFieldMapping('field_uaqs_link', 'uaqs_link');
     $this->addFieldMapping('field_uaqs_link:attributes','uaqs_link_attributes');
 
-    $this->addFieldMapping('field_uaqs_blurb_text', 'uaqs_blurb_text');
-    // Allow limited HTML markup in the blurb text field.
-    $this->addFieldMapping('field_uaqs_blurb_text:format')
-         ->defaultValue('filtered_html');
+    $this->addFieldMapping('field_uaqs_text_area', 'uaqs_text_area');
+    // Allow limited HTML markup in the text area field.
+    $this->addFieldMapping('field_uaqs_text_area:format')
+         ->defaultValue('uaqs_textual_content');
 
     $this->addFieldMapping('field_uaqs_link:title', 'uaqs_link_title');
 
