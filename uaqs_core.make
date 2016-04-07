@@ -24,7 +24,7 @@ projects[draggableviews][version] = 2.1
 
 projects[elements][version] = 1.4
 
-projects[entity][version] = 1.6
+projects[entity][version] = 1.7
 
 projects[html5_tools][version] = 1.3
 
@@ -87,7 +87,7 @@ projects[title][patch][2040055] = http://drupal.org/files/issues/notice_undefine
 
 projects[defaultconfig][version] = 1.0-alpha11
 
-projects[features][version] = 2.7
+projects[features][version] = 2.8
 
 projects[migrate][version] = 2.8
 
