@@ -94,16 +94,21 @@ for r in $UAQSPROJECTS ; do
   fi
 
   printf "Preparing to tag release for $r...\n"
-  # Add version info to .info file.
-  echo -e "version = $UAQSNEWTAG" >> "$r.info"
-  git add "$r.info"
+  # Add version info to .info files.
+  export INFOFILES=`find . -name '*.info'`;
+  for i in $INFOFILES ; do
+    echo -e "version = $UAQSNEWTAG" >> $i
+    git add $i
+  done
   git commit -m "Preparing to tag $UAQSNEWTAG."
   git tag "$UAQSNEWTAG"
 
   printf "Restoring $r to default dev state...\n"
-  # Remove version info from .info file.
-  sed -i '' "/version = /d" "$r.info"
-  git add "$r.info"
+  # Remove version info from .info files.
+  for i in $INFOFILES ; do
+    sed -i '' "/version = /d" $i
+    git add $i
+  done
   git commit -m "Back to dev."
 
   printf "Cleaning up...\n"
