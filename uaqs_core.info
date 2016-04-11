@@ -11,6 +11,5 @@ dependencies[] = pathauto
 features[defaultconfig][] = strongarm:jquery_update_compression_type
 features[defaultconfig][] = strongarm:jquery_update_jquery_admin_version
 features[defaultconfig][] = strongarm:jquery_update_jquery_cdn
-features[defaultconfig][] = strongarm:jquery_update_jquery_version
 features[features_api][] = api:2
 files[] = uaqs_core.migrate.inc
