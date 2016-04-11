@@ -16,6 +16,10 @@ drupal_add_js('//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', a
         'weight' => 3,
         )
 );
+drupal_add_css('//brand.arizona.edu/sites/all/themes/brand/ua-brand-icons/ua-brand-icons.css', array(
+        'type' => 'external',
+        )
+);
 /**
  * Implements hook_css_alter().
  *
@@ -323,7 +327,7 @@ function ua_zen_preprocess_region(&$variables, $hook) {
       if (strlen($str_footer_logo_html) == 0) {
         $str_logo_path = theme_get_setting('logo');
         if (strlen($str_logo_path) > 0) {
-          $str_footer_logo_html = "<img class='img-responsive' src='" . file_create_url($str_logo_path) . "' alt='' />";
+          $str_footer_logo_html = "<img src='" . file_create_url($str_logo_path) . "' alt='' />";
         }
       }
       break;
@@ -502,7 +506,28 @@ function ua_zen_menu_link(array $variables) {
   if (($element['#href'] == $_GET['q'] || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']))) {
     $element['#attributes']['class'][] = 'active';
   }
-  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  switch ($element['#href']) {
+      case 'http://www.arizona.edu/weather':
+          $output = l('<i class="ua-brand-weather"></i>'.$element['#title'], $element['#href'], array('attributes' => array('class' => array('about-link')),'html' => TRUE));
+          break;
+      case 'http://uanews.org':
+          $output = l('<i class="ua-brand-news"></i>'.$element['#title'], $element['#href'], array('attributes' => array('class' => array('about-link')),'html' => TRUE));
+          break;
+      case 'http://directory.arizona.edu/az':
+          $output = l('<i class="ua-brand-az-index"></i>'.$element['#title'], $element['#href'], array('attributes' => array('class' => array('about-link')),'html' => TRUE));
+          break;
+      case 'http://map.arizona.edu':
+          $output = l('<i class="ua-brand-campus-map"></i>'.$element['#title'], $element['#href'], array('attributes' => array('class' => array('about-link')),'html' => TRUE));
+          break;
+      case 'http://www.arizona.edu/calendars-events':
+          $output = l('<i class="ua-brand-calendar"></i>'.$element['#title'], $element['#href'], array('attributes' => array('class' => array('about-link')),'html' => TRUE));
+          break;
+      case 'http://directory.arizona.edu/phonebook':
+          $output = l('<i class="ua-brand-phonebook"></i>'.$element['#title'], $element['#href'], array('attributes' => array('class' => array('about-link')),'html' => TRUE));
+          break;
+      default:
+          $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  }
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
