@@ -46,7 +46,7 @@ function uaqs_person_defaultconfig_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_uaqs_person_pattern';
-  $strongarm->value = 'people/[node:title]';
+  $strongarm->value = 'person/[node:title]';
   $export['pathauto_node_uaqs_person_pattern'] = $strongarm;
 
   return $export;
