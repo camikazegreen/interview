@@ -16,10 +16,6 @@ drupal_add_js('//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', a
         'weight' => 3,
         )
 );
-drupal_add_css('//brand.arizona.edu/sites/all/themes/brand/ua-brand-icons/ua-brand-icons.css', array(
-        'type' => 'external',
-        )
-);
 /**
  * Implements hook_css_alter().
  *
@@ -506,28 +502,7 @@ function ua_zen_menu_link(array $variables) {
   if (($element['#href'] == $_GET['q'] || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']))) {
     $element['#attributes']['class'][] = 'active';
   }
-  switch ($element['#href']) {
-      case 'http://www.arizona.edu/weather':
-          $output = l('<i class="ua-brand-weather"></i>'.$element['#title'], $element['#href'], array('attributes' => array('class' => array('about-link')),'html' => TRUE));
-          break;
-      case 'http://uanews.org':
-          $output = l('<i class="ua-brand-news"></i>'.$element['#title'], $element['#href'], array('attributes' => array('class' => array('about-link')),'html' => TRUE));
-          break;
-      case 'http://directory.arizona.edu/az':
-          $output = l('<i class="ua-brand-az-index"></i>'.$element['#title'], $element['#href'], array('attributes' => array('class' => array('about-link')),'html' => TRUE));
-          break;
-      case 'http://map.arizona.edu':
-          $output = l('<i class="ua-brand-campus-map"></i>'.$element['#title'], $element['#href'], array('attributes' => array('class' => array('about-link')),'html' => TRUE));
-          break;
-      case 'http://www.arizona.edu/calendars-events':
-          $output = l('<i class="ua-brand-calendar"></i>'.$element['#title'], $element['#href'], array('attributes' => array('class' => array('about-link')),'html' => TRUE));
-          break;
-      case 'http://directory.arizona.edu/phonebook':
-          $output = l('<i class="ua-brand-phonebook"></i>'.$element['#title'], $element['#href'], array('attributes' => array('class' => array('about-link')),'html' => TRUE));
-          break;
-      default:
-          $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
