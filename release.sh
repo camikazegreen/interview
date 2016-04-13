@@ -69,12 +69,18 @@ for r in $UAQSPROJECTS ; do
   printf "Updating CHANGELOG.txt for $r...\n"
   # Create a temporary tag.
   git tag "$UAQSTMPTAG"
-  # Deal with projects don't have existing tags.
-  if git rev-parse $1 >/dev/null 2>&1 ; then
-    export UAQSOLDREF=$1
+  # Deal with projects that don't have existing tags.
+  if git rev-parse "$1" >/dev/null 2>&1 ; then
+    hash=`git log --grep="Preparing to tag $1." -n 1 --pretty=format:%H`
+    if [ x"$hash" = x ]; then
+      UAQSOLDREF="$1"
+    else
+      UAQSOLDREF="$hash"
+    fi
   else
-    export UAQSOLDREF=`git rev-list --max-parents=0 HEAD`
+    UAQSOLDREF=`git rev-list --max-parents=0 HEAD`
   fi
+  export UAQSOLDREF
   # Ensure CHANGELOG.txt exists and preserve current contents.
   touch CHANGELOG.txt
   mv CHANGELOG.txt CHANGELOG.old
@@ -94,16 +100,21 @@ for r in $UAQSPROJECTS ; do
   fi
 
   printf "Preparing to tag release for $r...\n"
-  # Add version info to .info file.
-  echo -e "version = $UAQSNEWTAG" >> "$r.info"
-  git add "$r.info"
+  # Add version info to .info files.
+  export INFOFILES=`find . -name '*.info'`;
+  for i in $INFOFILES ; do
+    echo -e "version = $UAQSNEWTAG" >> $i
+    git add $i
+  done
   git commit -m "Preparing to tag $UAQSNEWTAG."
   git tag "$UAQSNEWTAG"
 
   printf "Restoring $r to default dev state...\n"
-  # Remove version info from .info file.
-  sed -i '' "/version = /d" "$r.info"
-  git add "$r.info"
+  # Remove version info from .info files.
+  for i in $INFOFILES ; do
+    sed -i '' "/version = /d" $i
+    git add $i
+  done
   git commit -m "Back to dev."
 
   printf "Cleaning up...\n"
@@ -128,13 +139,13 @@ for r in $UAQSPROJECTS ; do
   fi
   # Update project commit hash in distro's default drupal-org.make file.
   sed -i '' -E "/$r.*revision/s/.{7}$/$UAQSNEWHASH/" ../../drupal-org.make
- 
+
   cd ..
 done
 
 #
 # Prepare UA QuickStart distribution for release, tag new release, then restore
-# files to their default dev state. 
+# files to their default dev state.
 #
 
 printf "\nPreparing to tag release for UA QuickStart Distribution...\n"
