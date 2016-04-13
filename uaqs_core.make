@@ -32,7 +32,7 @@ projects[jquery_update][version] = 2.7
 
 projects[libraries][version] = 2.2
 
-projects[pathauto][version] = 1.2
+projects[pathauto][version] = 1.3
 
 projects[token][version] = 1.6
 
