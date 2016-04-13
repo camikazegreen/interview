@@ -57,6 +57,7 @@ function ua_zen_css_alter(&$css) {
   $ua_bootstrap_path .= ".css";
 
   $ua_bootstrap_css_info['data'] = $ua_bootstrap_path;
+  variable_set(UA_BOOTSTRAP_LOCATION, $ua_bootstrap_path);
   $css[$ua_bootstrap_path] = $ua_bootstrap_css_info;
 
   if (!empty($excludes)) {
