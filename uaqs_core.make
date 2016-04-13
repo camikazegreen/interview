@@ -87,7 +87,7 @@ projects[title][patch][2040055] = http://drupal.org/files/issues/notice_undefine
 
 projects[defaultconfig][version] = 1.0-alpha11
 
-projects[features][version] = 2.8
+projects[features][version] = 2.9
 
 projects[migrate][version] = 2.8
 
