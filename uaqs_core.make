@@ -32,7 +32,7 @@ projects[jquery_update][version] = 2.7
 
 projects[libraries][version] = 2.2
 
-projects[pathauto][version] = 1.2
+projects[pathauto][version] = 1.3
 
 projects[token][version] = 1.6
 
@@ -87,7 +87,7 @@ projects[title][patch][2040055] = http://drupal.org/files/issues/notice_undefine
 
 projects[defaultconfig][version] = 1.0-alpha11
 
-projects[features][version] = 2.8
+projects[features][version] = 2.9
 
 projects[migrate][version] = 2.8
 
