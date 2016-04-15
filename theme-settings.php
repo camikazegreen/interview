@@ -96,7 +96,43 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
       '!jquery_update' => l(t('jQuery Update'), 'https://drupal.org/project/jquery_update'),
     )),
   );
-
+  // Tables.
+  $form['ua_settings']['tables'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Tables'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['ua_settings']['tables']['ua_zen_table_bordered'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Bordered table'),
+    '#default_value' => theme_get_setting('ua_zen_table_bordered', $theme),
+    '#description' => t('Add borders on all sides of the table and cells.'),
+  );
+  $form['ua_settings']['tables']['ua_zen_table_condensed'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Condensed table'),
+    '#default_value' => theme_get_setting('ua_zen_table_condensed', $theme),
+    '#description' => t('Make tables more compact by cutting cell padding in half.'),
+  );
+  $form['ua_settings']['tables']['ua_zen_table_hover'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Hover rows'),
+    '#default_value' => theme_get_setting('ua_zen_table_hover', $theme),
+    '#description' => t('Enable a hover state on table rows.'),
+  );
+  $form['ua_settings']['tables']['ua_zen_table_striped'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Striped rows'),
+    '#default_value' => theme_get_setting('ua_zen_table_striped', $theme),
+    '#description' => t('Add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>. <strong>Note:</strong> Striped tables are styled via the <code>:nth-child</code> CSS selector, which is not available in Internet Explorer 8.'),
+  );
+  $form['ua_settings']['tables']['ua_zen_table_responsive'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Responsive tables'),
+    '#default_value' => theme_get_setting('ua_zen_table_responsive', $theme),
+    '#description' => t('Makes tables responsive by wrapping them in <code>.table-responsive</code> to make them scroll horizontally up to small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in these tables.'),
+  );
   //
   // Breadcrumb settings.
   //
@@ -106,6 +142,22 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
   $form['breadcrumb']['breadcrumb_options']['zen_breadcrumb_trailing'] = array(
     '#access'        => FALSE
   );
+
+  // Pager
+  $form['pager'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Pagination'),
+    '#collapsible' => FALSE,
+    '#collapsed' => FALSE,
+  );
+
+  $form['pager']['ua_zen_pager_first_and_last'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show "First" and "Last" links in the pager'),
+    '#description' => t('Allow user to choose whether to display "First" and "Last" links on pagers.'),
+    '#default_value' => theme_get_setting('ua_zen_pager_first_and_last'),
+  );
+
 
   // Add secondary logo upload field to theme settings. Code source: mjharmon's
   // research on Drupal core & his own knowledge of Drupal internals and
@@ -133,6 +185,13 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     '#title' => t('Copyright notice'),
     '#description' => t('A copyright notice for this site. The value here will appear after a "Copyright YYYY" notice (where YYYY is the current year).'),
     '#default_value' => theme_get_setting('ua_copyright_notice'),
+  );
+
+  $form['ua_settings']['settings']['ua_zen_hide_front_title'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Hide title of front page node'),
+    '#description' => t('If this is checked, the title of the node being displayed on the front page will not be visible'),
+    '#default_value' => theme_get_setting('ua_zen_hide_front_title'),
   );
 
   $form['#validate'][] = 'ua_zen_settings_form_validate';

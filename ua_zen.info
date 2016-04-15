@@ -51,6 +51,51 @@ stylesheets[all][] = system.theme.css
 ; Then we add our own stylesheet.
 stylesheets[all][] = css/styles.css
 
+;;;;;;;;;;;;;;;;;;;;;
+;; Excludes
+;;;;;;;;;;;;;;;;;;;;;
+
+; JavaScript
+; --------------
+; exclude[js][] = 'modules/contextual/contextual.js'
+
+; CSS
+; --------------
+; Necessary module CSS.
+
+;exclude[css][] = 'modules/block/block.css'
+;exclude[css][] = 'modules/node/node.css'
+;exclude[css][] = 'modules/system/admin.css'
+;exclude[css][] = 'modules/system/system.css'
+;exclude[css][] = 'modules/system/system.admin.css'
+;exclude[css][] = 'modules/system/system.base.css'
+
+; Core CSS.
+;exclude[css][] = 'misc/vertical-tabs.css'
+;exclude[css][] = 'modules/aggregator/aggregator.css'
+;exclude[css][] = 'modules/book/book.css'
+;exclude[css][] = 'modules/comment/comment.css'
+;exclude[css][] = 'modules/dblog/dblog.css'
+;exclude[css][] = 'modules/file/file.css'
+;exclude[css][] = 'modules/filter/filter.css'
+;exclude[css][] = 'modules/forum/forum.css'
+;exclude[css][] = 'modules/help/help.css'
+;exclude[css][] = 'modules/menu/menu.css'
+;exclude[css][] = 'modules/openid/openid.css'
+;exclude[css][] = 'modules/poll/poll.css'
+;exclude[css][] = 'modules/search/search.css'
+;exclude[css][] = 'modules/statistics/statistics.css'
+;exclude[css][] = 'modules/syslog/syslog.css'
+;exclude[css][] = 'modules/system/maintenance.css'
+;exclude[css][] = 'modules/system/system.maintenance.css'
+;exclude[css][] = 'modules/system/system.menus.css'
+exclude[css][] = 'modules/system/system.messages.css'
+;exclude[css][] = 'modules/system/system.theme.css'
+;exclude[css][] = 'modules/taxonomy/taxonomy.css'
+;exclude[css][] = 'modules/tracker/tracker.css'
+;exclude[css][] = 'modules/update/update.css'
+;exclude[css][] = 'modules/user/user.css'
+
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
 ; element, such as .lt-ie9, .lt-ie8, .lt-ie7. More information on this
@@ -93,15 +138,12 @@ regions[sidebar_first]             = First sidebar
 regions[sidebar_second]            = Second sidebar
 regions[highlighted]               = Highlighted
 regions[content_top]               = Content top
-regions[full_width_content_top]    = Full width content top
 regions[content]                   = Content Body
 regions[content_2_col_1]           = Content 2-column stacked(1)
 regions[content_2_col_2]           = Content 2-column stacked(2)
 regions[content_3_col_1]           = Content 3-column stacked(1)
 regions[content_3_col_2]           = Content 3-column stacked(2)
 regions[content_3_col_3]           = Content 3-column stacked(3)
-regions[sidebar_first_top]         = First top sidebar
-regions[sidebar_second_top]        = Second top sidebar
 regions[full_width_content_bottom] = Full width content bottom
 regions[content_4_col_1]           = Content 4-column stacked(1)
 regions[content_4_col_2]           = Content 4-column stacked(2)
@@ -157,6 +199,19 @@ settings[ua_copyright_notice]      = 'The Arizona Board of Regents on behalf of 
 settings[ua_bootstrap_source]      = local
 settings[ua_bootstrap_cdn_version] = stable
 settings[ua_bootstrap_minified]    = 1
+settings[ua_zen_hide_front_title]  = 0
+
+; Pager
+; --------------
+settings[ua_zen_pager_first_and_last] = 1
+
+; Tables
+; --------------
+settings[ua_zen_table_bordered] = 0
+settings[ua_zen_table_condensed] = 0
+settings[ua_zen_table_hover] = 1
+settings[ua_zen_table_striped] = 1
+settings[ua_zen_table_responsive] = 1
 
 ; To make this sub-theme an admin theme with shortcut links next to titles,
 ; uncomment the line below.
@@ -166,6 +221,28 @@ settings[ua_bootstrap_minified]    = 1
 ; To add a Panels layout (which can also be used by Display Suite), uncomment
 ; the line below and see the documentation at: https://drupal.org/node/495654
 ;plugins[panels][layouts] = panels-layouts
+
+; breakpoints module default settings
+
+breakpoints[screen-xs-max] = (max-width: 767px)
+breakpoints[screen-sm-min] = (min-width: 768px)
+breakpoints[screen-sm-max] = (max-width: 991px)
+breakpoints[screen-md-min] = (min-width: 992px)
+breakpoints[screen-md-max] = (max-width: 1199px)
+breakpoints[screen-lg-min] = (min-width: 1200px)
+; Multipiers
+multipliers[screen-xs-max][] = 1.5x
+multipliers[screen-xs-max][] = 2x
+multipliers[screen-sm-min][] = 1.5x
+multipliers[screen-sm-min][] = 2x
+multipliers[screen-sm-max][] = 1.5x
+multipliers[screen-sm-max][] = 2x
+multipliers[screen-md-min][] = 1.5x
+multipliers[screen-md-min][] = 2x
+multipliers[screen-md-max][] = 1.5x
+multipliers[screen-md-max][] = 2x
+multipliers[screen-lg-min][] = 1.5x
+multipliers[screen-lg-min][] = 2x
 
 ; regionclass module default settings
 settings[regionclass][full_width_content_1][] = background-wrapper bg-triangles-fade bg-ologie-light-river
