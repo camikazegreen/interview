@@ -44,7 +44,7 @@ Of course, you can also read it all to just understand how it works better.
         ./uaqstest_drupal_install.sh  # Installs the distribution for you
         ./uaqstest_behat_mink.sh      # Configures Behat variables and runs the tests.
 
-* Once the `./uaqstest_behat_mink.sh` script has been run, you can just use the `bin/behat` command to run the tests again and again.
+* The `./uaqstest_behat_mink.sh` script runs the tests, so you only have to run that script again to run the tests again.
 
 ## Requirements ##
 
