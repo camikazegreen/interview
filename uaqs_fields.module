@@ -18,6 +18,19 @@ const UAQS_FULL_HTML = 'uaqs_full_html';
 const UAQS_TEXTUAL_CONTENT = 'uaqs_textual_content';
 const UAQS_UNCONSTRAINED = 'uaqs_unconstrained';
 
+function uaqs_fields_permission() {
+  return array(
+    'show format tips' => array(
+      'title' => t('Show text format tips'),
+      'description' => t('Show text format help and tips'),
+    ),
+    'show more format tips link' => array(
+      'title' => t('Show more text format tips link'),
+      'description' => t('Show more text format tips link'),
+    ),
+  );
+}
+
 /**
  * Defines the fields that need special default formats applied.
  *
