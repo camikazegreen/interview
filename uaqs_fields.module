@@ -18,17 +18,31 @@ const UAQS_FULL_HTML = 'uaqs_full_html';
 const UAQS_TEXTUAL_CONTENT = 'uaqs_textual_content';
 const UAQS_UNCONSTRAINED = 'uaqs_unconstrained';
 
+/**
+ * Implements of hook_perm().
+ */
 function uaqs_fields_permission() {
-  return array(
+  $entities = entity_get_info();
+
+  $perms = array(
     'show format tips' => array(
-      'title' => t('Show text format tips'),
-      'description' => t('Show text format help and tips'),
+      'title' => t('Show format tips'),
+      'description' => t('Toggle display of format description help.'),
     ),
     'show more format tips link' => array(
-      'title' => t('Show more text format tips link'),
-      'description' => t('Show more text format tips link'),
+      'title' => t('Show more format tips link'),
+      'description' => t('Toggle display of the "More information about text formats" link.'),
     ),
   );
+  foreach ($entities as $type => $info) {
+    if ($info['fieldable']) {
+      $perms['show format selection for ' . $type] = array(
+        'title' => t('Show format selection for @entitys', array('@entity' => $type)),
+      );
+    }
+  }
+
+  return $perms;
 }
 
 /**
