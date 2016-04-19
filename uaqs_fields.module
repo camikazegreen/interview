@@ -83,7 +83,7 @@ function uaqs_fields_filter_process_format($element) {
   $hide_tips      = !user_access('show format tips');
   $hide_tips_link = !user_access('show more format tips link');
   if ($hide_selection) {
-    $element['format']['format']['#access'] = FALSE;
+    $element['format']['format']['#type'] = 'hidden';
   }
   if ($hide_tips) {
     $element['format']['guidelines']['#access'] = FALSE;
