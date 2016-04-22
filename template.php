@@ -260,7 +260,7 @@ function ua_zen_preprocess_page(&$variables, $hook) {
   if ($variables['main_menu']) {
     $menu_name = variable_get('menu_main_links_source', 'main-menu');
     // If Superfish module is available, render primary nav as Superfish menu.
-    if (module_exists('uaqs_navigation') && module_exists('superfish')) {
+    if (theme_get_setting('ua_zen_main_menu_style') == 'superfish' && module_exists('uaqs_navigation') && module_exists('superfish')) {
       $variables['primary_nav'] = array(
         '#prefix' => '<div id="navbar">',
         '#suffix' => '</div>',
