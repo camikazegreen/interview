@@ -19,6 +19,33 @@ const UAQS_TEXTUAL_CONTENT = 'uaqs_textual_content';
 const UAQS_UNCONSTRAINED = 'uaqs_unconstrained';
 
 /**
+ * Implements of hook_perm().
+ */
+function uaqs_fields_permission() {
+  $entities = entity_get_info();
+
+  $perms = array(
+    'show format tips' => array(
+      'title' => t('Show format tips'),
+      'description' => t('Toggle display of format description help.'),
+    ),
+    'show more format tips link' => array(
+      'title' => t('Show more format tips link'),
+      'description' => t('Toggle display of the "More information about text formats" link.'),
+    ),
+  );
+  foreach ($entities as $type => $info) {
+    if ($info['fieldable']) {
+      $perms['show format selection for ' . $type] = array(
+        'title' => t('Show format selection for @entitys', array('@entity' => $type)),
+      );
+    }
+  }
+
+  return $perms;
+}
+
+/**
  * Defines the fields that need special default formats applied.
  *
  * Assume that the canonical format for any instances of these fields in any
@@ -83,7 +110,7 @@ function uaqs_fields_filter_process_format($element) {
   $hide_tips      = !user_access('show format tips');
   $hide_tips_link = !user_access('show more format tips link');
   if ($hide_selection) {
-    $element['format']['format']['#access'] = FALSE;
+    $element['format']['format']['#type'] = 'hidden';
   }
   if ($hide_tips) {
     $element['format']['guidelines']['#access'] = FALSE;
