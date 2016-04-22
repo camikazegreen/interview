@@ -258,10 +258,37 @@ function ua_zen_preprocess_page(&$variables, $hook) {
   // Primary nav.
   $variables['primary_nav'] = FALSE;
   if ($variables['main_menu']) {
-    // Build links.
-    $variables['primary_nav'] = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
-    // Provide default theme wrapper function.
-    $variables['primary_nav']['#theme_wrappers'] = array('menu_tree__primary');
+    $menu_name = variable_get('menu_main_links_source', 'main-menu');
+    // If Superfish module is available, render primary nav as Superfish menu.
+    if (module_exists('uaqs_navigation') && module_exists('superfish')) {
+      $variables['primary_nav'] = array(
+        '#prefix' => '<div id="navbar">',
+        '#suffix' => '</div>',
+        'superfish' => uaqs_navigation_sf_nav($menu_name),
+      );
+    }
+    else {
+      // Render the primary nav as a Bootstrap dropdown.
+      // TODO: Do this in a less hacky way?
+      $navbar_header_markup = '<div class="navbar-header">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="text">MAIN MENU</span>
+             </button>
+          </div>';
+      $navbar_header = array(
+        '#markup' => $navbar_header_markup,
+      );
+      $variables['primary_nav'] = array(
+        'navbar_header' => $navbar_header,
+        'navbar' => array(
+          '#prefix' => '<div id="navbar" class="navbar-collapse collapse">',
+          '#suffix' => '</div>',
+          'menu' => menu_tree($menu_name),
+        ),
+      );
+      $variables['primary_nav']['navbar']['menu']['#theme_wrappers'] = array('menu_tree__primary');
+    }
   }
   // Allow hiding of title of front page node
   if (theme_get_setting('ua_zen_hide_front_title') == 1 && drupal_is_front_page()){
