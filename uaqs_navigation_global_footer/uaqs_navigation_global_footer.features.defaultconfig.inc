@@ -1,15 +1,15 @@
 <?php
 /**
  * @file
- * uaqs_navigation.features.defaultconfig.inc
+ * uaqs_navigation_global_footer.features.defaultconfig.inc
  */
 
 /**
  * Implements hook_defaultconfig_features().
  */
-function uaqs_navigation_defaultconfig_features() {
+function uaqs_navigation_global_footer_defaultconfig_features() {
   return array(
-    'uaqs_navigation' => array(
+    'uaqs_navigation_global_footer' => array(
       'user_default_permissions' => 'user_default_permissions',
     ),
   );
@@ -18,7 +18,7 @@ function uaqs_navigation_defaultconfig_features() {
 /**
  * Implements hook_defaultconfig_user_default_permissions().
  */
-function uaqs_navigation_defaultconfig_user_default_permissions() {
+function uaqs_navigation_global_footer_defaultconfig_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: 'create any menu_bean bean'.
