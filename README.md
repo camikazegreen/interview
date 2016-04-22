@@ -22,22 +22,9 @@ If something isn't working, look at the instructions below this section for more
 Of course, you can also read it all to just understand how it works better.
 
 * Make sure you can run a Drupal site (MySQL, PHP, Apache/nginx) and have composer installed.
-* Set an environment variable for where Drupal should be:
-
-        export UAQSTEST_DRUPALROOT='/path/to/where/you/want/drupal/to/be'
-
-* Make sure you have your server configured to look there for your site.
-* Set an environment variable for the URL to your server host:
-
-        export UAQSTEST_BASEURL='http://quickstart.dev' # Change to your url
-
-* Set environment variables for your drupal mysql settings (for drupal installation) and the password you want the administrator for the drupal instance to use:
-
-        export UAQSTEST_DBNAME='drupal_mysql_database'
-        export UAQSTEST_DBUSER='drupal_mysql_username'
-        export UAQSTEST_DBPASS='drupal_mysql_password'
-        export UAQSTEST_USER1PASS='drupal_admin_password'
-
+* Copy the `environment.example` file to `environment`: `cp environment{.example,}`
+* Edit the variables in the new `environment` file to match your environment.
+* Source the file: `source environment`.
 * Run the setup scripts:
 
         ./uaqstest_drupal_download.sh # Downloads the distribution for you
