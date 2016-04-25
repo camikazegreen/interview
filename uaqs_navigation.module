@@ -32,6 +32,7 @@ function uaqs_navigation_sf_nav($menu_name) {
   }
 
   $sf_settings = uaqs_navigation_sf_default_settings();
+  $sf_settings['expanded'] = 1;
   $sf_settings['ulclass'] = 'nav navbar-nav';
   $delta = $menu_name . '-sf-nav';
   $sf_block_vars = array(
