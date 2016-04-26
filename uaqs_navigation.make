@@ -14,7 +14,10 @@ defaults[projects][subdir] = contrib
 ; Contrib modules
 ; ------------------------------------------------------------------------------
 
+projects[bean][version] = 1.9
+projects[menu_bean][version] = 1.0-beta2
 projects[menu_block][version] = 2.7
+projects[xautoload][version] = 5.6
 
 ; TODO: remove this after third release.
 projects[superfish][version] = 1.x-dev

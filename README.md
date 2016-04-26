@@ -21,3 +21,9 @@ When this module is used as part of a Drupal distribution (such as [UA Quickstar
 ### Libraries
 
 - [Superfish](https://github.com/mehrpadin/Superfish-for-Drupal/)
+
+### UAQS Submodule Dependencies
+
+Global Footer Menu Beans
+- [Menu Bean](https://www.drupal.org/project/menu_bean)
+- [xAutoload](https://www.drupal.org/project/xautoload)
