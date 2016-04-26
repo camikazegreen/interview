@@ -202,7 +202,7 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
   $form['ua_settings']['main_menu']['ua_zen_main_menu_style'] = array(
     '#type' => 'radios',
     '#options' => array(
-      'superfish' => t('Render the main menu element using Superfish.'),
+      'superfish' => t('Render the main menu element using Superfish (requires UAQS Navigation & Superfish modules).'),
       'bootstrap' => t('Render the main menu element using UA Bootstrap\'s Dropdown Navbar component.'),
     ),
     '#title' => t('Main menu style'),
