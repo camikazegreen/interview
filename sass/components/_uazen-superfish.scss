@@ -1,7 +1,13 @@
 #main_nav {
   ul.sf-horizontal {
-    li a.active {
-      background-color: #eef1f1;
+    li {
+      a.active {
+        background-color: #eef1f1;
+      }
+      ul li a.active {
+        color: #0c234b;
+        background-color: #fff;
+      }
     }
     /* Hover dropdown menus */
     li ul {

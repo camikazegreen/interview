@@ -748,6 +748,10 @@ tr.selected td {
 #main_nav ul.sf-horizontal li a.active {
   background-color: #eef1f1;
 }
+#main_nav ul.sf-horizontal li ul li a.active {
+  color: #0c234b;
+  background-color: #fff;
+}
 #main_nav ul.sf-horizontal li ul {
   padding: 20px 0 5px;
   background-color: rgba(12, 35, 75, 0.95);
