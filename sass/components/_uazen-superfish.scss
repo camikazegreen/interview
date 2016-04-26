@@ -96,8 +96,7 @@
     padding: 0.625rem 0;
     border-top: 1px solid #fff;
     li {
-      padding: 10px 0;
-      padding: 0 .625rem;
+      padding: 0;
       a {
         text-align: center;
         color: #fff;
@@ -105,8 +104,9 @@
         font-size: 1rem;
         padding: 13px 0;
         padding: 0.8125rem 0;
-        &:hover {
+        &:focus, &:hover {
           background: #395180;
+          text-decoration: none;
         }
         &.active {
           background-color: inherit;
@@ -118,9 +118,7 @@
         background: #000136;
         li {
           a {
-            font-weight: bold;
-            font-size: 13px;
-            font-size: 0.8125em;
+            font-weight: 500;
           }
         }
       }

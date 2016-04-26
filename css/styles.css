@@ -831,8 +831,7 @@ tr.selected td {
   border-top: 1px solid #fff;
 }
 #main_nav ul.menu.sf-accordion li {
-  padding: 10px 0;
-  padding: 0 .625rem;
+  padding: 0;
 }
 #main_nav ul.menu.sf-accordion li a {
   text-align: center;
@@ -842,8 +841,9 @@ tr.selected td {
   padding: 13px 0;
   padding: 0.8125rem 0;
 }
-#main_nav ul.menu.sf-accordion li a:hover {
+#main_nav ul.menu.sf-accordion li a:focus, #main_nav ul.menu.sf-accordion li a:hover {
   background: #395180;
+  text-decoration: none;
 }
 #main_nav ul.menu.sf-accordion li a.active {
   background-color: inherit;
@@ -854,9 +854,7 @@ tr.selected td {
   background: #000136;
 }
 #main_nav ul.menu.sf-accordion li ul li a {
-  font-weight: bold;
-  font-size: 13px;
-  font-size: 0.8125em;
+  font-weight: 500;
 }
 @media (max-width: 47.9em) {
   #main_nav {
