@@ -18,9 +18,4 @@ projects[bean][version] = 1.9
 projects[menu_bean][version] = 1.0-beta2
 projects[menu_block][version] = 2.7
 projects[xautoload][version] = 5.6
-
-; TODO: remove this after third release.
-projects[superfish][version] = 1.x-dev
-projects[superfish][download][type] = git
-projects[superfish][download][revision] = fa3d7c6
-projects[superfish][download][branch] = 7.x-1.x
+projects[superfish][version] = 2.0
