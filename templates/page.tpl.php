@@ -39,20 +39,12 @@
     <?php if (!empty($primary_nav) || !empty($page['navigation'])): ?>
     <div class="container">
       <nav id="main_nav" class="navbar navbar-default navbar-static-top">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="text">MAIN MENU</span>
-            </button>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <?php if (!empty($primary_nav)): ?>
-              <?php print render($primary_nav); ?>
-            <?php endif; ?>
-            <?php if (!empty($page['navigation'])): ?>
-              <?php print render($page['navigation']); ?>
-            <?php endif; ?>
-          </div> <!-- /.nav-collapse-->
+        <?php if (!empty($primary_nav)): ?>
+          <?php print render($primary_nav); ?>
+        <?php endif; ?>
+        <?php if (!empty($page['navigation'])): ?>
+          <?php print render($page['navigation']); ?>
+        <?php endif; ?>
       </nav> <!-- /#main_nav-->
     </div> <!-- /.container -->
     <?php endif; // End primary_nav?>
@@ -192,4 +184,3 @@
 </footer>
 
 <?php print render($page['bottom']); ?>
-

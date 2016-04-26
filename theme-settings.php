@@ -194,6 +194,22 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     '#default_value' => theme_get_setting('ua_zen_hide_front_title'),
   );
 
+  $form['ua_settings']['main_menu'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Main Menu Settings'),
+  );
+
+  $form['ua_settings']['main_menu']['ua_zen_main_menu_style'] = array(
+    '#type' => 'radios',
+    '#options' => array(
+      'superfish' => t('Render the main menu element using Superfish (requires UAQS Navigation & Superfish modules).'),
+      'bootstrap' => t('Render the main menu element using UA Bootstrap\'s Dropdown Navbar component.'),
+    ),
+    '#title' => t('Main menu style'),
+    '#default_value' => theme_get_setting('ua_zen_main_menu_style'),
+    '#prefix' =>  t('UA Zen can render the \'Main menu\' page element in a number of different styles.  The UA Bootstrap Dropdown Navbar component style will be used as the fallback option if the dependencies for the other styles are missing.'),
+  );
+
   $form['#validate'][] = 'ua_zen_settings_form_validate';
   $form['#submit'][] = 'ua_zen_settings_form_submit';
 
