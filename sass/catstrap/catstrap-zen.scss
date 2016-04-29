@@ -112,9 +112,9 @@ html {
 
 		#block-search-form {
 			padding-top: 16px;
-			padding-top: 1rem; 
-			float: right; 
-			clear: right; 
+			padding-top: 1rem;
+			float: right;
+			clear: right;
 		}
 
 		#utility_links {
@@ -197,86 +197,6 @@ html {
 }
 
 
-/* FOOTER */
-
-footer#footer_site {
-	.footer-logo { //specific to zen layout structure
-		margin: 0 auto 40px;
-		margin: 0 auto 2.5rem;
-		max-width: 400px;
-		img { max-height:100px;	}
-	}
-	> .container { 
-		border-bottom: 1px solid #8E8C85;
-		position: relative;
-		padding: 0 0 16px;
-		padding: 0 0 1rem;
-	}
-	ul.menu {
-	  display: block;
-	  margin: 0;
-	  padding: 16px 0 0;
-	  padding: 1rem 0 0;
-	  text-align: center;
-	  float: none;
-	  	&:after {
-	  		content: "\0020";
-	  		display: block;
-	  		clear: both;
-	  	}
-		> li {
-		  display: inline-block;
-		  list-style: none;
-		  padding: 0 12px;
-		  padding: 0 0.75rem;
-		  border-right: 1px solid #a8a69d;
-		}
-		> li.last {
-		  border-right: 0;
-		}
-	}
-
-	#footer_sub .container {
-		padding-top: 8px;
-		padding-top: 0.5rem;
-		> * { //reduce font size without affecting container width
-			font-size: 15px;
-  			font-size: 0.96rem; // 15.36/16px
-		}
-		p { text-align: center; }
-	}
-}
-
-@media (min-width: 48em) {
-	footer#footer_site {
-		.footer-content {
-			clear: both;
-		}
-	}
-}
-
-@media (min-width: 60em) {
-  footer#footer_site {
-  	ul.menu { float: right; }
-  	.footer-logo { //specific to zen layout structure
-	    float: left;
-	    margin: 0 16px 16px 0;
-	    margin: 0 1rem 1rem 0;
-  	}
-  	.footer-content { 
-  		clear: none;
-  		text-align: right; //makes column menus go to the right
-  	} 
-  }
-  #footer_sub .container p { text-align: left; }
-}
-
-@media (min-width:60em) and (max-width: 75em) {
-	footer#footer_site .footer-logo {
-		max-width: 300px;
-	}
-}
-
 /* SIDE MENUS */
 
 @media screen and (min-width: 60em) {
@@ -329,14 +249,13 @@ footer#footer_site {
 
 /* DRUPAL UI COMPONENTS */
 div.contextual-links-wrapper,
-#main div.contextual-links-wrapper,
-footer#footer_site div.contextual-links-wrapper {
+#main div.contextual-links-wrapper {
 	ul.contextual-links {
 	display: none; /*resets display for contextual links js behavior*/
 	float: none;
 	}
 	li,
-	a:not(.contextual-links-trigger) { 
+	a:not(.contextual-links-trigger) {
 		border: 0 none;
 		float: none;
 		display: inherit;

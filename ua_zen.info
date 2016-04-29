@@ -199,6 +199,20 @@ settings[ua_copyright_notice]      = 'The Arizona Board of Regents on behalf of 
 settings[ua_bootstrap_source]      = local
 settings[ua_bootstrap_cdn_version] = stable
 settings[ua_bootstrap_minified]    = 1
+settings[ua_zen_hide_front_title]  = 0
+settings[ua_zen_main_menu_style]   = superfish
+
+; Pager
+; --------------
+settings[ua_zen_pager_first_and_last] = 1
+
+; Tables
+; --------------
+settings[ua_zen_table_bordered] = 0
+settings[ua_zen_table_condensed] = 0
+settings[ua_zen_table_hover] = 1
+settings[ua_zen_table_striped] = 1
+settings[ua_zen_table_responsive] = 1
 
 ; To make this sub-theme an admin theme with shortcut links next to titles,
 ; uncomment the line below.
@@ -208,6 +222,28 @@ settings[ua_bootstrap_minified]    = 1
 ; To add a Panels layout (which can also be used by Display Suite), uncomment
 ; the line below and see the documentation at: https://drupal.org/node/495654
 ;plugins[panels][layouts] = panels-layouts
+
+; breakpoints module default settings
+
+breakpoints[screen-xs-max] = (max-width: 767px)
+breakpoints[screen-sm-min] = (min-width: 768px)
+breakpoints[screen-sm-max] = (max-width: 991px)
+breakpoints[screen-md-min] = (min-width: 992px)
+breakpoints[screen-md-max] = (max-width: 1199px)
+breakpoints[screen-lg-min] = (min-width: 1200px)
+; Multipiers
+multipliers[screen-xs-max][] = 1.5x
+multipliers[screen-xs-max][] = 2x
+multipliers[screen-sm-min][] = 1.5x
+multipliers[screen-sm-min][] = 2x
+multipliers[screen-sm-max][] = 1.5x
+multipliers[screen-sm-max][] = 2x
+multipliers[screen-md-min][] = 1.5x
+multipliers[screen-md-min][] = 2x
+multipliers[screen-md-max][] = 1.5x
+multipliers[screen-md-max][] = 2x
+multipliers[screen-lg-min][] = 1.5x
+multipliers[screen-lg-min][] = 2x
 
 ; regionclass module default settings
 settings[regionclass][full_width_content_1][] = background-wrapper bg-triangles-fade bg-ologie-light-river

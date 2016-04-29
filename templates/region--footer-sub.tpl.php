@@ -8,10 +8,19 @@
  */
 ?>
 <?php if ($copyright_notice || $content): ?>
-<div id="footer_sub" class="<?php print $classes; ?> page-row-padding-top page-row-padding-bottom">
+<div id="footer_sub" class="<?php print $classes; ?>">
   	<div class="container">
-    	<?php print $content; ?>
-	    <?php print $copyright_notice ?>
+        <div class="row">
+    	    <?php print $content; ?>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+            <?php if ($content): ?>
+                <hr>
+            <?php endif; ?>
+            <?php print $copyright_notice ?>
+            </div>
+        </div>
   	</div>
 </div>
 <?php endif ?>
