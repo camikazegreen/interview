@@ -73,7 +73,7 @@ projects[uaqs_navigation][type] = module
 projects[uaqs_navigation][subdir] = custom
 projects[uaqs_navigation][download][type] = git
 projects[uaqs_navigation][download][branch] = 7.x-1.x
-projects[uaqs_navigation][download][revision] = 82e37c6
+projects[uaqs_navigation][download][revision] = a7f162f
 projects[uaqs_navigation][download][url] = https://bitbucket.org/ua_drupal/uaqs_navigation.git
 
 projects[uaqs_news][type] = module
