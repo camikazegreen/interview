@@ -31,7 +31,7 @@ projects[uaqs_core][type] = module
 projects[uaqs_core][subdir] = custom
 projects[uaqs_core][download][type] = git
 projects[uaqs_core][download][branch] = 7.x-1.x
-projects[uaqs_core][download][revision] = 43d1c56
+projects[uaqs_core][download][revision] = c7a575a
 projects[uaqs_core][download][url] = https://bitbucket.org/ua_drupal/uaqs_core.git
 
 projects[uaqs_demo][type] = module
@@ -52,7 +52,7 @@ projects[uaqs_fields][type] = module
 projects[uaqs_fields][subdir] = custom
 projects[uaqs_fields][download][type] = git
 projects[uaqs_fields][download][branch] = 7.x-1.x
-projects[uaqs_fields][download][revision] = decb8a5
+projects[uaqs_fields][download][revision] = 76468ce
 projects[uaqs_fields][download][url] = https://bitbucket.org/ua_drupal/uaqs_fields.git
 
 projects[uaqs_featured_content][type] = module
@@ -73,7 +73,7 @@ projects[uaqs_navigation][type] = module
 projects[uaqs_navigation][subdir] = custom
 projects[uaqs_navigation][download][type] = git
 projects[uaqs_navigation][download][branch] = 7.x-1.x
-projects[uaqs_navigation][download][revision] = 82e37c6
+projects[uaqs_navigation][download][revision] = a7f162f
 projects[uaqs_navigation][download][url] = https://bitbucket.org/ua_drupal/uaqs_navigation.git
 
 projects[uaqs_news][type] = module
@@ -127,5 +127,5 @@ projects[ua_zen][type] = theme
 projects[ua_zen][directory_name] = ua_zen
 projects[ua_zen][download][type] = git
 projects[ua_zen][download][branch] = 7.x-1.x
-projects[ua_zen][download][revision] = 36a0363
+projects[ua_zen][download][revision] = f42a327
 projects[ua_zen][download][url] = https://bitbucket.org/ua_drupal/ua_zen.git
