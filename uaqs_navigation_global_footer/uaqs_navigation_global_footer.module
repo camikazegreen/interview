@@ -1,7 +1,12 @@
 <?php
 /**
  * @file
- * uaqs_demo.module
+ * Code for the UAQS Navigation feature.
+ */
+
+/**
+ * @file
+ * uaqs_navigation_global_footer.module
  */
 drupal_add_css('//brand.arizona.edu/sites/all/themes/brand/ua-brand-icons/ua-brand-icons.css', array(
         'type' => 'external',
