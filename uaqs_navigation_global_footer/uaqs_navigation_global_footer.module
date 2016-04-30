@@ -98,8 +98,7 @@ function uaqs_navigation_global_footer_preprocess_link(array &$variables) {
           break;
       case 'http://directory.arizona.edu/phonebook':
           $variables['options']['html'] = TRUE;
-          $variables['text'] = '<i class="ua-brand-directory"></i>' .            $variables['text'];
-;
+          $variables['text'] = '<i class="ua-brand-directory"></i>' .    $variables['text'];
           break;
       default:
           $variables['text'];
