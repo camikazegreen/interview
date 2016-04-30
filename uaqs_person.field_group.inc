@@ -117,8 +117,8 @@ function uaqs_person_field_group_info() {
     'label' => 'Middle Column',
     'weight' => '1',
     'children' => array(
-      0 => 'field_uaqs_titles',
-      1 => 'title_field',
+      0 => 'title_field',
+      1 => 'field_uaqs_titles',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -293,38 +293,6 @@ function uaqs_person_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_row|node|uaqs_person|teaser';
-  $field_group->group_name = 'group_row';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'uaqs_person';
-  $field_group->mode = 'teaser';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Row',
-    'weight' => '3',
-    'children' => array(
-      0 => 'group_column_left',
-      1 => 'group_column_middle',
-      2 => 'group_column_right',
-    ),
-    'format_type' => 'html-element',
-    'format_settings' => array(
-      'label' => 'Row',
-      'instance_settings' => array(
-        'id' => '',
-        'classes' => 'row border-separator',
-        'element' => 'div',
-        'show_label' => '0',
-        'label_element' => '',
-        'attributes' => '',
-      ),
-    ),
-  );
-  $field_groups['group_row|node|uaqs_person|teaser'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_row_one|node|uaqs_person|default';
   $field_group->group_name = 'group_row_one';
   $field_group->entity_type = 'node';
@@ -383,10 +351,43 @@ function uaqs_person_field_group_info() {
   );
   $field_groups['group_row_two|node|uaqs_person|default'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_row|node|uaqs_person|teaser';
+  $field_group->group_name = 'group_row';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_person';
+  $field_group->mode = 'teaser';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Row',
+    'weight' => '3',
+    'children' => array(
+      0 => 'group_column_left',
+      1 => 'group_column_middle',
+      2 => 'group_column_right',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Row',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'row border-separator',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_row|node|uaqs_person|teaser'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Card');
   t('Card Block');
+  t('Column');
   t('Heading');
   t('Left Column');
   t('Middle Column');

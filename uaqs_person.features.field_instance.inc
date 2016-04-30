@@ -336,15 +336,13 @@ function uaqs_person_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'title',
+        'module' => 'telephone',
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => '',
+          'title' => '',
         ),
-        'type' => 'title_linked',
+        'type' => 'telephone_link',
         'weight' => 7,
       ),
       'uaqs_card' => array(
@@ -421,7 +419,7 @@ function uaqs_person_field_default_field_instances() {
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'image_link' => 'content',
-          'image_style' => 'uaqs_entry_detail',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
         'weight' => 0,
