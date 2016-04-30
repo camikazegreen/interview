@@ -51,9 +51,9 @@ function uaqs_navigation_sf_nav($menu_name) {
   );
   $sf_css = $sf_js = $sf_plugins = array();
 
-  if (superfish_library('javascript', 'jquery.easing.js', 'check')) {
-    $sf_js = array_merge($sf_js, superfish_library('javascript', 'easing', 'add'));
-  }
+//  if (superfish_library('javascript', 'jquery.easing.js', 'check')) {
+//    $sf_js = array_merge($sf_js, superfish_library('javascript', 'easing', 'add'));
+//  }
   if (superfish_library('javascript', 'jquery.hoverIntent.minified.js', 'check')) {
     $sf_js = array_merge($sf_js, superfish_library('javascript', 'hoverIntent', 'add'));
   }
