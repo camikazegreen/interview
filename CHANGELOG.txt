@@ -1,3 +1,30 @@
+7.x-1.0-alpha4, 2016-03-01
+------------------------------
+- Merged in awochna/uaqs_featured_content/UADIGITAL-416 (pull request #6).
+- Add photo and call to action to draggable view.
+- Add draggableviews as a dependency.
+- UADIGITAL-554: Carousel JS shouldn't be loaded on every node page.
+- Merged in UADIGITAL-416 (pull request #4).
+- UADIGITAL-416: Enabling draggableviews by default and updating README.
+- UADIGITAL-416: Merged in awochna/uaqs_featured_content/UADIGITAL-416 (pull request #2) Create an easy ordering view for content managers.
+- Found more instances of 'slide' and changed them.
+- Ensure that carousel sorting references the correct view name.
+- Incorporate feedback into reordering carousel feature.
+- UADIGITAL-535.
+- Merged in trackleft/uaqs_featured_content/UADIGITAL-535 (pull request #3).
+- Create an easy ordering view for content managers.
+- Merged in mmunro-ltrr/uaqs_featured_content/UADIGITAL-523 (pull request #1).
+- Hide the UAQS label in content type names and revise the descriptions.
+- Change more occurances of the text UA to UAQS.
+- Fixing with classes Luckily this is backwards compatible.
+- Rename UA to UAQS in the file contents.
+- Merged in awochna/ua_featured_content/UADIGITAL-412 (pull request #27).
+- Add a minimum size to carousel images of 800 x 500.
+- Merged ua_drupal/ua_featured_content into 7.x-1.x.
+- Merged in UADIGITAL-380 (pull request #26).
+- UADIGITAL-380: Removing Image URL Formatter from .make file.
+- Back to dev.
+
 7.x-1.0-alpha3, 2015-11-13
 ------------------------------
 - Merged in UADIGITAL-347 (pull request #25).
