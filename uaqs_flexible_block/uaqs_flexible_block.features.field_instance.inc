@@ -16,7 +16,7 @@ function uaqs_flexible_block_field_default_field_instances() {
     'bundle' => 'uaqs_flexible_block',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Content',
+    'description' => 'Content using the paragraphs module.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -37,15 +37,17 @@ function uaqs_flexible_block_field_default_field_instances() {
     'settings' => array(
       'add_mode' => 'button',
       'allowed_bundles' => array(
-        'uaqs_card_deck' => 'uaqs_card_deck',
-        'uaqs_column_image' => 'uaqs_column_image',
-        'uaqs_extra_info' => 'uaqs_extra_info',
-        'uaqs_file_download' => 'uaqs_file_download',
-        'uaqs_full_width_bg_wrapper' => 'uaqs_full_width_bg_wrapper',
-        'uaqs_headed_text' => 'uaqs_headed_text',
-        'uaqs_plain_text' => 'uaqs_plain_text',
+        'uams_media' => -1,
+        'uaqs_card_deck' => -1,
+        'uaqs_column_image' => -1,
+        'uaqs_extra_info' => -1,
+        'uaqs_file_download' => -1,
+        'uaqs_full_width_bg_wrapper' => -1,
+        'uaqs_headed_text' => -1,
+        'uaqs_plain_text' => -1,
       ),
       'bundle_weights' => array(
+        'uams_media' => 9,
         'uaqs_card_deck' => 1,
         'uaqs_column_image' => 2,
         'uaqs_extra_info' => 3,
@@ -116,6 +118,7 @@ function uaqs_flexible_block_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Block title');
   t('Content');
+  t('Content using the paragraphs module.');
   t('Title');
 
   return $field_instances;
