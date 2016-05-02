@@ -68,4 +68,3 @@ features[filter][] = uaqs_full_html
 features[filter][] = uaqs_textual_content
 features[filter][] = uaqs_unconstrained
 project path = profiles/ua_quickstart/modules/custom
-version = 7.x-1.0-alpha4
