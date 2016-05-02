@@ -11,7 +11,6 @@ function uaqs_person_defaultconfig_features() {
   return array(
     'uaqs_person' => array(
       'field_default_fields' => 'field_default_fields',
-      'field_group_info' => 'field_group_info',
       'strongarm' => 'strongarm',
     ),
   );
@@ -70,6 +69,19 @@ function uaqs_person_defaultconfig_field_default_fields() {
           ),
           'type' => 'title_linked',
           'weight' => 0,
+        ),
+        'full' => array(
+          'label' => 'hidden',
+          'module' => 'title',
+          'settings' => array(
+            'field_multiple_limit' => -1,
+            'field_multiple_limit_offset' => 0,
+            'title_class' => 'margin-zero-top margin-zero-bottom',
+            'title_link' => '',
+            'title_style' => 'h2',
+          ),
+          'type' => 'title_linked',
+          'weight' => 1,
         ),
         'teaser' => array(
           'label' => 'hidden',
