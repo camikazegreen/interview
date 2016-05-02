@@ -18,6 +18,12 @@ projects[ua_cas][download][type] = git
 projects[ua_cas][download][tag] = 7.x-1.0-alpha3
 projects[ua_cas][download][url] = https://bitbucket.org/ua_drupal/ua_cas.git
 
+projects[uaqs_content_chunks][type] = module
+projects[uaqs_content_chunks][subdir] = custom
+projects[uaqs_content_chunks][download][type] = git
+projects[uaqs_content_chunks][download][tag] = 7.x-1.0-alpha0
+projects[uaqs_content_chunks][download][url] = https://bitbucket.org/ua_drupal/uaqs_content_chunks.git
+
 projects[uaqs_core][type] = module
 projects[uaqs_core][subdir] = custom
 projects[uaqs_core][download][type] = git
@@ -41,6 +47,12 @@ projects[uaqs_featured_content][subdir] = custom
 projects[uaqs_featured_content][download][type] = git
 projects[uaqs_featured_content][download][tag] = 7.x-1.0-alpha3
 projects[uaqs_featured_content][download][url] = https://bitbucket.org/ua_drupal/uaqs_featured_content.git
+
+projects[uaqs_fields][type] = module
+projects[uaqs_fields][subdir] = custom
+projects[uaqs_fields][download][type] = git
+projects[uaqs_fields][download][tag] = 7.x-1.0-alpha0
+projects[uaqs_fields][download][url] = https://bitbucket.org/ua_drupal/uaqs_fields.git
 
 projects[ua_google_tag][type] = module
 projects[ua_google_tag][subdir] = custom
