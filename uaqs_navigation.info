@@ -83,4 +83,3 @@ features[defaultconfig][] = strongarm:superfish_zebra_1
 features[features_api][] = api:2
 features[variable][] = menu_secondary_links_source
 
-version = 7.x-1.0-alpha4
