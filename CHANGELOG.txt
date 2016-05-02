@@ -1,3 +1,7 @@
+7.x-1.0-alpha5, 2016-05-02
+------------------------------
+- Back to dev.
+
 7.x-1.0-alpha4, 2016-04-29
 ------------------------------
 - Merged in barrettbaffert/ua_zen/UADIGITAL-682-update-uabootstrap-referen (pull request #115).
