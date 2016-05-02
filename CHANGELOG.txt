@@ -1,3 +1,19 @@
+7.x-1.0-alpha4, 2016-04-11
+------------------------------
+- Merged in trackleft/uaqs_publication/UADIGITAL-580-add-pathauto-module-defaul (pull request #4).
+- UADIGITAL-580 add default path auto settings for publication content type.
+- Merged ua_drupal/uaqs_publication into 7.x-1.x.
+- Merged in trackleft/uaqs_publication/UADIGITAL-535 (pull request #3).
+- Adding the s.
+- Merged in mmunro-ltrr/uaqs_publication/UADIGITAL-523 (pull request #2).
+- Hide the UAQS label in content type names and revise the descriptions.
+- Merged in trackleft/uaqs_publication-tmp (pull request #1).
+- Prefixing taxonomy.
+- Changing research categories to research areas.
+- Shorten a field name that was too long, correct a comment.
+- Rename UA to UAQS in the file contents.
+- Back to dev.
+
 7.x-1.0-alpha3, 2015-10-16
 ------------------------------
 - Back to dev.
