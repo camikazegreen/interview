@@ -1,3 +1,7 @@
+7.x-1.0-alpha5, 2016-05-02
+------------------------------
+- Back to dev.
+
 7.x-1.0-alpha4, 2016-04-11
 ------------------------------
 - Merged in trackleft/uaqs_page/UADIGITAL-580-add-pathauto-module-defaul (pull request #2).
