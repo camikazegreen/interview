@@ -13,7 +13,6 @@ dependencies[] = strongarm
 dependencies[] = telephone
 dependencies[] = text
 dependencies[] = title
-dependencies[] = uaqs_featured_content
 dependencies[] = uaqs_fields
 features[bean_type][] = uaqs_captioned_image
 features[bean_type][] = uaqs_card
