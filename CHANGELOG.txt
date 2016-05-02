@@ -1,3 +1,43 @@
+UAQS Demo Content 7.x-1.0-alpha4, 2016-04-14
+------------------------------------------------
+- Merged in mmunro-ltrr/uaqs_demo/UADIGITAL-672 (pull request #16).
+- Add Pathauto support to the UAQS Page demo migration.
+- UADIGITAL-625: Clean out obsolete field formatting code for Paragraphs and Beans.
+- Catch up with the UADIGITAL-517 changes elsewhere (use the Telephone module).
+- Merged in mmunro-ltrr/uaqs_demo/UADIGITAL-402 (pull request #12).
+- Merged in mmunro-ltrr/uaqs_demo/UADIGITAL-568 (pull request #5).
+- Switch to the new common text area field, rename the formats.
+- Make Migrate log message suppression conditional on the verbose flag.
+- Merged in trackleft/uaqs_demo/UADIGITAL-598-add-paragraphs-to-news-to- (pull request #11).
+- Moving uaqsdemonewscontacts after paragraphs migrations.
+- Changing order of listed migrations.
+- Adding file attachment class and import content.
+- UADIGITAL-598 Replacing link and photos with paragraphs field.
+- Merged ua_drupal/uaqs_demo into 7.x-1.x.
+- Merged in UADIGITAL-546 (pull request #7).
+- UADIGITAL-546: Adding News menu link to demo content.
+- UAMS-192: Updating paragraphs demo content field names.
+- UADIGITAL-565: Fixing invalid JSON syntax.
+- UADIGITAL-590: Replacing field_uaqs_more_info references with field_uaqs_link.
+- Merged in trackleft/uaqs_demo/UADIGITAL-535 (pull request #4).
+- UADIGITAL-535.
+- Merged in mmunro-ltrr/uaqs_demo/UADIGITAL-531 (pull request #3).
+- Fix uaqs_zen typo back to ua_zen.
+- Merged in UADIGITAL-525 (pull request #2).
+- Fixing typo.
+- UADIGITAL-525: Renaming base migration classes and making import base path setting injectable.
+- UADIGITAL-525: Moving base migration classes into uaqs_core.
+- Fixing warning: 'uaqsdemocard.json is not a JSON file containing an array of objects'.
+- Merged in trackleft/uaqs_demo-tmp/prefix-taxonomy-with-uaqs (pull request #1).
+- Prefix research areas.
+- (Chris Green) add demo content for the Card Bean block.
+- Add back the overlooked .gitignore file.
+- UADIGITAL-476: replace the text UA by UAQS in the file contents.
+- Merged in mmunro-ltrr/ua_demo/UADIGITAL-281 (pull request #18).
+- Fix code formatting and commenting cosmetics.
+- Set up the migrations to demonstrate a UA Flexible Page and its Paragraphs-based content.
+- Back to dev.
+
 UA Demo Content 7.x-1.0-alpha3, 2015-11-13
 ----------------------------------------------
 - Merged in mmunro-ltrr/ua_demo/UADIGITAL-384 (pull request #17).
