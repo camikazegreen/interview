@@ -63,3 +63,4 @@ dependencies[] = uaqs_program
 ; These will be enabled by the install profile but can still be disabled.
 ; -----------------------------------------------------------------------
 dependencies[] = views_ui
+version = 7.x-1.0-alpha4
