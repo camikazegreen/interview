@@ -130,7 +130,7 @@ for r in $UAQSPROJECTS ; do
   printf "Updating $r references in UA QuickStart...\n"
   export UAQSNEWHASH=`git rev-parse --short HEAD`
   # Update project tag reference in distro's drupal.org-release.make file.
-  if [ "$UAQSOLDREF" == "$1" ]; then
+  if git rev-parse "$1" >/dev/null 2>&1 ; then
     # If old tag exists, replace with new tag.
     sed -i '' "/$r/s/$1/$UAQSNEWTAG/" ../../drupal-org-release.make
   else
