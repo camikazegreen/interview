@@ -12,4 +12,3 @@ features[defaultconfig][] = strongarm:jquery_update_compression_type
 features[defaultconfig][] = strongarm:jquery_update_jquery_cdn
 features[features_api][] = api:2
 files[] = uaqs_core.migrate.inc
-version = 7.x-1.0-alpha5
