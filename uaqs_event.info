@@ -52,4 +52,3 @@ features[variable][] = node_options_uaqs_event
 features[variable][] = node_preview_uaqs_event
 features[variable][] = node_submitted_uaqs_event
 features[views_view][] = uaqs_events
-version = 7.x-1.0-alpha5
