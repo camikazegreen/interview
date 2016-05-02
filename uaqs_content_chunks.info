@@ -95,3 +95,4 @@ files[] = templates/paragraphs-item--uaqs_column_image.tpl.php
 files[] = templates/paragraphs-item--uaqs_file_download.tpl.php
 files[] = templates/paragraphs-item--uaqs_headed_text.tpl.php
 files[] = templates/paragraphs-item--uaqs_plain_text.tpl.php
+version = 7.x-1.0-alpha4
