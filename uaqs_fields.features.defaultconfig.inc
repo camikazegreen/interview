@@ -11,6 +11,7 @@ function uaqs_fields_defaultconfig_features() {
   return array(
     'uaqs_fields' => array(
       'strongarm' => 'strongarm',
+      'user_default_permissions' => 'user_default_permissions',
     ),
   );
 }
