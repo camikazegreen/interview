@@ -57,33 +57,6 @@ function uaqs_flexible_block_defaultconfig_strongarm() {
 function uaqs_flexible_block_defaultconfig_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: 'create any uaqs_flexible_block bean'.
-  $permissions['create any uaqs_flexible_block bean'] = array(
-    'name' => 'create any uaqs_flexible_block bean',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'bean',
-  );
-
-  // Exported permission: 'delete any uaqs_flexible_block bean'.
-  $permissions['delete any uaqs_flexible_block bean'] = array(
-    'name' => 'delete any uaqs_flexible_block bean',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'bean',
-  );
-
-  // Exported permission: 'edit any uaqs_flexible_block bean'.
-  $permissions['edit any uaqs_flexible_block bean'] = array(
-    'name' => 'edit any uaqs_flexible_block bean',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'bean',
-  );
-
   // Exported permission: 'view any uaqs_flexible_block bean'.
   $permissions['view any uaqs_flexible_block bean'] = array(
     'name' => 'view any uaqs_flexible_block bean',
