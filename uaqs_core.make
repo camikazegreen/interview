@@ -24,7 +24,7 @@ projects[draggableviews][version] = 2.1
 
 projects[elements][version] = 1.4
 
-projects[entity][version] = 1.6
+projects[entity][version] = 1.7
 
 projects[html5_tools][version] = 1.3
 
@@ -32,7 +32,7 @@ projects[jquery_update][version] = 2.7
 
 projects[libraries][version] = 2.2
 
-projects[pathauto][version] = 1.2
+projects[pathauto][version] = 1.3
 
 projects[token][version] = 1.6
 
@@ -73,12 +73,7 @@ projects[image_class][download][revision] = a4baf33
 projects[image_class][download][branch] = 7.x-1.x
 
 projects[link][version] = 1.4
-
-projects[title][version] = 1.x-dev
-projects[title][download][type] = git
-projects[title][download][revision] = d6f2000
-projects[title][download][branch] = 7.x-1.x
-projects[title][patch][2040055] = http://drupal.org/files/issues/notice_undefined-2040055-17.patch
+projects[title][version] = 1.0-alpha8
 
 
 ; ------------------------------------------------------------------------------
@@ -87,7 +82,7 @@ projects[title][patch][2040055] = http://drupal.org/files/issues/notice_undefine
 
 projects[defaultconfig][version] = 1.0-alpha11
 
-projects[features][version] = 2.7
+projects[features][version] = 2.10
 
 projects[migrate][version] = 2.8
 
