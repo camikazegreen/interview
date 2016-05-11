@@ -10,7 +10,7 @@
  *
  * The field contents come from a JSON file.
  */
-class UaqsNavigationGlobalFooterBeanMigration extends UaqsBeanMigration {
+class UaqsNavigationGlobalFooterBeanMigration extends UaqsPlacedBeanMigration {
 
   /**
    * Constructor.
@@ -19,7 +19,7 @@ class UaqsNavigationGlobalFooterBeanMigration extends UaqsBeanMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'menu_bean',
+    parent::__construct($arguments, 'menu_bean', 'ua_zen', 'content', BLOCK_VISIBILITY_LISTED, '*', 1,
       t('Make demonstration UAQS Navigation Global Footer content from pre-defined data.'));
 
     // Documented lists of source data fields.
@@ -50,17 +50,6 @@ class UaqsNavigationGlobalFooterBeanMigration extends UaqsBeanMigration {
   public function prepareRow($row) {
     $row->data = (array) $row->data;
     return TRUE;
-  }
-
-  public function complete($entity, stdClass $row) {
-
-   $bean_block_delta = db_query("SELECT delta FROM {bean} WHERE label = :label AND type = :type", array(':label' => $entity->label, ':type' => $entity->type))->fetchObject();
-   db_update('block')
-     ->fields(array('region' => $row->region, 'status' => 1, 'visibility' => $row->visibility, 'pages' => $row->pages, 'weight' => $row->weight))
-     ->condition('module', 'bean')
-     ->condition('delta', $bean_block_delta, 'IN')
-     ->condition('theme', 'ua_zen')
-     ->execute();
   }
 
 
