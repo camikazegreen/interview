@@ -13,7 +13,7 @@
  *
  * The field contents come from a JSON file.
  */
-class UaqsDemoCardMigration extends UaqsBeanMigration {
+class UaqsDemoCardMigration extends UaqsPlacedBeanMigration {
 
   /**
    * Constructor.
@@ -22,7 +22,7 @@ class UaqsDemoCardMigration extends UaqsBeanMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'uaqs_card',
+    parent::__construct($arguments, 'uaqs_card', 'ua_zen', 'content', BLOCK_VISIBILITY_LISTED, '*', 1,
       t('Make demonstration UAQS Card content from pre-defined data.'));
 
     // Documented lists of source data fields.
@@ -90,16 +90,6 @@ class UaqsDemoCardMigration extends UaqsBeanMigration {
     return TRUE;
   }
 
-  public function complete($entity, stdClass $row) {
-
-   $bean_block_delta = db_query("SELECT delta FROM {bean} WHERE label = :label AND type = :type", array(':label' => $entity->label, ':type' => $entity->type))->fetchObject();
-   db_update('block')
-     ->fields(array('region' => $row->region, 'status' => 1, 'visibility' => $row->visibility, 'pages' => $row->pages, 'weight' => $row->weight))
-     ->condition('module', 'bean')
-     ->condition('delta', $bean_block_delta, 'IN')
-     ->condition('theme', 'ua_zen')
-     ->execute();
-  }
 
 
 }
