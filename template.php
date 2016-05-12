@@ -17,12 +17,12 @@ drupal_add_js('//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', a
         )
 );
 /**
- * Implements hook_css_alter().
- *
- * Adds UA Bootstrap CSS based on theme settings.
+ * Implements hook_css_alter(). 
  */
 function ua_zen_css_alter(&$css) {
-
+  /**
+   * Adds UA Bootstrap CSS based on theme settings.
+   */
   // Exclude specified CSS files from theme.
   $excludes = ua_zen_get_theme_info(NULL, 'exclude][css');
   $ua_bootstrap_path = '';
@@ -63,6 +63,7 @@ function ua_zen_css_alter(&$css) {
   if (!empty($excludes)) {
     $css = array_diff_key($css, drupal_map_assoc($excludes));
   }
+  
 }
 
 
@@ -204,6 +205,7 @@ function ua_zen_preprocess_html(&$variables, $hook) {
 // */
 
 function ua_zen_preprocess_html(&$variables) {
+    drupal_add_css('//cdn.uadigital.arizona.edu/lib/ua-brand-icons/latest/ua-brand-icons.css', array('type' => 'external'));
     $variables['html_attributes_array']['class'][]= 'sticky-footer';
 }
 
