@@ -1,3 +1,123 @@
+7.x-1.0-alpha5, 2016-05-02
+------------------------------
+- Back to dev.
+
+7.x-1.0-alpha4, 2016-04-29
+------------------------------
+- Merged in barrettbaffert/ua_zen/UADIGITAL-682-update-uabootstrap-referen (pull request #115).
+- UADIGITAL-682-update-uabootstrap-referen.
+- UADIGITAL-682-update-uabootstrap-referen alpha7.
+- Merged ua_drupal/ua_zen into 7.x-1.x.
+- Merged in UADIGITAL-485 (pull request #114).
+- UADIGITAL-485: Adding style tweaks suggested by Frankie to mobile menu.
+- UADIGITAL-485: Adding note about module dependencies for Superfish main menu style option.
+- UADIGITAL-485: Fixing style of 'active' dropdown links.
+- UADIGITAL-485: Adding theme setting for main menu style.
+- UADIGITAL-485: Adding (back) Superfish version of primary nav along with updated superfish styles.
+- UAMS-217: Cleaning up footer styles and markup.
+- Merged 7.x-1.x into UAMS-217-never-settle-site-demo-content.
+- Merged in mmunro-ltrr/ua_zen/UADIGITAL-66 (pull request #111).
+- UADIGITAL-667: Adding defaults for breakpoints module.
+- Removing uaqs_navigation_global_footer specific settings.
+- Adding defaults for breakpoints module.
+- Adding conditions for displaying icons and cleaning up footer region grid.
+- Make the UA Bootstrap CSS location visible to other modules.
+- Removing footer styles.
+- Merged in UADIGITAL-651 (pull request #109).
+- UAMS-170: Adding bootstrap classes to webform components.
+- UADIGITAL-591: Adding bootstrap pager styling and settings.
+- Adding upstream changes.
+- UADIGITAL-528: Adding bootstrap table styling and settings.
+- Changed variable name and added defaults to info file.
+- Merged 7.x-1.x into UADIGITAL-591-pagination-from-bootstrap-.
+- Merged 7.x-1.x into UADIGITAL-528-investigate-contrib-bootst.
+- Changing variable name and adding default settings to info file.
+- UADIGITAL-603: Updating UA Bootstrap to version 1.0.0-alpha6.
+- Replaced the copy of the CSS and  minified CSS.
+- UADIGITAL-603: Reverting incomplete UA Bootstrap alpha6 update (for now).
+- UADIGITAL-592: Adding theme setting to supress page title on front page.
+- Alpha 6.
+- Alpha6.
+- Merged in UADIGITAL-127 (pull request #104).
+- UADIGITAL-127: Documenting preferred CSS compilation procedure, recompiling styles.css, updating Gemfile.lock.
+- Adding pagers from http://uadigital.arizona.edu/ua-bootstrap/components.html#pagination.
+- Adding ua_bootstrap table settings.
+- UADIGITAL-561: Better sidebar classes when only second sidebar used.
+- Adding more logic to suppress errors.
+- Adding classes.
+- Merged in UADIGITAL-547 (pull request #100).
+- UADIGITAL-547: Restoring default theme function for menu_block links.
+- Merged in trackleft/ua_zen-alert/alerts-should-match-ua-bootstrap (pull request #94).
+- Left off an s.
+- Removed labels.
+- Making it more clear what the messages colors mean.
+- Removing glyphicon for now.
+- Perfecting alert for screen reader.
+- Removing drupal_set_message tests.
+- Adding some aria info.
+- Resolve merge conflict.
+- Resolving merge conflict.
+- Merged in trackleft/ua_zen-release/remove-page-row-padding-top (pull request #98).
+- Moving ua_zen_get_theme_info into common.inc.
+- Adding ability to exclude core css.
+- Removing page-row-padding-top.
+- Merged in trackleft/ua_zen-release/UADIGITAL-423-update-regions-to-allow-mo (pull request #96).
+- UADIGITAL-497: Merged in trackleft/ua_zen-release/UADIGITAL-497 (pull request #97) Update ua-bootstrap.
+- Merged 7.x-1.x into UADIGITAL-497.
+- Adding the local copy of alpha4.
+- Update ua-bootstrap.
+- Remove full width content top.
+- Ls.
+- Content top is in it's own row.
+- UADIGITAL-423.
+- Move all lines left.
+- Remove uams prefix.
+- Removing styles.
+- Matching ua-bootstrap markup for alerts.
+- Merged in trackleft/ua_zen-compression/UADIGITAL-526-aggregate-and-compress-css (pull request #93).
+- UADIGITAL-526.
+- Merged in trackleft/ua_zen-uaqs/UADIGITAL-521-menu-references-ua_-not-ua (pull request #91).
+- UADIGITAL-521 secondary menu theme sync.
+- Merged in trackleft/ua_zen-uaqs/UADIGITAL-520-conflicts-with-image-class (pull request #90).
+- UADIGITAL-520-conflicts-with-image-class wrap function in module exists.
+- Merged in UADIGITAL-359 (pull request #88).
+- UADIGITAL-359: Allow primary navigation to be rendered without Menu Block module.
+- Merged in UADIGITAL-474 (pull request #87).
+- UADIGITAL-474: Reverting containter-fluid class for navbar.
+- Merged in UADIGITAL-360 (pull request #86).
+- UADIGITAL-474: Merged in fjreynoso/ua_zen (pull request #85).
+- Merged macaulay/ua-zen into 7.x-1.x.
+- UADIGITAL-360: Adding toggle/ARIA classes to navbar menu links.  Should also fix UADIGITAL-468.
+- Removed .collapse that was causing to break.
+- Changed mobile nav to resemble bootstrap mobile nav.
+- UADIGITAL-423: Merged in trackleft/ua_zen-2/trackleft/fixed-conditionals-1451952236675 (pull request #83).
+- Fixed conditionals.
+- Merged in trackleft/ua_zen/UADIGITAL-423-update-regions-to-allow-mo (pull request #82).
+- Fixing code comments.
+- Renamed sidebars to comply with ua quickstart.
+- Merged in trackleft/ua_zen-1/trackleft/commoninc-edited-online-with-bitbucket-1450907495882 (pull request #80).
+- Merged in trackleft/ua_zen/UADIGITAL-423-update-regions-to-allow-mo (pull request #79).
+- Merged in trackleft/ua_zen (pull request #81).
+- Tagging ua-bootstrap alpha2 release.
+- Common.inc edited online with Bitbucket.
+- Undoing unintended consequences to quickstart ua_zen.
+- Merged 7.x-1.x into UADIGITAL-423-update-regions-to-allow-mo.
+- Moved stray row div.
+- Merged in trackleft/ua_zen/UADIGITAL-423-update-regions-to-allow-mo (pull request #78).
+- Fixed page too big.
+- Still some outstanding page width issues in the footer cause scrollbar to appear on the bottom.
+- UADIGITAL-423: Merged in trackleft/ua_zen/UADIGITAL-423-update-regions-to-allow-mo (pull request #77).
+- Fixed regions.
+- Adding full width region templates.
+- Adding regionclass default settings.
+- Adding regions to info file.
+- Uams regions to ua_zen.
+- Merged in trackleft/ua_zen/UADIGITAL-403-ua-managed-sites-move-help (pull request #76).
+- Derp.
+- Adding mhume's suggestion of logic.
+- Moving help region above featured content.
+- Back to dev.
+
 7.x-1.0-alpha3, 2015-11-13
 ------------------------------
 - Merged in UADIGITAL-358 (pull request #75).
