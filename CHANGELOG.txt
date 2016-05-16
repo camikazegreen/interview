@@ -1,3 +1,39 @@
+7.x-1.0-alpha5, 2016-05-02
+------------------------------
+- Back to dev.
+
+7.x-1.0-alpha4, 2016-04-15
+------------------------------
+- Merged in trackleft/uaqs_content_chunks/UADIGITAL-674-make-adding-new-paragraphs (pull request #10).
+- UADIGITAL-674 making adding paragraphs as submodules more user friendly.
+- Merged ua_drupal/uaqs_content_chunks into 7.x-1.x.
+- UADIGITAL-625: Clean out obsolete field formatting code for Paragraphs and Beans.
+- Delete the theme-specific field formatting functions.
+- Merged in mmunro-ltrr/uaqs_content_chunks/UADIGITAL-402 (pull request #7).
+- Switch to the new common text area field, rename the format.
+- Merged in trackleft/uaqs_content_chunks/UADIGITAL-610-touch-up-paragraphs (pull request #5).
+- Merged in trackleft/uaqs_content_chunks/UADIGITAL-598-add-paragraphs-to-news-to- (pull request #6).
+- UADIGITAL-598 adding link (Extra Info) paragraphs_item.
+- Card blocks.
+- Completed card deck styles.
+- UADIGITAL-192: Adding default value for paragraphs view mode.
+- UAMS-192: Added paragraphs view modes and theming.
+- Merged in mmunro-ltrr/uaqs_content_chunks/UADIGITAL-523 (pull request #1).
+- Hide the UAQS label in content type names and revise the descriptions.
+- Rename UA to UAQS in the file contents.
+- Merged in mmunro-ltrr/ua_content_chunks/UADIGITAL-281 (pull request #1).
+- Update the change log semi-manually.
+- Fix the placement of the sub-title field.
+- Correct the sub-title field label.
+- Add a sub-title field, like to one added to UA Basic Page.
+- Add a text format for HTML5 phrasing content, clean up the recreated feature.
+- Restore missing UA namespacing for the ua_main_content field.
+- Rename the node type hosting Paragraphs-based content to UA Flexible Page.
+- Update for a new version of the Paragraphs module.
+- Enable markup in some text fields.
+- Match the array key template_preprocess_paragraphs_items() expects.
+- Put this with the other UofA features in the modules list.
+
 UA Content Chunks 7.x-1.0-alpha0, 2015-11-18
 --------------------------------------------
 - Fix the placement of the sub-title field.
