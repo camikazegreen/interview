@@ -117,7 +117,7 @@ function uaqs_content_chunks_field_attach_form($entity_type, $entity, &$form, &$
 
 function uaqs_content_chunks_field_attach_submit($entity_type, $entity, $form, &$form_state) {
 
-  if($entity_type == 'paragraphs_item'){
+  if($entity_type == 'paragraphs_item' && isset($form['view_mode'])){
     $entity->view_mode = $form['view_mode']['#value'];
   }
 
