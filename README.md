@@ -24,7 +24,7 @@ When this module is used as part of a Drupal distribution (such as [UA Quickstar
 - [Flexslider](http://www.woothemes.com/flexslider/)
 
 ## Other Dependencies
-When this module is used outside of a Drupal distribution, the packaged dependencies above as well as these additional module dependencies will need to be installed manually.
+When this module is used outside of a UA QuickStart distribution, the packaged dependencies above as well as these additional module dependencies will need to be installed.
 
 - [Chaos tool suite (ctools)](https://www.drupal.org/project/ctools)
 - [Features](https://www.drupal.org/project/features)
