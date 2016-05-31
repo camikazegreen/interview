@@ -1,0 +1,11 @@
+name =  UAQS Content Chunks HTML Field
+core = 7.x
+package = The University of Arizona
+dependencies[] = features
+dependencies[] = paragraphs
+dependencies[] = text
+dependencies[] = uaqs_fields
+features[features_api][] = api:2
+features[field_instance][] = paragraphs_item-uaqs_html_paragraphs_item-field_uaqs_html
+features[paragraphs][] = uaqs_html_paragraphs_item
+project path = profiles/ua_quickstart/modules/custom/uaqs_content_chunks
