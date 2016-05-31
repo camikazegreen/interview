@@ -1,4 +1,4 @@
-name =  UAQS Content Chunks HTML Field
+name = UAQS Content Chunks HTML Field
 core = 7.x
 package = The University of Arizona
 dependencies[] = features

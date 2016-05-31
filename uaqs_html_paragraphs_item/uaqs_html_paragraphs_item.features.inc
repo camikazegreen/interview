@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * uaqs_body_paragraphs_item.features.inc
+ * uaqs_html_paragraphs_item.features.inc
  */
 
 /**

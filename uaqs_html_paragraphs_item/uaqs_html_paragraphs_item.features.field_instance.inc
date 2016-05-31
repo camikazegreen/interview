@@ -1,17 +1,17 @@
 <?php
 /**
  * @file
- * uaqs_body_paragraphs_item.features.field_instance.inc
+ * uaqs_html_paragraphs_item.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function uaqs_body_paragraphs_item_field_default_field_instances() {
+function uaqs_html_paragraphs_item_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'paragraphs_item-uaqs_body_paragraphs_item-field_uaqs_body'.
+  // 'paragraphs_item-uaqs_html_paragraphs_item-field_uaqs_html'.
   $field_instances['paragraphs_item-uaqs_html_paragraphs_item-field_uaqs_html'] = array(
     'bundle' => 'uaqs_html_paragraphs_item',
     'default_value' => NULL,
@@ -19,7 +19,7 @@ function uaqs_body_paragraphs_item_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(
           'field_multiple_limit' => -1,
@@ -38,10 +38,9 @@ function uaqs_body_paragraphs_item_field_default_field_instances() {
     'entity_type' => 'paragraphs_item',
     'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_html',
-    'label' => 'Description',
+    'label' => 'HTML',
     'required' => 0,
     'settings' => array(
-      'display_summary' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -49,17 +48,16 @@ function uaqs_body_paragraphs_item_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
+        'rows' => 5,
       ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'type' => 'text_textarea',
+      'weight' => 1,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Description');
+  t('HTML');
 
   return $field_instances;
 }
