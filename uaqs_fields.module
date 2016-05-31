@@ -64,6 +64,9 @@ function uaqs_fields_using_format() {
     $usingformat['field_uaqs_body'][UAQS_UNCONSTRAINED] = $formatdef[UAQS_UNCONSTRAINED]['name'];
     $usingformat['field_uaqs_bio'][UAQS_UNCONSTRAINED] = $formatdef[UAQS_UNCONSTRAINED]['name'];
   }
+  if (isset($formatdef[UAQS_FULL_HTML])) {
+    $usingformat['field_uaqs_html'][UAQS_FULL_HTML] = $formatdef[UAQS_FULL_HTML]['name'];
+  }
   return $usingformat;
 }
 
