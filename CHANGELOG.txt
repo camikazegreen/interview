@@ -1,3 +1,32 @@
+7.x-1.0-alpha5, 2016-05-02
+------------------------------
+- Back to dev.
+
+7.x-1.0-alpha4, 2016-04-11
+------------------------------
+- Merged in trackleft/uaqs_news/UADIGITAL-580-add-pathauto-module-defaul (pull request #7).
+- Merged in trackleft/uaqs_news-1/trackleft/make-padding-align-better-with-other-uab-1459029167298 (pull request #8).
+- Make padding align better with other ua-bootstrap padding settings.
+- UADIGITAL-580 Adding path alias default settings.
+- Merged ua_drupal/uaqs_news into 7.x-1.x.
+- Merged in trackleft/uaqs_news/UADIGITAL-598-add-paragraphs-to-news-to- (pull request #6).
+- UADIGITAL-598 Replacing link (more information) and body images with paragraphs field.
+- UAMS-216: Develop news styling.
+- Modify sidebar promoted news view to exclude current page content.
+- Removing fields that will no longer be used.
+- UAMS-216 UADIGITAL-546 style and restructure uaqs_news content type with shared fields and field group and field group link, also adding view mode minimal media list.
+- UADIGITAL-589: Replacing field_uaqs_more_info with field_uaqs_link.
+- Merged in trackleft/uaqs_news (pull request #3).
+- Adding row to default display.
+- Merged in trackleft/uaqs_news/UADIGITAL-535 (pull request #2).
+- Left out the change in the info file.
+- UADIGITAL-535.
+- Merged in mmunro-ltrr/uaqs_news/UADIGITAL-523 (pull request #1).
+- Hide the UAQS label in content type names and revise the descriptions.
+- Change more occurances of the text UA to UAQS.
+- Rename UA to UAQS in the file contents.
+- Back to dev.
+
 7.x-1.0-alpha3, 2015-11-13
 ------------------------------
 - UADIGITAL-375: Reverting some unexpected feature updates.
