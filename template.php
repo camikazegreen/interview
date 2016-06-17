@@ -17,7 +17,7 @@ drupal_add_js('//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', a
         )
 );
 /**
- * Implements hook_css_alter(). 
+ * Implements hook_css_alter().
  */
 function ua_zen_css_alter(&$css) {
   /**
@@ -43,7 +43,7 @@ function ua_zen_css_alter(&$css) {
     if ($ua_bootstrap_cdn_version == 'stable') {
       $ua_bootstrap_cdn_version = UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION;
     }
-    $ua_bootstrap_path = '//bitbucket.org/uadigital/ua-bootstrap/downloads/ua-bootstrap-' . $ua_bootstrap_cdn_version;
+    $ua_bootstrap_path = '//cdn.uadigital.arizona.edu/lib/ua-bootstrap/' . $ua_bootstrap_cdn_version . '/ua-bootstrap';
     $ua_bootstrap_css_info['type'] = 'external';
   }
   else {
@@ -63,7 +63,7 @@ function ua_zen_css_alter(&$css) {
   if (!empty($excludes)) {
     $css = array_diff_key($css, drupal_map_assoc($excludes));
   }
-  
+
 }
 
 
