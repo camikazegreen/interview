@@ -36,7 +36,7 @@ projects[pathauto][version] = 1.3
 
 projects[token][version] = 1.6
 
-projects[views][version] = 3.13
+projects[views][version] = 3.14
 
 projects[views_bootstrap][version] = 3.x-dev
 projects[views_bootstrap][download][type] = git
