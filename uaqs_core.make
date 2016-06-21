@@ -30,7 +30,7 @@ projects[html5_tools][version] = 1.3
 
 projects[jquery_update][version] = 2.7
 
-projects[libraries][version] = 2.2
+projects[libraries][version] = 2.3
 
 projects[pathauto][version] = 1.3
 
