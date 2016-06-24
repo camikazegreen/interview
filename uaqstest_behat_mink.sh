@@ -81,6 +81,20 @@ else
   echo "Installed a local copy of the Drupal Extension to Behat and Mink..." >&2
 fi
 
+# Start phantomjs if it hasn't been started previously
+
+running_phantom=`ps auxw | grep phantomjs | grep -v grep`
+if [ x"$running_phantom" = x ]; then
+  bin/phantomjs --webdriver=4444 > /dev/null &
+  if [ "$?" -eq 0 ]; then
+    printf "Started PhantomJS...\n" >&2
+  else
+    printf "-- could not start PhantomJS...\n" >&2
+  fi
+else
+  printf "Found a running instance of PhantomJS...\n" >&2
+fi
+
 # Export Behat environment specific settings...
 
 export BEHAT_PARAMS='{"extensions": {"Behat\\MinkExtension": {"base_url": "'"$UAQSTEST_BASEURL"'"},"Drupal\\DrupalExtension": {"drupal": {"drupal_root": "'"${UAQSTEST_DRUPALROOT}"'"}, "drush": {"root": "'"${UAQSTEST_DRUPALROOT}"'"}}}}'
