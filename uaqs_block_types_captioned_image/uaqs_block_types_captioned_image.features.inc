@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * uaqs_flexible_block.features.inc
+ * uaqs_block_types_captioned_image.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function uaqs_flexible_block_ctools_plugin_api($module = NULL, $api = NULL) {
+function uaqs_block_types_captioned_image_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "bean_admin_ui" && $api == "bean") {
     return array("version" => "5");
   }

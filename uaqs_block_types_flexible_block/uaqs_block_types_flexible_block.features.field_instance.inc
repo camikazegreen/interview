@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * uaqs_flexible_block.features.field_instance.inc
+ * uaqs_block_types_flexible_block.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function uaqs_flexible_block_field_default_field_instances() {
+function uaqs_block_types_flexible_block_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
@@ -38,7 +38,7 @@ function uaqs_flexible_block_field_default_field_instances() {
       'add_mode' => 'button',
       'allowed_bundles' => array(
         'uams_media' => -1,
-        'uaqs_card_deck' => -1,
+        'uaqs_block_types_card_deck' => -1,
         'uaqs_column_image' => -1,
         'uaqs_extra_info' => -1,
         'uaqs_file_download' => -1,
@@ -48,7 +48,7 @@ function uaqs_flexible_block_field_default_field_instances() {
       ),
       'bundle_weights' => array(
         'uams_media' => 9,
-        'uaqs_card_deck' => 1,
+        'uaqs_block_types_card_deck' => 1,
         'uaqs_column_image' => 2,
         'uaqs_extra_info' => 3,
         'uaqs_file_download' => 4,
