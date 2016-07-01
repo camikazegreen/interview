@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the UAQS_HTML_Paragraphs_Item feature.
- */
-
-include_once 'uaqs_html_paragraphs_item.features.inc';

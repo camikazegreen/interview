@@ -1,19 +1,19 @@
 <?php
 /**
  * @file
- * uaqs_html_paragraphs_item.features.field_instance.inc
+ * uaqs_content_chunks_html.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function uaqs_html_paragraphs_item_field_default_field_instances() {
+function uaqs_content_chunks_html_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'paragraphs_item-uaqs_html_paragraphs_item-field_uaqs_html'.
-  $field_instances['paragraphs_item-uaqs_html_paragraphs_item-field_uaqs_html'] = array(
-    'bundle' => 'uaqs_html_paragraphs_item',
+  // 'paragraphs_item-uaqs_content_chunks_html-field_uaqs_html'.
+  $field_instances['paragraphs_item-uaqs_content_chunks_html-field_uaqs_html'] = array(
+    'bundle' => 'uaqs_content_chunks_html',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
