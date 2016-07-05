@@ -15,3 +15,7 @@ Feature: Content manager creates flexible page.
     And I should see the text "Add UAQS Plain Text"
     And I should see the text "Add Text with heading"
     And I should see the text "Add Extra info"
+    And I should not see the text "Add Full width background wrapper"
+    And I should not see the text "Add File attachment"
+    And I should not see the text "Add Card deck"
+    And I should not see the text "Add HTML Field"
