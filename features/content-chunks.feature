@@ -22,6 +22,8 @@ Feature: Content manager creates flexible page.
     And I am viewing my "Flexible Page" with the title "Renaming the Pride of Arizona marching band"
     When I click Edit
     Then I should not see the text "Add Full width background wrapper"
+    And I should not see the text "Add Card deck"
+    And I should not see the text "Add File attachment"
 
   #@flexible-page @api @content-manager
   #Scenario: Paragraphs item type exist after enabling feature.
