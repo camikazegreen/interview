@@ -38,14 +38,7 @@ Feature: Content manager creates flexible page.
 
   @flexible-page @api @content-manager
   Scenario: Paragraphs item type exist after enabling feature.
-  Given I run drush en "uaqs_full_width_bg_wrapper_paragraphs_item -y"
-  Given I am logged in as a user with the administrator role
-    And I am viewing my "Flexible Page" with the title "Renaming the Pride of Arizona marching band"
-    When I click Edit
-    Then I should not see the text "Add Full width background wrapper"
-
-  @flexible-page @api @content-manager
-  Scenario: Paragraphs item type exists.
+    Given I run drush en "uaqs_full_width_bg_wrapper_paragraphs_item -y"
     Given I am logged in as a user with the administrator role
     And I am viewing my "Flexible Page" with the title "Renaming the Pride of Arizona marching band"
     When I click Edit
