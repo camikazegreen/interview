@@ -22,7 +22,7 @@ Feature: Content manager creates flexible page.
     Then I should see the text "“Button” Salmon"
 
   @regression @flexible-page @api
-  Scenario: Basic paragraphs item types are available for use by administrators editing a piece of flexible content.
+  Scenario: Basic paragraphs item types are available for use by administrators editing a flexible page.
     Given I am logged in as a user with the administrator role
     And I am viewing my "Flexible Page" with the title "Renaming the Pride of Arizona marching band"
     When I click Edit
