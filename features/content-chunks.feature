@@ -35,6 +35,7 @@ Feature: Content manager creates flexible page.
         Then I should not see the text "Add Full width background wrapper"
         And I should not see the text "Add Card deck"
         And I should not see the text "Add File attachment"
+        And I should not see the text "Add HTML Field"
 
   @regression @flexible-page @api
     Scenario: Paragraphs item type "Full width background wrapper" exists after enabling feature.
