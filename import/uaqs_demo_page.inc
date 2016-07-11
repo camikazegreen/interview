@@ -49,8 +49,9 @@ class UaqsDemoPageMigration extends UaqsNodeMigration {
     $data_fields = array(
       'title' => t('Title'),
       'uaqs_summary_short' => t('Sub-title'),
-      'path' => t('URL path settings'),
       'field_uaqs_body' => t('Page body'),
+      'path' => t('URL path settings'),
+      'pathauto' => t('Pathauto flag: generate automatic URL alias'),
     );
 
     // All the fields to migrate.
@@ -61,12 +62,14 @@ class UaqsDemoPageMigration extends UaqsNodeMigration {
 
     // Map JSON names to simple content type fields and subfields.
     $this->addSimpleMappings(array('title'));
-    $this->addFieldMapping('field_uaqs_subtitle', 'uaqs_subtitle');
+    $this->addFieldMapping('field_uaqs_summary_short', 'uaqs_summary_short');
     $this->addSimpleMappings(array('path'));
+    $this->addFieldMapping('pathauto', 'pathauto')
+         ->defaultValue(0);
     $this->addSimpleMappings(array('field_uaqs_body'));
     // Allow limited HTML markup in the page body field.
     $this->addFieldMapping('field_uaqs_body:format')
-         ->defaultValue('filtered_html');
+         ->defaultValue('uaqs_unconstrained');
 
   }
 

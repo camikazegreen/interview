@@ -10,5 +10,20 @@
     "uaqs_image_credit" : "Hieronymus Bosch (ca. 1450–1516) or follower",
     "uaqs_photo" : "hieronymus_bosch_superbia.jpg",
     "view_mode" : "uaqs_align_right"
+  },
+  {"id":200,
+    "uaqs_caption_text" : "Path of the Sun on December 21.",
+    "uaqs_image_credit" : "illustration of the Sun above the Earth",
+    "uaqs_photo" : "sun_december_21.jpg"
+  },
+  {"id":220,
+    "uaqs_caption_text" : "Path of the Sun on June 21.",
+    "uaqs_image_credit" : "illustration of the Sun above the Earth",
+    "uaqs_photo" : "sun_june_21.jpg"
+  },
+  {"id":300,
+    "uaqs_caption_text" : "The delivery platform",
+    "uaqs_image_credit" : "drone in flight",
+    "uaqs_photo" : "delivery_platform.jpg"
   }
 ]

@@ -22,7 +22,9 @@ function _uaqs_demo_null_message($message, $level) {
 function uaqs_demo_enable() {
   migrate_static_registration();
   $info = uaqs_demo_migrate_api();
-  Migration::setDisplayFunction('_uaqs_demo_null_message');
+  if (!variable_get('uaqs_verbose')) {
+    Migration::setDisplayFunction('_uaqs_demo_null_message');
+  }
   foreach ($info['migrations'] as $machine_name => $arguments) {
     $migration = Migration::getInstance($machine_name);
     $migration->processImport();
@@ -38,7 +40,9 @@ function uaqs_demo_enable() {
  */
 function uaqs_demo_disable() {
   $info = uaqs_demo_migrate_api();
-  Migration::setDisplayFunction('_uaqs_demo_null_message');
+  if (!variable_get('uaqs_verbose')) {
+    Migration::setDisplayFunction('_uaqs_demo_null_message');
+  }
   $hitlist = array_reverse($info['migrations']);
   foreach ($hitlist as $machine_name => $arguments) {
     $migration = Migration::getInstance($machine_name);

@@ -13,7 +13,7 @@
  *
  * The field contents come from a JSON file.
  */
-class UaqsDemoCardMigration extends UaqsBeanMigration {
+class UaqsDemoCardMigration extends UaqsPlacedBeanMigration {
 
   /**
    * Constructor.
@@ -22,7 +22,7 @@ class UaqsDemoCardMigration extends UaqsBeanMigration {
    *   Arguments for the parent constructor (Migration standard behavior).
    */
   public function __construct(array $arguments) {
-    parent::__construct($arguments, 'uaqs_card',
+    parent::__construct($arguments, 'uaqs_card', 'ua_zen', 'content', BLOCK_VISIBILITY_LISTED, '*', 1,
       t('Make demonstration UAQS Card content from pre-defined data.'));
 
     // Documented lists of source data fields.
@@ -64,10 +64,10 @@ class UaqsDemoCardMigration extends UaqsBeanMigration {
     $this->addFieldMapping('field_uaqs_link', 'uaqs_link');
     $this->addFieldMapping('field_uaqs_link:attributes','uaqs_link_attributes');
 
-    $this->addFieldMapping('field_uaqs_blurb_text', 'uaqs_blurb_text');
-    // Allow limited HTML markup in the blurb text field.
-    $this->addFieldMapping('field_uaqs_blurb_text:format')
-         ->defaultValue('filtered_html');
+    $this->addFieldMapping('field_uaqs_text_area', 'uaqs_text_area');
+    // Allow limited HTML markup in the text area field.
+    $this->addFieldMapping('field_uaqs_text_area:format')
+         ->defaultValue('uaqs_textual_content');
 
     $this->addFieldMapping('field_uaqs_link:title', 'uaqs_link_title');
 
@@ -90,16 +90,6 @@ class UaqsDemoCardMigration extends UaqsBeanMigration {
     return TRUE;
   }
 
-  public function complete($entity, stdClass $row) {
-
-   $bean_block_delta = db_query("SELECT delta FROM {bean} WHERE label = :label AND type = :type", array(':label' => $entity->label, ':type' => $entity->type))->fetchObject();
-   db_update('block')
-     ->fields(array('region' => $row->region, 'status' => 1, 'visibility' => $row->visibility, 'pages' => $row->pages, 'weight' => $row->weight))
-     ->condition('module', 'bean')
-     ->condition('delta', $bean_block_delta, 'IN')
-     ->condition('theme', 'ua_zen')
-     ->execute();
-  }
 
 
 }
