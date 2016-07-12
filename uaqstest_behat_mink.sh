@@ -6,7 +6,7 @@
 # Required environment variables...
 
 # The URL for the test site on a local web server:
-if [ x"$UAQSTEST_BASEURL" = x ]; then
+if [ "$UAQSTEST_BASEURL" = x ]; then
   echo "** no local web server URL for the Drupal test site (must set UAQSTEST_BASEURL)." >&2
   exit 1
 fi
@@ -83,16 +83,21 @@ fi
 
 # Start phantomjs if it hasn't been started previously
 
-running_phantom=`ps auxw | grep phantomjs | grep -v grep`
-if [ x"$running_phantom" = x ]; then
-  bin/phantomjs --webdriver=4444 > /dev/null &
-  if [ "$?" -eq 0 ]; then
-    printf "Started PhantomJS...\n" >&2
-  else
-    printf "-- could not start PhantomJS...\n" >&2
-  fi
+rundir="run/phantomjs"
+pidfile="${rundir}/phantomjs.pid"
+running_phantom=`ps ax | grep phantomjs | grep -v grep`
+if [ -n "$running_phantom" ]; then
+  echo "Found a running instance of PhantomJS..." >&2
 else
-  printf "Found a running instance of PhantomJS...\n" >&2
+  bin/phantomjs --webdriver=4444 > /dev/null &
+  phantompid=`ps ax | grep phantomjs | grep -v grep | awk '{ print $1; }'`
+  if [ -n "$phantompid" ]; then
+    mkdir -p "$rundir"
+    echo "$phantompid" > "$pidfile"
+    echo "Started PhantomJS..." >&2
+  else
+    echo "-- could not start PhantomJS (some tests may not work as expected)..." >&2
+  fi
 fi
 
 # Export Behat environment specific settings...
@@ -106,10 +111,17 @@ if [ "$UAQSTEST_RUNTESTS" -eq 0 ]; then
   err="$?"
   if [ "$err" -ne 0 ]; then
     echo "** some of the Behat + Mink tests failed: error code ${err}." >&2
-    exit 1
   else
     echo "The Behat + Mink tests passed..." >&2
   fi
+  if [ -r "$pidfile" ]; then
+    read pid < "$pidfile"
+    if [ -n "$pid" ]; then
+      echo "Trying to stop our own PhantomJS instance..."
+      kill "$pid" || true
+    fi
+  fi
+  exit "$err"
 fi
 
 exit 0
