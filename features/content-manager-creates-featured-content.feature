@@ -5,7 +5,7 @@ Feature: Content manager creates featured content.
   So that I can engage site visitors.
 
   Background: Cas is disabled
-    Given I run drush dis "-y cas"
+    Given I run drush "dis" "cas -y"
 
   Scenario: Content type specifies image size requirements
     Given I am logged in as a user with the administrator role
