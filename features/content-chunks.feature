@@ -30,6 +30,7 @@ Feature: Content manager creates flexible page.
     And I should see the text "Add UAQS Plain Text"
     And I should see the text "Add Text with heading"
     And I should see the text "Add Extra info"
+    And I should see the text "Add File attachment"
 
   @regression @flexible-page @api
   Scenario: As an administrator there are some paragraphs item types I do not want to see when editing a flexible page.
@@ -38,7 +39,6 @@ Feature: Content manager creates flexible page.
     When I click Edit
     Then I should not see the text "Add Full width background wrapper"
     And I should not see the text "Add Card deck"
-    And I should not see the text "Add File attachment"
     And I should not see the text "Add HTML Field"
 
   @regression @flexible-page @api
