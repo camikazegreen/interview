@@ -6,7 +6,7 @@
 # Required environment variables...
 
 # The URL for the test site on a local web server:
-if [ "$UAQSTEST_BASEURL" = x ]; then
+if [ -z "$UAQSTEST_BASEURL" ]; then
   echo "** no local web server URL for the Drupal test site (must set UAQSTEST_BASEURL)." >&2
   exit 1
 fi
@@ -14,7 +14,7 @@ fi
 # Environment variables that we might write to...
 
 # The Drupal root directory name:
-if [ x"$UAQSTEST_DRUPALROOT" = x ]; then
+if [ -z "$UAQSTEST_DRUPALROOT" ]; then
   export UAQSTEST_DRUPALROOT="${PWD}/ua_quickstart_test"
 fi
 
@@ -41,7 +41,7 @@ if [ "$missing" -eq 0 ]; then
 elif [ -r composer.phar ]; then
   echo "Found the Composer PHP dependency management tool as a .phar file..." >&2
 else
-  if [ x"$UAQSTEST_FETCH" = x ]; then
+  if [ -z "$UAQSTEST_FETCH" ]; then
     curl -V > /dev/null
     if [ "$?" -eq 0 ]; then
       UAQSTEST_FETCH='curl -sS'
@@ -81,7 +81,7 @@ else
   echo "Installed a local copy of the Drupal Extension to Behat and Mink..." >&2
 fi
 
-# Start phantomjs if it hasn't been started previously
+# Start phantomjs if it hasn't been started previously...
 
 rundir="run/phantomjs"
 pidfile="${rundir}/phantomjs.pid"
@@ -117,7 +117,7 @@ if [ "$UAQSTEST_RUNTESTS" -eq 0 ]; then
   if [ -r "$pidfile" ]; then
     read pid < "$pidfile"
     if [ -n "$pid" ]; then
-      echo "Trying to stop our own PhantomJS instance..."
+      echo "Trying to stop our own PhantomJS instance..." >&2
       kill "$pid" || true
     fi
   fi
