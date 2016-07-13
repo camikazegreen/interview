@@ -58,14 +58,6 @@ Feature: Content manager creates flexible page.
     Then I should see the text "Add Card deck"
 
   @regression @flexible-page @api
-  Scenario: Paragraphs item type "File attachment" is usable by administrators after enabling the feature.
-    Given I run drush en "-y uaqs_content_chunks_file_download"
-    And I am logged in as a user with the administrator role
-    And I am viewing my "Flexible Page" with the title "Renaming the Pride of Arizona marching band"
-    When I click Edit
-    Then I should see the text "Add File attachment"
-
-  @regression @flexible-page @api
   Scenario: Paragraphs item type "HTML Field" is usable by administrators after enabling the feature.
     Given I run drush en "-y uaqs_content_chunks_html"
     And I am logged in as a user with the administrator role
