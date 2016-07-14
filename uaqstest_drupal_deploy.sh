@@ -42,7 +42,7 @@ fi
 # Try synchronizing with a remote copy that everyone can see...
 
 # Replace the remote database with a copy of the local one:
-drush -y sql-sync "$UAQSTEST_SOURCE" "$UAQSTEST_TARGET" --no-cache
+drush -y sql-sync "$UAQSTEST_SOURCE" "$UAQSTEST_TARGET"
 err="$?"
 if [ "$err" -ne 0 ]; then
   echo "** could not update the target (remote) database." >&2

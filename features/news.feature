@@ -3,7 +3,7 @@ Feature: News
   As a UA Unit
   I need to have a news area.
 
-  @regression
+  @regression @javascript
   Scenario: News is displayed from newest to oldest
     Given I am an anonymous user
     When I visit "/news"
