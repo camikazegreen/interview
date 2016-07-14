@@ -14,7 +14,7 @@
  * @param string $hook
  *   The hook name (generally the block type name).
  */
-function uaqs_content_chunks_preprocess_entity_paragraphs_item_uaqs_column_image(array &$variables, $hook) {
+function uaqs_content_chunks_column_image_preprocess_entity_paragraphs_item_uaqs_column_image(array &$variables, $hook) {
   $have_caption = !empty($variables['content']['field_uaqs_caption_text']);
   $have_credit = !empty($variables['content']['field_uaqs_image_credit']);
   $have_figcaption = ($have_caption || $have_credit);
