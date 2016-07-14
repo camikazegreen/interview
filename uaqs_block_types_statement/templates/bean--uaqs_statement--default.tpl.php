@@ -25,7 +25,7 @@
         <?php
           print render($content['field_uaqs_text_area']);
         ?>
-        <?php if ($content['have_link']): ?>
+        <?php if (isset($content['field_uaqs_read_more'])): ?>
           <br />
           <?php
             print render($content['field_uaqs_read_more']);

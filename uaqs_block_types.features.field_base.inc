@@ -292,3 +292,4 @@ function uaqs_block_types_field_default_field_bases() {
 
   return $field_bases;
 }
+
