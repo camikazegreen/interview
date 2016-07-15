@@ -97,7 +97,10 @@ class UaqsDemoColumnImageMigration extends UaqsParagraphsItemMigration {
   public function __construct(array $arguments) {
     parent::__construct($arguments, 'uaqs_column_image', 'field_uaqs_main_content',
       t('Populate demonstration UAQS Column Image entities (based on Paragraphs).'));
-
+    // Paragraphs view_mode
+    $paragraphs_core = array (
+      'view_mode' => t('View Mode'),
+    );
     // Fields to import to the bundle.
     $data_fields = array(
       'uaqs_caption_text' => t('Image caption'),
@@ -110,10 +113,12 @@ class UaqsDemoColumnImageMigration extends UaqsParagraphsItemMigration {
     );
 
     // All the fields to migrate.
-    $fields = $this->getSourceKeyField() + $data_fields + $image_fields;
+    $fields = $this->getSourceKeyField() + $paragraphs_core + $data_fields + $image_fields;
 
     // Source definition.
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
+
+    $this->addSimpleMappings(array('view_mode'));
 
     // Map JSON names to simple content type fields and subfields.
     $this->addFieldMapping('field_uaqs_caption_text', 'uaqs_caption_text');
