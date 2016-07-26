@@ -1,0 +1,27 @@
+#home-banner img{
+    width: 100%;
+    }
+    #banner-text a{
+	font-size: 18px;
+	    margin-top: 20px;
+	        display: inline-block;
+	        }
+	        #banner-text a:hover{
+	    	text-decoration: none;
+	    	}
+	    	.banner-text-grid {
+	    	    background-color: rgba(255, 255, 255, 0.92);
+	    	        text-align: center;
+	    	            padding: 30px 80px;
+	    	                margin-top: -135px;
+	    	                }
+	    	                .bottom-line{
+	    	            	padding: 20px 0;
+	    	            	    border-bottom: 2px solid #f3f3f3;	
+	    	            	        border-top: 2px solid #f3f3f3;	
+	    	            	        }
+	    	            	        
+	    	            	        .banner-text-grid p {
+	    	            	            font-size: 20px;
+	    	            	                line-height: 1.5;
+	    	            	                }

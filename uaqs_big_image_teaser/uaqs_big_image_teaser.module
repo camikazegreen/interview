@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UAQS Big Image Teaser feature.
+ */
+
+include_once 'uaqs_big_image_teaser.features.inc';
