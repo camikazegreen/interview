@@ -490,7 +490,7 @@ class UaqsMigrateDestinationBean extends MigrateDestinationEntity {
     }
     $keyarr = ($saved) ? array($bean->bid) : FALSE;
 
-    $this->complete($dest_bean_vals, $row);
+    $this->complete($bean, $row);
     return $keyarr;
   }
 
@@ -535,6 +535,182 @@ abstract class UaqsBeanMigration extends UaqsIntKeyedMigration {
          ->defaultValue($arbitrary_timestamp);
     $this->addFieldMapping('view_mode')
          ->defaultValue('default');
+  }
+
+}
+
+/**
+ * Defines a migration into Beans with explicit placement of the blocks.
+ *
+ * The Bean module documentation states “The Bean module does not attempt to
+ * interface with the placement of blocks. Bean deals only with the creation
+ * of customized, fieldable blocks.”
+ * https://www.drupal.org/node/1434622
+ * However it is often useful for a Bean migration to automatically assign the
+ * blocks to regions that the migration data define themselves.
+ */
+abstract class UaqsPlacedBeanMigration extends UaqsBeanMigration {
+
+  const MISPLACED = 'Cannot place the Bean block in a region.';
+
+  /**
+   * Machine name of the default theme for placement regions.
+   */
+  protected $defaultTheme;
+
+  /**
+   * Gets the theme that defines placement regions.
+   *
+   * @return string
+   *   Machine name of the theme.
+   */
+  public function getDefaultTheme() {
+    return $this->defaultTheme;
+  }
+
+  /**
+   * Machine name of the default placement region.
+   */
+  protected $defaultRegion;
+
+  /**
+   * Gets the default placement region.
+   *
+   * @return string
+   *   Machine name of the region.
+   */
+  public function getDefaultRegion() {
+    return $this->defaultRegion;
+  }
+
+  /**
+   * Default visibility flag.
+   */
+  protected $defaultVisibility;
+
+  /**
+   * Gets the default visibility flag.
+   *
+   * @return int
+   *   A visibility flag like the one for hook_block_info().
+   */
+  public function getDefaultVisibility() {
+    return $this->defaultVisibility;
+  }
+
+  /**
+   * Default specification for which pages display the block.
+   */
+  protected $defaultPages;
+
+  /**
+   * Gets the page specifications.
+   *
+   * @return string
+   *   A page specification like the one for hook_block_info().
+   */
+  public function getDefaultPages() {
+    return $this->defaultPages;
+  }
+
+  /**
+   * Weight for relative ordering of blocks.
+   */
+  protected $defaultWeight;
+
+  /**
+   * Gets the ordering weight..
+   *
+   * @return int
+   *   A number similar to those produced by a user on the block placement GUI.
+   */
+  public function getDefaultWeight() {
+    return $this->defaultWeight;
+  }
+
+  /**
+   * Constructor.
+   *
+   * @param array $arguments
+   *   Arguments for the parent constructor (Migration standard behavior).
+   * @param string $bundle
+   *   Bean type name.
+   * @param string $theme
+   *   Machine name for the theme defining the block placement regions.
+   * @param string $region
+   *   Machine name for the region into which to place the blocks.
+   * @param int $visibility
+   *   The visibility flag, modifying the interpretation of the $pages value.
+   * @param string $pages
+   *   Paths or custom code defining where to display the block.
+   * @param int $weight
+   *   Ordering weight to give to the block..
+   * @param string $description
+   *   Detailed information describing the migration.
+   *
+   * @see https://api.drupal.org/api/drupal/modules!block!block.api.php/function/hook_block_info/7.x
+   */
+  public function __construct(array $arguments, $bundle, $theme, $region, $visibility, $pages, $weight, $description) {
+    parent::__construct($arguments, $bundle, $description);
+
+    $this->defaultTheme = $theme;
+    $this->defaultRefgion = $region;
+    $this->defaultVisibility = $visibility;
+    $this->defaultPages = $pages;
+    $this->defaultWeight = $weight;
+    $this->description = $description;
+
+  }
+
+  /**
+   * Place a Bean block in a region.
+   *
+   * @param object $entity
+   *   The Bean that has just updated the database.
+   * @param object $row
+   *   Object containing raw source data (from the JSON file).
+   * @throws MigrateException
+   *   Warnings if the automatic block placement fails.
+   */
+  public function complete($entity, stdClass $row) {
+
+    if (empty($row) || !isset($row->id)) {
+      Migration::displayMessage(t('No imported row found when trying to place a Bean block.'));
+      throw new MigrateException(self::MISPLACED);
+    }
+    if (empty($entity) || !isset($entity->bid)) {
+      Migration::displayMessage(t('No saved Bean block to place for row ID !rowid.',
+        array('!rowid' => $row->id)));
+      throw new MigrateException(self::MISPLACED);
+    }
+    if (empty($entity->delta)) {
+      Migration::displayMessage(t('No delta for Bean block bid = !bid placed from row !rowid.',
+        array('!bid' => $entity->bid, '!rowid' => $row->id)));
+      throw new MigrateException(self::MISPLACED);
+    }
+    $theme = (isset($row->theme)) ? $row->theme : $this->getDefaultTheme();
+    $region = (isset($row->region)) ? $row->region : $this->getDefaultRegion();
+    $visibility = (isset($row->visibility)) ? $row->visibility : $this->getDefaultVisibility();
+    $pages = (isset($row->pages)) ? $row->pages : $this->getDefaultPages();
+    $weight = (isset($row->weight)) ? $row->weight : $this->getDefaultWeight();
+    try {
+      $nupdated = db_update('block')
+        ->fields(array('region' => $region, 'status' => 1, 'visibility' => $visibility, 'pages' => $pages, 'weight' => $weight))
+        ->condition('module', 'bean')
+        ->condition('delta', $entity->delta)
+        ->condition('theme', $theme)
+        ->execute();
+    }
+    catch(Exception $e) {
+      Migration::displayMessage(t('Database error when placing block !delta from row !rowid: !dberr',
+        array('!delta' => $entity->delta, '!rowid' => $row->id, '!dberr' => $e->getMessage())));
+      throw new MigrateException(self::MISPLACED);
+    }
+    if ($nupdated == 0) {
+      Migration::displayMessage(t('No database changes for Bean block !delta placed from row !rowid.',
+        array('!delta' => $entity->delta, '!rowid' => $row->id)));
+      throw new MigrateException(self::MISPLACED);
+    }
   }
 
 }
