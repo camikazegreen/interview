@@ -83,6 +83,7 @@ projects[title][version] = 1.0-alpha8
 projects[defaultconfig][version] = 1.0-alpha11
 
 projects[features][version] = 2.10
+projects[features][patch][986968] = https://www.drupal.org/files/issues/986968-shortcut-sets_0.patch
 
 projects[migrate][version] = 2.8
 
