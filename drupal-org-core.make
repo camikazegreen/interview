@@ -11,3 +11,9 @@ projects[drupal][version] = 7.50
 ; @see https://jira.arizona.edu/browse/UADIGITAL-546
 ; @see https://www.drupal.org/node/1079628
 projects[drupal][patch][1079628] = http://drupal.org/files/issues/programatically_added-1079628-24-d7.patch
+
+; Fixes core bug preventing shortcut sets from being importable/exportable.
+; @see https://jira.arizona.edu/browse/UAMS-299
+; @see https://www.drupal.org/node/1175700
+; @see https://www.drupal.org/node/986968
+projects[drupal][patch][1175700] = http://drupal.org/files/issues/1175700-shortcut-set-save-fix-set-name-api_1.patch
