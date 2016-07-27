@@ -220,8 +220,8 @@ function uaqs_fields_entity_info_alter(&$entity_info) {
  * Implements hook_filter_js_settings_alter().
  */
 function uaqs_fields_filter_js_settings_alter(&$settings) {
-  $theme_bootstrap = variable_get('ua_bootstrap_location', '//cdn.uadigital.arizona.edu/lib/ua-bootstrap/1.0.0-alpha7/ua-bootstrap.min.css');
-  if ((strpos($theme_bootstrap, '//') === 0) || (strpos($theme_bootstrap, 'http') === 0))) {
+  $theme_bootstrap = variable_get('ua_bootstrap_location', 'https://cdn.uadigital.arizona.edu/lib/ua-bootstrap/1.0.0-beta1/ua-bootstrap.min.css');
+  if ((strpos($theme_bootstrap, '//') === 0) || (strpos($theme_bootstrap, 'http') === 0)) {
     $ua_bootstrap_css = $theme_bootstrap;
   }
   else {
