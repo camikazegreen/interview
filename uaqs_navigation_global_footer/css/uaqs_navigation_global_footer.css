@@ -15,6 +15,15 @@
     text-transform: none;
     font-size: 14px;
 }
+
+#footer_site #block-bean-uaqs-footer-links-bean-main ul.menu li a:hover {
+  text-decoration: underline;
+}
+
+#footer_sub #block-bean-uaqs-footer-links-bean-resourc ul.menu li a:hover {
+  text-decoration: none;
+}
+
 #block-bean-main-unit-or-department-contact- {
     color: hsl(0, 0%, 20%);
     text-decoration: none;
@@ -32,8 +41,13 @@
     vertical-align: top;
     text-transform: none;
 }
+
+#footer_sub ul.menu li a:hover {
+  text-decoration: underline;
+}
+
 #footer_sub ul.menu li a i {
-        margin: 0;
+        margin: 0 .5em 0 0;
     }
 #footer_site #footer_sub ul.menu li {
     border-right: 0px solid #B6BEC1;

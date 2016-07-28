@@ -1,3 +1,35 @@
+7.x-1.0-alpha5, 2016-05-02
+------------------------------
+- Back to dev.
+
+7.x-1.0-alpha4, 2016-05-02
+------------------------------
+- UADIGITAL-692: Reduce space between footer resouces/connect icons and links.
+- Fixed spacing issue within the code.
+- Made footer links under on hover.
+- Merged in UADIGITAL-485 (pull request #8).
+- UADIGITAL-485: Disabling missing jquery easing plugin until we decide to add it intentionally.
+- Merged in UADIGITAL-702 (pull request #7).
+- UADIGITAL-702: Adding patch to fix Menu Bean autoload problem.
+- UADIGITAL-702: Removing unnecessary permissions, removing bean title.
+- Merged in UADIGITAL-485 (pull request #5).
+- UADIGITAL-485: Respecting 'show as expanded' menu item attributes by default.
+- UADIGITAL-485: Adding pre-configured superfish block.
+- UADIGITAL-485: Re-enabling (& updating) Superfish module, adding utitility function for creating Superfish instances programatically.
+- Merged in UADIGITAL-693 (pull request #4).
+- UADIGITAL-693: Fixing permissions problem.
+- UADIGITAL-693: Add submodule for global footer menu blocks.
+- Merged in UADIGITAL-547 (pull request #2).
+- UADIGITAL-547: Increasing max depth of second-level navigation menu block.
+- Merged in mmunro-ltrr/uaqs_navigation/UADIGITAL-523 (pull request #1).
+- Hide the UAQS label in content type names and revise the descriptions.
+- Rename UA to UAQS in the file contents.
+- UADIGTAL-404: Removing jquery_update from makefile and README.
+- Merged in trackleft/ua_navigation/UADIGITAL-404-add-jquery-update-to-ua-co_2 (pull request #9).
+- Removing jquery update since it is now in ua_core UADIGITAL-404.
+- Merged ua_drupal/ua_navigation into 7.x-1.x.
+- Back to dev.
+
 7.x-1.0-alpha3, 2015-10-23
 ------------------------------
 - Merged in UADIGITAL-344 (pull request #8).

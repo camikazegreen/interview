@@ -15,12 +15,12 @@ defaults[projects][subdir] = contrib
 ; ------------------------------------------------------------------------------
 
 projects[bean][version] = 1.9
+
 projects[menu_bean][version] = 1.0-beta2
+projects[menu_bean][download][type] = git
+projects[menu_bean][download][tag] = 7.x-1.0-beta2
+projects[menu_bean][patch][2714007] = http://drupal.org/files/issues/bean_plugin_class_not-2714007-2_0.patch
+
 projects[menu_block][version] = 2.7
 projects[xautoload][version] = 5.6
-
-; TODO: remove this after third release.
-projects[superfish][version] = 1.x-dev
-projects[superfish][download][type] = git
-projects[superfish][download][revision] = fa3d7c6
-projects[superfish][download][branch] = 7.x-1.x
+projects[superfish][version] = 2.0

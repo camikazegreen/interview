@@ -1,7 +1,12 @@
 <?php
 /**
  * @file
- * uaqs_demo.module
+ * Code for the UAQS Navigation feature.
+ */
+
+/**
+ * @file
+ * uaqs_navigation_global_footer.module
  */
 drupal_add_css('//brand.arizona.edu/sites/all/themes/brand/ua-brand-icons/ua-brand-icons.css', array(
         'type' => 'external',
@@ -73,27 +78,27 @@ function uaqs_navigation_global_footer_preprocess_link(array &$variables) {
   switch ($path) {
       case 'http://www.arizona.edu/weather':
           $variables['options']['html'] = TRUE;
-          $variables['text'] = $variables['text'] . '<i class="ua-brand-weather pull-right"></i>';
+          $variables['text'] = '<i class="ua-brand-weather"></i>' . $variables['text'];
           break;
       case 'http://uanews.org':
           $variables['options']['html'] = TRUE;
-          $variables['text'] = $variables['text'] . '<i class="ua-brand-news pull-right"></i>';
+          $variables['text'] = '<i class="ua-brand-news"></i>' . $variables['text'];
           break;
       case 'http://directory.arizona.edu/index':
           $variables['options']['html'] = TRUE;
-          $variables['text'] = $variables['text'] . '<i class="ua-brand-directory pull-right"></i>';
+          $variables['text'] =  '<i class="ua-brand-directory"></i>' . $variables['text']; 
           break;
       case 'http://map.arizona.edu':
           $variables['options']['html'] = TRUE;
-          $variables['text'] = $variables['text'] . '<i class="ua-brand-campus-map pull-right"></i>';
+          $variables['text'] = '<i class="ua-brand-campus-map"></i>' . $variables['text'];
           break;
       case 'http://www.arizona.edu/calendars-events':
           $variables['options']['html'] = TRUE;
-          $variables['text'] = $variables['text'] . '<i class="ua-brand-calendar pull-right"></i>';
+          $variables['text'] = '<i class="ua-brand-calendar"></i>' . $variables['text'];
           break;
       case 'http://directory.arizona.edu/phonebook':
           $variables['options']['html'] = TRUE;
-          $variables['text'] = $variables['text'] . '<i class="ua-brand-directory pull-right"></i>';
+          $variables['text'] = '<i class="ua-brand-directory"></i>' .    $variables['text'];
           break;
       default:
           $variables['text'];

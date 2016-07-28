@@ -25,6 +25,11 @@ function uaqs_navigation_install() {
 /**
  * Disable Superfish module.
  */
-function uaqs_navigation_update_7100() {
-  module_disable(array('superfish'));
+function uaqs_navigation_update_7100() {}
+
+/**
+ * Re-enable Superfish module.
+ */
+function uaqs_navigation_update_7101() {
+  module_enable(array('superfish'));
 }
