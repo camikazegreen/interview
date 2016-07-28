@@ -56,10 +56,10 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
       '!uabootstrap' => l(t('UA Bootstrap'), 'http://uadigital.arizona.edu/ua-bootstrap', array(
         'external' => TRUE,
       )),
-      '!uabootstrapcdn' => l(t('UA Bootstrap CDN'), 'https://bitbucket.org/uadigital/ua-bootstrap/downloads', array(
+      '!uabootstrapcdn' => l(t('UA Bootstrap CDN'), 'http://cdn.uadigital.arizona.edu/lib/ua-bootstrap', array(
         'external' => TRUE,
       )),
-      '!warning' => '<div class="alert alert-info messages info"><strong>' . t('NOTE') . ':</strong> ' . t('While the UA Bootstrap CDN is the preferred method for providing huge performance gains in load time, this method does depend on using this third party service (BitBucket). Bitbucket is under no obligation or commitment to provide guaranteed up-time or service quality for this theme.') . '</div>',
+      '!warning' => '<div class="alert alert-info messages info"><strong>' . t('NOTE') . ':</strong> ' . t('The UA Bootstrap CDN is the preferred method for providing huge performance gains in load time.') . '</div>',
     )),
   );
   $form['ua_settings']['ua_bootstrap']['ua_bootstrap_cdn'] = array(
@@ -166,6 +166,7 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
   // copied the file from PHP's temporary holding space. This technique also
   // gives the field a "stock" feel to the user, rather than the bolt on feel
   // the prior solution created.
+
   $form['logo']['settings']['footer_logo_path'] = array(
     '#type' => 'textfield',
     '#title' => t('Path to custom footer logo'),
@@ -178,6 +179,13 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
     '#title' => t('Upload footer logo image'),
     '#maxlength' => 40,
     '#description' => t("If you don't have direct file access to the server, use this field to upload your footer logo."),
+  );
+
+  $form['logo']['settings']['footer_logo_link_destination'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Footer logo link destination'),
+    '#description' => t('Where should the footer logo link to. Example: &#x3C;front&#x3E;'),
+    '#default_value' => theme_get_setting('footer_logo_link_destination'),
   );
 
   $form['ua_settings']['settings']['ua_copyright_notice'] = array(

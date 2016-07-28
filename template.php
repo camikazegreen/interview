@@ -17,7 +17,7 @@ drupal_add_js('//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', a
         )
 );
 /**
- * Implements hook_css_alter(). 
+ * Implements hook_css_alter().
  */
 function ua_zen_css_alter(&$css) {
   /**
@@ -43,7 +43,7 @@ function ua_zen_css_alter(&$css) {
     if ($ua_bootstrap_cdn_version == 'stable') {
       $ua_bootstrap_cdn_version = UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION;
     }
-    $ua_bootstrap_path = '//bitbucket.org/uadigital/ua-bootstrap/downloads/ua-bootstrap-' . $ua_bootstrap_cdn_version;
+    $ua_bootstrap_path = '//cdn.uadigital.arizona.edu/lib/ua-bootstrap/' . $ua_bootstrap_cdn_version . '/ua-bootstrap';
     $ua_bootstrap_css_info['type'] = 'external';
   }
   else {
@@ -63,7 +63,7 @@ function ua_zen_css_alter(&$css) {
   if (!empty($excludes)) {
     $css = array_diff_key($css, drupal_map_assoc($excludes));
   }
-  
+
 }
 
 
@@ -74,12 +74,19 @@ function ua_zen_css_alter(&$css) {
 function ua_zen_footer_logo() {
   $str_return = "";
   $str_footer_logo_path = theme_get_setting('footer_logo_path');
+  $str_footer_link_destination = theme_get_setting('footer_logo_link_destination');
 
   if (strlen($str_footer_logo_path) > 0) {
     $str_url = file_create_url($str_footer_logo_path);
     $str_return = "<img src=\"" . $str_url . "\" alt=\"\" />";
-
+    if (strlen($str_footer_link_destination) > 0) {
+      $str_return = l($str_return , url($str_footer_link_destination), array('html' => TRUE));
+    }
+    else if (strlen($str_footer_link_destination) == 0) {
+      $str_return = l($str_return , url('<front>'), array('html' => TRUE));
+    }
   }
+
   return $str_return;
 }
 
@@ -354,6 +361,7 @@ function ua_zen_preprocess_region(&$variables, $hook) {
         $str_logo_path = theme_get_setting('logo');
         if (strlen($str_logo_path) > 0) {
           $str_footer_logo_html = "<img src='" . file_create_url($str_logo_path) . "' alt='' />";
+          $str_footer_logo_html = l($str_footer_logo_html , url('<front>'), array('html' => TRUE));
         }
       }
       break;

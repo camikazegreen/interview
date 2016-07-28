@@ -196,7 +196,8 @@ settings[zen_html5_respond_meta][] = meta
 settings[zen_rebuild_registry]     = 1
 settings[zen_wireframes]           = 0
 settings[ua_copyright_notice]      = 'The Arizona Board of Regents on behalf of <a href=\"http://www.arizona.edu\" target=\"_blank\">The University of Arizona</a>.'
-settings[ua_bootstrap_source]      = local
+settings[footer_logo_link_destination] = <front>
+settings[ua_bootstrap_source]      = cdn
 settings[ua_bootstrap_cdn_version] = stable
 settings[ua_bootstrap_minified]    = 1
 settings[ua_zen_hide_front_title]  = 0
