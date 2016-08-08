@@ -24,7 +24,7 @@ function uaqs_content_chunks_card_deck_field_group_info() {
     'weight' => '9',
     'children' => array(
       0 => 'field_uaqs_links',
-      1 => 'field_uaqs_summary',
+      1 => 'group_card_text',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -134,6 +134,36 @@ function uaqs_content_chunks_card_deck_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_card_text|field_collection_item|field_uaqs_cards|default';
+  $field_group->group_name = 'group_card_text';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_uaqs_cards';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_card_block';
+  $field_group->data = array(
+    'label' => 'Card Text',
+    'weight' => '16',
+    'children' => array(
+      0 => 'field_uaqs_summary',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Card Text',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card-text',
+        'element' => 'p',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_card_text|field_collection_item|field_uaqs_cards|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_card_title|field_collection_item|field_uaqs_cards|default';
   $field_group->group_name = 'group_card_title';
   $field_group->entity_type = 'field_collection_item';
@@ -199,6 +229,7 @@ function uaqs_content_chunks_card_deck_field_group_info() {
   t('Card Block');
   t('Card Deck');
   t('Card Header');
+  t('Card Text');
   t('Card Title');
   t('Card deck wrapper');
 
