@@ -18,7 +18,6 @@ dependencies[] = list
 dependencies[] = telephone
 dependencies[] = text
 dependencies[] = title
-dependencies[] = uaqs_core
 features[defaultconfig][] = strongarm:fences_default_classes
 features[defaultconfig][] = strongarm:fences_default_markup
 features[defaultconfig][] = strongarm:title_bean
