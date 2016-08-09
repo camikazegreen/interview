@@ -26,7 +26,7 @@ function uaqs_content_chunks_card_deck_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'link_default',
-        'weight' => 11,
+        'weight' => 18,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -37,7 +37,7 @@ function uaqs_content_chunks_card_deck_field_default_field_instances() {
     'settings' => array(
       'absolute_url' => 1,
       'attributes' => array(
-        'class' => '',
+        'class' => 'card-link',
         'configurable_class' => 1,
         'configurable_title' => 0,
         'rel' => '',
@@ -173,7 +173,7 @@ function uaqs_content_chunks_card_deck_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 17,
       ),
     ),
     'entity_type' => 'field_collection_item',
