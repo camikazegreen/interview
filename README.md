@@ -38,7 +38,7 @@ Complete pre-built versions of the UA QuickStart distribution are in the [downlo
 
 ## Contributing to the Project
 
-To contribute to the project you will need your own account on the [Bitbucket](bitbucket.org) repository hosting service, as well as a local development environment (like a laptop or test web server) where you can use the [Git](http://git-scm.com/) version control system client and the widely used [Drush](http://docs.drush.org/en/master/) Drupal command-line utility. Ideally your development environment will include a web server that can support Drupal, for local testing of your work.
+To contribute to the project you will need your own account on the [Bitbucket](bitbucket.org) repository hosting service, as well as a local development environment (like a laptop or test web server) where you can use the [Git](http://git-scm.com/) version control system client and the widely used [Drush](http://docs.drush.org/en/master/) Drupal command-line utility. Ideally your development environment will include a web server that can support Drupal, for local testing of your work.  If you have never heard of Git, Here is a [text tutorial](https://www.atlassian.com/git/tutorials/what-is-git) and here is a [video tutorial](https://www.youtube.com/watch?v=8oRjP8yj2Wo) to help get you started.
 
 ### 1. Fork a Repository on Bitbucket
 
@@ -52,6 +52,9 @@ Clone a copy of your forked repository in some location where it is easy to work
     git clone git@bitbucket.org:tobiashume/ua_google_tag.git
 
 (with your username substituted for `tobiashume`, the repository of interest for `ua_google_tag` and your own working directory for Git clones in place of `gitwork`).
+
+Protip: [Add an ssh key to bitbucket](https://confluence.atlassian.com/bitbucket/set-up-ssh-for-git-728138079.html) and never enter your password in the command
+line again.
 
 ### 3. Check Out an Issue Branch
 
