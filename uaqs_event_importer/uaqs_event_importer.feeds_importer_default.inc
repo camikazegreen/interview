@@ -91,11 +91,6 @@ function uaqs_event_importer_feeds_importer_default() {
             'unique' => FALSE,
             'language' => 'und',
           ),
-          8 => array(
-            'source' => 'DESCRIPTION',
-            'target' => 'field_uaqs_short_title',
-            'unique' => FALSE,
-          ),
         ),
         'update_existing' => '2',
         'input_format' => 'uaqs_filtered_html',
