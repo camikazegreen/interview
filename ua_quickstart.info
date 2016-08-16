@@ -56,6 +56,7 @@ dependencies[] = uaqs_person
 dependencies[] = uaqs_unit
 dependencies[] = uaqs_news
 dependencies[] = uaqs_event
+dependencies[] = uaqs_event_view
 dependencies[] = uaqs_publication
 dependencies[] = uaqs_program
 
