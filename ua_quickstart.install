@@ -253,7 +253,7 @@ function ua_quickstart_default_blocks($default_theme, $admin_theme) {
   // UAQS News.
   if (module_exists('uaqs_news')) {
     $news_blocks = array(
-      'uaqs_news-home_3_col_news_block' => array(
+      'uaqs_news-three_col_news_block' => array(
         'region' => 'content',
         'weight' => 10,
       ),
