@@ -1,19 +1,19 @@
 <?php
 /**
  * @file
- * uaqs_big_image_teaser.features.field_instance.inc
+ * uaqs_content_chunks_text_over_media.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function uaqs_big_image_teaser_field_default_field_instances() {
+function uaqs_content_chunks_text_over_media_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'paragraphs_item-uaqs_full_width_teaser-field_uaqs_html'.
-  $field_instances['paragraphs_item-uaqs_full_width_teaser-field_uaqs_html'] = array(
-    'bundle' => 'uaqs_full_width_teaser',
+  // 'paragraphs_item-uaqs_content_chunks_text_over_media-field_uaqs_html'.
+  $field_instances['paragraphs_item-uaqs_content_chunks_text_over_media-field_uaqs_html'] = array(
+    'bundle' => 'uaqs_content_chunks_text_over_media',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -56,9 +56,9 @@ function uaqs_big_image_teaser_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-uaqs_full_width_teaser-field_uaqs_link'.
-  $field_instances['paragraphs_item-uaqs_full_width_teaser-field_uaqs_link'] = array(
-    'bundle' => 'uaqs_full_width_teaser',
+  // 'paragraphs_item-uaqs_content_chunks_text_over_media-field_uaqs_link'.
+  $field_instances['paragraphs_item-uaqs_content_chunks_text_over_media-field_uaqs_link'] = array(
+    'bundle' => 'uaqs_content_chunks_text_over_media',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -118,9 +118,9 @@ function uaqs_big_image_teaser_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-uaqs_full_width_teaser-field_uaqs_photo'.
-  $field_instances['paragraphs_item-uaqs_full_width_teaser-field_uaqs_photo'] = array(
-    'bundle' => 'uaqs_full_width_teaser',
+  // 'paragraphs_item-uaqs_content_chunks_text_over_media-field_uaqs_photo'.
+  $field_instances['paragraphs_item-uaqs_content_chunks_text_over_media-field_uaqs_photo'] = array(
+    'bundle' => 'uaqs_content_chunks_text_over_media',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -187,9 +187,9 @@ function uaqs_big_image_teaser_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-uaqs_full_width_teaser-field_uaqs_summary_short'.
-  $field_instances['paragraphs_item-uaqs_full_width_teaser-field_uaqs_summary_short'] = array(
-    'bundle' => 'uaqs_full_width_teaser',
+  // 'paragraphs_item-uaqs_content_chunks_text_over_media-field_uaqs_summary_short'.
+  $field_instances['paragraphs_item-uaqs_content_chunks_text_over_media-field_uaqs_summary_short'] = array(
+    'bundle' => 'uaqs_content_chunks_text_over_media',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
