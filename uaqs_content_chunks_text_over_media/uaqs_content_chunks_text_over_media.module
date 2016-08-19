@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the UAQS Content Chunks - Text over media feature.
- */
-
-include_once 'uaqs_content_chunks_text_over_media.features.inc';

@@ -1,22 +1,22 @@
 <?php
 /**
  * @file
- * uaqs_content_chunks_text_over_media.field_group.inc
+ * uaqs_content_chunks_marquee.field_group.inc
  */
 
 /**
  * Implements hook_field_group_info().
  */
-function uaqs_content_chunks_text_over_media_field_group_info() {
+function uaqs_content_chunks_marquee_field_group_info() {
   $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_banner_text|paragraphs_item|uaqs_content_chunks_text_over_media|default';
+  $field_group->identifier = 'group_banner_text|paragraphs_item|uaqs_content_chunks_marquee|default';
   $field_group->group_name = 'group_banner_text';
   $field_group->entity_type = 'paragraphs_item';
-  $field_group->bundle = 'uaqs_content_chunks_text_over_media';
+  $field_group->bundle = 'uaqs_content_chunks_marquee';
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_bs_column';
   $field_group->data = array(
@@ -38,15 +38,15 @@ function uaqs_content_chunks_text_over_media_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_banner_text|paragraphs_item|uaqs_content_chunks_text_over_media|default'] = $field_group;
+  $field_groups['group_banner_text|paragraphs_item|uaqs_content_chunks_marquee|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_bs_column|paragraphs_item|uaqs_content_chunks_text_over_media|default';
+  $field_group->identifier = 'group_bs_column|paragraphs_item|uaqs_content_chunks_marquee|default';
   $field_group->group_name = 'group_bs_column';
   $field_group->entity_type = 'paragraphs_item';
-  $field_group->bundle = 'uaqs_content_chunks_text_over_media';
+  $field_group->bundle = 'uaqs_content_chunks_marquee';
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
@@ -68,15 +68,15 @@ function uaqs_content_chunks_text_over_media_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_bs_column|paragraphs_item|uaqs_content_chunks_text_over_media|default'] = $field_group;
+  $field_groups['group_bs_column|paragraphs_item|uaqs_content_chunks_marquee|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_h3_banner|paragraphs_item|uaqs_content_chunks_text_over_media|default';
+  $field_group->identifier = 'group_h3_banner|paragraphs_item|uaqs_content_chunks_marquee|default';
   $field_group->group_name = 'group_h3_banner';
   $field_group->entity_type = 'paragraphs_item';
-  $field_group->bundle = 'uaqs_content_chunks_text_over_media';
+  $field_group->bundle = 'uaqs_content_chunks_marquee';
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_row';
   $field_group->data = array(
@@ -98,15 +98,15 @@ function uaqs_content_chunks_text_over_media_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_h3_banner|paragraphs_item|uaqs_content_chunks_text_over_media|default'] = $field_group;
+  $field_groups['group_h3_banner|paragraphs_item|uaqs_content_chunks_marquee|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_home_banner|paragraphs_item|uaqs_content_chunks_text_over_media|default';
+  $field_group->identifier = 'group_home_banner|paragraphs_item|uaqs_content_chunks_marquee|default';
   $field_group->group_name = 'group_home_banner';
   $field_group->entity_type = 'paragraphs_item';
-  $field_group->bundle = 'uaqs_content_chunks_text_over_media';
+  $field_group->bundle = 'uaqs_content_chunks_marquee';
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
@@ -128,15 +128,15 @@ function uaqs_content_chunks_text_over_media_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_home_banner|paragraphs_item|uaqs_content_chunks_text_over_media|default'] = $field_group;
+  $field_groups['group_home_banner|paragraphs_item|uaqs_content_chunks_marquee|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_read_more|paragraphs_item|uaqs_content_chunks_text_over_media|default';
+  $field_group->identifier = 'group_read_more|paragraphs_item|uaqs_content_chunks_marquee|default';
   $field_group->group_name = 'group_read_more';
   $field_group->entity_type = 'paragraphs_item';
-  $field_group->bundle = 'uaqs_content_chunks_text_over_media';
+  $field_group->bundle = 'uaqs_content_chunks_marquee';
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_row';
   $field_group->data = array(
@@ -158,15 +158,15 @@ function uaqs_content_chunks_text_over_media_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_read_more|paragraphs_item|uaqs_content_chunks_text_over_media|default'] = $field_group;
+  $field_groups['group_read_more|paragraphs_item|uaqs_content_chunks_marquee|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_row|paragraphs_item|uaqs_content_chunks_text_over_media|default';
+  $field_group->identifier = 'group_row|paragraphs_item|uaqs_content_chunks_marquee|default';
   $field_group->group_name = 'group_row';
   $field_group->entity_type = 'paragraphs_item';
-  $field_group->bundle = 'uaqs_content_chunks_text_over_media';
+  $field_group->bundle = 'uaqs_content_chunks_marquee';
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_banner_text';
   $field_group->data = array(
@@ -190,7 +190,7 @@ function uaqs_content_chunks_text_over_media_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_row|paragraphs_item|uaqs_content_chunks_text_over_media|default'] = $field_group;
+  $field_groups['group_row|paragraphs_item|uaqs_content_chunks_marquee|default'] = $field_group;
 
   // Translatables
   // Included for use with string extractors like potx.
