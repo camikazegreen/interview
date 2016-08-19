@@ -293,7 +293,7 @@ function ua_quickstart_demo_blocks($default_theme, $admin_theme) {
   );
 
   // Enable the contact summary block in the footer_sub region.
-  if (module_exists('uaqs_block_types')) {
+  if (module_exists('uaqs_block_types_contact_summary')) {
     $contact_delta = 'main-unit-or-department-contact-';
     $contact_summary_blocks = array(
       $contact_delta => array(
