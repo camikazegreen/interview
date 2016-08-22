@@ -33,4 +33,5 @@
 .paragraphs-item-uaqs-content-chunks-marquee {
     overflow: hidden;
     width: 100%;
+    margin: 1em 0;
 }
