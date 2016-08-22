@@ -1,19 +1,19 @@
 <?php
 /**
  * @file
- * uaqs_content_chunks_text_over_media.features.field_instance.inc
+ * uaqs_content_chunks_marquee.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function uaqs_content_chunks_text_over_media_field_default_field_instances() {
+function uaqs_content_chunks_marquee_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'paragraphs_item-uaqs_content_chunks_text_over_media-field_uaqs_html'.
-  $field_instances['paragraphs_item-uaqs_content_chunks_text_over_media-field_uaqs_html'] = array(
-    'bundle' => 'uaqs_content_chunks_text_over_media',
+  // 'paragraphs_item-uaqs_content_chunks_marquee-field_uaqs_html'.
+  $field_instances['paragraphs_item-uaqs_content_chunks_marquee-field_uaqs_html'] = array(
+    'bundle' => 'uaqs_content_chunks_marquee',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -41,7 +41,7 @@ function uaqs_content_chunks_text_over_media_field_default_field_instances() {
     'label' => 'Body',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -56,9 +56,9 @@ function uaqs_content_chunks_text_over_media_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-uaqs_content_chunks_text_over_media-field_uaqs_link'.
-  $field_instances['paragraphs_item-uaqs_content_chunks_text_over_media-field_uaqs_link'] = array(
-    'bundle' => 'uaqs_content_chunks_text_over_media',
+  // 'paragraphs_item-uaqs_content_chunks_marquee-field_uaqs_link'.
+  $field_instances['paragraphs_item-uaqs_content_chunks_marquee-field_uaqs_link'] = array(
+    'bundle' => 'uaqs_content_chunks_marquee',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -118,9 +118,9 @@ function uaqs_content_chunks_text_over_media_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-uaqs_content_chunks_text_over_media-field_uaqs_photo'.
-  $field_instances['paragraphs_item-uaqs_content_chunks_text_over_media-field_uaqs_photo'] = array(
-    'bundle' => 'uaqs_content_chunks_text_over_media',
+  // 'paragraphs_item-uaqs_content_chunks_marquee-field_uaqs_photo'.
+  $field_instances['paragraphs_item-uaqs_content_chunks_marquee-field_uaqs_photo'] = array(
+    'bundle' => 'uaqs_content_chunks_marquee',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -162,34 +162,20 @@ function uaqs_content_chunks_text_over_media_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'oembed' => 0,
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 'media_default--media_browser_1',
-          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-          'media_internet' => 0,
-          'upload' => 'upload',
-        ),
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
-      'weight' => 0,
+      'type' => 'image_image',
+      'weight' => 1,
     ),
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-uaqs_content_chunks_text_over_media-field_uaqs_summary_short'.
-  $field_instances['paragraphs_item-uaqs_content_chunks_text_over_media-field_uaqs_summary_short'] = array(
-    'bundle' => 'uaqs_content_chunks_text_over_media',
+  // 'paragraphs_item-uaqs_content_chunks_marquee-field_uaqs_summary_short'.
+  $field_instances['paragraphs_item-uaqs_content_chunks_marquee-field_uaqs_summary_short'] = array(
+    'bundle' => 'uaqs_content_chunks_marquee',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
