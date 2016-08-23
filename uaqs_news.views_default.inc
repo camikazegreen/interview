@@ -73,7 +73,7 @@ function uaqs_news_views_default_views() {
     'interval' => 2,
     'interval_display' => 'time ago',
   );
-  /* Field: Field: Summary */
+  /* Field: Content: Summary */
   $handler->display->display_options['fields']['field_uaqs_summary']['id'] = 'field_uaqs_summary';
   $handler->display->display_options['fields']['field_uaqs_summary']['table'] = 'field_data_field_uaqs_summary';
   $handler->display->display_options['fields']['field_uaqs_summary']['field'] = 'field_uaqs_summary';
@@ -121,19 +121,21 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
 
-  /* Display: Home Teaser Block */
-  $handler = $view->new_display('block', 'Home Teaser Block', 'home_3_col_news_block');
+  /* Display: Teaser Block */
+  $handler = $view->new_display('block', 'Teaser Block', '3_col_news_block');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'row';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'col-sm-4';
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
-  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'views_bootstrap_grid_plugin_style';
+  $handler->display->display_options['style_options']['columns_horizontal'] = '0';
+  $handler->display->display_options['style_options']['columns_vertical'] = '4';
+  $handler->display->display_options['style_options']['columns_xs'] = '12';
+  $handler->display->display_options['style_options']['columns_sm'] = '6';
+  $handler->display->display_options['style_options']['columns_md'] = '4';
+  $handler->display->display_options['style_options']['columns_lg'] = '4';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
@@ -184,7 +186,7 @@ function uaqs_news_views_default_views() {
     'multiple_to' => '',
     'show_repeat_rule' => 'show',
   );
-  /* Field: Field: Summary */
+  /* Field: Content: Summary */
   $handler->display->display_options['fields']['field_uaqs_summary']['id'] = 'field_uaqs_summary';
   $handler->display->display_options['fields']['field_uaqs_summary']['table'] = 'field_data_field_uaqs_summary';
   $handler->display->display_options['fields']['field_uaqs_summary']['field'] = 'field_uaqs_summary';
@@ -283,7 +285,7 @@ function uaqs_news_views_default_views() {
     'multiple_to' => '',
     'show_repeat_rule' => 'show',
   );
-  /* Field: Field: Summary */
+  /* Field: Content: Summary */
   $handler->display->display_options['fields']['field_uaqs_summary']['id'] = 'field_uaqs_summary';
   $handler->display->display_options['fields']['field_uaqs_summary']['table'] = 'field_data_field_uaqs_summary';
   $handler->display->display_options['fields']['field_uaqs_summary']['field'] = 'field_uaqs_summary';
