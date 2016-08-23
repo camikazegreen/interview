@@ -180,7 +180,7 @@ function uaqs_content_chunks_marquee_field_group_info() {
       'label' => 'Read More',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'b-blue text-center',
+        'classes' => 'text-center card-block',
         'element' => 'div',
         'show_label' => '0',
         'label_element' => '',
