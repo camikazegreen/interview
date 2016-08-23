@@ -26,7 +26,7 @@ function uaqs_content_chunks_marquee_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 11,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
