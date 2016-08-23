@@ -30,7 +30,7 @@ function uaqs_content_chunks_marquee_field_group_info() {
       'label' => 'Banner Text',
       'instance_settings' => array(
         'id' => 'banner-text',
-        'classes' => 'banner-text-grid',
+        'classes' => 'banner-text-grid text-center',
         'element' => 'section',
         'show_label' => '0',
         'label_element' => '',
@@ -103,6 +103,36 @@ function uaqs_content_chunks_marquee_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_headline|paragraphs_item|uaqs_content_chunks_marquee|default';
+  $field_group->group_name = 'group_headline';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'uaqs_content_chunks_marquee';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_row';
+  $field_group->data = array(
+    'label' => 'Headline',
+    'weight' => '9',
+    'children' => array(
+      0 => 'field_uaqs_summary_short',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Headline',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'sans blue60b',
+        'element' => 'h2',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_headline|paragraphs_item|uaqs_content_chunks_marquee|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_home_banner|paragraphs_item|uaqs_content_chunks_marquee|default';
   $field_group->group_name = 'group_home_banner';
   $field_group->entity_type = 'paragraphs_item';
@@ -141,7 +171,7 @@ function uaqs_content_chunks_marquee_field_group_info() {
   $field_group->parent_name = 'group_row';
   $field_group->data = array(
     'label' => 'Read More',
-    'weight' => '4',
+    'weight' => '12',
     'children' => array(
       0 => 'field_uaqs_link',
     ),
@@ -150,7 +180,7 @@ function uaqs_content_chunks_marquee_field_group_info() {
       'label' => 'Read More',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'b-blue text-center',
+        'classes' => 'text-center card-block',
         'element' => 'div',
         'show_label' => '0',
         'label_element' => '',
@@ -174,8 +204,8 @@ function uaqs_content_chunks_marquee_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_uaqs_html',
-      1 => 'group_h3_banner',
-      2 => 'group_read_more',
+      1 => 'group_read_more',
+      2 => 'group_headline',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(

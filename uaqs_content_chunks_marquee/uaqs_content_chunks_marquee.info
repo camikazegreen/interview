@@ -16,6 +16,7 @@ features[features_api][] = api:2
 features[field_group][] = group_banner_text|paragraphs_item|uaqs_content_chunks_marquee|default
 features[field_group][] = group_bs_column|paragraphs_item|uaqs_content_chunks_marquee|default
 features[field_group][] = group_h3_banner|paragraphs_item|uaqs_content_chunks_marquee|default
+features[field_group][] = group_headline|paragraphs_item|uaqs_content_chunks_marquee|default
 features[field_group][] = group_home_banner|paragraphs_item|uaqs_content_chunks_marquee|default
 features[field_group][] = group_read_more|paragraphs_item|uaqs_content_chunks_marquee|default
 features[field_group][] = group_row|paragraphs_item|uaqs_content_chunks_marquee|default
