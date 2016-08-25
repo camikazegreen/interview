@@ -141,6 +141,14 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Unfiltered text */
+  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="item-list text-center"><ul class="pagination">
+<li><a title="Read All Stories" href="./news">Read All News</a></li>
+</ul></div>';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Publication Photos */
   $handler->display->display_options['fields']['field_uaqs_photos']['id'] = 'field_uaqs_photos';
