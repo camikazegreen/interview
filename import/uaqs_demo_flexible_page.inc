@@ -248,6 +248,73 @@ class UaqsDemoFileAttachmentMigration extends UaqsParagraphsItemMigration {
 }
 
 /**
+ * Defines migration into the UAQS Marquee type of Paragraphs entity.
+ */
+class UaqsDemoMarqueeMigration extends UaqsParagraphsItemMigration {
+
+  /**
+   * Constructor.
+   *
+   * @param array $arguments
+   *   Arguments for the parent constructor (Migration standard behavior).
+   */
+  public function __construct(array $arguments) {
+    parent::__construct($arguments, 'uaqs_content_chunks_marquee', 'field_uaqs_main_content',
+      t('Populate demonstration UAQS Marquee entities (based on Paragraphs).'));
+    // Paragraphs view_mode
+    $paragraphs_core = array (
+      'view_mode' => t('View Mode'),
+    );
+    // Fields to import to the bundle.
+    $data_fields = array(
+      'uaqs_summary_short' => t('Title'),
+      'uaqs_html' => t('Body'),
+      'uaqs_link' => t('Read more'),
+    );
+    // Image fields...
+    $image_src_field = 'uaqs_photo';
+    $image_fields = array(
+      $image_src_field => t('Image to place in content'),
+    );
+
+    // Titles for link...
+    $link_title_fields = array(
+      'uaqs_link_title' => t('Read more link title'),
+    );
+
+    // All the fields to migrate.
+    $fields = $this->getSourceKeyField() + $paragraphs_core + $data_fields + $image_fields + $link_title_fields ;
+
+    // Source definition.
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
+
+    $this->addSimpleMappings(array('view_mode'));
+    $this->addFieldMapping('field_uaqs_summary_short', 'uaqs_summary_short');
+
+    // Images.
+    $image_dst_field = 'field_' . $image_src_field;
+    $this->addFieldMapping($image_dst_field, $image_src_field)
+         ->separator('|');
+    $this->addFieldMapping($image_dst_field . ':file_replace')
+         ->defaultValue(FILE_EXISTS_REPLACE);
+    $this->addFieldMapping($image_dst_field . ':file_class')
+         ->defaultValue('MigrateFileUri');
+    $this->addFieldMapping($image_dst_field . ':source_dir')
+         ->defaultValue($this->imagePath());
+    // Map JSON names to simple content type fields and subfields.
+    $this->addFieldMapping('field_uaqs_html', 'uaqs_html');
+    // Allow limited HTML markup in the text area field.
+    $this->addFieldMapping('field_uaqs_html:format')
+         ->defaultValue('uaqs_full_html');
+    // Map JSON names to simple content type fields and subfields.
+    $this->addFieldMapping('field_uaqs_link', 'uaqs_link');
+    // Link title is a special case.
+    $this->addFieldMapping('field_uaqs_link:title', 'uaqs_link_title');
+  }
+
+}
+
+/**
  * Makes demonstration UAQS Flexible Page content from pre-defined data.
  *
  * This migration imports a small part of the UAQS FlexiblePage content directly
@@ -292,6 +359,7 @@ class UaqsDemoFlexiblePageMigration extends UaqsNodeMigration {
            'UaqsDemoPlainText',
            'UaqsDemoHeadedText',
            'UaqsDemoColumnImage',
+           'UaqsDemoMarquee',
          ));
   }
 
