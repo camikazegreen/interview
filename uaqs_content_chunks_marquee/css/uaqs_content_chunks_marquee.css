@@ -1,0 +1,21 @@
+#home-banner img {
+    width: 100%;
+}
+
+.banner-text-grid {
+    background-color: rgba(255,255,255,0.92);
+    padding: 30px 80px;
+    margin-top: -135px;
+}
+
+.bottom-line {
+    padding: 20px 0;
+    border-bottom: 2px solid #f3f3f3;
+    border-top: 2px solid #f3f3f3;
+}
+
+.paragraphs-item-uaqs-content-chunks-marquee {
+    overflow: hidden;
+    width: 100%;
+    margin: 1em 0;
+}
