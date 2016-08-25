@@ -122,7 +122,7 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['menu']['context_only_inline'] = 0;
 
   /* Display: Teaser Block */
-  $handler = $view->new_display('block', 'Teaser Block', '3_col_news_block');
+  $handler = $view->new_display('block', 'Teaser Block', 'three_col_news_block');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
