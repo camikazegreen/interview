@@ -53,6 +53,7 @@ dependencies[] = uaqs_content_chunks_column_image
 dependencies[] = uaqs_content_chunks_extra_info
 dependencies[] = uaqs_content_chunks_file_download
 dependencies[] = uaqs_content_chunks_headed_text
+dependencies[] = uaqs_content_chunks_marquee
 dependencies[] = uaqs_content_chunks_plain_text
 dependencies[] = uaqs_featured_content
 dependencies[] = uaqs_block_types_flexible_block
