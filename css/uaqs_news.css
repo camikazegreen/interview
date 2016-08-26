@@ -22,12 +22,11 @@ h6.media-heading {
 .media-list-row:last-child {
     border-bottom: 0;
 }
-a.list-link-block:hover {
-    background: hsla(180, 10%, 94%, 0.5);
+a.list-link-block:hover, a.list-link-block:focus {
+    background: hsla(180,10%,94%,0.5);
     color: #49595e;
     text-decoration: none;
 }
-
 a.list-link-block {
     color: #49595e;
     display: block;
