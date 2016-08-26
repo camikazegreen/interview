@@ -1,3 +1,4 @@
+@flexible-page @api @content-manager
 Feature: Content manager creates flexible page.
   As a Content Manager
   I want to use the flexible page content type.
@@ -14,6 +15,16 @@ Feature: Content manager creates flexible page.
     And I should see the text "Reviving little-heard instruments"
     And I should see the text "Superbia (detail)"
     And I should see the text "The seven deadly sins and four last things"
+  @regression @flexible-page @api @content-manager
+    Scenario: Paragraphs item migrated correctly.
+      Given I am an anonymous user
+      Given I am at 'content/renaming-pride-arizona-marching-band'
+      Then I should see the text "Inspired by a famous painting"
+      And I should see the text "Reviving little-heard instruments"
+      And I should see the text "Superbia (detail)"
+      And I should see the text "The seven deadly sins and four last things"
+      Given I am at 'news/2015/09/new-light-origins-“bear-down”'
+      Then I should see the text "“Button” Salmon"
 
   @regression @news
   Scenario: Paragraphs items migrated correctly into the news content type and is visible to anonymous visitors to the site.
@@ -31,9 +42,10 @@ Feature: Content manager creates flexible page.
     And I should see the text "Add Text with heading"
     And I should see the text "Add Extra info"
     And I should see the text "Add File attachment"
+    And I should see the text "Add Marquee"
 
-  @regression @flexible-page @api
-  Scenario: As an administrator there are some paragraphs item types I do not want to see when editing a flexible page.
+  @regression @flexible-page @api @content-manager
+  Scenario: As an administrator there are some paragraphs item types I do not want to see when editing a flexible page because they are not enabled.
     Given I am logged in as a user with the administrator role
     And I am viewing my "Flexible Page" with the title "Renaming the Pride of Arizona marching band"
     When I click Edit
