@@ -3,6 +3,9 @@ Feature: Content manager creates flexible page.
   I want to use the flexible page content type.
   So that all of my content doesn't look the same.
 
+  Background: Cas is disabled
+    Given I run drush dis "-y cas"
+
   @regression @flexible-page @api
   Scenario: Basic paragraphs item types are available for use by administrators editing a flexible page.
     Given I am logged in as a user with the administrator role

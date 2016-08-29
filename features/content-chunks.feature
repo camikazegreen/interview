@@ -3,9 +3,6 @@ Feature: Anonymous user visits a flexible page.
     I would like to see the example content so I can have a feel
     for what is available if I were to use UA Quickstart..
 
-  Background: Cas is disabled
-    Given I run drush dis "-y cas"
-
   @regression @flexible-page
   Scenario: Paragraphs items migrated correctly into the flexible page content type and is visible to anonymous visitors to the site.
     Given I am an anonymous user
