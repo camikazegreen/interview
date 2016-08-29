@@ -38,3 +38,15 @@ a.list-link-block {
 .text-red {
     color:#8f1124;
 }
+
+.marquee-text {
+    background: rgba(255, 255, 255, 0.92);
+    margin: -25% 1em 1em 1em;
+    overflow: hidden;
+    padding: 0em 1em 1em 1em;
+    position: relative;
+}
+
+img.marquee-img {
+    width: 100%;
+}

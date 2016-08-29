@@ -13,6 +13,39 @@ function uaqs_news_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_banner_text|node|uaqs_news|uaqs_marquee';
+  $field_group->group_name = 'group_banner_text';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_news';
+  $field_group->mode = 'uaqs_marquee';
+  $field_group->parent_name = 'group_link';
+  $field_group->data = array(
+    'label' => 'Marquee text',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_uaqs_short_title',
+      1 => 'field_uaqs_summary',
+      2 => 'group_text_muted',
+      3 => 'group_link_placement',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Marquee text',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'marquee-text',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_banner_text|node|uaqs_news|uaqs_marquee'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_date|node|uaqs_news|teaser';
   $field_group->group_name = 'group_date';
   $field_group->entity_type = 'node';
@@ -73,6 +106,36 @@ function uaqs_news_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_heading|node|uaqs_news|uaqs_med_media_list';
+  $field_group->group_name = 'group_heading';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_news';
+  $field_group->mode = 'uaqs_med_media_list';
+  $field_group->parent_name = 'group_media_body';
+  $field_group->data = array(
+    'label' => 'Heading',
+    'weight' => '26',
+    'children' => array(
+      0 => 'group_strong',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Heading',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'h3 margin-zero-top',
+        'element' => 'h3',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_heading|node|uaqs_news|uaqs_med_media_list'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_heading|node|uaqs_news|uaqs_sidebar_teaser_list';
   $field_group->group_name = 'group_heading';
   $field_group->entity_type = 'node';
@@ -129,6 +192,36 @@ function uaqs_news_field_group_info() {
     ),
   );
   $field_groups['group_heading|node|uaqs_news|uaqs_teaser_list'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_home_banner|node|uaqs_news|uaqs_marquee';
+  $field_group->group_name = 'group_home_banner';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_news';
+  $field_group->mode = 'uaqs_marquee';
+  $field_group->parent_name = 'group_link';
+  $field_group->data = array(
+    'label' => 'Marquee',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_uaqs_photo',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Marquee',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'marquee',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_home_banner|node|uaqs_news|uaqs_marquee'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -203,14 +296,14 @@ function uaqs_news_field_group_info() {
     'label' => 'Link Placement',
     'weight' => '5',
     'children' => array(
-      0 => 'group_strong',
+      0 => 'field_uaqs_link',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
       'label' => 'Link Placement',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'small',
+        'classes' => 'small text-red',
         'element' => 'div',
         'show_label' => '0',
         'label_element' => '',
@@ -219,6 +312,36 @@ function uaqs_news_field_group_info() {
     ),
   );
   $field_groups['group_link_placement|node|uaqs_news|teaser'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_link_placement|node|uaqs_news|uaqs_marquee';
+  $field_group->group_name = 'group_link_placement';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_news';
+  $field_group->mode = 'uaqs_marquee';
+  $field_group->parent_name = 'group_banner_text';
+  $field_group->data = array(
+    'label' => 'Link Placement',
+    'weight' => '16',
+    'children' => array(
+      0 => 'field_uaqs_link',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Link Placement',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'small text-red',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_link_placement|node|uaqs_news|uaqs_marquee'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -233,9 +356,9 @@ function uaqs_news_field_group_info() {
     'label' => 'Link',
     'weight' => '0',
     'children' => array(
-      0 => 'field_uaqs_short_title',
-      1 => 'field_uaqs_summary',
-      2 => 'field_uaqs_photo',
+      0 => 'field_uaqs_photo',
+      1 => 'field_uaqs_short_title',
+      2 => 'field_uaqs_summary',
       3 => 'group_date',
       4 => 'group_link_placement',
     ),
@@ -253,6 +376,67 @@ function uaqs_news_field_group_info() {
     ),
   );
   $field_groups['group_link|node|uaqs_news|teaser'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_link|node|uaqs_news|uaqs_marquee';
+  $field_group->group_name = 'group_link';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_news';
+  $field_group->mode = 'uaqs_marquee';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Link',
+    'weight' => '0',
+    'children' => array(
+      0 => 'group_home_banner',
+      1 => 'group_banner_text',
+    ),
+    'format_type' => 'link',
+    'format_settings' => array(
+      'label' => 'Link',
+      'instance_settings' => array(
+        'link_to' => 'field_uaqs_link',
+        'custom_url' => '',
+        'custom_url_normalize' => 0,
+        'target' => 'default',
+        'classes' => 'list-link-block',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_link|node|uaqs_news|uaqs_marquee'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_link|node|uaqs_news|uaqs_med_media_list';
+  $field_group->group_name = 'group_link';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_news';
+  $field_group->mode = 'uaqs_med_media_list';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Link',
+    'weight' => '0',
+    'children' => array(
+      0 => 'group_media',
+    ),
+    'format_type' => 'link',
+    'format_settings' => array(
+      'label' => 'Link',
+      'instance_settings' => array(
+        'link_to' => 'field_uaqs_link',
+        'custom_url' => '',
+        'custom_url_normalize' => 0,
+        'target' => 'default',
+        'classes' => 'list-link-block',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_link|node|uaqs_news|uaqs_med_media_list'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -347,6 +531,37 @@ function uaqs_news_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_media_body|node|uaqs_news|uaqs_med_media_list';
+  $field_group->group_name = 'group_media_body';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_news';
+  $field_group->mode = 'uaqs_med_media_list';
+  $field_group->parent_name = 'group_media';
+  $field_group->data = array(
+    'label' => 'Media body',
+    'weight' => '8',
+    'children' => array(
+      0 => 'group_heading',
+      1 => 'group_read_more',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Media body',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'media-body',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_media_body|node|uaqs_news|uaqs_med_media_list'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_media_body|node|uaqs_news|uaqs_sidebar_teaser_list';
   $field_group->group_name = 'group_media_body';
   $field_group->entity_type = 'node';
@@ -411,6 +626,36 @@ function uaqs_news_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_media_object|node|uaqs_news|uaqs_med_media_list';
+  $field_group->group_name = 'group_media_object';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_news';
+  $field_group->mode = 'uaqs_med_media_list';
+  $field_group->parent_name = 'group_media';
+  $field_group->data = array(
+    'label' => 'Media Object',
+    'weight' => '9',
+    'children' => array(
+      0 => 'field_uaqs_photo',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Media Object',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'media-right',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_media_object|node|uaqs_news|uaqs_med_media_list'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_media_object|node|uaqs_news|uaqs_sidebar_teaser_list';
   $field_group->group_name = 'group_media_object';
   $field_group->entity_type = 'node';
@@ -437,6 +682,37 @@ function uaqs_news_field_group_info() {
     ),
   );
   $field_groups['group_media_object|node|uaqs_news|uaqs_sidebar_teaser_list'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_media|node|uaqs_news|uaqs_med_media_list';
+  $field_group->group_name = 'group_media';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_news';
+  $field_group->mode = 'uaqs_med_media_list';
+  $field_group->parent_name = 'group_link';
+  $field_group->data = array(
+    'label' => 'Media',
+    'weight' => '22',
+    'children' => array(
+      0 => 'group_media_body',
+      1 => 'group_media_object',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Media',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'media',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_media|node|uaqs_news|uaqs_med_media_list'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -499,6 +775,36 @@ function uaqs_news_field_group_info() {
     ),
   );
   $field_groups['group_media|node|uaqs_news|uaqs_teaser_list'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_read_more|node|uaqs_news|uaqs_med_media_list';
+  $field_group->group_name = 'group_read_more';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_news';
+  $field_group->mode = 'uaqs_med_media_list';
+  $field_group->parent_name = 'group_media_body';
+  $field_group->data = array(
+    'label' => 'Read more',
+    'weight' => '28',
+    'children' => array(
+      0 => 'field_uaqs_link',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Read more',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'text-red small',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_read_more|node|uaqs_news|uaqs_med_media_list'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -684,6 +990,36 @@ function uaqs_news_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_strong|node|uaqs_news|uaqs_med_media_list';
+  $field_group->group_name = 'group_strong';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_news';
+  $field_group->mode = 'uaqs_med_media_list';
+  $field_group->parent_name = 'group_heading';
+  $field_group->data = array(
+    'label' => 'Strong',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_uaqs_short_title',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Strong',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'element' => 'strong',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_strong|node|uaqs_news|uaqs_med_media_list'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_strong|node|uaqs_news|uaqs_teaser_list';
   $field_group->group_name = 'group_strong';
   $field_group->entity_type = 'node';
@@ -755,8 +1091,8 @@ function uaqs_news_field_group_info() {
     'weight' => '16',
     'children' => array(
       0 => 'field_uaqs_body',
-      1 => 'field_uaqs_photo',
-      2 => 'field_uaqs_main_content',
+      1 => 'field_uaqs_main_content',
+      2 => 'field_uaqs_photo',
       3 => 'group_lead',
     ),
     'format_type' => 'html-element',
@@ -803,6 +1139,36 @@ function uaqs_news_field_group_info() {
     ),
   );
   $field_groups['group_text_muted|node|uaqs_news|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_text_muted|node|uaqs_news|uaqs_marquee';
+  $field_group->group_name = 'group_text_muted';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_news';
+  $field_group->mode = 'uaqs_marquee';
+  $field_group->parent_name = 'group_banner_text';
+  $field_group->data = array(
+    'label' => 'Text muted',
+    'weight' => '14',
+    'children' => array(
+      0 => 'field_uaqs_published',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Text muted',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'text-muted',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_text_muted|node|uaqs_news|uaqs_marquee'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -903,16 +1269,21 @@ function uaqs_news_field_group_info() {
   t('Lead');
   t('Link');
   t('Link Placement');
+  t('Marquee');
+  t('Marquee text');
   t('Media');
   t('Media Body');
   t('Media Object');
+  t('Media body');
   t('Media object');
   t('Read More');
+  t('Read more');
   t('Row');
   t('Strong');
   t('Summary fields');
   t('Text Column');
   t('Text Muted');
+  t('Text muted');
   t('Title Block');
   t('Title column');
   t('h4');
