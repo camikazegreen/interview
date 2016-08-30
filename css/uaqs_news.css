@@ -46,7 +46,10 @@ a.list-link-block {
     padding: 0em 1em 1em 1em;
     position: relative;
 }
-
+a.marquee {
+    padding-top: calc(25% + 2em);
+}
 img.marquee-img {
     width: 100%;
+    margin-top: calc(-25% - 1em);
 }

@@ -65,6 +65,7 @@ features[field_group][] = group_summary|node|uaqs_news|form
 features[field_group][] = group_text_column|node|uaqs_news|default
 features[field_group][] = group_text_muted|node|uaqs_news|default
 features[field_group][] = group_text_muted|node|uaqs_news|uaqs_marquee
+features[field_group][] = group_text_muted|node|uaqs_news|uaqs_med_media_list
 features[field_group][] = group_text_muted|node|uaqs_news|uaqs_teaser_list
 features[field_group][] = group_title_block|node|uaqs_news|default
 features[field_group][] = group_title_column|node|uaqs_news|default
