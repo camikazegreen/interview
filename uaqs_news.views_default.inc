@@ -433,7 +433,7 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['displays'] = array(
-    'uaqs_top_news_marquee' => 'uaqs_top_news_marquee',
+    'uaqs_recent_news_marquee' => 'uaqs_recent_news_marquee',
     'default' => 0,
     'sidebar_promoted_news_block' => 0,
     'three_col_news_block' => 0,
