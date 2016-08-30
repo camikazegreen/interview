@@ -39,17 +39,22 @@ a.list-link-block {
     color:#8f1124;
 }
 
-.marquee-text {
-    background: rgba(255, 255, 255, 0.92);
-    margin: -25% 1em 1em 1em;
-    overflow: hidden;
-    padding: 0em 1em 1em 1em;
-    position: relative;
-}
-a.marquee {
-    padding-top: calc(25% + 2em);
-}
 img.marquee-img {
     width: 100%;
-    margin-top: calc(-25% - 1em);
+}
+
+@media (min-width: 768px){
+    .marquee-text {
+        background: rgba(255, 255, 255, 0.92);
+        margin: -25% 1em 1em 1em;
+        overflow: hidden;
+        padding: 0em 1em 1em 1em;
+        position: relative;
+    }
+    a.marquee {
+        padding-top: calc(25% + 2em);
+    }
+    img.marquee-img {
+        margin-top: calc(-25% - 1em);
+    }
 }
