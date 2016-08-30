@@ -82,8 +82,6 @@ function uaqs_news_field_default_field_instances() {
       'active' => 1,
       'module' => 'file',
       'settings' => array(
-        'file_entity_inline' => 1,
-        'file_entity_inline_fields' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
@@ -744,8 +742,6 @@ function uaqs_news_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'file_entity_inline' => 1,
-        'file_entity_inline_fields' => array(),
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
@@ -822,8 +818,6 @@ function uaqs_news_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'file_entity_inline' => 1,
-        'file_entity_inline_fields' => array(),
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
