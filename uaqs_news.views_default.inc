@@ -102,7 +102,7 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
 
   /* Display: Sidebar promoted news block */
-  $handler = $view->new_display('block', 'Sidebar promoted news block', 'sidebar_promoted_news_block');
+  $handler = $view->new_display('block', 'Sidebar promoted news block', 'sidebar_promoted_news');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
@@ -372,7 +372,7 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['menu']['context_only_inline'] = 0;
 
   /* Display: Recent news marquee */
-  $handler = $view->new_display('block', 'Recent news marquee', 'uaqs_recent_news_marquee');
+  $handler = $view->new_display('block', 'Recent news marquee', 'recent_news_marquee');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'row';
@@ -414,7 +414,7 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['block_description'] = 'Recent news marquee';
 
   /* Display: Recent news medium media list */
-  $handler = $view->new_display('attachment', 'Recent news medium media list', 'uaqs_recent_news_minimal_media_list_attachment');
+  $handler = $view->new_display('attachment', 'Recent news medium media list', 'recent_news_medium_media_list');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Top stories';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
@@ -434,7 +434,7 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['displays'] = array(
-    'uaqs_recent_news_marquee' => 'uaqs_recent_news_marquee',
+    'recent_news_marquee' => 'recent_news_marquee',
     'default' => 0,
     'sidebar_promoted_news_block' => 0,
     'three_col_news_block' => 0,
