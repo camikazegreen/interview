@@ -296,14 +296,14 @@ function uaqs_news_field_group_info() {
     'label' => 'Link Placement',
     'weight' => '5',
     'children' => array(
-      0 => 'field_uaqs_link',
+      0 => 'group_strong',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
       'label' => 'Link Placement',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'small text-red',
+        'classes' => 'small text-red page-row-padding-top',
         'element' => 'div',
         'show_label' => '0',
         'label_element' => '',
@@ -326,14 +326,14 @@ function uaqs_news_field_group_info() {
     'label' => 'Link Placement',
     'weight' => '16',
     'children' => array(
-      0 => 'field_uaqs_link',
+      0 => 'group_strong',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
       'label' => 'Link Placement',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'small text-red',
+        'classes' => 'small text-red page-row-padding-top',
         'element' => 'div',
         'show_label' => '0',
         'label_element' => '',
@@ -391,8 +391,7 @@ function uaqs_news_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_uaqs_photo',
-      1 => 'group_home_banner',
-      2 => 'group_banner_text',
+      1 => 'group_banner_text',
     ),
     'format_type' => 'link',
     'format_settings' => array(
@@ -791,7 +790,7 @@ function uaqs_news_field_group_info() {
     'label' => 'Read more',
     'weight' => '38',
     'children' => array(
-      0 => 'field_uaqs_link',
+      0 => 'group_strong',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -969,17 +968,17 @@ function uaqs_news_field_group_info() {
   $field_group->mode = 'teaser';
   $field_group->parent_name = 'group_link_placement';
   $field_group->data = array(
-    'label' => 'Strong',
-    'weight' => '6',
+    'label' => 'strong',
+    'weight' => '18',
     'children' => array(
       0 => 'field_uaqs_link',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
-      'label' => 'Strong',
+      'label' => 'strong',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'text-red',
+        'classes' => '',
         'element' => 'strong',
         'show_label' => '0',
         'label_element' => '',
@@ -992,21 +991,51 @@ function uaqs_news_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_strong|node|uaqs_news|uaqs_marquee';
+  $field_group->group_name = 'group_strong';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_news';
+  $field_group->mode = 'uaqs_marquee';
+  $field_group->parent_name = 'group_link_placement';
+  $field_group->data = array(
+    'label' => 'strong',
+    'weight' => '19',
+    'children' => array(
+      0 => 'field_uaqs_link',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'strong',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'element' => 'strong',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_strong|node|uaqs_news|uaqs_marquee'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_strong|node|uaqs_news|uaqs_med_media_list';
   $field_group->group_name = 'group_strong';
   $field_group->entity_type = 'node';
   $field_group->bundle = 'uaqs_news';
   $field_group->mode = 'uaqs_med_media_list';
-  $field_group->parent_name = 'group_heading';
+  $field_group->parent_name = 'group_read_more';
   $field_group->data = array(
-    'label' => 'Strong',
-    'weight' => '6',
+    'label' => 'strong',
+    'weight' => '41',
     'children' => array(
-      0 => 'field_uaqs_short_title',
+      0 => 'field_uaqs_link',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
-      'label' => 'Strong',
+      'label' => 'strong',
       'instance_settings' => array(
         'id' => '',
         'classes' => '',

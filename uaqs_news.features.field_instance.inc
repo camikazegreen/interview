@@ -441,7 +441,7 @@ function uaqs_news_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'link_title_plain',
-        'weight' => 6,
+        'weight' => 17,
       ),
       'uaqs_card' => array(
         'label' => 'hidden',
@@ -457,7 +457,7 @@ function uaqs_news_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'link_title_plain',
-        'weight' => 13,
+        'weight' => 20,
       ),
       'uaqs_med_media_list' => array(
         'label' => 'hidden',
@@ -467,7 +467,7 @@ function uaqs_news_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'link_title_plain',
-        'weight' => 33,
+        'weight' => 42,
       ),
       'uaqs_sidebar_teaser_list' => array(
         'label' => 'hidden',

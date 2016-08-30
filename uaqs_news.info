@@ -59,6 +59,7 @@ features[field_group][] = group_row|node|uaqs_news|default
 features[field_group][] = group_strong_title|node|uaqs_news|uaqs_sidebar_teaser_list
 features[field_group][] = group_strong_title|node|uaqs_news|uaqs_teaser_list
 features[field_group][] = group_strong|node|uaqs_news|teaser
+features[field_group][] = group_strong|node|uaqs_news|uaqs_marquee
 features[field_group][] = group_strong|node|uaqs_news|uaqs_med_media_list
 features[field_group][] = group_strong|node|uaqs_news|uaqs_teaser_list
 features[field_group][] = group_summary|node|uaqs_news|form
