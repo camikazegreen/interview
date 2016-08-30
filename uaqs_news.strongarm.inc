@@ -41,7 +41,7 @@ function uaqs_news_strongarm() {
         'custom_settings' => FALSE,
       ),
       'uaqs_card' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'uaqs_sidebar_teaser_list' => array(
         'custom_settings' => TRUE,

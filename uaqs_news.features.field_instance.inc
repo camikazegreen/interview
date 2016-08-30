@@ -32,16 +32,6 @@ function uaqs_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 8,
       ),
-      'uaqs_card' => array(
-        'label' => 'hidden',
-        'module' => 'file',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-        ),
-        'type' => 'file_default',
-        'weight' => 3,
-      ),
       'uaqs_marquee' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -112,16 +102,6 @@ function uaqs_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
-      'uaqs_card' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-        ),
-        'type' => 'text_default',
-        'weight' => 11,
-      ),
       'uaqs_marquee' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -191,16 +171,6 @@ function uaqs_news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 10,
-      ),
-      'uaqs_card' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-        ),
-        'type' => 'text_default',
-        'weight' => 19,
       ),
       'uaqs_marquee' => array(
         'label' => 'hidden',
@@ -274,21 +244,6 @@ function uaqs_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 11,
       ),
-      'uaqs_card' => array(
-        'label' => 'hidden',
-        'module' => 'field_collection',
-        'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_view',
-        'weight' => 2,
-      ),
       'uaqs_marquee' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -347,12 +302,6 @@ function uaqs_news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 12,
-      ),
-      'uaqs_card' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
       ),
       'uaqs_marquee' => array(
         'label' => 'hidden',
@@ -440,12 +389,6 @@ function uaqs_news_field_default_field_instances() {
         ),
         'type' => 'link_title_plain',
         'weight' => 17,
-      ),
-      'uaqs_card' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
       ),
       'uaqs_marquee' => array(
         'label' => 'hidden',
@@ -549,17 +492,6 @@ function uaqs_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'uaqs_card' => array(
-        'label' => 'above',
-        'module' => 'paragraphs',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-          'view_mode' => 'full',
-        ),
-        'type' => 'paragraphs_view',
-        'weight' => 12,
-      ),
       'uaqs_marquee' => array(
         'label' => 'above',
         'settings' => array(),
@@ -655,19 +587,6 @@ function uaqs_news_field_default_field_instances() {
         ),
         'type' => 'image',
         'weight' => 1,
-      ),
-      'uaqs_card' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'class' => 'margin-align-middle margin-zero-top',
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 10,
       ),
       'uaqs_marquee' => array(
         'label' => 'hidden',
@@ -768,12 +687,6 @@ function uaqs_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 13,
       ),
-      'uaqs_card' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
-      ),
       'uaqs_marquee' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -865,23 +778,6 @@ function uaqs_news_field_default_field_instances() {
         ),
         'type' => 'date_default',
         'weight' => 3,
-      ),
-      'uaqs_card' => array(
-        'label' => 'hidden',
-        'module' => 'date',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_remaining_days' => FALSE,
-          'show_repeat_rule' => 'show',
-        ),
-        'type' => 'date_default',
-        'weight' => 18,
       ),
       'uaqs_marquee' => array(
         'label' => 'hidden',
@@ -1002,12 +898,6 @@ function uaqs_news_field_default_field_instances() {
         'type' => 'title_linked',
         'weight' => 2,
       ),
-      'uaqs_card' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
-      ),
       'uaqs_marquee' => array(
         'label' => 'hidden',
         'module' => 'title',
@@ -1090,12 +980,6 @@ function uaqs_news_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 4,
       ),
-      'uaqs_card' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
       'uaqs_marquee' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -1172,16 +1056,6 @@ function uaqs_news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 6,
       ),
-      'uaqs_card' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-        ),
-        'type' => 'text_default',
-        'weight' => 3,
-      ),
       'uaqs_marquee' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -1252,19 +1126,6 @@ function uaqs_news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 7,
-      ),
-      'uaqs_card' => array(
-        'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => 'h1',
-        ),
-        'type' => 'title_linked',
-        'weight' => 16,
       ),
       'uaqs_marquee' => array(
         'label' => 'hidden',
