@@ -690,7 +690,7 @@ function uaqs_news_field_default_field_instances() {
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'image_link' => '',
-          'image_style' => 'media_thumbnail',
+          'image_style' => 'thumbnail',
         ),
         'type' => 'image',
         'weight' => 29,
