@@ -344,7 +344,6 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['path'] = 'news-teasers';
-  $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'News';
   $handler->display->display_options['menu']['description'] = 'News & Updates';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -372,8 +371,9 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
 
-  /* Display: Recent news with marquee */
-  $handler = $view->new_display('block', 'Recent news with marquee', 'uaqs_recent_news_marquee');
+  /* Display: Recent news marquee */
+  $handler = $view->new_display('block', 'Recent news marquee', 'uaqs_recent_news_marquee');
+  $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'row';
   $handler->display->display_options['display_description'] = 'Recent news';
@@ -411,6 +411,7 @@ function uaqs_news_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  $handler->display->display_options['block_description'] = 'Recent news marquee';
 
   /* Display: Recent news medium media list */
   $handler = $view->new_display('attachment', 'Recent news medium media list', 'uaqs_recent_news_minimal_media_list_attachment');
