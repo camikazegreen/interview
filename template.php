@@ -144,7 +144,7 @@ function ua_zen_status_messages($variables) {
   foreach (drupal_get_messages($display) as $type => $messages) {
     $class = (isset($status_class[$type])) ? ' alert-' . $status_class[$type] : '';
     $output .= "<div class=\"alert alert-block$class messages $type\" role=\"alertdialog\" aria-labelledby=\"$status_class[$type]-label\" aria-describedby=\"$status_class[$type]-description\">\n";
-    $output .= "  <span class=\"glyphicon glyphicon-exclamation-sign sr-only\" aria-hidden=\"true\"></span>\n";
+    $output .= "  <span class=\"sr-only\" aria-hidden=\"true\"></span>\n";
     $output .= "  <a class=\"close\" data-dismiss=\"alert\" href=\"#\" aria-hidden=\"true\"><i class=\"ua-brand-x\" aria-hidden=\"true\"></i></a>\n";
 
     if (!empty($status_heading[$type])) {
