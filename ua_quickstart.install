@@ -205,9 +205,18 @@ function ua_quickstart_default_blocks($default_theme, $admin_theme) {
     'title' => '',
     'cache' => DRUPAL_NO_CACHE,
   );
+
   $front_views = $base_common;
   $front_views['visibility'] = BLOCK_VISIBILITY_LISTED;
   $front_views['pages'] = '<front>';
+
+  $news_teasers_views = $base_common;
+  $news_teasers_views['visibility'] = BLOCK_VISIBILITY_LISTED;
+  $news_teasers_views['pages'] = 'news-teasers';
+
+  $news_views = $base_common;
+  $news_views['visibility'] = BLOCK_VISIBILITY_LISTED;
+  $news_views['pages'] = 'news/*';
 
   // Basic core system blocks.
   $system_blocks = array(
@@ -245,24 +254,44 @@ function ua_quickstart_default_blocks($default_theme, $admin_theme) {
       'uaqs_hero_carousel-hero_block' => array(
         'region' => 'content_featured',
         'title' => '<none>',
-      ),
+      )
     );
     ua_quickstart_block_db_insert($default_theme, 'views', $carousel_blocks, $front_views);
   }
 
-  // UAQS News.
+  // UAQS news.
   if (module_exists('uaqs_news')) {
-    $news_blocks = array(
+    $news_blocks_front = array(
       'uaqs_news-three_col_news_block' => array(
         'region' => 'content',
-        'weight' => 10,
-      ),
+        'weight' => 10
+      )
     );
-    ua_quickstart_block_db_insert($default_theme, 'views', $news_blocks, $front_views);
+
+    $news_blocks_teasers = array(
+      'uaqs_news-recent_news_marquee' => array(
+        'region' => 'content',
+        'weight' => 0
+      )
+    );
+
+    $news_blocks_news = array(
+      'uaqs_news-sidebar_promoted_news' => array(
+        'region' => 'sidebar_second',
+        'weight' => 10
+      )
+    );
+
+    ua_quickstart_block_db_insert($default_theme, 'views', $news_blocks_front, $front_views);
+    ua_quickstart_block_db_insert($default_theme, 'views', $news_blocks_teasers, $news_teasers_views);
+    ua_quickstart_block_db_insert($default_theme, 'views', $news_blocks_news, $news_views);
+
   }
 
-  // UAQS Event View Block.
-  if (module_exists('uaqs_event_view')) {
+
+
+  // UAQS Event.
+  if (module_exists('uaqs_event')) {
     $event_blocks = array(
       'uaqs_events-block' => array(
         'region' => 'content',
