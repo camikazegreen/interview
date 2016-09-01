@@ -261,8 +261,8 @@ function ua_quickstart_default_blocks($default_theme, $admin_theme) {
     ua_quickstart_block_db_insert($default_theme, 'views', $news_blocks, $front_views);
   }
 
-  // UAQS Event.
-  if (module_exists('uaqs_event')) {
+  // UAQS Event View Block.
+  if (module_exists('uaqs_event_view')) {
     $event_blocks = array(
       'uaqs_events-block' => array(
         'region' => 'content',
