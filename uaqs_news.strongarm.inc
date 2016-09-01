@@ -46,6 +46,12 @@ function uaqs_news_strongarm() {
       'uaqs_sidebar_teaser_list' => array(
         'custom_settings' => TRUE,
       ),
+      'uaqs_med_media_list' => array(
+        'custom_settings' => TRUE,
+      ),
+      'uaqs_marquee' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
