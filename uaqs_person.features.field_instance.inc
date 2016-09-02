@@ -15,7 +15,7 @@ function uaqs_person_field_default_field_instances() {
     'bundle' => 'uaqs_person',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Select the categories you would like this person to appear in throughout the site. Hold down the <b>ctrl</b> key to select multiple categories.',
+    'description' => 'Select the categories you would like this person to appear in throughout the site.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -690,7 +690,7 @@ function uaqs_person_field_default_field_instances() {
   t('Office location(s)');
   t('Phone Number(s)');
   t('Photo');
-  t('Select the categories you would like this person to appear in throughout the site. Hold down the <b>ctrl</b> key to select multiple categories.');
+  t('Select the categories you would like this person to appear in throughout the site.');
   t('Title');
 
   return $field_instances;
