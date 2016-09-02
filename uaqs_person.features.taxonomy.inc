@@ -9,9 +9,9 @@
  */
 function uaqs_person_taxonomy_default_vocabularies() {
   return array(
-    'uaqs_people_category' => array(
-      'name' => 'People Categories',
-      'machine_name' => 'uaqs_people_category',
+    'uaqs_person_category' => array(
+      'name' => 'Person Categories',
+      'machine_name' => 'uaqs_person_category',
       'description' => 'Taxonomy for categorizing people',
       'hierarchy' => 0,
       'module' => 'taxonomy',

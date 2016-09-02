@@ -10,15 +10,15 @@
 function uaqs_person_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-uaqs_person-field_category'.
-  $field_instances['node-uaqs_person-field_category'] = array(
+  // Exported field_instance: 'node-uaqs_person-field_uaqs_person_category'.
+  $field_instances['node-uaqs_person-field_uaqs_person_category'] = array(
     'bundle' => 'uaqs_person',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Select the categories you would like this person to appear in throughout the site.  To select multiple, hold down the <b>ctrl</b>',
+    'description' => 'Select the categories you would like this person to appear in throughout the site. Hold down the <b>ctrl</b> key to select multiple categories.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(
           'field_multiple_limit' => -1,
@@ -28,19 +28,19 @@ function uaqs_person_field_default_field_instances() {
         'weight' => 6,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
       'uaqs_card' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
@@ -48,7 +48,7 @@ function uaqs_person_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'fences_wrapper' => 'div_div_div',
-    'field_name' => 'field_category',
+    'field_name' => 'field_uaqs_person_category',
     'label' => 'Category',
     'required' => 0,
     'settings' => array(
@@ -690,7 +690,7 @@ function uaqs_person_field_default_field_instances() {
   t('Office location(s)');
   t('Phone Number(s)');
   t('Photo');
-  t('Select the categories you would like this person to appear in throughout the site.  To select multiple, hold down the <b>ctrl</b>');
+  t('Select the categories you would like this person to appear in throughout the site. Hold down the <b>ctrl</b> key to select multiple categories.');
   t('Title');
 
   return $field_instances;
