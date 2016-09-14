@@ -476,14 +476,14 @@ function uaqs_news_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'paragraphs',
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'view_mode' => 'full',
         ),
-        'type' => 'paragraphs_view',
+        'type' => 'paragraphs_view_mode',
         'weight' => 12,
       ),
       'teaser' => array(
