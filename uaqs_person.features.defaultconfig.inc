@@ -12,7 +12,6 @@ function uaqs_person_defaultconfig_features() {
     'uaqs_person' => array(
       'field_default_fields' => 'field_default_fields',
       'strongarm' => 'strongarm',
-      'taxonomy_default_vocabularies' => 'taxonomy_default_vocabularies',
     ),
   );
 }
@@ -223,35 +222,4 @@ function uaqs_person_defaultconfig_strongarm() {
   $export['pathauto_node_uaqs_person_pattern'] = $strongarm;
 
   return $export;
-}
-
-/**
- * Implements hook_defaultconfig_taxonomy_default_vocabularies().
- */
-function uaqs_person_defaultconfig_taxonomy_default_vocabularies() {
-  return array(
-    'uaqs_person_category' => array(
-      'name' => 'Person Categories',
-      'machine_name' => 'uaqs_person_category',
-      'description' => 'Taxonomy for categorizing people',
-      'hierarchy' => 0,
-      'module' => 'taxonomy',
-      'weight' => 0,
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
-    ),
-  );
 }
