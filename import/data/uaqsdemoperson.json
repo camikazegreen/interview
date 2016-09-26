@@ -7,17 +7,19 @@
     "uaqs_phones" : "031-667-1071|053-246-1514",
     "uaqs_titles" : "Professor|Chair of Iconic Studies",
     "uaqs_addresses" : "Communications W32",
-    "uaqs_photo" : "placeduck10.jpg"
+    "uaqs_photo" : "placeduck10.jpg",
+    "uaqs_person_category" : "Director"
   },
   {"id":2,
     "uaqs_lname"  : "Ælling",
-    "uaqs_fname"  : "Grim",
+    "uaqs_fname"  : "Grimme",
     "uaqs_email"  : "uglyd@email.arizona.edu",
     "uaqs_bio"    : "A leading expert on both developmental psychology and characters in the novels of Marcel Proust.",
     "uaqs_phones" : "071-388-2333",
     "uaqs_titles" : "Assistant Research Professor",
     "uaqs_addresses" : "Modern Languages Extra Glyphs Annex",
-    "uaqs_photo" : "placeduck01.jpg"
+    "uaqs_photo" : "placeduck01.jpg",
+    "uaqs_person_category" : "Departmental Faculty"
   },
   {"id":3,
     "uaqs_lname"  : "An'ersen",
@@ -27,7 +29,8 @@
     "uaqs_phones" : "071-831-6181",
     "uaqs_titles" : "Associate Professor",
     "uaqs_addresses" : "SBS sub-sub basement 004",
-    "uaqs_photo" : "placeduck04.jpg"
+    "uaqs_photo" : "placeduck04.jpg",
+    "uaqs_person_category" : "Joint Faculty"
   },
   {"id":4,
     "uaqs_lname"  : "Quack",
@@ -37,7 +40,8 @@
     "uaqs_phones" : "086-572-2311",
     "uaqs_titles" : "Professor",
     "uaqs_addresses" : "Haury 8001",
-    "uaqs_photo" : "placeduck11.jpg"
+    "uaqs_photo" : "placeduck11.jpg",
+    "uaqs_person_category" : "Departmental Faculty"
   },
   {"id":5,
     "uaqs_lname"  : "Nasier",
@@ -47,7 +51,8 @@
     "uaqs_phones" : "091-374-2832",
     "uaqs_titles" : "Abstractor of the Quintessence|Associate Professor",
     "uaqs_addresses" : "Early Modern Languages 101",
-    "uaqs_photo" : "placeduck05.jpg"
+    "uaqs_photo" : "placeduck05.jpg",
+    "uaqs_person_category" : "Joint Faculty"
   },
   {"id":6,
     "uaqs_lname"  : "Urquhart",
@@ -57,7 +62,8 @@
     "uaqs_phones" : "041-334-8100",
     "uaqs_titles" : "Research Associate",
     "uaqs_addresses" : "Math East 1645",
-    "uaqs_photo" : "placeduck07.jpg"
+    "uaqs_photo" : "placeduck07.jpg",
+    "uaqs_person_category" : "Research Associates"
   },
   {"id":7,
     "uaqs_lname"  : "Horne",
@@ -67,7 +73,8 @@
     "uaqs_phones" : "041-552-8467",
     "uaqs_titles" : "Assistant Research Professor",
     "uaqs_addresses" : "Integrative Medicine 904",
-    "uaqs_photo" : "placeduck06.jpg"
+    "uaqs_photo" : "placeduck06.jpg",
+    "uaqs_person_category" : "Departmental Faculty"
   },
   {"id":8,
     "uaqs_lname"  : "de Espinosa",
@@ -77,7 +84,8 @@
     "uaqs_phones" : "023-475-2795|021-471-2611",
     "uaqs_titles" : "Research Associate",
     "uaqs_addresses" : "Book Art & Letterpress Punchcutting Shed",
-    "uaqs_photo" : "placeduck08.jpg"
+    "uaqs_photo" : "placeduck08.jpg",
+    "uaqs_person_category" : "Research Associates"
   },
   {"id":9,
     "uaqs_lname"  : "Strozzi",
@@ -87,7 +95,8 @@
     "uaqs_phones" : "081-981-7331",
     "uaqs_titles" : "Associate Professor",
     "uaqs_addresses" : "Music 1619",
-    "uaqs_photo" : "placeduck02.jpg"
+    "uaqs_photo" : "placeduck02.jpg",
+    "uaqs_person_category" : "Departmental Faculty"
   },
   {"id":10,
     "uaqs_lname"  : "Muse",
@@ -97,7 +106,8 @@
     "uaqs_phones" : "022-333-8848",
     "uaqs_titles" : "Professor",
     "uaqs_addresses" : "Drake Building 1572",
-    "uaqs_photo" : "placeduck03.jpg"
+    "uaqs_photo" : "placeduck03.jpg",
+    "uaqs_person_category" : "Director"
   },
   {"id":11,
     "uaqs_lname"  : "Giovanni",
@@ -107,6 +117,7 @@
     "uaqs_phones" : "086-572-2311",
     "uaqs_titles" : "Dean of Intra-Faculty Affairs",
     "uaqs_addresses" : "Administration 1787",
-    "uaqs_photo" : "placeduck09.jpg"
+    "uaqs_photo" : "placeduck09.jpg",
+    "uaqs_person_category" : "Joint Faculty"
   }
 ]

@@ -6,6 +6,28 @@
  */
 
 /**
+ * Makes demonstration UAQS Person taxonomy terms from pre-defined data.
+ *
+ * Terms come from a local JSON-formatted text file.
+ *
+ * @see UaqsTermMigration
+ */
+class UaqsDemoPersonTermMigration extends UaqsTermMigration {
+
+  /**
+   * Constructor.
+   *
+   * @param array $arguments
+   *   Arguments for the parent constructor (Migration standard behavior).
+   */
+  public function __construct(array $arguments) {
+    parent::__construct($arguments, 'uaqs_person_category',
+      t('Add demonstration UAQS Person taxonomy terms to a vocabulary.'));
+  }
+
+}
+
+/**
  * Makes demonstration UAQS Person content from pre-defined data.
  *
  * Most of the content in the UAQS Person Drupal nodes comes directly from a
@@ -36,10 +58,11 @@ class UaqsDemoPersonMigration extends UaqsNodeMigration {
       'uaqs_addresses' => t('Office location(s))'),
       'uaqs_bio'    => t('Biography'),
     );
-    // Then the multi-value text fields...
+    // Then the multi-value text fields and terms...
     $multi_value_fields = array(
       'uaqs_phones' => t('Phone Number(s)'),
       'uaqs_titles' => t('Job Title(s)'),
+      'uaqs_person_category' => t('Categories (term references)'),
     );
     // Image fields need special treatment, isolate them...
     $image_src_field = 'uaqs_photo';
