@@ -303,7 +303,7 @@ function uaqs_news_field_group_info() {
       'label' => 'Link Placement',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'small text-red page-row-padding-top',
+        'classes' => 'small text-red30b page-row-padding-top',
         'element' => 'div',
         'show_label' => '0',
         'label_element' => '',
@@ -333,7 +333,7 @@ function uaqs_news_field_group_info() {
       'label' => 'Link Placement',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'small text-red page-row-padding-top',
+        'classes' => 'small text-red30b page-row-padding-top',
         'element' => 'div',
         'show_label' => '0',
         'label_element' => '',
@@ -797,7 +797,7 @@ function uaqs_news_field_group_info() {
       'label' => 'Read more',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'text-red small',
+        'classes' => 'text-red30b small',
         'element' => 'div',
         'show_label' => '0',
         'label_element' => '',
@@ -827,7 +827,7 @@ function uaqs_news_field_group_info() {
       'label' => 'Read More',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'text-red',
+        'classes' => 'text-red30b',
         'element' => 'div',
         'show_label' => '0',
         'label_element' => '',
@@ -1068,7 +1068,7 @@ function uaqs_news_field_group_info() {
       'label' => 'Strong',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'text-red btn-arrow small',
+        'classes' => 'text-red30b btn-arrow small',
         'element' => 'strong',
         'show_label' => '0',
         'label_element' => '',
