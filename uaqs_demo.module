@@ -95,6 +95,11 @@ function uaqs_demo_migrate_api() {
         'group_name' => 'uaqs_demo',
         'import_root' => $import_root,
       ),
+      'UaqsDemoMarquee' => array(
+        'class_name' => 'UaqsDemoMarqueeMigration',
+        'group_name' => 'uaqs_demo',
+        'import_root' => $import_root,
+      ),
       'UaqsDemoNewsContact' => array(
         'class_name' => 'UaqsDemoNewsContactMigration',
         'group_name' => 'uaqs_demo',
@@ -120,6 +125,7 @@ function uaqs_demo_migrate_api() {
           'UaqsDemoColumnImage',
           'UaqsDemoHeadedText',
           'UaqsDemoPlainText',
+          'UaqsDemoMarquee',
         ),
         'import_root' => $import_root,
       ),
