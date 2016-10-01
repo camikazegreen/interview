@@ -10,6 +10,59 @@
 function uaqs_person_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-uaqs_person-field_uaqs_person_category'.
+  $field_instances['node-uaqs_person-field_uaqs_person_category'] = array(
+    'bundle' => 'uaqs_person',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select the categories you would like this person to appear in throughout the site.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'uaqs_card' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_uaqs_person_category',
+    'label' => 'Category',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-uaqs_person-field_uaqs_addresses'.
   $field_instances['node-uaqs_person-field_uaqs_addresses'] = array(
     'bundle' => 'uaqs_person',
@@ -629,6 +682,7 @@ function uaqs_person_field_default_field_instances() {
   t('<strong>Suggested format:</strong> 000-000-0000 +ext');
   t('Address(es)');
   t('Biography');
+  t('Category');
   t('E-mail');
   t('First Name');
   t('Job Title(s)');
@@ -636,6 +690,7 @@ function uaqs_person_field_default_field_instances() {
   t('Office location(s)');
   t('Phone Number(s)');
   t('Photo');
+  t('Select the categories you would like this person to appear in throughout the site.');
   t('Title');
 
   return $field_instances;
