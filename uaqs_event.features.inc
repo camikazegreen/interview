@@ -14,38 +14,6 @@ function uaqs_event_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
- * Implements hook_views_api().
- */
-function uaqs_event_views_api($module = NULL, $api = NULL) {
-  return array("api" => "3.0");
-}
-
-/**
- * Implements hook_image_default_styles().
- */
-function uaqs_event_image_default_styles() {
-  $styles = array();
-
-  // Exported image style: uaqs_fixed_banner_460.
-  $styles['uaqs_fixed_banner_460'] = array(
-    'label' => 'Fixed banner 460',
-    'effects' => array(
-      2 => array(
-        'name' => 'image_scale',
-        'data' => array(
-          'width' => '',
-          'height' => 460,
-          'upscale' => 0,
-        ),
-        'weight' => 1,
-      ),
-    ),
-  );
-
-  return $styles;
-}
-
-/**
  * Implements hook_node_info().
  */
 function uaqs_event_node_info() {
