@@ -162,3 +162,31 @@ function uaqs_content_chunks_field_formatter_view($entity_type, $entity, $field,
   return $element;
 }
 
+/**
+ * Implements hook_field_widget_form_alter().
+ *
+ * Forces Editor module JS libraries to be loaded for all Paragraphs fields.
+ *
+ * @see https://www.drupal.org/node/2669490
+ * @see https://www.drupal.org/node/2480575
+ * @see https://jira.arizona.edu/browse/UADIGITAL-730
+ */
+function uaqs_content_chunks_field_widget_form_alter(&$element, &$form_state, $context) {
+  if ($context['field']['type'] == 'paragraphs' && module_exists('editor')) {
+    // Get a list of formats to which the current user has access.
+    global $user;
+    $formats = filter_formats($user);
+
+    // Attach Editor module libraries.
+    $editor_attached = editor_get_attached($formats);
+    if (!empty($element['#attached']['library'])) {
+      $element['#attached']['library'] = array_merge($form['#attached']['library'], $editor_attached['library']);
+    }
+    else {
+      $element['#attached']['library'] = $editor_attached['library'];
+    }
+    $element['#attached']['library'][] = array('filter', 'filter');
+    $element['#attached']['library'][] = array('editor', 'drupal.editor');
+    $element['#attached']['library'][] = array('editor', 'drupal.editor.dialog');
+  }
+}
