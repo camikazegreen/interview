@@ -19,4 +19,3 @@ features[field_instance][] = paragraphs_item-uaqs_single_card-field_uaqs_links
 features[field_instance][] = paragraphs_item-uaqs_single_card-field_uaqs_short_title
 features[field_instance][] = paragraphs_item-uaqs_single_card-field_uaqs_summary
 features[paragraphs][] = uaqs_single_card
-features_exclude[field_group][group_card_text|paragraphs_item|uaqs_single_card|default] = group_card_text|paragraphs_item|uaqs_single_card|default
