@@ -104,7 +104,7 @@ function uaqs_content_chunks_single_card_field_default_field_instances() {
   );
 
   // Exported field_instance: 'paragraphs_item-single_card-field_uaqs_summary'.
-  $field_instances['paragraphs_item-single_card-field_uaqs_html'] = array(
+  $field_instances['paragraphs_item-single_card-field_uaqs_summary'] = array(
     'bundle' => 'single_card',
     'default_value' => NULL,
     'deleted' => 0,
