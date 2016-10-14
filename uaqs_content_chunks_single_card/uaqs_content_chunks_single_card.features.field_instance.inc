@@ -27,12 +27,6 @@ function uaqs_content_chunks_single_card_field_default_field_instances() {
         'type' => 'link_default',
         'weight' => 2,
       ),
-      'paragraphs_editor_preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'paragraphs_item',
     'fences_wrapper' => 'no_wrapper',
@@ -88,12 +82,6 @@ function uaqs_content_chunks_single_card_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 3,
       ),
-      'paragraphs_editor_preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'paragraphs_item',
     'fences_wrapper' => 'no_wrapper',
@@ -115,7 +103,7 @@ function uaqs_content_chunks_single_card_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-single_card-field_uaqs_html'.
+  // Exported field_instance: 'paragraphs_item-single_card-field_uaqs_summary'.
   $field_instances['paragraphs_item-single_card-field_uaqs_html'] = array(
     'bundle' => 'single_card',
     'default_value' => NULL,
@@ -132,16 +120,10 @@ function uaqs_content_chunks_single_card_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
-      'paragraphs_editor_preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'entity_type' => 'paragraphs_item',
     'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_uaqs_html',
+    'field_name' => 'field_uaqs_summary',
     'label' => 'HTML',
     'required' => 0,
     'settings' => array(
