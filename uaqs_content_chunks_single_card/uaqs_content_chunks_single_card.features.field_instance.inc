@@ -10,8 +10,8 @@
 function uaqs_content_chunks_single_card_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'paragraphs_item-single_card-field_link'.
-  $field_instances['paragraphs_item-single_card-field_link'] = array(
+  // Exported field_instance: 'paragraphs_item-single_card-field_uaqs_link'.
+  $field_instances['paragraphs_item-single_card-field_uaqs_link'] = array(
     'bundle' => 'single_card',
     'default_value' => NULL,
     'deleted' => 0,
@@ -36,7 +36,7 @@ function uaqs_content_chunks_single_card_field_default_field_instances() {
     ),
     'entity_type' => 'paragraphs_item',
     'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_link',
+    'field_name' => 'field_uaqs_link',
     'label' => 'Link',
     'required' => 0,
     'settings' => array(
@@ -71,8 +71,8 @@ function uaqs_content_chunks_single_card_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-single_card-field_title'.
-  $field_instances['paragraphs_item-single_card-field_title'] = array(
+  // Exported field_instance: 'paragraphs_item-single_card-field_uaqs_short_title'.
+  $field_instances['paragraphs_item-single_card-field_uaqs_short_title'] = array(
     'bundle' => 'single_card',
     'default_value' => NULL,
     'deleted' => 0,
@@ -97,7 +97,7 @@ function uaqs_content_chunks_single_card_field_default_field_instances() {
     ),
     'entity_type' => 'paragraphs_item',
     'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_title',
+    'field_name' => 'field_uaqs_short_title',
     'label' => 'Title',
     'required' => 0,
     'settings' => array(
