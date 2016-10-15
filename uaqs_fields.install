@@ -37,7 +37,7 @@ function uaqs_fields_update_7100() {
  * UADIGITAL-864 introduces the uaqs_standard format for uaqs_summary fields.
  */
 function uaqs_fields_update_7101() {
-  $field = 'uaqs_summary';
+  $field = 'field_uaqs_summary';
   $format = 'uaqs_standard';
   $data_table = 'field_data_' . $field;
   $revision_table = 'field_revision_' . $field;
