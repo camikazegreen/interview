@@ -18,9 +18,9 @@ function uaqs_content_chunks_single_card_ctools_plugin_api($module = NULL, $api 
  */
 function uaqs_content_chunks_single_card_paragraphs_info() {
   $items = array(
-    'single_card' => array(
+    'uaqs_single_card' => array(
       'name' => 'Single Card',
-      'bundle' => 'single_card',
+      'bundle' => 'uaqs_single_card',
       'locked' => '1',
     ),
   );

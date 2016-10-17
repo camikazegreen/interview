@@ -10,9 +10,10 @@
 function uaqs_content_chunks_single_card_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'paragraphs_item-single_card-field_uaqs_link'.
-  $field_instances['paragraphs_item-single_card-field_uaqs_link'] = array(
-    'bundle' => 'single_card',
+  // Exported field_instance:
+  // 'paragraphs_item-uaqs_single_card-field_uaqs_links'.
+  $field_instances['paragraphs_item-uaqs_single_card-field_uaqs_links'] = array(
+    'bundle' => 'uaqs_single_card',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -30,13 +31,13 @@ function uaqs_content_chunks_single_card_field_default_field_instances() {
     ),
     'entity_type' => 'paragraphs_item',
     'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_uaqs_link',
-    'label' => 'Link',
+    'field_name' => 'field_uaqs_links',
+    'label' => 'Links',
     'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
       'attributes' => array(
-        'class' => 'btn-arrow',
+        'class' => 'card-link',
         'configurable_class' => 1,
         'configurable_title' => 0,
         'rel' => '',
@@ -65,22 +66,26 @@ function uaqs_content_chunks_single_card_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-single_card-field_uaqs_short_title'.
-  $field_instances['paragraphs_item-single_card-field_uaqs_short_title'] = array(
-    'bundle' => 'single_card',
+  // Exported field_instance:
+  // 'paragraphs_item-uaqs_single_card-field_uaqs_short_title'.
+  $field_instances['paragraphs_item-uaqs_single_card-field_uaqs_short_title'] = array(
+    'bundle' => 'uaqs_single_card',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
+        'module' => 'title',
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'title_class' => 'card-title',
+          'title_link' => '',
+          'title_style' => 'h3',
         ),
-        'type' => 'text_default',
-        'weight' => 3,
+        'type' => 'title_linked',
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'paragraphs_item',
@@ -103,9 +108,10 @@ function uaqs_content_chunks_single_card_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-single_card-field_uaqs_summary'.
-  $field_instances['paragraphs_item-single_card-field_uaqs_summary'] = array(
-    'bundle' => 'single_card',
+  // Exported field_instance:
+  // 'paragraphs_item-uaqs_single_card-field_uaqs_summary'.
+  $field_instances['paragraphs_item-uaqs_single_card-field_uaqs_summary'] = array(
+    'bundle' => 'uaqs_single_card',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -118,13 +124,13 @@ function uaqs_content_chunks_single_card_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'paragraphs_item',
     'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_summary',
-    'label' => 'HTML',
+    'label' => 'Card body',
     'required' => 0,
     'settings' => array(
       'text_processing' => 1,
@@ -143,8 +149,8 @@ function uaqs_content_chunks_single_card_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('HTML');
-  t('Link');
+  t('Card body');
+  t('Links');
   t('Title');
 
   return $field_instances;
