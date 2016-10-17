@@ -15,6 +15,7 @@ include_once 'uaqs_fields.features.field_base.inc';
  */
 const UAQS_FILTERED_HTML = 'uaqs_filtered_html';
 const UAQS_FULL_HTML = 'uaqs_full_html';
+const UAQS_STANDARD = 'uaqs_standard';
 const UAQS_TEXTUAL_CONTENT = 'uaqs_textual_content';
 const UAQS_UNCONSTRAINED = 'uaqs_unconstrained';
 
@@ -59,6 +60,9 @@ function uaqs_fields_using_format() {
   $usingformat = array_fill_keys(array_keys(uaqs_fields_field_default_field_bases()), array());
   if (isset($formatdef[UAQS_TEXTUAL_CONTENT])) {
     $usingformat['field_uaqs_text_area'][UAQS_TEXTUAL_CONTENT] = $formatdef[UAQS_TEXTUAL_CONTENT]['name'];
+  }
+  if (isset($formatdef[UAQS_STANDARD])) {
+    $usingformat['field_uaqs_summary'][UAQS_STANDARD] = $formatdef[UAQS_STANDARD]['name'];
   }
   if (isset($formatdef[UAQS_UNCONSTRAINED])) {
     $usingformat['field_uaqs_body'][UAQS_UNCONSTRAINED] = $formatdef[UAQS_UNCONSTRAINED]['name'];
