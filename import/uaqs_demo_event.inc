@@ -119,6 +119,9 @@ class UaqsDemoEventMigration extends UaqsNodeMigration {
     // Allow limited HTML markup in the description field.
     $this->addFieldMapping('field_uaqs_body:format')
          ->defaultValue('uaqs_unconstrained');
+    // Allow limited HTML markup in the summary field.
+    $this->addFieldMapping('field_uaqs_summary:format')
+         ->defaultValue('uaqs_standard');
   }
 
 }
