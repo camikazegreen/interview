@@ -150,12 +150,13 @@ function uaqs_event_field_group_info() {
     ),
     'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Summary fields',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-summary field-group-tab',
         'required_fields' => 1,
+        'classes' => 'group-summary field-group-tab',
+        'description' => 'For use in feeds and content listings.',
       ),
+      'formatter' => 'closed',
     ),
   );
   $field_groups['group_summary|node|uaqs_event|form'] = $field_group;
