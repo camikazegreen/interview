@@ -293,7 +293,7 @@ function ua_quickstart_default_blocks($default_theme, $admin_theme) {
   // UAQS Event.
   if (module_exists('uaqs_event')) {
     $event_blocks = array(
-      'uaqs_events-block' => array(
+      'uaqs_events-card_group_block' => array(
         'region' => 'content',
         'title' => 'Events',
         'weight' => 20,
