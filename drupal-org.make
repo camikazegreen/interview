@@ -24,7 +24,7 @@ projects[uaqs_content_chunks][type] = module
 projects[uaqs_content_chunks][subdir] = custom
 projects[uaqs_content_chunks][download][type] = git
 projects[uaqs_content_chunks][download][branch] = 7.x-1.x
-projects[uaqs_content_chunks][download][revision] = 493b4e6
+projects[uaqs_content_chunks][download][revision] = d38ba87
 projects[uaqs_content_chunks][download][url] = https://bitbucket.org/ua_drupal/uaqs_content_chunks.git
 
 projects[uaqs_core][type] = module
