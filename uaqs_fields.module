@@ -4,6 +4,9 @@
  * Code for the UAQS Fields feature.
  */
 
+// Image style definitions.
+include_once 'uaqs_fields.features.inc';
+
 // Expose the default format list where Features can use it.
 include_once 'uaqs_fields.features.filter.inc';
 
