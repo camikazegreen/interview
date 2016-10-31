@@ -16,4 +16,4 @@ defaults[projects][subdir] = contrib
 ; Contrib modules
 ; ------------------------------------------------------------------------------
 
-projects[bean][version] = 1.9
+projects[bean][version] = 1.11
