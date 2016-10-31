@@ -14,8 +14,6 @@ defaults[projects][subdir] = contrib
 ; Contrib modules
 ; ------------------------------------------------------------------------------
 
-projects[bean][version] = 1.9
-
 projects[menu_bean][version] = 1.0-beta2
 projects[menu_bean][download][type] = git
 projects[menu_bean][download][tag] = 7.x-1.0-beta2
