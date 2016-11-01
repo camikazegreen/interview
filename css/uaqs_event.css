@@ -143,6 +143,16 @@
 	color: #ab0520;
 }
 
+
+/*no-margin and no-padding should be added to ua-bootstrap they are extremely helpful little classes*/
+.no-margin {
+margin:0 !important;
+}
+
+.no-padding {
+padding:0 !important;
+}
+
 @media screen and (min-width: 48em) {
 	.uaqs-event-calendar .uaqs-event-row .uaqs-event-left-group { width: 10%; }
 
