@@ -7,6 +7,7 @@ dependencies[] = defaultconfig
 dependencies[] = features
 dependencies[] = menu_bean
 dependencies[] = migrate
+dependencies[] = uaqs_block_types
 dependencies[] = uaqs_navigation
 features[defaultconfig][] = user_default_permissions:view any menu_bean bean
 features[features_api][] = api:2
