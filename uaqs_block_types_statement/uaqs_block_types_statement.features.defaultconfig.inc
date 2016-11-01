@@ -9,7 +9,7 @@
  */
 function uaqs_block_types_statement_defaultconfig_features() {
   return array(
-    'uaqs_statement' => array(
+    'uaqs_block_types_statement' => array(
       'user_default_permissions' => 'user_default_permissions',
     ),
   );

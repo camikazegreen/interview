@@ -9,7 +9,7 @@
  */
 function uaqs_block_types_captioned_image_defaultconfig_features() {
   return array(
-    'uaqs_captioned_image' => array(
+    'uaqs_block_types_captioned_image' => array(
       'user_default_permissions' => 'user_default_permissions',
     ),
   );
