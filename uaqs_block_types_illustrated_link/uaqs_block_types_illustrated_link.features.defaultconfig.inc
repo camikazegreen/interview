@@ -9,7 +9,7 @@
  */
 function uaqs_block_types_illustrated_link_defaultconfig_features() {
   return array(
-    'uaqs_illustrated_link' => array(
+    'uaqs_block_types_illustrated_link' => array(
       'user_default_permissions' => 'user_default_permissions',
     ),
   );

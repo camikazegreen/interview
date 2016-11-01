@@ -9,7 +9,7 @@
  */
 function uaqs_block_types_mini_blurb_defaultconfig_features() {
   return array(
-    'uaqs_mini_blurb' => array(
+    'uaqs_block_types_mini_blurb' => array(
       'user_default_permissions' => 'user_default_permissions',
     ),
   );
