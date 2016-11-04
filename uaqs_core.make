@@ -50,7 +50,7 @@ projects[views_bootstrap][download][branch] = 7.x-3.x
 
 projects[auto_entitylabel][version] = 1.3
 
-projects[date][version] = 2.9
+projects[date][version] = 2.10-rc1
 
 projects[email][version] = 1.3
 
