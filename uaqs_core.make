@@ -18,13 +18,13 @@ defaults[projects][subdir] = contrib
 ; Contrib dependencies common to many UAQS features/sites
 ; ------------------------------------------------------------------------------
 
-projects[ctools][version] = 1.9
+projects[ctools][version] = 1.11
 
 projects[draggableviews][version] = 2.1
 
 projects[elements][version] = 1.4
 
-projects[entity][version] = 1.7
+projects[entity][version] = 1.8
 
 projects[html5_tools][version] = 1.3
 
@@ -40,9 +40,8 @@ projects[views][version] = 3.14
 
 projects[views_bootstrap][version] = 3.x-dev
 projects[views_bootstrap][download][type] = git
-projects[views_bootstrap][download][revision] = 9c9a049
+projects[views_bootstrap][download][revision] = ef9820c
 projects[views_bootstrap][download][branch] = 7.x-3.x
-projects[views_bootstrap][patch][2203111] = http://drupal.org/files/issues/views_bootstrap-breakpoint-control-2203111-92-7.x.patch
 
 
 ; ------------------------------------------------------------------------------
@@ -55,7 +54,7 @@ projects[date][version] = 2.9
 
 projects[email][version] = 1.3
 
-projects[entityreference][version] = 1.1
+projects[entityreference][version] = 1.2
 
 projects[field_collection][version] = 1.0-beta11
 
@@ -65,7 +64,7 @@ projects[field_group][version] = 1.5
 
 projects[field_group_link][version] = 1.5
 
-projects[field_multiple_limit][version] = 1.0-alpha4
+projects[field_multiple_limit][version] = 1.0-alpha5
 
 projects[image_class][version] = 1.x-dev
 projects[image_class][download][type] = git
@@ -83,6 +82,7 @@ projects[title][version] = 1.0-alpha8
 projects[defaultconfig][version] = 1.0-alpha11
 
 projects[features][version] = 2.10
+projects[features][patch][986968] = https://www.drupal.org/files/issues/986968-shortcut-sets_0.patch
 
 projects[migrate][version] = 2.8
 
