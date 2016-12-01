@@ -38,6 +38,12 @@ function uaqs_event_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'uaqs_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_uaqs_attachments',
@@ -54,10 +60,12 @@ function uaqs_event_field_default_field_instances() {
       'active' => 1,
       'module' => 'file',
       'settings' => array(
+        'file_entity_inline' => 1,
+        'file_entity_inline_fields' => array(),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 12,
+      'weight' => 11,
     ),
   );
 
@@ -90,6 +98,12 @@ function uaqs_event_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'uaqs_card' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_uaqs_body',
@@ -108,7 +122,7 @@ function uaqs_event_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -142,6 +156,12 @@ function uaqs_event_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'uaqs_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_uaqs_contacts',
@@ -155,7 +175,7 @@ function uaqs_event_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -182,7 +202,7 @@ function uaqs_event_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
-          'show_remaining_days' => FALSE,
+          'show_remaining_days' => 0,
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
@@ -193,6 +213,23 @@ function uaqs_event_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'uaqs_card' => array(
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'format_type' => 'long',
+          'fromto' => 'value',
+          'multiple_from' => 'now',
+          'multiple_number' => 1,
+          'multiple_to' => '',
+          'show_remaining_days' => 0,
+          'show_repeat_rule' => 'hide',
+        ),
+        'type' => 'date_default',
+        'weight' => 20,
       ),
     ),
     'entity_type' => 'node',
@@ -220,7 +257,7 @@ function uaqs_event_field_default_field_instances() {
         'year_range' => '-1:+3',
       ),
       'type' => 'date_select',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -253,6 +290,12 @@ function uaqs_event_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'uaqs_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_uaqs_front',
@@ -268,7 +311,88 @@ function uaqs_event_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 4,
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-uaqs_event-field_uaqs_link'.
+  $field_instances['node-uaqs_event-field_uaqs_link'] = array(
+    'bundle' => 'uaqs_event',
+    'default_value' => array(
+      0 => array(
+        'title' => 'Read more',
+        'url' => '[node:url]',
+        'attributes' => array(
+          'target' => 0,
+        ),
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'link_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'uaqs_card' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_uaqs_link',
+    'label' => 'More Information',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'user',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'required',
+      'title_label_use_field_label' => 1,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 0,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 3,
     ),
   );
 
@@ -304,6 +428,12 @@ If there is no map, simply fill in the location name or address in the title fie
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'uaqs_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_uaqs_location',
@@ -337,73 +467,7 @@ If there is no map, simply fill in the location name or address in the title fie
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 10,
-    ),
-  );
-
-  // Exported field_instance: 'node-uaqs_event-field_uaqs_link'.
-  $field_instances['node-uaqs_event-field_uaqs_link'] = array(
-    'bundle' => 'uaqs_event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'card' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'link',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-        ),
-        'type' => 'link_default',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_uaqs_link',
-    'label' => 'More Information',
-    'required' => 0,
-    'settings' => array(
-      'absolute_url' => 1,
-      'attributes' => array(
-        'class' => '',
-        'configurable_class' => 0,
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'user',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'rel_remove' => 'default',
-      'title' => 'required',
-      'title_label_use_field_label' => 1,
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 11,
+      'weight' => 9,
     ),
   );
 
@@ -438,6 +502,12 @@ If there is no map, simply fill in the location name or address in the title fie
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'uaqs_card' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_uaqs_photos',
@@ -458,18 +528,24 @@ If there is no map, simply fill in the location name or address in the title fie
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'file_entity_inline' => 1,
+        'file_entity_inline_fields' => array(),
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
   // Exported field_instance: 'node-uaqs_event-field_uaqs_short_title'.
   $field_instances['node-uaqs_event-field_uaqs_short_title'] = array(
     'bundle' => 'uaqs_event',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => '[node:title]',
+      ),
+    ),
     'deleted' => 0,
     'description' => '<strong>Suggested character limit:</strong> 30',
     'display' => array(
@@ -498,8 +574,15 @@ If there is no map, simply fill in the location name or address in the title fie
         'type' => 'title_linked',
         'weight' => 0,
       ),
+      'uaqs_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_short_title',
     'label' => 'Short Title',
     'required' => 0,
@@ -514,7 +597,7 @@ If there is no map, simply fill in the location name or address in the title fie
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -543,8 +626,15 @@ If there is no map, simply fill in the location name or address in the title fie
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'uaqs_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_summary',
     'label' => 'Summary',
     'required' => 0,
@@ -559,7 +649,7 @@ If there is no map, simply fill in the location name or address in the title fie
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 7,
+      'weight' => 4,
     ),
   );
 
@@ -592,6 +682,12 @@ If there is no map, simply fill in the location name or address in the title fie
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'uaqs_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_uaqs_summary_short',
@@ -608,7 +704,7 @@ If there is no map, simply fill in the location name or address in the title fie
         'size' => 255,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -619,45 +715,44 @@ If there is no map, simply fill in the location name or address in the title fie
     'deleted' => 0,
     'description' => '',
     'display' => array(
-      'card' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
+      'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'default' => array(
+      'uaqs_card' => array(
         'label' => 'hidden',
-        'module' => 'title',
+        'module' => 'text',
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => '',
         ),
-        'type' => 'title_linked',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'text_plain',
+        'weight' => 19,
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'title_field',
     'label' => 'Title',
-    'required' => TRUE,
+    'required' => 1,
     'settings' => array(
       'hide_label' => array(
-        'entity' => FALSE,
-        'page' => FALSE,
+        'entity' => 'entity',
+        'page' => 0,
       ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'size' => 60,
