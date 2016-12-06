@@ -22,6 +22,8 @@ const UAQS_STANDARD = 'uaqs_standard';
 const UAQS_TEXTUAL_CONTENT = 'uaqs_textual_content';
 const UAQS_UNCONSTRAINED = 'uaqs_unconstrained';
 
+const UAQS_FIELDS_AUTOGROW_DL_URL = 'http://download.ckeditor.com/autogrow/releases/autogrow_4.6.0.zip';
+
 /**
  * Implements of hook_perm().
  */
@@ -238,6 +240,45 @@ function uaqs_fields_entity_info_alter(&$entity_info) {
 }
 
 /**
+ * Implements hook_libraries_info().
+ */
+function uaqs_fields_libraries_info() {
+  $libraries = array();
+  $libraries['autogrow'] = array(
+    'name' => 'CKEditor autogrow plugin',
+    'vendor url' => 'http://ckeditor.com/addon/autogrow',
+    'download url' => UAQS_FIELDS_AUTOGROW_DL_URL,
+    'version' => '4.6.0',
+    'files' => array(
+      'js' => array(
+        'plugin.js'
+      ),
+    ),
+  );
+
+  return $libraries;
+}
+
+/**
+ * Implements hook_editor_ckeditor_plugins().
+ */
+function uaqs_fields_editor_ckeditor_plugins(){
+  $plugins = array();
+  if (($library = libraries_detect('autogrow')) && !empty($library['installed'])) {
+    $plugins['autogrow'] = array(
+      'internal' => FALSE,
+      'location' => $library['library path'],
+      'path' => $library['library path'],
+      'file' => 'plugin.js',
+      'enabled callback' => 'uaqs_fields_autogrow_plugin_check',
+    );
+  }
+
+  return $plugins;
+}
+
+
+/**
  * Implements hook_filter_js_settings_alter().
  */
 function uaqs_fields_filter_js_settings_alter(&$settings) {
@@ -251,4 +292,33 @@ function uaqs_fields_filter_js_settings_alter(&$settings) {
   foreach ($settings as $key => $value) {
     $settings[$key]['editorSettings']['contentsCss'][] = $ua_bootstrap_css;
   }
+}
+
+/**
+ * Check if the CKeditor Auto Grow library is installed.
+ */
+function uaqs_fields_autogrow_installed() {
+  $installed = FALSE;
+  $library = libraries_detect('autogrow');
+  if (isset($library['installed'])) {
+    $installed = $library['installed'];
+  }
+
+  return $installed;
+}
+
+/**
+ * Enabled callback for hook_editor_ckeditor_plugins().
+ *
+ * Enables the CKEditor Auto Grow plugin when available.
+ *
+ * @param object $format
+ *   The filter format object for which to check the settings of.
+ *
+ * @return bool
+ *   Returns TRUE if the CKEditor Auto Grow plugin is available.
+ */
+function uaqs_fields_autogrow_plugin_check($format) {
+  // Automatically enable Auto Grow if it is installed.
+  return uaqs_fields_autogrow_installed();
 }

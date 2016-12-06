@@ -13,6 +13,7 @@ dependencies[] = field_collection
 dependencies[] = file
 dependencies[] = filter
 dependencies[] = image
+dependencies[] = libraries (>=2.x)
 dependencies[] = link
 dependencies[] = list
 dependencies[] = telephone

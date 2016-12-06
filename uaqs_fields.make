@@ -16,3 +16,7 @@ projects[fences][subdir] = contrib
 ; Telephone contrib module.
 projects[telephone][version] = 1.0-alpha1
 projects[telephone][subdir] = contrib
+
+; CKEditor autogrow plugin library.
+libraries[autogrow][download][type] = get
+libraries[autogrow][download][url] = http://download.ckeditor.com/autogrow/releases/autogrow_4.6.0.zip
