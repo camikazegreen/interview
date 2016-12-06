@@ -2,7 +2,7 @@ api = 2
 core = 7.x
 
 ; Dialog contrib module.
-projects[dialog][version] = 2.0-alpha9
+projects[dialog][version] = 2.0-beta1
 projects[dialog][subdir] = contrib
 
 ; Editor contrib module
