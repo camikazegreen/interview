@@ -1,4 +1,4 @@
-# example-bitbucket-pipelines.yml
+w# example-bitbucket-pipelines.yml
 #
 # This file provides an example configuration for BitBucket Pipelines that can
 # be added to UA QuickStart component repositories to enable the automatic
@@ -22,5 +22,5 @@ pipelines:
             - export COMMIT_MSG=`git log -1 --no-merges --format=format:"Updating ${PROJECT_NAME} for %B"`
             - git clone git@bitbucket.org:ua_drupal/ua_quickstart.git --branch 7.x-1.x
             - cd ua_quickstart
-            - ./update_component.sh
+            - ./update-component.sh
             - git push origin 7.x-1.x
