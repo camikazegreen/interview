@@ -180,24 +180,6 @@ function uaqs_content_chunks_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'add_mode' => 'button',
-      'allowed_bundles' => array(
-        'uaqs_card_deck' => -1,
-        'uaqs_column_image' => -1,
-        'uaqs_extra_info' => -1,
-        'uaqs_file_download' => -1,
-        'uaqs_full_width_bg_wrapper' => -1,
-        'uaqs_headed_text' => -1,
-        'uaqs_plain_text' => -1,
-      ),
-      'bundle_weights' => array(
-        'uaqs_card_deck' => 10,
-        'uaqs_column_image' => 2,
-        'uaqs_extra_info' => 14,
-        'uaqs_file_download' => 7,
-        'uaqs_full_width_bg_wrapper' => -10,
-        'uaqs_headed_text' => 8,
-        'uaqs_plain_text' => 3,
-      ),
       'default_edit_mode' => 'open',
       'title' => 'Paragraph',
       'title_multiple' => 'Paragraphs',
@@ -358,7 +340,7 @@ function uaqs_content_chunks_field_default_field_instances() {
     'label' => 'Summary',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
