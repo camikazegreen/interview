@@ -135,7 +135,7 @@ function uaqs_fields_filter_process_format($element) {
   if ($have_entity && $field_allowed) {
     $instance_info = field_info_instance($element['#entity_type'], $element['#field_name'], $element['#bundle']);
     $ourformats = uaqs_fields_using_format();
-    $fmts = $ourformats[$element['#field_name']];
+    $fmts = isset($ourformats[$element['#field_name']]) ? $ourformats[$element['#field_name']] : FALSE;
     if ($fmts) {
       // Format settings for creation forms.
       if (!empty($element['#entity']) && !empty($element['#entity_type'])) {
