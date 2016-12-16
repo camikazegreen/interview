@@ -5,6 +5,36 @@
  */
 
 /**
+ * Implements hook_requirements().
+ */
+function uaqs_fields_requirements($phase) {
+  $requirements = array();
+  // Ensure translations don't break at install time
+  $t = get_t();
+
+  // Check to see if the autogrow library is available
+  if ($phase == 'runtime') {
+    $requirements['autogrow'] = array(
+      'title' => $t('CKEditor Auto Grow plugin'),
+    );
+
+    $installed = uaqs_fields_autogrow_installed();
+    if (!$installed) {
+      $requirements['autogrow']['description'] = $t('The CKEditor Auto Grow plugin could not be found.  Please download the plugin from @url and install it into the site libraries directory.', array('@url' => UAQS_FIELDS_AUTOGROW_DL_URL));
+      $requirements['autogrow']['severity'] = REQUIREMENT_ERROR;
+      $requirements['autogrow']['value'] = $t('Missing.');
+    }
+    else {
+      // @todo Display the installed version.
+      $requirements['autogrow']['description'] = $t('CKEditor Auto Grow plugin is installed.');
+      $requirements['autogrow']['severity'] = REQUIREMENT_OK;
+      $requirements['autogrow']['value'] = $t('Installed.');
+    }
+  }
+  return $requirements;
+}
+
+/**
  * Update existing content to use text formats added in UADIGITAL-402.
  */
 function uaqs_fields_update_7100() {
