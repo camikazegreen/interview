@@ -9,7 +9,7 @@
 
 include_once dirname(__FILE__) . '/includes/common.inc';
 
-drupal_add_js('//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array(
+drupal_add_js('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array(
         'type' => 'external',
         'group' => JS_THEME,
         'scope' => 'footer',
@@ -43,7 +43,7 @@ function ua_zen_css_alter(&$css) {
     if ($ua_bootstrap_cdn_version == 'stable') {
       $ua_bootstrap_cdn_version = UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION;
     }
-    $ua_bootstrap_path = '//cdn.uadigital.arizona.edu/lib/ua-bootstrap/' . $ua_bootstrap_cdn_version . '/ua-bootstrap';
+    $ua_bootstrap_path = 'https://cdn.uadigital.arizona.edu/lib/ua-bootstrap/' . $ua_bootstrap_cdn_version . '/ua-bootstrap';
     $ua_bootstrap_css_info['type'] = 'external';
   }
   else {
@@ -212,7 +212,7 @@ function ua_zen_preprocess_html(&$variables, $hook) {
 // */
 
 function ua_zen_preprocess_html(&$variables) {
-    drupal_add_css('//cdn.uadigital.arizona.edu/lib/ua-brand-icons/latest/ua-brand-icons.css', array('type' => 'external'));
+    drupal_add_css('https://cdn.uadigital.arizona.edu/lib/ua-brand-icons/latest/ua-brand-icons.css', array('type' => 'external'));
     $variables['html_attributes_array']['class'][]= 'sticky-footer';
 }
 
