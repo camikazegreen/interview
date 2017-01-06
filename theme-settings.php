@@ -56,7 +56,7 @@ function ua_zen_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
       '!uabootstrap' => l(t('UA Bootstrap'), 'http://uadigital.arizona.edu/ua-bootstrap', array(
         'external' => TRUE,
       )),
-      '!uabootstrapcdn' => l(t('UA Bootstrap CDN'), 'http://cdn.uadigital.arizona.edu/lib/ua-bootstrap', array(
+      '!uabootstrapcdn' => l(t('UA Bootstrap CDN'), 'https://cdn.uadigital.arizona.edu/lib/ua-bootstrap', array(
         'external' => TRUE,
       )),
       '!warning' => '<div class="alert alert-info messages info"><strong>' . t('NOTE') . ':</strong> ' . t('The UA Bootstrap CDN is the preferred method for providing huge performance gains in load time.') . '</div>',
