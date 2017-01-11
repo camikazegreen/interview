@@ -1,4 +1,4 @@
-w# example-bitbucket-pipelines.yml
+# example-bitbucket-pipelines.yml
 #
 # This file provides an example configuration for BitBucket Pipelines that can
 # be added to UA QuickStart component repositories to enable the automatic
