@@ -268,7 +268,7 @@ class UaqsDemoMarqueeMigration extends UaqsParagraphsItemMigration {
     // Fields to import to the bundle.
     $data_fields = array(
       'uaqs_summary_short' => t('Title'),
-      'uaqs_html' => t('Body'),
+      'uaqs_summary' => t('Body'),
       'uaqs_link' => t('Read more'),
     );
     // Image fields...
@@ -302,10 +302,10 @@ class UaqsDemoMarqueeMigration extends UaqsParagraphsItemMigration {
     $this->addFieldMapping($image_dst_field . ':source_dir')
          ->defaultValue($this->imagePath());
     // Map JSON names to simple content type fields and subfields.
-    $this->addFieldMapping('field_uaqs_html', 'uaqs_html');
+    $this->addFieldMapping('field_uaqs_summary', 'uaqs_summary');
     // Allow limited HTML markup in the text area field.
-    $this->addFieldMapping('field_uaqs_html:format')
-         ->defaultValue('uaqs_full_html');
+    $this->addFieldMapping('field_uaqs_summary:format')
+         ->defaultValue('uaqs_standard');
     // Map JSON names to simple content type fields and subfields.
     $this->addFieldMapping('field_uaqs_link', 'uaqs_link');
     // Link title is a special case.
