@@ -33,3 +33,4 @@ features[image][] = medium_inset_square
 features[image][] = medium_tile
 
 version = 7.x-1.0-alpha4
+version = 7.x-1.0-alpha4

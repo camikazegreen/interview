@@ -31,3 +31,4 @@ features[field_instance][] = bean-uaqs_contact_summary-field_uaqs_contact_addres
 features[field_instance][] = bean-uaqs_contact_summary-field_uaqs_contact_mail_link
 features[field_instance][] = bean-uaqs_contact_summary-field_uaqs_contact_phone
 version = 7.x-1.0-alpha4
+version = 7.x-1.0-alpha4

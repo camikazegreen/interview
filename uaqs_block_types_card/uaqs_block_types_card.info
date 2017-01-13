@@ -34,3 +34,4 @@ features[field_instance][] = bean-uaqs_card-field_uaqs_photo
 features[field_instance][] = bean-uaqs_card-field_uaqs_text_area
 features[field_instance][] = bean-uaqs_card-title_field
 version = 7.x-1.0-alpha4
+version = 7.x-1.0-alpha4
