@@ -115,7 +115,7 @@ projects[uaqs_unit][type] = module
 projects[uaqs_unit][subdir] = custom
 projects[uaqs_unit][download][type] = git
 projects[uaqs_unit][download][branch] = 7.x-1.x
-projects[uaqs_unit][download][revision] = dc93fcb
+projects[uaqs_unit][download][revision] = e1cf213
 projects[uaqs_unit][download][url] = https://bitbucket.org/ua_drupal/uaqs_unit.git
 
 
