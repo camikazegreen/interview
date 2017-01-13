@@ -1,3 +1,39 @@
+7.x-1.0-alpha5, 2016-05-02
+------------------------------
+- Back to dev.
+
+7.x-1.0-alpha4, 2016-05-02
+------------------------------
+- Merged in UADIGITAL-653 (pull request #9).
+- UADIGITAL-653: Fixed broken image style + misc changes from 'features-update'.
+- Merged in UADIGITAL-653 (pull request #8).
+- UADIGITAL-653: Implementeing sigle person view styling.
+- Merged in trackleft/uaqs_person/UADIGITAL-580-add-pathauto-module-defaul (pull request #6).
+- Made change to defaults in order to avoid conflicting with views and term aliases.
+- UADIGITAL-580 addint path and pathauto dependencies.
+- UADIGITAL-580 add default path auto settings for person content type.
+- Merged ua_drupal/uaqs_person into 7.x-1.x.
+- UADIGITAL-517: Merged in ejabrown/uaqs_person/UADIGITAL-517 (pull request #4).
+- Update person instance of field_uaqs_phones to use telephone module.
+- Merged in mmunro-ltrr/uaqs_person/UADIGITAL-523 (pull request #3).
+- Add back the ommitted change to the description.
+- Hide the UAQS label in content type names and revise the descriptions.
+- Merged in trackleft/uaqs_person-tmp/UADIGITAL-522-uaqs-person-grid-display-i (pull request #2).
+- Removing make file per https://bitbucket.org/ua_drupal/uaqs_core/pull-requests/3/uadigital-522-adding-views_bootstrap.
+- Merged 7.x-1.x into UADIGITAL-522-uaqs-person-grid-display-i.
+- Adding img-responsive class to images.
+- Uaqs_person.css edited online with Bitbucket.
+- Fixing patch in make.
+- Addmin views bootstrap and it's patch.
+- Rename group_footer machine name to group_row.
+- Rebuild person for better display, and removing most non-ua-bootstrap css.
+- Merged in trackleft/uaqs_person-tmp (pull request #1).
+- Uaqs_person.views_default.inc edited online with Bitbucket.
+- Remove dependency on entity view modes.
+- Make more UA to UAQS substitutions in the image styles, (deprecated) CSS classes, and documentation.
+- Rename UA to UAQS in the file contents.
+- Back to dev.
+
 7.x-1.0-alpha3, 2015-10-16
 ------------------------------
 - Back to dev.

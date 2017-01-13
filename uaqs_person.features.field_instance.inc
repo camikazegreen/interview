@@ -10,6 +10,59 @@
 function uaqs_person_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-uaqs_person-field_uaqs_person_category'.
+  $field_instances['node-uaqs_person-field_uaqs_person_category'] = array(
+    'bundle' => 'uaqs_person',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select the categories you would like this person to appear in throughout the site.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'uaqs_card' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_uaqs_person_category',
+    'label' => 'Category',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-uaqs_person-field_uaqs_addresses'.
   $field_instances['node-uaqs_person-field_uaqs_addresses'] = array(
     'bundle' => 'uaqs_person',
@@ -25,7 +78,7 @@ function uaqs_person_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -35,7 +88,7 @@ function uaqs_person_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -51,6 +104,7 @@ function uaqs_person_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_addresses',
     'label' => 'Address(es)',
     'required' => 0,
@@ -112,6 +166,7 @@ function uaqs_person_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_bio',
     'label' => 'Biography',
     'required' => 0,
@@ -147,7 +202,7 @@ function uaqs_person_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'email_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -157,7 +212,7 @@ function uaqs_person_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'email_default',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -181,6 +236,7 @@ function uaqs_person_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_uaqs_email',
     'label' => 'E-mail',
     'required' => 0,
@@ -231,6 +287,7 @@ function uaqs_person_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_fname',
     'label' => 'First Name',
     'required' => 1,
@@ -282,6 +339,7 @@ function uaqs_person_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_lname',
     'label' => 'Last Name',
     'required' => 1,
@@ -309,35 +367,35 @@ function uaqs_person_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
+        'module' => 'telephone',
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'title' => '',
         ),
-        'type' => 'text_default',
-        'weight' => 4,
+        'type' => 'telephone_link',
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'text',
+        'module' => 'telephone',
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'title' => '',
         ),
-        'type' => 'text_default',
+        'type' => 'telephone_link',
         'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'title',
+        'module' => 'telephone',
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => '',
+          'title' => '',
         ),
-        'type' => 'title_linked',
+        'type' => 'telephone_link',
         'weight' => 7,
       ),
       'uaqs_card' => array(
@@ -355,6 +413,7 @@ function uaqs_person_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_uaqs_phones',
     'label' => 'Phone Number(s)',
     'required' => 0,
@@ -367,7 +426,6 @@ function uaqs_person_field_default_field_instances() {
       'module' => 'telephone',
       'settings' => array(
         'placeholder' => '',
-        'size' => 60,
       ),
       'type' => 'telephone_default',
       'weight' => 7,
@@ -384,11 +442,11 @@ function uaqs_person_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'class' => 'img-responsive',
+          'class' => 'img-responsive full-width',
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'image_link' => '',
-          'image_style' => 'uaqs_entry_detail',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
         'weight' => 2,
@@ -397,11 +455,11 @@ function uaqs_person_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'class' => '',
+          'class' => 'img-responsive',
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'image_link' => '',
-          'image_style' => 'uaqs_entry_detail',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
         'weight' => 3,
@@ -414,7 +472,7 @@ function uaqs_person_field_default_field_instances() {
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
           'image_link' => 'content',
-          'image_style' => 'uaqs_entry_detail',
+          'image_style' => 'medium',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -434,6 +492,7 @@ function uaqs_person_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_photo',
     'label' => 'Photo',
     'required' => 0,
@@ -485,7 +544,7 @@ function uaqs_person_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -515,6 +574,7 @@ function uaqs_person_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_titles',
     'label' => 'Job Title(s)',
     'required' => 0,
@@ -546,9 +606,9 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
-          'title_class' => '',
+          'title_class' => 'margin-align-top margin-zero-bottom',
           'title_link' => '',
-          'title_style' => 'h1',
+          'title_style' => 'h2',
         ),
         'type' => 'title_linked',
         'weight' => 0,
@@ -559,9 +619,9 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
-          'title_class' => '',
+          'title_class' => 'margin-zero-top margin-zero-bottom',
           'title_link' => '',
-          'title_style' => 'h1',
+          'title_style' => 'h2',
         ),
         'type' => 'title_linked',
         'weight' => 1,
@@ -594,9 +654,10 @@ function uaqs_person_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'title_field',
     'label' => 'Title',
-    'required' => TRUE,
+    'required' => 1,
     'settings' => array(
       'hide_label' => array(
         'entity' => 'entity',
@@ -606,6 +667,7 @@ function uaqs_person_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'size' => 60,
@@ -620,6 +682,7 @@ function uaqs_person_field_default_field_instances() {
   t('<strong>Suggested format:</strong> 000-000-0000 +ext');
   t('Address(es)');
   t('Biography');
+  t('Category');
   t('E-mail');
   t('First Name');
   t('Job Title(s)');
@@ -627,6 +690,7 @@ function uaqs_person_field_default_field_instances() {
   t('Office location(s)');
   t('Phone Number(s)');
   t('Photo');
+  t('Select the categories you would like this person to appear in throughout the site.');
   t('Title');
 
   return $field_instances;
