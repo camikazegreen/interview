@@ -108,7 +108,7 @@ projects[uaqs_publication][type] = module
 projects[uaqs_publication][subdir] = custom
 projects[uaqs_publication][download][type] = git
 projects[uaqs_publication][download][branch] = 7.x-1.x
-projects[uaqs_publication][download][revision] = be760a4
+projects[uaqs_publication][download][revision] = 35d7d1e
 projects[uaqs_publication][download][url] = https://bitbucket.org/ua_drupal/uaqs_publication.git
 
 projects[uaqs_unit][type] = module
