@@ -14,7 +14,7 @@
  * @param string $hook
  *   The hook name (generally the block type name).
  */
-function uaqs_block_types_preprocess_entity_bean_uaqs_captioned_image(array &$variables, $hook) {
+function uaqs_block_types_captioned_image_preprocess_entity_bean_uaqs_captioned_image(array &$variables, $hook) {
   $have_author = !empty($variables['content']['field_uaqs_image_author']);
   $have_caption = !empty($variables['content']['field_uaqs_image_caption']);
   $have_license = !empty($variables['content']['field_uaqs_image_license']);
@@ -25,17 +25,4 @@ function uaqs_block_types_preprocess_entity_bean_uaqs_captioned_image(array &$va
   $variables['content']['have_attribution'] = $have_attribution;
   $have_figcaption = ($have_caption || $have_attribution);
   $variables['content']['have_figcaption'] = $have_figcaption;
-}
-
-/**
- * Insert variables into the UAQS Statement template.
- *
- * @param array &$variables
- *   An array of variables to pass to the theme template.
- * @param string $hook
- *   The hook name (generally the block type name).
- */
-function uaqs_block_types_preprocess_entity_bean_uaqs_statement(array &$variables, $hook) {
-  $have_link = !empty($variables['content']['field_uaqs_read_more']);
-  $variables['content']['have_link'] = $have_link;
 }

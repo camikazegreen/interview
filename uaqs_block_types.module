@@ -6,9 +6,6 @@
 
 const OUR_PREFIX = 'uaqs-block-types-';
 
-include_once 'uaqs_block_types.features.inc';
-include_once 'uaqs_block_types.preprocess_entity_overrides.inc';
-
 /**
  * Override or insert variables into the Bean templates.
  *

@@ -72,3 +72,4 @@ function uaqs_block_types_image_default_styles() {
 
   return $styles;
 }
+
