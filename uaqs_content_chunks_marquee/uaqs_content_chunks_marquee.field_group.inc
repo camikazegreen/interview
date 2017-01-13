@@ -203,7 +203,7 @@ function uaqs_content_chunks_marquee_field_group_info() {
     'label' => 'Row',
     'weight' => '1',
     'children' => array(
-      0 => 'field_uaqs_html',
+      0 => 'field_uaqs_summary',
       1 => 'group_read_more',
       2 => 'group_headline',
     ),

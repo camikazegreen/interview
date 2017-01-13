@@ -18,9 +18,9 @@ function uaqs_content_chunks_well_ctools_plugin_api($module = NULL, $api = NULL)
  */
 function uaqs_content_chunks_well_paragraphs_info() {
   $items = array(
-    'well' => array(
+    'uaqs_well' => array(
       'name' => 'Well',
-      'bundle' => 'well',
+      'bundle' => 'uaqs_well',
       'locked' => '1',
     ),
   );

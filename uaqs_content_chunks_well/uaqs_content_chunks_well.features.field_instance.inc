@@ -10,9 +10,9 @@
 function uaqs_content_chunks_well_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'paragraphs_item-well-field_uaqs_html'.
-  $field_instances['paragraphs_item-well-field_uaqs_html'] = array(
-    'bundle' => 'well',
+  // Exported field_instance: 'paragraphs_item-uaqs_well-field_uaqs_summary'.
+  $field_instances['paragraphs_item-uaqs_well-field_uaqs_summary'] = array(
+    'bundle' => 'uaqs_well',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -37,8 +37,8 @@ function uaqs_content_chunks_well_field_default_field_instances() {
     ),
     'entity_type' => 'paragraphs_item',
     'fences_wrapper' => 'no_wrapper',
-    'field_name' => 'field_uaqs_html',
-    'label' => 'HTML',
+    'field_name' => 'field_uaqs_summary',
+    'label' => 'Well Content',
     'required' => 0,
     'settings' => array(
       'text_processing' => 1,
@@ -57,7 +57,7 @@ function uaqs_content_chunks_well_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('HTML');
+  t('Well Content');
 
   return $field_instances;
 }
