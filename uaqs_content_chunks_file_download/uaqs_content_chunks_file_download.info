@@ -16,3 +16,4 @@ features[field_instance][] = paragraphs_item-uaqs_file_download-field_uaqs_downl
 features[paragraphs][] = uaqs_file_download
 files[] = templates/paragraphs-item--uaqs_file_download.tpl.php
 project path = profiles/ua_quickstart/modules/custom/uaqs_content_chunks
+version = 7.x-1.0-alpha4

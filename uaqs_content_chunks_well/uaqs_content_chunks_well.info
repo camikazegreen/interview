@@ -13,3 +13,4 @@ features[features_api][] = api:2
 features[field_group][] = group_well|paragraphs_item|uaqs_well|default
 features[field_instance][] = paragraphs_item-uaqs_well-field_uaqs_summary
 features[paragraphs][] = uaqs_well
+version = 7.x-1.0-alpha4
