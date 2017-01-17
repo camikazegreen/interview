@@ -14,7 +14,7 @@ function uaqs_event_features_export($data, &$export, $module_name = '') {
   $map = features_get_default_map('extra_fields');
   foreach ($data as $identifier) {
     list($entity_type, $bundle) = explode(':', $identifier);
-    if ($settings = extra_fields_uaqs_event_fields_features_load($entity_type, $bundle)) {
+    if ($settings = uaqs_event_fields_features_load($entity_type, $bundle)) {
       if (isset($map[$identifier]) && $map[$identifier] != $module_name) {
         if (isset($export['features']['extra_fields'][$identifier])) {
           unset($export['features']['extra_fields'][$identifier]);
@@ -35,7 +35,7 @@ function uaqs_event_features_export($data, &$export, $module_name = '') {
  */
 function uaqs_event_features_export_options() {
   $options = array();
-  foreach (extra_fields_uaqs_event_fields_features_load() as $entity_type => $bundles) {
+  foreach (uaqs_event_fields_features_load() as $entity_type => $bundles) {
     foreach ($bundles as $bundle_name => $bundle_info) {
       $options["${entity_type}:${bundle_name}"] = "${entity_type}: ${bundle_name} extra fields";
     }
@@ -52,7 +52,7 @@ function uaqs_event_features_export_render($module_name, $data, $export = NULL) 
   $code[] = ' $extra_fields_info = array();';
   foreach ($data as $name) {
     list($entity_type, $bundle) = explode(':', $name);
-    $code[] = "  \$extra_fields_info['{$entity_type}']['{$bundle}']['extra_fields'] = " . features_var_export(extra_fields_uaqs_event_fields_features_load($entity_type, $bundle)) .";";
+    $code[] = "  \$extra_fields_info['{$entity_type}']['{$bundle}']['extra_fields'] = " . features_var_export(uaqs_event_fields_features_load($entity_type, $bundle)) .";";
   }
   $code[] = "return \$extra_fields_info;";
   $code = implode("\n", $code);
