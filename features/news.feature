@@ -7,8 +7,8 @@ Feature: News
   Scenario: News is displayed from newest to oldest
     Given I am an anonymous user
     When I visit "/news"
-    Then I should see "Wednesday, September 9, 2015" in the ".date-display-single" element
-    And I should not see "Saturday, March 14, 2015" in the ".date-display-single" element
+    Then I should see a date matching "today" in the ".date-display-single" element
+    And I should not see a date matching "today -10 days" in the ".date-display-single" element
 
   @regression @news
   Scenario: A news block is displayed on the home page.
@@ -19,5 +19,5 @@ Feature: News
   @regression @news
   Scenario: Paragraphs items migrated correctly into the news content type and is visible to anonymous visitors to the site.
     Given I am an anonymous user
-    When I am at 'news/2015/09/new-light-origins-“bear-down”'
+    When I am on the "news" page from "today" called "new-light-origins-“bear-down”"
     Then I should see the text "“Button” Salmon"
