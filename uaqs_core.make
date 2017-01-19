@@ -65,6 +65,10 @@ projects[field_group][version] = 1.5
 projects[field_group_link][version] = 1.5
 
 projects[field_multiple_limit][version] = 1.0-alpha5
+; Fixes PHP Notice for multi-valued fields hidden in Field UI.
+; @see https://jira.arizona.edu/browse/UADIGITAL-924
+; @see https://www.drupal.org/node/2807079
+projects[field_multiple_limit][patch][2807079] = https://www.drupal.org/files/issues/Avoid_php_warnings-2807079-2.patch
 
 projects[image_class][version] = 1.x-dev
 projects[image_class][download][type] = git
