@@ -126,16 +126,16 @@ function uaqs_event_field_extra_fields() {
  * We are going to be reusing the field_uaqs_date in certain displays.
  */
 function uaqs_event_node_view($node, $view_mode, $langcode) {
-  if ($node->type == 'uaqs_event') { 
+  if ($node->type == 'uaqs_event') {
     if (isset($node->view) && $node->view->style_plugin->row_plugin->plugin_name == 'node') {
       $row_index = $node->view->row_index;
       $date = $node->view->result[$row_index]->field_data_field_uaqs_date_field_uaqs_date_value;
 
       if (module_exists('date')) {
-	$timezone = new DateTimeZone(date_default_timezone());
+        $timezone = new DateTimeZone(date_default_timezone());
       }
       else {
-	$timezone = variable_get('date_default_timezone', 'America/Phoenix');
+        $timezone = variable_get('date_default_timezone', 'America/Phoenix');
       }
 
       $date = new DateTime($date, new DateTimeZone('UTC'));
@@ -156,22 +156,4 @@ function uaqs_event_node_view($node, $view_mode, $langcode) {
       );
     }
   }
-}
-
-/* Features implementation for exporting extra fields information */
-
-/**
- * Implements hook_features_api.
- */
-function uaqs_event_features_api() {
-  return array(
-    'uaqs_event_extra_fields' => array(
-      'name' => t('Extra fields'),
-      'default_hook' => 'uaqs_event_extra_fields_defaults',
-      'default_file' => FEATURES_DEFAULTS_INCLUDED,
-      'features_source' => TRUE,
-      'file' => drupal_get_path('module', 'uaqs_event') . '/uaqs_event.features.extra_fields.inc',
-
-    ),
-  );
 }
