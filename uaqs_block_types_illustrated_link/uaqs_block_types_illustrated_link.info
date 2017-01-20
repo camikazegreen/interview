@@ -18,4 +18,3 @@ features[defaultconfig][] = user_default_permissions:view any uaqs_illustrated_l
 features[features_api][] = api:2
 features[field_instance][] = bean-uaqs_illustrated_link-field_uaqs_prettylink_image
 features[field_instance][] = bean-uaqs_illustrated_link-field_uaqs_prettylink_link
-version = 7.x-1.0-alpha4

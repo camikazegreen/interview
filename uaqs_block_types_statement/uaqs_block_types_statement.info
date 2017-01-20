@@ -19,4 +19,3 @@ features[defaultconfig][] = user_default_permissions:view any uaqs_statement bea
 features[features_api][] = api:2
 features[field_instance][] = bean-uaqs_statement-field_uaqs_read_more
 features[field_instance][] = bean-uaqs_statement-field_uaqs_text_area
-version = 7.x-1.0-alpha4
