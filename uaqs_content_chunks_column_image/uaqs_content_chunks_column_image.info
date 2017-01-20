@@ -29,4 +29,3 @@ features[field_instance][] = paragraphs_item-uaqs_column_image-field_uaqs_captio
 features[field_instance][] = paragraphs_item-uaqs_column_image-field_uaqs_image_credit
 features[field_instance][] = paragraphs_item-uaqs_column_image-field_uaqs_photo
 features[paragraphs][] = uaqs_column_image
-version = 7.x-1.0-alpha4

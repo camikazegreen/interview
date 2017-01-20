@@ -26,4 +26,3 @@ features[field_instance][] = paragraphs_item-uaqs_content_chunks_marquee-field_u
 features[field_instance][] = paragraphs_item-uaqs_content_chunks_marquee-field_uaqs_summary_short
 features[paragraphs][] = uaqs_content_chunks_marquee
 features_exclude[dependencies][media] = media
-version = 7.x-1.0-alpha4

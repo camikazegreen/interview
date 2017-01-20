@@ -20,4 +20,3 @@ features[field_instance][] = paragraphs_item-uaqs_single_card-field_uaqs_links
 features[field_instance][] = paragraphs_item-uaqs_single_card-field_uaqs_short_title
 features[field_instance][] = paragraphs_item-uaqs_single_card-field_uaqs_summary
 features[paragraphs][] = uaqs_single_card
-version = 7.x-1.0-alpha4

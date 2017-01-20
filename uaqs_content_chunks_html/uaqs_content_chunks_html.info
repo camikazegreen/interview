@@ -10,4 +10,3 @@ features[features_api][] = api:2
 features[field_instance][] = paragraphs_item-uaqs_content_chunks_html-field_uaqs_html
 features[paragraphs][] = uaqs_content_chunks_html
 project path = profiles/ua_quickstart/modules/custom/uaqs_content_chunks
-version = 7.x-1.0-alpha4

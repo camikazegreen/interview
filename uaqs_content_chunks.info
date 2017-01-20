@@ -43,4 +43,3 @@ features[variable][] = node_options_uaqs_flexible_page
 features[variable][] = node_preview_uaqs_flexible_page
 features[variable][] = node_submitted_uaqs_flexible_page
 files[] = templates/paragraphs-items.tpl.php
-version = 7.x-1.0-alpha4
