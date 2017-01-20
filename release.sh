@@ -156,7 +156,7 @@ printf "Updating CHANGELOG.txt...\n"
 git tag "$UAQSTMPTAG"
 # Update CHANGELOG.txt.
 mv CHANGELOG.txt CHANGELOG.old
-drush rn --changelog "$UAQSOLDREF" "$UAQSTMPTAG" 2>/dev/null | sed "s/$UAQSTMPTAG/$UAQSNEWTAG/" > CHANGELOG.txt
+drush rn --changelog $1 $UAQSTMPTAG 2>/dev/null | sed "s/$UAQSTMPTAG/$UAQSNEWTAG/" > CHANGELOG.txt
 # Ensure CHANGLELOG generation was successful.
 DRUSHRESULT=$?
 if [ $DRUSHRESULT -eq 0 ]; then
