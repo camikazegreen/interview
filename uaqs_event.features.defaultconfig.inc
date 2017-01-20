@@ -60,6 +60,12 @@ function uaqs_event_defaultconfig_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
+      'uaqs_med_media_list' => array(
+        'custom_settings' => TRUE,
+      ),
+      'uaqs_marquee' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -67,7 +73,36 @@ function uaqs_event_defaultconfig_strongarm() {
           'weight' => '12',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'uaqs_event_month_short' => array(
+          'uaqs_med_media_list' => array(
+            'weight' => '48',
+            'visible' => TRUE,
+          ),
+          'uaqs_card' => array(
+            'weight' => '50',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '8',
+            'visible' => FALSE,
+          ),
+        ),
+        'uaqs_event_day_short' => array(
+          'uaqs_med_media_list' => array(
+            'weight' => '29',
+            'visible' => TRUE,
+          ),
+          'uaqs_card' => array(
+            'weight' => '50',
+            'visible' => FALSE,
+          ),
+          'default' => array(
+            'weight' => '9',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__uaqs_event'] = $strongarm;

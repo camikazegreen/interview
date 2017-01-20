@@ -7,6 +7,53 @@
 include_once 'uaqs_event.features.inc';
 
 /**
+ * Implements hook_date_format_types().
+ */
+function uaqs_event_date_format_types() {
+  // Define the uaqs event date format types.
+  return array(
+    'uaqs_event_date' => t('Event date'),
+    'uaqs_event_full_month_and_year' => t('Full month and year'),
+    'uaqs_event_abbr_month_only' => t('Month only abbreviation'),
+    'uaqs_event_day_only' => t('Day only'),
+    'uaqs_event_time_only' => t('Time only'),
+  );
+}
+
+/**
+ * Implements hook_date_formats().
+ */
+function uaqs_event_date_formats() {
+  return array(
+    array(
+      'type' => 'uaqs_event_date',
+      'format' => 'F d, Y g:ia',
+      'locales' => array('en'),
+    ),
+    array(
+      'type' => 'uaqs_event_full_month_and_year',
+      'format' => 'F Y',
+      'locales' => array('en'),
+    ),
+    array(
+      'type' => 'uaqs_event_abbr_month_only',
+      'format' => 'M',
+      'locales' => array('en'),
+    ),
+    array(
+      'type' => 'uaqs_event_day_only',
+      'format' => 'd',
+      'locales' => array('en'),
+    ),
+    array(
+      'type' => 'uaqs_event_time_only',
+      'format' => 'g:ia',
+      'locales' => array('en'),
+    ),
+  );
+}
+
+/**
  * Implements hook_theme_registry_alter().
  */
 function uaqs_event_theme_registry_alter(&$theme_registry) {
@@ -50,5 +97,63 @@ function uaqs_event_field_display_alter(&$display, $context) {
   if ($context['field']['field_name'] == 'field_uaqs_date' && isset($context['entity']->view) && $context['entity']->view->style_plugin->row_plugin->plugin_name == 'node') {
     $row_index = $context['entity']->view->row_index;
     $display['settings']['multiple_from'] = $context['entity']->view->result[$row_index]->field_data_field_uaqs_date_field_uaqs_date_value;
+  }
+}
+
+
+/**
+ * Implements hook_field_extra_fields().
+ *
+ * Adds two extra date fields to view modes of "uaqs_event" content type.
+ */
+function uaqs_event_field_extra_fields() {
+  $data['node']['uaqs_event']['display']['uaqs_event_month_short'] = array(
+    'label' => t('Month short (This is set in the uaqs_event.module) '),
+    'weight' => 50, // default weight, can be changed on display form by site-builder.
+  );
+  $data['node']['uaqs_event']['display']['uaqs_event_day_short'] = array(
+    'label' => t('Day short (This is set in the uaqs_event.module) '),
+    'weight' => 50, // default weight, can be changed on display form by site-builder.
+
+  );
+  return $data;
+}
+
+/**
+ * Implements hook_node_view().
+ *
+ * Provides content for "uaqs_event_day_short" and "uaqs_event_month_short" pseudo/extra fields.
+ * We are going to be reusing the field_uaqs_date in certain displays.
+ */
+function uaqs_event_node_view($node, $view_mode, $langcode) {
+  if ($node->type == 'uaqs_event') {
+    if (isset($node->view) && $node->view->style_plugin->row_plugin->plugin_name == 'node') {
+      $row_index = $node->view->row_index;
+      $date = $node->view->result[$row_index]->field_data_field_uaqs_date_field_uaqs_date_value;
+
+      if (module_exists('date')) {
+        $timezone = new DateTimeZone(date_default_timezone());
+      }
+      else {
+        $timezone = variable_get('date_default_timezone', 'America/Phoenix');
+      }
+
+      $date = new DateTime($date, new DateTimeZone('UTC'));
+      $date->setTimezone($timezone);
+      $date = $date->getTimestamp();
+      $month_short = format_date($date , 'uaqs_event_abbr_month_only');
+      $day_short = format_date($date , 'uaqs_event_day_only');
+
+      $node->content['uaqs_event_month_short'] = array(
+        '#pseudo_field' => TRUE,
+        '#title' => '',
+        '#markup' => $month_short,
+      );
+      $node->content['uaqs_event_day_short'] = array(
+        '#pseudo_field' => TRUE,
+        '#title' => '',
+        '#markup' => $day_short,
+      );
+    }
   }
 }

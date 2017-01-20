@@ -13,7 +13,7 @@ function uaqs_event_view_views_default_views() {
   $view = new view();
   $view->name = 'uaqs_events';
   $view->description = 'Lists of events made with the UAQS Event content type.';
-  $view->tag = 'default';
+  $view->tag = 'uaqs_event';
   $view->base_table = 'node';
   $view->human_name = 'UAQS Events';
   $view->core = 7;
@@ -33,7 +33,7 @@ function uaqs_event_view_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = 'uaqs-event-row';
-  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_plugin'] = 'node';
   /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_uaqs_date']['id'] = 'field_uaqs_date';
   $handler->display->display_options['fields']['field_uaqs_date']['table'] = 'field_data_field_uaqs_date';
@@ -90,7 +90,28 @@ function uaqs_event_view_views_default_views() {
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'uaqs-event-calendar';
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'date_views_pager';
+  $handler->display->display_options['pager']['type'] = 'mini';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_uaqs_date_1',
+      'rendered' => 1,
+      'rendered_strip' => 1,
+    ),
+  );
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['uses_fields'] = TRUE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['view_mode'] = 'uaqs_med_media_list';
+  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
@@ -100,117 +121,53 @@ function uaqs_event_view_views_default_views() {
   $handler->display->display_options['empty']['area']['content'] = '<em>There are no events listed for this time span.</em>';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Date: month */
+  /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_uaqs_date']['id'] = 'field_uaqs_date';
   $handler->display->display_options['fields']['field_uaqs_date']['table'] = 'field_data_field_uaqs_date';
   $handler->display->display_options['fields']['field_uaqs_date']['field'] = 'field_uaqs_date';
-  $handler->display->display_options['fields']['field_uaqs_date']['ui_name'] = 'Date: month';
   $handler->display->display_options['fields']['field_uaqs_date']['label'] = '';
-  $handler->display->display_options['fields']['field_uaqs_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_uaqs_date']['element_type'] = '0';
   $handler->display->display_options['fields']['field_uaqs_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_uaqs_date']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['field_uaqs_date']['element_wrapper_class'] = 'uaqs-event-date';
+  $handler->display->display_options['fields']['field_uaqs_date']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_uaqs_date']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_uaqs_date']['settings'] = array(
-    'format_type' => 'abbr_month_only',
-    'fromto' => 'value',
-    'multiple_number' => '',
-    'multiple_from' => '',
+    'format_type' => 'long',
+    'custom_date_format' => '',
+    'fromto' => 'both',
+    'multiple_number' => '1',
+    'multiple_from' => 'now',
     'multiple_to' => '',
     'show_remaining_days' => 0,
     'show_repeat_rule' => 'hide',
+    'field_multiple_limit' => '-1',
+    'field_multiple_limit_offset' => '0',
+    'field_multiple_limit_order' => '0',
   );
-  $handler->display->display_options['fields']['field_uaqs_date']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_uaqs_date']['delta_offset'] = '0';
-  /* Field: Date: day */
+  $handler->display->display_options['fields']['field_uaqs_date']['field_api_classes'] = TRUE;
+  /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_uaqs_date_1']['id'] = 'field_uaqs_date_1';
   $handler->display->display_options['fields']['field_uaqs_date_1']['table'] = 'field_data_field_uaqs_date';
   $handler->display->display_options['fields']['field_uaqs_date_1']['field'] = 'field_uaqs_date';
-  $handler->display->display_options['fields']['field_uaqs_date_1']['ui_name'] = 'Date: day';
   $handler->display->display_options['fields']['field_uaqs_date_1']['label'] = '';
-  $handler->display->display_options['fields']['field_uaqs_date_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_uaqs_date_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_uaqs_date_1']['settings'] = array(
-    'format_type' => 'day_only',
+    'format_type' => 'uaqs_event_full_month_and_year',
+    'custom_date_format' => '',
     'fromto' => 'value',
-    'multiple_number' => '',
-    'multiple_from' => '',
+    'multiple_number' => '1',
+    'multiple_from' => 'now',
     'multiple_to' => '',
     'show_remaining_days' => 0,
     'show_repeat_rule' => 'hide',
+    'field_multiple_limit' => '-1',
+    'field_multiple_limit_offset' => '0',
+    'field_multiple_limit_order' => '0',
   );
   $handler->display->display_options['fields']['field_uaqs_date_1']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_uaqs_date_1']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_uaqs_date_1']['delta_offset'] = '0';
-  /* Field: Date: time */
-  $handler->display->display_options['fields']['field_uaqs_date_2']['id'] = 'field_uaqs_date_2';
-  $handler->display->display_options['fields']['field_uaqs_date_2']['table'] = 'field_data_field_uaqs_date';
-  $handler->display->display_options['fields']['field_uaqs_date_2']['field'] = 'field_uaqs_date';
-  $handler->display->display_options['fields']['field_uaqs_date_2']['ui_name'] = 'Date: time';
-  $handler->display->display_options['fields']['field_uaqs_date_2']['label'] = '';
-  $handler->display->display_options['fields']['field_uaqs_date_2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_uaqs_date_2']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_uaqs_date_2']['settings'] = array(
-    'format_type' => 'time_only',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_remaining_days' => 0,
-    'show_repeat_rule' => 'hide',
-  );
-  $handler->display->display_options['fields']['field_uaqs_date_2']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_uaqs_date_2']['delta_offset'] = '0';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'uaqs-event-title';
-  /* Field: Field: Summary */
-  $handler->display->display_options['fields']['field_uaqs_summary']['id'] = 'field_uaqs_summary';
-  $handler->display->display_options['fields']['field_uaqs_summary']['table'] = 'field_data_field_uaqs_summary';
-  $handler->display->display_options['fields']['field_uaqs_summary']['field'] = 'field_uaqs_summary';
-  $handler->display->display_options['fields']['field_uaqs_summary']['label'] = '';
-  $handler->display->display_options['fields']['field_uaqs_summary']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_uaqs_summary']['element_label_colon'] = FALSE;
-  /* Field: Global text: left group */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Global text: left group';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_uaqs_date]
-[field_uaqs_date_1]';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['nothing']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'uaqs-event-left-group';
-  /* Field: Global text: right group */
-  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
-  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Global text: right group';
-  $handler->display->display_options['fields']['nothing_1']['label'] = '';
-  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<h3>[title]</h3>
-[field_uaqs_date_2]
-[field_uaqs_summary]';
-  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['nothing_1']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['nothing_1']['element_wrapper_class'] = 'uaqs-event-right-group';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Date: Date (node) */
-  $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
-  $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
-  $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
-  $handler->display->display_options['arguments']['date_argument']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['date_argument']['default_argument_type'] = 'date';
-  $handler->display->display_options['arguments']['date_argument']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
-    'field_data_field_uaqs_date.field_uaqs_date_value' => 'field_data_field_uaqs_date.field_uaqs_date_value',
-  );
   $handler->display->display_options['path'] = 'calendar';
 
   /* Display: Event list block */
