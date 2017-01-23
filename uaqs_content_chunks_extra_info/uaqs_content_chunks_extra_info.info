@@ -16,4 +16,3 @@ features[features_api][] = api:2
 features[field_instance][] = paragraphs_item-uaqs_extra_info-field_uaqs_link
 features[paragraphs][] = uaqs_extra_info
 project path = profiles/ua_quickstart/modules/custom/uaqs_content_chunks
-version = 7.x-1.0-alpha6
