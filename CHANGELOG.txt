@@ -1,3 +1,27 @@
+7.x-1.0-alpha6, 2017-01-23
+------------------------------
+- UADIGITAL-934: Title module security update.
+- Revert "Preparing to tag 7.x-1.0-alpha4.".
+- Merged in joegraduate/uaqs_core/UADIGITAL-924 (pull request #29).
+- UADIGITAL-924: Fixing PHP notice for multi-valued fields hidden in Field UI.
+- Preparing to tag 7.x-1.0-alpha4.
+- Merged in trackleft/uaqs_core/UADIGITAL-878-calendar-pager-skips-month (pull request #27).
+- Merged in trackleft/uaqs_core/UADIGITAL-898-add-private-key-to-team-ac (pull request #28).
+- UADIGITAL-898 add pipelines config.
+- UADIGITAL-878 update date module to 7.x-2.10-rc1.
+- Merged ua_drupal/uaqs_core into 7.x-1.x.
+- UADIGITAL-879: October 2016 Drupal updates.
+- Update various contrib module versions, remove the views_bootstrap patch.
+- Merged in trackleft/uaqs_core/UAMS-299-set-up-shortcut-menu-by-role-fo (pull request #23).
+- UAMS-299 Patching features module so we can export shortcut sets.
+- Merged in mmunro-ltrr/uaqs_core/UADIGITAL-747 (pull request #22).
+- Bump Libraries version.
+- Merged in UADIGITAL-746 (pull request #21).
+- UADIGITAL-746: Updating Views for SA-CONTRIB-2016-036.
+- UADIGITAL-713: Move block placement code to UaqsBeanMigration class in uaqs_core.
+- Consolidate the Bean block placement code into UAQS Core.
+- Back to dev.
+
 7.x-1.0-alpha5, 2016-05-02
 ------------------------------
 - Back to dev.
