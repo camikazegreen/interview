@@ -1,3 +1,20 @@
+7.x-1.0-alpha6, 2017-01-20
+------------------------------
+- Revert "Preparing to tag 7.x-1.0-alpha4.".
+- Preparing to tag 7.x-1.0-alpha4.
+- Merged in trackleft/uaqs_block_types/UADIGITAL-884-automate-uaqs-component-re (pull request #15).
+- UADIGITAL-884 add bitbucket pipelines config file.
+- Merged ua_drupal/uaqs_block_types into 7.x-1.x.
+- UADIGITAL-880: Matching permissions with uaqs_card block.
+- UADIGITAL-880 matching permissions with uaqs_card block.
+- UADIGITAL-879: October 2016 Drupal updates.
+- Update the Bean module to the current version.
+- UAMS-354: clean up bean blocks.
+- Separate blocks out into their own submodules.
+- UADIGITAL-712: Make flexible block easier to enable.
+- Back to dev.
+- UADIGITAL-712.
+
 7.x-1.0-alpha5, 2016-05-02
 ------------------------------
 - Back to dev.
