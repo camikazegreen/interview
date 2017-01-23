@@ -95,3 +95,4 @@ features[variable][] = node_preview_uaqs_news
 features[variable][] = node_submitted_uaqs_news
 features[views_view][] = uaqs_news
 features_exclude[variable][pathauto_node_uaqs_news_pattern] = pathauto_node_uaqs_news_pattern
+version = 7.x-1.0-alpha6

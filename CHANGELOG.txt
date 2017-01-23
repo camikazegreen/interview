@@ -1,3 +1,37 @@
+7.x-1.0-alpha6, 2017-01-13
+------------------------------
+- Merged in trackleft/uaqs_news/UADIGITAL-884-automate-uaqs-component-re (pull request #16).
+- UADIGITAL-884 add bitbucket pipelines config file.
+- Merged ua_drupal/uaqs_news into 7.x-1.x.
+- Merged in trackleft/uaqs_news/UAMS-451-date-of-publication-increase-ye (pull request #15).
+- UAMS-451 allowing to publish farther into the past.
+- UADIGITAL-873: upgrade uaqs_summary field to use text processing.
+- UADIGITAL-873 upgrade uaqs_summary field to use text processing.
+- Merged in trackleft/uaqs_news/UADIGITAL-833-hide-ugly-field-labels-lik (pull request #12).
+- UADIGITAL-833.
+- Merged in trackleft/uaqs_news/UADIGITAL-820-improve-and-backport-top-n (pull request #11).
+- I probably don't know how to rebase, because I wanted this change.
+- Merge branch 'UADIGITAL-820-improve-and-backport-top-n' of https://bitbucket.org/trackleft/uaqs_news into UADIGITAL-820-improve-and-backport-top-n.
+- UADIGITAL-820 adding some more display modes to accomodate design for diversity site.
+- Removing unused view mode.
+- Changing machine names to shorter strings so that we can place blocks.
+- Adding thumnail as image style for medium media list.
+- Minor string edits.
+- Mobile first layout.
+- Removing reference to file_entity_inline.
+- Updating news content type with uniform style across view modes.
+- Adding no image fallback.
+- Renamed top news to recent new.
+- UADIGITAL-820 adding some more display modes to accomodate design.
+- Merged in trackleft/uaqs_news/UADIGITAL-813-backport-news-teaser-view- (pull request #10).
+- Adding a read all news button.
+- Fixed column layout with view bootstrap grid.
+- Changed name of view because of this issue https://www.drupal.org/node/1872042.
+- Backport news teaser view from diversity site.
+- Fix focus state of news items.
+- Uaqs_news.css edited online with Bitbucket.
+- Back to dev.
+
 7.x-1.0-alpha5, 2016-05-02
 ------------------------------
 - Back to dev.
