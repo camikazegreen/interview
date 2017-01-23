@@ -32,3 +32,4 @@ features[field_instance][] = field_collection_item-field_uaqs_cards-field_uaqs_s
 features[field_instance][] = paragraphs_item-uaqs_card_deck-field_uaqs_cards
 features[paragraphs][] = uaqs_card_deck
 project path = profiles/ua_quickstart/modules/custom/uaqs_content_chunks
+version = 7.x-1.0-alpha6

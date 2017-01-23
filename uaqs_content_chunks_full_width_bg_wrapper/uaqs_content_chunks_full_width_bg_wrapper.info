@@ -18,3 +18,4 @@ features[field_instance][] = paragraphs_item-uaqs_full_width_bg_wrapper-field_ua
 features[paragraphs][] = uaqs_full_width_bg_wrapper
 files[] = templates/paragraphs-item--uaqs_full_width_bg_wrapper.tpl.php
 project path = profiles/ua_quickstart/modules/custom/uaqs_content_chunks
+version = 7.x-1.0-alpha6
