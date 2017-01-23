@@ -1,3 +1,27 @@
+7.x-1.0-alpha6, 2017-01-06
+------------------------------
+- Merged in trackleft/ua_zen/UADIGITAL-785-ensure-ua-zen-references-t (pull request #126).
+- UADIGITAL-785 Removing protocol agnostic urls in favor of https.
+- Merged in trackleft/ua_zen/UADIGITAL-898-add-pipelines-config (pull request #125).
+- UADIGITAL-898 add pipelines config.
+- Merged ua_drupal/ua_zen into 7.x-1.x.
+- Merged in UADIGITAL-832 (pull request #124).
+- Made the sentence bold.
+- Updated text to be more direct and less of a 'recommendation'.
+- UADIGITAL-832: Updated README.md to reflect recommendation of using Zen 5.x.
+- Merged in trackleft/ua_zen/UADIGITAL-572-remove-glyphicons-from-ua- (pull request #123).
+- UADIGITAL-572 removing exclamation point glyphicon from alerts in order to fix errors in console.
+- Merged in trackleft/ua_zen/UADIGITAL-780-tag-ua-bootstrap100-beta1 (pull request #121).
+- UADIGITAL-780 tag ua-bootstrap-1.0.0beta1.
+- Merged in trackleft/ua_zen/UADIGITAL-690 (pull request #119).
+- UADIGITAL-690.
+- UADIGITAL-690 update cdn link to use http://cdn.uadigital.arizona.edu/lib/ua-bootstrap/css/.
+- UAMS-318: Make the footer logo a configurable link.
+- Make the footer logo a configurable link.
+- Merged in sasg/ua_zen/uadigital-698 (pull request #116).
+- Added reference to icons css using drupal_add_css() in the preprocess_html function, but the icons themselves are not showing yet...
+- Back to dev.
+
 7.x-1.0-alpha5, 2016-05-02
 ------------------------------
 - Back to dev.

@@ -249,3 +249,4 @@ multipliers[screen-lg-min][] = 2x
 ; regionclass module default settings
 settings[regionclass][full_width_content_1][] = background-wrapper bg-triangles-fade bg-ologie-light-river
 settings[regionclass][full_width_content_2][] = background-wrapper bg-triangles-mosaic bg-sky
+version = 7.x-1.0-alpha6
