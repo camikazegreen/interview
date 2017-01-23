@@ -1,3 +1,15 @@
+7.x-1.0-alpha6, 2017-01-13
+------------------------------
+- Merged in trackleft/uaqs_person/UADIGITAL-884-automate-uaqs-component-re (pull request #12).
+- UADIGITAL-884 add bitbucket pipelines config file.
+- Merged ua_drupal/uaqs_person into 7.x-1.x.
+- UADIGITAL-532: Add taxonomy to UAQS Person.
+- Clean up the duplicate defaultconfig-based taxonomy vocabulary definition.
+- Shorten the category selection help text.
+- Include the suggestions from @trackleft.
+- UADIGITAL-532: adding people taxonomy vocabulary to feature.
+- Back to dev.
+
 7.x-1.0-alpha5, 2016-05-02
 ------------------------------
 - Back to dev.
