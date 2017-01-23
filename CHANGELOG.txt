@@ -1,3 +1,14 @@
+7.x-1.0-alpha6, 2016-12-19
+------------------------------
+- Merged in macaulay/uaqs_featured_content/UADIGITAL-907-improve-hero-overlay (pull request #8).
+- UADIGITAL-907: Changed the color and opacity behind the slideshow text to be more accessible. Also increased the padding so that the text doesn't look so 'choked'.
+- Merged ua_drupal/uaqs_featured_content into 7.x-1.x.
+- Merged in trackleft/uaqs_featured_content/UADIGITAL-884-automate-uaqs-component-re (pull request #9).
+- UADIGITAL-884 adding bitbucket pipeline yml file.
+- Merged in pbarabe/uaqs_featured_content/UADIGITAL-735 (pull request #7).
+- Updated README instructions about dependencies.
+- Back to dev.
+
 7.x-1.0-alpha5, 2016-05-02
 ------------------------------
 - Back to dev.

@@ -36,3 +36,4 @@ features[variable][] = node_preview_uaqs_carousel_item
 features[variable][] = node_submitted_uaqs_carousel_item
 features[views_view][] = uaqs_hero_carousel
 features[views_view][] = uaqs_reorder_carousel
+version = 7.x-1.0-alpha6
