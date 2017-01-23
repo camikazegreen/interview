@@ -73,4 +73,3 @@ features[variable][] = node_preview_uaqs_event
 features[variable][] = node_submitted_uaqs_event
 features_exclude[variable][field_bundle_settings_node__uaqs_event] = field_bundle_settings_node__uaqs_event
 features_exclude[variable][pathauto_node_uaqs_event_pattern] = pathauto_node_uaqs_event_pattern
-version = 7.x-1.0-alpha6
