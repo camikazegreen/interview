@@ -106,7 +106,7 @@ for r in $UAQSPROJECTS ; do
     echo -e "version = $UAQSNEWTAG" >> $i
     git add $i
   done
-  git commit -m "Preparing to tag $UAQSNEWTAG."
+  git commit -m "Preparing to tag $UAQSNEWTAG. [skip ci]"
   git tag "$UAQSNEWTAG"
 
   printf "Restoring $r to default dev state...\n"
@@ -115,7 +115,7 @@ for r in $UAQSPROJECTS ; do
     sed -i '' "/version = /d" $i
     git add $i
   done
-  git commit -m "Back to dev."
+  git commit -m "Back to dev. [skip ci]"
 
   printf "Cleaning up...\n"
   # Delete temporary tag.
@@ -156,7 +156,7 @@ printf "Updating CHANGELOG.txt...\n"
 git tag "$UAQSTMPTAG"
 # Update CHANGELOG.txt.
 mv CHANGELOG.txt CHANGELOG.old
-drush rn --changelog "$UAQSOLDREF" "$UAQSTMPTAG" 2>/dev/null | sed "s/$UAQSTMPTAG/$UAQSNEWTAG/" > CHANGELOG.txt
+drush rn --changelog $1 $UAQSTMPTAG 2>/dev/null | sed "s/$UAQSTMPTAG/$UAQSNEWTAG/" > CHANGELOG.txt
 # Ensure CHANGLELOG generation was successful.
 DRUSHRESULT=$?
 if [ $DRUSHRESULT -eq 0 ]; then

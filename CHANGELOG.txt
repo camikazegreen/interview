@@ -1,3 +1,144 @@
+UA QuickStart 7.x-1.0-alpha5, 2016-05-02
+----------------------------------------
+- Preparing to tag 7.x-1.0-alpha5.
+- Merged in release-fix (pull request #61).
+- Fixing drupal-org-release.make updating logic in release.sh.
+- Manually fixing release version references in drupal-org-release.make.
+- Adding missing uaqs_content_chunks and uaqs_fields to rdrupal-org-release.make.
+- Back to dev.
+
+UA QuickStart 7.x-1.0-alpha4, 2016-05-02
+----------------------------------------
+- Preparing to tag 7.x-1.0-alpha4.
+- Updating uaqs_navigation for UADIGITAL-692: Reduce space between footer resouces/connect icons and links.
+- Updating uaqs_person for UADIGITAL-653: Fixed broken image style + misc changes from 'features-update'.
+- Updating uaqs_navigation for UADIGITAL-485: Disabling missing jquery easing plugin until we decide to add it intentionally.
+- Updating uaqs_person for UADIGITAL-653: Implementeing sigle person view styling.
+- Updating uaqs_core for UADIGITAL-707: Fixing title module version reference.
+- Updating uaqs_core for UADIGITAL-707: Update title module to 7.x-1.0-beta8.
+- Updating ua_zen for UADIGITAL-682: Update uabootstrap reference to alpha7.
+- Updating uaqs_navigation for UADIGITAL-702: Global footer is hard to install.
+- Updating uaqs_fields for UADIGITAL-688 updated field style settings for sytle drop down in ckeditor.
+- Updating uaqs_core for UADIGITAL-703: Update features to 7.x-2.10.
+- Updating uaqs_navigation & ua_zen for UADIGITAL-485: Replace bootstrap downdown menu w/ superfish.
+- Updating uaqs_fields for UADIGITAL-697 making text format selection hidden instead of access denied.
+- Updating uaqs_navigation for UADIGITAL-693: Fixing permissions problem.
+- Updating uaqs_navigation for UADIGITAL-693: Add submodule for global footer menu blocks.
+- Updating uaqs_block_types for UADIGITAL-650: Removing dependency on uaqs_featured_content.
+- Updating uaqs_content_chunks for UADIGITAL-674 making adding paragraphs as submodules more user friendly.
+- Modifying uaqs_fields for UADIGITAL-656.
+- Updating uaqs_demo for UADIGITAL-672: Block page no longer shows block.
+- Updating uaqs_core for UADIGITAL-669: Features module security update.
+- Updating ua_zen for UAMS-217: Cleaning up footer styles and markup.
+- Merged in UADIGITAL-655 (pull request #59).
+- UADIGITAL-66: Adding ua_bootstrap_location variable for wysiwyg editor.
+- Updating ua_zen for UADIGITAL-667: Adding defaults for breakpoints module.
+- Updating uaqs_core, uaqs_event, uaqs_news, uaqs_page, uaqs_person, uaqs_program, uaqs_publication, uaqs_unit for UADIGITAL-580 add pathauto module defaults.
+- Updating uaqs_core for UADIGITAL-656: increase the minimum jQuery version to satisfy the Dialog module required for WYSIWYG editing.
+- Use the "Preparing to tag..." log messages to locate the previously tagged commits on the current branch.
+- UADIGITAL-655: Update release.sh to handle submodules.
+- Updating uaqs_core for UADIGITAL-659: Apply the routine updates to the Features and Entity API modules from drupal.org.
+- Updating uaqs_block_types, uaqs_content_chunks, uaqs_demo for UADIGITAL-625 and UADIGITAL-650.
+- Updating uaqs_news for: 'Make padding align better with other ua-bootstrap padding settings.'.
+- Updating ua_zen for UADIGITAL-651: Adding bootstrap classes to webform components.
+- Updating uaqs_block_types, uaqs_content_chunks, uaqs_core, uaqs_demo, uaqs_fields for UADIGITAL-402: Improving text formats.
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-568 (pull request #55).
+- Move the custom profile options out of the database configuration into a distinct new form.
+- Hack custom fileds into Drupal Core's installation settings form.
+- Updating uaqs_core for UADIGITAL-540: Moving jquery_update version settings to hook_install().
+- Updating uaqs_fields for UADIGITAL-620: Adding bootstrap card view mode for taxonomy terms.
+- Updating ua_google_tag for UAMS-225: Excluding bean forms from being tracked by GTM.
+- Updating uaqs_core for UADIGITAL-621: Fixing broken patch reference.
+- Updating uaqs_core for UADIGITAL-621: Adding patch to fix PHP notices caused by title module.
+- Updating ua_zen for UADIGITAL-591: Adding bootstrap pager styling and settings.
+- Updating ua_zen for UADIGITAL-528: Adding bootstrap table styling and settings.
+- Updating uaqs_content_chunks, uaqs_demo, & uaqs_news for UADIGITAL-598: Add paragraphs to news to maximize flexibily.
+- Merged in UADIGITAL-546 (pull request #57).
+- UADIGITAL-546: Adding patch to fix core menu link removal bug.
+- Updating uaqs_fields and uqas_person for UADIGITAL-517: Updating phone fields to use telephone module.
+- Updating uaqs_demo for UADIGITAL-546: Adding News menu link to demo content.
+- Updating uaqs_news for UAMS-216: Develop news styling.
+- Updating uaqs_core for UAMS-216: Adding field_group_link module and pinning image_class to specific revision.
+- Updating ua_zen for "UADIGITAL-603: Updating UA Bootstrap to version 1.0.0-alpha6." and "UADIGITAL-592: Adding theme setting to supress page title on front page.".
+- Updating uaqs_fields for UAMS-216: Adding sidebar media list view mode and fixing problem with function name.
+- Updating uaqs_fields for UADIGITAL-604: Adding fences module.
+- Updating uaqs_content_chunks, uaqs_demo for UAMS-192: Adding paragraphs view modes and theming.
+- Updating uaqs_demo, uaqs_event, uaqs_fields, and uaqs_news for UADIGITAL-590: Consolidating field_uaqs_more_info and field_uaqs_link.
+- Updating ua_zen for UADIGITAL-127: Documenting preferred CSS compilation procedure, recompiling styles.css, updating Gemfile.lock.
+- Updating uaqs_featured_content for UADIGITAL-416: Adding thumbnails to re-order view.
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-574 (pull request #54).
+- Sanitize the Git branch name, removing the repository name.
+- Merged in UADIGITAL-557 (pull request #52).
+- UADIGITAL-570: Updating Drupal core for SA-CORE-2016-001.
+- Updating ua_zen for UADIGITAL-561: Better sidebar classes when only second sidebar used.
+- Updating ua_zen and uaqs_navigation for UADIGITAL-547: Display child menu items in UAQS Second-level Navigation menu_block.
+- Updating uaqs_fields for UAMS-63: Adding multi-valued link field.
+- UADIGITAL-557: Adding release packaging script and small change to main packaging script.
+- UADIGITAL-557: Adding Jenkins packaging script.
+- Updating uaqs_block_types: Renaming block preprocess functions.
+- Updating uaqs_featured_content for UADIGITAL-554: Carousel JS shouldn't be loaded on every node page.
+- Updating ua_zen for UADIGITAL-333: Use UA Bootstrap classes on alert messages.
+- Updating uaqs_news: Wrapping news items in row to fix display issues.
+- Updating ua_zen for UADIGITAL-423: Removing unneeded CSS class.
+- Updating ua_zen for UADIGITAL-423: Reducing proliferation of new theme regions.
+- Updating uaqs_core for UADIGITAL=538: Adding draggableviews module.
+- Updating uaqs_featured_content for UADIGITAL-416: Enabling draggableviews by default and updating README.
+- Updating uaqs_featured_content for UADIGITAL-416: Create an easy ordering view for content managers.
+- Merged in UADIGITAL-537 (pull request #50).
+- Updating ua_zen for UADIGITAL-497: Update ua-bootstrap to 1.0.0-alpha4.
+- Updating ua_cas & uaqs_core for UADIGITAL-537: Various contrib and library updates.
+- Merged in UADIGITAL-537 (pull request #49).
+- UADIGITAL-537: Updating Drupal core to 7.42.
+- Merged in UADIGITAL-536 (pull request #48).
+- Updating ua_cas for UADIGITAL-536: Update cas to 7.x-1.5 for DRUPAL-SA-CONTRIB-2016-005.
+- Updating uaqs_event, uaqs_featured_content, uaqs_fields, uaqs_news, uaqs_person & uaqs_publication for UADIGITAL-535: Make uaqs_photo a single value image field and add uaqs_photos.
+- Updating uaqs_demo for: UADIGITAL-531: Fix uaqs_zen typo back to ua_zen.
+- UADIGITAL-525: Move base migration classes into uaqs_core module.
+- Updating uaqs_demo & uaqs_core for UADIGITAL-525: Move base migration classes into uaqs_core module.
+- Updating ua_zen for UADIGTAL-526: Fixing broken CSS aggregation.
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-523 (pull request #46).
+- Updating references to various modules for UADIGITAL-523.
+- Updating uaqs_block_types & uaqs_fields with renamed image overlay view mode for beans and moving exported permissions to defaultconfig.
+- Fix un-renamed region definition for the side navigation menu.
+- Ua_quickstart.install edited online with Bitbucket.
+- Merged in UADIGITAL-476 (pull request #44).
+- Reverting default branch to builder makefile.
+- Updating ua_zen for UADIGITAL-476: Updating secondary navigation menu name.
+- Updating uaqs_demo & uaqs_publication for: UADIGITAL-476: Fixing research area vocabulary name.
+- Updating uaqs_block_types: Complete support for card bean.
+- Updating uaqs_person for UADIGITAL-522: Person grid display improvements.
+- Updating uaqs_person: Removing dependency on entity_view-mode.
+- Updating ua_core for UADIGITAL-522: Adding views_bootstrap module.
+- UADIGITAL-476: Updating component dependencies to use renamed uaqs_ versions.
+- Updating ua_zen for UADIGITAL-520: Resolve conflict with image_class module.
+- Updating ua_featured_content for UADIGITAL-412: Carousel image field should specify recommended image size.
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-450 (pull request #43).
+- Updating ua_block_types for UADIGITAL-450.
+- Merged in UADIGITAL-359 (pull request #42).
+- UADIGITAL-359: Updating ua_zen and removing no longer necessary menu block for primary navigation.
+- Updating ua_zen for UADIGITAL-474: Navigation menu improvments.
+- Updating ua_zen for UADIGITAL-360, UADIGITAL-468, & UADIGITAL-474: Navigation menu improvments.
+- Merged in UADIGITAL-466 (pull request #41).
+- Updating ua_core for UADIGITAL-466: field_group security update.
+- Updating ua_zen for UADIGITAL-423: fixed conditionals.
+- UADIGITAL-423 (regularize sidebar names).
+- Drupal-org.make edited online with Bitbucket.
+- Updating ua_zen for UADIGITAL-423: Update regions to allow more full width flexibility.
+- Merged in UADIGITAL-346 (pull request #39).
+- Updating ua_core for UADIGITAL-346: Update field_collection module.
+- UADIGITAL-413: Add option to open links in new windows.
+- Updating ua_block_types for UADIGITAL-413.
+- Updating ua_core for UADIGITAL-405: Adding HTML5 Tools & Elements modules to UA Core.
+- Updating ua_featured_content for UADIGITAL-380: Removing Image URL Formatter from .make file.
+- Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-281 (pull request #34).
+- Make the Paragraphs-based UA Content Chunks a normal part of the distribution, with updated demo content.
+- Updating ua_core for UADIGITAL-404: Enabling jquery_update by default.
+- Updating ua_core & ua_navigation for UADIGITAL-404: Moving jquery_update to ua_core.
+- UADIGITAL-414: QuickStart adds zen theme to module folder instead of themes folder.
+- Ua_core 54a2f4b.
+- Merged ua_drupal/ua_quickstart into 7.x-1.x.
+- Back to dev.
+
 UA Quickstart 7.x-1.0-alpha3, 2015-11-13
 --------------------------------------------
 - Merged in mmunro-ltrr/ua_quickstart/UADIGITAL-384 (pull request #33).
