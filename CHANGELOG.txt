@@ -1,3 +1,40 @@
+7.x-1.0-alpha6, 2016-12-16
+------------------------------
+- Merged in UADIGITAL-897 (pull request #27).
+- Merged in trackleft/uaqs_fields/UADIGITAL-902 (pull request #30).
+- Hyphen to underscore.
+- Merged in trackleft/uaqs_fields/UADIGITAL-902-add-ckeditor-autogrow-plug (pull request #28).
+- Merged in trackleft/uaqs_fields/UADIGITAL-902 (pull request #29).
+- UADIGITAL-902 adding joe's yml file for pipelines.
+- Enable autogrow for all ckeditors.
+- Merged ua_drupal/uaqs_fields into 7.x-1.x.
+- UADIGITAL-897: Fixing PHP notice generated for fields not managed by uaqs_fields.
+- UADIGITAL-879: October 2016 Drupal updates.
+- Update to the current version of the Dialog contrib module, an Editor depnedency.
+- Merged in mmunro-ltrr/uaqs_fields/UADIGITAL-877 (pull request #25).
+- Restore an image style for use with the uaqs_photo and uaqs_photos fields.
+- UADIGITAL-864: Text formats should include more.
+- Correct the missing 'field_' prefix in the database update.
+- Introduce the uaqs_standard format, make it the default on uaqs_summary fields.
+- Merged in trackleft/uaqs_fields/UADIGITAL-820-improve-and-backport-top-n (pull request #23).
+- UADIGITAL-820 adding some more display modes to accomodate design.
+- Merged in UADIGITAL-803 (pull request #22).
+- UADIGITAL-803: Check if taxonomy or bean modules exist before adding view modes to their entity types.
+- Merged in awochna/uaqs_fields/UADIGITAL-737 (pull request #21).
+- Remove uaqs_core as dependency. Closes UADIGITAL-737.
+- Merged in mmunro-ltrr/uaqs_fields/UADIGITAL-750 (pull request #20).
+- Avoid hard-coding a specific tag in the fallback CDN link for the CSS.
+- Correct a spurious ')', make the fallback CDN reference use https: and the beta1 release.
+- Default to the CDN location for CSS, avoid prefixing CSS URLs.
+- Merged in mmunro-ltrr/uaqs_fields/UADIGITAL-747 (pull request #18).
+- Routine non-security updates to contrib module dependencies.
+- Merged in trackleft/uaqs_fields/UADIGITAL-726-add-full-html-paragraphs-i (pull request #17).
+- Merged in UADIGITAL-716 (pull request #16).
+- Adding field_uaqs_html.
+- UADIGITAL-716: Fixing problems with update function.
+- UADIGITAL-716: Adding hook_update_N() to update text formats for existing content.
+- Back to dev.
+
 7.x-1.0-alpha5, 2016-05-02
 ------------------------------
 - Back to dev.
