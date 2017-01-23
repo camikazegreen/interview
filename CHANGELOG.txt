@@ -1,3 +1,33 @@
+UAQS Demo Content 7.x-1.0-alpha6, 2017-01-20
+------------------------------------------------
+- Revert "Preparing to tag 7.x-1.0-alpha4.".
+- Merged in mmunro-ltrr/uaqs_demo/UADIGITAL-909 (pull request #26).
+- Modify the UAQS News and UAQS Event demo content to use relative dates.
+- Preparing to tag 7.x-1.0-alpha4.
+- Merged in mmunro-ltrr/uaqs_demo/UADIGITAL-883 (pull request #25).
+- Update the uaqs_html to uaqs_summary fields.
+- Merged in trackleft/uaqs_demo/UADIGITAL-898-add-pipelines-config (pull request #24).
+- UADIGITAL-898 add pipelines config.
+- Merged ua_drupal/uaqs_demo into 7.x-1.x.
+- Merged in trackleft/uaqs_demo/UADIGITAL-819-backport-diversity-events (pull request #23).
+- UADIGITAL-819 Adding links to accomodate view mode settings.
+- UADIGITAL-873: upgrade uaqs_summary field to use text processing.
+- Set an explicit uaqs_standard text format on the summary fields.
+- UADIGITAL-836: Some of the UAQS Demo content fails to set a view mode where this is required.
+- UADIGITAL-532: Add taxonomy to UAQS Person.
+- Add taxonomy vocabulary content and terms for UAQS Person.
+- Provide a view mode for all the UAQS Column Image demo content.
+- Merged in trackleft/uaqs_demo/UAMS-351 (pull request #18).
+- Removed extra comma.
+- UAMS-351 add demo content for the marquee content chunk.
+- Merged in trackleft/uaqs_demo/UADIGITAL-609-more-demo-paragraph-conten (pull request #9).
+- Adding view modes and other content.
+- UADIGITAL-713: Move block placement code to UaqsBeanMigration class in uaqs_core.
+- Consolidate the Bean block placement code into UAQS Core.
+- Back to dev.
+- Changing variable name.
+- Adding view mode to paragraphs column image migration script.
+
 UAQS Demo Content 7.x-1.0-alpha5, 2016-05-02
 ------------------------------------------------
 - Back to dev.
