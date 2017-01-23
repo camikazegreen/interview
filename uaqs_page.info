@@ -18,4 +18,3 @@ features[node][] = uaqs_page
 features[variable][] = field_bundle_settings_node__uaqs_page
 features[variable][] = node_options_uaqs_page
 features[variable][] = node_submitted_uaqs_page
-version = 7.x-1.0-alpha6
