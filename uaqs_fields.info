@@ -72,4 +72,3 @@ features[filter][] = uaqs_textual_content
 features[filter][] = uaqs_unconstrained
 features[image][] = uaqs_fixed_banner_460
 project path = profiles/ua_quickstart/modules/custom
-version = 7.x-1.0-alpha6
