@@ -38,4 +38,3 @@ features[variable][] = menu_parent_uaqs_pub
 features[variable][] = node_options_uaqs_pub
 features[variable][] = node_preview_uaqs_pub
 features[variable][] = node_submitted_uaqs_pub
-version = 7.x-1.0-alpha6
