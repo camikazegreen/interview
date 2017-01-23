@@ -24,4 +24,3 @@ features[defaultconfig][] = user_default_permissions:view any uaqs_flexible_bloc
 features[features_api][] = api:2
 features[field_instance][] = bean-uaqs_flexible_block-field_uaqs_main_content
 features[field_instance][] = bean-uaqs_flexible_block-title_field
-version = 7.x-1.0-alpha6

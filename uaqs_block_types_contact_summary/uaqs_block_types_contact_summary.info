@@ -30,4 +30,3 @@ features[field_group][] = group_phone_area|bean|uaqs_contact_summary|uaqs_expand
 features[field_instance][] = bean-uaqs_contact_summary-field_uaqs_contact_address
 features[field_instance][] = bean-uaqs_contact_summary-field_uaqs_contact_mail_link
 features[field_instance][] = bean-uaqs_contact_summary-field_uaqs_contact_phone
-version = 7.x-1.0-alpha6

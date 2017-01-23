@@ -32,4 +32,3 @@ features[image][] = large_tile
 features[image][] = medium_inset_square
 features[image][] = medium_tile
 
-version = 7.x-1.0-alpha6
