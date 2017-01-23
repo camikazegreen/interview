@@ -76,7 +76,7 @@ projects[image_class][download][revision] = a4baf33
 projects[image_class][download][branch] = 7.x-1.x
 
 projects[link][version] = 1.4
-projects[title][version] = 1.0-alpha8
+projects[title][version] = 1.0-alpha9
 
 
 ; ------------------------------------------------------------------------------
