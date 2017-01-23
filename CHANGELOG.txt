@@ -1,3 +1,18 @@
+7.x-1.0-alpha6, 2017-01-13
+------------------------------
+- Merged in trackleft/uaqs_navigation/UADIGITAL-884-automate-uaqs-component-re (pull request #15).
+- UADIGITAL-884 add bitbucket pipelines config file.
+- Merged ua_drupal/uaqs_navigation into 7.x-1.x.
+- UADIGITAL-879: October 2016 Drupal updates.
+- Remove the duplicate Bean module version definition, use the one from uaqs_block_types.
+- Merged in trackleft/uaqs_navigation/UADIGITAL-827-update-xautoload-to-7x-57 (pull request #13).
+- UADIGITAL-827.
+- UADIGITAL-804: Convert line height declarations to margin so external links css functions correctly.
+- UADIGITAL-804.
+- UADIGITAL-713: Move block placement code to UaqsBeanMigration class in uaqs_core.
+- Consolidate the Bean block placement code into UAQS Core.
+- Back to dev.
+
 7.x-1.0-alpha5, 2016-05-02
 ------------------------------
 - Back to dev.
