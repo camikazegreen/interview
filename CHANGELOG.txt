@@ -1,3 +1,28 @@
+7.x-1.0-alpha6, 2017-01-20
+------------------------------
+- Merged in trackleft/uaqs_event/UADIGITAL-876-group-events-by-month (pull request #9).
+- Merged in joegraduate/uaqs_event_trackleft/UADIGITAL-876-joe (pull request #1).
+- UADIGITAL-876: Removing incomplete Features API/Features export code (for now).
+- Extra fields.
+- UADIGITAL-876 change calendar view to group the next 20 events by month and replace field display with view_mode display.
+- Merged ua_drupal/uaqs_event into 7.x-1.x.
+- Merged in trackleft/uaqs_event/UADIGITAL-884-automate-uaqs-component-re (pull request #10).
+- UADIGITAL-884 adding bitbucket pipeline yml file.
+- UADIGITAL-819: use view mode for events view.
+- UADIGITAL-819 Adding helper text to the new summary fields field group on events.
+- UADIGITAL-819 use view mode for events view.
+- Merged in trackleft/uaqs_event/UADIGITAL-808-separate-views-from-rest-o (pull request #7).
+- Merged in trackleft/uaqs_event/UADIGITAL-807-add-a-way-to-ingest-events (pull request #6).
+- Removed ctools dependency since it is a part of uaqs_event dependencies.
+- Uaqs_event_importer.info edited online with Bitbucket.
+- Adding job scheduler dependency to the make file.
+- UADIGITAL-808 Separate view from event feature.
+- This depends on feeds being installable, so including it in the make file.
+- Removing short title feed mapping because we have no control over title length in the feed.
+- Moved make file up a level so dependencies download, and importer can remain disabled.
+- UADIGITAL-807-add-a-way-to-ingest-events.
+- Back to dev.
+
 7.x-1.0-alpha5, 2016-05-02
 ------------------------------
 - Back to dev.
