@@ -44,7 +44,7 @@ class UaqsDemoNewsMigration extends UaqsNodeMigration {
       'uaqs_front' => t('Show on front page'),
       'uaqs_byline' => t('Byline'),
       'uaqs_published' => t('Published'),
-      'expiration_date' => t('Expiration date'),
+      'uaqs_expiration_date' => t('Expiration date'),
       'uaqs_summary' => t('Summary'),
       'uaqs_body' => t('Article body'),
       'uaqs_link' => t('Link to more information'),
