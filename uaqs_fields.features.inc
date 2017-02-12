@@ -26,5 +26,20 @@ function uaqs_fields_image_default_styles() {
     ),
   );
 
+  // Exported image style: uaqs_spotlight.
+  $styles['uaqs_spotlight'] = array(
+    'label' => 'Spotlight',
+    'effects' => array(
+      array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 365,
+          'height' => 196,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
   return $styles;
 }
