@@ -29,22 +29,6 @@ function uaqs_news_views_api($module = NULL, $api = NULL) {
 function uaqs_news_image_default_styles() {
   $styles = array();
 
-  // Exported image style: uaqs_news_detail_500.
-  $styles['uaqs_news_detail_500'] = array(
-    'label' => 'News detail 500',
-    'effects' => array(
-      4 => array(
-        'name' => 'image_scale',
-        'data' => array(
-          'width' => '',
-          'height' => 500,
-          'upscale' => 0,
-        ),
-        'weight' => 1,
-      ),
-    ),
-  );
-
   // Exported image style: uaqs_spotlight.
   $styles['uaqs_spotlight'] = array(
     'label' => 'Spotlight',

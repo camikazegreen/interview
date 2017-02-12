@@ -84,7 +84,6 @@ features[field_instance][] = node-uaqs_news-field_uaqs_short_title
 features[field_instance][] = node-uaqs_news-field_uaqs_summary
 features[field_instance][] = node-uaqs_news-field_uaqs_summary_short
 features[field_instance][] = node-uaqs_news-title_field
-features[image][] = uaqs_news_detail_500
 features[image][] = uaqs_spotlight
 features[node][] = uaqs_news
 features[variable][] = field_bundle_settings_node__uaqs_news
