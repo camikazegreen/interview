@@ -71,5 +71,6 @@ features[filter][] = uaqs_standard
 features[filter][] = uaqs_textual_content
 features[filter][] = uaqs_unconstrained
 features[image][] = uaqs_fixed_banner_460
+features[image][] = uaqs_fixed_width
 features[image][] = uaqs_spotlight
 project path = profiles/ua_quickstart/modules/custom
