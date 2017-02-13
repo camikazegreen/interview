@@ -26,5 +26,36 @@ function uaqs_fields_image_default_styles() {
     ),
   );
 
+  // Exported image style: uaqs_fixed_width.
+  $styles['uaqs_fixed_width'] = array(
+    'label' => 'Fixed width',
+    'effects' => array(
+      array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 768,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: uaqs_spotlight.
+  $styles['uaqs_spotlight'] = array(
+    'label' => 'Spotlight',
+    'effects' => array(
+      array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 365,
+          'height' => 196,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
   return $styles;
 }
