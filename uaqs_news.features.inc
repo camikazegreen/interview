@@ -24,46 +24,6 @@ function uaqs_news_views_api($module = NULL, $api = NULL) {
 }
 
 /**
- * Implements hook_image_default_styles().
- */
-function uaqs_news_image_default_styles() {
-  $styles = array();
-
-  // Exported image style: uaqs_news_detail_500.
-  $styles['uaqs_news_detail_500'] = array(
-    'label' => 'News detail 500',
-    'effects' => array(
-      4 => array(
-        'name' => 'image_scale',
-        'data' => array(
-          'width' => '',
-          'height' => 500,
-          'upscale' => 0,
-        ),
-        'weight' => 1,
-      ),
-    ),
-  );
-
-  // Exported image style: uaqs_spotlight.
-  $styles['uaqs_spotlight'] = array(
-    'label' => 'Spotlight',
-    'effects' => array(
-      3 => array(
-        'name' => 'image_scale_and_crop',
-        'data' => array(
-          'width' => 365,
-          'height' => 196,
-        ),
-        'weight' => 1,
-      ),
-    ),
-  );
-
-  return $styles;
-}
-
-/**
  * Implements hook_node_info().
  */
 function uaqs_news_node_info() {
