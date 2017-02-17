@@ -23,6 +23,7 @@ function uaqs_publication_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
         'weight' => 3,
@@ -62,8 +63,9 @@ function uaqs_publication_field_default_field_instances() {
           'class' => '',
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'uaqs_fixed_width',
         ),
         'type' => 'image',
         'weight' => 5,
@@ -109,6 +111,7 @@ function uaqs_publication_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'link_default',
         'weight' => 6,
@@ -169,6 +172,7 @@ function uaqs_publication_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
         'weight' => 1,
@@ -212,6 +216,7 @@ function uaqs_publication_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'link' => 1,
         ),
         'type' => 'entityreference_label',
@@ -257,6 +262,7 @@ function uaqs_publication_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 9,
@@ -299,6 +305,7 @@ function uaqs_publication_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'format_type' => 'medium',
           'fromto' => 'both',
           'multiple_from' => '',
