@@ -89,7 +89,7 @@ function uaqs_content_chunks_marquee_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
           'field_multiple_limit_order' => 0,
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'uaqs_fixed_width',
         ),
         'type' => 'image',
         'weight' => 3,
