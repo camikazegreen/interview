@@ -30,7 +30,7 @@ function uaqs_fields_image_default_styles() {
   $styles['uaqs_fixed_width'] = array(
     'label' => 'Fixed width',
     'effects' => array(
-      array(
+      0 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 768,
@@ -46,7 +46,7 @@ function uaqs_fields_image_default_styles() {
   $styles['uaqs_spotlight'] = array(
     'label' => 'Spotlight',
     'effects' => array(
-      array(
+      0 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 365,

@@ -111,9 +111,9 @@ function uaqs_fields_defaultconfig_user_default_permissions() {
     'module' => 'filter',
   );
 
-  // Exported permission: 'use text format uaqs_textual_content'.
-  $permissions['use text format uaqs_textual_content'] = array(
-    'name' => 'use text format uaqs_textual_content',
+  // Exported permission: 'use text format uaqs_standard'.
+  $permissions['use text format uaqs_standard'] = array(
+    'name' => 'use text format uaqs_standard',
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
@@ -122,8 +122,8 @@ function uaqs_fields_defaultconfig_user_default_permissions() {
   );
 
   // Exported permission: 'use text format uaqs_textual_content'.
-  $permissions['use text format uaqs_standard'] = array(
-    'name' => 'use text format uaqs_standard',
+  $permissions['use text format uaqs_textual_content'] = array(
+    'name' => 'use text format uaqs_textual_content',
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
