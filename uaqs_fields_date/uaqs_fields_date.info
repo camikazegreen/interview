@@ -1,0 +1,11 @@
+name = UAQS Fields - Date
+description = Defines various date fields used in many UA Digital projects.
+core = 7.x
+package = The University of Arizona
+dependencies[] = date
+dependencies[] = features
+features[features_api][] = api:2
+features[field_base][] = field_uaqs_date
+features[field_base][] = field_uaqs_expiration_date
+features[field_base][] = field_uaqs_published
+features[field_base][] = field_uaqs_year
