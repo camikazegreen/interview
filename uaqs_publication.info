@@ -15,6 +15,7 @@ dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = title
 dependencies[] = uaqs_fields
+dependencies[] = uaqs_fields_date
 features[ctools][] = strongarm:strongarm:1
 features[defaultconfig][] = strongarm:pathauto_node_uaqs_pub_pattern
 features[features_api][] = api:2
