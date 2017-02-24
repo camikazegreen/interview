@@ -19,6 +19,7 @@ dependencies[] = strongarm
 dependencies[] = text
 dependencies[] = title
 dependencies[] = uaqs_content_chunks
+dependencies[] = uaqs_fields_date
 dependencies[] = views
 dependencies[] = views_bootstrap
 stylesheets[all][] = css/uaqs_news.css
