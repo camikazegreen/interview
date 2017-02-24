@@ -80,7 +80,7 @@ projects[uaqs_news][type] = module
 projects[uaqs_news][subdir] = custom
 projects[uaqs_news][download][type] = git
 projects[uaqs_news][download][branch] = 7.x-1.x
-projects[uaqs_news][download][revision] = ce848b1
+projects[uaqs_news][download][revision] = 236b36d
 projects[uaqs_news][download][url] = https://bitbucket.org/ua_drupal/uaqs_news.git
 
 projects[uaqs_page][type] = module
