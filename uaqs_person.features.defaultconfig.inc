@@ -63,6 +63,7 @@ function uaqs_person_defaultconfig_field_default_fields() {
           'settings' => array(
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
+            'field_multiple_limit_order' => 0,
             'title_class' => 'margin-align-top margin-zero-bottom',
             'title_link' => '',
             'title_style' => 'h2',
@@ -76,6 +77,7 @@ function uaqs_person_defaultconfig_field_default_fields() {
           'settings' => array(
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
+            'field_multiple_limit_order' => 0,
             'title_class' => 'margin-zero-top margin-zero-bottom',
             'title_link' => '',
             'title_style' => 'h2',
@@ -89,6 +91,7 @@ function uaqs_person_defaultconfig_field_default_fields() {
           'settings' => array(
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
+            'field_multiple_limit_order' => 0,
             'title_class' => '',
             'title_link' => 'content',
             'title_style' => 'h4',
@@ -102,6 +105,7 @@ function uaqs_person_defaultconfig_field_default_fields() {
           'settings' => array(
             'field_multiple_limit' => -1,
             'field_multiple_limit_offset' => 0,
+            'field_multiple_limit_order' => 0,
             'title_class' => 'card-title',
             'title_link' => 'content',
             'title_style' => 'h4',
@@ -213,13 +217,6 @@ function uaqs_person_defaultconfig_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__uaqs_person'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_uaqs_person_pattern';
-  $strongarm->value = 'person/[node:title]';
-  $export['pathauto_node_uaqs_person_pattern'] = $strongarm;
 
   return $export;
 }

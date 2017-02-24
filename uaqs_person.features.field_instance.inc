@@ -10,59 +10,6 @@
 function uaqs_person_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-uaqs_person-field_uaqs_person_category'.
-  $field_instances['node-uaqs_person-field_uaqs_person_category'] = array(
-    'bundle' => 'uaqs_person',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Select the categories you would like this person to appear in throughout the site.',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'uaqs_card' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div_div_div',
-    'field_name' => 'field_uaqs_person_category',
-    'label' => 'Category',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 3,
-    ),
-  );
-
   // Exported field_instance: 'node-uaqs_person-field_uaqs_addresses'.
   $field_instances['node-uaqs_person-field_uaqs_addresses'] = array(
     'bundle' => 'uaqs_person',
@@ -76,6 +23,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
         'weight' => 2,
@@ -86,6 +34,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
         'weight' => 4,
@@ -138,6 +87,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
         'weight' => 3,
@@ -148,6 +98,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
         'weight' => 5,
@@ -200,6 +151,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'email_default',
         'weight' => 4,
@@ -210,6 +162,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'email_default',
         'weight' => 6,
@@ -220,6 +173,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'email_default',
         'weight' => 8,
@@ -230,6 +184,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'email_default',
         'weight' => 5,
@@ -358,6 +313,60 @@ function uaqs_person_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-uaqs_person-field_uaqs_person_category'.
+  $field_instances['node-uaqs_person-field_uaqs_person_category'] = array(
+    'bundle' => 'uaqs_person',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select the categories you would like this person to appear in throughout the site.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 6,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'uaqs_card' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
+    'field_name' => 'field_uaqs_person_category',
+    'label' => 'Category',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-uaqs_person-field_uaqs_phones'.
   $field_instances['node-uaqs_person-field_uaqs_phones'] = array(
     'bundle' => 'uaqs_person',
@@ -371,6 +380,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'title' => '',
         ),
         'type' => 'telephone_link',
@@ -382,6 +392,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'title' => '',
         ),
         'type' => 'telephone_link',
@@ -393,6 +404,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'title' => '',
         ),
         'type' => 'telephone_link',
@@ -404,6 +416,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'title_class' => '',
           'title_link' => '',
           'title_style' => '',
@@ -445,6 +458,7 @@ function uaqs_person_field_default_field_instances() {
           'class' => 'img-responsive full-width',
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'image_link' => '',
           'image_style' => 'medium',
         ),
@@ -458,6 +472,7 @@ function uaqs_person_field_default_field_instances() {
           'class' => 'img-responsive',
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'image_link' => '',
           'image_style' => 'medium',
         ),
@@ -471,6 +486,7 @@ function uaqs_person_field_default_field_instances() {
           'class' => '',
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'image_link' => 'content',
           'image_style' => 'medium',
         ),
@@ -484,6 +500,7 @@ function uaqs_person_field_default_field_instances() {
           'class' => '',
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'image_link' => '',
           'image_style' => 'uaqs_medium_square',
         ),
@@ -532,6 +549,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
         'weight' => 1,
@@ -542,6 +560,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
         'weight' => 3,
@@ -552,6 +571,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'title_class' => '',
           'title_link' => '',
           'title_style' => '',
@@ -565,6 +585,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'title_class' => '',
           'title_link' => '',
           'title_style' => '',
@@ -606,6 +627,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'title_class' => 'margin-align-top margin-zero-bottom',
           'title_link' => '',
           'title_style' => 'h2',
@@ -619,6 +641,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'title_class' => 'margin-zero-top margin-zero-bottom',
           'title_link' => '',
           'title_style' => 'h2',
@@ -632,6 +655,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'title_class' => '',
           'title_link' => 'content',
           'title_style' => 'h4',
@@ -645,6 +669,7 @@ function uaqs_person_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'title_class' => 'card-title',
           'title_link' => 'content',
           'title_style' => 'h4',
