@@ -22,6 +22,7 @@ dependencies[] = strongarm
 dependencies[] = text
 dependencies[] = title
 dependencies[] = uaqs_fields
+dependencies[] = uaqs_fields_date
 stylesheets[all][] = css/uaqs_event.css
 features[ctools][] = field_group:field_group:1
 features[ctools][] = strongarm:strongarm:1
