@@ -20,6 +20,7 @@ dependencies[] = text
 dependencies[] = title
 dependencies[] = uaqs_content_chunks
 dependencies[] = uaqs_fields_date
+dependencies[] = uaqs_fields_field_collection
 dependencies[] = views
 dependencies[] = views_bootstrap
 stylesheets[all][] = css/uaqs_news.css
