@@ -19,3 +19,6 @@ This module provides core dependencies and features for the [UA Quickstart](http
 - [Editor](https://www.drupal.org/project/editor)
 - [Fences](https://www.drupal.org/project/fences)
 - [Telephone](https://www.drupal.org/project/telephone)
+
+#### Addon libraries for CKEditor
+- [Autogrow](http://ckeditor.com/addon/autogrow)
