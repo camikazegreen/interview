@@ -22,6 +22,7 @@ dependencies[] = title
 dependencies[] = token
 dependencies[] = uaqs_fields
 dependencies[] = uaqs_fields_email
+dependencies[] = uaqs_fields_telephone
 dependencies[] = views
 dependencies[] = views_bootstrap
 stylesheets[all][] = css/uaqs_person.css
