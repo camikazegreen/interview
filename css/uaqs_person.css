@@ -15,6 +15,11 @@
 
 .node-uaqs-person a[href^="mailto"] {
     word-break:break-all;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 1.07;
 }
+
 .node-uaqs-person.view-mode-full img.full-width {width:100%;}
 .node-uaqs-person.view-mode-full img.full-width {max-width:40em;}
