@@ -14,4 +14,4 @@ defaults[projects][subdir] = contrib
 ; Contrib modules
 ; ------------------------------------------------------------------------------
 
-projects[paragraphs][version] = 1.0-rc4
+projects[paragraphs][version] = 1.0-rc5
