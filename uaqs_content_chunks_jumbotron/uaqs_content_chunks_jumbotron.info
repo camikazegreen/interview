@@ -10,6 +10,7 @@ dependencies[] = paragraphs
 dependencies[] = text
 dependencies[] = uaqs_content_chunks
 dependencies[] = uaqs_fields
+dependencies[] = uaqs_fields_link
 features[ctools][] = field_group:field_group:1
 features[features_api][] = api:2
 features[field_group][] = group_jumbotron_body|paragraphs_item|jumbotron|default

@@ -14,6 +14,7 @@ dependencies[] = strongarm
 dependencies[] = text
 dependencies[] = title
 dependencies[] = uaqs_fields
+dependencies[] = uaqs_fields_link
 stylesheets[all][] = css/uaqs_content_chunks.css
 features[ctools][] = field_group:field_group:1
 features[ctools][] = strongarm:strongarm:1

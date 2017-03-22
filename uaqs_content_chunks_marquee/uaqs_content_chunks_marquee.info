@@ -10,6 +10,7 @@ dependencies[] = link
 dependencies[] = paragraphs
 dependencies[] = text
 dependencies[] = uaqs_fields
+dependencies[] = uaqs_fields_link
 stylesheets[all][] = css/uaqs_content_chunks_marquee.css
 features[ctools][] = field_group:field_group:1
 features[features_api][] = api:2

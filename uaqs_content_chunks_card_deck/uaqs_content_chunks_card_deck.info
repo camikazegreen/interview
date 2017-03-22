@@ -14,6 +14,7 @@ dependencies[] = text
 dependencies[] = title
 dependencies[] = uaqs_content_chunks
 dependencies[] = uaqs_fields
+dependencies[] = uaqs_fields_link
 features[ctools][] = field_group:field_group:1
 features[defaultconfig][] = strongarm:field_bundle_settings_paragraphs_item__uaqs_card_deck
 features[features_api][] = api:2

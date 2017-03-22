@@ -24,6 +24,7 @@ function uaqs_content_chunks_card_deck_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'link_default',
         'weight' => 18,
@@ -80,6 +81,7 @@ function uaqs_content_chunks_card_deck_field_default_field_instances() {
           'class' => '',
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'image_link' => '',
           'image_style' => 'large',
         ),
@@ -129,6 +131,7 @@ function uaqs_content_chunks_card_deck_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'title_class' => 'card-title',
           'title_link' => '',
           'title_style' => 'h4',
@@ -171,6 +174,7 @@ function uaqs_content_chunks_card_deck_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
         'weight' => 17,
@@ -209,6 +213,7 @@ function uaqs_content_chunks_card_deck_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fields',

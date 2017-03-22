@@ -24,6 +24,7 @@ function uaqs_content_chunks_column_image_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
         'weight' => 10,
@@ -40,6 +41,7 @@ function uaqs_content_chunks_column_image_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
         'weight' => 5,
@@ -50,6 +52,7 @@ function uaqs_content_chunks_column_image_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
         'weight' => 8,
@@ -88,6 +91,7 @@ function uaqs_content_chunks_column_image_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
         'weight' => 9,
@@ -104,6 +108,7 @@ function uaqs_content_chunks_column_image_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_plain',
         'weight' => 5,
@@ -114,6 +119,7 @@ function uaqs_content_chunks_column_image_field_default_field_instances() {
         'settings' => array(
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
         'weight' => 9,
@@ -152,6 +158,7 @@ function uaqs_content_chunks_column_image_field_default_field_instances() {
           'class' => 'img-responsive',
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'image_link' => '',
           'image_style' => 'uaqs_fixed_width',
         ),
@@ -171,6 +178,7 @@ function uaqs_content_chunks_column_image_field_default_field_instances() {
           'class' => 'img-responsive',
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'image_link' => '',
           'image_style' => 'large',
         ),
@@ -184,6 +192,7 @@ function uaqs_content_chunks_column_image_field_default_field_instances() {
           'class' => 'img-responsive',
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
           'image_link' => '',
           'image_style' => 'large',
         ),
