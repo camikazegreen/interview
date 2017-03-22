@@ -14,6 +14,7 @@ dependencies[] = strongarm
 dependencies[] = text
 dependencies[] = title
 dependencies[] = uaqs_fields
+dependencies[] = uaqs_fields_link
 dependencies[] = views
 stylesheets[all][] = css/uaqs_featured_content.css
 features[ctools][] = flexslider:flexslider_default_preset:1
