@@ -4,6 +4,12 @@
  * Code for the UAQS Block Types feature.
  */
 
+include_once 'uaqs_block_types.features.inc';
+/**
+ * @file
+ * Code for the UAQS Block Types feature.
+ */
+
 const OUR_PREFIX = 'uaqs-block-types-';
 
 /**
