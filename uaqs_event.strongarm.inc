@@ -13,40 +13,37 @@ function uaqs_event_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_uaqs_event';
-  $strongarm->value = array();
-  $export['menu_options_uaqs_event'] = $strongarm;
+  $strongarm->name = 'date_format_uaqs_event_abbr_month_only';
+  $strongarm->value = 'M';
+  $export['date_format_uaqs_event_abbr_month_only'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_uaqs_event';
-  $strongarm->value = 'main-menu:0';
-  $export['menu_parent_uaqs_event'] = $strongarm;
+  $strongarm->name = 'date_format_uaqs_event_date';
+  $strongarm->value = 'F d, Y g:ia';
+  $export['date_format_uaqs_event_date'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_uaqs_event';
-  $strongarm->value = array(
-    0 => 'status',
-    1 => 'revision',
-  );
-  $export['node_options_uaqs_event'] = $strongarm;
+  $strongarm->name = 'date_format_uaqs_event_day_only';
+  $strongarm->value = 'd';
+  $export['date_format_uaqs_event_day_only'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_uaqs_event';
-  $strongarm->value = '1';
-  $export['node_preview_uaqs_event'] = $strongarm;
+  $strongarm->name = 'date_format_uaqs_event_full_month_and_year';
+  $strongarm->value = 'F Y';
+  $export['date_format_uaqs_event_full_month_and_year'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_uaqs_event';
-  $strongarm->value = 0;
-  $export['node_submitted_uaqs_event'] = $strongarm;
+  $strongarm->name = 'date_format_uaqs_event_time_only';
+  $strongarm->value = 'g:ia';
+  $export['date_format_uaqs_event_time_only'] = $strongarm;
 
   return $export;
 }
