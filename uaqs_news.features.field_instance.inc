@@ -376,7 +376,7 @@ function uaqs_news_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Leave as default setting (takes to internal news story) or change to external URL (goes to external news story).',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1233,6 +1233,7 @@ function uaqs_news_field_default_field_instances() {
   t('Date when article was published');
   t('Expiration Date');
   t('Extra body content');
+  t('Leave as default setting (takes to internal news story) or change to external URL (goes to external news story).');
   t('Link to content');
   t('News Article Photos');
   t('Persons who can be contacted about the news article');
