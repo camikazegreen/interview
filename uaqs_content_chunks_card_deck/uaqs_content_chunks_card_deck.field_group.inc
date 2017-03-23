@@ -61,7 +61,7 @@ function uaqs_content_chunks_card_deck_field_group_info() {
       'label' => 'Card deck wrapper',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'card-deck-wrapper',
+        'classes' => 'card-deck-wrapper bottom-buffer-20',
         'element' => 'div',
         'show_label' => '0',
         'label_element' => '',
