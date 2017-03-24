@@ -62,6 +62,9 @@ function uaqs_featured_content_defaultconfig_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__uaqs_carousel_item'] = $strongarm;
+  $strongarm->name = 'pathauto_node_uaqs_carousel_item_pattern';
+  $strongarm->value = 'carousel/[node:title]';
+  $export['pathauto_node_uaqs_carousel_item_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
