@@ -60,7 +60,10 @@ projects[field_collection][version] = 1.0-beta11
 
 projects[field_formatter_settings][version] = 1.1
 
-projects[field_group][version] = 1.5
+projects[field_group][version] = 1.x-dev
+projects[field_group][download][type] = git
+projects[field_group][download][revision] = 0a5404d
+projects[field_group][download][branch] = 7.x-1.x
 
 projects[field_group_link][version] = 1.5
 
