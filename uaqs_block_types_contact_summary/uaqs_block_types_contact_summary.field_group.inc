@@ -92,7 +92,7 @@ function uaqs_block_types_contact_summary_field_group_info() {
       'label' => 'Contact Summary',
       'instance_settings' => array(
         'id' => '',
-        'classes' => '',
+        'classes' => 'text-center-xs text-right-sm text-right-md text-right-lg',
         'element' => 'p',
         'show_label' => '0',
         'label_element' => '',
