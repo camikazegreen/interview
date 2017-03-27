@@ -4,8 +4,20 @@
 
 .banner-text-grid {
     background-color: rgba(255,255,255,0.92);
-    padding: 30px 80px;
-    margin-top: -135px;
+    padding: 5% 10%;
+    margin-top: -45px;
+}
+
+@media (min-width: 768px) {
+    .banner-text-grid {
+        margin-top: -60px;
+    }
+}
+
+@media (min-width: 992px) {
+    .banner-text-grid {
+        margin-top: -135px;
+    }
 }
 
 .bottom-line {
