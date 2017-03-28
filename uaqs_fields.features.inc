@@ -42,6 +42,21 @@ function uaqs_fields_image_default_styles() {
     ),
   );
 
+  // Exported image style: uaqs_medium_square.
+  $styles['uaqs_medium_square'] = array(
+    'label' => 'Medium Square (220x220)',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 220,
+          'height' => 220,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: uaqs_spotlight.
   $styles['uaqs_spotlight'] = array(
     'label' => 'Spotlight',
