@@ -63,7 +63,6 @@ features[field_instance][] = node-uaqs_person-field_uaqs_phones
 features[field_instance][] = node-uaqs_person-field_uaqs_photo
 features[field_instance][] = node-uaqs_person-field_uaqs_titles
 features[field_instance][] = node-uaqs_person-title_field
-features[image][] = uaqs_medium_square
 features[node][] = uaqs_person
 features[taxonomy][] = uaqs_person_category
 features[views_view][] = uaqs_person_directory

@@ -24,30 +24,6 @@ function uaqs_person_views_api($module = NULL, $api = NULL) {
 }
 
 /**
- * Implements hook_image_default_styles().
- */
-function uaqs_person_image_default_styles() {
-  $styles = array();
-
-  // Exported image style: uaqs_medium_square.
-  $styles['uaqs_medium_square'] = array(
-    'label' => 'Medium Square (220x220)',
-    'effects' => array(
-      2 => array(
-        'name' => 'image_scale_and_crop',
-        'data' => array(
-          'width' => 220,
-          'height' => 220,
-        ),
-        'weight' => 1,
-      ),
-    ),
-  );
-
-  return $styles;
-}
-
-/**
  * Implements hook_node_info().
  */
 function uaqs_person_node_info() {
