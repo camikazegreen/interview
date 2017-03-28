@@ -184,6 +184,8 @@ function uaqs_content_chunks_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'add_mode' => 'button',
+      'allowed_bundles' => array(),
+      'bundle_weights' => array(),
       'default_edit_mode' => 'open',
       'title' => 'Paragraph',
       'title_multiple' => 'Paragraphs',
