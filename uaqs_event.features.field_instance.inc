@@ -31,7 +31,7 @@ function uaqs_event_field_default_field_instances() {
           'field_multiple_limit_order' => 0,
         ),
         'type' => 'file_default',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -43,7 +43,7 @@ function uaqs_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 5,
       ),
       'uaqs_med_media_list' => array(
         'label' => 'above',
@@ -110,7 +110,7 @@ function uaqs_event_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'uaqs_med_media_list' => array(
         'label' => 'hidden',
@@ -163,7 +163,7 @@ function uaqs_event_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_fields',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -175,7 +175,7 @@ function uaqs_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 4,
       ),
       'uaqs_med_media_list' => array(
         'label' => 'above',
@@ -335,7 +335,7 @@ function uaqs_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 8,
       ),
       'uaqs_med_media_list' => array(
         'label' => 'above',
@@ -375,7 +375,7 @@ function uaqs_event_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'If you want to link to this event on [site:name], leave the token in the URL field, if you want to link to the event hosted elsewhere, such as on the master calendar, replace the token with a link.',
     'display' => array(
       'card' => array(
         'label' => 'above',
@@ -385,14 +385,9 @@ function uaqs_event_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'hidden',
-        'module' => 'link',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-          'field_multiple_limit_order' => 0,
-        ),
-        'type' => 'link_default',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -404,7 +399,7 @@ function uaqs_event_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'uaqs_med_media_list' => array(
         'label' => 'hidden',
@@ -416,7 +411,7 @@ function uaqs_event_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_link',
-    'label' => 'More Information',
+    'label' => 'Link to event',
     'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
@@ -475,7 +470,7 @@ If there is no map, simply fill in the location name or address in the title fie
           'field_multiple_limit_order' => 0,
         ),
         'type' => 'link_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -484,10 +479,10 @@ If there is no map, simply fill in the location name or address in the title fie
         'weight' => 0,
       ),
       'uaqs_card' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 16,
       ),
       'uaqs_med_media_list' => array(
         'label' => 'above',
@@ -566,9 +561,17 @@ If there is no map, simply fill in the location name or address in the title fie
       ),
       'uaqs_card' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
+        'module' => 'image',
+        'settings' => array(
+          'class' => '',
+          'field_multiple_limit' => 1,
+          'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
+          'image_link' => '',
+          'image_style' => 'uaqs_spotlight',
+        ),
+        'type' => 'image',
+        'weight' => 2,
       ),
       'uaqs_med_media_list' => array(
         'label' => 'hidden',
@@ -647,7 +650,7 @@ If there is no map, simply fill in the location name or address in the title fie
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 7,
       ),
       'uaqs_med_media_list' => array(
         'label' => 'above',
@@ -702,10 +705,15 @@ If there is no map, simply fill in the location name or address in the title fie
         'weight' => 0,
       ),
       'uaqs_card' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
+        ),
+        'type' => 'text_default',
+        'weight' => 9,
       ),
       'uaqs_med_media_list' => array(
         'label' => 'hidden',
@@ -761,7 +769,7 @@ If there is no map, simply fill in the location name or address in the title fie
           'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -773,7 +781,7 @@ If there is no map, simply fill in the location name or address in the title fie
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 6,
       ),
       'uaqs_med_media_list' => array(
         'label' => 'above',
@@ -829,7 +837,7 @@ If there is no map, simply fill in the location name or address in the title fie
           'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_plain',
-        'weight' => 19,
+        'weight' => 24,
       ),
       'uaqs_med_media_list' => array(
         'label' => 'hidden',
@@ -876,7 +884,8 @@ If there is no map, simply fill in the location name or address in the title fie
   t('Event Date');
   t('Event Location');
   t('Event Photos');
-  t('More Information');
+  t('If you want to link to this event on [site:name], leave the token in the URL field, if you want to link to the event hosted elsewhere, such as on the master calendar, replace the token with a link.');
+  t('Link to event');
   t('Persons who can be contacted about the event');
   t('Short Title');
   t('Show on Front Page');

@@ -80,7 +80,7 @@
  * @ingroup themeable
  */
 ?>
-<div class="card bg-ash-tint">
+<div class="card">
   <?php print $user_picture; ?>
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>

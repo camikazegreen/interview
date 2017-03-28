@@ -13,6 +13,36 @@ function uaqs_event_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_card_block_2|node|uaqs_event|uaqs_card';
+  $field_group->group_name = 'group_card_block_2';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_event';
+  $field_group->mode = 'uaqs_card';
+  $field_group->parent_name = 'group_link';
+  $field_group->data = array(
+    'label' => 'Card block',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_uaqs_summary',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Card block',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card-block',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_card_block_2|node|uaqs_event|uaqs_card'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_card_block|node|uaqs_event|uaqs_card';
   $field_group->group_name = 'group_card_block';
   $field_group->entity_type = 'node';
@@ -23,8 +53,8 @@ function uaqs_event_field_group_info() {
     'label' => 'Card block',
     'weight' => '1',
     'children' => array(
-      0 => 'group_center_title',
-      1 => 'group_center',
+      0 => 'group_date',
+      1 => 'group_h4',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -42,7 +72,7 @@ function uaqs_event_field_group_info() {
   $field_groups['group_card_block|node|uaqs_event|uaqs_card'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_center_title|node|uaqs_event|uaqs_card';
   $field_group->group_name = 'group_center_title';
@@ -72,7 +102,7 @@ function uaqs_event_field_group_info() {
   $field_groups['group_center_title|node|uaqs_event|uaqs_card'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_center|node|uaqs_event|uaqs_card';
   $field_group->group_name = 'group_center';
@@ -164,6 +194,36 @@ function uaqs_event_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_date|node|uaqs_event|uaqs_card';
+  $field_group->group_name = 'group_date';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_event';
+  $field_group->mode = 'uaqs_card';
+  $field_group->parent_name = 'group_card_block';
+  $field_group->data = array(
+    'label' => 'Date',
+    'weight' => '14',
+    'children' => array(
+      0 => 'field_uaqs_date',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Date',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'h5 card-subtitle text-muted',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_date|node|uaqs_event|uaqs_card'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_day|node|uaqs_event|uaqs_med_media_list';
   $field_group->group_name = 'group_day';
   $field_group->entity_type = 'node';
@@ -190,6 +250,36 @@ function uaqs_event_field_group_info() {
     ),
   );
   $field_groups['group_day|node|uaqs_event|uaqs_med_media_list'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_h4|node|uaqs_event|uaqs_card';
+  $field_group->group_name = 'group_h4';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_event';
+  $field_group->mode = 'uaqs_card';
+  $field_group->parent_name = 'group_card_block';
+  $field_group->data = array(
+    'label' => 'h4',
+    'weight' => '15',
+    'children' => array(
+      0 => 'title_field',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'h4',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card-title',
+        'element' => 'h4',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_h4|node|uaqs_event|uaqs_card'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -234,7 +324,9 @@ function uaqs_event_field_group_info() {
     'label' => 'Link',
     'weight' => '0',
     'children' => array(
-      0 => 'group_card_block',
+      0 => 'field_uaqs_photos',
+      1 => 'group_card_block_2',
+      2 => 'group_card_block',
     ),
     'format_type' => 'link',
     'format_settings' => array(
@@ -244,7 +336,7 @@ function uaqs_event_field_group_info() {
         'custom_url' => '',
         'custom_url_normalize' => 0,
         'target' => 'default',
-        'classes' => 'list-link-block no-margin no-padding',
+        'classes' => 'link-container height-100',
       ),
       'formatter' => 'open',
     ),
@@ -626,6 +718,7 @@ function uaqs_event_field_group_info() {
   t('Column one');
   t('Column two');
   t('Dark red text');
+  t('Date');
   t('Day');
   t('Heading');
   t('Link');
@@ -638,6 +731,7 @@ function uaqs_event_field_group_info() {
   t('Strong');
   t('Summary');
   t('Summary fields');
+  t('h4');
 
   return $field_groups;
 }

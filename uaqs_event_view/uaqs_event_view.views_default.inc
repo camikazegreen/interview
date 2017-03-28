@@ -241,7 +241,7 @@ function uaqs_event_view_views_default_views() {
   $handler->display->display_options['use_more_text'] = 'Full Calendar »';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
@@ -259,9 +259,10 @@ function uaqs_event_view_views_default_views() {
   $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
-  $handler->display->display_options['footer']['area_text_custom']['content'] = '<p>&nbsp;</p>
-<div class="text-center"><a href="/calendar" class="btn btn-arrow btn-sand text-uppercase">View all events on the calendar</a></div>
-<hr>';
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="item-list text-center"><ul class="pagination">
+<li><a title="Read All Stories" href="./calendar">View all events on the calendar</a></li>
+</ul><hr></div>
+';
   $handler->display->display_options['block_description'] = 'UAQS Event card group';
   $export['uaqs_events'] = $view;
 
