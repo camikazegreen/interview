@@ -351,7 +351,7 @@ function uaqs_person_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'fences_wrapper' => 'div_div_div',
+    'fences_wrapper' => 'no_wrapper',
     'field_name' => 'field_uaqs_person_category',
     'label' => 'Category',
     'required' => 0,

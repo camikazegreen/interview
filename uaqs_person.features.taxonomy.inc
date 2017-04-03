@@ -13,7 +13,7 @@ function uaqs_person_taxonomy_default_vocabularies() {
       'name' => 'Person Categories',
       'machine_name' => 'uaqs_person_category',
       'description' => 'Taxonomy for categorizing people',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(
