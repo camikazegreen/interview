@@ -30,7 +30,7 @@ function uaqs_content_chunks_field_default_field_instances() {
           'title_style' => '',
         ),
         'type' => 'title_linked',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -45,6 +45,12 @@ function uaqs_content_chunks_field_default_field_instances() {
         ),
         'type' => 'title_linked',
         'weight' => 2,
+      ),
+      'uaqs_card' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'uaqs_featured_content' => array(
         'label' => 'above',
@@ -89,7 +95,7 @@ function uaqs_content_chunks_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -101,6 +107,12 @@ function uaqs_content_chunks_field_default_field_instances() {
         ),
         'type' => 'link_default',
         'weight' => 4,
+      ),
+      'uaqs_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'uaqs_featured_content' => array(
         'label' => 'above',
@@ -162,13 +174,19 @@ function uaqs_content_chunks_field_default_field_instances() {
           'field_multiple_limit_order' => 0,
         ),
         'type' => 'paragraphs_view_mode',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 6,
+      ),
+      'uaqs_card' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'uaqs_featured_content' => array(
         'label' => 'above',
@@ -226,6 +244,20 @@ function uaqs_content_chunks_field_default_field_instances() {
         'type' => 'image',
         'weight' => 0,
       ),
+      'uaqs_card' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'class' => 'margin-align-middle margin-zero-top margin-zero-bottom card-img',
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
+          'image_link' => '',
+          'image_style' => 'uaqs_spotlight',
+        ),
+        'type' => 'image',
+        'weight' => 9,
+      ),
       'uaqs_featured_content' => array(
         'label' => 'above',
         'settings' => array(),
@@ -276,13 +308,19 @@ function uaqs_content_chunks_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 5,
+      ),
+      'uaqs_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'uaqs_featured_content' => array(
         'label' => 'above',
@@ -335,6 +373,17 @@ function uaqs_content_chunks_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 3,
       ),
+      'uaqs_card' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
+        ),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
       'uaqs_featured_content' => array(
         'label' => 'above',
         'settings' => array(),
@@ -370,10 +419,18 @@ function uaqs_content_chunks_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 4,
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => 'h1',
+        ),
+        'type' => 'title_linked',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -389,6 +446,17 @@ function uaqs_content_chunks_field_default_field_instances() {
         'type' => 'title_linked',
         'weight' => 1,
       ),
+      'uaqs_card' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
+        ),
+        'type' => 'text_plain',
+        'weight' => 8,
+      ),
       'uaqs_featured_content' => array(
         'label' => 'above',
         'settings' => array(),
@@ -403,8 +471,8 @@ function uaqs_content_chunks_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'hide_label' => array(
-        'entity' => 0,
-        'page' => 0,
+        'entity' => 'entity',
+        'page' => 'page',
       ),
       'text_processing' => 0,
       'user_register_form' => FALSE,

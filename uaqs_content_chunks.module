@@ -30,6 +30,15 @@ function uaqs_content_chunks_theme_registry_alter(&$theme_registry) {
 }
 
 /**
+ * Implements hook_preprocess_node().
+ */
+function uaqs_content_chunks_preprocess_node(&$vars) {
+  if ($vars['node']->type == 'uaqs_flexible_page' && $vars['view_mode'] == 'uaqs_card') {
+    $vars['theme_hook_suggestions'][] = 'node__uaqs_flexible_page__uaqs_card';
+  }
+}
+
+/**
  * Implements hook_theme().
  */
 function uaqs_content_chunks_theme() {

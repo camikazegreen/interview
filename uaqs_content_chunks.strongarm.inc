@@ -41,9 +41,15 @@ function uaqs_content_chunks_strongarm() {
         'custom_settings' => FALSE,
       ),
       'uaqs_card' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'uaqs_sidebar_teaser_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'uaqs_med_media_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'uaqs_marquee' => array(
         'custom_settings' => FALSE,
       ),
     ),
