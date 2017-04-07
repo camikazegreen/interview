@@ -326,7 +326,7 @@ function ua_quickstart_demo_blocks($default_theme, $admin_theme) {
     $contact_delta = 'main-unit-or-department-contact-';
     $contact_summary_blocks = array(
       $contact_delta => array(
-        'region' => 'footer_sub',
+        'region' => 'footer',
       ),
     );
     $record = array_merge($base_common, $contact_summary_blocks[$contact_delta]);
