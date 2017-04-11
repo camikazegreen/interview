@@ -41,7 +41,6 @@ features[defaultconfig][] = strongarm:pathauto_taxonomy_term_uaqs_person_categor
 features[features_api][] = api:2
 features[field_base][] = field_uaqs_person_category
 features[field_group][] = group_card_block_1|node|uaqs_person|uaqs_card
-features[field_group][] = group_card|node|uaqs_person|uaqs_card
 features[field_group][] = group_column_left|node|uaqs_person|teaser
 features[field_group][] = group_column_middle|node|uaqs_person|teaser
 features[field_group][] = group_column_one|node|uaqs_person|default
