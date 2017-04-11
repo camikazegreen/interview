@@ -7,5 +7,4 @@ Feature: UA Quickstart Contact Summary Block
   Scenario: The contact summary is in the correct region.
     Given I am an anonymous user
     When I visit "/uaqs_block_types"
-    Then I should see "The University of Arizona Tucson AZ 85721 department.name@email.arizona.edu 520-621-2211" in the ".region-footer-sub" element
-
+    Then I should see "The University of Arizona Tucson AZ 85721 department.name@email.arizona.edu 520-621-2211" in the ".region-footer" element
