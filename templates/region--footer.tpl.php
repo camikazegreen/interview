@@ -8,7 +8,8 @@
  */
 ?>
 <?php if ($footer_logo || $content): ?>
-<div class="container">
+<div class="<?php print $classes; ?>">
+  <div class="container">
     <div class="row">
         <div class="page-row-padding-top page-row-padding-bottom"></div>
         <div class="page-row-padding-top page-row-padding-bottom"></div>
@@ -27,6 +28,7 @@
         <div class="col-xs-12">
             <hr>
         </div>
+    </div>
   </div>
 </div>
 <?php endif; ?>
