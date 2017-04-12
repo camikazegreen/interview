@@ -339,18 +339,50 @@ class UaqsDemoFlexiblePageMigration extends UaqsNodeMigration {
       'uaqs_flexible_page_subtitle' => t('Sub-title'),
       'path' => t('URL path settings'),
       'uaqs_main_content' => t('Main Content'),
+      'uaqs_summary' => t('Summary')
     );
 
+    // Image fields...
+    $image_src_field = 'uaqs_photo';
+    $image_fields = array(
+      $image_src_field => t('Photo filename'),
+      $image_src_field . '_title' => t('Photo title'),
+      $image_src_field . '_alt' => t('Photo alt text'),
+    );
+
+    // Images and attachments.
+    foreach (array($image_src_field) as $src_field) {
+      $dst_field = 'field_' . $src_field;
+      $this->addFieldMapping($dst_field, $src_field)
+           ->separator('|');
+      $this->addFieldMapping($dst_field . ':file_replace')
+           ->defaultValue(FILE_EXISTS_REPLACE);
+      $this->addFieldMapping($dst_field . ':file_class')
+           ->defaultValue('MigrateFileUri');
+      $this->addFieldMapping($dst_field . ':source_dir')
+           ->defaultValue($this->imagePath());
+    }
+
+    // Image alt and title fields.
+    foreach (array('alt', 'title') as $label) {
+      $this->addFieldMapping('field_' . $image_src_field . ':' . $label, $image_src_field . '_' . $label)
+           ->separator('|');
+    }
     // All the fields to migrate.
-    $fields = $this->getSourceKeyField() + $data_fields;
+    $fields = $this->getSourceKeyField() + $data_fields + $image_fields;
 
     // Source definition.
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
+    // Allow limited HTML markup in the summary field.
+    $this->addFieldMapping('field_uaqs_summary:format')
+         ->defaultValue('uaqs_standard');
+
     // The title and path have no prefixes.
     $this->addSimpleMappings(array('title'));
     $this->addSimpleMappings(array('path'));
-    $this->addFieldMapping('field_uaqs_flexible_page_subtitle', 'uaqs_flexible_page_subtitle');
+    $this->addFieldMapping('field_uaqs_flexible_page_sub', 'uaqs_flexible_page_subtitle');
+    $this->addFieldMapping('field_uaqs_summary', 'uaqs_summary');
 
     // Paragraphs (UAQS Content Chunks).
     $this->addFieldMapping('field_uaqs_main_content', 'uaqs_main_content')
