@@ -313,3 +313,73 @@
       max-width: 71rem;
   }
 }
+
+/*-----------------*/
+/***** FEATURE REVEAL  *****/
+/*-----------------*/
+
+.card .feature-reveal .card-title {
+  	padding: 10px 20px;
+    color: white;
+    background-color: #333;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+  .feature-reveal {
+  	position: relative;
+  	overflow: hidden;
+  	cursor: pointer;
+    background-color:inherit;
+  }
+
+  .card .feature-reveal .card-title,
+  .card .feature-reveal .card-img-top{
+  	transition: transform 0.35s;
+    transition: -webkit-transform 0.35s;-webkit-transition: -webkit-transform 0.35s;
+  	-moz-backface-visibility: hidden;
+  	-webkit-backface-visibility: hidden;
+  	backface-visibility: hidden;
+    width:100%;
+  }
+
+  .card .feature-reveal:hover .card-title,
+  .card .feature-reveal:focus .card-title,
+  .card .feature-reveal:hover .card-img-top,
+  .card .feature-reveal:focus .card-img-top {
+  	-moz-transform: translate3d(0,-100px,0);
+  	-webkit-transform: translate3d(0,-100px,0);
+  	transform: translate3d(0,-100px,0);
+  }
+
+
+  .card .feature-reveal .card-title {
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    bottom: 0;
+  	left: 0;
+    right: 0;
+  }
+
+  .card .feature-reveal .card-text {
+  	position: absolute;
+  	bottom: 0;
+  	left: 0;
+  }
+
+  .card .feature-reveal .card-text  {
+  	text-transform: none;
+  	font-size: 90%;
+  	opacity: 0;
+  	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  	transition: opacity 0.35s, transform 0.35s;
+  	-webkit-transform: translate3d(0,50px,0);
+  	transform: translate3d(0,50px,0);
+  }
+
+  .card .feature-reveal:hover .card-text {
+  	opacity: 1;
+  	-webkit-transform: translate3d(0,0,0);
+  	transform: translate3d(0,0,0);
+  }
+}

@@ -51,6 +51,21 @@ function uaqs_featured_content_defaultconfig_strongarm() {
       'card' => array(
         'custom_settings' => TRUE,
       ),
+      'uaqs_teaser_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'uaqs_sidebar_teaser_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'uaqs_med_media_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'uaqs_card' => array(
+        'custom_settings' => TRUE,
+      ),
+      'uaqs_marquee' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -62,13 +77,6 @@ function uaqs_featured_content_defaultconfig_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__uaqs_carousel_item'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_uaqs_carousel_item_pattern';
-  $strongarm->value = 'carousel/[node:title]';
-  $export['pathauto_node_uaqs_carousel_item_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -90,6 +98,7 @@ function uaqs_featured_content_defaultconfig_strongarm() {
   $strongarm->name = 'node_options_uaqs_carousel_item';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_uaqs_carousel_item'] = $strongarm;
 
@@ -106,6 +115,13 @@ function uaqs_featured_content_defaultconfig_strongarm() {
   $strongarm->name = 'node_submitted_uaqs_carousel_item';
   $strongarm->value = 0;
   $export['node_submitted_uaqs_carousel_item'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_uaqs_carousel_item_pattern';
+  $strongarm->value = 'carousel/[node:title]';
+  $export['pathauto_node_uaqs_carousel_item_pattern'] = $strongarm;
 
   return $export;
 }

@@ -61,6 +61,10 @@ function uaqs_featured_content_preprocess_node(&$vars) {
     if ($vars['view_mode'] == 'uaqs_featured_content') {
       $vars['theme_hook_suggestions'][] = 'node__uaqs_featured_content';
     }
+
+    if ($vars['view_mode'] == 'uaqs_card') {
+      $vars['theme_hook_suggestions'][] = 'node__uaqs_carousel_item__uaqs_card';
+    }
    }
 }
 
