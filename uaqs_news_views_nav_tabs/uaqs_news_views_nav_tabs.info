@@ -3,6 +3,7 @@ description = Display news in bootstrap nav tabs
 core = 7.x
 package = The University of Arizona
 dependencies[] = ctools
+dependencies[] = uaqs_news
 dependencies[] = views
 dependencies[] = views_bootstrap
 dependencies[] = views_field_view

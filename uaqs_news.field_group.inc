@@ -146,13 +146,11 @@ function uaqs_news_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'uaqs_news';
   $field_group->mode = 'uaqs_teaser_list';
-  $field_group->parent_name = 'group_media_body';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'h4',
     'weight' => '14',
-    'children' => array(
-      0 => 'title_field',
-    ),
+    'children' => array(),
     'format_type' => 'html-element',
     'format_settings' => array(
       'label' => 'h4',
@@ -731,9 +729,9 @@ function uaqs_news_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'field_uaqs_summary',
-      1 => 'group_text_muted',
-      2 => 'group_heading',
-      3 => 'group_read_more',
+      1 => 'group_heading',
+      2 => 'group_read_more',
+      3 => 'group_text_muted',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -1412,7 +1410,7 @@ function uaqs_news_field_group_info() {
         'classes' => 'text-muted',
         'element' => 'div',
         'show_label' => '0',
-        'label_element' => 'div',
+        'label_element' => '',
         'attributes' => '',
       ),
     ),

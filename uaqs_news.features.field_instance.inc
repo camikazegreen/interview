@@ -28,7 +28,7 @@ function uaqs_news_field_default_field_instances() {
         'weight' => 3,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 8,
@@ -58,7 +58,7 @@ function uaqs_news_field_default_field_instances() {
         'weight' => 2,
       ),
       'uaqs_teaser_list' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 4,
@@ -105,7 +105,7 @@ function uaqs_news_field_default_field_instances() {
         'weight' => 11,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 9,
@@ -182,7 +182,7 @@ function uaqs_news_field_default_field_instances() {
         'weight' => 19,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 10,
@@ -261,7 +261,7 @@ function uaqs_news_field_default_field_instances() {
         'weight' => 2,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 11,
@@ -291,7 +291,7 @@ function uaqs_news_field_default_field_instances() {
         'weight' => 1,
       ),
       'uaqs_teaser_list' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 5,
@@ -326,7 +326,7 @@ function uaqs_news_field_default_field_instances() {
         'weight' => 6,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 12,
@@ -356,7 +356,7 @@ function uaqs_news_field_default_field_instances() {
         'weight' => 9,
       ),
       'uaqs_teaser_list' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 8,
@@ -537,7 +537,7 @@ function uaqs_news_field_default_field_instances() {
         'weight' => 12,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
@@ -549,25 +549,25 @@ function uaqs_news_field_default_field_instances() {
         'weight' => 7,
       ),
       'uaqs_marquee' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 7,
       ),
       'uaqs_med_media_list' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 8,
       ),
       'uaqs_sidebar_teaser_list' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
       'uaqs_teaser_list' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
@@ -626,31 +626,37 @@ function uaqs_news_field_default_field_instances() {
         'weight' => 20,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'uaqs_card' => array(
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
       'uaqs_marquee' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
       'uaqs_med_media_list' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
       'uaqs_sidebar_teaser_list' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
       'uaqs_teaser_list' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
@@ -1117,7 +1123,7 @@ function uaqs_news_field_default_field_instances() {
         'weight' => 8,
       ),
       'uaqs_teaser_list' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 1,
@@ -1252,7 +1258,7 @@ function uaqs_news_field_default_field_instances() {
         'weight' => 3,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 6,
@@ -1330,7 +1336,7 @@ function uaqs_news_field_default_field_instances() {
         'weight' => 16,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 7,

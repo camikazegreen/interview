@@ -85,7 +85,7 @@ function uaqs_news_views_nav_tabs_views_default_views() {
   $handler->display->display_options['fields']['view']['field'] = 'view';
   $handler->display->display_options['fields']['view']['label'] = '';
   $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['view']['view'] = 'uaqs_news_tabs';
+  $handler->display->display_options['fields']['view']['view'] = 'uaqs_news_nav_tabs';
   $handler->display->display_options['fields']['view']['display'] = 'uaqs_news_nav_tabs_child';
   $handler->display->display_options['fields']['view']['arguments'] = '[!tid]';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
@@ -100,7 +100,7 @@ function uaqs_news_views_nav_tabs_views_default_views() {
   $handler->display->display_options['filters']['vid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['filters']['vid']['field'] = 'vid';
   $handler->display->display_options['filters']['vid']['value'] = array(
-    4 => '4',
+    3 => '3',
   );
   $handler->display->display_options['block_description'] = 'UAQS News Nav Tabs';
 
