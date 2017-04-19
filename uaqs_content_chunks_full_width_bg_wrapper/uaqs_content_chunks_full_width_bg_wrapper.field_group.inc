@@ -38,13 +38,11 @@ function uaqs_content_chunks_full_width_bg_wrapper_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_span|paragraphs_item|uaqs_full_width_bg_wrapper|default'] = $field_group;
+  $field_groups['group_columns|paragraphs_item|uaqs_full_width_bg_wrapper|default'] = $field_group;
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Columns');
-  t('H1');
-  t('span');
 
   return $field_groups;
 }
