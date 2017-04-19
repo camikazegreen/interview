@@ -7,5 +7,11 @@
     "uaqs_photo" : "hieronymus_bosch_the_seven_deadly_sins_and_four_last_things.jpg",
     "uaqs_summary" : "Little is known of Bosch's life, though there are some records. He spent most of it in the town of 's-Hertogenbosch, where he was born in his grandfather's house."
   },
+  {"id":2,
+    "title" : "Flexible page people grid",
+    "uaqs_flexible_page_subtitle" : "",
+    "path" : "people/uaqs_flexible_page",
+    "uaqs_main_content" : "150"
+  }
 
 ]

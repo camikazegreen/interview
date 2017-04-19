@@ -29,6 +29,8 @@ class UaqsDemoPlainTextMigration extends UaqsParagraphsItemMigration {
     // Fields to import to the bundle.
     $data_fields = array(
       'uaqs_text_area' => t('Generic multi-line text area'),
+      'path' => t('URL path settings'),
+      'pathauto' => t('Pathauto flag: generate automatic URL alias')
     );
 
     // All the fields to migrate.
@@ -37,6 +39,9 @@ class UaqsDemoPlainTextMigration extends UaqsParagraphsItemMigration {
     // Source definition.
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
+    $this->addSimpleMappings(array('path'));
+    $this->addFieldMapping('pathauto', 'pathauto')
+         ->defaultValue(0);
     // Map JSON names to simple content type fields and subfields.
     $this->addFieldMapping('field_uaqs_text_area', 'uaqs_text_area');
     // Allow limited HTML markup in the text area field.
@@ -315,6 +320,41 @@ class UaqsDemoMarqueeMigration extends UaqsParagraphsItemMigration {
 }
 
 /**
+ * Defines migration into the UAQS view type of Paragraphs entity.
+ */
+class UaqsDemoViewMigration extends UaqsParagraphsItemMigration {
+
+  /**
+   * Constructor.
+   *
+   * @param array $arguments
+   *   Arguments for the parent constructor (Migration standard behavior).
+   */
+  public function __construct(array $arguments) {
+    parent::__construct($arguments, 'uaqs_content_chunks_view', 'field_uaqs_main_content',
+      t('Populate demonstration views.'));
+    // Paragraphs view_mode
+    $paragraphs_core = array (
+      'view_mode' => t('View Mode'),
+    );
+    // Fields to import to the bundle.
+    $data_fields = array(
+      'uaqs_view' => t('View to be embedded')
+    );
+    // All the fields to migrate.
+    $fields = $this->getSourceKeyField() + $paragraphs_core + $data_fields;
+
+    // Source definition.
+    $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
+
+    $this->addSimpleMappings(array('view_mode'));
+
+    // Map JSON names to simple content type fields and subfields.
+    $this->addFieldMapping('field_uaqs_view', 'uaqs_view');
+  }
+}
+
+/**
  * Makes demonstration UAQS Flexible Page content from pre-defined data.
  *
  * This migration imports a small part of the UAQS FlexiblePage content directly
@@ -392,6 +432,7 @@ class UaqsDemoFlexiblePageMigration extends UaqsNodeMigration {
            'UaqsDemoHeadedText',
            'UaqsDemoColumnImage',
            'UaqsDemoMarquee',
+           'UaqsDemoView',
          ));
   }
 
