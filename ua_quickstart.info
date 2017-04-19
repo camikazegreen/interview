@@ -56,6 +56,7 @@ dependencies[] = uaqs_content_chunks_headed_text
 dependencies[] = uaqs_content_chunks_marquee
 dependencies[] = uaqs_content_chunks_plain_text
 dependencies[] = uaqs_content_chunks_single_card
+dependencies[] = uaqs_content_chunks_views
 dependencies[] = uaqs_content_chunks_well
 dependencies[] = uaqs_featured_content
 dependencies[] = uaqs_block_types_flexible_block
