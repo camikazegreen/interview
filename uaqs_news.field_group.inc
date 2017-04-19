@@ -25,8 +25,8 @@ function uaqs_news_field_group_info() {
     'children' => array(
       0 => 'field_uaqs_short_title',
       1 => 'field_uaqs_summary',
-      2 => 'group_text_muted',
-      3 => 'group_link_placement',
+      2 => 'group_link_placement',
+      3 => 'group_text_muted',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -266,13 +266,11 @@ function uaqs_news_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'uaqs_news';
   $field_group->mode = 'uaqs_marquee';
-  $field_group->parent_name = 'group_link';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Marquee',
     'weight' => '1',
-    'children' => array(
-      0 => 'field_uaqs_photo',
-    ),
+    'children' => array(),
     'format_type' => 'html-element',
     'format_settings' => array(
       'label' => 'Marquee',
@@ -637,7 +635,7 @@ function uaqs_news_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Extra fields',
-    'weight' => '8',
+    'weight' => '9',
     'children' => array(
       0 => 'field_uaqs_attachments',
       1 => 'field_uaqs_contacts',
@@ -1249,7 +1247,7 @@ function uaqs_news_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Summary fields',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_uaqs_expiration_date',
       1 => 'field_uaqs_link',
