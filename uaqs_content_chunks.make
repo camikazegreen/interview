@@ -15,3 +15,4 @@ defaults[projects][subdir] = contrib
 ; ------------------------------------------------------------------------------
 
 projects[paragraphs][version] = 1.0-rc5
+projects[viewfield][version] = 2.1
