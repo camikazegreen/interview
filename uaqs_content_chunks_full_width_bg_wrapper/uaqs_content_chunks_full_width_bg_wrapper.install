@@ -1,0 +1,40 @@
+<?php
+/**
+ * @file
+ * uaqs_content_chunks_full_width_bg_wrapper.install
+ */
+
+/**
+ * UADIGITAL-1057 removes the summary_short field from the full width background wrapper and replaces with the rich text summary field. Any styles associated with the summary_short field should be implemented on the updated summary field before or after this database migration script runs. 
+ * This function prepends content from the summary_short field to the summary field and deletes the summary_short field instance. 
+ */
+function uaqs_content_chunks_full_width_bg_wrapper_update_7100() {
+ $query = new EntityFieldQuery();
+
+  $query
+    ->entityCondition('entity_type', 'paragraphs_item', '=')
+    ->propertyCondition('bundle', 'uaqs_full_width_bg_wrapper', '=');
+
+  $result = $query->execute();
+
+  $ids = array();
+  foreach($result['paragraphs_item'] as $record) {
+    $ids[] = $record->item_id;
+  }
+
+  $bg_wrappers = entity_load('paragraphs_item', $ids);
+
+  foreach ($bg_wrappers as $bg_wrapper) {
+   $combined_field_values = $bg_wrapper->field_uaqs_summary_short['und'][0]['value'] . $bg_wrapper->field_uaqs_summary['und'][0]['value'];
+   $bg_wrapper->field_uaqs_summary['und'][0]['value'] =  $combined_field_values;
+   $bg_wrapper->field_uaqs_summary['und'][0]['format'] = 'uaqs_standard';
+
+   unset( $bg_wrapper->field_uaqs_summary_short);
+   field_attach_update('paragraphs_item', $bg_wrapper);
+  }
+  if ($instance = field_info_instance('paragraphs_item', 'field_uaqs_summary_short', 'uaqs_full_width_bg_wrapper'))  {
+    field_delete_instance($instance, TRUE);
+    field_purge_batch(1);
+  }
+
+}
