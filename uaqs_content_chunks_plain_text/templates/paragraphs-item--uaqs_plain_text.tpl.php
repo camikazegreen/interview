@@ -15,4 +15,6 @@
  */
 
 ?>
+<div class="<?php print $classes; ?> bottom-buffer-30"<?php print $attributes; ?>>
   <?php print render($content['field_uaqs_text_area']); ?>
+</div>

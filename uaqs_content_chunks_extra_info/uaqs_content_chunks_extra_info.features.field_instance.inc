@@ -26,7 +26,7 @@ function uaqs_content_chunks_extra_info_field_default_field_instances() {
           'field_multiple_limit_order' => 0,
         ),
         'type' => 'link_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',

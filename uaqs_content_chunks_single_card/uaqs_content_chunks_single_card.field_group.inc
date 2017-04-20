@@ -13,6 +13,36 @@ function uaqs_content_chunks_single_card_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_bottom_buffer_30|paragraphs_item|uaqs_single_card|default';
+  $field_group->group_name = 'group_bottom_buffer_30';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'uaqs_single_card';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'bottom-buffer-30',
+    'weight' => '0',
+    'children' => array(
+      0 => 'group_card',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'bottom-buffer-30',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'bottom-buffer-30',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_bottom_buffer_30|paragraphs_item|uaqs_single_card|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_card_block|paragraphs_item|uaqs_single_card|default';
   $field_group->group_name = 'group_card_block';
   $field_group->entity_type = 'paragraphs_item';
@@ -79,13 +109,13 @@ function uaqs_content_chunks_single_card_field_group_info() {
   $field_group->entity_type = 'paragraphs_item';
   $field_group->bundle = 'uaqs_single_card';
   $field_group->mode = 'default';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_bottom_buffer_30';
   $field_group->data = array(
     'label' => 'Card',
-    'weight' => '0',
+    'weight' => '1',
     'children' => array(
-      0 => 'group_card_link',
-      1 => 'group_card_block',
+      0 => 'group_card_block',
+      1 => 'group_card_link',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -107,6 +137,7 @@ function uaqs_content_chunks_single_card_field_group_info() {
   t('Card');
   t('Card block');
   t('Card link');
+  t('bottom-buffer-30');
 
   return $field_groups;
 }

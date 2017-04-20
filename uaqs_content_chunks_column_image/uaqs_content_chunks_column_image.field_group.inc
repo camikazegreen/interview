@@ -31,7 +31,7 @@ function uaqs_content_chunks_column_image_field_group_info() {
       'label' => 'Alignment',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'center-block',
+        'classes' => 'center-block bottom-buffer-30',
         'element' => 'figure',
         'show_label' => '0',
         'label_element' => '',

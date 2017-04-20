@@ -17,7 +17,7 @@
  */
 
 ?>
-<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<div class="<?php print $classes; ?> bottom-buffer-30"<?php print $attributes; ?>>
   <h3>
     <?php print render($content['field_uaqs_download_name']); ?>
   </h3>

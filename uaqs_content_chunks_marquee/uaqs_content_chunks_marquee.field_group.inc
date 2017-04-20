@@ -78,13 +78,11 @@ function uaqs_content_chunks_marquee_field_group_info() {
   $field_group->entity_type = 'paragraphs_item';
   $field_group->bundle = 'uaqs_content_chunks_marquee';
   $field_group->mode = 'default';
-  $field_group->parent_name = 'group_row';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Headline',
     'weight' => '2',
-    'children' => array(
-      0 => 'field_uaqs_summary_short',
-    ),
+    'children' => array(),
     'format_type' => 'html-element',
     'format_settings' => array(
       'label' => 'Headline',
@@ -204,8 +202,8 @@ function uaqs_content_chunks_marquee_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_uaqs_summary',
-      1 => 'group_read_more',
-      2 => 'group_headline',
+      1 => 'group_headline',
+      2 => 'group_read_more',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(

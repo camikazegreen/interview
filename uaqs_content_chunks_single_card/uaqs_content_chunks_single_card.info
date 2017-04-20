@@ -14,6 +14,7 @@ dependencies[] = uaqs_fields
 dependencies[] = uaqs_fields_link
 features[ctools][] = field_group:field_group:1
 features[features_api][] = api:2
+features[field_group][] = group_bottom_buffer_30|paragraphs_item|uaqs_single_card|default
 features[field_group][] = group_card_block|paragraphs_item|uaqs_single_card|default
 features[field_group][] = group_card_link|paragraphs_item|uaqs_single_card|default
 features[field_group][] = group_card|paragraphs_item|uaqs_single_card|default

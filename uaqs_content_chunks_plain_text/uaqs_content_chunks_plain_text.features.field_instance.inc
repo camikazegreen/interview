@@ -27,7 +27,7 @@ function uaqs_content_chunks_plain_text_field_default_field_instances() {
           'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -37,6 +37,7 @@ function uaqs_content_chunks_plain_text_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
+    'fences_wrapper' => 'div',
     'field_name' => 'field_uaqs_text_area',
     'label' => 'UAQS Text Area',
     'required' => 1,
@@ -51,7 +52,7 @@ function uaqs_content_chunks_plain_text_field_default_field_instances() {
         'rows' => 20,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 0,
     ),
   );
 

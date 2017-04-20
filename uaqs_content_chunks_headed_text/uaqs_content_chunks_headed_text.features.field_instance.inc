@@ -27,7 +27,7 @@ function uaqs_content_chunks_headed_text_field_default_field_instances() {
           'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -75,7 +75,7 @@ function uaqs_content_chunks_headed_text_field_default_field_instances() {
           'title_style' => 'h3',
         ),
         'type' => 'title_linked',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',

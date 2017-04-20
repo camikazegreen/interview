@@ -14,6 +14,6 @@ dependencies[] = uaqs_fields
 dependencies[] = uaqs_fields_link
 features[ctools][] = field_group:field_group:1
 features[features_api][] = api:2
+features[field_group][] = group_bottom_buffer_30|paragraphs_item|uaqs_extra_info|default
 features[field_instance][] = paragraphs_item-uaqs_extra_info-field_uaqs_link
 features[paragraphs][] = uaqs_extra_info
-project path = profiles/ua_quickstart/modules/custom/uaqs_content_chunks

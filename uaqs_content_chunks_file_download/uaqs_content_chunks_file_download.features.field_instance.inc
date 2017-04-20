@@ -27,7 +27,7 @@ function uaqs_content_chunks_file_download_field_default_field_instances() {
           'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -71,7 +71,7 @@ function uaqs_content_chunks_file_download_field_default_field_instances() {
           'field_multiple_limit_order' => 0,
         ),
         'type' => 'file_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -119,7 +119,7 @@ function uaqs_content_chunks_file_download_field_default_field_instances() {
           'field_multiple_limit_order' => 0,
         ),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -166,7 +166,7 @@ function uaqs_content_chunks_file_download_field_default_field_instances() {
           'image_style' => 'medium',
         ),
         'type' => 'image',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',

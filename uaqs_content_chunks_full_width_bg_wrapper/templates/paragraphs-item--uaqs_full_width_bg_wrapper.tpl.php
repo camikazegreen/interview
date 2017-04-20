@@ -22,7 +22,7 @@
         </article>
     </div>
 </div>
-<div class="background-wrapper bg-triangles-mosaic bg-sky">
+<div class="background-wrapper bg-triangles-mosaic bg-sky bottom-buffer-30">
   <div class="container">
     <div class="row">
         <?php print render($content); ?>
