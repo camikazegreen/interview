@@ -1,0 +1,74 @@
+7.x-1.0-alpha6, 2017-01-20
+------------------------------
+- Revert "Preparing to tag 7.x-1.0-alpha4.".
+- Preparing to tag 7.x-1.0-alpha4.
+- Merged in trackleft/uaqs_block_types/UADIGITAL-884-automate-uaqs-component-re (pull request #15).
+- UADIGITAL-884 add bitbucket pipelines config file.
+- Merged ua_drupal/uaqs_block_types into 7.x-1.x.
+- UADIGITAL-880: Matching permissions with uaqs_card block.
+- UADIGITAL-880 matching permissions with uaqs_card block.
+- UADIGITAL-879: October 2016 Drupal updates.
+- Update the Bean module to the current version.
+- UAMS-354: clean up bean blocks.
+- Separate blocks out into their own submodules.
+- UADIGITAL-712: Make flexible block easier to enable.
+- Back to dev.
+- UADIGITAL-712.
+
+7.x-1.0-alpha5, 2016-05-02
+------------------------------
+- Back to dev.
+
+7.x-1.0-alpha4, 2016-04-15
+------------------------------
+- Merged in trackleft/uaqs_block_types/UADIGITAL-654-remove-dependency-of-featu (pull request #9).
+- Removing dependency on uaqs_featured_content.
+- UADIGITAL-650: Flexible block type as a submodule of uaqs_block_types.
+- Steal the work of @trackleft on uams_block_types UAMS-217.
+- Introduce Fences and Field Group, remove ua_zen_ prefixed field functions, use the uaqs_contact_phone field from UAQS Fields.
+- Merged in mmunro-ltrr/uaqs_block_types/UADIGITAL-402 (pull request #6).
+- Switch to the new common text area field, rename the format.
+- Merged in trackleft/uaqs_block_types-tmp/should-not-need-ua_zen-prefix (pull request #5).
+- Merge.
+- This works.
+- Merged 7.x-1.x into should-not-need-ua_zen-prefix.
+- Theme registry alter adds uaqs_block_types functions into registry.
+- Merged ua_drupal/uaqs_block_types into 7.x-1.x.
+- Last rename i hope.
+- Moving exported permissions to defaultconfig and renaming card_overlay view mode.
+- More renaming.
+- Rename display mode uaqs_card to uaqs_card_overlay.
+- Merged in mmunro-ltrr/uaqs_block_types (pull request #2).
+- Complete support for the Card Bean.
+- Update the documentation with requirements and other contextual details.
+- README.md edited online with Bitbucket.
+- Update readme.
+- Explanation about uaqs_fields.
+- Update markdown formatting.
+- Adding bean as a dependency.
+- Updated readme.
+- Add a draft template for the mission statement block.
+- Rename UA to UAQS in the file contents.
+- UADIGITAL-450: Add a UA Card block type (Bean) and patch the Bean module.
+- Adding in annonymous permissions for ua_card.
+- Ua_card.
+- UADIGITAL-413: Add option to open links in new windows.
+- Ua_block_types.strongarm.inc edited online with Bitbucket - reverted display settings - didn't mean to include those in the pull request.
+- UADigital-413: Added option for users to open links in new windows and added a little help text to the email field on the contact block (just to use 'mailto:').
+- Back to dev.
+
+7.x-1.0-alpha3, 2015-10-16
+------------------------------
+- Back to dev.
+
+7.x-1.0-alpha2, 2015-10-16
+------------------------------
+- Merged in UADIGITAL-322 (pull request #1).
+- UADIGITAL-322: Changes from features module updates.
+- Document where the hook_theme_registry_alter() implemention originated.
+- Don't ignore any dependencies.
+- Include the missing makefile, let it set the project path correctly.
+
+UA Block Types 7.x-1.0-alpha0, 2015-09-25
+-----------------------------------------
+- Initial commits.
