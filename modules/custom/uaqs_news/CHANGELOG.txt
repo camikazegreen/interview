@@ -1,0 +1,102 @@
+7.x-1.0-alpha6, 2017-01-13
+------------------------------
+- Merged in trackleft/uaqs_news/UADIGITAL-884-automate-uaqs-component-re (pull request #16).
+- UADIGITAL-884 add bitbucket pipelines config file.
+- Merged ua_drupal/uaqs_news into 7.x-1.x.
+- Merged in trackleft/uaqs_news/UAMS-451-date-of-publication-increase-ye (pull request #15).
+- UAMS-451 allowing to publish farther into the past.
+- UADIGITAL-873: upgrade uaqs_summary field to use text processing.
+- UADIGITAL-873 upgrade uaqs_summary field to use text processing.
+- Merged in trackleft/uaqs_news/UADIGITAL-833-hide-ugly-field-labels-lik (pull request #12).
+- UADIGITAL-833.
+- Merged in trackleft/uaqs_news/UADIGITAL-820-improve-and-backport-top-n (pull request #11).
+- I probably don't know how to rebase, because I wanted this change.
+- Merge branch 'UADIGITAL-820-improve-and-backport-top-n' of https://bitbucket.org/trackleft/uaqs_news into UADIGITAL-820-improve-and-backport-top-n.
+- UADIGITAL-820 adding some more display modes to accomodate design for diversity site.
+- Removing unused view mode.
+- Changing machine names to shorter strings so that we can place blocks.
+- Adding thumnail as image style for medium media list.
+- Minor string edits.
+- Mobile first layout.
+- Removing reference to file_entity_inline.
+- Updating news content type with uniform style across view modes.
+- Adding no image fallback.
+- Renamed top news to recent new.
+- UADIGITAL-820 adding some more display modes to accomodate design.
+- Merged in trackleft/uaqs_news/UADIGITAL-813-backport-news-teaser-view- (pull request #10).
+- Adding a read all news button.
+- Fixed column layout with view bootstrap grid.
+- Changed name of view because of this issue https://www.drupal.org/node/1872042.
+- Backport news teaser view from diversity site.
+- Fix focus state of news items.
+- Uaqs_news.css edited online with Bitbucket.
+- Back to dev.
+
+7.x-1.0-alpha5, 2016-05-02
+------------------------------
+- Back to dev.
+
+7.x-1.0-alpha4, 2016-04-11
+------------------------------
+- Merged in trackleft/uaqs_news/UADIGITAL-580-add-pathauto-module-defaul (pull request #7).
+- Merged in trackleft/uaqs_news-1/trackleft/make-padding-align-better-with-other-uab-1459029167298 (pull request #8).
+- Make padding align better with other ua-bootstrap padding settings.
+- UADIGITAL-580 Adding path alias default settings.
+- Merged ua_drupal/uaqs_news into 7.x-1.x.
+- Merged in trackleft/uaqs_news/UADIGITAL-598-add-paragraphs-to-news-to- (pull request #6).
+- UADIGITAL-598 Replacing link (more information) and body images with paragraphs field.
+- UAMS-216: Develop news styling.
+- Modify sidebar promoted news view to exclude current page content.
+- Removing fields that will no longer be used.
+- UAMS-216 UADIGITAL-546 style and restructure uaqs_news content type with shared fields and field group and field group link, also adding view mode minimal media list.
+- UADIGITAL-589: Replacing field_uaqs_more_info with field_uaqs_link.
+- Merged in trackleft/uaqs_news (pull request #3).
+- Adding row to default display.
+- Merged in trackleft/uaqs_news/UADIGITAL-535 (pull request #2).
+- Left out the change in the info file.
+- UADIGITAL-535.
+- Merged in mmunro-ltrr/uaqs_news/UADIGITAL-523 (pull request #1).
+- Hide the UAQS label in content type names and revise the descriptions.
+- Change more occurances of the text UA to UAQS.
+- Rename UA to UAQS in the file contents.
+- Back to dev.
+
+7.x-1.0-alpha3, 2015-11-13
+------------------------------
+- UADIGITAL-375: Reverting some unexpected feature updates.
+- Merged in macaulay/ua_news/uadigital-375 (pull request #11).
+- UADIGITAL-375: Added subtitle field to the News content type and placed it to display under the title field.
+- Merged macaulay/ua_news into 7.x-1.x.
+- Back to dev.
+- Merged ua_drupal/ua_news into 7.x-1.x.
+
+7.x-1.0-alpha2, 2015-10-16
+------------------------------
+- Merged in UADIGITAL-322 (pull request #10).
+- UADIGITAL-322: Changes from feature module updates.
+- Merged in mmunro-ltrr/ua_news/UADIGITAL-302 (pull request #9).
+- Limit the ua_news_photo height in the UA News node display to match the featured content banner on the front page.
+- Merged ua_drupal/ua_news into 7.x-1.x.
+- Merged in macaulay/ua_news (pull request #8).
+- Put newest news items first in the views and made the front page block respect the 'Show on Front Page' boolean.
+- Merged in mmunro-ltrr/ua_news/UADIGITAL-139 (pull request #6).
+- Remove explicit version information.
+- Add a changelog so there is always something to modify for a release.
+- Back to dev.
+
+7.x-1.0-alpha1, 2015-07-10
+--------------------------
+- Preparing to tag 7.x-1.0-alpha1.
+- Renaming README for consistency's sake.
+- Cleaning up UA News .info file in anticpation of release.
+- Merged in macaulay/ua_news (pull request #4).
+- Moved and renamed css file, updated .info reference, and updated readme name. Issue: UADIGITAL-77.
+- Merged macaulay/ua_news into 7.x-1.x.
+- Changed package name to be consistent with other features.
+- Merged ua_drupal/ua_news into 7.x-1.x.
+- Merged in macaulay/ua_news (pull request #3).
+- Included spotlight image style dependency for news spotlights.
+- Added views and styling to the news feature.
+- Removed project line to prevent complications.
+- Keeping w/ conventions: changed version to 7.x-1.x-dev.
+
