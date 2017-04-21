@@ -39,7 +39,7 @@ if [ -d "$distrobuilddir" ]; then
 else
   echo "Found a clean working directory..." >&2
 fi
-distromakefile='build-ua_quickstart.make'
+distromakefile='build-ua_quickstart.make.yml'
 if [ -r "$distromakefile" ]; then
   echo "Found the $distromakefile makefile..." >&2
 else
