@@ -1,0 +1,174 @@
+# Makefile for the UA Quickstart Distribution
+# ===========================================
+
+core: 7.x
+api: '2'
+projects:
+
+  # UA Contrib Modules
+  # ------------------
+  ua_cas:
+    subdir: custom
+    download:
+      branch: 7.x-1.x
+      revision: ad04efa
+      type: git
+      url: 'https://bitbucket.org/ua_drupal/ua_cas.git'
+    type: module
+
+  ua_google_tag:
+    subdir: custom
+    download:
+      branch: 7.x-1.x
+      revision: cd961e3
+      type: git
+      url: 'https://bitbucket.org/ua_drupal/ua_google_tag.git'
+    type: module
+
+  # Contrib modules
+  # ---------------
+  auto_entitylabel:
+    version: '1.3'
+  bean:
+    version: '1.11'
+  ctools:
+    version: '1.11'
+  date:
+    version: 2.10-rc1
+  date_ical:
+    version: '3.9'
+  defaultconfig:
+    version: 1.0-alpha11
+  dialog:
+    version: 2.0-beta1
+  draggableviews:
+    version: '2.1'
+  editor:
+    version: 1.0-alpha7
+  elements:
+    version: '1.4'
+  email:
+    version: '1.3'
+  entity:
+    version: '1.8'
+  entityreference:
+    version: '1.2'
+  features:
+    patch:
+      986968: 'https://www.drupal.org/files/issues/986968-shortcut-sets_0.patch'
+    version: '2.10'
+  feeds:
+    version: 2.0-beta2
+  fences:
+    version: '1.2'
+  field_collection:
+    version: 1.0-beta11
+  field_formatter_settings:
+    version: '1.1'
+  field_group:
+    download:
+      branch: 7.x-1.x
+      revision: 0a5404d
+      type: git
+    version: 1.x-dev
+  field_group_link:
+    version: '1.5'
+  field_multiple_limit:
+    patch:
+      # Fixes PHP Notice for multi-valued fields hidden in Field UI.
+      # @see https://jira.arizona.edu/browse/UADIGITAL-924
+      # @see https://www.drupal.org/node/2807079
+      2807079: 'https://www.drupal.org/files/issues/Avoid_php_warnings-2807079-2.patch'
+    version: 1.0-alpha5
+  flag:
+    version: '3.9'
+  flexslider:
+    version: 2.0-rc1
+  html5_tools:
+    version: '1.3'
+  image_class:
+    download:
+      branch: 7.x-1.x
+      revision: a4baf33
+      type: git
+    version: 1.x-dev
+  job_scheduler:
+    version: 2.0-alpha3
+  jquery_update:
+    version: '2.7'
+  libraries:
+    version: '2.3'
+  link:
+    version: '1.4'
+  menu_bean:
+    download:
+      # Patch fails unless applied to version of .info file without d.o. modifications.
+      tag: 7.x-1.0-beta2
+      type: git
+    patch:
+      2714007: 'http://drupal.org/files/issues/bean_plugin_class_not-2714007-2_0.patch'
+    version: 1.0-beta2
+  menu_block:
+    version: '2.7'
+  migrate:
+    version: '2.8'
+  paragraphs:
+    version: 1.0-rc5
+  pathauto:
+    version: '1.3'
+  strongarm:
+    version: '2.0'
+  superfish:
+    version: '2.0'
+  telephone:
+    version: 1.0-alpha1
+  title:
+    version: 1.0-alpha9
+  token:
+    version: '1.6'
+  viewfield:
+    version: '2.1'
+  views:
+    version: '3.15'
+  views_bootstrap:
+    download:
+      branch: 7.x-3.x
+      revision: ef9820c
+      type: git
+    version: 3.x-dev
+  views_field_view:
+    version: '1.2'
+  xautoload:
+    version: '5.7'
+
+  # UA Contrib Themes
+  # -----------------
+  zen:
+    subdir: ''
+    type: theme
+    version: '5.6'
+
+# Set the default subdirectory to hold contrib modules
+# ----------------------------------------------------
+defaults:
+  projects:
+    subdir: contrib
+
+# Libraries
+# ---------
+libraries:
+  autogrow:
+    download:
+      type: get
+      url: 'http://download.ckeditor.com/autogrow/releases/autogrow_4.6.0.zip'
+
+  flexslider:
+    directory_name: flexslider
+    download:
+      type: get
+      url: 'https://github.com/woothemes/FlexSlider/archive/version/2.4.0.tar.gz'
+
+  iCalcreator:
+    download:
+      type: get
+      url: 'https://github.com/iCalcreator/iCalcreator/archive/e3dbec2cb3bb91a8bde989e467567ae8831a4026.zip'

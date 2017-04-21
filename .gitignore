@@ -1,4 +1,4 @@
 # Exclude modules/themes/libraries
 libraries
-modules
-themes
+modules/contrib
+themes/zen

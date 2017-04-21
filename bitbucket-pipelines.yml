@@ -1,0 +1,26 @@
+# bitbucket-pipelines.yml
+#
+# Bitbucket Pipelines operations for the monolithic UA Quickstart repository.
+
+image: uadrupal/schismatic
+clone:
+  depth: full
+
+pipelines:
+  custom:
+    one-off-initialize:
+      - step:
+          script:
+            - git config --global user.name "$BITBUCKET_REPO_OWNER"
+            - git config --global user.email "noreply@bitbucket.org"
+            - export monobranch="initmono-${BITBUCKET_COMMIT}"
+            - git checkout -b "$monobranch"
+            - ~/uaqs_repository_tools/monomania.sh
+            - git push -f origin "+${monobranch}:${UAQSRTOOLS_MAINBRANCH}"
+  branches:
+    7.x-1.x:
+      - step:
+          script:
+            - git config --global user.name "$BITBUCKET_REPO_OWNER"
+            - git config --global user.email "noreply@bitbucket.org"
+            - ~/uaqs_repository_tools/splitmono.sh
