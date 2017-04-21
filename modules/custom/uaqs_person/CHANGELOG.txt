@@ -1,0 +1,95 @@
+7.x-1.0-alpha6, 2017-01-13
+------------------------------
+- Merged in trackleft/uaqs_person/UADIGITAL-884-automate-uaqs-component-re (pull request #12).
+- UADIGITAL-884 add bitbucket pipelines config file.
+- Merged ua_drupal/uaqs_person into 7.x-1.x.
+- UADIGITAL-532: Add taxonomy to UAQS Person.
+- Clean up the duplicate defaultconfig-based taxonomy vocabulary definition.
+- Shorten the category selection help text.
+- Include the suggestions from @trackleft.
+- UADIGITAL-532: adding people taxonomy vocabulary to feature.
+- Back to dev.
+
+7.x-1.0-alpha5, 2016-05-02
+------------------------------
+- Back to dev.
+
+7.x-1.0-alpha4, 2016-05-02
+------------------------------
+- Merged in UADIGITAL-653 (pull request #9).
+- UADIGITAL-653: Fixed broken image style + misc changes from 'features-update'.
+- Merged in UADIGITAL-653 (pull request #8).
+- UADIGITAL-653: Implementeing sigle person view styling.
+- Merged in trackleft/uaqs_person/UADIGITAL-580-add-pathauto-module-defaul (pull request #6).
+- Made change to defaults in order to avoid conflicting with views and term aliases.
+- UADIGITAL-580 addint path and pathauto dependencies.
+- UADIGITAL-580 add default path auto settings for person content type.
+- Merged ua_drupal/uaqs_person into 7.x-1.x.
+- UADIGITAL-517: Merged in ejabrown/uaqs_person/UADIGITAL-517 (pull request #4).
+- Update person instance of field_uaqs_phones to use telephone module.
+- Merged in mmunro-ltrr/uaqs_person/UADIGITAL-523 (pull request #3).
+- Add back the ommitted change to the description.
+- Hide the UAQS label in content type names and revise the descriptions.
+- Merged in trackleft/uaqs_person-tmp/UADIGITAL-522-uaqs-person-grid-display-i (pull request #2).
+- Removing make file per https://bitbucket.org/ua_drupal/uaqs_core/pull-requests/3/uadigital-522-adding-views_bootstrap.
+- Merged 7.x-1.x into UADIGITAL-522-uaqs-person-grid-display-i.
+- Adding img-responsive class to images.
+- Uaqs_person.css edited online with Bitbucket.
+- Fixing patch in make.
+- Addmin views bootstrap and it's patch.
+- Rename group_footer machine name to group_row.
+- Rebuild person for better display, and removing most non-ua-bootstrap css.
+- Merged in trackleft/uaqs_person-tmp (pull request #1).
+- Uaqs_person.views_default.inc edited online with Bitbucket.
+- Remove dependency on entity view modes.
+- Make more UA to UAQS substitutions in the image styles, (deprecated) CSS classes, and documentation.
+- Rename UA to UAQS in the file contents.
+- Back to dev.
+
+7.x-1.0-alpha3, 2015-10-16
+------------------------------
+- Back to dev.
+
+7.x-1.0-alpha2, 2015-10-16
+------------------------------
+- Merged in UADIGITAL-322 (pull request #7).
+- UADIGITAL-322: Changes from feature module updates.
+- Merged in mmunro-ltrr/ua_person/UADIGITAL-302 (pull request #6).
+- Remove padding from the former colored area (from @macaulay).
+- Remove the colored background from .group-ua-person-contact-area in the individual node display.
+- Constrain the size of the image on the UA Person node display, using a 360x360px image style.
+- Merged ua_drupal/ua_person into 7.x-1.x.
+- Merged in macaulay/ua_person (pull request #5).
+- Renamed directory view from 'UA Person Directory' to 'Directory'.
+- UADIGITAL-158: Merged in macaulay/ua_person (pull request #4) 7.x 1.x.
+- README.md edited online with Bitbucket.
+- Added new view option for person directory (located at /person-list). Will update readme.md next.
+- Merged in mmunro-ltrr/ua_person/UADIGITAL-139 (pull request #3).
+- Remove explicit version information.
+- Add a changelog so there is always something to modify for a release.
+- Back to dev.
+
+7.x-1.0-alpha1, 2015-07-10
+--------------------------
+- Preparing to tag 7.x-1.0-alpha1.
+- Moved and renamed css file to be referenced correctly and updated .info.
+- Merged macaulay/ua_person into 7.x-1.x.
+- Merged ua_drupal/ua_person into 7.x-1.x.
+- Changed package name to be consistent with other features.
+- Made package back into UA Features.
+- Another attempt to bypass merge conflicts.
+- Attempt to bypass merge conflicts.
+- Removed project line to prevent complications.
+- Keeping w/ conventions: changed version from 7.x-1.0-dev to 7.x-1.x-dev.
+- Updated readme file to just explain automatic nodetitles instead of directions to make automatic titles.
+- Feature with working automatic nodetitle generation.
+- README.md edited online with Bitbucket.
+- Removed automatic title generation functionality from feature. The settings for it are not possible to save with strongarm and features. Added new section to the readme.md explaining how to do automatic titles if wanted.
+- Tried another strongarm variable to get nodetitles to work - still unsuccessful...
+- Added strongarm module in an attempt to add the automatic nodetitle settings to the content type. Unfortunately unsuccessful, but there is an issue for it here: http://www.drupal.org/node/881170.
+- Merged in macaulay/ua_person (pull request #1).
+- Added Field Group for styling purposes, styled the default node view, and changed the version to 7.x-1.0-dev.
+- Added a placeholder profile image to the feature's directory. It can't be set as the default image with features, but the file is available.
+- Added simple stylesheet to help with view layout.
+- Changed the person image style to be larger (220x220).
+
