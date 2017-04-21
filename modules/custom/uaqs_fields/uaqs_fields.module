@@ -1,0 +1,324 @@
+<?php
+/**
+ * @file
+ * Code for the UAQS Fields feature.
+ */
+
+// Image style definitions.
+include_once 'uaqs_fields.features.inc';
+
+// Expose the default format list where Features can use it.
+include_once 'uaqs_fields.features.filter.inc';
+
+// Needed to discover the currently defined field bases.
+include_once 'uaqs_fields.features.field_base.inc';
+
+/**
+ * Format IDs defined elsewhere in this module.
+ */
+const UAQS_FILTERED_HTML = 'uaqs_filtered_html';
+const UAQS_FULL_HTML = 'uaqs_full_html';
+const UAQS_STANDARD = 'uaqs_standard';
+const UAQS_TEXTUAL_CONTENT = 'uaqs_textual_content';
+const UAQS_UNCONSTRAINED = 'uaqs_unconstrained';
+
+const UAQS_FIELDS_AUTOGROW_DL_URL = 'http://download.ckeditor.com/autogrow/releases/autogrow_4.6.0.zip';
+
+/**
+ * Implements of hook_perm().
+ */
+function uaqs_fields_permission() {
+  $entities = entity_get_info();
+
+  $perms = array(
+    'show format tips' => array(
+      'title' => t('Show format tips'),
+      'description' => t('Toggle display of format description help.'),
+    ),
+    'show more format tips link' => array(
+      'title' => t('Show more format tips link'),
+      'description' => t('Toggle display of the "More information about text formats" link.'),
+    ),
+  );
+  foreach ($entities as $type => $info) {
+    if ($info['fieldable']) {
+      $perms['show format selection for ' . $type] = array(
+        'title' => t('Show format selection for @entitys', array('@entity' => $type)),
+      );
+    }
+  }
+
+  return $perms;
+}
+
+/**
+ * Defines the fields that need special default formats applied.
+ *
+ * Assume that the canonical format for any instances of these fields in any
+ * entity is defined here, since all your field bases are belong to us.
+ *
+ * @return array
+ *   An array with field base names as keys, format definitions as values.
+ */
+function uaqs_fields_using_format() {
+  $formatdef = uaqs_fields_filter_default_formats();
+  $usingformat = array_fill_keys(array_keys(uaqs_fields_field_default_field_bases()), array());
+  if (isset($formatdef[UAQS_TEXTUAL_CONTENT])) {
+    $usingformat['field_uaqs_text_area'][UAQS_TEXTUAL_CONTENT] = $formatdef[UAQS_TEXTUAL_CONTENT]['name'];
+  }
+  if (isset($formatdef[UAQS_STANDARD])) {
+    $usingformat['field_uaqs_summary'][UAQS_STANDARD] = $formatdef[UAQS_STANDARD]['name'];
+  }
+  if (isset($formatdef[UAQS_UNCONSTRAINED])) {
+    $usingformat['field_uaqs_body'][UAQS_UNCONSTRAINED] = $formatdef[UAQS_UNCONSTRAINED]['name'];
+    $usingformat['field_uaqs_bio'][UAQS_UNCONSTRAINED] = $formatdef[UAQS_UNCONSTRAINED]['name'];
+  }
+  if (isset($formatdef[UAQS_FULL_HTML])) {
+    $usingformat['field_uaqs_html'][UAQS_FULL_HTML] = $formatdef[UAQS_FULL_HTML]['name'];
+  }
+  return $usingformat;
+}
+
+/**
+ * Implements hook_element_info_alter().
+ *
+ * Appends our fixup function to the standard filter_process_format(), which
+ * expands a Form API element into a base element with a text format selector
+ * attached.
+ * Based on better_formats_element_info_alter() in the Better Formats
+ * contributed module. See also
+ * http://drupal.stackexchange.com/questions/16036/how-do-you-set-a-default-input-text-format-per-content-type
+ *
+ * @param &$type
+ *   The Form API element type to alter.
+ */
+function uaqs_fields_element_info_alter(&$type) {
+  $filter_process_format_location = array_search('filter_process_format', $type['text_format']['#process']);
+  $our_fixup = array('filter_process_format', 'uaqs_fields_filter_process_format');
+  array_splice($type['text_format']['#process'], $filter_process_format_location, 1, $our_fixup);
+}
+
+/**
+ * Fix up the results of the standard filter_process_format().
+ *
+ * Based on better_formats_filter_process_format() in the Better Formats
+ * contributed module, this does not replace the standard
+ * filter_process_format() function in filter.module, but is a post-processor,
+ * further modifying its output.
+ *
+ * @param $element
+ *   The form element to process.
+ *
+ * @return
+ *   The form element, possibly with more changes applied.
+ */
+function uaqs_fields_filter_process_format($element) {
+  // Check if the user has permission to use the currently assigned format.
+  $field_allowed = !isset($element['format']['#access']) || $element['format']['#access'];
+  $have_entity = isset($element['#entity_type']);
+
+  // Hide parts of the element (depending on the current user's permissions).
+  $hide_selection = $have_entity && !user_access('show format selection for ' . $element['#entity_type']);
+  $hide_tips      = !user_access('show format tips');
+  $hide_tips_link = !user_access('show more format tips link');
+  if ($hide_selection) {
+    $element['format']['format']['#type'] = 'hidden';
+  }
+  if ($hide_tips) {
+    $element['format']['guidelines']['#access'] = FALSE;
+  }
+  if ($hide_tips_link) {
+    $element['format']['help']['#access'] = FALSE;
+  }
+
+  // Possibly change the format on an allowed field.
+  if ($have_entity && $field_allowed) {
+    $instance_info = field_info_instance($element['#entity_type'], $element['#field_name'], $element['#bundle']);
+    $ourformats = uaqs_fields_using_format();
+    $fmts = isset($ourformats[$element['#field_name']]) ? $ourformats[$element['#field_name']] : FALSE;
+    if ($fmts) {
+      // Format settings for creation forms.
+      if (!empty($element['#entity']) && !empty($element['#entity_type'])) {
+        list($eid, $vid, $bundle) = entity_extract_ids($element['#entity_type'], $element['#entity']);
+        if (empty($eid)) {
+          $all_formats = filter_formats();
+          $default = NULL;
+          while (!$default && (list($fmtkey,) = each($fmts))) {
+            if (isset($all_formats[$fmtkey])) {
+              $default = $fmtkey;
+            }
+          }
+          $element['format']['format']['#default_value'] = $default;
+          reset($fmts);
+        }
+      }
+      // Filter the list of available formats to those allowed on this field.
+      $options = &$element['format']['format']['#options'];
+      $options = array_intersect_key($options, $fmts);
+      // Hide the selector if there is only one allowed format.
+      $hide_selection = (count($options) == 1);
+      if ($hide_selection) {
+        $element['format']['format']['#type'] = 'hidden';
+      }
+      // Deny access completely if there are no allowed formats.
+      if (empty($options)) {
+        $element['#access'] = FALSE;
+      }
+      elseif (!isset($options[$element['format']['format']['#default_value']])) {
+        // No text in the field, so assign a new default format.
+        if (!isset($element['value']['#default_value']) || $element['value']['#default_value']==='') {
+          $format_ids = array_keys($options);
+          $element['format']['format']['#default_value'] = reset($format_ids);
+        }
+        // Require manual format selection for existing content.
+        else {
+          $element['format']['format']['#required'] = TRUE;
+          $element['format']['format']['#default_value'] = NULL;
+          // Show the format selector, even if hidden previously.
+          $element['format']['#access'] = TRUE;
+          $element['format']['format']['#access'] = TRUE;
+        }
+      }
+    }
+  }
+
+  // Hide guidelines if the format selector is already hidden.
+  if ($hide_selection && isset($element['format']['format']['#default_value'])) {
+    foreach (element_children($element['format']['guidelines']) as $format_id) {
+      if ($format_id != $element['format']['format']['#default_value']) {
+        $element['format']['guidelines'][$format_id]['#access'] = FALSE;
+      }
+    }
+  }
+
+  // Hide the entire text format fieldset if the user has no access.
+  if ($hide_selection && $hide_tips && $hide_tips_link) {
+    $element['format']['#type'] = 'container';
+  }
+
+  return $element;
+}
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function uaqs_fields_entity_info_alter(&$entity_info) {
+  if (module_exists('node')) {
+    $entity_info['node']['view modes']['uaqs_teaser_list'] = array(
+      'label' => t('UA Bootstrap Media List'),
+      'custom settings' => FALSE,
+    );
+    $entity_info['node']['view modes']['uaqs_sidebar_teaser_list'] = array(
+      'label' => t('UA Bootstrap Minimal Media List'),
+      'custom settings' => FALSE,
+    );
+    $entity_info['node']['view modes']['uaqs_med_media_list'] = array(
+      'label' => t('UA Bootstrap Medium Media List'),
+      'custom settings' => FALSE,
+    );
+    $entity_info['node']['view modes']['uaqs_card'] = array(
+      'label' => t('UA Bootstrap Card'),
+      'custom settings' => FALSE,
+    );
+    $entity_info['node']['view modes']['uaqs_marquee'] = array(
+      'label' => t('Marquee'),
+      'custom settings' => FALSE,
+    );
+  }
+  if (module_exists('taxonomy')) {
+    $entity_info['taxonomy_term']['view modes']['uaqs_card'] = array(
+      'label' => t('UA Bootstrap Card'),
+      'custom settings' => FALSE,
+    );
+  }
+  if (module_exists('bean')) {
+    $entity_info['bean']['view modes']['uaqs_card_overlay'] = array(
+      'label' => t('UA Bootstrap Card Overlay'),
+      'custom settings' => FALSE,
+    );
+  }
+}
+
+/**
+ * Implements hook_libraries_info().
+ */
+function uaqs_fields_libraries_info() {
+  $libraries = array();
+  $libraries['autogrow'] = array(
+    'name' => 'CKEditor autogrow plugin',
+    'vendor url' => 'http://ckeditor.com/addon/autogrow',
+    'download url' => UAQS_FIELDS_AUTOGROW_DL_URL,
+    'version' => '4.6.0',
+    'files' => array(
+      'js' => array(
+        'plugin.js'
+      ),
+    ),
+  );
+
+  return $libraries;
+}
+
+/**
+ * Implements hook_editor_ckeditor_plugins().
+ */
+function uaqs_fields_editor_ckeditor_plugins(){
+  $plugins = array();
+  if (($library = libraries_detect('autogrow')) && !empty($library['installed'])) {
+    $plugins['autogrow'] = array(
+      'internal' => FALSE,
+      'location' => $library['library path'],
+      'path' => $library['library path'],
+      'file' => 'plugin.js',
+      'enabled callback' => 'uaqs_fields_autogrow_plugin_check',
+    );
+  }
+
+  return $plugins;
+}
+
+
+/**
+ * Implements hook_filter_js_settings_alter().
+ */
+function uaqs_fields_filter_js_settings_alter(&$settings) {
+  $theme_bootstrap = variable_get('ua_bootstrap_location', 'https://cdn.uadigital.arizona.edu/lib/ua-bootstrap/latest/ua-bootstrap.min.css');
+  if ((strpos($theme_bootstrap, '//') === 0) || (strpos($theme_bootstrap, 'http') === 0)) {
+    $ua_bootstrap_css = $theme_bootstrap;
+  }
+  else {
+    $ua_bootstrap_css = (base_path() . $theme_bootstrap);
+  }
+  foreach ($settings as $key => $value) {
+    $settings[$key]['editorSettings']['contentsCss'][] = $ua_bootstrap_css;
+  }
+}
+
+/**
+ * Check if the CKeditor Auto Grow library is installed.
+ */
+function uaqs_fields_autogrow_installed() {
+  $installed = FALSE;
+  $library = libraries_detect('autogrow');
+  if (isset($library['installed'])) {
+    $installed = $library['installed'];
+  }
+
+  return $installed;
+}
+
+/**
+ * Enabled callback for hook_editor_ckeditor_plugins().
+ *
+ * Enables the CKEditor Auto Grow plugin when available.
+ *
+ * @param object $format
+ *   The filter format object for which to check the settings of.
+ *
+ * @return bool
+ *   Returns TRUE if the CKEditor Auto Grow plugin is available.
+ */
+function uaqs_fields_autogrow_plugin_check($format) {
+  // Automatically enable Auto Grow if it is installed.
+  return uaqs_fields_autogrow_installed();
+}

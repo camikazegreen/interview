@@ -1,0 +1,87 @@
+<?php
+/**
+ * @file
+ * uaqs_fields.install
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function uaqs_fields_requirements($phase) {
+  $requirements = array();
+  // Ensure translations don't break at install time
+  $t = get_t();
+
+  // Check to see if the autogrow library is available
+  if ($phase == 'runtime') {
+    $requirements['autogrow'] = array(
+      'title' => $t('CKEditor Auto Grow plugin'),
+    );
+
+    $installed = uaqs_fields_autogrow_installed();
+    if (!$installed) {
+      $requirements['autogrow']['description'] = $t('The CKEditor Auto Grow plugin could not be found.  Please download the plugin from @url and install it into the site libraries directory.', array('@url' => UAQS_FIELDS_AUTOGROW_DL_URL));
+      $requirements['autogrow']['severity'] = REQUIREMENT_ERROR;
+      $requirements['autogrow']['value'] = $t('Missing.');
+    }
+    else {
+      // @todo Display the installed version.
+      $requirements['autogrow']['description'] = $t('CKEditor Auto Grow plugin is installed.');
+      $requirements['autogrow']['severity'] = REQUIREMENT_OK;
+      $requirements['autogrow']['value'] = $t('Installed.');
+    }
+  }
+  return $requirements;
+}
+
+/**
+ * Update existing content to use text formats added in UADIGITAL-402.
+ */
+function uaqs_fields_update_7100() {
+  $updated_formats = array(
+    'field_uaqs_text_area' => 'uaqs_textual_content',
+    'field_uaqs_body' => 'uaqs_unconstrained',
+    'field_uaqs_bio' => 'uaqs_unconstrained',
+  );
+
+  foreach ($updated_formats as $field => $format) {
+    $data_table = 'field_data_' . $field;
+    $revision_table = 'field_revision_' . $field;
+    $format_column = $field .'_format';
+
+    if (db_table_exists($data_table)) {
+      $field_data_update = db_update($data_table)
+        ->fields(array($format_column => $format))
+        ->execute();
+    }
+
+    if (db_table_exists($revision_table)) {
+      $field_revision_update = db_update($revision_table)
+        ->fields(array($format_column => $format))
+        ->execute();
+    }
+  }
+}
+
+/**
+ * UADIGITAL-864 introduces the uaqs_standard format for uaqs_summary fields.
+ */
+function uaqs_fields_update_7101() {
+  $field = 'field_uaqs_summary';
+  $format = 'uaqs_standard';
+  $data_table = 'field_data_' . $field;
+  $revision_table = 'field_revision_' . $field;
+  $format_column = $field .'_format';
+
+  if (db_table_exists($data_table)) {
+    $field_data_update = db_update($data_table)
+      ->fields(array($format_column => $format))
+      ->execute();
+  }
+
+  if (db_table_exists($revision_table)) {
+    $field_revision_update = db_update($revision_table)
+      ->fields(array($format_column => $format))
+      ->execute();
+  }
+}
