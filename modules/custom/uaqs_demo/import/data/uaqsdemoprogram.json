@@ -1,0 +1,12 @@
+[
+  {"id":1,
+    "title" : "Alternative Geodesy",
+    "path" : "alt_geodesy",
+    "uaqs_focus_areas" : "Geodesy|Astronomy|Philosophy"
+  },
+  {"id":2,
+    "title" : "Planetary Engineering",
+    "path" : "planetary_eng",
+    "uaqs_focus_areas" : "Engineering|Astronomy|Global Change"
+  }
+]

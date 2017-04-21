@@ -1,0 +1,58 @@
+[
+  { "name" : "Arts",
+    "description" : "Arts and humanities.",
+    "parent_name" : ""
+  },
+  { "name" : "Art history",
+    "description" : "History of art and design.",
+    "parent_name" : "Arts"
+  },
+  { "name" : "Literature",
+    "description" : "Writing.",
+    "parent_name" : "Arts"
+  },
+  { "name" : "Music",
+    "description" : "Musical history, theory and performance.",
+    "parent_name" : "Arts"
+  },
+  { "name" : "Sciences",
+    "description" : "Physical and social sciences.",
+    "parent_name" : ""
+  },
+  { "name" : "Math",
+    "description" : "Mathematics.",
+    "parent_name" : "Sciences"
+  },
+  { "name" : "Archaeology",
+    "description" : "Human behavior from material culture.",
+    "parent_name" : "Sciences"
+  },
+  { "name" : "Geodesy",
+    "description" : "Measurement and representation of the Earth.",
+    "parent_name" : "Sciences"
+  },
+  { "name" : "Global Change",
+    "description" : "Climate and other environmental change.",
+    "parent_name" : "Sciences"
+  },
+  { "name" : "Astronomy",
+    "description" : "Astronomy and planetary science.",
+    "parent_name" : "Sciences"
+  },
+  { "name" : "Engineering",
+    "description" : "Engineering and applied science.",
+    "parent_name" : ""
+  },
+  { "name" : "Geoengineering",
+    "description" : "Human modification of Earth systems.",
+    "parent_name" : "Engineering"
+  },
+  { "name" : "Languages",
+    "description" : "Language and language-localized literature.",
+    "parent_name" : ""
+  },
+  { "name" : "French",
+    "description" : "French language and letters.",
+    "parent_name" : "Languages"
+  }
+]

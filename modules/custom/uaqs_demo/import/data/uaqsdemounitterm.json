@@ -1,0 +1,58 @@
+[
+  { "name" : "Geodesy",
+    "description" : "Measurement and representation of the Earth.",
+    "parent_name" : ""
+  },
+  { "name" : "Concave spheroidal",
+    "description" : "Interior of a hollow sphere.",
+    "parent_name" : "Geodesy"
+  },
+  { "name" : "Flat",
+    "description" : "Naturally flat.",
+    "parent_name" : "Geodesy"
+  },
+  { "name" : "Square",
+    "description" : "Having four corners.",
+    "parent_name" : "Flat"
+  },
+  { "name" : "Round",
+    "description" : "Surrounded by a circular ice barrier.",
+    "parent_name" : "Flat"
+  },
+  { "name" : "Convex spheroidal",
+    "description" : "Exterior of a spherical blob.",
+    "parent_name" : "Geodesy"
+  },
+  { "name" : "Cosmology",
+    "description" : "Study of the overall form of the Universe.",
+    "parent_name" : ""
+  },
+  { "name" : "Geocentric",
+    "description" : "The planets and stars circle the Earth.",
+    "parent_name" : "Cosmology"
+  },
+  { "name" : "Heliocentric",
+    "description" : "The planets and stars circle the Sun.",
+    "parent_name" : "Cosmology"
+  },
+  { "name" : "Tychonic",
+    "description" : "The best features of geocentric and heliocentric systems combined.",
+    "parent_name" : "Cosmology"
+  },
+  { "name" : "Acentric",
+    "description" : "Belief that the Universe has no defined center.",
+    "parent_name" : "Cosmology"
+  },
+  { "name" : "Politics",
+    "description" : "Politics, policy and legislation.",
+    "parent_name" : ""
+  },
+  { "name" : "State legislature",
+    "description" : "State of Arizona legislature.",
+    "parent_name" : "Politics"
+  },
+  { "name" : "Cross-border trade",
+    "description" : "Trade across international borders.",
+    "parent_name" : "Politics"
+  }
+]
