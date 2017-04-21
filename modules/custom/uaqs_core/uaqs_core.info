@@ -1,0 +1,14 @@
+name = UAQS Core
+description = Provides miscellaneous blocks, and settings common to UAQS components/features.
+core = 7.x
+package = The University of Arizona
+dependencies[] = ctools
+dependencies[] = defaultconfig
+dependencies[] = features
+dependencies[] = jquery_update
+dependencies[] = path
+dependencies[] = pathauto
+features[defaultconfig][] = strongarm:jquery_update_compression_type
+features[defaultconfig][] = strongarm:jquery_update_jquery_cdn
+features[features_api][] = api:2
+files[] = uaqs_core.migrate.inc
