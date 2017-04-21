@@ -1,0 +1,44 @@
+7.x-1.0-alpha6, 2017-01-13
+------------------------------
+- Merged in trackleft/uaqs_page/UADIGITAL-884-automate-uaqs-component-re (pull request #3).
+- UADIGITAL-884 add bitbucket pipelines config file.
+- Merged ua_drupal/uaqs_page into 7.x-1.x.
+- Back to dev.
+
+7.x-1.0-alpha5, 2016-05-02
+------------------------------
+- Back to dev.
+
+7.x-1.0-alpha4, 2016-04-11
+------------------------------
+- Merged in trackleft/uaqs_page/UADIGITAL-580-add-pathauto-module-defaul (pull request #2).
+- UADIGITAL-580 add default path auto settings for basic page.
+- Merged in mmunro-ltrr/uaqs_page/UADIGITAL-523 (pull request #1).
+- Hide the UAQS label in content type names and revise the descriptions.
+- Rename UA to UAQS in the file contents.
+- Back to dev.
+
+7.x-1.0-alpha3, 2015-11-13
+------------------------------
+- UADIGITAL-375: Reverting some unexpected feature updates.
+- Merged in macaulay/ua_page/uadigital-375 (pull request #4).
+- UADIGITAL-375: Added sub-title field to the Page content type and placed it to display under the title field.
+- Back to dev.
+
+7.x-1.0-alpha2, 2015-10-16
+------------------------------
+- Merged in UADIGITAL-322 (pull request #3).
+- UADIGITAL-322: Changes from feature module updates.
+- Merged in mmunro-ltrr/ua_page/UADIGITAL-139 (pull request #2).
+- Remove explicit version information.
+- Add a changelog so there is always something to modify for a release.
+- Back to dev.
+
+7.x-1.0-alpha1, 2015-07-10
+--------------------------
+- Preparing to tag 7.x-1.0-alpha1.
+- Merged in rename-body (pull request #1).
+- UADIGITAL-47: Making body field name distinct.
+- Updating .info file.
+- Adding README.
+
