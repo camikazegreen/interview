@@ -1,0 +1,107 @@
+7.x-1.0-alpha6, 2017-01-20
+------------------------------
+- Revert "Preparing to tag 7.x-1.0-alpha4.".
+- Preparing to tag 7.x-1.0-alpha4.
+- Merged in mmunro-ltrr/uaqs_content_chunks/UADIGITAL-883 (pull request #31).
+- Replace uaqs_html with uaqs_summary fields in uaqs_content_chunks_marquee and uaqs_content_chunks_well.
+- Merged in trackleft/uaqs_content_chunks/UADIGITAL-884-automate-uaqs-component-re (pull request #32).
+- UADIGITAL-884 adding bitbucket pipeline yml file.
+- Merged ua_drupal/uaqs_content_chunks into 7.x-1.x.
+- Merged in mmunro-ltrr/uaqs_content_chunks/UADIGITAL-881 (pull request #30).
+- Remove the irrelevant allowed Paragraphs types specifications.
+- Prevent the submodule Features appearing to be overridden when enabled.
+- Merged in aslay/uaqs_content_chunks/UADIGITAL-843-well (pull request #23).
+- UADIGITAL-872: Change all summary fields to use processed text.
+- UADIGITAL-872 Change all summary fields to use processed text.
+- Merged in aslay/uaqs_content_chunks/UADIGITAL-839-single-card (pull request #19).
+- Merged in trackleft/uaqs_content_chunks-aslay/UADIGITAL-839-single-card (pull request #2).
+- Updating.
+- Remove excludes.
+- Updated.
+- Merged 7.x-1.x into UADIGITAL-839-single-card.
+- Merged in UADIGITAL-850-field-instances (pull request #1).
+- Added missing change.
+- Adding changes not previously tracked.
+- Made field instance changes.
+- Merged in UADIGITAL-730 (pull request #26).
+- UADIGITAL-730: Forcing Editor module JS libraries to be loaded for all Paragraphs fields.
+- UADIGITAL-843 added well feature folder.
+- UADIGITAL-839 added single card feature folder.
+- Merged in scadmedia/uaqs_content_chunks/UAMS-351 (pull request #15).
+- Merged in trackleft/uaqs_content_chunks_scad/UAMS-351 (pull request #3).
+- Adding padding around links fieeld group.
+- Aligning more with ua-bootstrap.
+- Merged in trackleft/uaqs_content_chunks_scad/UAMS-351 (pull request #2).
+- Removing margin if marquee is first, else add margin the same as a paragraph element would have for good vertical rhythm.
+- Adding width 100% in case there are other less wide things floating around.
+- Adding css so floating content doesn't wrap.
+- Adding html.
+- Renamed to marquee.
+- Merged in trackleft/uaqs_content_chunks_scad/UAMS-351 (pull request #1).
+- Changed strings and media dependency. q.
+- Merged in UADIGITAL-801 (pull request #16).
+- UADIGITAL-801: Making card deck markup more closely resemble UA Bootstrap card examples.
+- UAMS-352 minor labeling changes.
+- UAMS-351 new teaser image style.
+- Merged in trackleft/uaqs_content_chunks/UAMS-342-change-field-display-settings-t (pull request #14).
+- UAMS-342 Hide label for HTML field in default view mode.
+- UAMS-340: clean up content chunks.
+- UAMS-340 Break up paragraphs items into separate modules.
+- Merged in trackleft/uaqs_content_chunks/UADIGITAL-726-add-full-html-paragraphs-i (pull request #11).
+- Merged 7.x-1.x into UADIGITAL-726-add-full-html-paragraphs-i.
+- Adding field_uaqs_html.
+- Changing name to uaqs_html.
+- Merged in trackleft/uaqs_content_chunks/UAMS-312 (pull request #12).
+- UAMS-312 fix error message.
+- Adding ability to use a full html text field to paragraphs as a submodule of content chunks.
+- Back to dev.
+
+7.x-1.0-alpha5, 2016-05-02
+------------------------------
+- Back to dev.
+
+7.x-1.0-alpha4, 2016-04-15
+------------------------------
+- Merged in trackleft/uaqs_content_chunks/UADIGITAL-674-make-adding-new-paragraphs (pull request #10).
+- UADIGITAL-674 making adding paragraphs as submodules more user friendly.
+- Merged ua_drupal/uaqs_content_chunks into 7.x-1.x.
+- UADIGITAL-625: Clean out obsolete field formatting code for Paragraphs and Beans.
+- Delete the theme-specific field formatting functions.
+- Merged in mmunro-ltrr/uaqs_content_chunks/UADIGITAL-402 (pull request #7).
+- Switch to the new common text area field, rename the format.
+- Merged in trackleft/uaqs_content_chunks/UADIGITAL-610-touch-up-paragraphs (pull request #5).
+- Merged in trackleft/uaqs_content_chunks/UADIGITAL-598-add-paragraphs-to-news-to- (pull request #6).
+- UADIGITAL-598 adding link (Extra Info) paragraphs_item.
+- Card blocks.
+- Completed card deck styles.
+- UADIGITAL-192: Adding default value for paragraphs view mode.
+- UAMS-192: Added paragraphs view modes and theming.
+- Merged in mmunro-ltrr/uaqs_content_chunks/UADIGITAL-523 (pull request #1).
+- Hide the UAQS label in content type names and revise the descriptions.
+- Rename UA to UAQS in the file contents.
+- Merged in mmunro-ltrr/ua_content_chunks/UADIGITAL-281 (pull request #1).
+- Update the change log semi-manually.
+- Fix the placement of the sub-title field.
+- Correct the sub-title field label.
+- Add a sub-title field, like to one added to UA Basic Page.
+- Add a text format for HTML5 phrasing content, clean up the recreated feature.
+- Restore missing UA namespacing for the ua_main_content field.
+- Rename the node type hosting Paragraphs-based content to UA Flexible Page.
+- Update for a new version of the Paragraphs module.
+- Enable markup in some text fields.
+- Match the array key template_preprocess_paragraphs_items() expects.
+- Put this with the other UofA features in the modules list.
+
+UA Content Chunks 7.x-1.0-alpha0, 2015-11-18
+--------------------------------------------
+- Fix the placement of the sub-title field.
+- Correct the sub-title field label.
+- Add a sub-title field, like to one added to UA Basic Page.
+- Add a text format for HTML5 phrasing content, clean up the recreated feature.
+- Restore missing UA namespacing for the ua_main_content field.
+- Rename the node type hosting Paragraphs-based content to UA Flexible Page.
+- Update for a new version of the Paragraphs module.
+- Enable markup in some text fields.
+- Match the array key template_preprocess_paragraphs_items() expects.
+- Put this with the other UofA features in the modules list.
+

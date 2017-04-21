@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UAQS Content Chunks - Marquee feature.
+ */
+
+include_once 'uaqs_content_chunks_marquee.features.inc';

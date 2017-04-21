@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UAQS Full Width Background Wrapper Paragraphs Item feature.
+ */
+
+include_once 'uaqs_content_chunks_full_width_bg_wrapper.features.inc';
