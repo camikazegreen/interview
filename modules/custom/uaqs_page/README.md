@@ -13,3 +13,8 @@ The UA QuickStart component for basic page content. Use basic pages for your sta
 ## Features
 
 - Provides 'uaqs_page' content type (clone of Basic page content type from Drupal Standard install profile).
+
+## Please Note ##
+
+Wherever possible, use the uaqs_flexible_page content type in preference to a uaqs_page,
+since it is very limited and semi-deprecated.
