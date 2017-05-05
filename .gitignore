@@ -1,4 +1,6 @@
 # Exclude modules/themes/libraries
 libraries
 modules/contrib
+modules/custom/ua_cas
+modules/custom/ua_google_tag
 themes/zen
