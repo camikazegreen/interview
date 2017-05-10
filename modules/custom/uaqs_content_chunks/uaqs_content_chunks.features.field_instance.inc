@@ -420,16 +420,8 @@ function uaqs_content_chunks_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-          'field_multiple_limit_order' => 0,
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => 'h1',
-        ),
-        'type' => 'title_linked',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -472,7 +464,7 @@ function uaqs_content_chunks_field_default_field_instances() {
     'settings' => array(
       'hide_label' => array(
         'entity' => 'entity',
-        'page' => 'page',
+        'page' => 0,
       ),
       'text_processing' => 0,
       'user_register_form' => FALSE,

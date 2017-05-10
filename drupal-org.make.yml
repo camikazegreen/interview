@@ -53,6 +53,8 @@ projects:
     version: '1.8'
   entityreference:
     version: '1.2'
+  exclude_node_title:
+    version: '1.9'    
   features:
     patch:
       986968: 'https://www.drupal.org/files/issues/986968-shortcut-sets_0.patch'
