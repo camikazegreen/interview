@@ -13,7 +13,7 @@ Feature: Content manager creates flexible page.
     When I click Edit
     Then I should see the text "Add Image with caption"
     And I should see the text "Add UAQS Plain Text"
-    And I should see the text "Add Text with heading"
+    And I should see the text "Add Text Area"
     And I should see the text "Add Extra info"
     And I should see the text "Add File attachment"
     And I should see the text "Add Marquee"
