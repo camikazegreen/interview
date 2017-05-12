@@ -23,8 +23,8 @@ function uaqs_content_chunks_headed_text_field_group_info() {
     'label' => 'bottom-buffer-30',
     'weight' => '0',
     'children' => array(
-      0 => 'field_uaqs_text_area',
-      1 => 'field_uaqs_text_heading',
+      0 => 'field_uaqs_text_heading',
+      1 => 'field_uaqs_summary',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
