@@ -13,35 +13,19 @@ Feature: Content manager creates flexible page.
     When I click Edit
     Then I should see the text "Add Image with caption"
     And I should see the text "Add UAQS Plain Text"
-    And I should see the text "Add Text with heading"
+    And I should see the text "Add Text Area"
     And I should see the text "Add Extra info"
     And I should see the text "Add File attachment"
     And I should see the text "Add Marquee"
+    And I should see the text "Add Card deck"
+    And I should see the text "Add Full width background wrapper"
 
   @regression @flexible-page @api @content-manager
   Scenario: As an administrator there are some paragraphs item types I do not want to see when editing a flexible page because they are not enabled.
     Given I am logged in as a user with the administrator role
     And I am viewing my "Flexible Page" with the title "Renaming the Pride of Arizona marching band"
     When I click Edit
-    Then I should not see the text "Add Full width background wrapper"
-    And I should not see the text "Add Card deck"
-    And I should not see the text "Add HTML Field"
-
-  @regression @flexible-page @api
-  Scenario: Paragraphs item type "Full width background wrapper" is usable by administrators after enabling the feature.
-    Given I run drush en "-y uaqs_content_chunks_full_width_bg_wrapper"
-    And I am logged in as a user with the administrator role
-    And I am viewing my "Flexible Page" with the title "Renaming the Pride of Arizona marching band"
-    When I click Edit
-    Then I should see the text "Add Full width background wrapper"
-
-  @regression @flexible-page @api
-  Scenario: Paragraphs item type "Card deck" is usable by administrators after enabling the feature.
-    Given I run drush en "-y uaqs_content_chunks_card_deck"
-    And I am logged in as a user with the administrator role
-    And I am viewing my "Flexible Page" with the title "Renaming the Pride of Arizona marching band"
-    When I click Edit
-    Then I should see the text "Add Card deck"
+    Then I should not see the text "Add HTML Field"
 
   @regression @flexible-page @api
   Scenario: Paragraphs item type "HTML Field" is usable by administrators after enabling the feature.

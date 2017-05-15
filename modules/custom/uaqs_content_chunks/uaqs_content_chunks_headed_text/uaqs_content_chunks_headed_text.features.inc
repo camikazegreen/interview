@@ -22,7 +22,7 @@ function uaqs_content_chunks_headed_text_ctools_plugin_api($module = NULL, $api 
 function uaqs_content_chunks_headed_text_paragraphs_info() {
   $items = array(
     'uaqs_headed_text' => array(
-      'name' => 'Text with heading',
+      'name' => 'Text Area',
       'bundle' => 'uaqs_headed_text',
       'locked' => '1',
     ),

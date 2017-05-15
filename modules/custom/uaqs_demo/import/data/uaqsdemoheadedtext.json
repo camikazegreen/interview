@@ -1,10 +1,8 @@
 [
   {"id":100,
-    "uaqs_text_heading" : "Inspired by a famous painting",
-    "uaqs_text_area" : "Fred Fox's generous support of the School of Music is having positive consequences for music everywhere on campus. The Pride of Arizona marching band has been freed from the constraints of its crowd-pleasing role to investigate some more creative possibilities. An immediately obvious sign of the change is the name of the band, which it will not just change once, but repeatedly, cycling through several different titles."
+    "uaqs_summary" : "<p class=\"h3\">Inspired by a famous painting</p>Fred Fox's generous support of the School of Music is having positive consequences for music everywhere on campus. The Pride of Arizona marching band has been freed from the constraints of its crowd-pleasing role to investigate some more creative possibilities. An immediately obvious sign of the change is the name of the band, which it will not just change once, but repeatedly, cycling through several different titles."
   },
   {"id":140,
-    "uaqs_text_heading" : "Reviving little-heard instruments",
-    "uaqs_text_area" : "The band will also showcase some of the little-heard instruments that the University owns, bringing their sound to a wider audience, and providing an incentive to keep them well maintained (this last concern being of particular importance for the collection of crumhorns). For example, although band members have played the University's sackbuts in the past, they have done so in other recitals, never at band performances."
+    "uaqs_summary" : "<p class=\"h3\">Reviving little-heard instruments</p>The band will also showcase some of the little-heard instruments that the University owns, bringing their sound to a wider audience, and providing an incentive to keep them well maintained (this last concern being of particular importance for the collection of crumhorns). For example, although band members have played the University's sackbuts in the past, they have done so in other recitals, never at band performances."
   }
 ]

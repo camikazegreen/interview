@@ -68,8 +68,7 @@ class UaqsDemoHeadedTextMigration extends UaqsParagraphsItemMigration {
 
     // Fields to import to the bundle.
     $data_fields = array(
-      'uaqs_text_heading' => t('Heading for the following text'),
-      'uaqs_text_area' => t('Generic multi-line text area'),
+      'uaqs_summary' => t('Generic multi-line text area'),
     );
 
     // All the fields to migrate.
@@ -79,11 +78,10 @@ class UaqsDemoHeadedTextMigration extends UaqsParagraphsItemMigration {
     $this->source = new MigrateSourceJSON($this->jsonFilePath(), $this->getSourceKeyFieldName(), $fields);
 
     // Map JSON names to simple content type fields and subfields.
-    $this->addFieldMapping('field_uaqs_text_heading', 'uaqs_text_heading');
-    $this->addFieldMapping('field_uaqs_text_area', 'uaqs_text_area');
+    $this->addFieldMapping('field_uaqs_summary', 'uaqs_summary');
     // Allow limited HTML markup in the text area field.
-    $this->addFieldMapping('field_uaqs_text_area:format')
-         ->defaultValue('uaqs_textual_content');
+    $this->addFieldMapping('field_uaqs_summary:format')
+         ->defaultValue('uaqs_standard');
   }
 
 }
