@@ -50,6 +50,12 @@ projects:
   email:
     version: '1.3'
   entity:
+    patch:
+      # Fixes 'Undefined property' PHP Notice affecting Flexible Pages.
+      # @see https://jira.arizona.edu/browse/UADIGITAL-1087
+      # @see https://www.drupal.org/node/2807275
+      # @see https://www.drupal.org/node/2729173
+      2807275: 'https://www.drupal.org/files/issues/op_update_should_be_create-2807275-2.patch'
     version: '1.8'
   entityreference:
     version: '1.2'
