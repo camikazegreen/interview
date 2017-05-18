@@ -10,6 +10,21 @@
 function uaqs_fields_image_default_styles() {
   $styles = array();
 
+  // Exported image style: uaqs_card_image.
+  $styles['uaqs_card_image'] = array(
+    'label' => 'Card Image',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 568,
+          'height' => 426,
+        ),
+        'weight' => 3,
+      ),
+    ),
+  );
+
   // Exported image style: uaqs_fixed_banner_460.
   $styles['uaqs_fixed_banner_460'] = array(
     'label' => 'Fixed banner 460',

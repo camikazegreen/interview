@@ -149,7 +149,7 @@ function uaqs_featured_content_field_default_field_instances() {
           'field_multiple_limit_offset' => 0,
           'field_multiple_limit_order' => 0,
           'image_link' => '',
-          'image_style' => 'uaqs_spotlight',
+          'image_style' => 'uaqs_card_image',
         ),
         'type' => 'image',
         'weight' => 2,

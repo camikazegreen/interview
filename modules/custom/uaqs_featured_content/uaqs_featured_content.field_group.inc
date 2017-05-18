@@ -115,8 +115,8 @@ function uaqs_featured_content_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_uaqs_photo',
-      1 => 'group_h4',
-      2 => 'group_card_block',
+      1 => 'group_card_block',
+      2 => 'group_h4',
     ),
     'format_type' => 'link',
     'format_settings' => array(
