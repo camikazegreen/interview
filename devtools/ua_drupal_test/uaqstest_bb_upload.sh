@@ -1,62 +1,92 @@
-#!/bin/bash
+#!/bin/sh
+#------------------------------------------------------------------------------
 #
-# UA Quickstart distribution package upload script.
+# uaqstest_bb_upload.sh: upload build artefacts to Bitbucket download areas.
 #
-# Required environment variables...
+# Originally based on an early version of
+# https://bitbucket.org/Swyter/bitbucket-curl-upload-to-repo-downloads
+# (an upload script provided before Bitbucked documented uploads in their API),
+# this now uses the mechanism described at
+# https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepo_slug%7D/downloads#post
+#
+# See also:
+# https://confluence.atlassian.com/bitbucket/deploy-build-artifacts-to-bitbucket-downloads-872124574.html
+# and
+# https://bitbucket.org/site/master/issues/3251/add-custom-file-uploads-to-rest-api-bb
+#
+# Todo: Use OAuth2-based authentication, re-using the credentials for build
+# status updates.
+#------------------------------------------------------------------------------
 
-# The BitBucket user name:
-if [ x"$UAQSTEST_BBUSER" = x ]; then
-  echo "** no BitBucket username (must set UAQSTEST_BBUSER)." >&2
-  exit 1
-fi
+#------------------------------------------------------------------------------
+# Environment variables and semi-constants.
 
-# The BitBucket password:
-if [ x"$UAQSTEST_BBPASS" = x ]; then
-  echo "** no BitBucket password (must set UAQSTEST_BBPASS)." >&2
-  exit 1
-fi
+# Repository owner: internal Bitbucket settings override anything else.
+[ -n "$BITBUCKET_REPO_OWNER" ] && \
+  UAQSTEST_REPO_OWNER="$BITBUCKET_REPO_OWNER"
+[ -z "$UAQSTEST_REPO_OWNER" ] && \
+  UAQSTEST_REPO_OWNER='ua_drupal'}
 
-bbdload='/ua_drupal/ua_quickstart/downloads'
-if [ $# -eq 0 ] ; then
-  echo "** no file specified for upload" >&2
+# Repository machine name: internal Bitbucket settings override anything else.
+[ -n "$BITBUCKET_REPO_SLUG" ] && \
+  UAQSTEST_REPO_SLUG="$BITBUCKET_REPO_SLUG"
+[ -z "$UAQSTEST_REPO_SLUG" ] && \
+  UAQSTEST_REPO_SLUG='ua_quickstart'}
+
+#------------------------------------------------------------------------------
+# Utility functions definitions.
+
+errorexit () {
+  echo "** $1." >&2
   exit 1
+}
+
+# Show progress on STDERR, unless explicitly quiet.
+if [ -z "$UAQSTEST_QUIET" ]; then
+  logmessage () {
+    echo "$1..." >&2
+  }
+  normalexit () {
+    echo "$1." >&2
+    exit 0
+  }
 else
-  echo "Upload file name provided..." >&2
+  logmessage () {
+    return
+  }
+  normalexit () {
+    exit 0
+  }
 fi
-fil=$1
-if [ -e "$fil" ] ; then
-  echo "Found the upload file..." >&2
+
+#------------------------------------------------------------------------------
+# Initial run-time error checking.
+
+# The Bitbucket user name:
+[ -z "$UAQSTEST_BBUSER" ] && \
+  errorexit "no BitBucket username (must set UAQSTEST_BBUSER)"
+
+# The Bitbucket password:
+[ -z "$UAQSTEST_BBPASS" ] && \
+  errorexit "no BitBucket password (must set UAQSTEST_BBPASS)."
+
+[ $# -eq 0 ] && \
+  errorexit "no file specified for upload"
+
+af=$1
+logmessage "The artefact file to upload is ${af}"
+[ -e "$af" ] || \
+  errorexit "could not find the upload file"
+
+#------------------------------------------------------------------------------
+# Actual upload operation (trivial, and silent unless there are errors).
+
+curl -X POST "https://${UAQSTEST_BBUSER}:${UAQSTEST_BBPASS}@api.bitbucket.org/2.0/repositories/${UAQSTEST_REPO_OWNER}/${UAQSTEST_REPO_SLUG}/downloads" \
+  --form files=@"$af"
+
+err="$?"
+if [ "$err" -ne 0 ]; then
+  errorexit "Could not upload, curl returned '${err}'"
 else
-  echo "** could not find the upload file $fil." >&2
-  exit 1
+  normalexit "Upload OK"
 fi
-# works like this: GET /account/signin/ -> POST /account/signin/ -> auto-redir to downloads page -> POST downloads page
-
-# GET initial csrf, dropped in the cookie, final 32 chars of the line containing that word
-# [i] note: you can add the "-v" parameter to any cURL command to get a detailed/verbose output, useful to diagnose problems.
-echo "Getting initial csrf token from the sign-in page..." >&2
-curl -k -c cookies.txt -o /dev/null https://bitbucket.org/account/signin/
-
-csrf=$(grep csrf cookies.txt); set $csrf; csrf=$7;
-
-# and login using POST, to get the final session cookies, then redirect it to the right page
-echo "Signing in with the credentials provided..." >&2
-curl -k -c cookies.txt -b cookies.txt -o /dev/null -d "username=$UAQSTEST_BBUSER&password=$UAQSTEST_BBPASS&submit=&next=$bbdload&csrfmiddlewaretoken=$csrf" --referer "https://bitbucket.org/account/signin/" -L https://bitbucket.org/account/signin/
-
-csrf=$(grep csrf cookies.txt); set $csrf; csrf=$7;
-
-# check that we have the session cookie, if not, something bad happened, don't spend time uploading.
-
-if [ -z "$(grep bb_session cookies.txt)" ] ; then
-  echo "** could not get the session cookie." >&2
-  exit 1
-else
-  echo "Got the session cookie..." >&2
-fi
-
-# now that we're logged-in and at the right page, upload whatever you want to your repository...
-echo "Starting upload..." >&2
-curl -k -c cookies.txt -b cookies.txt -o /dev/null --referer "https://bitbucket.org/$bbdload" -L --form csrfmiddlewaretoken=$csrf --form token= --form files=@"$fil" https://bitbucket.org/$bbdload
-
-echo "Closing session..." >&2
-curl -k -c cookies.txt -b cookies.txt -o /dev/null -L https://bitbucket.org/account/signout/
