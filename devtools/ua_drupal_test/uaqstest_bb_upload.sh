@@ -81,7 +81,8 @@ logmessage "The artefact file to upload is ${af}"
 #------------------------------------------------------------------------------
 # Actual upload operation (trivial, and silent unless there are errors).
 
-curl -X POST "https://${UAQSTEST_BBUSER}:${UAQSTEST_BBPASS}@api.bitbucket.org/2.0/repositories/${UAQSTEST_REPO_OWNER}/${UAQSTEST_REPO_SLUG}/downloads" \
+curl -X POST "https://api.bitbucket.org/2.0/repositories/${UAQSTEST_REPO_OWNER}/${UAQSTEST_REPO_SLUG}/downloads" \
+  --user "${UAQSTEST_BBUSER}:${UAQSTEST_BBPASS}" \
   --form files=@"$af"
 
 err="$?"
