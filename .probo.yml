@@ -1,0 +1,15 @@
+steps:
+  - name: Build & Install UA QuickStart
+    plugin: Drupal
+    makeFile: build-ua_quickstart.make.yml
+    installArgs: "--site-name='UAQS Review'"
+    clearCaches: true
+    profileName: ua_quickstart
+    runInstall: true
+    revertFeatures: true
+  - name: Fix files directory permissions
+    plugin: Script
+    script:
+      - chown -R www-data:www-data /var/www/html/sites/default/files
+      - chmod -R 775 /var/www/html/sites/default/files
+      - ls -la /var/www/html/sites/default/files
