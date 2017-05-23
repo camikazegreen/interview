@@ -114,10 +114,44 @@ function uaqs_person_views_default_views() {
     'field_uaqs_titles' => 0,
     'field_uaqs_phones' => 0,
   );
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['relationship'] = 'parent';
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight_1']['id'] = 'weight_1';
+  $handler->display->display_options['sorts']['weight_1']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight_1']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight_1']['relationship'] = 'field_uaqs_person_category_tid';
+  /* Sort criterion: Draggableviews: Weight */
+  $handler->display->display_options['sorts']['weight_2']['id'] = 'weight_2';
+  $handler->display->display_options['sorts']['weight_2']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight_2']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight_2']['draggableviews_setting_view'] = 'uaqs_reorder_people:page';
+  $handler->display->display_options['sorts']['weight_2']['draggableviews_setting_arguments'] = 'none';
+  $handler->display->display_options['sorts']['weight_2']['draggableviews_setting_new_items_bottom_list'] = 1;
   /* Sort criterion: Content: Last Name (field_uaqs_lname) */
   $handler->display->display_options['sorts']['field_uaqs_lname_value']['id'] = 'field_uaqs_lname_value';
   $handler->display->display_options['sorts']['field_uaqs_lname_value']['table'] = 'field_data_field_uaqs_lname';
   $handler->display->display_options['sorts']['field_uaqs_lname_value']['field'] = 'field_uaqs_lname_value';
+  /* Contextual filter: Content: Has taxonomy term ID (with depth) */
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['id'] = 'term_node_tid_depth_1';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['table'] = 'node';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['validate_options']['vocabularies'] = array(
+    'uaqs_person_category' => 'uaqs_person_category',
+  );
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['validate_options']['type'] = 'tids';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['validate']['fail'] = 'ignore';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['depth'] = '1';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['break_phrase'] = TRUE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -195,6 +229,7 @@ function uaqs_person_views_default_views() {
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'uaqs_reorder_people:page';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_arguments'] = 'none';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   /* Sort criterion: Content: Last Name (field_uaqs_lname) */
   $handler->display->display_options['sorts']['field_uaqs_lname_value']['id'] = 'field_uaqs_lname_value';
@@ -206,108 +241,40 @@ function uaqs_person_views_default_views() {
   $handler = $view->new_display('page', 'Row Page', 'page_1');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_uaqs_person_category',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
   $handler->display->display_options['style_options']['row_class'] = 'uaqs-person-row';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['uses_fields'] = TRUE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field: Photo */
-  $handler->display->display_options['fields']['field_uaqs_photo']['id'] = 'field_uaqs_photo';
-  $handler->display->display_options['fields']['field_uaqs_photo']['table'] = 'field_data_field_uaqs_photo';
-  $handler->display->display_options['fields']['field_uaqs_photo']['field'] = 'field_uaqs_photo';
-  $handler->display->display_options['fields']['field_uaqs_photo']['label'] = '';
-  $handler->display->display_options['fields']['field_uaqs_photo']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_uaqs_photo']['element_wrapper_class'] = 'uaqs-person-photo col-sm-3';
-  $handler->display->display_options['fields']['field_uaqs_photo']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_uaqs_photo']['settings'] = array(
-    'image_style' => 'uaqs_medium_square',
-    'image_link' => 'content',
+  /* Field: Content: Category */
+  $handler->display->display_options['fields']['field_uaqs_person_category']['id'] = 'field_uaqs_person_category';
+  $handler->display->display_options['fields']['field_uaqs_person_category']['table'] = 'field_data_field_uaqs_person_category';
+  $handler->display->display_options['fields']['field_uaqs_person_category']['field'] = 'field_uaqs_person_category';
+  $handler->display->display_options['fields']['field_uaqs_person_category']['label'] = '';
+  $handler->display->display_options['fields']['field_uaqs_person_category']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_uaqs_person_category']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['field_uaqs_person_category']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_uaqs_person_category']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_uaqs_person_category']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_uaqs_person_category']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_uaqs_person_category']['settings'] = array(
+    'field_multiple_limit' => '-1',
+    'field_multiple_limit_offset' => '0',
+    'field_multiple_limit_order' => '0',
   );
-  /* Field: Content: Full Name (node title) */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['ui_name'] = 'Content: Full Name (node title)';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'h3';
-  $handler->display->display_options['fields']['title']['element_wrapper_class'] = 'uaqs-person-name';
-  /* Field: Content: Job Title(s) */
-  $handler->display->display_options['fields']['field_uaqs_titles']['id'] = 'field_uaqs_titles';
-  $handler->display->display_options['fields']['field_uaqs_titles']['table'] = 'field_data_field_uaqs_titles';
-  $handler->display->display_options['fields']['field_uaqs_titles']['field'] = 'field_uaqs_titles';
-  $handler->display->display_options['fields']['field_uaqs_titles']['label'] = '';
-  $handler->display->display_options['fields']['field_uaqs_titles']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_uaqs_titles']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_uaqs_titles']['element_wrapper_class'] = 'uaqs-person-job-titles';
-  $handler->display->display_options['fields']['field_uaqs_titles']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_uaqs_titles']['multi_type'] = 'ul';
-  /* Field: Content: Phone Number(s) */
-  $handler->display->display_options['fields']['field_uaqs_phones']['id'] = 'field_uaqs_phones';
-  $handler->display->display_options['fields']['field_uaqs_phones']['table'] = 'field_data_field_uaqs_phones';
-  $handler->display->display_options['fields']['field_uaqs_phones']['field'] = 'field_uaqs_phones';
-  $handler->display->display_options['fields']['field_uaqs_phones']['label'] = '';
-  $handler->display->display_options['fields']['field_uaqs_phones']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_uaqs_phones']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_uaqs_phones']['element_wrapper_class'] = 'uaqs-person-phone';
-  $handler->display->display_options['fields']['field_uaqs_phones']['delta_limit'] = '1';
-  $handler->display->display_options['fields']['field_uaqs_phones']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_uaqs_phones']['multi_type'] = 'ul';
-  /* Field: Content: E-mail */
-  $handler->display->display_options['fields']['field_uaqs_email']['id'] = 'field_uaqs_email';
-  $handler->display->display_options['fields']['field_uaqs_email']['table'] = 'field_data_field_uaqs_email';
-  $handler->display->display_options['fields']['field_uaqs_email']['field'] = 'field_uaqs_email';
-  $handler->display->display_options['fields']['field_uaqs_email']['label'] = '';
-  $handler->display->display_options['fields']['field_uaqs_email']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_uaqs_email']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_uaqs_email']['element_wrapper_class'] = 'uaqs-person-email';
-  /* Field: Custom text: Name and titles */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Custom text: Name and titles';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<h3 class="uaqs-person-name">[title]</h3>
-<div class="uaqs-person-job-titles">[field_uaqs_titles]</div>';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'uaqs-person-col col-sm-5';
-  /* Field: Custom text: Contact info */
-  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
-  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Custom text: Contact info';
-  $handler->display->display_options['fields']['nothing_1']['label'] = '';
-  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<div class="uaqs-person-phone">[field_uaqs_phones]</div>
-<div class="uaqs-person-email">[field_uaqs_email]</div>';
-  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['nothing_1']['element_wrapper_class'] = 'uaqs-person-col col-sm-4';
-  /* Field: Content: Edit link */
-  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
-  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
-  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
-  $handler->display->display_options['fields']['edit_node']['label'] = '';
-  $handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
-  /* Field: Global: Contextual Links */
-  $handler->display->display_options['fields']['contextual_links']['id'] = 'contextual_links';
-  $handler->display->display_options['fields']['contextual_links']['table'] = 'views';
-  $handler->display->display_options['fields']['contextual_links']['field'] = 'contextual_links';
-  $handler->display->display_options['fields']['contextual_links']['label'] = '';
-  $handler->display->display_options['fields']['contextual_links']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['contextual_links']['fields'] = array(
-    'edit_node' => 'edit_node',
-    'field_uaqs_photo' => 0,
-    'title' => 0,
-    'field_uaqs_titles' => 0,
-    'field_uaqs_phones' => 0,
-  );
+  $handler->display->display_options['fields']['field_uaqs_person_category']['delta_offset'] = '0';
   $handler->display->display_options['path'] = 'people-list';
   $export['uaqs_person_directory'] = $view;
 
@@ -506,7 +473,7 @@ function uaqs_person_views_default_views() {
 
   /* Display: Drag to reorder people */
   $handler = $view->new_display('page', 'Drag to reorder people', 'page');
-  $handler->display->display_options['path'] = 'admin/uaqs-person/reorder-carousel';
+  $handler->display->display_options['path'] = 'admin/uaqs-person/reorder-people';
   $export['uaqs_reorder_people'] = $view;
 
   return $export;
