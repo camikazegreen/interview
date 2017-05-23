@@ -43,6 +43,15 @@ function uaqs_person_strongarm() {
       'uaqs_sidebar_teaser_list' => array(
         'custom_settings' => FALSE,
       ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'uaqs_med_media_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'uaqs_marquee' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -50,7 +59,7 @@ function uaqs_person_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '10',
         ),
       ),
       'display' => array(),

@@ -43,7 +43,7 @@ function uaqs_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'uaqs_card' => array(
         'label' => 'above',
@@ -107,7 +107,7 @@ function uaqs_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'uaqs_card' => array(
         'label' => 'above',
@@ -187,7 +187,7 @@ function uaqs_person_field_default_field_instances() {
           'field_multiple_limit_order' => 0,
         ),
         'type' => 'email_default',
-        'weight' => 5,
+        'weight' => 21,
       ),
     ),
     'entity_type' => 'node',
@@ -232,7 +232,7 @@ function uaqs_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'uaqs_card' => array(
         'label' => 'above',
@@ -261,6 +261,84 @@ function uaqs_person_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-uaqs_person-field_uaqs_link'.
+  $field_instances['node-uaqs_person-field_uaqs_link'] = array(
+    'bundle' => 'uaqs_person',
+    'default_value' => array(
+      0 => array(
+        'title' => '[node:title]',
+        'url' => '[node:url]',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
+        ),
+        'type' => 'link_default',
+        'weight' => 0,
+      ),
+      'uaqs_card' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+          'field_multiple_limit_order' => 0,
+        ),
+        'type' => 'link_default',
+        'weight' => 11,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_uaqs_link',
+    'label' => 'Link to Content',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 0,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 12,
+    ),
+  );
+
   // Exported field_instance: 'node-uaqs_person-field_uaqs_lname'.
   $field_instances['node-uaqs_person-field_uaqs_lname'] = array(
     'bundle' => 'uaqs_person',
@@ -284,7 +362,7 @@ function uaqs_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'uaqs_card' => array(
         'label' => 'above',
@@ -341,7 +419,7 @@ function uaqs_person_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'uaqs_card' => array(
         'label' => 'hidden',
@@ -420,7 +498,7 @@ function uaqs_person_field_default_field_instances() {
           'title' => '',
         ),
         'type' => 'telephone_link',
-        'weight' => 6,
+        'weight' => 22,
       ),
     ),
     'entity_type' => 'node',
@@ -575,7 +653,7 @@ function uaqs_person_field_default_field_instances() {
           'title_style' => '',
         ),
         'type' => 'title_linked',
-        'weight' => 1,
+        'weight' => 5,
       ),
       'uaqs_card' => array(
         'label' => 'hidden',
@@ -589,7 +667,7 @@ function uaqs_person_field_default_field_instances() {
           'title_style' => '',
         ),
         'type' => 'title_linked',
-        'weight' => 4,
+        'weight' => 20,
       ),
     ),
     'entity_type' => 'node',
@@ -649,31 +727,15 @@ function uaqs_person_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-          'field_multiple_limit_order' => 0,
-          'title_class' => '',
-          'title_link' => 'content',
-          'title_style' => 'h4',
-        ),
-        'type' => 'title_linked',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'uaqs_card' => array(
         'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'field_multiple_limit' => -1,
-          'field_multiple_limit_offset' => 0,
-          'field_multiple_limit_order' => 0,
-          'title_class' => 'card-title',
-          'title_link' => 'content',
-          'title_style' => 'h4',
-        ),
-        'type' => 'title_linked',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
       ),
     ),
     'entity_type' => 'node',
@@ -696,7 +758,7 @@ function uaqs_person_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -5,
+      'weight' => 0,
     ),
   );
 
@@ -710,6 +772,7 @@ function uaqs_person_field_default_field_instances() {
   t('First Name');
   t('Job Title(s)');
   t('Last Name');
+  t('Link to Content');
   t('Office location(s)');
   t('Phone Number(s)');
   t('Photo');

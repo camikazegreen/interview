@@ -23,10 +23,11 @@ function uaqs_person_field_group_info() {
     'label' => 'Card Block',
     'weight' => '1',
     'children' => array(
-      0 => 'title_field',
-      1 => 'field_uaqs_email',
-      2 => 'field_uaqs_phones',
-      3 => 'field_uaqs_titles',
+      0 => 'field_uaqs_email',
+      1 => 'field_uaqs_phones',
+      2 => 'field_uaqs_titles',
+      3 => 'group_h4',
+      4 => 'group_summary',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -86,8 +87,8 @@ function uaqs_person_field_group_info() {
     'label' => 'Middle Column',
     'weight' => '1',
     'children' => array(
-      0 => 'title_field',
-      1 => 'field_uaqs_titles',
+      0 => 'field_uaqs_titles',
+      1 => 'group_h4',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -145,7 +146,7 @@ function uaqs_person_field_group_info() {
   $field_group->parent_name = 'group_row';
   $field_group->data = array(
     'label' => 'Right Column',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_uaqs_email',
       1 => 'field_uaqs_phones',
@@ -208,10 +209,10 @@ function uaqs_person_field_group_info() {
     'label' => 'Column',
     'weight' => '2',
     'children' => array(
-      0 => 'field_uaqs_addresses',
-      1 => 'field_uaqs_email',
-      2 => 'field_uaqs_phones',
-      3 => 'title_field',
+      0 => 'title_field',
+      1 => 'field_uaqs_addresses',
+      2 => 'field_uaqs_email',
+      3 => 'field_uaqs_phones',
       4 => 'group_lead',
     ),
     'format_type' => 'html-element',
@@ -228,6 +229,66 @@ function uaqs_person_field_group_info() {
     ),
   );
   $field_groups['group_column_two|node|uaqs_person|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_h4|node|uaqs_person|teaser';
+  $field_group->group_name = 'group_h4';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_person';
+  $field_group->mode = 'teaser';
+  $field_group->parent_name = 'group_column_middle';
+  $field_group->data = array(
+    'label' => 'H4',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_uaqs_link',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'H4',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card-title',
+        'element' => 'h4',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_h4|node|uaqs_person|teaser'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_h4|node|uaqs_person|uaqs_card';
+  $field_group->group_name = 'group_h4';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_person';
+  $field_group->mode = 'uaqs_card';
+  $field_group->parent_name = 'group_card_block_1';
+  $field_group->data = array(
+    'label' => 'H4',
+    'weight' => '19',
+    'children' => array(
+      0 => 'field_uaqs_link',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'H4',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'card-title',
+        'element' => 'h4',
+        'show_label' => '0',
+        'label_element' => '',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_h4|node|uaqs_person|uaqs_card'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -331,7 +392,7 @@ function uaqs_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Row',
-    'weight' => '3',
+    'weight' => '0',
     'children' => array(
       0 => 'group_column_left',
       1 => 'group_column_middle',
@@ -352,15 +413,44 @@ function uaqs_person_field_group_info() {
   );
   $field_groups['group_row|node|uaqs_person|teaser'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_summary|node|uaqs_person|form';
+  $field_group->group_name = 'group_summary';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'uaqs_person';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Summary fields',
+    'weight' => '11',
+    'children' => array(
+      0 => 'field_uaqs_link',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-summary field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_summary|node|uaqs_person|form'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Card Block');
   t('Column');
+  t('H4');
   t('Heading');
   t('Left Column');
   t('Middle Column');
   t('Right Column');
   t('Row');
+  t('Summary fields');
 
   return $field_groups;
 }
