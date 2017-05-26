@@ -6,7 +6,7 @@
  * Contains common functionality for the entire theme.
  */
 
-define('UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION', 'v1.0.0-beta.2');
+define('UA_ZEN_UA_BOOTSTRAP_STABLE_VERSION', 'v1.0.0-beta.3');
 
 /**
  * Persistent variable name for exporting the UA Bootstrap CSS location.
