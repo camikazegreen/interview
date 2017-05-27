@@ -105,6 +105,31 @@ function uaqs_fields_image_default_styles() {
     ),
   );
 
+  // Exported image style: uaqs_marquee.
+  $styles['uaqs_marquee'] = array(
+    'label' => 'uaqs_marquee',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 1140,
+          'height' => '',
+          'upscale' => 1,
+        ),
+        'weight' => 2,
+      ),
+      4 => array(
+        'name' => 'image_crop',
+        'data' => array(
+          'width' => 1140,
+          'height' => 502,
+          'anchor' => 'center-center',
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
   // Exported image style: uaqs_media_object.
   $styles['uaqs_media_object'] = array(
     'label' => 'Media object',

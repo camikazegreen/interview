@@ -41,7 +41,7 @@ function uaqs_featured_content_preprocess_node(&$vars) {
       $photos = $wrapper->field_uaqs_photo;
       $photo = $photos->file->value();
       $slide_image_uri = $photo->uri;
-      $slide_styled_path = image_style_url('flexslider_full', $slide_image_uri);
+      $slide_styled_path = image_style_url('uaqs_marquee', $slide_image_uri);
       $vars['uaqs_featured_content']['image_path'] = $slide_styled_path;
     }
 

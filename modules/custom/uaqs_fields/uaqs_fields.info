@@ -64,6 +64,7 @@ features[image][] = uaqs_fixed_width
 features[image][] = uaqs_large
 features[image][] = uaqs_media_object
 features[image][] = uaqs_medium
+features[image][] = uaqs_marquee
 features[image][] = uaqs_medium_square
 features[image][] = uaqs_small
 features[image][] = uaqs_spotlight
