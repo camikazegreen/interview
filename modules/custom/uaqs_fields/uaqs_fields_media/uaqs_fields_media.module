@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UAQS Fields - Media feature.
+ */
+
+include_once 'uaqs_fields_media.features.inc';

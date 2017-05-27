@@ -237,6 +237,24 @@ function uaqs_fields_entity_info_alter(&$entity_info) {
       'custom settings' => FALSE,
     );
   }
+  if (module_exists('file_entity')) {
+    $entity_info['file']['view modes']['uaqs_small'] = array(
+      'label' => t('Small'),
+      'custom settings' => TRUE,
+    );
+    $entity_info['file']['view modes']['uaqs_medium'] = array(
+      'label' => t('Medium'),
+      'custom settings' => TRUE,
+    );
+    $entity_info['file']['view modes']['uaqs_square'] = array(
+      'label' => t('Square'),
+      'custom settings' => TRUE,
+    );
+    $entity_info['file']['view modes']['uaqs_media_list'] = array(
+      'label' => t('UA Bootstrap Media List'),
+      'custom settings' => TRUE,
+    );
+  }
 }
 
 /**
@@ -283,6 +301,7 @@ function uaqs_fields_editor_ckeditor_plugins(){
  */
 function uaqs_fields_filter_js_settings_alter(&$settings) {
   $theme_bootstrap = variable_get('ua_bootstrap_location', 'https://cdn.uadigital.arizona.edu/lib/ua-bootstrap/latest/ua-bootstrap.min.css');
+  $uaqs_fields_editor_css = '/' . drupal_get_path('module', 'uaqs_fields') . '/css/uaqs_fields_editor.css';
   if ((strpos($theme_bootstrap, '//') === 0) || (strpos($theme_bootstrap, 'http') === 0)) {
     $ua_bootstrap_css = $theme_bootstrap;
   }
@@ -291,6 +310,7 @@ function uaqs_fields_filter_js_settings_alter(&$settings) {
   }
   foreach ($settings as $key => $value) {
     $settings[$key]['editorSettings']['contentsCss'][] = $ua_bootstrap_css;
+    $settings[$key]['editorSettings']['contentsCss'][] = $uaqs_fields_editor_css;
   }
 }
 
@@ -321,4 +341,69 @@ function uaqs_fields_autogrow_installed() {
 function uaqs_fields_autogrow_plugin_check($format) {
   // Automatically enable Auto Grow if it is installed.
   return uaqs_fields_autogrow_installed();
+}
+
+/**
+ * Implements hook_preprocess_image_style().
+ */
+function uaqs_fields_preprocess_image_style(&$variables) {
+
+  switch($variables['style_name']) {
+    case 'uaqs_media_object':
+      // http://uadigital.arizona.edu/ua-bootstrap/components.html#media
+      $variables['attributes']['class'][] = 'media-object';
+      break;
+  }
+}
+
+/**
+ * Implements hook_preprocess_file_entity().
+ */
+function uaqs_fields_preprocess_file_entity(&$variables) {
+  // Wrap file in view mode class so we can set width with css.
+  if (!empty($variables['view_mode'])) {
+    $variables['classes_array'][] = 'view-mode-' . $variables['view_mode'];
+  }
+  // Add sr-only class to title attributes which does the same thing as element-invisible in ua-bootstrap.
+  if (!empty($variables['title_attributes_array'])) {
+    $variables['title_attributes_array']['class'][] = 'sr-only';
+  }
+
+  watchdog('UAQS_FIELDS ', print_r($variables,TRUE));
+  // Add alignment classes
+  if (!empty($alignment = $variables['elements']['#attributes']['data-align'])) {
+    switch ($alignment) {
+        case 'left':
+            $variables['classes_array'][] = 'pull-left';
+            break;
+        case 'right':
+            $variables['classes_array'][] = 'pull-right';
+            break;
+        case 'center':
+            $variables['classes_array'][] = 'center-block';
+            break;
+        default:
+            $variables['classes_array'][] = 'no-alignment-set';
+    }
+  }
+
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function uaqs_fields_form_alter(&$form, $form_state, $form_id) {
+
+  switch ($form_id)  {
+    case 'entity_embed_dialog_form':
+      $options = array(
+        'default' => 'Default',
+        'uaqs_small' => 'Small',
+        'uaqs_medium' => 'Medium',
+        'uaqs_square' => 'Square',
+        'uaqs_media_list' => 'UA Bootstrap Media List'
+      );
+      $form['attributes']['data-entity-embed-settings']['file_view_mode']['#options'] = $options;
+      break;
+   }
 }

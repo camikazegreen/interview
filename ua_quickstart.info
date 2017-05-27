@@ -61,6 +61,7 @@ dependencies[] = uaqs_content_chunks_single_card
 dependencies[] = uaqs_content_chunks_views
 dependencies[] = uaqs_content_chunks_well
 dependencies[] = uaqs_featured_content
+dependencies[] = uaqs_fields_media
 dependencies[] = uaqs_block_types_flexible_block
 dependencies[] = ua_google_tag
 dependencies[] = uaqs_navigation
