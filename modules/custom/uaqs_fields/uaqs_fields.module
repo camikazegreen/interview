@@ -368,25 +368,23 @@ function uaqs_fields_preprocess_file_entity(&$variables) {
   if (!empty($variables['title_attributes_array'])) {
     $variables['title_attributes_array']['class'][] = 'sr-only';
   }
-
-  watchdog('UAQS_FIELDS ', print_r($variables,TRUE));
   // Add alignment classes
-  if (!empty($alignment = $variables['elements']['#attributes']['data-align'])) {
+  if (isset($variables['elements']['#attributes'])) {
+    $alignment = $variables['elements']['#attributes']['data-align'];
     switch ($alignment) {
-        case 'left':
-            $variables['classes_array'][] = 'pull-left';
-            break;
-        case 'right':
-            $variables['classes_array'][] = 'pull-right';
-            break;
-        case 'center':
-            $variables['classes_array'][] = 'center-block';
-            break;
-        default:
-            $variables['classes_array'][] = 'no-alignment-set';
+      case 'left':
+        $variables['classes_array'][] = 'pull-left';
+        break;
+      case 'right':
+        $variables['classes_array'][] = 'pull-right';
+        break;
+      case 'center':
+        $variables['classes_array'][] = 'center-block';
+        break;
+      default:
+        $variables['classes_array'][] = 'no-alignment-set';
     }
   }
-
 }
 
 /**
