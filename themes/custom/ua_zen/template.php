@@ -389,18 +389,14 @@ function ua_zen_preprocess_region(&$variables, $hook) {
  * @param string $hook
  *   The name of the template being rendered ("block" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function ua_zen_preprocess_block(&$variables, $hook) {
-  // Add a count to all the blocks in the region.
-  // $variables['classes_array'][] = 'count-' . $variables['block_id'];
-
-  // By default, Zen will use the block--no-wrapper.tpl.php for the main
-  // content. This optional bit of code undoes that:
-  //if ($variables['block_html_id'] == 'block-system-main') {
-  //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('block__no_wrapper'));
-  //}
+  if (isset($variables['title_attributes_array'])) {
+    $variables['title_attributes_array']['class'][] = 'text-size-h3';
+  }
+  if (!empty($variables['block']->subject)) {
+    $variables['block']->subject = '<strong>' . $variables['block']->subject . '</strong>';
+  }
 }
-// */
 
 /**
  * Implements theme_form_search_block_form_alter.
