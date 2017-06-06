@@ -79,7 +79,7 @@
  * @ingroup themeable
  */
 ?>
-<div class="card">
+<div class="card node-uaqs-person">
   <?php print $user_picture; ?>
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
